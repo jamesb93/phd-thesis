@@ -82,9 +82,9 @@ Musical applications of signal decomposition are an emerging commercial market a
 There are three aspects of machine learning that are important in my practice. Audio segmentation helps me to automatically derive compositional materials by segmenting long sounds into smaller ones. Signal decomposition can assist me in accessing the inner components of sounds or for finding unforeseen ones. Audio descriptors are the backbone for how the computer listens, by producing data that can describe the content of a signal. The next section [Machine Learning]({m.ca}#machine-learning), gives an overview for how I  machine learning fits into my practice and approach to composition.
 
 ## Machine Learning
-Machine learning is a branch of artificial intelligence that focuses on building algorithms that enable machines to learn from data in order to improve their results (Mitchell, 1997). Machine learning algorithms create models from training data, which is often supplied in large amounts. Using this model, machines can make predictions, find patterns or generate new data based on what has been "learned" through training. Because of this, machine learning algorithms can be used in a variety of applications assuming that there is data that can be learned from in order to solve the task at hand. This can be especially useful where conventional algorithmic approaches are hard to conceptualise or develop. Instead, the computer can learn *how* to solve problem itself. 
+Machine learning  is a branch of artificial intelligence that focuses on building algorithms that enable machines to learn from data in order to improve their results (Mitchell, 1997). Machine learning algorithms create models from training data, which is often supplied in large amounts. Using the model it creates, machines can make predictions, find patterns or generate new data based on what has been "learned" through training. Because of this, machine learning algorithms can be used in a variety of applications assuming that there is data that can be learned from in order to solve the task at hand. This can be especially useful where conventional algorithmic approaches are hard to conceptualise or develop. Instead, the computer can learn how to solve the problem itself. 
 
-In music and audio, machine learning has been used toward a number of technical and creative goals. For example,  [Tone Transfer](https://sites.research.google/tonetransfer) made by [Google Research](https://ai.google) allows users to perform "style transfer" between two digital audio recordings. The result is a hybridisation of the two source recordings, where the timbre from one is transplanted onto the dynamics and expression of the other.  Machine learning has also been used to analyse the structure of music and to generate new music based on what has been derived through that analysis. Such research has been conducted using different types of training data, including folk music (Sturm et al., 2016) and the music of Johann Sebastian Bach with DeepBach (Hadjeres et al., 2017).
+In music and audio, machine learning has been used toward a number of technical and creative goals. For example,  [Tone Transfer](https://sites.research.google/tonetransfer) made by [Google Research](https://ai.google) allows users to perform "style transfer" between two digital audio recordings. The result is a hybridisation of the two digitally stored sounds, where the timbre from one is transplanted onto the dynamics and expressive qualities of the other.  Machine learning has also been used to analyse the structure of music in order to create a model which represents a certain style or compositional method. The model can be used to generate new works that are similar to the ones which the machine learning is trained on in the first place.  Work in this area includes folk-rnn (Sturm et al., 2016) for generating folk music and DeepBach (Hadjeres et al., 2017) for creating works in the style of Bach.
 
 <!-- !!! -->
 <!-- 
@@ -92,26 +92,31 @@ It just has to make sense!
 If you write about machine learning, its applications and then flesh out the 'speculative bit' youre in a good spot.
 Talking about agency and LCGI sets up the final paragraph well where you can link back to it.
  -->
-In my practice I use machine learning in conjunction machine learning for a number of purposes.
-    Reduce dimensionality of data
-        - This makes searching for samples simpler
-        - Computer can figure out things for me
-        - Mapping (which is discussed later)
-    Improve analysis
-    Classify audio files
-    - Machine listening can produce a lot of data especially given how many samples are present in even short digital audio samples.
-        - Machine learning can help to make make sense of this data automatically. 
-    - Take many data points and compress them to few
+In my practice I use machine learning in conjunction machine listening. Machine listening often produces large quantities of data, due to the high dimensionality of digital audio samples which can make it difficult to make sense of that data or to grapple with it in a humanly meaningful way.
 
-    - Clustering
-        - Grouping together samples. Depending on the audio descriptor that is used this can produce clustering results that create groupings based on different features.
-        - Removing redundancy from data
-    - Speculative...
-    - The design of new learning algorithms for musical applications might thus be motivated by a desire to support new useful affordances rather than only by more conventional computational goals such as accurate and efficient modelling
+As such, machine learning plays a strong role in helping me interact with the computer by analysing data or discovering features from data that I am trying to extract. Examples of this include:
+    
+#### Dimensionality Reduction
 
-    Furthermore, creators of new music technoologies are often engaged with what design theorist Horst Rittel described as "wicked" design prbolems: ill-defined problems wherein a problem "definition" is found only by arriving at a solution. (Page 18) #process
+Dimensionality reduction or dimension reduction transforms data from a high-dimensional space to a low-dimensional space while attempting to maintaing the meaningful properties of the original data. There are many techniques for this with their own sets of positive and negative traits. Dimension reduction can help to reduce the complexity and scale of machine listening data, which is often produced in vast amounts by audio descriptors. The result of this is usually converting a frame-by-frame analysis into a summary of fewer numbers which ideally describe the qualities of that original high-dimension data. This can make descriptor-driven searches quicker and also simpler by reducing data to a set of fewer points that have more significance in their meaning. It also reduces the need to select descriptors which I think are the best at capturing and representing salient aspects of a sound. Instead, I can use many descriptors without too much consideration of their relation to the percept of the sound and have the dimensionality reduction process remove those which it deems to not contribute to the variances in the data. Dimension reduction also supports mapping samples into two-dimensional visual plots, which is discussed later in ["Mapping"]({m.ca}#mapping). Finally, dimensionality reduction can also be used as a preprocessor for other computational processes. Depending on how well the dimension reduction algorithm retains "meaningful" data, other algorithms such as clustering can have their results improved.
 
-    By affording people the ability to communicate their goals for the system through user-supplied data, it can be more efficient to create prototypes that satisfy design criteria that are subjective, taciet, embodied, or otherwise hard to speciy in code. (Page 18) #process #tacitknowledge 
+#### Clustering
+Clustering  algorithms  partition  data  objects  (patterns,  entities,  instances,  observances,  units)  into  a  certain  number  of  clusters  (groups,  subsets,  or  categories) (Xu & Wunch, 2008, p. 4).  What consitutes a cluster int his context can be determined any number of ways. Generally though, clustering aims to draw together data objects in terms of "internal homogeneity and external separation", such that "data objects in different clusters should be dissimilar from one another" (Xu & Wunch, 2008, p. 4). 
+
+<!-- LINK: link to the process in em where you talk about clustered segmentation -->
+In my practice I have used clustering for two main tasks. The first task is aggregate digital audio samples together based on audio descriptor similarity. Ideally, those sounds which are perceptually similar will be grouped into individual clusters. This becomes both a compositional device for creating groups of homogenous materials and a way for the computer to structure my engagement with previously unknown sonic materials. Xu & Wunch (2008) refer to Anderberg  (1973), who "saw cluster analysis as 'a device for suggesting hypotheses'".  Anderberg also suggested that  "a set of clusters is not itself a fi nished result but only a possible outline"
+
+This was part of the compositional process in [Reconstruction Error]({m.re}) and [Electromagnetic]({m.em}). 
+
+The second task is to support automatic segmentation based on the similarity of contiguous segments. By clustering together audio descriptor data from highly granular slices of a sound file, a novel form of automatic segmentation can be applied that is relatively good results for dividing sounds based on significant variations of an audio descriptor or set of descriptors.  
+
+#### Combinatorial and Optimisation Problems
+
+#### Some Forms of Signal Processing
+
+By affording people the ability to communicate their goals for the system through user-supplied data, it can be more efficient to create prototypes that satisfy design criteria that are subjective, taciet, embodied, or otherwise hard to speciy in code. (Page 18) #process #tacitknowledge 
+
+Furthermore, creators of new music technoologies are often engaged with what design theorist Horst Rittel described as "wicked" design prbolems: ill-defined problems wherein a problem "definition" is found only by arriving at a solution. (Page 18) #process
 
 - Agency and "Black Boxes"
     - Interactive: change the data, change the output
@@ -371,33 +376,3 @@ link={m.proj}
         counter-increment: none;
     }
 </style>
-
-<!-- Where does the conceptual 'hop' occur from machine listening to content-awareness? The difference is not huge nor is it mutually exclusive, it does not involve some complex machine learning that  that somehow makes the computer *magical* or able to identify the *content* of a signal through black-boxed and mysterious means. A content-awareness machine can be as simple as a compressor that only switches on above a certain loudness threshold. There are several patents - such as ["Content aware audio ducking"](https://patents.google.com/patent/US9536541B2/en) ["Content aware audio modes"](https://patents.google.com/patent/US9578436B2/en) - for digital signal processing schematics that describe themselves as "content-aware" and have little to do with the kind of compositional applications described above or represent even a fraction of the complexity involved with the machine listening designs found in those works. There are directly relevant examples such as a content-aware granular synthesiser found in ["Smooth Granular Sound Texture Synthesis by Control of Timbral Similarity"](https://hal.archives-ouvertes.fr/hal-01182793/document). While granular synthesis is often implemented as a stochastic process that selects grains of audio with a degree of controlled randomness, the approach detailed here proposes a grain selection procedure that is based on the content of the grains. [MUSESCAPE](https://www.researchgate.net/profile/George_Tzanetakis/publication/2884094_Musescape_An_Interactive_Content-Aware_Music_Browser/links/0912f50f72395c4cef000000.pdf) describes itself as a 'content-aware music browser', that exceeds browsing possibilities using titles, genres, artists and provides mechanisms for exploring sound based on their content. -->
-
-<!-- Content-awareness is a capability or state that is achieved when a system is able to capture, interpret or do something useful with the content of a signal. This supports a paradigm where the computer might contextually switch between modes of operation, support and hone other analysis with additional awareness of content information and be adaptable based on what it is receiving as an input. For me, a program is content-aware when it can help me perform analysis or compositionally meaningful tasks with a degree of sensitivity to the what is in the digital audio samples and can somehow mirror my musical listening which is primarily oriented around their perception as textural sounds. This means content-awareness is about engendering the computer with listening capabilities that are centred around *my* human listening which is an integral part of how I compose. -->
-
-<!-- Content analysis for classification and segmentation https://ieeexplore.ieee.org/abstract/document/1045282 -->
-<!-- CONTENT-BASED AUDIO SEGMENTATION USING SUPPORT VECTOR MACHINES | http://www.cbsr.ia.ac.cn/Li%20Group/papers/ACM-03.pdf -->
-<!-- https://www.sciencedirect.com/journal/design-studies/vol/41/part/PA | Computational Making -->
-<!-- When making becomes diviation | https://www.sciencedirect.com/science/article/abs/pii/S0142694X15000587?casa_token=Lso0O_4zaMcAAAAA:P3cBH8NRp6GGyy5hIf2iWYj84KuUpUEy93ZqAVutpYK8hgLxZM6y0HiXSzPknfIQSphNujNN -->
-
-<!-- Content Based Segmentation | http://www.cbsr.ia.ac.cn/Li%20Group/papers/ACM-03.pdf -->
-
-<!-- AUTOMATIC SEGMENTATION, LABELLING, AND CHARACTERISATION OF AUDIO STREAMS http://www.ofai.at/research/impml/projects/audiostreams.html -->
-
-<!-- Content-aware programs aspire to produce meaningful interpretations of sounds through the production of data, such as that from audio descriptors, and the analysis of that data, through techniques such as machine learning or statistical analysis. Content-aware software for sound is technically supported by machine listening or 'computer audition' (CA), an area of research that aims to design and implement methods for engendering machines with 'listening' faculties.Real-world applications of this are evidenced in technology such as voice recognition, [enhancement in cochlear-implants](https://ieeexplore.ieee.org/abstract/document/7472933?casa_token=l2pItnm716EAAAAA:QzkuGOcePL5jrEjyBKtdXudPmJASduflGoNViDuKXSosySxkLN9xluV4B3TKV5OTfiJoHmicbI4) or [quantifying the biodiversity of dense natural environments](https://peerj.com/articles/2108/). Since the idea of a computer 'hearing' is relatively murky, machine listening draws on various algorithms and approaches, sometimes attempting to replicate the way that humans analyse and organise sound implicitly while also stepping into more abstract territory removed from a biomemetic frame around listening.
-
-Content-aware programs draw on various strategies from CA for making sense of sounds computationally, and ultimately the design of these programs is inflected by the user, the content they are analysing, their biases and their preferences for what is analytically meaningful and how that information will be accessed and used for further purposes. While content-aware programs draw on technology and algorithms from machine listening, 'content-awareness' goes beyond producing analytics and aims to provide insight to the user, sensitive to the perception of the content from a human perspective, whatever that perspective may be. As such, it is highly concerned with involving a 'human in the loop', producing meaningful analysis and outputs that are integrated with the way that an individual perceives the materials that are analysed and what they are trying to find through the faculties of the computer. -->
-
-<!-- /////////// QUESTIONS THAT MAY GO IN THE COMPOSITIONAL PREOCCUPATIONS -->
-
-<!-- 
-In practice, this content-awareness revolves around the idea of "querying", a concept I propose which positions my application content-aware systems as one where I ask listening machines different questions or propose it scenarios where I require an interpretation or answer. Using these "responses" as compositional stimulus I am then able to either initialise or develop creative ideas. These "queries" differ in nature and can be asked at different time points in the compositional process. Overall though, they characterise a process where I bounce back and forth between experimenting, "hands on", with digital sonic materials, and proposing listening task expecting a new output. Examples of broad queries and propositions are:
-
-- **Organise** a group of samples linearly in time by a descriptor
-- **Decompose** this sound into the most distinct set of components
-- **Find** the closest sound to this sound
-- **Project** this group of sounds into a two dimensional visual space for exploration
-- **Segment** this sound into *n* discrete parts
-- **Discover** how *this* parameter space maps to *this* sonic feature space, i.e learn by examples. 
--->
