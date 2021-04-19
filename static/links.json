@@ -1,18 +1,6 @@
 {
     "links": [
         {
-            "name": "ELISION Ensemble",
-            "url": "https://www.elision.org.au"
-        },
-        {
-            "name": "Daryl Buckley (Electric Guitar)",
-            "url": "https://twitter.com/darylelision?lang=en"
-        },
-        {
-            "name": "CNMAT `resonators~`",
-            "url": "https://cnmat.berkeley.edu/content/resonators"
-        },
-        {
             "name": "Sibelius",
             "url": "https://www.avid.com/sibelius"
         },
@@ -113,70 +101,6 @@
             "url": "https://www.jamesbradbury.xyz/docs/projects/biomimicry"
         },
         {
-            "name": "FTIS Source Code",
-            "url": "https://www.github.com/jamesb93/ftis"
-        },
-        {
-            "name": "UMAP algorithm",
-            "url": "https://arxiv.org/abs/1802.03426"
-        },
-        {
-            "name": "HDBSCAN algorithm",
-            "url": "https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html"
-        },
-        {
-            "name": "Agglomerative Clustering algorithm",
-            "url": "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html"
-        },
-        {
-            "name": "spectral flux descriptor",
-            "url": "https://en.wikipedia.org/wiki/Spectral_flux"
-        },
-        {
-            "name": "chroma descriptor",
-            "url": "https://en.wikipedia.org/wiki/Chroma_feature"
-        },
-        {
-            "name": "Librosa MFCC implementation",
-            "url": "https://librosa.org/doc/main/generated/librosa.feature.mfcc.html"
-        },
-        {
-            "name": "Librosa CQT implementation",
-            "url": "https://librosa.org/doc/0.8.0/generated/librosa.cqt.html"
-        },
-        {
-            "name": "Performs dimension reduction using the [UMAP algorithm",
-            "url": "https://umap-learn.readthedocs.io/en/latest/"
-        },
-        {
-            "name": "Fluid Corpus Manipulation toolbox one algorithms",
-            "url": "https://www.flucoma.org/download/"
-        },
-        {
-            "name": "the published paper",
-            "url": "https://boblsturm.github.io/aimusic2020/papers/CSMC__MuMe_2020_paper_6.pdf"
-        },
-        {
-            "name": "ReaCoMa Source Code",
-            "url": "https://www.github.com/jamesb93/reacoma"
-        },
-        {
-            "name": "ReaCoMa External Site",
-            "url": "https://www.reacoma.xyz"
-        },
-        {
-            "name": "Lua",
-            "url": "http://www.lua.org/"
-        },
-        {
-            "name": "Fluid Corpus Manipulation",
-            "url": "https://www.flucoma.org"
-        },
-        {
-            "name": "REAPER digital audio workstation",
-            "url": "https://www.reaper.fm"
-        },
-        {
             "name": "Andrea Valle",
             "url": "https://andreavalle.org"
         },
@@ -235,6 +159,10 @@
         {
             "name": "zsa.descriptors",
             "url": "http://www.e--j.com/WordPress/wp-content/SBCM09_Malt_Jourdan_v1.2.pdf"
+        },
+        {
+            "name": "Fluid Corpus Manipulation (FluCoMa)",
+            "url": "https://www.flucoma.org"
         },
         {
             "name": "Python",
@@ -481,106 +409,6 @@
             "url": "https://github.com/Unisound/SampleRNN"
         },
         {
-            "name": "\"Content aware audio ducking\"",
-            "url": "https://patents.google.com/patent/US9536541B2/en"
-        },
-        {
-            "name": "\"Content aware audio modes\"",
-            "url": "https://patents.google.com/patent/US9578436B2/en"
-        },
-        {
-            "name": "\"Smooth Granular Sound Texture Synthesis by Control of Timbral Similarity\"",
-            "url": "https://hal.archives-ouvertes.fr/hal-01182793/document"
-        },
-        {
-            "name": "MUSESCAPE",
-            "url": "https://www.researchgate.net/profile/George_Tzanetakis/publication/2884094_Musescape_An_Interactive_Content-Aware_Music_Browser/links/0912f50f72395c4cef000000.pdf"
-        },
-        {
-            "name": "enhancement in cochlear-implants",
-            "url": "https://ieeexplore.ieee.org/abstract/document/7472933?casa_token=l2pItnm716EAAAAA:QzkuGOcePL5jrEjyBKtdXudPmJASduflGoNViDuKXSosySxkLN9xluV4B3TKV5OTfiJoHmicbI4"
-        },
-        {
-            "name": "mosh Source Code",
-            "url": "https://www.github.com/jamesb93/mosh"
-        },
-        {
-            "name": "'databending'",
-            "url": "https://en.wikipedia.org/wiki/Databending"
-        },
-        {
-            "name": "'datamoshing'",
-            "url": "http://datamoshing.com"
-        },
-        {
-            "name": "Alex Harker's ibuffer~ external",
-            "url": "https://github.com/AlexHarker/AHarker_Externals/tree/master/ibuffer%20suite"
-        },
-        {
-            "name": "Nim",
-            "url": "https://nim-lang.org/"
-        },
-        {
-            "name": "WAVE header",
-            "url": "http://soundfile.sapp.org/doc/WaveFormat/"
-        },
-        {
-            "name": "2019 Electric Spring Festival",
-            "url": "http://electricspring.co.uk/electric-spring-2019/"
-        },
-        {
-            "name": "Sage Pbbbt",
-            "url": "https://sagepbbbt.com"
-        },
-        {
-            "name": "Phil Minton",
-            "url": "https://www.philminton.co.uk"
-        },
-        {
-            "name": "Audrey Chen",
-            "url": "http://www.audreychen.com"
-        },
-        {
-            "name": "Trevor Wishart's",
-            "url": "http://www.trevorwishart.co.uk"
-        },
-        {
-            "name": "*Tongues of Fire*",
-            "url": "https://www.youtube.com/watch?v=Ude4717dlsQ"
-        },
-        {
-            "name": "Creative Commons",
-            "url": "https://creativecommons.org/licenses/by-nc/3.0/"
-        },
-        {
-            "name": "\"One Breath Poem Failure\"",
-            "url": "https://sagemusick.bandcamp.com/track/2016-02-16-one-breath-poem-failure"
-        },
-        {
-            "name": "collectively designed Max patch",
-            "url": "https://cycling74.com/forums/recreating-a-horsefourses-oscillator/replies/1#reply-58ed2132c2991221d9cc767c"
-        },
-        {
-            "name": "Ciat-Lonbarde",
-            "url": "https://www.ciat-lonbarde.net"
-        },
-        {
-            "name": "the Fourses Manual",
-            "url": "https://synthmall.com/ifm/ifmFRS.pdf"
-        },
-        {
-            "name": "FOURSES PAPERZ",
-            "url": "http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html"
-        },
-        {
-            "name": "Boltzmann Distribution",
-            "url": "https://en.wikipedia.org/wiki/Boltzmann_distribution"
-        },
-        {
-            "name": "reconstruct a digitally \"shredded\" image",
-            "url": "https://www.nayuki.io/page/image-unshredder-by-annealing"
-        },
-        {
             "name": "OpenMusic (OM)",
             "url": "https://openmusic-project.github.io"
         },
@@ -687,41 +515,141 @@
         {
             "name": "Taylor Dupree",
             "url": "https://en.wikipedia.org/wiki/Taylor_Deupree"
+        },
+        {
+            "name": "ELISION Ensemble",
+            "url": "https://www.elision.org.au"
+        },
+        {
+            "name": "Daryl Buckley (Electric Guitar)",
+            "url": "https://twitter.com/darylelision?lang=en"
+        },
+        {
+            "name": "CNMAT `resonators~`",
+            "url": "https://cnmat.berkeley.edu/content/resonators"
+        },
+        {
+            "name": "cycling 74",
+            "url": "https://cycling74.com/forums/recreating-a-horsefourses-oscillator/"
+        },
+        {
+            "name": "collectively designed Max patch",
+            "url": "https://cycling74.com/forums/recreating-a-horsefourses-oscillator/replies/1#reply-58ed2132c2991221d9cc767c"
+        },
+        {
+            "name": "Ciat-Lonbarde",
+            "url": "https://www.ciat-lonbarde.net"
+        },
+        {
+            "name": "the Fourses Manual",
+            "url": "https://synthmall.com/ifm/ifmFRS.pdf"
+        },
+        {
+            "name": "FOURSES PAPERZ",
+            "url": "http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html"
+        },
+        {
+            "name": "Oli Larkin",
+            "url": "http://www.olilarkin.co.uk/"
+        },
+        {
+            "name": "https://olilarkin.github.io/fourses/",
+            "url": "https://olilarkin.github.io/fourses/"
+        },
+        {
+            "name": "Boltzmann Distribution",
+            "url": "https://en.wikipedia.org/wiki/Boltzmann_distribution"
+        },
+        {
+            "name": "reconstruct a digitally \"shredded\" image",
+            "url": "https://www.nayuki.io/page/image-unshredder-by-annealing"
+        },
+        {
+            "name": "2019 Electric Spring Festival",
+            "url": "http://electricspring.co.uk/electric-spring-2019/"
+        },
+        {
+            "name": "Sage Pbbbt",
+            "url": "https://sagepbbbt.com"
+        },
+        {
+            "name": "Phil Minton",
+            "url": "https://www.philminton.co.uk"
+        },
+        {
+            "name": "Audrey Chen",
+            "url": "http://www.audreychen.com"
+        },
+        {
+            "name": "Trevor Wishart's",
+            "url": "http://www.trevorwishart.co.uk"
+        },
+        {
+            "name": "*Tongues of Fire*",
+            "url": "https://www.youtube.com/watch?v=Ude4717dlsQ"
+        },
+        {
+            "name": "Creative Commons",
+            "url": "https://creativecommons.org/licenses/by-nc/3.0/"
+        },
+        {
+            "name": "\"One Breath Poem Failure\"",
+            "url": "https://sagemusick.bandcamp.com/track/2016-02-16-one-breath-poem-failure"
+        },
+        {
+            "name": "ReaCoMa Source Code",
+            "url": "https://www.github.com/jamesb93/reacoma"
+        },
+        {
+            "name": "ReaCoMa External Site",
+            "url": "https://www.reacoma.xyz"
+        },
+        {
+            "name": "Lua",
+            "url": "http://www.lua.org/"
+        },
+        {
+            "name": "REAPER digital audio workstation",
+            "url": "https://www.reaper.fm"
+        },
+        {
+            "name": "FTIS Source Code",
+            "url": "https://www.github.com/jamesb93/ftis"
+        },
+        {
+            "name": "UMAP algorithm",
+            "url": "https://arxiv.org/abs/1802.03426"
+        },
+        {
+            "name": "the published paper",
+            "url": "https://boblsturm.github.io/aimusic2020/papers/CSMC__MuMe_2020_paper_6.pdf"
+        },
+        {
+            "name": "mosh Source Code",
+            "url": "https://www.github.com/jamesb93/mosh"
+        },
+        {
+            "name": "'databending'",
+            "url": "https://en.wikipedia.org/wiki/Databending"
+        },
+        {
+            "name": "'datamoshing'",
+            "url": "http://datamoshing.com"
+        },
+        {
+            "name": "Alex Harker's ibuffer~ external",
+            "url": "https://github.com/AlexHarker/AHarker_Externals/tree/master/ibuffer%20suite"
+        },
+        {
+            "name": "Nim",
+            "url": "https://nim-lang.org/"
+        },
+        {
+            "name": "WAVE header",
+            "url": "http://soundfile.sapp.org/doc/WaveFormat/"
         }
     ],
     "videos": [
-        {
-            "name": "Matthew Sergeant in conversation with ELISION's Daryl Buckley (1 of 2)",
-            "url": "https://www.youtube.com/embed/bo_n1JXGiMY"
-        },
-        {
-            "name": "Matthew Sergeant in conversation with ELISION's Daryl Buckley (2 of 2)",
-            "url": "https://www.youtube.com/embed/S0WMNvkLODU"
-        },
-        {
-            "name": "ReaCoMa Tutorial 1",
-            "url": "https://www.youtube.com/embed/r3uHMXmlPRo"
-        },
-        {
-            "name": "ReaComa Tutorial 2",
-            "url": "https://www.youtube.com/embed/ejQu06GDDXE"
-        },
-        {
-            "name": "ReaCoMa Tutorial 3",
-            "url": "https://www.youtube.com/embed/HcF_lssW2Tg"
-        },
-        {
-            "name": "ReaCoMa Tutorial 4",
-            "url": "https://www.youtube.com/embed/og_5hCm5AGc"
-        },
-        {
-            "name": "ReaCoMa Tutorial 5",
-            "url": "https://www.youtube.com/embed/8__dtafBTD4"
-        },
-        {
-            "name": "ReaCoMa Tutorial 6",
-            "url": "https://www.youtube.com/embed/GEyut6MePgY"
-        },
         {
             "name": "Sam Pluta webinar on neural networks, machine listening and chaotic synthesisers.",
             "url": "https://player.vimeo.com/video/470864627"
@@ -759,10 +687,6 @@
             "url": "https://www.youtube.com/embed/Zmi2EVb7kQU"
         },
         {
-            "name": "Stefano Fasciani demonstrating the 'TSAM' program",
-            "url": "https://www.youtube.com/embed/yMLl7-aI_kc?start=687"
-        },
-        {
             "name": "Massive Attack vs Burial - Paradise Circus",
             "url": "https://www.youtube.com/embed/N701JYnjaMs"
         },
@@ -777,6 +701,42 @@
         {
             "name": "Yasunao Tone - Solo for Wounded Part II",
             "url": "https://www.youtube.com/embed/1RtKWy3G9PM"
+        },
+        {
+            "name": "Matthew Sergeant in conversation with ELISION's Daryl Buckley (1 of 2)",
+            "url": "https://www.youtube.com/embed/bo_n1JXGiMY"
+        },
+        {
+            "name": "Matthew Sergeant in conversation with ELISION's Daryl Buckley (2 of 2)",
+            "url": "https://www.youtube.com/embed/S0WMNvkLODU"
+        },
+        {
+            "name": "Stefano Fasciani demonstrating the 'TSAM' program",
+            "url": "https://www.youtube.com/embed/yMLl7-aI_kc?start=687"
+        },
+        {
+            "name": "ReaCoMa Tutorial 1",
+            "url": "https://www.youtube.com/embed/r3uHMXmlPRo"
+        },
+        {
+            "name": "ReaComa Tutorial 2",
+            "url": "https://www.youtube.com/embed/ejQu06GDDXE"
+        },
+        {
+            "name": "ReaCoMa Tutorial 3",
+            "url": "https://www.youtube.com/embed/HcF_lssW2Tg"
+        },
+        {
+            "name": "ReaCoMa Tutorial 4",
+            "url": "https://www.youtube.com/embed/og_5hCm5AGc"
+        },
+        {
+            "name": "ReaCoMa Tutorial 5",
+            "url": "https://www.youtube.com/embed/8__dtafBTD4"
+        },
+        {
+            "name": "ReaCoMa Tutorial 6",
+            "url": "https://www.youtube.com/embed/GEyut6MePgY"
         }
     ]
 }
