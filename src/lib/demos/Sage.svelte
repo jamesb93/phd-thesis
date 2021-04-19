@@ -46,25 +46,25 @@
                     segments: segs1
                 })
     
-                shuffled = Peaks.init({
-                    containers: {overview: shuffled},
-                    dataUri: {arraybuffer:  peaks2},
-                    mediaElement: audio,
-                    height: 60,
-                    segmentStartMarkerColor: '#a0a0a0',
-                    segmentEndMarkerColor: '#a0a0a0',
-                    zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
-                    overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
-                    overviewHighlightColor: 'grey',
-                    segmentColor: 'rgba(255, 161, 39, 1)',
-                    playheadColor: 'rgba(0, 0, 0, 1)',
-                    playheadTextColor: '#aaa',    
-                    showPlayheadTime: false,
-                    pointMarkerColor: '#FF0000',
-                    axisGridlineColor: '#ccc',
-                    axisLabelColor: '#aaa',
-                    segments: segs2
-                })
+                // shuffled = Peaks.init({
+                //     containers: {overview: shuffled},
+                //     dataUri: {arraybuffer:  peaks2},
+                //     mediaElement: audio,
+                //     height: 60,
+                //     segmentStartMarkerColor: '#a0a0a0',
+                //     segmentEndMarkerColor: '#a0a0a0',
+                //     zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
+                //     overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
+                //     overviewHighlightColor: 'grey',
+                //     segmentColor: 'rgba(255, 161, 39, 1)',
+                //     playheadColor: 'rgba(0, 0, 0, 1)',
+                //     playheadTextColor: '#aaa',    
+                //     showPlayheadTime: false,
+                //     pointMarkerColor: '#FF0000',
+                //     axisGridlineColor: '#ccc',
+                //     axisLabelColor: '#aaa',
+                //     segments: segs2
+                // })
             } catch (err) {
                 console.error(err);
             }
