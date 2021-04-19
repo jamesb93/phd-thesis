@@ -2,57 +2,55 @@
     import { onMount } from 'svelte';
     import * as Tone from 'tone';
     import Slider from '$lib/components/Slider.svelte';
-
     import PlayButton from "$lib/components/PlayButton.svelte";
 
     let player;
-    let ready = false;
     let masterGain;
-    let percVol;
-    let harmVol;
-    let balance = 100;
-    let masterGainVol = 100;
+    let harmReady = false; 
+    let percReady = false;
+    let harmPlayer; 
+    let percPlayer;
+    let percVol; let harmVol;
+    let balance = 50;
+    let playing = false;
 
-    onMount(async() => {
+    onMount(() => {
         harmVol = new Tone.Gain(1).toDestination();
         percVol = new Tone.Gain(1).toDestination();
-        player = new Tone.Players({
-            harm : "https://jbphd-pub.s3.us-west-000.backblazeb2.com/content-awareness/hpss/019-h.mp3",
-            perc: "https://jbphd-pub.s3.us-west-000.backblazeb2.com/content-awareness/hpss/019-p.mp3"
-        }, () => {
-            player.get('harm').connect(harmVol);
-            player.get('perc').connect(percVol);
-            player.get('harm').loop = true;
-            player.get('perc').loop = true;
-            ready = true
-        })
+
+        harmPlayer = new Tone.Player("https://jbphd-pub.s3.us-west-000.backblazeb2.com/content-awareness/hpss/019-h.mp3", harmReady = true)
+            .connect(harmVol);
+        percPlayer = new Tone.Player("https://jbphd-pub.s3.us-west-000.backblazeb2.com/content-awareness/hpss/019-p.mp3", percReady = true)
+            .connect(percVol);
+
+        harmPlayer.loop = true;
+        percPlayer.loop = true;
     });
 
     function playback() {
-        if (player.state === 'started') {
-            player.stopAll();
+        if (harmPlayer.state === 'started' || percPlayer.state === 'started') {
+            playing = false;
+            harmPlayer.stop();
+            percPlayer.stop();
         } else {
-            player.get('harm').start(0);
-            player.get('perc').start(0);
+            playing = true;
+            harmPlayer.start();
+            percPlayer.start();
         }
     };
 
-    const updateVolume = () => {
+    function updateVolume() {
         harmVol.gain.rampTo(balance / 100.0, 0.05);
         percVol.gain.rampTo(1 - (balance / 100.0), 0.05);
     };
-
-    const updateMasterGain = () => {
-        masterGain.gain.rampTo(masterGainVol / 100.0, 0.05);
-    }
 </script>
 
 <div class="meta">
-    {#if ready === true}
+    {#if harmReady && percReady}
     <div class="demo">
         <div class="play-explanation">
             <p>Press the play button and move the slider to change the balance between harmonic and percussive.</p>
-            <PlayButton state={player.state === 'started'} playFunc={playback}/>
+            <PlayButton playFunc={playback} state={playing}/>
         </div>
     
         <div class="volume">
@@ -60,9 +58,6 @@
             <Slider min="0" max="100" func={updateVolume} bind:value={balance} />
             <span class="text-span">harmonic</span>
         </div>
-    </div>
-    <div class="masterGain">
-        <input type="range" min=0 max=100 on:input={updateMasterGain} bind:value={masterGainVol} />
     </div>
     {:else}
     loading...
