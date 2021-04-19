@@ -1,6 +1,6 @@
 <script>
 
-    import { onDestroy, onMount } from 'svelte';
+    import { afterUpdate, onDestroy, onMount } from 'svelte';
     import { page } from '$app/stores';
     let visibility;
     let observer = null;
@@ -55,6 +55,16 @@
     }
 
     onMount(() => {
+        if (observer) {
+            observer.disconnect();
+        }
+        makeObserver();
+    })
+
+    afterUpdate(()=> {
+        if (observer) {
+            observer.disconnect();
+        }
         makeObserver();
     })
 
