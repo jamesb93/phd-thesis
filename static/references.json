@@ -1,6 +1,16 @@
 {
     "references" : [
         {
+            "id" : "cluster-analysis-for-applications",
+            "name" : "Anderberg, M. R. (1973). The broad view of cluster analysis. *Cluster analysis for applications*, 1-9.",
+            "url" : "https://www.sciencedirect.com/book/9780120576500/cluster-analysis-for-applications"
+        },
+        {
+            "id" : "clustering",
+            "name" : "Xu, R., & Wunsch, D. (2008). *Clustering* (Vol. 10). John Wiley & Sons.",
+            "url" : "https://books.google.com.au/books?id=kYC3YCyl_tkC&lpg=PR5&ots=qk69FCdgZw&dq=clustering&lr&pg=PR5#v=onepage&q=clustering&f=false"
+        },
+        {
             "id" : "bach-max",
             "name" : "Agostini, A., & Ghisi, D. (2012). Bach: An environment for computer-aided composition in max. In *ICMC*.",
             "url" : "https://www.andreaagostini.eu/wp-content/uploads/2015/08/bach-an-environment-for-computer-aided-composition-in-max.pdf"
