@@ -342,12 +342,11 @@ link={m.proj}
 
 <script>
     import Caption from "$lib/components/Caption.svelte";
-    import NextSection from "$lib/components/NextSection.svelte"
     import VideoMedia from "$lib/components/VideoMedia.svelte"
-    import ImageMedia from "$lib/components/ImageMedia.svelte"
     import ImageMedia2 from "$lib/components/ImageMedia2.svelte"
     import YouTube from "$lib/components/YouTube.svelte"
     import HPSS from "$lib/demos/HPSS.svelte"
+    import NextSection from "$lib/components/NextSection.svelte"
     import {metadata as m} from "./directory.svx"
 </script>
 
