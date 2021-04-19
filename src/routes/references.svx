@@ -63,7 +63,7 @@
 
 <script>
     import marked from "marked";
-    import links from '../../static/links.json'
+    import links from '../../static/links.json';
     import refs from '../../static/references.json'
     import discog from '../../static/discog.json'
     import {metadata as m} from "./directory.svx"
@@ -86,7 +86,11 @@
             return aA > bA ? 1 : -1;
         }
     };
-
+    
+    let sortedLinks = [];
+    let sortedVids = [];
+    let sortedRefs = [];
+    let sortedDiscog = [];
     $: sortedLinks = links.links.sort(alphaSort);
     $: sortedVids  = links.videos.sort(alphaSort);
     $: sortedRefs  = refs.references.sort(alphaSort);
