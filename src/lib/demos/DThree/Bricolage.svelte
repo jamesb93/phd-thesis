@@ -61,14 +61,15 @@
 
     let nodes = []
     let links = []
-    connections.forEach((d) => {
+    let counter = 4;
+    connections.forEach(d => {
         for (var k in d) {
-            nodes.push({'id' : k})
+            nodes.push({'id' : k, 'group': counter})
+
             d[k].forEach(l => {
-                links.push({
-                    'source' : k, 'target' : l
-                })
+                links.push({'source' : k, 'target' : l, 'group': counter})
             })
+            counter += 1
         }
     })
     // TODO: weighted nodes, so there can be more importance on content-aware program output
@@ -79,37 +80,49 @@
                 return d.id
             }))
             .force('charge', d3.forceManyBody()
-                .strength(-1200)
-                .distanceMin(-5)
+                .strength(-2000)
+                .distanceMin(-24)
             )
             .force('center', d3.forceCenter(width / 2.74, height / 2));
 
+        const colourScale = d3.scaleOrdinal(d3.schemeCategory10);
+        svg.append("svg:defs")
+        .append("svg:marker")
+        .attr("id", "arrow")
+        .attr("viewBox", "0 -2 7 7")
+        .attr('refX', 4.7)//so that it comes towards the center.
+        .attr("markerWidth", 20)
+        .attr("markerHeight", 20)
+        .attr("orient", "auto")
+        .append("svg:path")
+        .attr("d", "M0,-1L3,0L0,1")
+
         let link = svg.append('g')
-            .attr('id', 'markers')
-            .attr('stroke', '#999')
-            .attr('stroke-opacity', 0.9)
-            .selectAll('line')
-            .data(links)
-            .join('line')
-            .attr('stroke-width', 1)
+        .style('stroke', 4)
+        .selectAll('line')
+        .data(links)
+        .attr('stroke-opacity', 1.0)
+        .join('line')
+        .style('stroke', d => colourScale(d.group))
+        .attr("marker-end", "url(#arrow)")
 
         let node = svg.append('g')
-            .attr('stroke', '#fff')
-            .attr('stroke-width', 1.5)
-            .selectAll('circle')
-            .data(nodes)
-            .join('circle')
-            .attr('r', 5)
-            .attr('fill', d3.color(d3.schemeCategory10))
-            .call(dragNetwork(simulation));
+        .attr('stroke', '#fff')
+        .attr('stroke-width', 1.5)
+        .selectAll('circle')
+        .data(nodes)
+        .join('circle')
+        .attr('fill', d => colourScale(d.group))
+        .attr('r', d => d.id === "Return to Generating Outputs" ? 6 : 4)
+        .call(dragNetwork(simulation));
         
         let text = svg.append('g')
-            .attr('class', 'labels')
-            .selectAll('text')
-            .data(nodes)
-            .enter().append('text').attr('text-left', 'middle')
-            .attr('transform', 'translate(15, 0)')
-            .text((d) => { return d.id });
+        .attr('class', 'labels')
+        .selectAll('text')
+        .data(nodes)
+        .enter().append('text').attr('text-align', 'left')
+        .attr('transform', 'translate(15, 0)')
+        .text((d) => { return d.id });
 
         simulation.on('tick', () => {
             link
@@ -129,7 +142,7 @@
     });
         
 </script>
-<div class="box" bind:offsetHeight={height} bind:offsetWidth={width}>
+<div class="box" id="bricolage" bind:offsetHeight={height} bind:offsetWidth={width}>
 <svg bind:this={container} class="d3-container"></svg>
 </div>
 <p class="caption">DEMO 1: A network of actions and outputs. Observing different outputs can lead to more direct creative action or lead back to further computational exploration and new outputs to be made.</p>
