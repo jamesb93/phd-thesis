@@ -5,6 +5,7 @@ specifiers:
   '@sveltejs/adapter-static': next
   '@sveltejs/kit': next
   d3: ^6.7.0
+  marked: ^2.0.3
   mdsvex: ^0.9.0
   peaks.js: ^0.25.0
   svelte: ^3.29.0
@@ -12,6 +13,7 @@ specifiers:
   vite: ^2.1.0
 
 dependencies:
+  marked: 2.0.3
   mdsvex: 0.9.0_svelte@3.37.0
   peaks.js: 0.25.0
   tone: 14.7.77
@@ -459,6 +461,12 @@ packages:
 
   /konva/7.2.5:
     resolution: {integrity: sha512-yk/li8rUF+09QNlOdkwbEId+QvfATMe/aMGVouWW1oFoUVTYWHsQuIAE6lWy11DK8mLJEJijkNAXC5K+NVlMew==}
+    dev: false
+
+  /marked/2.0.3:
+    resolution: {integrity: sha512-5otztIIcJfPc2qGTN8cVtOJEjNJZ0jwa46INMagrYfk0EvqtRuEHLsEe0LrFS0/q+ZRKT0+kXK7P2T1AN5lWRA==}
+    engines: {node: '>= 8.16.2'}
+    hasBin: true
     dev: false
 
   /mdsvex/0.9.0_svelte@3.37.0:
