@@ -1,6 +1,6 @@
 <script>
 
-    import { afterUpdate, onDestroy, onMount } from 'svelte';
+    import { onDestroy, onMount } from 'svelte';
     import { page } from '$app/stores';
     let visibility;
     let observer = null;
@@ -68,7 +68,6 @@
 </script>
 
 <div class="container">
-    NAvigation
     {#if contents}
         <ul>
             {#each contents as section}
