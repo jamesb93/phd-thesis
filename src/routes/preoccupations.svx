@@ -12,7 +12,7 @@ For example, [OpenMusic (OM)](https://openmusic-project.github.io) facilitates t
 The [Bach suite](https://www.bachproject.net/) of Max packages (Bach, Cage, Dada) by [Daniele Ghisi](https://www.danieleghisi.com/) and [Andrea Agostini](https://www.andreaagostini.eu/) facilitate a wide range of possibilities for computer-aided composition. The suite leverages [Max](https://cycling74.com/) and its visual programming style. Like OM, objects with specific functionality are connected together in order to transform data or to realise it through scores or audio playback. Bach is the core package in the suite, providing the primitives for these types of operations to be constructed. Cage builds on Bach by re-using much of the underlying code and packaging ready-to-use modules that deal with 20th and 21st century compositional techniques and concepts such as indeterminacy and chance. Dada is an increasingly abstract set of objects that again build on the underlying code from Bach, while bringing a number of non-standard graphical user interface objects into the fore. These visual entities are experimental in nature and offer novel metaphors for the manipulation of sound based on geometry, recreational mathematics and physical modelling (Ghisi, n.d). IMAGE 1, depicts the `dada.kaleido` object which emulates the shifting geometry patterns of a kaleidoscope. The data from this object can be used as triggers or controls for any number of musical parameters.
 
 <ImageMedia2
-url="https://jbphd-pub.s3.us-west-000.backblazeb2.com/preoccupations/dadakaleido.jpg"
+url="/static/preoccupations/dadakaleido.jpg"
 caption="A screenshot demonstrating the dada.kaleido object and its geometric interface."
 figure="IMAGE 1"
  />
@@ -77,7 +77,7 @@ Turkle and Papert's description of the bricoleur emphasises the dialogical inter
 
 #### The Feedback Loop
 <ImageMedia2 
-    url="https://jbphd-pub.s3.us-west-000.backblazeb2.com/preoccupations/umap-visual.jpg"
+    url="/static/preoccupations/bricolage.jpg"
     figure="IMAGE 2"
     caption="McClean & Wiggins (2010) diagram of the bricolage programming feedback loop"
 />
@@ -86,7 +86,7 @@ IMAGE 2 is McClean and Wiggins' formalised process of bricolage programming, as 
 In my practice, the concept node always begins from a point of auditioning sound materials. This process occurs manually at first, and is shortly followed by the involvement of the software to aid that listening process or to follow naive hunches about how those sounds might be organised or treated compositionally. By engaging with those materials aurally and in dialogue with content-aware programs, conceptual foundations for a piece are made. For example, after listening to segments of phonetics made by experimental vocal improvisers the concept for [Stitch/Strata]({m.ss}) developed. The broader idea was that those segments could be concatenated and recombined to form new sound objects reminiscent of the source material while presenting a new inhuman quality. This central concept was the starting point from which a process of computational *encoding* began, followed by *observation* of those outputs. In IMAGE 3, a number of variants of a computer-generated phrase can be seen represented as files in the file system of my computer. Ultimately, this process led to an unanticipated change in the overall shape of the piece after numerous iterations through different technical approaches were explored.
 
 <ImageMedia2 
-url="https://jbphd-pub.s3.us-west-000.backblazeb2.com/preoccupations/ss-concatenations-example.png"
+url="/static/preoccupations/ss-concatenations-example.png"
 caption="A screenshot showing computer generated outputs of concatenated phonetic outputs. The letter of each file represents a different concatenation strategy, with multiple variations for each one."
 figure="IMAGE 3"
 />
@@ -137,7 +137,7 @@ I can discover valuable information that then informs reaction from such data. F
 Visualisation of data is also a meaningful output from the computer. A visual representation of a corpus can be useful for viewing it *topologically*, as a group of items that form a shape consisting of local and global relationships. While this sort of data is hard to act upon compositionally, it can be part of the overall feedback loop, leading to other forms of encoding and reaction. Visualisation and data-driven approaches were used heavily in both [Reconstruction Error]({m.re}) and [Electromagnetic]({m.em}). IMAGE 4 is a scatter plot representing a projection of individual corpus samples into two-dimensional space based on machine listening analysis.
 
 <ImageMedia2 
-url="https://jbphd-pub.s3.us-west-000.backblazeb2.com/preoccupations/umap-visual.jpg"
+url="/static/preoccupations/umap-visual.jpg"
 figure="IMAGE 4"
 caption="Samples projected into a two dimensional space using dimensionality reduction on Mel-frequency cepstrum coefficients analysis. This data was used in the Reconstruction Error project."
 />
@@ -291,8 +291,8 @@ For example, the [first gesture (see AUDIO 1)]({m.preoc}#ss-opening-gesture) of 
 
 <Waveform
 title = "AUDIO 1: Opening gesture of Stitch/Strata"
-file = "https://jbphd-pub.s3.us-west-000.backblazeb2.com/preoccupations/ss-intro-gesture.mp3"
-peaks = "https://jbphd-pub.s3.us-west-000.backblazeb2.com/preoccupations/ss-intro-gesture.dat"
+file = "/static/preoccupations/ss-intro-gesture.mp3"
+peaks = "/static/preoccupations/ss-intro-gesture.dat"
 id = "ss-opening-gesture"
 />
 
