@@ -2,7 +2,8 @@
 	import StaticNav from "$lib/components/StaticNav.svelte"
 	import RightToc from "$lib/components/RightToc.svelte"
 	import { page } from "$app/stores";
-	
+	import '../app.css';
+
 	let w;
 	let navshow = false;
 	const minWidth = 1276;
