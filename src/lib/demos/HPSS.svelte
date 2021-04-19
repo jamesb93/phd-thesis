@@ -13,14 +13,13 @@
     let balance = 100;
     let masterGainVol = 100;
 
-    onMount(() => {
+    onMount(async() => {
         harmVol = new Tone.Gain(1).toDestination();
         percVol = new Tone.Gain(1).toDestination();
         player = new Tone.Players({
             harm : "https://jbphd-pub.s3.us-west-000.backblazeb2.com/content-awareness/hpss/019-h.mp3",
             perc: "https://jbphd-pub.s3.us-west-000.backblazeb2.com/content-awareness/hpss/019-p.mp3"
         }, () => {
-            console.log('loading loop')
             player.get('harm').connect(harmVol);
             player.get('perc').connect(percVol);
             player.get('harm').loop = true;
