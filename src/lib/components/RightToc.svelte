@@ -1,8 +1,8 @@
 <script>
 
     import { afterUpdate, onDestroy, onMount } from 'svelte';
-    export let segment;
-    let visibility = {}
+    import { page } from '$app/stores';
+    let visibility;
     let observer = null;
     let contents = [];
     let nodes = ["H1", "H2", "H3", "H4"];
@@ -14,7 +14,7 @@
     }
 
 
-    const handleIntersect = (entries, observer) => {
+    function handleIntersect(entries, observer) {
         let lowest = Infinity;
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -28,7 +28,7 @@
         visibility = tempIntersect;
     }
 
-    const iteratePage = () => {
+    function iteratePage() {
         contents = [];
         let element = document.getElementById("article")
         let children = Array.from(element.childNodes);
@@ -40,7 +40,7 @@
                     heading: child.textContent
                 })
             }
-        })   
+        })
     }
 
     const makeObserver = () => {
@@ -53,10 +53,6 @@
             })
         }
     }
-
-    afterUpdate(() => {
-        makeObserver();
-    })
 
     onMount(() => {
         makeObserver();
@@ -72,21 +68,22 @@
 </script>
 
 <div class="container">
-    <ul>
-        {#if contents}
+    NAvigation
+    {#if contents}
+        <ul>
             {#each contents as section}
                     <li>
                         <a 
                         class="depth-{section.depth}" 
-                        href="{segment}#{section.url}"
+                        href="{$page.path}#{section.url}"
                         class:shown={visibility === section.url} 
                         > 
                             {section.heading}
                         </a>
                     </li>
             {/each}
-        {/if}
-    </ul>
+        </ul>
+    {/if}
 </div>
 
 <style>

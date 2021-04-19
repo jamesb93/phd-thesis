@@ -1,7 +1,6 @@
 <script>
-	import { fly } from 'svelte/transition';
     import {metadata as m} from "../../routes/directory.svx"
-	export let segment;
+	import { page } from "$app/stores";
 	export let navshow;
 	function handleClick(){
 		navshow = false;
@@ -9,33 +8,31 @@
 </script>
 
 
-<nav transition:fly="{{duration: 230, x: -50}}" class="container">
+<nav class="container">
 	<ul>
-		<li><a rel=prefetch on:click={handleClick} class="section" class:selected='{segment === undefined}'	href='.'>Home</a></li>
+		<li><a  on:click={handleClick} class="section" class:selected='{$page.path === "/"}'	href='.'>Home</a></li>
 		
-		<li><a rel=prefetch on:click={handleClick} class="section" class:selected='{segment === m.intro}' href={m.intro}>1. Introduction</a></li>
-		<!-- <li><a rel=prefetch on:click={handleClick} class="section" class:selected='{segment === "context"}' href='context'>2. Context</a></li> -->
-		<li><a rel=prefetch on:click={handleClick} class="section" class:selected='{segment === m.preoc}' href={m.preoc}>2. Preoccupations</a></li>
-		<li><a rel=prefetch on:click={handleClick} class="section" class:selected='{segment === m.ca}' href={m.ca}>3. Content-Awareness</a></li>
+		<li><a  on:click={handleClick} class="section" class:selected='{$page.path === m.intro}' href={m.intro}>1. Introduction</a></li>
+		<li><a  on:click={handleClick} class="section" class:selected='{$page.path === m.preoc}' href={m.preoc}>2. Preoccupations</a></li>
+		<li><a  on:click={handleClick} class="section" class:selected='{$page.path === m.ca}' href={m.ca}>3. Content-Awareness</a></li>
 		
-		<li><a rel=prefetch on:click={handleClick} class="section" class:selected='{segment === m.proj}' href={m.proj}>4. Projects</a></li>
-		<li><a rel=prefetch on:click={handleClick} class="subsection" class:selected='{segment === m.ss}' href={m.ss}>4.1 Stitch/Strata</a></li>
-		<li><a rel=prefetch on:click={handleClick} class="subsection" class:selected='{segment === m.as}' href={m.as}>4.2 Annealing Strategies</a></li>
-		<li><a rel=prefetch on:click={handleClick} class="subsection" class:selected='{segment === m.rt}' href={m.rt}>4.3 Refracted Touch</a></li>
-		<li><a rel=prefetch on:click={handleClick} class="subsection" class:selected='{segment === 'interlude'}' href={'interlude'}>interlude</a></li>
-		<li><a rel=prefetch on:click={handleClick} class="subsection" class:selected='{segment === m.re}' href={m.re}>4.4 Reconstruction Error</a></li>
-		<li><a rel=prefetch on:click={handleClick} class="subsection" class:selected='{segment === m.em}' href={m.em}>4.5 ElectroMagnetic</a></li>
+		<li><a  on:click={handleClick} class="section" class:selected='{$page.path === m.proj}' href={m.proj}>4. Projects</a></li>
+		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === m.ss}' href={m.ss}>4.1 Stitch/Strata</a></li>
+		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === m.as}' href={m.as}>4.2 Annealing Strategies</a></li>
+		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === m.rt}' href={m.rt}>4.3 Refracted Touch</a></li>
+		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === 'interlude'}' href={'interlude'}>interlude</a></li>
+		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === m.re}' href={m.re}>4.4 Reconstruction Error</a></li>
+		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === m.em}' href={m.em}>4.5 ElectroMagnetic</a></li>
 
-		<li><a rel=prefetch on:click={handleClick} class="section" class:selected='{segment === m.ti}' href="/tech">5. Technical Implementation</a></li>
-		<li><a rel=prefetch on:click={handleClick} class="subsection" class:selected='{segment === m.mosh}' href={m.mosh}>5.1 mosh</a></li>
-		<li><a rel=prefetch on:click={handleClick} class="subsection" class:selected='{segment === m.reacoma}' href={m.reacoma}>5.2 ReaCoMa</a></li>
-		<li><a rel=prefetch on:click={handleClick} class="subsection" class:selected='{segment === m.ftis}' href={m.ftis}>5.3 FTIS</a></li>
+		<li><a  on:click={handleClick} class="section" class:selected='{$page.path === m.ti}' href="/tech">5. Technical Implementation</a></li>
+		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === m.mosh}' href={m.mosh}>5.1 mosh</a></li>
+		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === m.reacoma}' href={m.reacoma}>5.2 ReaCoMa</a></li>
+		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === m.ftis}' href={m.ftis}>5.3 FTIS</a></li>
 
 
-		<li><a rel=prefetch on:click={handleClick} class="section" class:selected='{segment === m.conc}' href={m.conc}>6. Conclusion</a></li>
+		<li><a  on:click={handleClick} class="section" class:selected='{$page.path === m.conc}' href={m.conc}>6. Conclusion</a></li>
 		
-		<li><a rel=prefetch on:click={handleClick} class="section" class:selected='{segment === m.ref}' href={m.ref}>References and Links</a></li>
-		<li><a on:click={handleClick} class="section" href="/test">Test</a></li>
+		<li><a  on:click={handleClick} class="section" class:selected='{$page.path === m.ref}' href={m.ref}>References and Links</a></li>
 
 		<br>
 		<li><a target="_blank" on:click={handleClick} class="faint" href="https://github.com/jamesb93/phd-sapper">source code</a></li>

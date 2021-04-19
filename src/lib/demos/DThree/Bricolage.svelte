@@ -129,9 +129,6 @@
     });
         
 </script>
-<svelte:head>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.7.0/d3.min.js" integrity="sha512-cd6CHE+XWDQ33ElJqsi0MdNte3S+bQY819f7p3NUHgwQQLXSKjE4cPZTeGNI+vaxZynk1wVU3hoHmow3m089wA==" crossorigin="anonymous"></script>
-</svelte:head>
 <div class="box" bind:offsetHeight={height} bind:offsetWidth={width}>
 <svg bind:this={container} class="d3-container"></svg>
 </div>

@@ -5,33 +5,36 @@
 
     import PlayButton from "$lib/components/PlayButton.svelte";
 
-    let playing = false;
+    let player;
+    let ready = false;
     let masterGain;
-    let perc;
-    let harm;
     let percVol;
     let harmVol;
     let balance = 100;
     let masterGainVol = 100;
 
-    onMount(async () => {
-        masterGain = new Tone.Gain(1).toDestination();
-        harmVol = new Tone.Gain(1).connect(masterGain);
-        percVol = new Tone.Gain(1).connect(masterGain);
-        harm = new Tone.Player("/content-awareness/hpss/019-h.wav").connect(harmVol);
-        perc = new Tone.Player("/content-awareness/hpss/019-p.wav").connect(percVol);
-        harm.loop = true;
-        perc.loop = true;
+    onMount(() => {
+        harmVol = new Tone.Gain(1).toDestination();
+        percVol = new Tone.Gain(1).toDestination();
+        player = new Tone.Players({
+            harm : "https://jbphd-pub.s3.us-west-000.backblazeb2.com/content-awareness/hpss/019-h.mp3",
+            perc: "https://jbphd-pub.s3.us-west-000.backblazeb2.com/content-awareness/hpss/019-p.mp3"
+        }, () => {
+            console.log('loading loop')
+            player.get('harm').connect(harmVol);
+            player.get('perc').connect(percVol);
+            player.get('harm').loop = true;
+            player.get('perc').loop = true;
+            ready = true
+        })
     });
 
-    const playback = () => {
-        playing = !playing;
-        if (playing) {
-            perc.start();
-            harm.start();
+    function playback() {
+        if (player.state === 'started') {
+            player.stopAll();
         } else {
-            perc.stop();
-            harm.stop();
+            player.get('harm').start(0);
+            player.get('perc').start(0);
         }
     };
 
@@ -46,10 +49,11 @@
 </script>
 
 <div class="meta">
+    {#if ready === true}
     <div class="demo">
         <div class="play-explanation">
             <p>Press the play button and move the slider to change the balance between harmonic and percussive.</p>
-            <PlayButton state={playing} playFunc={playback}/>
+            <PlayButton state={player.state === 'started'} playFunc={playback}/>
         </div>
     
         <div class="volume">
@@ -61,6 +65,9 @@
     <div class="masterGain">
         <input type="range" min=0 max=100 on:input={updateMasterGain} bind:value={masterGainVol} />
     </div>
+    {:else}
+    loading...
+    {/if}
 </div>
 
 
