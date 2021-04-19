@@ -8,6 +8,8 @@ specifiers:
   marked: ^2.0.3
   mdsvex: ^0.9.0
   peaks.js: ^0.25.0
+  remark-external-links: ^8.0.0
+  remark-slug: ^6.0.0
   svelte: ^3.29.0
   tone: ^14.7.77
   vite: ^2.1.0
@@ -16,6 +18,8 @@ dependencies:
   marked: 2.0.3
   mdsvex: 0.9.0_svelte@3.37.0
   peaks.js: 0.25.0
+  remark-external-links: 8.0.0
+  remark-slug: 6.0.0
   tone: 14.7.77
 
 devDependencies:
@@ -390,6 +394,10 @@ packages:
     dev: false
     optional: true
 
+  /emoji-regex/6.1.1:
+    resolution: {integrity: sha1-xs0OwbBkLio8Z6ETfvxeeW2k+I4=}
+    dev: false
+
   /esbuild/0.9.7:
     resolution: {integrity: sha512-VtUf6aQ89VTmMLKrWHYG50uByMF4JQlVysb8dmg6cOgW8JnFCipmz7p+HNBl+RR3LLCuBxFGVauAe2wfnF9bLg==}
     hasBin: true
@@ -404,6 +412,10 @@ packages:
     resolution: {integrity: sha512-8guHBZCwKnFhYdHr2ysuRWErTwhoN2X8XELRlrRwpmfeY2jjuUN4taQMsULKUVo1K4DvZl+0pgfyoysHxvmvEw==}
     dev: false
 
+  /extend/3.0.2:
+    resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
+    dev: false
+
   /fsevents/2.3.2:
     resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
@@ -414,6 +426,12 @@ packages:
   /function-bind/1.1.1:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: true
+
+  /github-slugger/1.3.0:
+    resolution: {integrity: sha512-gwJScWVNhFYSRDvURk/8yhcFBee6aFjye2a7Lhb2bUyRulpIoek9p0I9Kt7PT67d/nUlZbFu8L9RLiA0woQN8Q==}
+    dependencies:
+      emoji-regex: 6.1.1
+    dev: false
 
   /good-listener/1.2.2:
     resolution: {integrity: sha1-1TswzfkxPf+33JoNR3CWqm0UXFA=}
@@ -453,6 +471,11 @@ packages:
     resolution: {integrity: sha512-lDB5YccMydFBtasVtxnZ3MRBHuaoE8GKsppq+EchKL2U4nK/DmEpPHNH8MZe5HkMtpSiTSOZwfN0tzYjO/lJEw==}
     dev: true
 
+  /is-absolute-url/3.0.3:
+    resolution: {integrity: sha512-opmNIX7uFnS96NtPmhWQgQx6/NYFgsUXYMllcfzwWKUMwfo8kku1TvE6hkNcH+Q1ts5cMVrsY7j0bxXQDciu9Q==}
+    engines: {node: '>=8'}
+    dev: false
+
   /is-core-module/2.2.0:
     resolution: {integrity: sha512-XRAfAdyyY5F5cOXn7hYQDqh2Xmii+DEfIcQGxK/uNwMHhIkPWO0g8msXcbzLe+MpGoR951MlqM/2iIlU4vKDdQ==}
     dependencies:
@@ -467,6 +490,16 @@ packages:
     resolution: {integrity: sha512-5otztIIcJfPc2qGTN8cVtOJEjNJZ0jwa46INMagrYfk0EvqtRuEHLsEe0LrFS0/q+ZRKT0+kXK7P2T1AN5lWRA==}
     engines: {node: '>= 8.16.2'}
     hasBin: true
+    dev: false
+
+  /mdast-util-definitions/4.0.0:
+    resolution: {integrity: sha512-k8AJ6aNnUkB7IE+5azR9h81O5EQ/cTDXtWdMq9Kk5KcEW/8ritU5CeLg/9HhOC++nALHBlaogJ5jz0Ybk3kPMQ==}
+    dependencies:
+      unist-util-visit: 2.0.3
+    dev: false
+
+  /mdast-util-to-string/1.1.0:
+    resolution: {integrity: sha512-jVU0Nr2B9X3MU4tSK7JP1CMkSvOj7X5l/GboG1tKRw52lLF1x2Ju92Ms9tNetCcbfX3hzlM73zYo2NKkWSfF/A==}
     dev: false
 
   /mdsvex/0.9.0_svelte@3.37.0:
@@ -532,6 +565,24 @@ packages:
     resolution: {integrity: sha512-a54FxoJDIr27pgf7IgeQGxmqUNYrcV338lf/6gH456HZ/PhX+5BcwHXG9ajESmwe6WRO0tAzRUrRmNONWgkrew==}
     dev: false
 
+  /remark-external-links/8.0.0:
+    resolution: {integrity: sha512-5vPSX0kHoSsqtdftSHhIYofVINC8qmp0nctkeU9YoJwV3YfiBRiI6cbFRJ0oI/1F9xS+bopXG0m2KS8VFscuKA==}
+    dependencies:
+      extend: 3.0.2
+      is-absolute-url: 3.0.3
+      mdast-util-definitions: 4.0.0
+      space-separated-tokens: 1.1.5
+      unist-util-visit: 2.0.3
+    dev: false
+
+  /remark-slug/6.0.0:
+    resolution: {integrity: sha512-ln67v5BrGKHpETnm6z6adlJPhESFJwfuZZ3jrmi+lKTzeZxh2tzFzUfDD4Pm2hRGOarHLuGToO86MNMZ/hA67Q==}
+    dependencies:
+      github-slugger: 1.3.0
+      mdast-util-to-string: 1.1.0
+      unist-util-visit: 2.0.3
+    dev: false
+
   /require-relative/0.8.7:
     resolution: {integrity: sha1-eZlTn8ngR6N5KPoZb44VY9q9Nt4=}
     dev: true
@@ -586,6 +637,10 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
+  /space-separated-tokens/1.1.5:
+    resolution: {integrity: sha512-q/JSVd1Lptzhf5bkYm4ob4iWPjx0KiRe3sRFBNrVqbJkFaBm5vbbowy1mymoPNLRa52+oadOhJ+K49wsSeSjTA==}
+    dev: false
+
   /standardized-audio-context/25.1.14:
     resolution: {integrity: sha512-05YHHeJGcpZTXUW50RcTZizfoQrRYzDiHUT774erKD11b0lauL0kXKLGx5pFnVDRrQ3mxTu5wmNxA42vlChF4w==}
     dependencies:
@@ -630,10 +685,29 @@ packages:
     resolution: {integrity: sha512-gS9GVHRU+RGn5KQM2rllAlR3dU6m7AcpJKdtH8gFvQiC4Otgk98XnmMU+nZenHt/+VhnBPWwgrJsyrdcw6i23w==}
     dev: false
 
+  /unist-util-is/4.1.0:
+    resolution: {integrity: sha512-ZOQSsnce92GrxSqlnEEseX0gi7GH9zTJZ0p9dtu87WRb/37mMPO2Ilx1s/t9vBHrFhbgweUwb+t7cIn5dxPhZg==}
+    dev: false
+
   /unist-util-stringify-position/2.0.3:
     resolution: {integrity: sha512-3faScn5I+hy9VleOq/qNbAd6pAx7iH5jYBMS9I1HgQVijz/4mv5Bvw5iw1sC/90CODiKo81G/ps8AJrISn687g==}
     dependencies:
       '@types/unist': 2.0.3
+    dev: false
+
+  /unist-util-visit-parents/3.1.1:
+    resolution: {integrity: sha512-1KROIZWo6bcMrZEwiH2UrXDyalAa0uqzWCxCJj6lPOvTve2WkfgCytoDTPaMnodXh1WrXOq0haVYHj99ynJlsg==}
+    dependencies:
+      '@types/unist': 2.0.3
+      unist-util-is: 4.1.0
+    dev: false
+
+  /unist-util-visit/2.0.3:
+    resolution: {integrity: sha512-iJ4/RczbJMkD0712mGktuGpm/U4By4FfDonL7N/9tATGIF4imikjOuagyMY53tnZq3NP6BcmlrHhEKAfGWjh7Q==}
+    dependencies:
+      '@types/unist': 2.0.3
+      unist-util-is: 4.1.0
+      unist-util-visit-parents: 3.1.1
     dev: false
 
   /vfile-message/2.0.4:

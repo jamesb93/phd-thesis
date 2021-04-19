@@ -19,6 +19,8 @@
     "marked": "^2.0.3",
     "mdsvex": "^0.9.0",
     "peaks.js": "^0.25.0",
+    "remark-external-links": "^8.0.0",
+    "remark-slug": "^6.0.0",
     "tone": "^14.7.77"
   }
 }
