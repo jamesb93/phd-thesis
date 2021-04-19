@@ -1,0 +1,74 @@
+{
+    "discog" : [
+        {
+            "name" : "By The Stream",
+            "artist" : "Phil Minton and Audrey Chen",
+            "year" : "2017"
+        },
+        {
+            "name" : "Daily Sketches",
+            "artist": "Sage Pbbbt",
+            "year" : "2013-2020"
+        },
+        {
+            "name" : "GENDY3",
+            "artist" : "Iannis Xenakis",
+            "year" : "1991"
+        },
+        {
+            "name" : "S.709",
+            "artist" : "Iannis Xenakis",
+            "year" : "1994"
+        },
+        {
+            "name" : "La Légende d'Eer",
+            "artist" : "Iannis Xenakis",
+            "year" : "1977-78"
+        },
+        {
+            "name" : "Fake Fish Distribution",
+            "artist" : "Icarus",
+            "year" : "2012"
+        },
+        {
+            "name" : "Race to the Bottom",
+            "artist" : "Owen Green",
+            "year" : 2019
+        },
+        {
+            "name" : "Kaizo Snare",
+            "artist" : "Rodrigo Constanzo",
+            "year" : 2019
+        },
+        {
+            "name" : "Solo for Wounded Part II",
+            "artist" : "Yasunao Tone",
+            "year" : 1996
+        },
+        {
+            "name" : "Paradise Circus Rework",
+            "artist" : "Burial",
+            "year" : 2011
+        },
+        {
+            "name" : "Malfunction30931",
+            "artist" : "Benjamin Thigpen",
+            "year" : 2010
+        },
+        {
+            "name" : "De Natura Sonorum: Matieres Induites",
+            "artist" : "Bernard Parmegiani",
+            "year" : 1974
+        },
+        {
+            "name" : "Volleys of Light and Shadow",
+            "artist" : "Ben Hackbarth",
+            "year" : 2014
+        },
+        {
+            "name" : "La Fabrique des Monstres",
+            "artist" : "Daniele Ghisi",
+            "year" : 2018
+        }
+    ]
+}

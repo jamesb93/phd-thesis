@@ -1,0 +1,323 @@
+export const sageUnshuffled = [{
+    startTime: 0.0,
+    endTime: 0.267029,
+    color: '#ff11cf'
+}, {
+    startTime: 0.267029,
+    endTime: 0.313469,
+    color: '#7652f7'
+}, {
+    startTime: 0.313469,
+    endTime: 0.348299,
+    color: '#9aa997'
+}, {
+    startTime: 0.348299,
+    endTime: 0.464399,
+    color: '#810d5b'
+}, {
+    startTime: 0.464399,
+    endTime: 0.534059,
+    color: '#27b1ff'
+}, {
+    startTime: 0.534059,
+    endTime: 0.580499,
+    color: '#3d1e60'
+}, {
+    startTime: 0.580499,
+    endTime: 0.615329,
+    color: '#043e3d'
+}, {
+    startTime: 0.615329,
+    endTime: 0.661769,
+    color: '#533baa'
+}, {
+    startTime: 0.661769,
+    endTime: 0.719819,
+    color: '#f07d75'
+}, {
+    startTime: 0.719819,
+    endTime: 0.766259,
+    color: '#7bd63a'
+}, {
+    startTime: 0.766259,
+    endTime: 0.824308,
+    color: '#636bf1'
+}, {
+    startTime: 0.824308,
+    endTime: 0.882358,
+    color: '#541b4e'
+}, {
+    startTime: 0.882358,
+    endTime: 0.940408,
+    color: '#857b86'
+}, {
+    startTime: 0.940408,
+    endTime: 1.010068,
+    color: '#c17685'
+}, {
+    startTime: 1.010068,
+    endTime: 1.068118,
+    color: '#a9ddd5'
+}, {
+    startTime: 1.068118,
+    endTime: 1.126168,
+    color: '#165ba1'
+}, {
+    startTime: 1.126168,
+    endTime: 1.172608,
+    color: '#c96991'
+}, {
+    startTime: 1.172608,
+    endTime: 1.207438,
+    color: '#eb4a36'
+}, {
+    startTime: 1.207438,
+    endTime: 1.277098,
+    color: '#4ed9b6'
+}, {
+    startTime: 1.277098,
+    endTime: 1.335147,
+    color: '#86b5fa'
+}, {
+    startTime: 1.335147,
+    endTime: 1.393197,
+    color: '#3d79ca'
+}, {
+    startTime: 1.393197,
+    endTime: 1.532517,
+    color: '#54bca9'
+}, {
+    startTime: 1.532517,
+    endTime: 1.567347,
+    color: '#ab63c6'
+}, {
+    startTime: 1.567347,
+    endTime: 1.602177,
+    color: '#90f0be'
+}, {
+    startTime: 1.602177,
+    endTime: 1.637007,
+    color: '#ab5277'
+}, {
+    startTime: 1.637007,
+    endTime: 1.706667,
+    color: '#f36b6f'
+}, {
+    startTime: 1.706667,
+    endTime: 1.741497,
+    color: '#7926ab'
+}, {
+    startTime: 1.741497,
+    endTime: 1.787937,
+    color: '#5a77cb'
+}, {
+    startTime: 1.787937,
+    endTime: 1.892426,
+    color: '#ac42d1'
+}, {
+    startTime: 1.892426,
+    endTime: 1.985306,
+    color: '#8653ee'
+}, {
+    startTime: 1.985306,
+    endTime: 2.066576,
+    color: '#1ed4ec'
+}, {
+    startTime: 2.066576,
+    endTime: 2.147846,
+    color: '#3b3942'
+}, {
+    startTime: 2.147846,
+    endTime: 2.205896,
+    color: '#879899'
+}, {
+    startTime: 2.205896,
+    endTime: 2.333605,
+    color: '#c4fa06'
+}, {
+    startTime: 2.333605,
+    endTime: 2.368435,
+    color: '#599972'
+}, {
+    startTime: 2.368435,
+    endTime: 2.507755,
+    color: '#d55373'
+}, {
+    startTime: 2.507755,
+    endTime: 2.542585,
+    color: '#0b0f14'
+}, {
+    startTime: 2.542585,
+    endTime: 2.577415,
+    color: '#302b37'
+}, {
+    startTime: 2.577415,
+    endTime: 2.612245,
+    color: '#e92014'
+}, {
+    startTime: 2.612245,
+    endTime: 2.670295,
+    color: '#1c5d60'
+}]
+
+export const sageShuffled = [{
+    startTime: 0,
+    endTime: 0.04644000000000004,
+    color: '#3d1e60'
+}, {
+    startTime: 0.04644000000000004,
+    endTime: 0.08126999999999995,
+    color: '#3b3942'
+}, {
+    startTime: 0.08126999999999995,
+    endTime: 0.11609999999999998,
+    color: '#810d5b'
+}, {
+    startTime: 0.11609999999999998,
+    endTime: 0.058049999999999935,
+    color: '#a9ddd5'
+}, {
+    startTime: 0.058049999999999935,
+    endTime: 0.04644000000000004,
+    color: '#5a77cb'
+}, {
+    startTime: 0.04644000000000004,
+    endTime: 0.058049999999999935,
+    color: '#541b4e'
+}, {
+    startTime: 0.058049999999999935,
+    endTime: 0.058050000000000046,
+    color: '#857b86'
+}, {
+    startTime: 0.058050000000000046,
+    endTime: 0.04643999999999998,
+    color: '#7652f7'
+}, {
+    startTime: 0.04643999999999998,
+    endTime: 0.04644000000000004,
+    color: '#533baa'
+}, {
+    startTime: 0.04644000000000004,
+    endTime: 0.058049999999999935,
+    color: '#f07d75'
+}, {
+    startTime: 0.058049999999999935,
+    endTime: 0.05804999999999971,
+    color: '#1c5d60'
+}, {
+    startTime: 0.05804999999999971,
+    endTime: 0.1393199999999999,
+    color: '#54bca9'
+}, {
+    startTime: 0.1393199999999999,
+    endTime: 0.06965999999999994,
+    color: '#27b1ff'
+}, {
+    startTime: 0.06965999999999994,
+    endTime: 0.05804900000000002,
+    color: '#86b5fa'
+}, {
+    startTime: 0.05804900000000002,
+    endTime: 0.03482999999999992,
+    color: '#eb4a36'
+}, {
+    startTime: 0.03482999999999992,
+    endTime: 0.03483000000000003,
+    color: '#9aa997'
+}, {
+    startTime: 0.03483000000000003,
+    endTime: 0.05804900000000002,
+    color: '#636bf1'
+}, {
+    startTime: 0.05804900000000002,
+    endTime: 0.05805000000000016,
+    color: '#879899'
+}, {
+    startTime: 0.05805000000000016,
+    endTime: 0.1393200000000001,
+    color: '#d55373'
+}, {
+    startTime: 0.1393200000000001,
+    endTime: 0.12770899999999985,
+    color: '#c4fa06'
+}, {
+    startTime: 0.12770899999999985,
+    endTime: 0.267029,
+    color: '#ff11cf'
+}, {
+    startTime: 0.267029,
+    endTime: 0.03482999999999992,
+    color: '#599972'
+}, {
+    startTime: 0.03482999999999992,
+    endTime: 0.03482999999999992,
+    color: '#0b0f14'
+}, {
+    startTime: 0.03482999999999992,
+    endTime: 0.03483000000000014,
+    color: '#7926ab'
+}, {
+    startTime: 0.03483000000000014,
+    endTime: 0.10448899999999983,
+    color: '#ac42d1'
+}, {
+    startTime: 0.10448899999999983,
+    endTime: 0.058049999999999935,
+    color: '#3d79ca'
+}, {
+    startTime: 0.058049999999999935,
+    endTime: 0.03482999999999992,
+    color: '#90f0be'
+}, {
+    startTime: 0.03482999999999992,
+    endTime: 0.06965999999999994,
+    color: '#c17685'
+}, {
+    startTime: 0.06965999999999994,
+    endTime: 0.03483000000000014,
+    color: '#ab5277'
+}, {
+    startTime: 0.03483000000000014,
+    endTime: 0.09288000000000007,
+    color: '#8653ee'
+}, {
+    startTime: 0.09288000000000007,
+    endTime: 0.03482999999999992,
+    color: '#302b37'
+}, {
+    startTime: 0.03482999999999992,
+    endTime: 0.08126999999999995,
+    color: '#1ed4ec'
+}, {
+    startTime: 0.08126999999999995,
+    endTime: 0.03483000000000014,
+    color: '#ab63c6'
+}, {
+    startTime: 0.03483000000000014,
+    endTime: 0.03483000000000003,
+    color: '#043e3d'
+}, {
+    startTime: 0.03483000000000003,
+    endTime: 0.06966000000000006,
+    color: '#4ed9b6'
+}, {
+    startTime: 0.06966000000000006,
+    endTime: 0.05805000000000016,
+    color: '#165ba1'
+}, {
+    startTime: 0.05805000000000016,
+    endTime: 0.04644000000000004,
+    color: '#c96991'
+}, {
+    startTime: 0.04644000000000004,
+    endTime: 0.04644000000000004,
+    color: '#7bd63a'
+}, {
+    startTime: 0.04644000000000004,
+    endTime: 0.03483000000000036,
+    color: '#e92014'
+}, {
+    startTime: 0.03483000000000036,
+    endTime: 0.06965999999999983,
+    color: '#f36b6f'
+}]

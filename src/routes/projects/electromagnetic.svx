@@ -1,0 +1,64 @@
+<script>
+	import NextSection from "$lib/components/NextSection.svelte"
+    import {metadata as m} from "../directory.svx"
+
+</script>
+
+# EM
+
+## Motivation
+### Developing the workflow from Reconstruction Error
+<!-- - Producing an unlistenable massive corpus, working with computer to 'parse' -->
+<!-- - More fluid interfaces for iteration and exploration -->
+
+### Electromagnetic Recordings
+#### Context
+
+<!-- - Alvin Lucier
+- https://www.youtube.com/watch?v=4T7qkYY7LZM&list=PLyFW-rnLqSeGxwsL0FL160g8y6XmdHZcQ
+- Jay-Dea Lopez
+- Bernhard Gunter - A little bit of dirty snow
+- Kristina Kubisch
+- 'Hidden' sounds and finding delicacy in machines 
+-->
+<!-- Mimesis, Russolo 'miming' the indstrial world -->
+
+
+## Process
+### Recording objects
+### First impressions
+### From $2 to $50 microphone
+### Static vs gestural
+### ClusterFck
+### Early FTIS
+
+## Exploring with FTIS
+### Borrowing From [Reconstruction Error]({m.re})
+### Static/gestural Temporal Segmentation
+### Gestural Segmentation
+### Gestural Descriptors
+### Gestural Clustering
+### New Processes
+#### Clustered Segmentation
+https://hal.archives-ouvertes.fr/hal-00512744/document
+#### Clustered NMF
+### Experimentation with ElectroMagnetic Sounds
+#### Three Initial Ideas
+#### Problems
+### Multiple corpora with FTIS
+#### Mixing Reconstruction Error and Electromagnetic Samples
+<!-- Cannibalising what is already there -->
+<!-- Microsound reference... -->
+## Compositions
+### EEE (placeholder)
+### Anchors (placeholder)
+### Interruptions (placeholder)
+## Reflection
+### Using the computer to work from more knowns in composition
+### Towards a stable workflow
+
+<NextSection 
+next="Technical Implementation and Software"
+link={m.ti}
+/>
+    

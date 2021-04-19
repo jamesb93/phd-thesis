@@ -1,0 +1,19 @@
+---
+intro : /introduction
+preoc : /preoccupations
+ca : /content-awareness
+proj : /projects
+ss : /projects/stitch-strata
+as : /projects/annealing-strategies
+rt : /projects/refracted-touch
+re : /projects/reconstruction-error
+em : /projects/electromagnetic
+emname: Electromagnetic
+conc : /conclusion
+ti : /tech
+mosh : /tech/mosh
+reacoma : /tech/reacoma
+ftis : /tech/ftis
+ref : /references
+biom : https://www.jamesbradbury.xyz/projects/biomimicry
+---

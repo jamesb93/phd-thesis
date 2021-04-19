@@ -1,0 +1,514 @@
+<script>
+    import ImageMedia from '$lib/components/ImageMedia.svelte'
+    import NextSection from "$lib/components/NextSection.svelte"
+    import VideoMedia from '$lib/components/VideoMedia.svelte'
+    import YouTube from "$lib/components/YouTube.svelte"
+    import {metadata as m} from "../directory.svx"
+
+</script>
+# Finding Things in Stuff (`ftis`)
+
+[FTIS Source Code](https://www.github.com/jamesb93/ftis)
+
+`ftis` is a programming framework that facilitates audio descriptor analysis and composition with large corpora of digital samples. `ftis` is designed to aid sample selection from within a corpus, clustering of samples into perceptually similar groups and filtering of corpora by audio descriptor analysis. My interest in performing such tasks came from experimenting with them in [Reconstruction Error], however, I felt that much of the code I had written for that project was not reusable or extensible. I wanted to carry forward the [compositional strategies]() from this work into future projects in a way where code would not have to be significantly rewritten or transformed to fit my creative needs. As such, `ftis` was used throughout [Electromagnetic]({m.em}).
+
+Below are some of the guidelines I devised for myself when I decided that I would create a piece of software from scratch.
+
+1. *`ftis` should be able to compose arbitrary chains or tree structures of processes* where multiple stages of analysis can share their data. 
+
+2. *`ftis` should be self-documenting* in the sense that every time it is run it should automatically produce useful documentation regarding the materials it operated on, the `git` version of the software, the time and date, whether or not there were errors and what settings each analysis stage was configured to use. Most of the code from [Reconstruction Error]({m.re}) was not adequately documented as I did not foresee that the code would even remain relevant to the creative project in its earliest stages. In hindsight, automatically producing documentation would have been helpful for informing critical reflection, keeping a record of successful and unsuccessful working patterns or settings, and for ensuring even nascent experiments would be in some way attached to a record.
+
+3. *`ftis` should operate rapidly as a part of the compositional process*. While the code made in [Reconstruction Error]({m.re}) served my creative purposes in that particular project, alternating between code, auditioning sounds files, Max and REAPER was sometimes slow and diminished the ability to rapidly test different analytical processes and ideas. This friction was largely due to the fact the interface did not abstract away framework code and required a lot of that code to be duplicated each time I wanted to test a new idea. To meet these concerns, I envisaged `ftis` presenting a minimalist control interface such as the command line, and contain methods for rapidly auditioning sounds, organising them into pre-compositional structures such as a REAPER session and for inspecting the data produced from analysis. Re-analysis should also be cached to increase the rate at which analysis chains can be reconfigured and experimented with.
+
+## Implementation
+`ftis` is structured as a Python package. This means that it can be installed by Python's package manager `pip` and accessed through `import` in a python script. While this increases the barrier for entry and requires the user to know Python, it simplifies many architectural decisions by keeping everything within one language. One idea I pursued briefly and early on was creating a domain-specific language written in configuration files which would then be parsed by `ftis`. After building out a prototype of this interface, I found it was not expressive and was frustrating to develop around. Confining `ftis` to pure Python also means that any of the code written in `ftis` is relatively interoperable with other Python code. This makes it flexible when you need to do something not offered by `ftis` itself.
+
+`ftis` is imported as a module into a Python script and exposes classes that perform specific functions related to analysis as well as file and data management. A basic didactic example is given below of a Python script which uses `ftis` to perform automatic segmentation across a corpus of audio files. Each line is annotated with a comment for clarity on its purpose and function. More specific information is given in the [architecture section below]({m.ftis}#architecture).
+
+```python
+from ftis.world import World # import the World class
+from ftis.analysers.flucoma import Noveltyslice # import the Noveltyslice class
+
+world = World(sink="/path/to/output")
+"""
+Create an instance of the World() class in the variable world
+Set the sink variable to an output location on the disk either existing or new
+Everything attached to this instance of a World() will then output to this location
+"""
+
+corpus = Corpus("/path/to/corpus")
+"""
+Create an instance of a Corpus() class.
+This is pointed to a folder containing audio files, or single audio file.
+"""
+
+corpus >> Noveltyslice()
+"""
+Using the >> operator, analysers can be connected together in chains.
+This dictates that the audio files in the corpus should be passed to the Noveltyslice(r) 
+"""
+
+world.build(corpus)
+"""
+The build() method of the World() class is then called.
+It takes any numbers of Corpus() object as an argument.
+This stage connects together the inputs and outputs of the analysers
+"""
+world.run() # The run() method is then called which starts processing.
+```
+
+## Architecture
+This section explains the architecture of `ftis` and the relationship between its two key components, *analysers* and *worlds*.
+
+### Analysers
+One of the primary elements of `ftis` are sub-modules named analysers. An analyser is a Python class that inherits the parent class `FTISAnalyser`. This makes the development of new analysers quick as much of the boilerplate code exists in the superclass rather than in the analyser that inherits the class itself. It also means that the underlying features of analysers can be improved without having to modify several different analysers themselves. An annotated code example for the Uniform Manifold Approximation and Projection (UMAP) dimension reduction analyser can be seen below. This analyser accepts a matrix of arbitrarily sized data and transforms it into a new matrix according to the [UMAP algorithm](https://arxiv.org/abs/1802.03426)
+
+
+```python
+class UMAP(FTISAnalyser):
+    """Dimension reduction with UMAP algorithm"""
+
+    def __init__(self, mindist=0.01, neighbours=7, components=2, cache=False):
+        super().__init__(cache=cache)
+        """
+        Keyword argument parameters are assigned to members of the class.
+        """
+        self.mindist = mindist
+        self.neighbours = neighbours
+        self.components = components
+        self.output = {}
+
+    def load_cache(self):
+        """
+        This dictates what should happen if we are asked to load a cache from disk.
+        Mostly this is the same between analysers but it can change.
+        """
+        self.output = read_json(self.dump_path)
+
+    def dump(self):
+        """
+        This function is called when the analyser writes analysis data to disk.
+        """
+        jdump(self.model, self.model_dump)
+        write_json(self.dump_path, self.output)
+
+    def analyse(self):
+        """
+        This is called from the run() function below.
+        This function is what is calling the umap module to process the matrix of data
+        """
+        data = np.array([v for v in self.input.values()])
+
+        self.model = umapdr(
+            n_components=self.components, 
+            n_neighbors=self.neighbours, 
+            min_dist=self.mindist, 
+            random_state=42
+        )
+        self.model.fit(data)
+        transformed_data = self.model.transform(data)
+        self.output = {
+            k: v.tolist() 
+            for k, v in zip(
+                self.input.keys(), 
+                transformed_data
+            )
+        }
+
+    def run(self):
+        """
+        run() wraps the analyser function
+        This is a generic function to orchestrate processing at the right time...
+        ... and giving flexibility to what happens when it 'runs'.
+        """
+        staticproc(self.name, self.analyse)
+```
+
+The `UMAP` class definition only deals with aspects such as processing data and what parameters that analyser can be controlled with. The superclass is more complex and contains code that deals with behaviour that is not directly related to data processing. This includes interface functionality, such as overloading the `>>` operator so that analysers can be linked together, or methods so that the analyser can generate a hash out from its internal parameters to be used in [caching]({m.ftis}#caching).
+
+```python
+class FTISAnalyser:
+    """Every analyser inherits from this class"""
+    def __init__(self, cache=False, pre=None, post=None):
+        self.process = None  # pass the parent process in
+        self.input = None  # This can be anything
+        self.output = None
+        self.dump_type: str = ""
+        self.dump_path: Path = None
+        self.model_dump: Path = None  #
+        self.name = self.__class__.__name__
+        self.order: int = -1
+        self.cache: bool = cache
+        self.cache_possible: bool = False
+        self.pre: Callable = pre
+        self.post: Callable = post
+        self.scripting = True
+        self.suborder = 0
+        self.parent = None
+        self.chain = OrderedDict()
+        self.parent_string = self.__class__.__name__
+
+    def __str__(self):
+        return f"{self.__class__.__name__}"
+
+    def __rshift__(self, right):
+        # right.order = self.order + 1
+        self.scripting = True
+        self.chain[right] = None
+        return right
+    
+    def traverse_parent_parameters(self):
+        self.parent_parameters[self.parent.__class__.__name__] = ({
+            k: v 
+            for k, v in vars(self).items() 
+            if k not in ignored_keys
+            })
+        if hasattr(self.parent, 'parent'): # if the parent has a parent
+            self.parent.traverse_parent_parameters()
+
+    def create_identity(self) -> None:
+        if not self.scripting:
+            self.identity = {k: v for k, v in vars(self).items() if k not in ignored_keys}
+            previous_inputs = {}
+            for obj in self.process.chain:
+                previous_inputs[str(obj.name)] = {k: v for k, v in vars(obj).items() if k not in ignored_keys}
+
+            self.identity_hash = create_hash(previous_inputs)
+            self.identity["identity_hash"] = self.identity_hash
+        else:
+            self.identity = {
+                k: v 
+                for k, v in vars(self).items() 
+                if k not in ignored_keys
+            }
+            self.parent_parameters = {}
+            self.traverse_parent_parameters()
+            self.identity["hash"] = create_hash(self.parent_parameters)
+
+    def log(self, log_text: str) -> None:
+        try:
+            self.process.logger.debug(f"{self.name}: {log_text}")
+        except AttributeError:
+            pass
+
+    def _get_parents(self) -> None:
+        self.parent_string = (
+            f"{self.parent.__class__.__name__}.{self.parent_string}"
+        )
+
+    def set_dump(self) -> None:
+        self._get_parents()
+        if self.scripting:
+            self.dump_path  = (
+                self.process.sink / 
+                f"{self.order}.{self.suborder}-{self.parent_string}{self.dump_type}"
+            )
+            self.model_dump = (
+                self.process.sink / 
+                f"{self.order}.{self.suborder}-{self.parent_string}.joblib"
+            )
+        else:
+            pass
+
+
+    def folder_integrity(self) -> bool:
+        return True
+
+    def compare_meta(self) -> bool:
+        self.process.metadata = self.process.metadata
+        self.process.prev_meta = self.process.prev_meta
+        ident = f"{self.order}_{self.name}"
+        try:
+            new_params = self.process.metadata["analyser"][ident]
+        except KeyError:
+            new_params = False
+
+        try:
+            old_params = self.process.prev_meta["analyser"][ident]
+        except KeyError:
+            old_params = False
+
+        try:
+            success = self.process.prev_meta["success"][ident]
+        except KeyError:
+            success = False
+
+        return old_params == new_params and success
+
+    def cache_exists(self) -> bool:
+        if self.dump_path.exists():
+            if self.dump_type == ftypes.folder:
+                return self.folder_integrity()
+            else:
+                return True
+        else:
+            return False
+
+    def update_success(self, status: bool) -> None:
+        try:
+            existing_metadata = read_json(self.process.metapath)
+        except FileNotFoundError:
+            existing_metadata = {}
+
+        try:
+            success = existing_metadata["success"]  # extract the progress dict
+        except KeyError:
+            success = {}  # progress doesnt exist yet
+
+        success[f"{self.order}_{self.name}"] = status  # update the status of this analyser
+        # join any existing data into the metadata
+        self.process.metadata["success"] = success  # modify the original
+        write_json(self.process.metapath, self.process.metadata)
+
+    def do(self) -> None:
+        self.log("Initiating")
+
+        # Determine whether we caching is possible
+        if self.cache and self.cache_exists() and self.compare_meta() and self.process.metapath.exists():
+            self.cache_possible = True
+
+        # Set the status to failure and only update to success if it all ends correctly
+        self.update_success(False)
+        if self.cache_possible:
+            self.load_cache()
+            self.process.fprint(f"{self.name} was cached")
+        else:
+            if self.pre:
+                self.pre(self)
+            self.run()
+            if self.post:
+                self.post(self)
+            self.dump()
+
+        if self.output != None:
+            self.log("Ran Successfully")
+            self.update_success(True)
+        else:
+            self.log("Output was invalid")
+            raise OutputNotFound(self.name)
+
+    def walk_chain(self) -> None:
+        self.log("Initialising")
+        # Determine whether we caching is possible
+        if self.cache and self.cache_exists() and self.compare_meta() and self.process.metapath.exists():
+            self.cache_possible = True
+        
+        self.update_success(False)
+        if self.cache_possible:
+            self.load_cache()
+            self.process.fprint(f"{self.name} was cached")
+        else:
+            if self.pre: # preprocess
+                self.pre(self)
+            self.run()
+            if self.post: # postprocess
+                self.post(self)
+                self.dump()
+
+        if self.output != None:
+            self.log("Ran Successfully")
+            self.update_success(True)
+        else:
+            self.log("Output was invalid")
+            raise OutputNotFound(self.name)
+
+        self.dump()
+        # Pass output to the input of all of connected things
+        for forward_connection in self.chain:
+            forward_connection.input = self.output
+            forward_connection.walk_chain()
+
+    def load_cache(self) -> None:
+        """Implemented in the analyser"""
+
+    def dump(self) -> None:
+        """Defined in the analyser that inherits this class"""
+
+    def run(self) -> None:
+        """Method for running the processing chain from input to output"""
+```
+
+
+### World
+A `ftis` `World()` connects several `analysers` so they can communicate important bits of information, such as their hierarchy in a chain of connected analysers or their input and output data. A `World()` is made by creating an instance of the class and specifying where the output (or **sink**) should be. The **sink** is a location on disk where analysis and outputs are stored.
+
+```python
+world = World(sink="/Users/james/my-output")
+```
+
+Once analysers have been connected together with the `>>` operator, the first node in the chain of connected analysers is passed as an argument to the `build()` method of that world. Calling this function prompts the analyser passed to `build()` to recurse through the chain of connected analysers so that a linked list type structure can be formed. This is essential so that analysers are executed in the right order and the correct output data is passed to the input of the connected analyser.
+
+```python
+src = Corpus("~/my-audio-files")
+# Connect together processes using >>
+src >> FluidNoveltySlice(threshold=0.35, feature=1)
+
+# now add the Corpus 'src' node to our world
+world.build(src)
+```
+
+Once the `build()` method is called the connections between analysers is finalised and the series of analysers can start processing. This is executed by calling the `run()` method. 
+
+```python
+world.run() # finally run the chain of connected analysers
+```
+
+The `World()` also handles self-documentation. Self-documentation produces a `metadata.json` file in the **sink** location that records the connection between analysers, their parameters and the time of execution. An example `metadata.json` file is given below.
+
+```json
+{
+    "analyser": {
+        "0_FluidMFCC": {
+            "name": "FluidMFCC",
+            "order": 0,
+            "input_order_hash": "",
+            "fftsettings": [
+                1024,
+                -1,
+                -1
+            ],
+            "numbands": 40,
+            "numcoeffs": 20,
+            "minfreq": 80,
+            "maxfreq": 20000,
+            "discard": true,
+            "identity_hash": "b0bd629d34e36339cd082c1b478ecfff5ee70d7a"
+        },
+        "1_Stats": {
+            "name": "Stats",
+            "order": 1,
+            "input_order_hash": "",
+            "numderivs": 1,
+            "flatten": true,
+            "spec": [
+                "mean",
+                "stddev",
+                "skewness",
+                "kurtosis",
+                "min",
+                "median",
+                "max"
+            ],
+            "identity_hash": "a42f7d72edf350bd67b1090902b6b09998bf0327"
+        },
+        "2_Standardise": {
+            "name": "Standardise",
+            "order": 2,
+            "input_order_hash": "",
+            "identity_hash": "893b437bb08018eb126db85214a18b7c17e45939"
+        },
+        "3_HDBSCluster": {
+            "name": "HDBSCluster",
+            "order": 3,
+            "input_order_hash": "",
+            "minclustersize": 10,
+            "minsamples": 1,
+            "identity_hash": "a2526ee93426590855b253fee9057e6f852474ec"
+        }
+    },
+    "success": {
+        "0_FluidMFCC": true,
+        "1_Stats": true,
+        "2_Standardise": true,
+        "3_HDBSCluster": true
+    },
+    "time": "20:01:11 | August 20, 2020",
+    "io": "['FluidMFCC', 'Stats', 'Standardise', 'HDBSCluster']"
+}
+```
+
+### Caching
+One of the most creatively inhibiting experiences for me is waiting for re-analysis to complete between consecutive executions of a script that has been changed in a minor way. Working creatively with `ftis` often involves editing a script such that analysis can be reused. The pseudocode example below describes a chain of `ftis` analysers that calculate the median spectral centroid  value for `Corpus()` of sound files. This is performed by first computing a frame-by-frame spectral analysis and then summarising this data.
+
+```python
+Corpus() >> SpectralCentroid() >> Median()
+```
+If after running this first script I decide the average is a better statistic to use instead of the median, the script could be modified to instead emit the data from `SpectralCentroid()` to the `Average()` analyser. 
+```python
+Corpus() >> SpectralCentroid() >> Average()
+```
+
+For both examples, the output of `SpectralCentroid()` will be exactly the same, as the preceding analysers of the chain are the same. Significant time can be saved here by storing the `SpectralCentroid()` output data on disk from the first execution and loading it from disk on the second execution. `ftis` is designed so that it can identify these types of changes, respecting both the order and analysers of the chain as well as parameter configuration of each. To demonstrate again with pseudocode, below is an example where the minimum frequency of the `SpectralCentroid(minfreq=20)` is specified in the constructor. The median spectral centroid for each sound file in the corpus is then computed and that information is used to cluster files together.
+
+```python
+Corpus() >> SpectralCentroid(minfreq=20) >> Median() >> Cluster()
+```
+After running this first exmaple, perhaps it is found that the minimum frequency of that analysis is too low and so the parameter is changed to 200.
+
+```python
+Corpus() >> SpectralCentroid(minfreq=200) >> Median() >> Cluster()
+```
+
+In this case the data from `SpectralCentroid(minfreq=200)` will be changed and affect both `Median()` and `Cluster()`. Even though the analysers themselves are the same types, the parameter for `SpectralCentroid()` has changed, and this triggers reanalysis for the subsequent analysers. `ftis` is able to detect this by generating a unique identifier hash from the input data and the parameters of each analyser. Below is the hash creation function:
+
+```python
+def create_hash(*items) -> str: # accept an arbitrary amount of items
+    """Create a hash from a list of items"""
+    m = hashlib.blake2b(digest_size=20) # create a hash using the BLAKE algorithm
+    for item in items:
+        m.update(str(item).encode("utf-8"))
+    return m.hexdigest() # return a string that is the new hash
+```
+
+Using this function, a 20 character hash can be created from any number of inputs passed as arguments to the function. An internal method `create_identity()` defined in `FTISAnalyser` creates the hash from passing its own parameters, input data and the parent analyser's parameters to `create_hash()`. This ensures that the analyser itself and all the preceding analysers and their parameters are included in the creation of the unique identifier.
+
+```python
+def create_identity(self) -> None:
+p = {
+    k: str(v) 
+    for k, v in vars(self).items() 
+    if k not in ignored_keys
+}
+self.parent_parameters = {}
+self.traverse_parent_parameters()
+self.identity["hash"] = create_hash(self.parent_parameters, p)
+```
+
+When an analyser successfully completes its analysis, it records the hash inside the `metadata.json` file, which is created in the location of the `World()` sink that the analyser is bound to. Before any analysis is performed, the analyser will check to see if the `metadata.json` from the previous run contains a matching hash. If the hashes are the same it will look for a file containing analysis data and load that instead of analysing. The only downside to this approach is that caching would not happen if the `Corpus()` changed but none of the subsequent analysers did.
+
+For example, this pseudocode `ftis` analysis chain computes the fundamental pitch of each sound file in the corpus.
+
+```python
+Corpus() >> Pitch()
+```
+
+After running this the first time, it is discovered that there are several files in the corpus that are silent and we no longer want to include them so we delete those files from that folder on disk. Because the `Corpus()` class outputs a list of paths to sound files as its output data, this would stop any subsequent analyser from loading existing data from disk. However, there are still corpus items from the previous execution that have not been removed and any analysis computed on those items could help increase the speed of future runs. As such, a feature called 'micro-caching' can store the analysis from individual corpus items and recall that if it exists. This uses a similar process to the per-analyser caching, where a unique identifier is created from the analyser itself and the input data. For micro-caching an hash identifier is used as a file name for a binary data file containing the analysis data for a single corpus item. On consecutive runs that file can be checked if it exists before analysing to instead load the data rather than reanalysing. Below is the `analyse()` method taken from the `Loudness()` analyser where this functionality is implemented.
+
+```python
+def analyse(self, workable):
+    hsh = create_hash(workable, self.identity) # create a hash from the input and the identity of the analyser.
+    cache = self.process.cache / f"{hsh}.npy"
+
+    if cache.exists(): # if the cache exists, i.e if the binary file exists on disk
+        loudness = np.load(cache, allow_pickle=True) # let's load it to the 'loudness' variable
+    else: # otherwise analyse
+        loudness = get_buffer(
+            fluid.loudness(
+                workable
+                windowsize=self.windowsize,
+                hopsize=self.hopsize,
+                kweighting=self.kweighting,
+                truepeak=self.truepeak
+            ), "numpy"
+        )
+        np.save(cache, loudness) # and save the data to disk for futher runs
+     = 
+    self.buffer[workable] = loudness.tolist()
+```
+
+Even though the integrity of a chain of `ftis` analysers can easily be modified, it has several strategies for finding any data possible that has already been computed and stored. While the work required to implement such caching was mostly technical, it overall improves the usability of `ftis` within a creative practice by making iteration on ideas quicker. Prior to implementing this feature, I would sometimes avoid certain types of analysis such as creating long chains of analysers for fear of having to wait for reanalysis to complete if I wanted to change their parameters or slightly modify them each time.
+
+## Other Links
+I published a paper for The 2020 Joint Conference on AI Music Creativity that alludes to the development of `ftis` and provides some context for the working method (and its frustrations) that inspired its creation. Here is [the published paper](https://boblsturm.github.io/aimusic2020/papers/CSMC__MuMe_2020_paper_6.pdf) and the video presentation is below.
+
+<YouTube 
+    url=https://www.youtube.com/embed/-FNO0QovfsI
+    title="Corpus Exploration with UMAP and Agglomerative Clustering Presentation"
+/>
+
+I also gave a more detailed and thorough overview of `ftis` in an informal FluCoMa "geekery" session. 
+
+<NextSection 
+next="Conclusion"
+link={m.conclusion}
+/>

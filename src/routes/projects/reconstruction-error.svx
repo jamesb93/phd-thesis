@@ -1,0 +1,62 @@
+<script>
+	import NextSection from "$lib/components/NextSection.svelte"
+    import {metadata as m} from "../directory.svx"
+
+</script>
+
+# Reconstruction Error
+## Motivation
+### Databending/moshing
+<!-- https://vimeo.com/4506517 -->
+<!-- - Michael Chinen -->
+<!-- - Alva Noto -->
+<!-- https://oss.adm.ntu.edu.sg/xqtoh1/tag/ikeda/ -->
+<!-- https://www.clotmag.com/sound/yuichi-ito -->
+<!-- https://totem.menneske.dk/batch_totem/ARCHIVE/TEXT/Thomson.Phil-Atoms.and.Errors-Towards.a.History.and.Aestheti.pdf -->
+<!-- Pimmon - electronic tax return -->
+<!-- .s - taiwanese artist -->
+### Computer _finding_ material
+### Initialising material boundaries
+
+## Development Process
+### Generation
+### Segmentation
+### Analysis
+### Dimension Reduction
+<!-- Grill -->
+### Clustering
+<!-- Pulling together temporally discontiguous samples with perceptual similarity -->
+## Responding to the Output
+### dotmaxwave
+### X86Desc.a
+### segmenoitte
+### 340685107feisraebbaatsaed--isn.sqlite
+### sys.ji 
+
+Noise is good but only in the context of not-noise. This piece 
+
+The practice of cracked media can also be heard as deliberately playing on the expectations of an audience for music, unexpectedly throwing them into noise. This noise might well blast them out of the comfort of a safe musical performance. This tactic can only work a small number of times, however, before an audience comes to expect the blast of sound or the noisy destruction of musical instruments. Here too we can imagine an audience split between those who find the sounds to be noisy and shocking, and those who hear them simply as sounds and an expected part of the performance.
+## Reflection
+<!-- Tempus Ex machina | Stuff about time -->
+### Intervention and Iteration
+<!-- - Intervention as paramount
+- Compositional fluidity
+- Being thrown ideas works! (remember how you explained it to Oli Bown...)
+- Honing initially 'blunt' questions
+- Forming clear compositional intent
+- Responding to constraints _with_ the computer -->
+### A New Workflow
+#### Issues of friction leading to FTIS
+<!-- 1. Discovering structure in a corpus
+2. Finding groupings of perceptually similar materials
+3. Discovering unknown and unique items
+4. Capitalisation on known points of interest
+5. Forming/finding connections between corpus items  -->
+#### Re-embracing the DAW
+<!-- - Linking the DAW to extra information (i.e extending the role of the DAW through FTIS by letting me work with information that is not well represented in a timeline view)
+- navigating-sample-based-music -->
+
+<NextSection 
+next="ElectroMagnetic"
+link={m.em}
+/>

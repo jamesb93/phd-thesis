@@ -1,0 +1,73 @@
+<script>
+    import NextSection from "$lib/components/NextSection.svelte"
+    import {metadata as m} from "./directory.svx"
+
+</script>
+
+# Introduction
+
+This research represents an attempt to explore how content-aware programs can be harnessed for studio-based, computer-aided composition with digital samples. As a composer, my broader compositional interests have always been shaped by my interaction with computers and programs for dealing with sound, including during my earlier years when I composed for traditional configurations of instruments with conventional approaches to harmony, melody and rhythm in [Sibelius](https://www.avid.com/sibelius). My interests and practice have changed radically since then, moving away from the manipulation and arrangement of symbolic information and toward using the computer to assist with composition in the digital audio workstation (DAW) with custom Max patches or with low-level programming languages. The technological aspect of this computer assistance uses content-awareness to derive data that can be useful for inferring the content of a digital signal or sample. In the world of audio, this can be implemented with [audio features or descriptors]({m.ca}#audio-descriptors}), either on their own or in conjunction with statistical algorithms or machine learning.
+
+Within the submitted portfolio, compositions are presented as standalone works and in two cases as a set of pieces in an EP. These works are anchored in a sample-based, digital aesthetic that is non-referential and abstract in nature. The music heavily features noise-based material, synthetic impulses and a proclivity toward sounds that could be interpreted as machine generated errors and digital detritus, much like the work of [Kim Cascone](https://www.discogs.com/artist/4789-Kim-Cascone), [Alva Noto](http://alvanoto.com), [Ryoji Ikeda](https://www.ryojiikeda.com) and [Olivier Pasquet](https://www.opasquet.fr). At the same time a driving aesthetic force behind these works is to explore how such harsh sounds can be coerced into fragile, delicate and texturally nuanced sonic territories that foreground microscopic detail and [microsound](http://microsound.org). 
+
+## Background
+The initial seed for this research project started with a general question: "How can the computer be creative in my compositional practice?". This question has been approached from both artistic and theoretical perspectives. Theoretical approaches can be found in the collective work published in the [Journal of Creative Music Systems](https://www.jcms.org.uk), the Conference for Musical Metacreation or [AI Music Creativity](https://aimusiccreativity.org) and by individuals such as [Oliver Bown](http://www.olliebown.com), [Margaret Boden](https://www.sciencedirect.com/science/article/pii/S0004370298000551), [Anna Jordanous](https://www.kent.ac.uk/computing/people/3051/jordanous-anna), [Steven Jan](https://orcid.org/0000-0001-6370-3713), [Valerio Velardo](https://valeriovelardo.com), [Gerard Assayag](https://scholar.google.fr/citations?user=_47b9jAAAAAJ&hl=fr), [Jérôme Nika](https://jeromenika.com), [Daniele Ghisi](https://www.danieleghisi.com) and [Owen Green](https://scholar.google.co.uk/citations?user=1gvtW3MAAAAJ&hl=en). 
+
+Furthermore, part of this growing question was driven by encountering artistic approaches that employed computers in unfamiliar ways and portrayed it as an *agent* in the process of composition. Artists and various projects I was interested (and am still interested in), for example, Ben Carey and the [_derivations](https://cycling74.com/projects/_derivations) system, [cellF](http://guybenary.com/work/cellf/) and  [Diemo Schwarz and CataRT](http://imtr.ircam.fr/imtr/CataRT). The unifying thread between these practices was the improvisatory aspect, combining machines with performers and designing programs that enabled them to collaborate in real-time. Embracing this for myself, I saw my role as a mediator between compositional process through programming and design of software in collaboration with live performers. This interest culminated in works, some of which have by now succumbed to bit-rot and abandonment. However, [Biomimicry]({m.biom}) remains and I think best encapsulates my interest over the one and a half year period prior to beginning this research in 2017.
+
+Parallel to my initial conceptual curiosities emerging throughout that period, I had been increasingly exposed to technologies for affording computers the ability to computationally *listen* to sounds, including [PiPo](http://ismm.ircam.fr/pipo/), [MuBu](https://forum.ircam.fr/projects/detail/mubu/), [zsa.descriptors](http://www.e--j.com/WordPress/wp-content/zsa.descriptors_SMC08.pdf) and [Alex Harker's suite of Max objects](https://www.alexanderjharker.co.uk/Software.html). These tools presented possibilities for using the computer in a more musically interactive fashion than I had before, constructing Max patches and [pieces](https://www.jamesbradbury.xyz/docs/projects/biomimicry) that would use audio analysis to drive digital signal processing or to structure the unfolding of time. I was fascinated with the way that embedding ideas in code and observing their manifestation provided a fruitful iterative feedback loop in which to compose, much like the classical composer testing ideas in abstraction at the piano to be orchestrated and brought to life later. Beyond seeing directly the success of the result, I was enthralled with the discrepancies between my encoding an initial idea and the computational result. Observing the computer's seeming *agency* in the compositional process demonstrated how intentional it could seem and how my relationship with it could influence the creative process by leading me to iterate on ideas or to generate and discover new ones entirely.
+
+This thesis documents how the initial question, *"How can the computer be creative in my compositional practice?"* evolved and shifted in focus, by examining a series of compositional projects composed over the last three years, explicating the conceptual backgrounds to those projects, exploring the technical implementations of the "content-aware" programs used, and discussing the music resulting from iterative compositional methods. The examination of the connections between motivation, creative coding with content-aware programs and musical results will make a case that this workflow is novel on the basis that it is a computer-aided practice that focuses on the manipulation of digital materials such as samples or synthesis as opposed to symbolic data. I also aim to draw attention to the features of the music which could not have personally been constructed without aid from content-aware programs designed specifically for and by me and with my musical preoccupations in mind.
+
+## Research Aims and Questions
+
+This PhD will examine how content-aware programs have been used in my computer-aided compositional practice. This examination is framed around the following question.
+
+How can I use content-aware programs to compose with digital samples in a studio-based computer-aided compositional practice?
+
+This leads to two sub-questions.
+    
+What compositional procedures do I delegate to either human or computer and what is the balance of these two?
+
+What procedures do I defer to the computer and how do those procedures work?
+     
+To examine this research question a portfolio of five works has been composed. In each project, the computer is used to explore different types of content-awareness, and varying forms of computer-assistance in studio-based composition. While each work presents its own line of enquiry in terms of aesthetic aims and programming practice, the portfolio exists as an ensemble of works rather than isolated, individual "experiments".
+
+For each project, the following aspects will be discussed in reflection.
+
+1. Artistic aims and motivations that contextualise each project
+2. Machine listening and the design of relevant content-aware programs to explore aims and motivation
+3. The relationship between what the software does and its influence on the compositional process and the result.
+
+<NextSection 
+next="Preoccupations"
+link={m.preoc}
+/>
+
+<style>
+    :root {--idx: "1."}
+    h1 {counter-reset: h2}
+    h2 {counter-reset: h3}
+    h3 {counter-reset: h4}
+    h4 {counter-reset: h5}
+
+    h1:before {content: var(--idx) " "}
+
+    h2:before {
+        content: var(--idx) counter(h2, decimal) " ";
+        counter-increment: h2;
+    }
+    h3:before {
+        content: var(--idx) counter(h2, decimal) "." counter(h3, decimal) " ";
+        counter-increment: h3;
+    }
+    h4:before {
+        content: var(--idx) counter(h2, decimal) "." counter(h3, decimal) "." counter(h4, decimal) " ";
+        counter-increment: h4;
+    }
+
+    h2.nocount:before, h3.nocount:before, h4.nocount:before {
+        content : "";
+        counter-increment: none;
+    }
+</style>

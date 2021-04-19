@@ -1,0 +1,8 @@
+- references in APA 6 Style
+- piece titles are in italics
+- figures have four types
+    - VIDEO
+    - DEMO
+    - IMAGE
+    - AUDIO
+    - CODE

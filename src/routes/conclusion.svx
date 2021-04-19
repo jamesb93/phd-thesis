@@ -1,0 +1,45 @@
+<script>
+	import NextSection from "$lib/components/NextSection.svelte"
+    import {metadata as m} from "./directory.svx"
+
+</script>
+
+# Conclusion
+## Composition Workflow and Process
+
+## Realisational and Functional Interfaces
+### Four Phases
+
+https://llllllll.co/t/quotes-on-music-composition/12794/38
+    1. Collecting or Generating
+    2. Analysing
+    3. Organising
+    4. Manipulating
+
+- I've established a way of controlling high-level form while also having it be responsive to the iterative development process.
+
+Tightening the iterative development cycle as much as possible.
+
+## Convergence
+<!-- 
+    While I tout technology being non-deterministic as a feature, 
+    a prominent feature of the last two projects is a focusing on processes that are similar
+    When compared to the the first 3 projects, the last 2 show a much more refined approach 
+    that has been shaped by musical interest converging alongside a number of technological tools
+-->
+## Continuing Concerns and the Future
+Building methods for intervention. Being able to adjust outputs with a sensible interface or set of tools
+### Technology
+#### Rebuilding the Workflow
+- Part of this PhD research has been about developing a workflow maintains contuinity between projects while allowing a level of flexibility. Developing a relatively stable set software tools and practice toward this end has been a process of refining and understanding what it is I want to derive from this hybrid computer-assisted workflow as well as conceiving of interfaces for exploring those interests. I believe FTIS's role will extend into the future...
+<!-- I don't want to rebuild the workflow each time -->
+<!-- Suggested Interfaces -->
+### Aesthetic
+<!-- Some of the work that has been completed here will guide how I work in the future -->
+<!-- In particular rhythmicising textural sounds -->
+
+
+<NextSection 
+next="References"
+link={m.ref}
+/>
