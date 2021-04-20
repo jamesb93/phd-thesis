@@ -59,7 +59,6 @@
 
 
 <style>
-	/* Grid */
 	.wrapper {
 		display: grid;
 		grid-template-columns: auto min(80ch, 100%) auto;
