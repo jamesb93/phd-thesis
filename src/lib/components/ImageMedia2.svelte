@@ -14,7 +14,7 @@
     {/if}
 
     <div class="caption">
-            <p>{figure}: {caption}</p>
+        <p>{figure}: {caption}</p>
     </div>
 </div>
 
@@ -56,8 +56,8 @@
         width: 100%;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         opacity: 0;
-        -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        -webkit-transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
     .container::hover::after {
@@ -67,6 +67,8 @@
     .caption :global(p) {
         font-style: italic;
         text-align: center;
+        width: 80%;
+        margin: 0 auto;
     }
     
 </style>
