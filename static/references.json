@@ -1,6 +1,16 @@
 {
     "references" : [
         {
+            "id" : "subsumption",
+            "name" : "Linson, A., Dobbyn, C., Lewis, G. E., & Laney, R. (2015). A subsumption agent for collaborative free improvisation. *Computer Music Journal, 39*(4), 96-115.",
+            "url" : "http://libeprints.open.ac.uk/46072/1/__userdata_documents2_dld2_Desktop_A%20Subsumption%20Agent%20for%20Collaborative%20Free%20Improvisation.pdf"
+        },
+        {
+            "id" : "UMAP",
+            "name" : "McInnes, L., Healy, J., & Melville, J. (2018). Umap: Uniform manifold approximation and projection for dimension reduction. *arXiv preprint arXiv:1802.03426*.",
+            "url" : "https://arxiv.org/pdf/1802.03426.pdf?kl=viewed"
+        },
+        {
             "id" : "cluster-analysis-for-applications",
             "name" : "Anderberg, M. R. (1973). The broad view of cluster analysis. *Cluster analysis for applications*, 1-9.",
             "url" : "https://www.sciencedirect.com/book/9780120576500/cluster-analysis-for-applications"
