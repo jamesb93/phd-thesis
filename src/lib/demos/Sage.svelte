@@ -17,7 +17,8 @@
     let shuffled;
     let unshuffledOverview;
     let shuffledOverview;
-    let audio;
+    let audio1;
+    let audio2;
     let peaksControls;
 
     onMount (async()=>{
@@ -29,7 +30,7 @@
                 unshuffled = Peaks.init({
                     containers: {overview: unshuffledOverview},
                     dataUri: {arraybuffer: peaks1},
-                    mediaElement: audio,
+                    mediaElement: audio1,
                     height: 60,
                     segmentStartMarkerColor: '#a0a0a0',
                     segmentEndMarkerColor: '#a0a0a0',
@@ -46,25 +47,25 @@
                     segments: segs1
                 })
     
-                // shuffled = Peaks.init({
-                //     containers: {overview: shuffled},
-                //     dataUri: {arraybuffer:  peaks2},
-                //     mediaElement: audio,
-                //     height: 60,
-                //     segmentStartMarkerColor: '#a0a0a0',
-                //     segmentEndMarkerColor: '#a0a0a0',
-                //     zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
-                //     overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
-                //     overviewHighlightColor: 'grey',
-                //     segmentColor: 'rgba(255, 161, 39, 1)',
-                //     playheadColor: 'rgba(0, 0, 0, 1)',
-                //     playheadTextColor: '#aaa',    
-                //     showPlayheadTime: false,
-                //     pointMarkerColor: '#FF0000',
-                //     axisGridlineColor: '#ccc',
-                //     axisLabelColor: '#aaa',
-                //     segments: segs2
-                // })
+                shuffled = Peaks.init({
+                    containers: {overview: shuffledOverview},
+                    dataUri: {arraybuffer:  peaks2},
+                    mediaElement: audio2,
+                    height: 60,
+                    segmentStartMarkerColor: '#a0a0a0',
+                    segmentEndMarkerColor: '#a0a0a0',
+                    zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
+                    overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
+                    overviewHighlightColor: 'grey',
+                    segmentColor: 'rgba(255, 161, 39, 1)',
+                    playheadColor: 'rgba(0, 0, 0, 1)',
+                    playheadTextColor: '#aaa',    
+                    showPlayheadTime: false,
+                    pointMarkerColor: '#FF0000',
+                    axisGridlineColor: '#ccc',
+                    axisLabelColor: '#aaa',
+                    segments: segs2
+                })
             } catch (err) {
                 console.error(err);
             }
@@ -80,11 +81,11 @@
         <div class="overview" bind:this={shuffledOverview} />
     </div>
     <div class="peaks-controls" bind:this={peaksControls}>
-        <audio controls bind:this={audio}>
+        <audio controls bind:this={audio1}>
             <source src={file1} type="audio/mp3">
             <track kind="captions">
         </audio>
-        <audio controls bind:this={audio}>
+        <audio controls bind:this={audio2}>
             <source src={file2} type="audio/mp3">
             <track kind="captions">
         </audio>
@@ -130,6 +131,8 @@
         flex-direction: column;
         justify-content: center;
         padding-top: 3px;
+        width: 80%;
+        margin: 0 auto;
     }
 </style>
 
