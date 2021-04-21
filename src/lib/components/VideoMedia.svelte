@@ -1,5 +1,9 @@
 
-<div class="container">
+<script>
+    export let id = ""
+</script>
+
+<div class="container" id={id}>
     <slot name="media">
         <span>There should be media content here. If there isn't there is a problem.</span>
     </slot>
@@ -51,6 +55,8 @@
     .caption :global(p) {
         font-style: italic;
         text-align: center;
+        width: 80%;
+        margin: 0 auto;
     }
 
     .error {
