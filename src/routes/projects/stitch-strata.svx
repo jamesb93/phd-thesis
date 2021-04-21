@@ -67,16 +67,16 @@ I began by segmenting all of the recordings using REAPER's dynamic split tool an
     segs2={sageShuffled}
 />
 
-### Strategies For Arranging Segments
-Experimenting in this rapid, cheap way produced results that immediately sparked an interest in how I could recombine the individual segments of these gesture to create new ones and to synthesise new materials through recycling material. The segmentation process was relatively straight forward, and after performing this procedure I had a wealth of short utterances to work with. The next challenge to face was building a system that would be responsible for organising phrases from these materials. I did not necessarily have a strong idea about what would constitute a phrase in terms of formal scale, but I knew that I wanted to explore recombining segments such that result would be perceptually "smooth", and not discontinuous and digital sounding. Given these loose constraints, I set out experimenting with a number of approaches in which individual segments would be concatenated into continuous *streams*.  
+### Selecting Segments
+Experimenting in this rapid way produced results that immediately sparked an interest in me for how I could recombine the individual segments of these gesture and to synthesise new materials by recycling items from this corpus of vocal utterances. The next challenge to face was building a system that would be responsible for organising phrases from these materials. I did not necessarily have a strong idea about what would constitute a phrase in terms of formal scale, but I knew that I wanted to explore recombining segments such that result would be perceptually "smooth", and not discontinuous and digital sounding. Given these loose constraints, I set out experimenting with a number of approaches in which individual segments would be concatenated into continuous *streams*.  
 
-A strategy I explored early on was to employ audio descriptors in order to analyse the RMS, spectral centroid and spectral flatness measure of each sample. I anticipated that these three bits of data would allow me to differentiate each sound from each other by capturing their "brightness" (spectral centroid), "noisiness"  (spectral flatness) and intensity (RMS). I could then use the computer to find samples that were relatively homogenous in the percept. I could then combine samples that were similar enough according to a metric of distance. Using a Max patch, I was able to test this idea by querying a database of this descriptor information to return samples that fit a set of criteria. In VIDEO 1, I demonstrate this in practice, where I query for up to 50 samples from the corpus of segments based on three different constraints.
+A strategy I explored early on was to employ audio descriptors in order to analyse the RMS, spectral centroid and spectral flatness measure of each sample. I anticipated that these three bits of data would allow me to differentiate each sound from each other by capturing their "brightness" (spectral centroid), "noisiness"  (spectral flatness) and intensity (RMS). I could then use the computer to find samples that were relatively homogenous in the percept. I could then combine samples that were similar enough according to a metric of distance. Using a Max patch, I was able to test this idea by querying a database of this descriptor information to return samples that fit a set of criteria. In [VIDEO 1]({m.ss}#vid1), I demonstrate this in practice, where I query for up to 50 samples from the corpus of segments based on three different constraints. Each slider corresponds to a different descriptor, so by changing the value in this interface I can modify the query.
 
-1. Samples that have a spectral centroid greater than a threshold
+1. Samples that have a spectral centroid greater than the given threshold
 2. Samples that have a spectral flatness measure than a threshold
 3. Samples that have an amplitude within 6dB of a given value
 
-<VideoMedia>
+<VideoMedia id="vid1">
     <video slot="media" controls>
         <source src="/static/ss/descriptorspace.webm" type="video/webm">  
         <p>
@@ -84,40 +84,103 @@ A strategy I explored early on was to employ audio descriptors in order to analy
         link to the video</a>instead.
         </p>  
     </video>
-    <p slot="caption">VIDEO 1: This screen capture shows the single input interface in practice.</p>
+    <p slot="caption">VIDEO 1: Querying the corpus of voice segments using audio descriptors.</p>
 </VideoMedia>
 
-Interesting things emerged, especially in highly constrained spaces. It did prove to be a process of trial and error, finding the right constraints.
+Using the computer to query the corpus and find groups of samples matching a particular descriptor specification, I was presented with a number of possibilities that appealed to me aesthetically. In particular, results which produced texturally focused groupings were appealing to me, because by simply concatenating those sounds together it was possible to hear how they could form a detailed texture. Another aspect I did not intend to find, but found appealing, was the way that a morphology can be imposed on the concatenative process by changing the thresholds of the query dynamically. This can be seen specifically at 0:20 in [VIDEO 1]({m.ss}#vid1).
 
-- A variety of approaches that were unsatisfactory.
-    - Most approaches involved navigating through a descriptor space with different patterns in order to generate perceptual shapes.
-    - Using descriptor values and accumulators to generate passages with finite amounts of 'energy'
-    - Simulated Annealing
-    - Issues
-        - Lacking formal direction and intention
-        - Way too much time spent on low-level detail that had no relevance to the higher-level form (lots of friction)
-        - Thinking about what I would 'want' to do, and an appropriate model for that. Lots of layers of abstraction to fight through to get to musical result when I already had a good idea about the types of sounds and organisations I wanted. Basically questioning why I would have the computer make certain decisions automatically?
+This descriptor processor underpinned much of the compositional process to follow. From this point I attempted to devise ways in which the computer could take these notions of forming material by querying by descriptor matching and use it in combination with another systematic layer that would construct form. This is discussed in ["Constructing Form Computationally"]({m.ss}#constructing-form-computationally)
 
-initial_attempts > recordings > 5712433.txt (annealing)
+ ### Constructing Form Computationally
+In this phase of the composition process I faced a number of challenges when trying to devise systems for controlling form in combination with the descriptor matching paradigm. A number of strategies were explored in which I attempted to have the computer impose a level of control over what queries in order to dynamically create different material groups on-the-fly. 
 
+One approach was to create predefined "shapes" that would dictate the overall quality of the gesture, without specifying any of the details in rendering it. This has a loose and sometimes tenuous connection to the perception of the audio which in some regards is very convincing, and others arbitrary. This type of approach is discussed in Harker (2012), in which he outlines how bespoke Max externals have been used toward similar ends in his compositional practice.
+
+VIDEO 2 demonstrates one implementation, where the computer uses a parabolic shape to dynamically alter the amplitude and spectral centroid query values. This creates a smooth transition between the internal states of the gesture as different samples are selected. 
+
+<VideoMedia id="vid2">
+    <video slot="media" controls>
+        <source src="/static/ss/dynamic-gesture.webm" type="video/webm">  
+        <p>
+        Your browser doesn't support HTML5 video. Here is a <a href="/static/ss/dynamic-gesture.webm">
+        link to the video</a>instead.
+        </p>  
+    </video>
+    <p slot="caption">VIDEO 2: Dynamic gestures created by dynamically querying a corpus of vocal segments based on audio descriptors.</p>
+</VideoMedia>
+
+VIDEO 3 shows another idea in which a static state of very low amplitude is intermittently "escaped" from by updating a query for new samples in real-time. This creates a series of jumps between static states.
+
+<VideoMedia id="vid3">
+    <video slot="media" controls>
+        <source src="/static/ss/static-jumps.webm" type="video/webm">  
+        <p>
+        Your browser doesn't support HTML5 video. Here is a <a href="/static/ss/static-jumps.webm">
+        link to the video</a>instead.
+        </p>  
+    </video>
+    <p slot="caption">VIDEO 3: A self-contained static musical behaviour is formed by creating an "anchor" in the descriptor space and momentarily departing and then returning to it.</p>
+</VideoMedia>
+
+These are just some of the strategies employed. Many are codified into the Max patches, or were left in half finished states and at various stages of development. Ultimately with this approach, I embraced what Harker (2012, p. 7) terms a "perceptual equivalence". Individual samples are interchangeable in regards to the query and variability is constrained to the dynamic shape rather than specific choices. As such, this strategy for having the computer select samples and arranging them revolves around communicating a generalised fixed structure which is detailed and resolved computationally.
+
+Stacking these gestures and giving the computer to select between different "presets" of them, creating variation through recombining simple and effective archetypes.
+
+- Automatic trajectories imposed by simulated annealing
+    - initial_attempts > recordings > 5712433.txt (annealing)
+
+<Waveform 
+id="wave1"
+title="AUDIO 1: Adversarial searching"
+/>
+
+Pitting two dynamic searches against each other. One that attempts to minimise the volume of the output by changing the centroid and one that tries to find the maximum centroid by minimising the volume. This adversarial process has no resolution but produces some interesting longer term morphologies and structures without having to specifically implement them. Part of this process was also a precursor to my engagement with Simulated Annealing in [Annealing Strategies]({m.as}).
+
+
+- Using descriptor values and accumulators to generate passages with finite amounts of 'energy'
+    - Lots of tuning
 - sample selection
-    - z12 and shuffling samples.
-        - Just another level of shuffle, not necessarily interpreted as an something with order or a level of organisation. 
+- z12 and shuffling samples.
+    - Puckette (2015)
+    - Just another level of shuffle, not necessarily interpreted as an something with order or a level of organisation. 
 
-## From Modelling To Assistance
+- Issues
+    - Lacking formal direction and intention
+    - Way too much time spent on low-level detail that had no relevance to the higher-level form (lots of friction)
+    - Thinking about what I would 'want' to do, and an appropriate model for that. Lots of layers of abstraction to fight through to get to musical result when I already had a good idea about the types of sounds and organisations I wanted. Basically questioning why I would have the computer make certain decisions automatically?
+
+More decisions were introduced, that on top of this came with their own set of technical requirements and concerns
+Too much effort was put into finding generative or algorithmic models that reflected what I wanted to be composed in the first place.
+There wasn't even a sense that these schemes were introducing an unintended or insightful aspect to the compositional process, they were just failures in replicating an existing way of thinking that I could have performed manually myself.
+
+Ultimately, the frustrations of not meeting these challenges led to a radical change in the constraints I initially wanted to explore for Stitch/Strata.
+
+None of these led to a piece, they were okay as experiments, but nothing spoke to me on an artistic or conceptual level about how the computer might build an entire piece in this fashion. 
+
+Numerous meetings where the idea for this piece would pivot or I would pursue a new strategy beliving it would lead to a piece.
+
+### From Modelling To Assistance
 - I needed to make a drastic change to my workflow and "break" some boundaries I had put up.
     - Desired balance between human and computer agency (was one of these)
 
 - How did I do this?
-    - Python is a different form of expression
+    - "Cold turkey" leave Max behind. Project structure was incredibly messy, bloated and I couldn't trace my compositional development. It was a mess of small experiments without being able to track how things had progressed. 
+    - The way I wanted to work required creating a lot of abstraction around very trivial ideas, like looping over a container of audio files representing a gesture.
+    - Pick up Python as a new tool
+        - break the "rut"
+        - Python is a different form of expression
     - Using Python, to iterating over possibilities and generating small structures
-    - Building smaller structures and controlling their order in time myself, or manually blending them was a more fruitful approach than fiding a system to govern that type of high-level thinking.
+        - itertools to create patterned structures.
+            - A better approach than Z12 for me.
+    - Building smaller structures and controlling their order in time myself, or manually blending them was a more fruitful approach than finding a system to govern that type of high-level thinking.
+    - Generating numerous sound files with variation very rapidly.
     - Working back in a DAW where things could be fixed to some degree and don't have to be 'programmed' in the same way.
+        - Use the inherent "memory" of the DAW to create temporary stores of decision making. This acted like scaffolding to realise the piece
 
-<!-- TODO REFERENCES TO SPECIFIC MOMENTS IN THE PIECE -->
-- Specific Breakdown of patches > resulting music
-    - gestures.maxpat to construct gestures with dynamic descriptor searches
-
+    - Examples
+        - concat.py
+        - /phrases/
+        - 
 ## Reflecting On The Balance Of Human And Computer Agency
 - The transition from attempting to model specific musical structures, toward building smaller ones and working with them intuitively shifted the balance of contribution made by the computer to the compositional process. Instead of focusing on having the computer formalise most if not all aspects of a work using detailed systems, I moved toward a strategy in which the computer presented options to me, which I could then modify, process, change in place all while leveraging the interface of the DAW. 
 
