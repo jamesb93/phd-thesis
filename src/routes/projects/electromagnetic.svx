@@ -28,6 +28,9 @@
 ### Recording objects
 ### First impressions
 ### From $2 to $50 microphone
+
+Significantly improving the gain of the source material, bringing out the details and nuances without raising the noise floor too much.
+
 ### Static vs gestural
 ### ClusterFck
 ### Early FTIS

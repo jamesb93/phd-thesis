@@ -1,4 +1,5 @@
 <script>
+    import VideoMedia from "$lib/components/VideoMedia.svelte";
     import ImageMedia2 from '$lib/components/ImageMedia2.svelte';
 	import NextSection from "$lib/components/NextSection.svelte";
     import {metadata as m} from "../directory.svx";
@@ -17,12 +18,11 @@ The first performance of this piece was at the [2019 Electric Spring Festival](h
 
 At the beginning of this PhD, I focused on the question of "how can the computer be creative in composition?". This question was a driving factor in what I wanted to explore and was a reflection of the curiosities spawned from a previous project, [Biomimicry]({m.biom}) in which the computer was seemingly creative and was able to construct sophisticated formal events in real-time.  I attribute many successful aspects of Biomimicry  in this regard, to the contributions from the improvisers. Primarily, the improviser drove formal events and the computer was only able to respond to the changes and structuring of time imposed by its human counterpart. Reflecting on this, my supervisor Dr. Alex Harker encouraged me to write a piece entirely "in the computer" and without any improvisers or instrumental component. The aim of this challenge was to remove the influence that a human could have on the computer in the performance of a piece and to encourage me to find computational strategies for creating sophisticated formal events.
 
-As such, a major motivation for this project was to investigate how the computer could structure all formal levels of a work, from the selection of individual samples, their arrangement into gestures, their arrangement into sequences of gestures and so on and so forth until the work is additively built from a set of atomic units (samples) and a governing algorithm. Ideally, this would take my influence away from arranging materials at different levels of detail myself, to inventing procedures that the computer would then use to realise a work automatically. In this regard, a number of other practitioners were influencing me and driving this type of thinking. These are described in the next section, ["Other Practice"]({m.ss}#other-practice).
+As such, a major motivation for this project was to investigate how the computer could structure all formal levels of a work, from the selection of individual samples, their arrangement into gestures, their arrangement into sequences of gestures and so on and so forth until the work is additively built from a set of atomic units (samples) and a governing algorithm. Ideally, this would take my influence away from arranging materials at different levels of detail myself, to inventing procedures that the computer would then use to realise a work automatically. In this regard, a number of other practitioners were influencing me and driving this type of thinking. These are described in the next section, ["Other Practices"]({m.ss}#other-practices).
 
 <!-- A motivation for me making the computer generate material is so that I do not have to conceive of all the material myself, and instead can create a strategy in which the computer can encompass variations and different forms of an idea. Within this problem though I want the computer to be able to be seeded with definitive qualities, such as a certain types of sound materials or constraints on how it uses these. Finding a strategy to represent both known and unknown qualities in the system design  is something that I wanted to achieve in this project, ideally so that I can create a form of interplay between aspects which are fixed and those which are not. -->
 
-### Other Practice
-
+### Other Practices
 Michael Young's "Neural Network Music" (NN Music) was particularly prominent in my set of influences. This is a real-time improvisational piece for an unspecified instrumental improviser and the computer. The piece is based around the computer as an improvisational partner that moves between a number of states. It decides which state to be in based on classifying the sound behaviours of the improvisational partner and the nature of their playing. The caveat of this is that the computer begins with a limited classification model that it then builds up over time in the course of the piece. The neural network that underpins how the computer responds to the performer is constantly retraining on the fly and developing a mapping between a set of actions it has stored in memory and the performance in the moment.
 
 I found the technological approach of this work inspiring for two reasons. Firstly, much of the "composing" is done without necessarily making decisions about specific and detailed musical structures. Instead, a more general model for how sound should be made in real-time is devised and the results of this are somewhat open-ended. Secondly, the computer *forms its own connections* and uses those to make decisions about the structure of its responses to the performer. Those connections are not explicitly pre-composed or made ahead of time and instead are formed in the moment dynamically. 
@@ -48,15 +48,15 @@ The subsumption architecture by Linson et. al. appealed to me in simplifying the
 These kinds of generalisations led to many failed attempts and created such a frustrating compositional process that I ended up rejecting the initial constraints of working "in the computer" and returned to me involving intuitive compositional processes enacted by me manually to finish the piece. This process is described next.
 
 ## Compositional Process
-In this section I will descirbe the journey of the compositional process from the earliest experiments composing *with* the computer to the final result. Along the way I will detail some additional musical influences and reflect on the trajectory of this project.
+In this section I will describe the journey of the compositional process from the earliest experiments composing *with* the computer to the final result. Along the way I will detail some additional musical influences and reflect on the trajectory of this project.
 
 ### The Influence of Experimental Vocal Improvisation
-Alongside the compositional influences described in [Motivations and Influences]({m.ss}#motivations-and-influences), listening *without* analysing compositional and technological method was formative in the kinds of material that I used. Among these influences was [Sage Pbbbt](https://sagepbbbt.com), whose enormous catalogue of vocal improvisation "daily sketches" became a trove of material that I would later draw on. Sage's improvisations demonstrate the richness of extended vocal techniques and the diversity of sounds that can be produced, from short iterated transients to long textures from inhalations. In connection with their practice of extended vocal technique improvisation I came into contact with the discography of [Phil Minton](https://www.philminton.co.uk) as well as his collaborative efforts with [Audrey Chen](http://www.audreychen.com) in *By The Stream*. Lastly, [Trevor Wishart's](http://www.trevorwishart.co.uk) piece [*Tongues of Fire*](https://www.youtube.com/watch?v=Ude4717dlsQ).
+Alongside the compositional influences described in [Motivations and Influences]({m.ss}#motivations-and-influences), listening had an impact on the sound materials that I gathered for composition. In this regard,  [Sage Pbbbt](https://sagepbbbt.com), whose enormous catalogue of vocal improvisation "daily sketches" became a trove of material that I would later draw on. These improvisations demonstrate the richness of extended vocal techniques and the diversity of sounds that can be produced. In connection with Sage's practice of extended vocal technique improvisation, I came into contact with the discography of [Phil Minton](https://www.philminton.co.uk) as well as his collaborative efforts with [Audrey Chen](http://www.audreychen.com) in *By The Stream*. Lastly, [Trevor Wishart's](http://www.trevorwishart.co.uk) piece [*Tongues of Fire*](https://www.youtube.com/watch?v=Ude4717dlsQ).
 
-Vocal sounds had been a material that I wanted to work with in composition more deeply, so coming in contact with this rich world of experimental vocal improvisation resulted in a confluence sonic and technological interests. I myself am not a vocal improviser and needed some source materials to compose with and decided to use the entirety of the daily sketches by Sage Pbbbt due to the liberal [Creative Commons](https://creativecommons.org/licenses/by-nc/3.0/) license. 
+Extended vocal sounds had been a material that I wanted to work with in composition more deeply, so coming in contact with this rich world of experimental vocal improvisation created a confluence of sonic and technological interests. I myself am not a vocal improviser and needed some source materials to compose with and decided to use the entirety of the daily sketches by Sage Pbbbt due to the liberal [Creative Commons](https://creativecommons.org/licenses/by-nc/3.0/) license. My plans were to deconstruct this large body of work and use the computer aid me in selecting and arranging it.
 
 ### Building A Corpus Of Materials
-I began by segmenting all of the recordings using REAPER's dynamic split tool and configuring it to segment at the transients. The reason for this is that I wanted to extract individual utterances and phonetic-like sounds from composite gesture to be rearranged and re-concatenated. AUDIO 1 shows an example of this , by taking a portion of ["One Breath Poem Failure"](https://sagemusick.bandcamp.com/track/2016-02-16-one-breath-poem-failure), segmenting it and then recombining the segments randomly. The colours of each segment track the displacement of each utterance.
+I began by segmenting all of the recordings using REAPER's dynamic split tool and configuring it to segment based on the detection of transients. This choice was made because I wanted to extract individual utterances and phonetic-like sounds from composite gesture to be rearranged and re-concatenated. AUDIO 1 shows an example of this , by taking a portion of ["One Breath Poem Failure"](https://sagemusick.bandcamp.com/track/2016-02-16-one-breath-poem-failure), segmenting it and then recombining the segments randomly. The colours of each segment track the displacement of each utterance.
 
 <Sage
     file1="/static/ss/gesture.mp3"
@@ -67,19 +67,38 @@ I began by segmenting all of the recordings using REAPER's dynamic split tool an
     segs2={sageShuffled}
 />
 
-Experimenting in this rapid, cheap way produced results that immediately sparked an interest in how I might recombine the individual segments of these gesture to create new ones and to synthesise new materials through recycling.
+### Strategies For Arranging Segments
+Experimenting in this rapid, cheap way produced results that immediately sparked an interest in how I could recombine the individual segments of these gesture to create new ones and to synthesise new materials through recycling material. The segmentation process was relatively straight forward, and after performing this procedure I had a wealth of short utterances to work with. The next challenge to face was building a system that would be responsible for organising phrases from these materials. I did not necessarily have a strong idea about what would constitute a phrase in terms of formal scale, but I knew that I wanted to explore recombining segments such that result would be perceptually "smooth", and not discontinuous and digital sounding. Given these loose constraints, I set out experimenting with a number of approaches in which individual segments would be concatenated into continuous *streams*.  
+
+A strategy I explored early on was to employ audio descriptors in order to analyse the RMS, spectral centroid and spectral flatness measure of each sample. I anticipated that these three bits of data would allow me to differentiate each sound from each other by capturing their "brightness" (spectral centroid), "noisiness"  (spectral flatness) and intensity (RMS). I could then use the computer to find samples that were relatively homogenous in the percept. I could then combine samples that were similar enough according to a metric of distance. Using a Max patch, I was able to test this idea by querying a database of this descriptor information to return samples that fit a set of criteria. In VIDEO 1, I demonstrate this in practice, where I query for up to 50 samples from the corpus of segments based on three different constraints.
+
+1. Samples that have a spectral centroid greater than a threshold
+2. Samples that have a spectral flatness measure than a threshold
+3. Samples that have an amplitude within 6dB of a given value
+
+<VideoMedia>
+    <video slot="media" controls>
+        <source src="/static/ss/descriptorspace.webm" type="video/webm">  
+        <p>
+        Your browser doesn't support HTML5 video. Here is a <a href="/static/ss/descriptorspace.webm">
+        link to the video</a>instead.
+        </p>  
+    </video>
+    <p slot="caption">VIDEO 1: This screen capture shows the single input interface in practice.</p>
+</VideoMedia>
+
+Interesting things emerged, especially in highly constrained spaces. It did prove to be a process of trial and error, finding the right constraints.
 
 - A variety of approaches that were unsatisfactory.
     - Most approaches involved navigating through a descriptor space with different patterns in order to generate perceptual shapes.
     - Using descriptor values and accumulators to generate passages with finite amounts of 'energy'
-    - Different arbitrary assignments, thinking of the corpus as a 'language' of phonetics that can be reconstructed into words
     - Simulated Annealing
     - Issues
         - Lacking formal direction and intention
         - Way too much time spent on low-level detail that had no relevance to the higher-level form (lots of friction)
         - Thinking about what I would 'want' to do, and an appropriate model for that. Lots of layers of abstraction to fight through to get to musical result when I already had a good idea about the types of sounds and organisations I wanted. Basically questioning why I would have the computer make certain decisions automatically?
 
-initial_attempts > recordings > 5712433.txt
+initial_attempts > recordings > 5712433.txt (annealing)
 
 - sample selection
     - z12 and shuffling samples.
