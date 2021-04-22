@@ -1,4 +1,5 @@
 <script>
+    import Waveform from '$lib/components/Waveform.svelte';
     import VideoMedia from "$lib/components/VideoMedia.svelte";
     import ImageMedia2 from '$lib/components/ImageMedia2.svelte';
 	import NextSection from "$lib/components/NextSection.svelte";
@@ -92,11 +93,9 @@ Using the computer to query the corpus and find groups of samples matching a par
 This descriptor processor underpinned much of the compositional process to follow. From this point I attempted to devise ways in which the computer could take these notions of forming material by querying by descriptor matching and use it in combination with another systematic layer that would construct form. This is discussed in ["Constructing Form Computationally"]({m.ss}#constructing-form-computationally)
 
  ### Constructing Form Computationally
-In this phase of the composition process I faced a number of challenges when trying to devise systems for controlling form in combination with the descriptor matching paradigm. A number of strategies were explored in which I attempted to have the computer impose a level of control over what queries in order to dynamically create different material groups on-the-fly. 
+In this phase of the composition process I faced a number of challenges when trying to devise systems for controlling form based on the audio descriptor information. A number of strategies were explored in which I attempted to have the computer impose a level of control over what queries were made in order to dynamically create material groups on-the-fly.
 
-One approach was to create predefined "shapes" that would dictate the overall quality of the gesture, without specifying any of the details in rendering it. This has a loose and sometimes tenuous connection to the perception of the audio which in some regards is very convincing, and others arbitrary. This type of approach is discussed in Harker (2012), in which he outlines how bespoke Max externals have been used toward similar ends in his compositional practice.
-
-VIDEO 2 demonstrates one implementation, where the computer uses a parabolic shape to dynamically alter the amplitude and spectral centroid query values. This creates a smooth transition between the internal states of the gesture as different samples are selected. 
+One approach was to create predefined query "shapes" that structured a dynamic query over a given period of time. Using this, I could define the overall quality and percept of the gesture, without specifying any of the details and decisions such as which samples would form that gesture would be taken up by the matching algorithm. This type of approach is discussed in Harker (2012), in which he outlines how bespoke Max externals have been used toward similar ends in his compositional practice. VIDEO 2 demonstrates one version of this, where queries are changed according to a gesture that is defined by a number of points to be reached at specific times. This creates a parabolic trajectory that increases and decreases the amplitude and spectral centroid query values over a set amount of time. This produces a strong perceptual link between the query and the sound which as a compositional tool is a useful way of having the computer render complex perceptual arrangements based on a simple way of communicating it.
 
 <VideoMedia id="vid2">
     <video slot="media" controls>
@@ -122,65 +121,79 @@ VIDEO 3 shows another idea in which a static state of very low amplitude is inte
     <p slot="caption">VIDEO 3: A self-contained static musical behaviour is formed by creating an "anchor" in the descriptor space and momentarily departing and then returning to it.</p>
 </VideoMedia>
 
-These are just some of the strategies employed. Many are codified into the Max patches, or were left in half finished states and at various stages of development. Ultimately with this approach, I embraced what Harker (2012, p. 7) terms a "perceptual equivalence". Individual samples are interchangeable in regards to the query and variability is constrained to the dynamic shape rather than specific choices. As such, this strategy for having the computer select samples and arranging them revolves around communicating a generalised fixed structure which is detailed and resolved computationally.
+These are just two of the strategies employed. Many are codified into the Max patches, or were left in half finished states and at various stages of development and left try try other things or were unsatisfactory. Ultimately with this approach, I embraced what Harker (2012, p. 7) terms a "perceptual equivalence". Individual samples are interchangeable in regards to the query and variability is constrained to the dynamic shape rather than specific choices. As such, this strategy for having the computer select samples and arranging them revolves around communicating a generalised fixed structure which is detailed and resolved computationally.
 
-Stacking these gestures and giving the computer to select between different "presets" of them, creating variation through recombining simple and effective archetypes.
-
-- Automatic trajectories imposed by simulated annealing
-    - initial_attempts > recordings > 5712433.txt (annealing)
+Another approach I tried involved creating a behaviour around the notion of "adversarial searching".  For this, I take two starting points within the descriptor space and attach those starting points to two different searches, one that attempts to minimise the volume of the output by changing the spectral centroid and one that tries to find the maximum centroid by minimising the volume. This adversarial process has no resolution but produces longer term morphologies and structures without having to specifically design them at each moment. This kind of thinking carried over and was a precursor in many ways to my engagement with Simulated Annealing in [Annealing Strategies]({m.as}), which exploits a similar searching behaviour. to structure music automatically. This technique produced the some interesting meso-scale results, but produced a lot of directionless forms at the highest formal level. AUDIO 1 is one of the outputs of this process.
 
 <Waveform 
 id="wave1"
+file="/static/ss/5712433.mp3"
+peaks="/static/ss/5712433.dat"
 title="AUDIO 1: Adversarial searching"
 />
-
-Pitting two dynamic searches against each other. One that attempts to minimise the volume of the output by changing the centroid and one that tries to find the maximum centroid by minimising the volume. This adversarial process has no resolution but produces some interesting longer term morphologies and structures without having to specifically implement them. Part of this process was also a precursor to my engagement with Simulated Annealing in [Annealing Strategies]({m.as}).
-
-
-- Using descriptor values and accumulators to generate passages with finite amounts of 'energy'
+<!-- - Using descriptor values and accumulators to generate passages with finite amounts of 'energy'
     - Lots of tuning
 - sample selection
-- z12 and shuffling samples.
-    - Puckette (2015)
-    - Just another level of shuffle, not necessarily interpreted as an something with order or a level of organisation. 
+ -->
 
-- Issues
-    - Lacking formal direction and intention
-    - Way too much time spent on low-level detail that had no relevance to the higher-level form (lots of friction)
-    - Thinking about what I would 'want' to do, and an appropriate model for that. Lots of layers of abstraction to fight through to get to musical result when I already had a good idea about the types of sounds and organisations I wanted. Basically questioning why I would have the computer make certain decisions automatically?
+Another approach was to create perceptually defined groups of samples through queries that I had found throughout experimentation as compositional units. Using these small collections, I then applied a selection algorithm to select samples based on Puckette (2015). This algorithm creates different patterns by specifying ratios between different outcomes.
 
-More decisions were introduced, that on top of this came with their own set of technical requirements and concerns
-Too much effort was put into finding generative or algorithmic models that reflected what I wanted to be composed in the first place.
-There wasn't even a sense that these schemes were introducing an unintended or insightful aspect to the compositional process, they were just failures in replicating an existing way of thinking that I could have performed manually myself.
+<!-- WIDGET: z12 widget -->
 
-Ultimately, the frustrations of not meeting these challenges led to a radical change in the constraints I initially wanted to explore for Stitch/Strata.
+In my mind, imposing this amount of rigour would result in a form that was perceivably ordered and might possess sophisticated qualities at the highest formal levels. Most of all though, the algorithm's behaviour was too homogenous in the sense that it *always* changed which given enough listening stops becoming change and instead becomes relatively static.
 
-None of these led to a piece, they were okay as experiments, but nothing spoke to me on an artistic or conceptual level about how the computer might build an entire piece in this fashion. 
+I have described a number of preliminary approaches to imposing order on descriptor-based queries. An issue that ran throughout all of these approaches was that they introduced more decision making and relinquished control from me that was not necessarily offering any benefits in return. 
 
-Numerous meetings where the idea for this piece would pivot or I would pursue a new strategy beliving it would lead to a piece.
+Most of the approaches were experimented with in order to create high-level formal structures by selecting samples, but the results lacked direction as well as any sense of *intentionality*  in what the computer produced. To get from these sub-optimal results toward something with a more sophisticated level of organisation I would have to go and edit them manually, which to me seemed nullify the point of working so much with algorithms and complex technical procedures in the first place. Furthermore, this way of approaching the automatic generation of formal structures was framed around recreating formal structures that I would find sophisticated, rather than trying to have something *emerge* from that process. In hindsight, I do not think  that the algorithms and models I was using were complex enough, nor did I have a good enough idea about what aspects of my formal thinking could or should be modelled at the meso- and macro- levels of form.
+
+Ultimately, the frustrations led to a radical change in approach to how I finally composed Stitch/Strata. This change is discussed in the next section ["From Modelling to Assistance"]({m.ss}).
 
 ### From Modelling To Assistance
+<!-- !!! -->
+One aspect that I wanted to keep were descriptor-based selections of material. To me this seemed like a good way of creating collections of material from the wider corpus of phonetic sounds.
+
 - I needed to make a drastic change to my workflow and "break" some boundaries I had put up.
     - Desired balance between human and computer agency (was one of these)
 
 - How did I do this?
     - "Cold turkey" leave Max behind. Project structure was incredibly messy, bloated and I couldn't trace my compositional development. It was a mess of small experiments without being able to track how things had progressed. 
+    - With Max there is no 'record'. Files on disk aren't made and the notion of a memory has to be built into a patch. This adds another technical concern.
     - The way I wanted to work required creating a lot of abstraction around very trivial ideas, like looping over a container of audio files representing a gesture.
     - Pick up Python as a new tool
         - break the "rut"
         - Python is a different form of expression
-    - Using Python, to iterating over possibilities and generating small structures
         - itertools to create patterned structures.
-            - A better approach than Z12 for me.
+    - A different form of expression.
     - Building smaller structures and controlling their order in time myself, or manually blending them was a more fruitful approach than finding a system to govern that type of high-level thinking.
     - Generating numerous sound files with variation very rapidly.
     - Working back in a DAW where things could be fixed to some degree and don't have to be 'programmed' in the same way.
         - Use the inherent "memory" of the DAW to create temporary stores of decision making. This acted like scaffolding to realise the piece
 
-    - Examples
-        - concat.py
+- Whispery textural materials created with high spectral flatness, high centroid and low amplitude searches. Randomly concatenated together to form textures.
+    - 3:03
+
+- Give concrete examples in the piece where samples were used
+    - much of the original form is lost behind manual edits and cuts that arent traceable.
+    - start are descriptor gestural shapes
+    - /samples/
+        - 3:15 > 3:50
+            - a + b interspersed with each other 
+        -  4:13 onwards
+
+        - e 15
+            - Interspersed among longer gestures (4:47, )
+        - g
+            - glitch-like
+            - 17 pitchy stuff possible 4:38 
+        - h
+            - 4:53
         - /phrases/
-        - 
+            - output 4
+            - output 11 is cut up in various short ways too and interspersed
+        - The kind of complexity and recapitulation of motives on many levels was something I tried to have emerge in the z12 approach
+
+Having the generated outputs and being able to listen to them inspired how they could be used which then led immediately to compositional action and results. This was a more fruitful workflow than going back into the technical side of things.
+
 ## Reflecting On The Balance Of Human And Computer Agency
 - The transition from attempting to model specific musical structures, toward building smaller ones and working with them intuitively shifted the balance of contribution made by the computer to the compositional process. Instead of focusing on having the computer formalise most if not all aspects of a work using detailed systems, I moved toward a strategy in which the computer presented options to me, which I could then modify, process, change in place all while leveraging the interface of the DAW. 
 
@@ -192,15 +205,14 @@ Numerous meetings where the idea for this piece would pivot or I would pursue a 
  
 ### Moving Away From Modelling
 - I dont know my own rules, patterns or restrictions and so modelling becomes too complex of a process in which I am trying to both codify a musical language
-- I dont want to do automatic composition because I want to work non linearly at times, moving between different types of composing (sound-design, low-level manipulation of utterances or big picture). Only interacting with the musical result through an algorithm feels less conducive to this.
-- - A better balance between "soundful practise" and technological practise.
+- I dont want to do automatic composition because I want to work non linearly at times, moving between different types of composing (sound-design, low-level manipulation of utterances or big picture). Only interacting with the musical result through an algorithm feels less conducive to this and often focuses me toward having to build something that can't be in a half-finished state.
+- A better balance between "soundful practise" and technological practise.
 
 - I want to feel like the time structure is uncovered/discovered rather than designed as part of the material.
     - Allude to annealing strategies
         - on the threshold here and less about specific codified structures and more about a shape or simple language to compose with
 
-how do i take reponsiblity for what comes out - how does the computer side interact with my practice
-
+how do i take reponsiblity for what comes out - how does the computer side interact with my practice.
 
 <NextSection 
 next="Annealing Strategies"
