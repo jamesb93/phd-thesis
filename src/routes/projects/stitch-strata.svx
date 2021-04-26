@@ -18,8 +18,6 @@ peaks="/pieces/ss.dat"
 id="audio1"
 />
 
-Spiel about piece
-
 The first performance of this piece was at the [2019 Electric Spring Festival](http://electricspring.co.uk/electric-spring-2019/) using the [Huddersfield Immersive Sounds System (HISS)](http://electricspring.co.uk/electric-spring-2019/). The recording of the piece that is submitted in the portfolio exists in two versions. A binaural version that attempts to capture the spatialisation from the first performance and a normal stereo version.
 
 ## Motivations and Influences
@@ -275,39 +273,40 @@ peaks='/ss/ramping-3.dat'
 id='audio14'
 />
 
-## Reflecting On The Balance Of Human And Computer Agency
+## Reflecting On Human And Computer Agency In Stitch/Strata
 
-The compositional process that actually took me to the final work was different to what I imagined at the start and made me reflect on my initial aims and questions for this piece as well as for the PhD research more widely.
+### 
+The compositional process that took Stitch/Strata to its final version was entirely different to what I imagined it would be at the start of the composition process. The challenges incited by the initial prompt, to create a piece "in the computer", and the responses and solutions to those challenges made me reflect on my initial aims and questions for this piece as well as for the PhD research more widely. I was certain from the experience of writing this piece that working entirely in the computer and relinquishing creative control to a high degree, particularly in the formal aspects of a work, is incompatible with my artistic goals and aesthetic preferences. However, this difficult process was formative and self-realisation. In many ways it outlined what aspects of composition I am willing to give away to the computer and at what stages I need to intervene with those processes to both feel like using the computer is a meaningful choice artistically, and that I am being satisfied in the process itself. I  arrived at a workflow where the balance of agency between myself and the computer was situated more evenly and elicited a creative dialogue that allowed me to infuse the computer's generated outputs with my own intentions and processes imposed on to that material. 
 
-Building smaller structures and controlling their order in time myself, or manually blending them was a more fruitful approach than finding a system to govern that type of high-level thinking.
-    
-Having the generated outputs and being able to listen to them inspired how they could be used which then led immediately to compositional action and results. This was a more fruitful workflow than going back into the technical side of things.
+A main point of "dialogue" between myself and the computer that emerged was the process of auditioning outputs from the computer. This fostered an awareness of the samples within the wider corpus of previously unknown materials. While I had some idea broad idea about the nature of the sounds that I was working with, once the original vocal samples had been segmented there was no way that I could have listened to the approximately 3500 segments and operated on them meaningfully from that point without aid from the computer. The computer provided a structured exploration of those samples, grounded in the notion of filtering the larger corpus based on audio descriptors. This approach led me to thinking about groups of samples as blocks of material that could have highly defined sonic properties, or as dynamic gestures shaped by their perceptual qualities. In the final version of Stitch/Strata this computationally "discovered" way of orientating around the materials can be heard in the form that I built. 0:00 to 2:32 dynamic queries create the formal direction and structure. From 2:32 to 3:56, various perceptually tight sample groups derived through descriptor constraints are superimposed, with the superimpositions guided by intuition and experimentation with combinations. 3:56 onwards plays on the notion of intuitive manual segmentation and rearrangement of materials from the original "phrase" materials. The result could not have been made without the computer offering initial materials for me to deconstruct to varying degrees.
 
-My intuitive processes were guided and structured by my interaction with perceptually meaningful computational organisations.
+This hybrid of computer generation and intuitive manipulation was a more fruitful workflow than always having to step back into a technical or "system designer" role in which my agency is expressed through an additional layer of abstraction or code. Working only from a point of designing a system, does not engage me in that way and forms a relationship between myself and the computer that is totally concerned with "systems thinking", where tuning one component in a complex network of other components can contribute to the outcome. For me, conceiving of a piece as a system is difficult, as I find it hard to imagine a complex system that can encapsulate the musical ideas that I want to express. This way of working is also to an extent predicated on having a clear vision from the outset of the creative process. For me this is never the case, and I always start from a *tabula rasa* that is built on by experiencing and experimenting with materials. As such, I need to formulate what the piece is both artistically and conceptually through creative action, and intermittently relying on the computer to guide that process.
 
-- DAW and static materials
+### DAW
+<!-- !!! -->
+The transition from attempting to model specific musical structures, toward building smaller ones and working with them intuitively shifted the balance of contribution made by the computer to the compositional process. Instead of focusing on having the computer formalise most if not all aspects of a work using detailed systems, I moved toward a strategy in which the computer presented options to me, which I could then modify, process, change in place all while leveraging the interface of the Digital Audio Workstation. 
 
-    - Use the inherent "memory" of the DAW to create temporary stores of decision making. This acted like scaffolding to realise the piece and helped to blend my intuition into the computational outputs more seamlessly.
-    - Working back in a DAW where things could be fixed to some degree and don't have to be 'programmed' in the same way.
-    - memory bank for ideas which can be held in half-finished states.
-    - Ordering of ideas can be changed 
-    - Processes can be tested on specific musical ideas/objects/sequences
-    - Creates opportunity to intervene in many ways and to step between generation and manipulation. 
+Did not anticipate that the DAW would become a pivotal point of composition. I imagined that the piece would be composed as a system of algorithms that would generate the piece from Max. 
+
+This shift changes many aspects of the compositional process, particularly the notion of memory, storage and sketching.
+
+Max has no inherent memory of the actions you perform, or the sound you create. Those capabilities have to be built and implemented on a case-by-case basis.
+
+DAW has this inherently with the timeline structure where items are placed. 
+
+As such, the DAW becomes a place where intermediary ideas can be stored, erased, moved around temporarily, colour coded, labelled, annotated as well as processed further with digital signal processing. This makes it an ideal environment for "sketching" for me, as the sound file outputs of the Python processes could immediately be put into a session. 
+
+Blend my intuition onto rendered materials, rather than interacting with a system of parameters.
+
+Conducive to a compositional process based on stages of transformation. For me, segmentation > generation of materials > manipulation > editing > mixing.
+
+- Working back in a DAW where things could be fixed to some degree and don't have to be 'programmed' in the same way.
+- Creates opportunity to intervene in many ways and to step between generation and manipulation. 
 
 Differentiation between listening and coding
 
-- The transition from attempting to model specific musical structures, toward building smaller ones and working with them intuitively shifted the balance of contribution made by the computer to the compositional process. Instead of focusing on having the computer formalise most if not all aspects of a work using detailed systems, I moved toward a strategy in which the computer presented options to me, which I could then modify, process, change in place all while leveraging the interface of the DAW. 
- 
-### Moving Away From Modelling
-- I dont know my own rules, patterns or restrictions and so modelling becomes too complex of a process in which I am trying to both codify a musical language
 - I dont want to do automatic composition because I want to work non linearly at times, moving between different types of composing (sound-design, low-level manipulation of utterances or big picture). Only interacting with the musical result through an algorithm feels less conducive to this and often focuses me toward having to build something that can't be in a half-finished state.
 - A better balance between "soundful practise" and technological practise.
-
-- I want to feel like the time structure is uncovered/discovered rather than designed as part of the material.
-    - Allude to annealing strategies
-        - on the threshold here and less about specific codified structures and more about a shape or simple language to compose with
-
-how do i take reponsiblity for what comes out - how does the computer side interact with my practice.
 
 <NextSection 
 next="Annealing Strategies"
