@@ -4,6 +4,7 @@
 
     export let segments;
     export let title = "title";
+    export let caption = null;
     export let file;
     export let peaks;
     export let id = "";
@@ -20,8 +21,6 @@
 
     function handleZoomIn () {instance.zoom.zoomIn()}
     function handleZoomOut () {instance.zoom.zoomOut()}
-    function handleMouseEnter() {hovered = true}
-    function handleMouseLeave() {hovered = false}
 
     const convert = (time) => {
         const date = new Date(time * 1000).toISOString().substr(11, 8)
@@ -152,6 +151,10 @@
         display: inline-block;
     }
 
+    #caption{
+        display: inline-block;
+    }
+
     .horizontal {
         display: flex;
         flex-direction: row;
@@ -193,6 +196,9 @@
 <div class="audio-box" id={id}>
     <div class="horizontal overview">
         <span id="title">{title}</span>
+        {#if caption}
+        <span id="caption">{caption}</span>
+        {/if}
         <div bind:this={controls} class="audio-controls">
             <button bind:this={zoomIn} on:click={handleZoomIn} class="btn zoom">+</button>
             <button bind:this={zoomOut} on:click={handleZoomOut} class="btn zoom">-</button>
@@ -214,7 +220,7 @@
         <hr>
         {#each segments as segment}
             <li>
-                <a on:click={() => instance.player.seek(segment.startTime)}>
+                <a on:click={ () => instance.player.seek(segment.startTime) }>
                     {convert(segment.startTime)} - {convert(segment.endTime)} | {segment.labelText}
                 </a>
             </li>
