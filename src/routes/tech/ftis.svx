@@ -6,6 +6,7 @@
     import {metadata as m} from "../directory.svx"
 
 </script>
+
 # Finding Things in Stuff (`ftis`)
 
 [FTIS Source Code](https://www.github.com/jamesb93/ftis)
@@ -417,6 +418,8 @@ The `World()` also handles self-documentation. Self-documentation produces a `me
 }
 ```
 
+This is an extremely important feature for FTIS that enables me to trace the compositional decision making through projects as well as between projects. Reflecting on earlier projects such as [Stitch/Strata]({m.ss}) years later, a number of different composition processes that were facilitated computationally have no record of how they were performed. In some cases I created Python scripts that asked for input "in the moment" and the program did not make a record of what that input is and so that information is lost. Automatically producing documentation mitigates the possibility of this happening and removes the need to consider these things in the moment.   
+
 ### Caching
 One of the most creatively inhibiting experiences for me is waiting for re-analysis to complete between consecutive executions of a script that has been changed in a minor way. Working creatively with `ftis` often involves editing a script such that analysis can be reused. The pseudocode example below describes a chain of `ftis` analysers that calculate the median spectral centroid  value for `Corpus()` of sound files. This is performed by first computing a frame-by-frame spectral analysis and then summarising this data.
 
@@ -510,5 +513,5 @@ I also gave a more detailed and thorough overview of `ftis` in an informal FluCo
 
 <NextSection 
 next="Conclusion"
-link={m.conclusion}
+link={m.conc}
 />
