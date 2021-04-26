@@ -13,8 +13,8 @@
 
 <Waveform 
 title="Stitch Strata (Stereo Mixdown)"
-file="/static/pieces/ss.mp3"
-peaks="/static/pieces/ss.dat"
+file="/pieces/ss.mp3"
+peaks="/pieces/ss.dat"
 id="audio1"
 />
 
@@ -67,10 +67,10 @@ Extended vocal sounds had been a material that I wanted to work with in composit
 I began by segmenting all of the recordings using REAPER's dynamic split tool and configuring it to segment based on the detection of transients. This choice was made because I wanted to extract individual utterances and phonetic-like sounds from composite gesture to be rearranged and re-concatenated. DEMO 1 shows an example of this , by taking a portion of ["One Breath Poem Failure"](https://sagemusick.bandcamp.com/track/2016-02-16-one-breath-poem-failure), segmenting it and then recombining the segments randomly. The colours of each segment track the displacement of each utterance.
 
 <Sage
-    file1="/static/ss/gesture.mp3"
-    peaks1="/static/ss/gesture.dat"
-    file2="/static/ss/shuffled_gesture.mp3"
-    peaks2="/static/ss/shuffled_gesture.dat"
+    file1="/ss/gesture.mp3"
+    peaks1="/ss/gesture.dat"
+    file2="/ss/shuffled_gesture.mp3"
+    peaks2="/ss/shuffled_gesture.dat"
     segs1={sageUnshuffled}
     segs2={sageShuffled}
 />
@@ -86,9 +86,9 @@ A strategy I explored early on was to employ audio descriptors in order to analy
 
 <VideoMedia id="vid1">
     <video slot="media" controls>
-        <source src="/static/ss/descriptorspace.webm" type="video/webm">  
+        <source src="/ss/descriptorspace.webm" type="video/webm">  
         <p>
-        Your browser doesn't support HTML5 video. Here is a <a href="/static/ss/descriptorspace.webm">
+        Your browser doesn't support HTML5 video. Here is a <a href="/ss/descriptorspace.webm">
         link to the video</a>instead.
         </p>  
     </video>
@@ -106,9 +106,9 @@ One approach was to create predefined query "shapes" that structured a dynamic q
 
 <VideoMedia id="vid2">
     <video slot="media" controls>
-        <source src="/static/ss/dynamic-gesture.webm" type="video/webm">  
+        <source src="/ss/dynamic-gesture.webm" type="video/webm">  
         <p>
-        Your browser doesn't support HTML5 video. Here is a <a href="/static/ss/dynamic-gesture.webm">
+        Your browser doesn't support HTML5 video. Here is a <a href="/ss/dynamic-gesture.webm">
         link to the video</a>instead.
         </p>  
     </video>
@@ -119,9 +119,9 @@ VIDEO 3 shows another idea in which a static state of very low amplitude is inte
 
 <VideoMedia id="vid3">
     <video slot="media" controls>
-        <source src="/static/ss/static-jumps.webm" type="video/webm">  
+        <source src="/ss/static-jumps.webm" type="video/webm">  
         <p>
-        Your browser doesn't support HTML5 video. Here is a <a href="/static/ss/static-jumps.webm">
+        Your browser doesn't support HTML5 video. Here is a <a href="/ss/static-jumps.webm">
         link to the video</a>instead.
         </p>  
     </video>
@@ -135,8 +135,8 @@ Another approach I tried involved creating a behaviour around the notion of "adv
 <Waveform 
 title="AUDIO 2: Adversarial searching"
 id="audio2"
-file="/static/ss/5712433.mp3"
-peaks="/static/ss/5712433.dat"
+file="/ss/5712433.mp3"
+peaks="/ss/5712433.dat"
 />
 
 Another approach was to create perceptually defined groups of samples through queries that I had found throughout experimentation as compositional units. Using these small collections, I then applied a selection algorithm to select samples based on Puckette (2015). This algorithm creates different patterns by specifying ratios between different outcomes.
@@ -167,8 +167,8 @@ The `accum_phrase` process concatenates samples until a maximum total duration h
 
 <Waveform 
 title="AUDIO 3"
-file="/static/ss/a12.mp3"
-peaks="/static/ss/a12.dat"
+file="/ss/a12.mp3"
+peaks="/ss/a12.dat"
 id="audio3"
 />
 
@@ -176,15 +176,15 @@ Another process, `jank` creates phrases where samples are repeated in chunks. Th
 
 <Waveform 
 title="AUDIO 4"
-file="/static/ss/g17.mp3"
-peaks="/static/ss/g17.dat"
+file="/ss/g17.mp3"
+peaks="/ss/g17.dat"
 id="audio3"
 />
 
 <Waveform
 title="AUDIO 5"
-file="/static/ss/h0.mp3"
-peaks="/static/ss/h0.dat"
+file="/ss/h0.mp3"
+peaks="/ss/h0.dat"
 id="audio4"
 />
 
@@ -192,8 +192,8 @@ id="audio4"
 
 <Waveform 
 title="AUDIO 6"
-file="/static/ss/e22.mp3"
-peaks="/static/ss/e22.dat"
+file="/ss/e22.mp3"
+peaks="/ss/e22.dat"
 id="audio6"
 />
 
@@ -205,8 +205,8 @@ For me, this methodology of generating sample phrases, auditioning them and reta
 
 <Waveform 
 title="AUDIO 7"
-file="/static/ss/whispering-texture.mp3"
-peaks="/static/ss/whispering-texture.dat"
+file="/ss/whispering-texture.mp3"
+peaks="/ss/whispering-texture.dat"
 id="audio7"
 />
 
@@ -214,8 +214,8 @@ id="audio7"
 
 <Waveform
 title="AUDIO 8"
-file="/static/ss/g.mp3"
-peaks="/static/ss/g.dat"
+file="/ss/g.mp3"
+peaks="/ss/g.dat"
 id="audio8"
 />
 
@@ -223,24 +223,24 @@ In addition to this, the outputs of `jank` were used to create dynamically const
 
 <Waveform 
 title="AUDIO 9"
-file="/static/ss/h.mp3"
-peaks="/static/ss/h.dat"
+file="/ss/h.mp3"
+peaks="/ss/h.dat"
 id="audio9"
 />
 
 `search_small` phrases were interspersed with other materials and heavily edited from their original form to be presented more intermittently in the overall texture. [AUDIO 10]({m.ss}#audio10) captures this, which can be heard at 4:47 in the piece.
 <Waveform 
 title="AUDIO 10"
-file="/static/ss/e.mp3"
-peaks="/static/ss/e.dat"
+file="/ss/e.mp3"
+peaks="/ss/e.dat"
 id="audio10"
 />
 
 Outputs from `accum_phrase` were combined together to create unrelenting concatenations of vocal utterances. The repetition of short repeated phrases amongst the larger phrase itself can be heard. An example of this is in [AUDIO 11]({m.ss}#audio11). This was used as a long gesture that underpins the middle section of the piece at 3:15.
 <Waveform 
 title="AUDIO 11"
-file="/static/ss/a+b.mp3"
-peaks="/static/ss/a+b.dat"
+file="/ss/a+b.mp3"
+peaks="/ss/a+b.dat"
 id="audio11"
 />
 
@@ -252,8 +252,8 @@ The first section of the piece is entirely composed from long dynamic queries sp
 
 <Waveform
 title='AUDIO 12'
-file='/static/ss/ramping-1.mp3'
-peaks='/static/ss/ramping-1.dat'
+file='/ss/ramping-1.mp3'
+peaks='/ss/ramping-1.dat'
 id='audio12'
 />
 
@@ -261,8 +261,8 @@ At 2:27, a dynamic query is used to create a rapidly changing texture encompassi
 
 <Waveform
 title='AUDIO 13'
-file='/static/ss/ramping-2.mp3'
-peaks='/static/ss/ramping-2.dat'
+file='/ss/ramping-2.mp3'
+peaks='/ss/ramping-2.dat'
 id='audio13'
 />
 
@@ -270,8 +270,8 @@ A less linearly shaped query creates an oscillating gesture at 3:15. This is use
 
 <Waveform
 title='AUDIO 14'
-file='/static/ss/ramping-3.mp3'
-peaks='/static/ss/ramping-3.dat'
+file='/ss/ramping-3.mp3'
+peaks='/ss/ramping-3.dat'
 id='audio14'
 />
 

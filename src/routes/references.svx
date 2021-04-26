@@ -62,7 +62,7 @@
 </style>
 
 <script>
-    import marked from "marked";
+    import marked from 'marked';
     import links from '../../static/links.json';
     import refs from '../../static/references.json'
     import discog from '../../static/discog.json'
