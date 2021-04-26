@@ -11,8 +11,8 @@
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "d3": "^6.7.0",
-    "svelte": "^3.29.0",
-    "vite": "^2.1.0"
+    "svelte": "^3.37.0",
+    "vite": "^2.2.3"
   },
   "type": "module",
   "dependencies": {
