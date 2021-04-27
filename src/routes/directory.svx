@@ -8,7 +8,7 @@ as : /projects/annealing-strategies
 rt : /projects/refracted-touch
 re : /projects/reconstruction-error
 em : /projects/electromagnetic
-emname: Electromagnetic
+emname: Interferences
 conc : /conclusion
 ti : /tech
 mosh : /tech/mosh
