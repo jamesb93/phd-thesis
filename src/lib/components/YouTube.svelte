@@ -32,9 +32,4 @@
         font-style: italic;
         text-align: center;
     }
-
-    span {
-        color: red;
-        font-weight: 700;
-    }
 </style>
