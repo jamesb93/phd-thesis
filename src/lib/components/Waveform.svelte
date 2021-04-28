@@ -10,11 +10,7 @@
     export let id = "";
 
     let Peaks;
-    let instance;
-    let overview;
-    let zoom;
-    let audio;
-    let controls;
+    let instance, overview, zoom, audio, controls;
     let peaksControls;
     let zoomIn;
     let zoomOut;
@@ -31,8 +27,7 @@
         if (browser) {
             const module = await import("peaks.js");
             Peaks = module.default;
-
-            instance = Peaks.init({
+            const options = {
                 containers: {
                     zoomview: zoom,
                     overview: overview
@@ -56,12 +51,55 @@
                 axisLabelColor: '#aaa',
                 randomizeSegmentColor: true,
                 segments: segments
+            }
+            instance = Peaks.init(options, (err, p) => {
+                if (err) {
+                    console.log(err)
+                } else {
+                    instance = p
+                }
             })
         }
     });
 
 
 </script>
+
+<div class="audio-box" id={id}>
+    <div class="horizontal overview">
+        <span id="title">{title}</span>
+        {#if caption}
+        <span id="caption">{caption}</span>
+        {/if}
+        <div bind:this={controls} class="audio-controls">
+            <button bind:this={zoomIn} on:click={handleZoomIn} class="btn zoom">+</button>
+            <button bind:this={zoomOut} on:click={handleZoomOut} class="btn zoom">-</button>
+        </div>
+    </div>
+    <div class="vis">
+        <div class="overview" bind:this={overview} />
+        <div class="overview" bind:this={zoom} />
+    </div>
+    <div class="peaks-controls" bind:this={peaksControls}>
+        <audio controls bind:this={audio}>
+            <source src={file} type="audio/mp3">
+            <track kind="captions">
+        </audio>
+    </div>
+    {#if segments}
+    <ul class="segments">
+        <span id="timecodes">List of referenced time codes</span>
+        <hr>
+        {#each segments as segment}
+            <li>
+                <a on:click={ () => instance.player.seek(segment.startTime) }>
+                    {convert(segment.startTime)} - {convert(segment.endTime)} | {segment.labelText}
+                </a>
+            </li>
+        {/each}
+    </ul>
+    {/if}
+</div>
 
 <style>
     .audio-box {
@@ -192,42 +230,6 @@
         margin-right: 3em;
     }
 </style>
-
-<div class="audio-box" id={id}>
-    <div class="horizontal overview">
-        <span id="title">{title}</span>
-        {#if caption}
-        <span id="caption">{caption}</span>
-        {/if}
-        <div bind:this={controls} class="audio-controls">
-            <button bind:this={zoomIn} on:click={handleZoomIn} class="btn zoom">+</button>
-            <button bind:this={zoomOut} on:click={handleZoomOut} class="btn zoom">-</button>
-        </div>
-    </div>
-    <div class="vis">
-        <div class="overview" bind:this={overview} />
-        <div class="overview" bind:this={zoom} />
-    </div>
-    <div class="peaks-controls" bind:this={peaksControls}>
-        <audio controls bind:this={audio}>
-            <source src={file} type="audio/mp3">
-            <track kind="captions">
-        </audio>
-    </div>
-    {#if segments}
-    <ul class="segments">
-        <span id="timecodes">List of referenced time codes</span>
-        <hr>
-        {#each segments as segment}
-            <li>
-                <a on:click={ () => instance.player.seek(segment.startTime) }>
-                    {convert(segment.startTime)} - {convert(segment.endTime)} | {segment.labelText}
-                </a>
-            </li>
-        {/each}
-    </ul>
-    {/if}
-</div>
 
 
     
