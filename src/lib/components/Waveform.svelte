@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { browser } from "$app/env";
+    import Button from '$lib/components/Button.svelte';
 
     export let segments;
     export let title = "title";
@@ -72,8 +73,8 @@
         <span id="caption">{caption}</span>
         {/if}
         <div bind:this={controls} class="audio-controls">
-            <button bind:this={zoomIn} on:click={handleZoomIn} class="btn zoom">+</button>
-            <button bind:this={zoomOut} on:click={handleZoomOut} class="btn zoom">-</button>
+            <Button clickHandler={ () => instance.zoom.zoomOut() } text="+" />
+            <Button clickHandler={ () => instance.zoom.zoomIn() } text="-" />
         </div>
     </div>
     <div class="vis">
@@ -102,97 +103,41 @@
 </div>
 
 <style>
-    .audio-box {
+ .audio-box {
         padding-top: 20px;
         margin-top: 20px;
         padding-bottom: 20px;
         border-radius: 12px;
         border: 3px solid rgba(128, 128, 128, 0.575);
         transition: border .5s;
-    }
+        padding-left: 20px;
+        padding-right: 20px;
 
+    }
+    
     .audio-box:hover {
         border: 3px solid #2b5aa1a2;
         transition: border .5s;
         gap: 3px;
     }
-
+    
     .audio-controls {
-        display: grid;
-        grid-template-columns: auto auto auto;
+        display: flex;
+        flex-direction: row;
         gap : 5px;
     }
-
-    .btn {
-        position: relative;
-        width: 2em;
-        height: 2em;
-        padding: 5px;
-        font-size: 15px;
-        overflow: hidden;
-        border-width: 0;
-        outline: none;
-        border-radius: 1px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, .6);    
-        color: #ecf0f1;
-        transition: background-color .25s;
-    }
-
-    .btn:before {
-        content: "";
-        
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        
-        display: block;
-        width: 0;
-        padding-top: 0;
-        
-        border-radius: 100%;
-        
-        background-color: rgba(236, 240, 241, .3);
-        
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-    }
     
-    .btn:active:before {
-        width: 120%;
-        padding-top: 120%;
-        
-        transition: width .2s ease-out, padding-top .2s ease-out;
-    }
-
-    .zoom {
-        background-color: darkcyan;
-        font-weight: bold;
-        font-size: 15px;
-        width: 2em;
-    }
-    .zoom:hover, .zoom:focus {
-        background-color: rgb(2, 196, 196);
-    }
-
-    .overview {
-        margin-left: 3em;
-        margin-right: 3em;
-    }
-
     #title {
         font-style: italic;
         font-size: 16px;
         text-align: center;
         display: inline-block;
     }
-
+    
     #caption{
         display: inline-block;
     }
-
+    
     .horizontal {
         display: flex;
         flex-direction: row;
@@ -200,16 +145,20 @@
         height: 10%;
         padding-bottom: 15px;
     }
-
+    
     .vis {
         padding-bottom: 5px;
         margin: 0 auto;
     }
-
+    
     .peaks-controls {
         display: flex;
         justify-content: center;
         padding-top: 3px;
+    }
+    
+    #timecodes {
+        font-weight: bold;
     }
 
     ul li {
@@ -218,10 +167,6 @@
 
     a { 
         color: black;
-    }
-
-    #timecodes {
-        font-weight: bold;
     }
 
     .segments {
