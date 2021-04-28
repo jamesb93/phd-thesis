@@ -108,6 +108,5 @@
 	.pagenav {
 		display: grid;
 	}
-	/* From Global */
 	
 </style>
