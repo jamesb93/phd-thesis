@@ -4,6 +4,9 @@
     import YouTube from "$lib/components/YouTube.svelte"
     import ImageMedia from "$lib/components/ImageMedia.svelte"
     import {metadata as m} from "../directory.svx"
+    import X86 from '$lib/demos/reacoma/X86.svelte';
+    import MaxwaveStart from '$lib/demos/reacoma/MaxwaveStart.svelte';
+    import MaxwaveEnd from '$lib/demos/reacoma/MaxwaveEnd.svelte';
 
     const d = 250;
 </script>
@@ -15,17 +18,44 @@
     }
 </style>
 
+
 # ReaCoMa
 
 [ReaCoMa Source Code](https://www.github.com/jamesb93/reacoma)
 
 [ReaCoMa External Site](https://www.reacoma.xyz)
 
-ReaCoMa is a library and collection of [Lua](http://www.lua.org/) scripts that facilitate using the [Fluid Corpus Manipulation](https://www.flucoma.org) (FluCoMa) first toolbox algorithms within the [REAPER digital audio workstation](https://www.reaper.fm). This suite of algorithms are designed to perform tasks such as signal decomposition, audio descriptor analysis and segmentation. The main motivation of ReaCoMa was to consolidate my compositional workflow within REAPER and to extend that environment rather than having to switch between various pieces of software such as Max. Prior to ReaCoMa's existence there was no way of directly using FluCoMa's tools within REAPER. There were Max externals available, but for me, having to alternate between two distinct pieces of software, with vastly different interfaces and setups is a suboptimal compositional workflow. For example, processing audio files in Max and accessing the results within REAPER requires outputting those results to disk and making them a part of the REAPER session. This workflow is potentially time consuming if there are lots of audio files and requires several stages of manual file management. An ideal workflow would be to instead perform that processing within REAPER directly on media items. ReaCoMa functions exactly in this way and makes FluCoMa's first toolbox algorithms feel like a first class citizen in REAPER and enables possibilities within that environment for sound design and composition that are otherwise not readily available. From ReaCoMa's nascent stages of development I liberally used it for processing sound materials in [Reconstruction Error]({m.re}). Since then it has found its place as a fixture of my practice and a key tool for processing, manipulating and organising sounds such as in [Electromagnetic]({m.em}).
+ReaCoMa is a collection of [Lua](http://www.lua.org/) scripts that facilitate using the [Fluid Corpus Manipulation](https://www.flucoma.org) (FluCoMa) first toolbox algorithms within the [REAPER digital audio workstation](https://www.reaper.fm). This suite of algorithms are designed to perform tasks such as signal decomposition, audio descriptor analysis and segmentation. The main motivation of ReaCoMa was to consolidate my compositional workflow within REAPER and to extend that environment rather than having to switch between various pieces of software such as Max. Prior to ReaCoMa's existence there was no way of directly using FluCoMa's tools within REAPER. There were Max externals available, but for me, having to alternate between two distinct pieces of software, with vastly different interfaces and setups is a suboptimal compositional workflow. For example, processing audio files in Max and accessing the results within REAPER requires outputting those results to disk and making them a part of the REAPER session. This workflow is potentially time consuming if there are lots of audio files and requires several stages of manual file management. An ideal workflow would be to instead perform that processing within REAPER directly on media items. ReaCoMa functions exactly in this way and makes FluCoMa's first toolbox algorithms feel like a first class citizen in REAPER and enables possibilities within that environment for sound design and composition that are otherwise not readily available. From ReaCoMa's nascent stages of development I liberally used it for processing sound materials in [Reconstruction Error]({m.re}). Since then it has found its place as a fixture of my practice and a key tool for processing, manipulating and organising sounds such as in [{m.emname}]({m.em}).
+
+ReaCoMa matured over a number of iterations as I incorporated into my compositional practice. Nonetheless, even it its earliest versions it facilitated computer-led decomposition of sounds which had a large impact on how I composed the works and structured my engagement with audio-based corpora.
+
+
+In sys.ji_ from [Reconstruction Error]({m.re}) the `fluid.transients.lua` script is used to decompose a longer passage of material into a transient component and a residual component (everything except the transients). A long fade in envelope is applied to the residual component and both components are played back at the same time. This gradually introduces the residual parts of the sound while the transients dominate from the outset. I chose this effect as a way of generating various colours of short click-like sounds and as a way of suppressing the noisier aspects of the sound temporarily and to create a formal shape from this.
+
+sys.ji_
+1:18 - 2:00
+
+---
+
+In dotmaxwave, `fluid.hpss.lua` is used to separate the harmonic component of a sound from the percussive component. This is applied to some source material with a very dominant pitch content and a subtle amount of noise.  With this separation I achieved a level of control over shaping the sound that is otherwise difficult without such decomposition techniques. It also guided me towards structuring the piece as an exhibition of the two components antagonising each other in different capacities.
+
+1:14 - 2:00 i strip away the noise component leaving only the most harmonic parts. Creates a kind of purity in the sound world momentarily
+
+<MaxwaveStart />
+
+3:07 to 3:37 i accentuate the noise entirely and over-compress in order to flatten the dynamics of the sound into a more static texture.
+
+<MaxwaveStart />
+
+
+
+In X86.Desc.a, a section spanning 1:20 to 1:37 is built from from several interlocking streams of impulse-based materials or clicks. These were not manually created in an intuitive way or generated by the computer, rather, they were discovered by extracting the transients from an noise-based source material that I encountered through other computer-aided processes. With this approach, I was able to find intricate and varied patterns of this type of material by exploring with decomposition processes.  This is demonstrated in [DEMO 4]({m.reacoma}#demo4).
+
+<X86 title="DEMO 4" id="demo4"/>
+
 
 ## Implementation
-
-There is not a native [REAPER extension]() or audio plug-in that allows composers to use the FluCoMa first toolbox algorithms directly within the REAPER environment. As such, ReaCoMa is designed as a scripting bridge between the command line executables and the REAPER session where media items are positioned, selected and manipulated on a timeline. Thus, ReaCoMa offers a suite of scripts, where each script is responsible for implementing a single algorithm. For example, `fluid-hpss.lua` is used to execute the `fluid.hpss` algorithm, the same as what is found in Max as the object `fluid.hpss~`. To start, the user runs one of the Lua scripts while a media item or group of items are selected.
+There is not a native [REAPER extension](https://www.reaper.fm/sdk/plugin/plugin.php) or audio plug-in that allows composers to use the FluCoMa first toolbox algorithms directly within the REAPER environment. As such, ReaCoMa is designed as a scripting bridge between the command line executables and the REAPER session where media items are positioned, selected and manipulated on a timeline. Thus, ReaCoMa offers a suite of scripts, where each script is responsible for implementing a single algorithm. For example, `fluid-hpss.lua` is used to execute the `fluid.hpss` algorithm, the same as what is found in Max as the object `fluid.hpss~`. To start, the user runs one of the Lua scripts while a media item or group of items are selected.
 
 <ImageMedia>
     <img alt="step 1" 
