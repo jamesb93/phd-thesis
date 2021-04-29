@@ -3,11 +3,12 @@
     export let title = "";
     export let figure = "";
     export let caption = title;
+    export let id = "";
     export let width = 560;
     export let height = 315;
 </script>
 
-<div class="container">
+<div class="container" id={id}>
     <iframe title={title} width={width} height={height} src={url} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div class="caption">
         <p>{figure}: {caption}</p>
