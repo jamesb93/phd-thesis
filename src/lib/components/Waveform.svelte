@@ -106,6 +106,7 @@
  .audio-box {
         padding-top: 20px;
         margin-top: 20px;
+        margin-bottom: 20px;
         padding-bottom: 20px;
         border-radius: 12px;
         border: 3px solid rgba(128, 128, 128, 0.575);
