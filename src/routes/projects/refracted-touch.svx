@@ -1,6 +1,7 @@
 <script>
 	import NextSection from "$lib/components/NextSection.svelte"
     import YouTube from "$lib/components/YouTube.svelte"
+    import VideoMedia from "$lib/components/VideoMedia.svelte"
     import {metadata as m} from "../directory.svx"
 </script>
 
@@ -32,17 +33,17 @@ figure="VIDEO 2"
 
 My own experimentation with the guitar.
 
-
-### Articulating Form Through Interaction
-- Onset Detection
-
 ### Machine Listening for Formal Development
+- Onset Detection as a method of imposing form
+
 ## The Patch
+Refracted Touch, like all the previous works was developed iterately across several versions. These versions align with a set of patch versions which help to capture my approach and creative direction at the time of its creation. This section will briefly describe what each patch does and how it's function related to the overall development of the piece.
+
 ### Earlier Versions
 #### 1
 - Experimenting with processing the sound of the guitar
     - Various sound processing "modules" that are independent from each other but can be turned off and on
-    - These sound producers remain as traces through the versions of the patches and are developed slowly or phased out in line with experimentation.
+    - These sound producers remain as traces through the versions of the patches and are developed slowly or phased out with experimentation and testing.
         - Harmonic Percussive Source Separation (HPSS)
             - The input signal from the guitar is first separated into two components using a Harmonic Percussive Source Separation algorithm.
             - Each component is recorded into a buffer of a fixed size. When this buffer is filled the recording process starts overwriting the start of the buffer, keeping a block of recent material in memory.
@@ -95,31 +96,62 @@ The raw signal could be used for...
 
 1. Pushing an envelope forward
 2. Scrubbing through a buffer
-3. ALternating between resonator banks
+3. Alternating between resonator banks
 4. Pushing the prevalence of certain systems up/down (long form stuff)
 ```
 
 #### 2
-
 The second version of the patch iterates on many of the elements of the first version without much change however it is clear that this was a stepping stone to later version of this patch as there are clearly unfinished components while others are more developed.
 
 The granular synthesis module has its parameters modulated in realtime by the energy of the input signal. The louder the performer gets the larger the grain size is and the faster the sampling of the source buffer gets. This makes it such that when the performer is quiet and reserved the granular synthesis output is not reminiscent of the input signal while louder inputs start to produce longer grains that mimic the gestures and material played by the guitarist.
 
 Segmentation
 
-
 A new module named "low" is in this version. This module focuses on responding to moments when the guitarist is performing gestures and techniques that produce low frequency sounds. This is detected using the `energy_ratio` descriptor from Alex Harker's `descriptorsrt~` object like an onset detector, by setting a threshold for the energy between 0hz and 150hz. When this energy is exceeded an onset occurs. The result of these onsets 
-
 
 It plays harmonic sections slowed down depending on the input of the 
 
 Accumulators become a generalised part of the patch that aren't necessarily attached to a single module or parameter.
     - The percussive and harmonic components have their own ensemble of four accumulators. Each sequential accumulator takes an increasing amount of energy to reset. The interval between resets for each scale is recorded. Interestingly, this patch is the most ordered and structured with clear intent. Despite this, the recorded intervals are not used anywhere else in the patch. There is no documented reason for this and I cannot recall from memory but my assumption would be that I found the other modules more interesting to iterate on and decided to start a new version before experimenting with the accumulators.
 
-#### 3
-#### 4
+#### 3 / 4
+
+Version 3 and 4 are incredibly similar, with the later version mostly implementing fixes to problems and changing the cosmetic aspects of the patch. As such, I've decided to group them together.
+
+At this point I had finalised choices in regards to the sound processing techniques that I wanted to use and was certain about those aspects which would remain in the patch. However, high-level form was a concern to me, and in this regard the patch contained no mechanisms for creating and managing long term form. I did not have strong ideas about techniques that I wanted to use, and again I think that this difficulty emphasises an incompatibility with the way that I want to use technology in composition. A similar "friction" arose in [Stitch/Strata]({m.ss}) and is discussed in ["From Modelling to Assistance"]({m.ss}#from-modelling-to-assistance). 
+
+Much of my thinking up to this point was that the formal aspects of the work would be governed by the state of the modules. Switching them on and off, or modifying parameters were to me the only way to shape the nature of the electronics, subsequently influencing the performer and thus the overall piece. Each module had been designed and conceived of with certain material types in the first place, so I theorised that a "state" detector that could alter the internal components of the patch in response to the input of the guitar signal could be a way that the machine could be dynamic, while also being cohesive with the performer. In addition to this, I envisaged that this strategy might introduce a level of flexibility for the performer and provide them with a way to interact with the computer in order to influence the form of the piece. Depending on their in-the-moment assessment and listening, the performer could decide to maintain a single idea for as long as needed or explore the localised behaviours of a state before moving on at their own pace.  From the inverse perspective, I also imagined that this would give the computer some ability to be more divergent in the construction of form in real-time by creating a kind of "game", whereby the performer is working either with or against the behaviour of that classification process.
+
+To implement this, I used the [mubu](https://ismm.ircam.fr/mubu/) Max package, specifically the `mubu.gmm` object. This object uses a gaussian mixture model to compare live input data against a set of trained exemplars and produces a series of values that determine the confidence it has that the incoming data is represented by the trained exemplars. I used mel-frequency cepstrum coefficients derived by analysing audio files of extended techniques played provided by Daryl to create some fixed musical behaviours as exemplars. 
+
+<VideoMedia>
+    <video slot="media" controls loop>
+        <source src="/rt/gmm-demo.webm" type="video/webm">  
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="/rt/gmm-demo.webm">link to the video</a> instead.</p>  
+    </video>
+    <p slot="caption">VIDEO 1: Gesture Recognition with mubu.gmm.</p>
+</VideoMedia>
+
+Mapping to modules by using a 
+
+<!-- DEMO: recognition process -->
+
+Temperamental inbetween states and hard to manually explore that concept as a performer. While there might be a data representation which is indicative of an inbetween-ness, the physical reality of performing that might be more difficult or impossible to rectify. I wanted  to work more closesly with that idea, rather than discerete states, but realised through testing this idea that it was more complex than it initially seemed and perhaps was an ill-proposed problem.
+
+Not enough variation between the ideas I had.
+
+In experiments I found that the patch felt like a follower, more than having its own behaviour and conitrbution.
+
+What I found through this process though was the idea that the piece could be constructed as "panels" in which a specific idea is explored for a flexible amount of time with some constraints. 
+
+balancing generalisation and specific control.
 
 ### Final Version
+
+State recognition took on a new more deterministic form.
+
+I higher level of precomposition, because it was difficult to experiment without Daryl there physically. Try to keep things with a relatively high chance to succeed and not have to re-work it only a day or so before
+
 The final version of the patch is structured in a similarly modular fashion.
 
 In previous versions of the patch a number of sound producing modules were developed with some remaining in the final version and others being removed.
@@ -127,6 +159,9 @@ In previous versions of the patch a number of sound producing modules were devel
 The aspect that changed the most between versions and significantly in the final version was the role of the computer in imposing form onto the improvisation. In the final version of the patch the mechanism of the "accumulator" is taken to the extreme and used as a way of determining the duration that a given "state" will be engaged in the patch. These "states" are predetermined by me beforehand and controls which sound producing modules are active as well as setting some constraints on their parameters. They are accompanied with a set of instructions and playing techniques delivered to the guitarist in real-time through a web interface. This approach represents is a major digression from previous approaches and the computer has little role in influencing the work. Instead, it is more like a static antagonistic object that the guitarist must be aware of. If a section only has a limited amount of energy to spare in the accumulator then playing quietly is the only way to make sure that state lasts for an appropriate amount of time. Within each state there is opportunity for the guitarist and the computer to interact with each other and many of the reactive features in each sound producing module is retained from the previous versions. For example, the granular synthesis module is fea
 
 ## Reflection
+
+- Hard to understand the long term side effects of setting up certain interactions
+
 - Operating on recorded materials to make a real-time work is not a 
 
 - Issues of workflow
