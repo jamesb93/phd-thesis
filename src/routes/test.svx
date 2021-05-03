@@ -1,5 +1,0 @@
-<script>
-    import ISN from "$lib/demos/ISN.svelte";
-</script>
-
-<ISN />
