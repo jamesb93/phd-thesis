@@ -493,8 +493,24 @@
             "url": "https://twitter.com/darylelision?lang=en"
         },
         {
+            "name": "gruntCount pieces",
+            "url": "https://sumtone.bandcamp.com/album/gruntcount-improvised-pieces-for-player-and-computer"
+        },
+        {
+            "name": "*Danger in the Air*",
+            "url": "http://owengreen.net/portfolio/danger-in-the-air/"
+        },
+        {
+            "name": "*Cardboard Cutout*",
+            "url": "http://owengreen.net/portfolio/cardboard-cutout/"
+        },
+        {
             "name": "CNMAT `resonators~`",
             "url": "https://cnmat.berkeley.edu/content/resonators"
+        },
+        {
+            "name": "mubu",
+            "url": "https://ismm.ircam.fr/mubu/"
         },
         {
             "name": "cycling 74",
@@ -583,6 +599,10 @@
         {
             "name": "REAPER digital audio workstation",
             "url": "https://www.reaper.fm"
+        },
+        {
+            "name": "REAPER extension",
+            "url": "https://www.reaper.fm/sdk/plugin/plugin.php"
         },
         {
             "name": "FTIS Source Code",
@@ -679,8 +699,24 @@
             "url": "https://www.youtube.com/embed/S0WMNvkLODU"
         },
         {
+            "name": "The Wreck of Former Boundaries by Aaron Cassidy",
+            "url": "https://www.youtube.com/embed/bLKRJ2GfFEY"
+        },
+        {
+            "name": "Dark Matter by Richard Barrett",
+            "url": "https://www.youtube.com/embed/ov9ZcOrONiY"
+        },
+        {
+            "name": "Lichen by Matthew Sergent",
+            "url": "https://www.youtube.com/embed/b9s-8BPXd58"
+        },
+        {
             "name": "Stefano Fasciani demonstrating the 'TSAM' program",
             "url": "https://www.youtube.com/embed/yMLl7-aI_kc?start=687"
+        },
+        {
+            "name": "Tongues of Fire by Trevor Wishart",
+            "url": "https://www.youtube.com/embed/Ude4717dlsQ?start=786"
         },
         {
             "name": "ReaCoMa Tutorial 1",

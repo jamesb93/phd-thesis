@@ -1,6 +1,26 @@
 {
     "discog" : [
         {
+            "name" : "Danger in the Air",
+            "artist" : "Owen Green",
+            "year" : "2013"
+        },
+        {
+            "name" : "Cardboard Cutout",
+            "artist" : "Owen Green",
+            "year" : "2013"
+        },
+        {
+            "name" : "Dark Matter: Transmission 1",
+            "artist" : "Richard Barrett",
+            "year" : 2012
+        },  
+        {
+            "name" : "The Wreck of Former Boundaries",
+            "artist" : "Aaron Cassidy",
+            "year" : "2015"
+        },
+        {
             "name" : "Tongues of Fire",
             "artist" : "Trevor Wishart",
             "year" : "1994"

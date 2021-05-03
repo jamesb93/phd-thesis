@@ -1,6 +1,16 @@
 {
     "references" : [
         {
+            "id" : "owen-thesis",
+            "name" : "Green, O. (2013). User serviceable parts: Practice, technology, sociality and method in live electronic musicking (Doctoral dissertation, City University London).",
+            "url" : "https://openaccess.city.ac.uk/id/eprint/2730/"
+        },
+        {
+            "id" : "grunt-count",
+            "name" : "Parker, M. & Furniss, P., (2014). gruntCount (bass clarinet Edition): blurring the piece, system, instrument distinction.",
+            "url" : "https://www.pure.ed.ac.uk/ws/portalfiles/portal/18599310/furniss.pdf"
+        },
+        {
             "id" : "z12",
             "name" : "Puckette, M. (2015, March). Maximally uniform sequences from stochastic processes. In *Conference of the Society for Electro-Acoustic Music in the United States* (pp. 26-28).",
             "url" : "http://msp.ucsd.edu/Publications/seamus15.pdf"
