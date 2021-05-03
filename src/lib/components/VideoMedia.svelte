@@ -17,8 +17,6 @@
 <style>
     .container {
         position: relative;
-        display: inline-block;
-        width: 100%;
         background-color: #fff;
         border-radius: 5px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -27,6 +25,8 @@
         transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
         text-align: center;
         padding-top: 10px;
+        min-width: 50%;
+        max-width: 100%;
     }
 
     .container:hover {
@@ -66,5 +66,11 @@
 
     .container :global(video) {
         width: 80%;
+        margin: 0 auto;
+    }
+
+    .container :global(iframe) {
+        width: 80%;
+        margin: 0 auto;
     }
 </style>
