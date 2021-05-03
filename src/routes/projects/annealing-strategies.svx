@@ -61,8 +61,8 @@ There are 24 parameters that control the Fourses synth and the unpredictable nat
 
 <VideoMedia>
     <video slot="media" controls loop>
-        <source src="/as/jitbfg.webm" type="video/webm">  
-        <p>Your browser doesn't support HTML5 video. Here is a <a href="/as/jitbfg.webm">link to the video</a> instead.</p>  
+        <source src="/as/jitbfg.mp4" type="video/mp4">  
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="/as/jitbfg.mp4">link to the video</a> instead.</p>  
     </video>
     <p slot="caption">VIDEO 1: This screen capture shows the single input interface in practice.</p>
 </VideoMedia>
