@@ -23,8 +23,6 @@
         }, "0.05").start(0);
     }
 
-
-
     const table = ["A1", "A2", "A3", "A4", "A5", "A6"]
 
     let probs = new Array(6).fill(0.5);
