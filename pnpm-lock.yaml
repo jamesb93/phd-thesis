@@ -10,13 +10,13 @@ specifiers:
   peaks.js: ^0.25.0
   remark-external-links: ^8.0.0
   remark-slug: ^6.0.0
-  svelte: ^3.38.1
+  svelte: ^3.38.2
   tone: ^14.7.77
   vite: ^2.2.4
 
 dependencies:
   marked: 2.0.3
-  mdsvex: 0.9.3_svelte@3.38.1
+  mdsvex: 0.9.3_svelte@3.38.2
   peaks.js: 0.25.0
   remark-external-links: 8.0.0
   remark-slug: 6.0.0
@@ -25,9 +25,9 @@ dependencies:
 devDependencies:
   '@sveltejs/adapter-node': 1.0.0-next.17
   '@sveltejs/adapter-static': 1.0.0-next.7
-  '@sveltejs/kit': 1.0.0-next.95_svelte@3.38.1+vite@2.2.4
+  '@sveltejs/kit': 1.0.0-next.96_svelte@3.38.2+vite@2.2.4
   d3: 6.7.0
-  svelte: 3.38.1
+  svelte: 3.38.2
   vite: 2.2.4
 
 packages:
@@ -56,25 +56,25 @@ packages:
     resolution: {integrity: sha512-kIghJ2PoAPW6x8r5f+q8JTeB0EmBtl0Jl7wDB2HfsBCcdtNmdRqVgMcpfhSstpz1VGVDOuaU8rGlHL+XBAMMKQ==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.95_svelte@3.38.1+vite@2.2.4:
-    resolution: {integrity: sha512-J5RFS3k88Hz/XB/UoZBx2Rd4zUMipPgAKUMCRdXSstzlFJ3Cdw1Ix76sSvWuNwVHVxrOdHV5e1u5trhVAuU6Bw==}
+  /@sveltejs/kit/1.0.0-next.96_svelte@3.38.2+vite@2.2.4:
+    resolution: {integrity: sha512-SKJCqA80YFz9n/uY/w8XJPd+ADTHO3n3iy8jshI3uCpkGjjyWpu1aaLcVlmCpIYdSq+OxpT9WJuTXqmKx0St9w==}
     engines: {node: '>= 12.17.0'}
     hasBin: true
     peerDependencies:
       svelte: ^3.34.0
       vite: ^2.2.3
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.9_svelte@3.38.1+vite@2.2.4
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.9_svelte@3.38.2+vite@2.2.4
       cheap-watch: 1.0.3
       sade: 1.7.4
-      svelte: 3.38.1
+      svelte: 3.38.2
       vite: 2.2.4
     transitivePeerDependencies:
       - rollup
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.9_svelte@3.38.1+vite@2.2.4:
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.9_svelte@3.38.2+vite@2.2.4:
     resolution: {integrity: sha512-ySB/GJsZV3h3jqjq5WIiaxVFkJK6vqtG9gS7Iw6SfUH9ZiFNw5JjQF69g68j9cNep3q4yRIYiG5/pI3YIdXEuA==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -88,8 +88,8 @@ packages:
       require-relative: 0.8.7
       slash: 4.0.0
       source-map: 0.7.3
-      svelte: 3.38.1
-      svelte-hmr: 0.14.3_svelte@3.38.1
+      svelte: 3.38.2
+      svelte-hmr: 0.14.3_svelte@3.38.2
       vite: 2.2.4
     transitivePeerDependencies:
       - rollup
@@ -502,7 +502,7 @@ packages:
     resolution: {integrity: sha512-jVU0Nr2B9X3MU4tSK7JP1CMkSvOj7X5l/GboG1tKRw52lLF1x2Ju92Ms9tNetCcbfX3hzlM73zYo2NKkWSfF/A==}
     dev: false
 
-  /mdsvex/0.9.3_svelte@3.38.1:
+  /mdsvex/0.9.3_svelte@3.38.2:
     resolution: {integrity: sha512-BybdSeHihCZtydCJkFv+CZesHHYElZEp47WvYUszdfdqt6guIW/dP8H7fyrsaY6RPFfXgzGavZHB07OysuQTuQ==}
     peerDependencies:
       svelte: 3.x
@@ -510,7 +510,7 @@ packages:
       '@types/unist': 2.0.3
       prism-svelte: 0.4.7
       prismjs: 1.23.0
-      svelte: 3.38.1
+      svelte: 3.38.2
       vfile-message: 2.0.4
     dev: false
 
@@ -599,8 +599,8 @@ packages:
       path-parse: 1.0.6
     dev: true
 
-  /rollup/2.46.0:
-    resolution: {integrity: sha512-qPGoUBNl+Z8uNu0z7pD3WPTABWRbcOwIrO/5ccDJzmrtzn0LVf6Lj91+L5CcWhXl6iWf23FQ6m8Jkl2CmN1O7Q==}
+  /rollup/2.47.0:
+    resolution: {integrity: sha512-rqBjgq9hQfW0vRmz+0S062ORRNJXvwRpzxhFXORvar/maZqY6za3rgQ/p1Glg+j1hnc1GtYyQCPiAei95uTElg==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -661,16 +661,16 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /svelte-hmr/0.14.3_svelte@3.38.1:
+  /svelte-hmr/0.14.3_svelte@3.38.2:
     resolution: {integrity: sha512-N56xX405zLMw2tpGHKRx5h+kmdeZwxI21pvyC6OyBHJDCF6DlwWBm9TifdQmSD4dloWSmpDPzHWYa3CSjfopUg==}
     peerDependencies:
       svelte: '>=3.19.0'
     dependencies:
-      svelte: 3.38.1
+      svelte: 3.38.2
     dev: true
 
-  /svelte/3.38.1:
-    resolution: {integrity: sha512-N3XLAyfzqrFxwRLevBeW7Dke9ZlHRVGSIed5abo4Drvj+zvd2OyWpFa1x4nQUc8Lnvt4Kcn8/5le1peRDybNqg==}
+  /svelte/3.38.2:
+    resolution: {integrity: sha512-q5Dq0/QHh4BLJyEVWGe7Cej5NWs040LWjMbicBGZ+3qpFWJ1YObRmUDZKbbovddLC9WW7THTj3kYbTOFmU9fbg==}
     engines: {node: '>= 8'}
     dev: true
 
@@ -730,7 +730,7 @@ packages:
       esbuild: 0.9.7
       postcss: 8.2.13
       resolve: 1.20.0
-      rollup: 2.46.0
+      rollup: 2.47.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true

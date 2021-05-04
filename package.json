@@ -2,17 +2,17 @@
   "name": "~TODO~",
   "version": "0.0.1",
   "scripts": {
-    "dev": "pnpm run scrape && svelte-kit dev --host",
+    "dev": "pnpm run scrape && svelte-kit dev --host --port 3001",
     "build": "svelte-kit build",
     "start": "svelte-kit start",
-    "scrape" : "python3 scrape_links.py"
+    "scrape": "python3 scrape_links.py"
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "next",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "d3": "^6.7.0",
-    "svelte": "^3.38.1",
+    "svelte": "^3.38.2",
     "vite": "^2.2.4"
   },
   "type": "module",
