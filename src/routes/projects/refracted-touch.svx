@@ -95,33 +95,42 @@ In the later versions of the Refracted Touch patch, I implemented a similar appr
 Refracted Touch was developed by iteratively developing a patch and by using pre-recorded materials derived from my own guitar playing and from Daryl. Each version captures my compositional thinking at the time of its creation. This section will briefly describe what each patch version does and situates it in the development of the piece. As such, I will separate this section into two sub-sections, ["Earlier Versions"]({m.rt}#earlier-versions), which describes all but the final version and ["The Final Version"]({m.rt}#final-version) which shows in more detail the final form of the patch and thus piece.
 
 ### Earlier Versions
-#### 1
+#### Version 1
 I began composing Refracted Touch by collecting and making sounds, recording them and then trying to build signal processing modules around these that produced aesthetically pleasing results. I have provided some context for other interactive electronic works, in ["Machine Listening for Formal Development"]({m.rt}#machine-listening-for-formal-development) that influenced me, and much of my thinking and experimentation at this early stage of the piece was based on reimplementing and trying out ideas that I had derived from looking at their code and listening to their work.
 
-The first module I played with was a harmonic percussive source separation algorithm. This was mostly an intuitive choice, based on the assumption that the slide guitar's spectral composition is quite broad and that certain aspects of playing it reside in one component more than the other. For example, the sound of striking strings with metallic objects has an articulated attack that is mostly percussive, followed by the harmonic resonance of the amplified guitar. I wanted to see if these elements could be separate from each other, and what this might reveal about the sound.
+The first module I created was a harmonic percussive source separator in [FrameLib](https://github.com/AlexHarker/FrameLib). I started with this module as an intuitive choice, based on the assumption that certain aspects of amplified slide guitar playing from Daryl could be separated into novel components. For example, the sound of striking strings with metallic objects has an articulated attack that is mostly percussive, followed by the harmonic resonance of the amplified guitar. I wanted to see if these elements could be separate from each other, and if this process could render new material or function as an effect. [VIDEO 7]({m.rt}#video-7) gives an example of this process on some sampled slide guitar techniques with heavily detuned strings.
 
-[VIDEO 7]({m.rt}#video-7) demonstrates how
 <VideoMedia>
     <video slot="media" controls loop>
         <source src="/rt/hpss-demo.mp4" type="video/mp4">  
         <p>Your browser doesn't support HTML5 video. Here is a <a href="/rt/hpss-demo.mp4">link to the video</a> instead.</p>  
     </video>
-    <p slot="caption">VIDEO 7: This screen capture shows the single input interface in practice.</p>
+    <p slot="caption">VIDEO 7: Demonstration of the harmonic percussive separator process.</p>
 </VideoMedia>
 
 In particular, I found the percussive extraction the most creatively fruitful. Without the harmonic component to support the sound, the expressiveness and articulation of attacks is transformed and the identity of the sound is changed radically. 
 
 Both the percussive and harmonic components are kept in constantly running buffers such that the last few seconds of sound is continually being separated and maintained in memory. These buffers of source separated sounds are used by other sound producing modules such as:
 
-<!-- WIDGET: signal diagrams -->
-*Short Resonators*
+*Short Resonators (demonstrated in [VIDEO 8]({m.rt}#vid8)*
 - 32 [CNMAT `resonators~`](https://cnmat.berkeley.edu/content/resonators) in parallel excited by a noise source.
 - Each resonator can be set by providing a list of three values, the frequency, the gain and a triplicate which determines the decay.
 - The harmonic component is analysed by the `sigmund~` object to produce a set of data describing the sinusoidal components. This gives the frequency and relative gains of those sinusoids which is then used to control the `resonators~`.
 - An amplitude onset detector, triggers an envelope that allows the `resonators~` to sound momentarily when the guitar is hit.
 - The intended effect is that the `resonators` will resonate "in tune" with the guitar, albeit imperfectly due to the discrepancies between the `sigmund~` analysis, creating a hybridised sound between the guitar attacks and the parallel filter bank resonance.
- 
- *Metallic Feedback*
+
+<VideoMedia id="vid8">
+    <video slot="media" controls loop>
+        <source src="/rt/resonator-demo.mp4" type="video/mp4">  
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="/rt/resonator-demo.mp4">link to the video</a> instead.</p>  
+    </video>
+    <p slot="caption">VIDEO 8: Demonstration of the "resonators" module.</p>]
+</VideoMedia>
+
+<!-- TODO: Fix this....? -->
+ <br>
+<i>Metallic Feedback</i>
+
 - This module is composed from two identical feedback comb filters that are connected in series.
 - They have two parameters: a delay time and a feedback amount.
 - They are self-modifying, as the output gets louder the feedback amount is lowered. The feedback will never exceed 1.0 and attenuating it in this way helps to control it and stop it from becoming overpowering all the time as well as creating slight variation in response to the input signal.
@@ -129,12 +138,21 @@ Both the percussive and harmonic components are kept in constantly running buffe
 - The output of the short resonators is connected to the input of the first feedback comb filter making an already resonant and tonal sound become temporally stretched, metallic and producing the effect that the material is being recycled.
     
 *Granular Synthesis* 
-- The percussive component buffer is used as the source for a granular synthesis module. Because the percussive component is looping and only retaining a fixed amount of recent input signal the source is dynamic and based on what was been played recently. This provides a sense of dynamicism to the generation of grains, as well as creating a feeling that material is being recycled by the computer. The parameters for this are manually fixed to create a textural "wash", rather than any specific re-articulation of the stored buffer sound.
+
+- The  portion of the most recent input from the percussive component is used as the source for a granular synthesis module. This enables the granular synthesis to be dynamic when generating grains, as well as creating a feeling that material is being recycled by the computer. The parameters for this are manually fixed to create a textural companion to the input sound. A demonstration is provided in [VIDEO 10]({m.rt}#vid10)
+
+<VideoMedia id="vid10">
+    <video slot="media" controls loop>
+        <source src="/rt/gran-demo.mp4" type="video/mp4">  
+        <p>Your browser doesn't support HTML5 video. Here is a <a href="/rt/gran-demo.mp4">link to the video</a> instead.</p>  
+    </video>
+    <p slot="caption">VIDEO 10: Demonstration of the granular synthesis module.</p>
+</VideoMedia>
 
 *Cubic Non-Linear Distortion*
 - This module is a cubic non-linear distortion module that in addition to adding harmonics to the input signal can alter the dynamics of the input sound.
 
-The gen code for this is shown in CODE 1.
+The gen code for this is shown in CODE 1 and a demonstration can be found in [VIDEO 11]({m.rt}#vid11)
 
 ```js
 cnld(xin, offset, drive) { /* cubic non-linear distortion */
@@ -160,9 +178,19 @@ out1 = cnld(in1, in2, in3);
 
 <!-- WIDGET: Sound Example -->
 
+<VideoMedia id="vid11">
+    <video slot="media" controls loop>
+    <source src="/rt/cnld-demo.mp4" type="video/mp4"> 
+    <p>Your browser doesn't support HTML5 video. Here is a <a href="/rt/cnld-demo.mp4">link to the video</a> instead.</p> 
+    </video>
+    <p slot="caption">VIDEO 11: Cubic non-linear distortion module with two different test sounds.</p>
+</VideoMedia>
+
 **Temporal Changes**
 
-Alongside the sound processing modules, I began creating small sub-patches that would be responsible for creating change in the patch over time. These patches create events, or drive modifications to parameters in response to the input signal, in order to make overall changes flexible in nature while giving me the ability to specify what the changes themselves would be. I decided upon an approach of accumulation, whereby the energy of the harmonic and percussive components would accumulate separately up to a specified limit. Once the limit has been reached the accumulator creates a generic event, that can be mapped elsewhere in the patch and the internal value is reset to 0. From this process different events can be generated, or the accumulation process itself can be mapped as a parameter to other processes.
+Alongside the sound processing modules, I began creating small sub-patches that would be responsible for creating change in the patch over time. These patches create events, or drive modifications to parameters in response to the input signal, in order to make overall changes flexible in nature while giving me the ability to specify what the changes themselves would be. I decided upon an approach of *accumulation*, whereby the energy of the harmonic and percussive components would accumulate separately up to a specified limit. Once the limit has been reached the accumulator creates a generic event, that can be mapped elsewhere in the patch and the internal value is reset to 0. From this process different events can be generated, or the accumulation process itself can be mapped as a parameter to other processes.
+
+<!-- WIDGET: basic accumulator example -->
 
 For example, the envelope length of the resonator module is based on the interval between resets of the harmonic components accumulator. The more harmonic energy that is put into the system, the longer the envelopes become. My thinking in this regard was that this would make the resonators playable over longer scales, as well as making them highly responsive to what the performer decided to do. When the same harmonic accumulator resets, the resonator itself is toggled between the on and off status. This was designed such that there would be times where the resonator was dormant. Although these were never actualised, notes from the patch itself were recorded documenting some imagined applications. In these notes the "timers" refer to the interval between resets, the "bangs" refer to those reset events and the "raw signal" refers to the accumulation value itself.
 
@@ -196,27 +224,48 @@ The raw signal could be used for...
 4. Pushing the prevalence of certain systems up/down (long form stuff)
 ```
 
-The motivation for this was for the computer to be able to impose formal changes onto an improvisation, while also remaining to an extent sensitive to the performer. The performer could for example, halt the accumulators by reducing the activity of their playing potentially creating a sense of static behaviour. However, the accumulators would still be functioning in the background, albeit slowly and so change would not be completely avoided. Conversely to this, the performer may decide that they want the computer to rapidly alter its state, or to create bombastic and fleeting modifications to which they might respond. At the same time, they might want to play quietly and without much activity, so these two aspects cannot be easily mediated. Such a tension as this, creates a negotiation between the performer's playing activity and the ability for the performer to effect change in the improvisational partner, which I thought may create a type of "game" in which the performer and computer are antagonised by each other.
+The motivation for this, was so that the computer would at times impose formal development and change on to an improvisation, while also remaining to an extent sensitive to the performer. The performer could for example, halt the accumulators by reducing the activity of their playing potentially creating a sense of static behaviour. However, the accumulators would still be functioning in the background, albeit slowly and so change would not be completely avoided. Conversely to this, the performer may decide that they want the computer to rapidly alter its state, or to create bombastic and fleeting modifications to which they might respond. At the same time, they might want to play quietly and without much activity, so these two aspects cannot be easily mediated. Such a tension as this, creates a negotiation between the performer's playing activity and the ability for the performer to effect change in the improvisational partner, which I thought may create a type of "game" in which the performer and computer are antagonised by each other.
 
-This was only the first version of the patch, and so much of what it contains were nascent experiments that were not cohesive enough to bring the sound processing and temporal modules together. My main method of experimentation was to play different components in isolation rather than having a "start" button that would then play the piece. As such, the patch is perhaps more useful as a starting point that situates this project amongst a set of early influences and approaches. From this version of the patch it can also be observed how certain elements were retained through the development process, and what this may suggest about my preoccupations compositionally and sonically. 
+This was only the first version of the patch, and so much of what it contains were nascent experiments that were not cohesive as a whole. My main method of experimentation was to play different components in isolation rather than having a "start" button that would then play the piece (as was the case in the final performance). As such, the patch is perhaps more useful as a starting point that situates this project amongst a set of early influences and approaches. From this version of the patch, it can be observed how certain elements were retained through the development process, and what this may suggest about my preoccupations compositionally and sonically. 
 
-#### 2
-The second version of the patch iterates on many of the elements of the first version without much change however it is clear that this was a stepping stone to later version of this patch as there are clearly unfinished components while others are more developed.
+#### Version 2
+Many aspects from the first version are left relatively untouched in this second patch version. On reflection, this patch was a "stepping stone" to the later versions, as there are several unfinished components. Despite the incomplete nature of this version, there are some key developments that were used in the final version and the performance.
 
-The granular synthesis module has its parameters modulated in realtime by the energy of the input signal. The louder the performer gets the larger the grain size is and the faster the sampling of the source buffer gets. This makes it such that when the performer is quiet and reserved the granular synthesis output is not reminiscent of the input signal while louder inputs start to produce longer grains that mimic the gestures and material played by the guitarist.
+A significant change was made to the granular synthesis module. I found that although I liked the notion of granulating the percussive component of the input signal, the result was often overpowering and homogenous, especially with certain settings that favoured longer grain sizes. To mitigate this, and to increase the expressiveness of the granular synthesis module, I began creating small mechanisms that would modulate the parameters in response to the input signal.
 
-Segmentation
+For example, instead of constantly triggering the generation of new grains, the interval between this is determined by the amplitude of the input signal. Similarly, the time offset of grain generation (where in the buffer the grain starts) is dependent on a phasor signal that increases in speed with amplitude. Transposition is also modulated in this same way. IMAGE 1 describes the signal flow of this
 
 A new module named "low" is in this version. This module focuses on responding to moments when the guitarist is performing gestures and techniques that produce low frequency sounds. This is detected using the `energy_ratio` descriptor from Alex Harker's `descriptorsrt~` object like an onset detector, by setting a threshold for the energy between 0hz and 150hz. When this energy is exceeded an onset occurs. The result of these onsets 
 
 It plays harmonic sections slowed down depending on the input of the 
 
-Accumulators become a generalised part of the patch that aren't necessarily attached to a single module or parameter.
- - The percussive and harmonic components have their own ensemble of four accumulators. Each sequential accumulator takes an increasing amount of energy to reset. The interval between resets for each scale is recorded. Interestingly, this patch is the most ordered and structured with clear intent. Despite this, the recorded intervals are not used anywhere else in the patch. There is no documented reason for this and I cannot recall from memory but my assumption would be that I found the other modules more interesting to iterate on and decided to start a new version before experimenting with the accumulators.
+Increase in detail for the self-modulating aspects of the patch.
 
-#### 3 / 4
+Accumulators become a generalised part of the patch that aren't necessarily attached to a single module or parameter. The percussive and harmonic components have their own ensemble of four accumulators. Each sequential accumulator takes an increasing amount of energy to reset. The interval between resets for each scale is recorded. Interestingly, this patch is the most ordered and structured with clear intent. Despite this, the recorded intervals are not used anywhere else in the patch. There is no documented reason for this and I cannot recall from memory but my assumption would be that I found the other modules more interesting to iterate on and decided to start a new version before experimenting with the accumulators.
+
+#### Version 3/4
 
 Version 3 and 4 are incredibly similar, with the later version mostly implementing fixes to problems and changing the cosmetic aspects of the patch. As such, I've decided to group them together.
+
+**THE DEVELOPMENT TOWARDS CONCEPTUAL GROUPS OF MODULES AND STATES**
+
+#### rt.bits
+- Rack Sounds
+-Concatatenative Synthesis
+
+#### rt.harmfoc
+- Spectral Freeze of harmonic material
+
+#### rt.low
+- Grind
+- Fuzz
+- Fb
+
+#### rt.disruptor
+- Cubic Non-Linear Distortion
+- Granular Synthesis
+- Fourses Synthes
+
 
 At this point I had finalised choices in regards to the sound processing techniques that I wanted to use and was certain about those aspects which would remain in the patch. However, high-level form was a concern to me, and in this regard the patch contained no mechanisms for creating and managing long term form. I did not have strong ideas about techniques that I wanted to use, and again I think that this difficulty emphasises an incompatibility with the way that I want to use technology in composition. A similar "friction" arose in [Stitch/Strata]({m.ss}) and is discussed in ["From Modelling to Assistance"]({m.ss}#from-modelling-to-assistance). 
 
@@ -247,18 +296,24 @@ What I found through this process though was the idea that the piece could be co
 balancing generalisation and specific control.
 
 ### Final Version
+The final version of the patch in many aspects was not much different from version 4. Many changes were not musical in nature, and were changes to ensure that the patch would not break in performance. The most significant aspect that came to fruition in the final version was a sub-process that dealt with time and form through the aforementioned states. In previous versions of the patch the notion of states had been present as an idea, and some experiments had taken place in using these states as a way of pushing the patch and thus the piece into new sonic and behavioural territories automatically. There was some success in this approach, but I found myself increasingly worried towards the performance date that controlling this aspect would be necessary for both rehearsing the piece in a meaningful way, and as a way of guaranteeing to an extent that certain moments and things would emerge in the performance despite being highly improvised.
+
+In the final version of the patch the energy accumulator approach is taken to the extreme and used as a way of determining the duration that a given "state" will be engaged for in the patch. 
+ 
+ These "states" are predetermined by me beforehand and control which sound producing modules are active and the parameters across those modules. Importantly too, I introduced a web-based interface for which instructions could be delivered to the performer. My thinking with this, would be that the states would not just provoke aural responses from him, but that he would also be given visual feedback on the progress through a particular state, amongst a set of guiding instructions on techniques to use, what dynamic range to occupy and what he should focus on listening to in the computers output.
+
+Material was only immediate in the granulation. I wanted it to sustain and so I introduced a feedback component to the granulation which made it behave less dependently on the input signal
 
 State recognition took on a new more deterministic form.
 
-Higher level of pre-composition, because it was difficult to experiment without Daryl there physically. Try to keep things with a relatively high chance to succeed and not have to re-work it only a day or so before
+Higher level of pre-composition, because it was difficult to experiment without Daryl there physically. Try to keep things with a relatively high chance to succeed and not have to re-work it only a day or so before.
 
-The final version of the patch is structured in a similarly modular fashion.
 
-In previous versions of the patch a number of sound producing modules were developed with some remaining in the final version and others being removed.
 
-The aspect that changed the most between versions and significantly in the final version was the role of the computer in imposing form onto the improvisation. In the final version of the patch the mechanism of the "accumulator" is taken to the extreme and used as a way of determining the duration that a given "state" will be engaged in the patch. These "states" are predetermined by me beforehand and control which sound producing modules are active as well as setting some constraints on their parameters. They are accompanied with a set of instructions and playing techniques delivered to the guitarist in real-time through an iPad interface. 
 
-This approach represents is a major digression from previous approaches and the computer has little role in influencing the work. Instead, it is more like a static antagonistic object that the guitarist must be aware of. If a section only has a limited amount of energy to spare in the accumulator then playing quietly is the only way to make sure that state lasts for an appropriate amount of time. Within each state there is opportunity for the guitarist and the computer to interact with each other and many of the reactive features in each sound producing module is retained from the previous versions. For example, the granular synthesis module is fea
+<!-- Here is where you would talk about the recording of the piece, and point to each section as a breakdown and what happened in the music... -->
+
+This approach represents is a major digression from previous approaches and the computer has little role in influencing the work. Instead, it is more like a static object that the guitarist must be aware of. If a section only has a limited amount of energy to spare in the accumulator then playing quietly is the only way to make sure that state lasts for an appropriate amount of time. Within each state there is opportunity for the guitarist and the computer to interact with each other and many of the reactive features in each sound producing module is retained from the previous versions. For example, the granular synthesis module is fea
 
 ## Reflection
 
