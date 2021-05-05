@@ -23,9 +23,9 @@ dependencies:
   tone: 14.7.77
 
 devDependencies:
-  '@sveltejs/adapter-node': 1.0.0-next.17
-  '@sveltejs/adapter-static': 1.0.0-next.7
-  '@sveltejs/kit': 1.0.0-next.96_svelte@3.38.2+vite@2.2.4
+  '@sveltejs/adapter-node': 1.0.0-next.18
+  '@sveltejs/adapter-static': 1.0.0-next.8
+  '@sveltejs/kit': 1.0.0-next.99_svelte@3.38.2+vite@2.2.4
   d3: 6.7.0
   svelte: 3.38.2
   vite: 2.2.4
@@ -48,16 +48,16 @@ packages:
       picomatch: 2.2.3
     dev: true
 
-  /@sveltejs/adapter-node/1.0.0-next.17:
-    resolution: {integrity: sha512-kRGW9S0yf9X5kxFdW2sYF3s/bgME3Xyu/rnFEf121bSv0q7NhWktuuRWH3WbS5wQnFRoN+0s/1PaRK3ErNHsVQ==}
+  /@sveltejs/adapter-node/1.0.0-next.18:
+    resolution: {integrity: sha512-w0w9KKo2p/Aq68JIQyWjNVBg/OuNqaYbVNFf9TVgXcdlPJcY1NncwujqUqejBATTm+ZhQzyQqXoosgqYtTI5tA==}
     dev: true
 
-  /@sveltejs/adapter-static/1.0.0-next.7:
-    resolution: {integrity: sha512-kIghJ2PoAPW6x8r5f+q8JTeB0EmBtl0Jl7wDB2HfsBCcdtNmdRqVgMcpfhSstpz1VGVDOuaU8rGlHL+XBAMMKQ==}
+  /@sveltejs/adapter-static/1.0.0-next.8:
+    resolution: {integrity: sha512-goE3v68y+pn+fayPDJCCQ7W1QQpSMl86pZS9RvjuG64+TEI/PGsZwYR1RRgvwIiDqu33wBEHj+3ZYHEpJO/gwg==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.96_svelte@3.38.2+vite@2.2.4:
-    resolution: {integrity: sha512-SKJCqA80YFz9n/uY/w8XJPd+ADTHO3n3iy8jshI3uCpkGjjyWpu1aaLcVlmCpIYdSq+OxpT9WJuTXqmKx0St9w==}
+  /@sveltejs/kit/1.0.0-next.99_svelte@3.38.2+vite@2.2.4:
+    resolution: {integrity: sha512-eLVo8/fE6DrNFRCx4fLU2MKolVhMPHlBkhA04kpsNaojC6PW9kW9w7DEpeK5WCYYzxhirvmABsUyw37pQfjZVA==}
     engines: {node: '>= 12.17.0'}
     hasBin: true
     peerDependencies:
@@ -646,8 +646,8 @@ packages:
     resolution: {integrity: sha512-q/JSVd1Lptzhf5bkYm4ob4iWPjx0KiRe3sRFBNrVqbJkFaBm5vbbowy1mymoPNLRa52+oadOhJ+K49wsSeSjTA==}
     dev: false
 
-  /standardized-audio-context/25.1.17:
-    resolution: {integrity: sha512-KZwU9OfgMkzy1XYPmiFNfdWVx3yTuvEjA4ByYWWIowzmU6asgQrK2ThyW//muk8Q7dADF20BROQGO17VQAzWdQ==}
+  /standardized-audio-context/25.1.18:
+    resolution: {integrity: sha512-GAyrrmr9Ym3Va6ASd/OgN19+cP/BH9z1llC2so/8EtRRwrYyp25DvvK5chG+WfTepzEo3IHlmhOwdNq7ekI0tQ==}
     dependencies:
       '@babel/runtime': 7.14.0
       automation-events: 3.0.13
@@ -682,7 +682,7 @@ packages:
   /tone/14.7.77:
     resolution: {integrity: sha512-tCfK73IkLHyzoKUvGq47gyDyxiKLFvKiVCOobynGgBB9Dl0NkxTM2p+eRJXyCYrjJwy9Y0XCMqD3uOYsYt2Fdg==}
     dependencies:
-      standardized-audio-context: 25.1.17
+      standardized-audio-context: 25.1.18
       tslib: 2.2.0
     dev: false
 
