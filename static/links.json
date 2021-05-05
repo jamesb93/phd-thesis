@@ -505,6 +505,10 @@
             "url": "http://owengreen.net/portfolio/cardboard-cutout/"
         },
         {
+            "name": "FrameLib",
+            "url": "https://github.com/AlexHarker/FrameLib"
+        },
+        {
             "name": "CNMAT `resonators~`",
             "url": "https://cnmat.berkeley.edu/content/resonators"
         },
