@@ -5,3 +5,4 @@ build
 *.wav
 docx
 docx-conversion.zip
+.svelte-kit
