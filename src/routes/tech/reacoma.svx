@@ -7,6 +7,7 @@
     import X86 from '$lib/demos/reacoma/X86.svelte';
     import MaxwaveStart from '$lib/demos/reacoma/MaxwaveStart.svelte';
     import MaxwaveEnd from '$lib/demos/reacoma/MaxwaveEnd.svelte';
+    import Sys from '$lib/demos/reacoma/Sys.svelte';
 
     const d = 250;
 </script>
@@ -32,8 +33,8 @@ ReaCoMa matured over a number of iterations as I incorporated into my compositio
 
 In sys.ji_ from [Reconstruction Error]({m.re}) the `fluid.transients.lua` script is used to decompose a longer passage of material into a transient component and a residual component (everything except the transients). A long fade in envelope is applied to the residual component and both components are played back at the same time. This gradually introduces the residual parts of the sound while the transients dominate from the outset. I chose this effect as a way of generating various colours of short click-like sounds and as a way of suppressing the noisier aspects of the sound temporarily and to create a formal shape from this.
 
-sys.ji_
 1:18 - 2:00
+<Sys />
 
 ---
 
@@ -45,7 +46,7 @@ In dotmaxwave, `fluid.hpss.lua` is used to separate the harmonic component of a 
 
 3:07 to 3:37 i accentuate the noise entirely and over-compress in order to flatten the dynamics of the sound into a more static texture.
 
-<MaxwaveStart />
+<MaxwaveEnd/>
 
 
 
