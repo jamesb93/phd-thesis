@@ -13,11 +13,6 @@
     let Peaks;
     let instance, overview, zoom, audio, controls;
     let peaksControls;
-    let zoomIn;
-    let zoomOut;
-
-    function handleZoomIn () {instance.zoom.zoomIn()}
-    function handleZoomOut () {instance.zoom.zoomOut()}
 
     const convert = (time) => {
         const date = new Date(time * 1000).toISOString().substr(11, 8)
@@ -62,8 +57,6 @@
             })
         }
     });
-
-
 </script>
 
 <div class="audio-box" id={id}>
