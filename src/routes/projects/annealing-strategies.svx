@@ -7,7 +7,7 @@
     import Caption from "$lib/components/Caption.svelte";
     import Waveform from "$lib/components/Waveform.svelte";
 
-    import { segs4 } from "$lib/components/data/as.js";
+    import { segs4 } from "$lib/data/as.js";
 </script>
 
 # Annealing Strategies

@@ -7,7 +7,7 @@
 	import NextSection from "$lib/components/NextSection.svelte";
     import {metadata as m} from "../directory.svx";
     import Sage from "$lib/demos/Sage.svelte";
-    import { sageUnshuffled, sageShuffled } from "$lib/components/data/sage.js";
+    import { sageUnshuffled, sageShuffled } from "$lib/data/sage.js";
 
 </script>
 
