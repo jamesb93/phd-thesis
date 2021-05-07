@@ -6,7 +6,7 @@
 
 # Conclusion
 ## Composition Workflow and Process
-
+- First three pieces branched out in terms of techniques and scope. I tried a number of different strategies almost in a kind of blind fashion to see what would "stick". The last two projects are  more directed toward a specific approach and workflow that developed between them.
 ## Realisational and Functional Interfaces
 ### Four Phases
 
@@ -15,6 +15,8 @@ https://llllllll.co/t/quotes-on-music-composition/12794/38
     2. Analysing
     3. Organising
     4. Manipulating
+
+
 
 - I've established a way of controlling high-level form while also having it be responsive to the iterative development process.
 
