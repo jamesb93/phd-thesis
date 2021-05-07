@@ -1,6 +1,11 @@
 {
     "discog" : [
         {
+            "name" : "Lichen",
+            "artist" : "Matthew Sergeant",
+            "year" : 2017
+        },
+        {
             "name" : "Danger in the Air",
             "artist" : "Owen Green",
             "year" : "2013"
