@@ -13,7 +13,6 @@
         threshold : [0.1, 0.9],
     }
 
-
     function handleIntersect(entries, observer) {
         let lowest = Infinity;
         entries.forEach(entry => {
@@ -83,7 +82,7 @@
             {#each contents as section}
                     <li>
                         <a 
-                        class="depth-{section.depth}" 
+                        class="link depth-{section.depth}" 
                         href="{$page.path}#{section.url}"
                         class:shown={visibility === section.url} 
                         > 
@@ -99,8 +98,6 @@
 	.container {
         z-index: 99;
 		height: 100%;
-		background-color: white;
-        box-shadow: 1em;
         position: fixed;
         line-height: 2em;
         padding-top: 5em;
@@ -115,7 +112,7 @@
         display: block;
     }
 
-    ul li a {
+    .link {
         text-overflow: ellipsis;
         word-wrap: ellipsis;
         white-space: nowrap;
@@ -127,5 +124,3 @@
     .depth-4 {margin-left: 4.5em}
 
 </style>
-
- -->

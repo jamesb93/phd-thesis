@@ -1,6 +1,10 @@
+:root {
+	--blue:#0d47a1;
+}
+
 html {
 	font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Fira Sans", "Droid Sans", Arial, sans-serif;
-	font-size: 14px;
+	font-size: 15px;
 	line-height: 2em;
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
@@ -24,21 +28,14 @@ h2 {font-size: 2.5em;}
 h3 {font-size: 1.5em;}
 h4 {font-size: 1.2em;}
 
-a {
-	color: rgb(80, 0, 209);
-}
-
-a:link {
-	color: rgb(80, 0, 209);
-	background-color: transparent;
+a, a:visited {
+	color: var(--blue);
 	text-decoration: none;
 }
 
-a:visited {
-	color: rgb(80, 0, 209);
-}
-
-a:hover {
+a:hover, a:link:hover {
+	color: white;
+	background-color: var(--blue);
 	text-decoration: underline;
 }
 
