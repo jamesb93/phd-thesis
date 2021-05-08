@@ -89,11 +89,12 @@ In music and audio, machine learning has been used toward a number of technical 
 
 In my practice, I use machine learning to in conjunction with machine-listening. Machine-listening often produces large quantities of data and this can make it difficult to make sense of that data, or to grapple with it in a humanly meaningful way. Machine listening provides a number of strategies for transforming, analysing and querying such data. Thus, I use machine learning as a way of  interacting with and enhancing machine-listening through analysis. Examples of this include:
     
-**Dimensionality Reduction**
+#### Dimensionality Reduction
 <!-- LINK: link to the reconstruction error section -->
 Dimensionality reduction or dimension reduction transforms data from a high-dimensional space to a low-dimensional space while attempting to maintaing the meaningful properties of the original data. There are many techniques for this with their own sets of positive and negative characteristics. A number of algorithms experimented with in my practice can be found in the comparison presented by McInnes et. al (2018). This topic is discussed further in ["Reconstruction Error"]({m.re}). Dimension reduction can help to reduce the size and redundancy of data produced by machine-listening which is often produced in vast amounts by audio descriptors. The result of this is usually converting a frame-by-frame analysis into a summary of fewer numbers which ideally describe the qualities of that original high-dimension data. This can make descriptor-driven searches quicker and grounded in a simpler representation by reducing data to a set of fewer points that have more significance in their meaning. It also reduces the need to select descriptors which I think are the best at capturing and representing salient aspects of a sound. Instead, I can use many descriptors without considering their relation to the percept of the sound. The role then of dimensionality reduction is to remove the data from this process that it finds redundant. Dimension reduction also supports mapping samples into two-dimensional visual plots, which is discussed later in ["Mapping"]({m.ca}#mapping). Finally, dimensionality reduction can also be used as a preprocessor for other computational processes. Depending on how well the dimension reduction algorithm retains "meaningful" data, other algorithms such as clustering can have their results improved.
 
-**Clustering**
+#### Clustering
+<!-- GAP -->
 Clustering algorithms partition data objects (patterns, entities, instances, observances, units) into a certain  number of clusters (groups, subsets, or categories) (Xu & Wunch, 2008, p. 4). What consitutes a cluster in this context can be determined any number of ways. Generally though, clustering aims to draw together data objects in terms of "internal homogeneity and external separation", such that "data objects in different clusters should be dissimilar from one another" (Xu & Wunch, 2008, p. 4). 
 
 <!-- LINK: link to the process in em where you talk about clustered segmentation -->
@@ -102,10 +103,12 @@ In my practice I have used clustering for two main tasks. The first task is to a
 
 The second task is to support automatic segmentation based on the similarity of contiguous segments. By clustering together audio descriptor data from highly granular slices of a sound file, a novel form of automatic segmentation can be applied that produces good results for dividing sounds based on significant variations of an audio descriptor or set of descriptors.  
 
-**Combinatorial and Optimisation Problems**
+#### Combinatorial and Optimisation Problems
+<!-- GAP -->
 Machine learning can be used as to solve optimisation and combinatorial problems without exploring every possible solution. The behaviour of one such algorithm, Simulated Annealing, is used in [Annealing Strategies]({m.as}) as a means to discovering which set within a larger set of complex and coupled parameters will create the quietest possible output.
 
-**Signal Processing**
+#### Signal Processing
+<!-- GAP -->
 Machine learning also finds its way into my practice through signal processing. Some techniques leverage machine learning in order to create solutions to problems such as non-negative matrix factorisation (NMF). NMF, like clustering, can be a technique for speculatively exploring sound. In this case, it decomposes a composite audio file into many components that when summed recreate the original. I often find it fruitful to decompose sounds *with* a technique such as NMF, and to react to the results it produces as a form of sonic exploration. This helps guide me to more detailed and subtle sounds without having to first conceive them.
 
 ### Machine Learning As Exploration In My Practice
