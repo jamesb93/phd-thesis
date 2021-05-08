@@ -1,3 +1,39 @@
+<script>
+    import marked from 'marked';
+    import links from '../../static/links.json';
+    import refs from '../../static/references.json'
+    import discog from '../../static/discog.json'
+    import {metadata as m} from "./directory.svx"
+
+    // Sort the links by name
+    const reA = /[^a-zA-Z_]/g;
+    const reN = /[^0-9]/g;
+
+    function alphaSort(a,b) {
+        var al = a.name.toLowerCase();
+        var bl = b.name.toLowerCase();
+        var aA = al.replace(reA, "");
+        var bA = bl.replace(reA, "");
+
+        if (aA === bA) {
+            var aN = parseInt(a.name.replace(reN, ""), 10);
+            var bN = parseInt(b.name.replace(reN, ""), 10);
+            return aN === bN ? 0 : aN > bN ? 1 : -1;
+        } else {
+            return aA > bA ? 1 : -1;
+        }
+    };
+    
+    let sortedLinks = [];
+    let sortedVids = [];
+    let sortedRefs = [];
+    let sortedDiscog = [];
+    $: sortedLinks = links.links.sort(alphaSort);
+    $: sortedVids  = links.videos.sort(alphaSort);
+    $: sortedRefs  = refs.references.sort(alphaSort);
+    $: sortedDiscog = discog.discog.sort(alphaSort);
+</script>
+
 # References
 
 {#each sortedRefs as ref}
@@ -60,40 +96,3 @@
     }
 
 </style>
-
-<script>
-    import marked from 'marked';
-    import links from '../../static/links.json';
-    import refs from '../../static/references.json'
-    import discog from '../../static/discog.json'
-    import {metadata as m} from "./directory.svx"
-
-    // Sort the links by name
-    const reA = /[^a-zA-Z_]/g;
-    const reN = /[^0-9]/g;
-
-    function alphaSort(a,b) {
-        var al = a.name.toLowerCase();
-        var bl = b.name.toLowerCase();
-        var aA = al.replace(reA, "");
-        var bA = bl.replace(reA, "");
-
-        if (aA === bA) {
-            var aN = parseInt(a.name.replace(reN, ""), 10);
-            var bN = parseInt(b.name.replace(reN, ""), 10);
-            return aN === bN ? 0 : aN > bN ? 1 : -1;
-        } else {
-            return aA > bA ? 1 : -1;
-        }
-    };
-    
-    let sortedLinks = [];
-    let sortedVids = [];
-    let sortedRefs = [];
-    let sortedDiscog = [];
-    $: sortedLinks = links.links.sort(alphaSort);
-    $: sortedVids  = links.videos.sort(alphaSort);
-    $: sortedRefs  = refs.references.sort(alphaSort);
-    $: sortedDiscog = discog.discog.sort(alphaSort);
-</script>
-
