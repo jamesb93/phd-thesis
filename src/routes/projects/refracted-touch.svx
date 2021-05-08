@@ -233,7 +233,7 @@ In the second version of the patch developments are made to how the granular syn
 
 <ImageMedia2
 url="/rt/adaptive-granular.jpg"
-caption=""
+caption="Adaptive granular synthesis module."
 figure="IMAGE 1"
 id="img1"
 />
