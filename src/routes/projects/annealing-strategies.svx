@@ -30,6 +30,8 @@ As I researched around these interests, I came across Stefano Fasciani, who in h
 <YouTube 
 url="https://www.youtube.com/embed/yMLl7-aI_kc?start=687"
 title="Stefano Fasciani demonstrating the 'TSAM' program"
+caption="Stefano Fasciani demonstrating the 'TSAM' program"
+figure="VIDEO 1"
 />
 
 Fasciani's work made me realise it was possible to have the computer be responsible for finding parameter combinations that would produce an output with a certain perceptual value represented with audio descriptors. I was encouraged by this despite not having the programming skills to work with similar technologies such as neural networks or more general machine learning. Given these limitations, my motivations were to find or design my own strategies for exploring this idea in line with my creative coding skills that I had at the time.
@@ -61,7 +63,7 @@ There are 24 parameters that control the Fourses synth and the unpredictable nat
 <VideoMedia2
 url="/as/jitbfg.mp4"
 figure="VIDEO 1"
-caption="VIDEO 1: This screen capture shows the single input interface in practice."
+caption="A screen capture demonstrating the single input interface in practice."
 id="vid1"
 />
 
@@ -182,7 +184,11 @@ The convergence of many aspects made Annealing Strategies successful but not a r
 ## Related Links and Media
 I gave a presentation at the <a href="http://electricspring.co.uk/electric-spring-2018/">2018 Electric Spring Creative Coding Lab Symposium</a> that discussed the motivations and creative process for Annealing Strategies. While this video at times skims over detail due to time constraints of the presentation it is documentation that supports this work and thus deserves inclusion in this thesis.
 
-<YouTube url="https://www.youtube.com/embed/Ro30O9u7l8M"/>
+<YouTube 
+url="https://www.youtube.com/embed/Ro30O9u7l8M"
+figure="VIDEO 3"
+caption='"Making Decisions About Making Decisions About Making Decisions" presentation given at the 2018 Electric Spring Creative Coding Lab Symposium.'
+/>
 
 <!-- ## Technical Improvements and Considerations
 Looking at the technical implementation almost three years after its development, it is fairly weak but is nonetheless a reflection of my skills and abilities at that time and working at these limitations.
