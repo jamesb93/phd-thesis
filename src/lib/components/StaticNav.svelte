@@ -22,7 +22,7 @@
 		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === m.rt}' href={m.rt}>4.3 Refracted Touch</a></li>
 		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === 'interlude'}' href={'interlude'}>interlude</a></li>
 		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === m.re}' href={m.re}>4.4 Reconstruction Error</a></li>
-		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === m.em}' href={m.em}>4.5 ElectroMagnetic</a></li>
+		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === m.em}' href={m.em}>4.5 Interferences</a></li>
 
 		<li><a  on:click={handleClick} class="section" class:selected='{$page.path === m.ti}' href="/tech">5. Technical Implementation</a></li>
 		<li><a  on:click={handleClick} class="subsection" class:selected='{$page.path === m.mosh}' href={m.mosh}>5.1 mosh</a></li>
