@@ -15,9 +15,9 @@
 # Annealing Strategies
 
 <Waveform
-title="AUDIO 1: 'Annealing Strategies' (738_noise.simplex_529135023)"
-file="/as/annealing_strategies.mp3"
-peaks="/as/annealing_strategies.dat"
+title='AUDIO 1: "Annealing Strategies" (738_noise.simplex_529135023)'
+file="/pieces/as.mp3"
+peaks="/pieces/as.dat"
 id="aud1"
 />
 Annealing Strategies is a piece that is created by a content-aware program. It uses an audio descriptor to measure the perceptual loudness of a "Fourses" synthesiser alongside "Simulated Annealing" (SA), an optimisation technique that over time discovers what combination of complex coupled parameters for the synthesiser create the quietest possible output. A number of iterations of this work were created by the system and through curation of those outputs and fine tuning of the SA algorithm I arrived at a final rendition of the work.
@@ -70,24 +70,30 @@ The benefit of this approach is that the single input knob explores a subset of 
 ### Simulated Annealing
 The single input interface was devised in the moment, as a way of exploring the sounds that could be made by the Fourses synthesiser in a semi-structured and computationally led manner. In doing this though I still had not explored my original question of how the computer could explore the vastness of possibilities that Fourses could produce, in particular finding those delicate and quiet sounds and the parameters that produce them. This led me down another path of investigation into the problem space of combinatorics and optimisation problems. Serendipitously I came across "Simulated Annealing". The naming of this algorithm is a reference to annealing in metallurgy, a process where material is heated and gradually cooled. At the start of this process, the molecules of that material can freely rearrange in a quasi-random fashion. As the material is slowly cooled, an optimal state crystallises and the tolerance for "weak" movements and thus bonds to be made are less likely to occur.
 
-SA works by considering a set of discrete data points to have both a *state* and a *successor* or *neighbour*. The state is the value, or data associated to a data point and the neighbours are other states surrounding that one. The neighbours can be determined a number of ways, such as the organisation of points in a graph or spatially organising the points in two or three dimensions. Given this dataset simulated annealing begins its process by selecting a random state to start with. An initial *temperature* parameter is set at this point an important concept that will be explained shortly. At each *iteration*, a new nearby state is selected and the data associated to that state is compared with the previous state. If the movement to this new state results in a positive difference, then that move is considered "good" and is retained. If the move produces a negative difference the move is considered "bad". Instead of simply rejecting the bad move, there is a probability that this move is instead retained. This probability is determined by the [Boltzmann Distribution](https://en.wikipedia.org/wiki/Boltzmann_distribution) which is the function epsilon to the power of the change in energy divided the temperature of the system. Each iteration reduces this temperature depending on the cooling rate, meaning that as the algorithm progresses fewer bad moves are kept. The rationale is that while hill climbing algorithms lack the sophistication to escape local minima and maxima, simulated annealing can escape these temporarily to search for global optimal states when the temperature is high. As the temperature reduces these explorative moves are less likely to occur. In FIGURE 1, a flowchart describes the simulated annealing.
+SA works by considering a set of discrete data points to have both a *state* and a *successor* or *neighbour*. The state is the value, or data associated to a data point and the neighbours are other states surrounding that one. The neighbours can be determined a number of ways, such as the organisation of points in a graph or spatially organising the points in two or three dimensions. Given this dataset simulated annealing begins its process by selecting a random state to start with. An initial *temperature* parameter is set at this point an important concept that will be explained shortly. At each *iteration*, a new nearby state is selected and the data associated to that state is compared with the previous state. If the movement to this new state results in a positive difference, then that move is considered "good" and is retained. If the move produces a negative difference the move is considered "bad". Instead of simply rejecting the bad move, there is a probability that this move is instead retained. This probability is determined by the [Boltzmann Distribution](https://en.wikipedia.org/wiki/Boltzmann_distribution) which is the function epsilon to the power of the change in energy divided the temperature of the system. Each iteration reduces this temperature depending on the cooling rate, meaning that as the algorithm progresses fewer bad moves are kept. The rationale is that while hill climbing algorithms lack the sophistication to escape local minima and maxima, simulated annealing can escape these temporarily to search for global optimal states when the temperature is high. As the temperature reduces these explorative moves are less likely to occur. In [IMAGE 2]({m.as}#img2), a flowchart describes the steps of the simulated annealing process.
 
-<ImageMedia>
-    <img slot="media" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Hill_Climbing_with_Simulated_Annealing.gif">
-    <p slot="caption">FIGURE 1: A flowchart describing the steps of the Simulated Annealing algorithm.</p>
-</ImageMedia>
+<ImageMedia2 
+url="/as/annealing-flowchart.svg"
+caption="A flowchart describing the steps of the simulated annealing algorithm."
+figure="IMAGE 2"
+id="img2"
+/>
 
 Simulated annealing can be applied to many problems across different domains including finding the minimum or maximum value given a set of values, such as in this weather data (see FIGURE 2) or solving the "travelling salesman problem" in which an optimally short journey is designed between a set of spatially dispersed nodes (see FIGURE 3). An interactive example by "Nayuki" uses simulated annealing to [reconstruct a digitally "shredded" image](https://www.nayuki.io/page/image-unshredder-by-annealing). This particular example is apt for demonstrating how the parameters of the algorithm: starting temperature, cooling rate and number of iterations can effect its result and success.
 
-<ImageMedia>
-    <img slot="media" src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Hill_Climbing_with_Simulated_Annealing.gif">
-    <p slot="caption">FIGURE 2: The highest data point in weather data being located through simulated annealing. Taken from <a href="https://commons.wikimedia.org/wiki/File:Hill_Climbing_with_Simulated_Annealing.gif">Kingpin13</a>, CC0, via Wikimedia Commons  </p>
-</ImageMedia>
+<ImageMedia2 
+url="https://upload.wikimedia.org/wikipedia/commons/d/d5/Hill_Climbing_with_Simulated_Annealing.gif"
+htmlCap={true}
+caption='The highest data point in weather data being located through simulated annealing. Taken from <a href="https://commons.wikimedia.org/wiki/File:Hill_Climbing_with_Simulated_Annealing.gif">Kingpin13</a>, CC0, via Wikimedia Commons'
+figure="IMAGE 3"
+/>
 
-<ImageMedia>
-    <img slot="media" src="https://upload.wikimedia.org/wikipedia/commons/1/1e/3D_TSP_solved_with_simulated_annealing_2.5_MB.gif">
-    <p slot="caption">FIGURE 3: The travelling salesman problem being solved by simulated annealing. Panchotera~enwiki, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0, via Wikimedia Commons </p>
-</ImageMedia>
+<ImageMedia2 
+url="https://upload.wikimedia.org/wikipedia/commons/1/1e/3D_TSP_solved_with_simulated_annealing_2.5_MB.gif"
+htmlCap={true}
+caption='The travelling salesman problem being solved by simulated annealing. Panchotera~enwiki, CC BY-SA 4.0 <a href="https://creativecommons.org/licenses/by-sa/4.0">https://creativecommons.org/licenses/by-sa/4.0</a>, via Wikimedia Commons'
+figure="IMAGE 4"
+/>
 
 ### Combining Simulated Annealing With The Single Input Interface
 In "Annealing Strategies" simulated annealing is used in conjunction with the single input interface to create a system of control and automatic computational exploration of parameter combinations. Using an audio descriptor for the perceptual loudness of the output of the Fourses, simulated annealing is used to discover how the single input interface that "scrubs" through a procedural basis graph can produce perceptually quiet outputs. At its core, the SA algorithm is optimising the loudness value by changing the input value, with the black box of entangled and coupled parameters sitting between those two as a complex function.
@@ -109,47 +115,47 @@ An iteration of "Annealing Strategies" as a work is created by running this algo
 
 ## Selecting An Output From The Simulated Annealing System
 
-"Annealing Strategies" is a single output from the system that I selected. This was judged by how well it suited my conceptual goals I made prior to the compositional process. Hundreds of iterations were made throughout this and many of these were auditioned and sorted into a folder of "bad" and "good" iterations. Some of these bad iterations can be found in AUDIO 1, AUDIO 2, and AUDIO 3 alongside explanations of why they were classified in this way. The iterations are named by the computer according to the random seed which is used, the type of procedural noise basis and then a random identifier.
+"Annealing Strategies" is a single output from the system that I selected. This was judged by how well it suited my conceptual goals I made prior to the compositional process. Hundreds of iterations were made throughout this and many of these were auditioned and sorted into a folder of "bad" and "good" iterations. Some of these bad iterations can be found in [AUDIO 2]({m.as}#aud2), [AUDIO 3]({m.as}#aud3), and [AUDIO 4]({m.as}#aud4) alongside explanations of why they were classified in this way. The iterations are named by the computer according to the random seed which is used, the type of procedural noise basis and then a random identifier.
 
 <Waveform
-title="AUDIO 1 (592_noise.simplex_529155534)"
+title="AUDIO 2 (592_noise.simplex_529155534)"
 file="/as/592_noise.simplex-am.mp3"
 peaks="/as/592_noise.simplex-am.dat"
-id="audio1"
+id="aud2"
 />
 
-In iteration [592_noise.simplex_529155534]({m.as}#audio1) there is little variation from the initial state which is set up at the start. In this case my understanding is that the algorithm failed to discover any quiet states in its search or perhaps the algorithm parameters that were used used too fast a cooling rate or not a high enough initial temperature.
+In iteration [592_noise.simplex_529155534]({m.as}#aud2) there is little variation from the initial state which is set up at the start. In this case my understanding is that the algorithm failed to discover any quiet states in its search or perhaps the algorithm parameters that were used used too fast a cooling rate or not a high enough initial temperature.
 
 <Waveform
-title="AUDIO 2 (453_noise.simplex_529163614)"
+title="AUDIO 3 (453_noise.simplex_529163614)"
 file="as/453_noise.simplex-am.mp3"
 peaks="/as/453_noise.simplex-am.dat"
-id="audio2"
+id="aud3"
 />
 
-The sound which dominates the first two minutes of iteration [453_noise.simplex_529163614]({m.as}#audio2) exhibits morphological and textural properties that I liked. This kind of sound was what I initially intended for the simulated annealing to be able to discover as it ran. However, this initial sound is never altered significantly until around 2:12, at which point a low pitched and wandering bass sound is introduced. The changes at this point seem abrupt and it contributes to a behaviour that is more like a random search than a controlled and increasingly focused progression towards quieter sounds.
+The sound which dominates the first two minutes of iteration [453_noise.simplex_529163614]({m.as}#aud3) exhibits morphological and textural properties that I liked. This kind of sound was what I initially intended for the simulated annealing to be able to discover as it ran. However, this initial sound is never altered significantly until around 2:12, at which point a low pitched and wandering bass sound is introduced. The changes at this point seem abrupt and it contributes to a behaviour that is more like a random search than a controlled and increasingly focused progression towards quieter sounds.
 
 <Waveform
-title="AUDIO 3 (738_noise.simplex_529152854.aiff)"
+title="AUDIO 4 (738_noise.simplex_529152854.aiff)"
 file="/as/738_noise.simplex-am.mp3"
 peaks="/as/738_noise.simplex-am.dat"
-id="audio3"
+id="aud4"
 />
 
-Iteration [738_noise.simplex_529152854]({m.as}#audio3) possesses a pitched "whine" from the start which is the most pervasive musical element throughout. There is variation to this sound and for some periods of time after this shorter more iterative sounds emerge in an organic manner. This particular sound world which is created suited the type of sounds I wanted the annealing algorithm to find. However, at 3:41, a new increasingly pitched sound emerges which is relatively unaltered for the remainder of the iteration. While the first section was to some degree a kind of sound that was sympathetic to my initial aims, the overall structure of this iteration does not satisfy the progression from louder to softer sounds I was aiming to produce.
+Iteration [738_noise.simplex_529152854]({m.as}#aud4) possesses a pitched "whine" from the start which is the most pervasive musical element throughout. There is variation to this sound and for some periods of time after this shorter more iterative sounds emerge in an organic manner. This particular sound world which is created suited the type of sounds I wanted the annealing algorithm to find. However, at 3:41, a new increasingly pitched sound emerges which is relatively unaltered for the remainder of the iteration. While the first section was to some degree a kind of sound that was sympathetic to my initial aims, the overall structure of this iteration does not satisfy the progression from louder to softer sounds I was aiming to produce.
 
-A number of good iterations were made, and those that were not chosen as the single "best" output will be discussed briefly in ["Issues of Control and Intervention"]({m.as}#issues-of-control-and-intervention). The selected output to be "Annealing Strategies" was iteration 738_noise.simplex_529135520 which can be heard in AUDIO 4.
+A number of good iterations were made, and those that were not chosen as the single "best" output will be discussed briefly in ["Issues of Control and Intervention"]({m.as}#issues-of-control-and-intervention). The selected output to be "Annealing Strategies" was iteration 738_noise.simplex_529135520 which can be heard in [AUDIO 5]({m.as}#aud5).
 
 <Waveform
-title="AUDIO 4: 'Annealing Strategies' (738_noise.simplex_529135023)"
+title="AUDIO 5: 'Annealing Strategies' (738_noise.simplex_529135023)"
 file="/as/annealing_strategies.mp3"
 peaks="/as/annealing_strategies.dat"
-id="audio4"
+id="aud5"
 segments={segs4}
 />
 
 <!-- LINKS: link to specific markers and segment markers -->
-This iteration possessed a sophisticated macro-structure that was satisfactory according to my original aims and goals with this piece. Compared to any of the other iterations, [738_noise.simplex_529135023]({m.as}#audio4) exhibited a natural and organic taper across its duration from initially chaotic and bombastic sounds towards a narrow and controlled final section focused toward intricate and quiet sounds. This iteration exhibits an antagonistic relationship between pitched and noise material. Through the simulated annealing behaviour the relationship between these two sound types is maintained while creating development within each of them.
+This iteration possessed a sophisticated macro-structure that was satisfactory according to my original aims and goals with this piece. Compared to any of the other iterations, [738_noise.simplex_529135023]({m.as}#aud5) exhibited a natural and organic taper across its duration from initially chaotic and bombastic sounds towards a narrow and controlled final section focused toward intricate and quiet sounds. This iteration exhibits an antagonistic relationship between pitched and noise material. Through the simulated annealing behaviour the relationship between these two sound types is maintained while creating development within each of them.
 
 The opening section from 0:00 to approximately 1:10 presents a dense mixture of interwoven noise and pitched elements. At 1:11, the opening section is concluded, demarcated by a new longer section of primarily noise-based material. From this point onwards there are increasingly longer spans of time that alternative between noise or pitched material with less interleaving of these two sound types. Within each of these longer sections, the prominent sound type is developed further and iterated through the simulated annealing algorithm's behaviour. The period between 1:30 and 1:50 is an example of this.
 
@@ -157,7 +163,7 @@ At 2:39 there is a longer passage that has a notable change in the way that pitc
 
 In conjunction with different classes of sounds developing under the control of the simulated annealing system, unintended and emergent "sectional borrowing" was produced in this iteration. The opening phrase for example is almost mimicked at 0:26, with the contour and sound types between these two moments being very similar. Another example of this occurs prominently between the two moments at 2:38 and 2:46. Between these two sections the gesture is exactly the same, despite this kind of phrase repetition not being explicitly coded into the simulated annealing algorithm. A final example of this emergent behaviour occurs between the two sections at 0:20 and 0:55 that contain a short exhibition of low pitch material.
 
-Other iterations rarely possessed such sophisticated structural properties and this was a significant factor in me selecting [738_noise.simplex_529135023]({m.as}#audio4). These features were not manually composed and *emerged* from the simulated annealing system controlling the Fourses synth. 
+Other iterations rarely possessed such sophisticated structural properties and this was a significant factor in me selecting [738_noise.simplex_529135023]({m.as}#aud5). These features were not manually composed and *emerged* from the simulated annealing system controlling the Fourses synth. 
 
 ## Reflecting On Issues Of Control and Intervention
 Annealing Strategies was a successful piece artistically for me and fostered a compositional workflow where a significant amount of agency was given to the computer without having to sacrifice sophistication in the music. I endeavoured to achieve this in [Stitch/Strata]({m.ss}) but was often unsuccessful in my attempts to have the computer be responsible for increasingly abstract and complex musical aspects, such as high-level form. The compositional blockages of that project resulted in me moving toward a compositional process based on manually arranging small computer generated phrases and gestures of descriptor-driven concatenative synthesis outputs. That workflow required rapid iteration between generating those phrases and gestures, auditioning them and returing to the generation stage in order to make sense of the material and then make further decisions about how it would be used in the composition. It also required a large degree of intuition and choices on aspects such as the ordering of samples and sound manipulations applied in post-production. Annealing Strategies was entirely different to this, with both the high-level and low-level formal decision making performed by the computer through the simulated annealing process and much of the detail in the surface of the music being resolved by the system automatically.
@@ -169,7 +175,7 @@ While there was a high degree of success in this approach it was not a generalis
 
 Another aspect which makes it difficult to carry forward the successes of Annealing Strategies into future projects is the annealing algorithm. This algorithm has a scope of problems it solves and these serviced the specific conceptual ideas I had well. The confluence of these two things meant that I accepted and embraced the influencing properties of the algorithm into the work. For example, the convergent behaviour of simulated annealing produced results where in each iteration the Fourses synth begins by modifying the parameters wildly and as the algorithm performs its function, the scope of sounds it produces is reduced. This behaviour was compatible with the conceptual vision I had for the piece, and so much of the algorithm inflects the work as a result. I can imagine a scenario in the future where a more complex and non-linear formal structure is desired where simply running the algorithm will not be able to service those aims well. 
 
-Furthermore, there were moments in the creative process where I was not sure that the algorithm would be able to produce a satisfying piece in one iteration. I had many good iterations before that with novel characteristics but none of them were convincing to me as standalone pieces. Prior to producing [738_noise.simplex_529135023]({m.as}#audio4), I anticipated that to get to a satisfying solution I would have to edit and stitch together sections from good iterations. For me though, doing this would have made the use of simulated annealing arbitrary and pointless. If I had not used the inherent behaviour of the simulated annealing algorithm and let it influence the high and low-level form, then another algorithm for the same purpose and built from the ground-up would probably have been more customisable, controllable and required less blind experimentation to get it to the final result that I found. I wanted the algorithm to shape the piece entirely and on its own, and editing together numerous takes to achieve a structure that progresses from loud to quiet parameter combinations of the fourses synth would have betrayed my initial conceptual aims.
+Furthermore, there were moments in the creative process where I was not sure that the algorithm would be able to produce a satisfying piece in one iteration. I had many good iterations before that with novel characteristics but none of them were convincing to me as standalone pieces. Prior to producing [738_noise.simplex_529135023]({m.as}#aud5), I anticipated that to get to a satisfying solution I would have to edit and stitch together sections from good iterations. For me though, doing this would have made the use of simulated annealing arbitrary and pointless. If I had not used the inherent behaviour of the simulated annealing algorithm and let it influence the high and low-level form, then another algorithm for the same purpose and built from the ground-up would probably have been more customisable, controllable and required less blind experimentation to get it to the final result that I found. I wanted the algorithm to shape the piece entirely and on its own, and editing together numerous takes to achieve a structure that progresses from loud to quiet parameter combinations of the fourses synth would have betrayed my initial conceptual aims.
 
 The convergence of many aspects made Annealing Strategies successful but not a replicable workflow that could be iterated on in the future. After I had completed this project, I felt as if I had explored the semi-supervised and unsupervised range of the spectrum of computer agency. This left not much room for me putting my own influence into the creative process outside. This avoided many of the issues I came across in [Stitch/Strata]({m.ss}) but also raised new questions about how much immediacy and influence I would like to retain in future works. As such, my motivations from this point onwards were centred in finding ways that editing, intuition and my control could be combined with the agency of the computer such that a range of relationships and configurations in the spectrum of control could be explored, rather than this relationship being fixed for entire creative process.
 
