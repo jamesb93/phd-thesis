@@ -14,11 +14,11 @@ There are many interactive elements throughout this digital dissertation such as
 
 Where possible I have linked to the *most* permanent resource that is relevant and applicable. Even where it might be more appropriate to link directly to a person's personal website for example, I may choose to link to long-standing resources that are less prone to changing, becoming dead or unreachable. A clone of all of these websites is provided as an archive with this dissertation using `wget` to scrape a copy of the websites.
 
-This digital document can also be read in reader mode if your browser supports it and has been tested on Safari 14 and Firefox 83.0.
+This digital document can also be read in reader mode if your browser supports it and has been tested on Safari 14.1.
 
 The source code for this is available below.
 
-https://github.com/jamesb93/phd-sapper
+https://github.com/jamesb93/phd-kit
 
 <NextSection 
 next="Introduction"
