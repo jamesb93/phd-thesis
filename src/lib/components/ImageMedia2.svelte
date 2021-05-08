@@ -1,7 +1,9 @@
 <script>
+    import marked from 'marked';
     export let url = "";
     export let caption = "";
     export let figure = "";
+    export let htmlCap = false;
 </script>
 
 <div class="container">
@@ -14,7 +16,11 @@
     {/if}
 
     <div class="caption">
-        <p>{figure}: {caption}</p>
+        {#if htmlCap === true}
+            <p>{figure}: {@html marked(caption)}</p>
+        {:else}
+            <p>{figure}: {caption}</p>
+        {/if}
     </div>
 </div>
 
