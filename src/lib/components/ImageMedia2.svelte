@@ -17,7 +17,7 @@
 
     <div class="caption">
         {#if htmlCap === true}
-            <p>{figure}: {@html marked(caption)}</p>
+            <p>{@html marked(figure+': '+caption)}</p>
         {:else}
             <p>{figure}: {caption}</p>
         {/if}
@@ -25,27 +25,29 @@
 </div>
 
 <style>
+    .container {
+        position: relative;
+        width: 95%;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        -webkit-transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        background-color: transparent;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    }
     .container :global(img) {
         max-width: 80%;
-        border-radius: 1%;
         text-align: center;
         margin-left: auto;
         margin-right: auto;
         display: block;
-        margin-top: 30px;
         height: 100%;
-
-    }
-    .container {
-        position: relative;
-        display: inline-block;
-        width: 100%;
-        background-color: #fff;
-        border-radius: 5px;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        -webkit-transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
-        transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
     .container:hover {
