@@ -38,16 +38,8 @@
         margin-bottom: 30px;
         margin-left: auto;
         margin-right: auto;
-    }
-    .container :global(img) {
-        max-width: 80%;
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        display: block;
-        height: 100%;
-        padding-top: 20px;
         padding-bottom: 20px;
+        padding-top: 20px
     }
 
     .container:hover {
@@ -78,6 +70,15 @@
         text-align: center;
         width: 80%;
         margin: 0 auto;
+    }
+
+    .container :global(img) {
+        max-width: 80%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        height: 100%;
     }
     
 </style>
