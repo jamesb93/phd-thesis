@@ -14,7 +14,7 @@ pandoc -f markdown -s src/routes/content-awareness.svx -o docx/3-content-awarene
 
 echo "--- Converting Projects ---"
 # Projects
-pandoc -f markdown -s src/routes/projects.svx -o docx/4-projects.docx
+pandoc -f markdown -s src/routes/projects/index.svx -o docx/4-projects.docx
 pandoc -f markdown -s src/routes/projects/stitch-strata.svx -o docx/4.1-stitch-strata.docx
 pandoc -f markdown -s src/routes/projects/annealing-strategies.svx -o docx/4.2-annealing-strategies.docx
 pandoc -f markdown -s src/routes/projects/refracted-touch.svx -o docx/4.3-refracted-touch.docx
