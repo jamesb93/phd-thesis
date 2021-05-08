@@ -2,7 +2,9 @@
 	import NextSection from "$lib/components/NextSection.svelte";
     import {metadata as m} from "../directory.svx";
     import VideoMedia from "$lib/components/VideoMedia.svelte";
+    import VideoMedia2 from "$lib/components/VideoMedia2.svelte";
     import ImageMedia from "$lib/components/ImageMedia.svelte";
+    import ImageMedia2 from "$lib/components/ImageMedia2.svelte";
     import YouTube from "$lib/components/YouTube.svelte";
     import Caption from "$lib/components/Caption.svelte";
     import Waveform from "$lib/components/Waveform.svelte";
@@ -11,11 +13,17 @@
 </script>
 
 # Annealing Strategies
-Annealing Strategies is a piece that is created by a content-aware program. It uses an audio descriptor to measure the perceptual loudness of a "Fourses" synthesiser alongside "Simulated Annealing" (SA), an optimisation technique that over time discovers what combination of complex coupled parameters for the synthesiser create the quietest possible output. Iterations of this work were created en-masse and through curation of those outputs and fine tuning of the SA algorithm I arrived at a final rendition of the work.
+
+<Waveform
+title="AUDIO 1: 'Annealing Strategies' (738_noise.simplex_529135023)"
+file="/as/annealing_strategies.mp3"
+peaks="/as/annealing_strategies.dat"
+id="aud1"
+/>
+Annealing Strategies is a piece that is created by a content-aware program. It uses an audio descriptor to measure the perceptual loudness of a "Fourses" synthesiser alongside "Simulated Annealing" (SA), an optimisation technique that over time discovers what combination of complex coupled parameters for the synthesiser create the quietest possible output. A number of iterations of this work were created by the system and through curation of those outputs and fine tuning of the SA algorithm I arrived at a final rendition of the work.
 
 ## Motivations and Influences
-
-The initial inspiration for this piece emerged when I came across a digital implementation of a "Fourses" synthesisers on the [cycling 74](https://cycling74.com/forums/recreating-a-horsefourses-oscillator/)> forums. I had never come across this particular synthesiser before, and there were two aspects that made me inquisitive and wanting to use this synth for *something* creative without any specific ideas for what that project would be. Firstly, experimenting with the [collectively designed Max patch](https://cycling74.com/forums/recreating-a-horsefourses-oscillator/replies/1#reply-58ed2132c2991221d9cc767c) demonstrated the range of sounds it could produce, including noisy, pitched, harmonic and inharmonic timbres. In particular the quietest sounds interested me as they were novel and hard to discover amongst numerous loud sounds. Furthermore, the quieter states were unstable in nature and would sometimes produce localised morphological variation. Secondly, listening to the synthesiser and interacting with its 24 parameters inspired a technological question about how a computer might be able to *find* parameter combinations that would result in specific perceptual outputs. From this idea I imagined a piece where the synthesiser is seeded in an untamed and loud state and the computer, in real-time explores combinations of parameters to gradually reach a quiet state. This process would shape the structure of the piece and the journey from the starting point to the "solution" would impose a structure on that process.
+The initial inspiration for this piece emerged when I came across a digital implementation of a "Fourses" synthesisers on the [cycling 74](https://cycling74.com/forums/recreating-a-horsefourses-oscillator/) forums. I had never come across this particular synthesiser before, and there were two aspects that made me inquisitive and wanting to use this synth for *something* creative without any specific ideas for what that project would be. Firstly, experimenting with the [collectively designed Max patch](https://cycling74.com/forums/recreating-a-horsefourses-oscillator/replies/1#reply-58ed2132c2991221d9cc767c) demonstrated the range of sounds it could produce, including noisy, pitched, harmonic and inharmonic timbres. In particular the quietest sounds interested me as they were novel and hard to discover amongst numerous loud sounds. Furthermore, the quieter states were unstable in nature and would sometimes produce localised morphological variation. Secondly, listening to the synthesiser and interacting with its 24 parameters inspired a technological question about how a computer might be able to *find* parameter combinations that would result in specific perceptual outputs. From this idea I imagined a piece where the synthesiser is seeded in an untamed and loud state and the computer, in real-time explores combinations of parameters to gradually reach a quiet state. This process would shape the structure of the piece and the journey from the starting point to the "solution" would impose a structure on that process.
 
 As I researched around these interests, I came across Stefano Fasciani, who in his work has researched the development of new perceptually grounded interfaces for synthesisers. In "TSAM: A Tool for Analyzing, Modelling And Mapping The Timbre Of Sound Synthesizers" Fasciani (2016) describes a program that uses audio descriptors and neural networks to "enable the study of how changes to a synthesis parameter affect timbral descriptors". This creates the possibility for real-time interaction with a synthesiser by navigating through a visual space that distributes timbral possibilities spatially rather than interfacing with the individual parameters. In VIDEO 1, Fasciani demonstrates how this works by using TSAM to analyse many combinations of parameters and the sound it produces.
 
@@ -29,41 +37,33 @@ Fasciani's work made me realise it was possible to have the computer be responsi
 ### Changing the Balance of Computer and Human Agency
 Alongside these influences spawned by engaging with the Fourses synthesiser, part of my motivation in Annealing Strategies was to re-approach some of the central aims in Stitch/Strata particularly in affording the computer *more* responsibility and agency in the compositional process. [Stitch/Strata]({m.ss}) was a frustrating and long compositional process that explored a number of tangential approaches before arriving at the final result. A significant factor in this frustrating experience of the compositional process was my inability to devise an algorithm which would allow the computer to make sophisticated high-level formal decisions that were compatible with my aesthetic preferences. What I found was that modelling my own high-level formal thinking led to an *infinite regress* of attempting to encode the complexity of choices that I make when composing intuitively and manually. My solution to these frustrations was to make the computer responsible for generating low-level and mid-level sections of music and for me to arrange, edit and apply further processing to these. Ultimately, my frustrations and compromises that I made were a result of not being able to express and encode a model of decision making and selection in the computer. In part, the inability to express what I wanted the computer to do was because I did not have any prior constraints or measurable outcomes on what I wanted to achieve creatively. In a sense, I was trying to experiment with the sample-based phonetic materials as well as encode, design and build a model at the same time. Thus, one of the main goals of Annealing Strategies was to create a more refined and constrained compositional possibilities and with a clearer set of intentions creatively. Taking this simple idea of a computer program working *searching* for a parameter combination that would result in a specific measurable perceptual outcome gave me this clarity and centered the compositional process technologically in trying to develop *simple compositional language* which would result in a *complex computer interpretation and result*. This is oppositional to the approach of [Stitch/Strata]({m.ss}), in which I was trying to take a complex compositional language and encode it into a simplistic computational model.
 
-<!-- Alongside these aims, interacting with the Fourses synthesiser spawned some goals
-- Material
-    - Self-referencing material with a constrained space of possibilities. Fourses can produce a range of sounds that if used exhaustively would only be connected by their chaotic-ness.
-    - At the same time, texturally rich and diverse within that space expressing the complexity of working within a tight set of parameters.
-- Time
-    - How can be managed such that...
-    - Manually composing blocks or sections
-    - Thinking in terms of composites
-    - Working too much on the micro-structure in the hope that its sophistication will give rise to a perceivable and musically sophisticated macro-structure -->
-
 ##  Synthesis and Annealing
 Two technologies, the Fourses synthesiser and Simulated Annealing are central to Annealing Strategies. This section explains how these work in detail and also explain their connection to each other in relation to my aesthetic aims and goals.
 
 ### Fourses And An Interface For Control
 Fourses is a synthsiser created by [Ciat-Lonbarde](https://www.ciat-lonbarde.net) otherwise known as Peter Blasser. 
 
-It consists of four "Fourse" oscillators which are signal generating modules that have an upper and lower boundary. The oscillator oscillates between these boundaries with a triangle-like wave shape. Each Fourse is connected to the subsequent Fourse. The output of Fourse 1 for example determines the upper limit of Fourse 2. Fourse 2 would then have an effect on Fourses 3 and so on and so forth. As such, any modifications made within the system propagate throughout it in unpredictable ways. This makes Fourses hard to approach with the mindset of finding a specific sound, and instead encourages exploration within the complexity of this behaviour. A number of documents help to explain the underlying principle of Fourses including [the Fourses Manual](https://synthmall.com/ifm/ifmFRS.pdf) and the [FOURSES PAPERZ](http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html). Despite the enigmatic nature FOURSES PAPERZ, images such as IMAGE 1 help in deciphering the underlying behaviour of this synth and how its interconnected and chaotic nature emerges.
+It consists of four "Fourse" oscillators which are signal generating modules that have an upper and lower boundary. The oscillator oscillates between these boundaries with a triangle-like wave shape. Each Fourse is connected to the subsequent Fourse. The output of Fourse 1 for example determines the upper limit of Fourse 2. Fourse 2 would then have an effect on Fourses 3 and so on and so forth. As such, any modifications made within the system propagate throughout it in unpredictable ways. This makes Fourses hard to approach with the mindset of finding a specific sound, and instead encourages exploration within the complexity of this behaviour. A number of documents help to explain the underlying principle of Fourses including [the Fourses Manual](https://synthmall.com/ifm/ifmFRS.pdf) and the [FOURSES PAPERZ](http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html). Despite the enigmatic nature FOURSES PAPERZ, images such as [IMAGE 1]({m.as}#img1) help in deciphering the underlying behaviour of this synth and how its interconnected and chaotic nature emerges.
 
-<ImageMedia>
-    <img slot="media" src="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/06.gif">
-    <p slot="caption">IMAGE 1: A visual depiction of the interconnected Fourses oscillators. Though the picture is unlabelled it depicts the boundaries of each Fourse oscillator "ricocheting" off another Fourse. Taken from <a href="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html">http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html</a>.
-</ImageMedia>
+<ImageMedia2 
+url="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/06.gif"
+caption='A visual depiction of the interconnected Fourses oscillators. Though the picture is unlabelled it depicts the boundaries of each Fourse oscillator "ricocheting" off another Fourse. Taken from <a href="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html">http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html</a>'
+figure="IMAGE 1"
+id="img1"
+htmlCap={true}
+/>
 
 The version of Fourses that was used for Annealing Strategies is included as a Max patch in the additional materials. In addition to this you may also want to experiment with a web version put together by [Oli Larkin](http://www.olilarkin.co.uk/). This can be found at [https://olilarkin.github.io/fourses/](https://olilarkin.github.io/fourses/).
 
 ### One-To-Many Mapping For Fourses
-There are 24 parameters that control the Fourses synth and the unpredictable nature of changing even one parameter slightly makes it difficult to 'learn' the synthesiser in a way where you could predict the output for a set of inputs intuitively. I wanted to create a method of manual control for exploring different states of the synth where I was not required to interact with a single parameter at a time and instead could explore by moving "backward" and "forward" through a set of states. Toward this end I devised a one-to-many mapping strategy that constrained the number of states by reading through a procedural basis function graph. Using the input of a single linear dial, a deterministic "map" of values is used to control each parameter. VIDEO 1 is a screen capture emonstrating how this single input interface creates a one-to-many mapping. As the "origin" is changed the procedural basis function graph is scanned. Different basis are also demonstrated, showing the variety of relationships between parameters that can be arbitrarily created through this method. A set of 24 parameters are derived by creating the graph with 2x12 jitter matrix that is then flattened to a one dimensional row.
+There are 24 parameters that control the Fourses synth and the unpredictable nature of changing even one parameter slightly makes it difficult to 'learn' the synthesiser in a way where you could predict the output for a set of inputs intuitively. I wanted to create a method of manual control for exploring different states of the synth where I was not required to interact with a single parameter at a time and instead could explore by moving "backward" and "forward" through a set of states. Toward this end I devised a one-to-many mapping strategy that constrained the number of states by reading through a procedural basis function graph. Using the input of a single linear dial, a deterministic "map" of values is used to control each parameter. [VIDEO 1]({m.as}#vid1) is a screen capture demonstrating how this single input interface creates a one-to-many mapping. As the "origin" is changed the procedural basis function graph is scanned. Different basis are also demonstrated, showing the variety of relationships between parameters that can be arbitrarily created through this method. A set of 24 parameters are derived by creating the graph with 2x12 jitter matrix that is then flattened to a one dimensional row.
 
-<VideoMedia>
-    <video slot="media" controls loop>
-        <source src="/as/jitbfg.mp4" type="video/mp4">  
-        <p>Your browser doesn't support HTML5 video. Here is a <a href="/as/jitbfg.mp4">link to the video</a> instead.</p>  
-    </video>
-    <p slot="caption">VIDEO 1: This screen capture shows the single input interface in practice.</p>
-</VideoMedia>
+<VideoMedia2
+url="/as/jitbfg.mp4"
+figure="VIDEO 1"
+caption="VIDEO 1: This screen capture shows the single input interface in practice."
+id="vid1"
+/>
 
 The benefit of this approach is that the single input knob explores a subset of parameter combinations and the configuration of the procedural basis function determines these limitations. The range of possibilities is still vast, but the graph creates a set of states by imposing a type of shape and patterning to the parameters. To an extent this exploration was inspired by the work of Bowers et. al in "One Knob to Rule Them All: Reductionist Interfaces for Expansionist Research" and the various strategies and mappings that were explored between a single knob and several parameters for synthesis.
 
@@ -113,8 +113,8 @@ An iteration of "Annealing Strategies" as a work is created by running this algo
 
 <Waveform
 title="AUDIO 1 (592_noise.simplex_529155534)"
-file="https://f000.backblazeb2.com/file/jbphd-pub/as/592_noise.simplex-am.mp3"
-peaks="https://f000.backblazeb2.com/file/jbphd-pub/as/592_noise.simplex-am.dat"
+file="/as/592_noise.simplex-am.mp3"
+peaks="/as/592_noise.simplex-am.dat"
 id="audio1"
 />
 
@@ -122,8 +122,8 @@ In iteration [592_noise.simplex_529155534]({m.as}#audio1) there is little variat
 
 <Waveform
 title="AUDIO 2 (453_noise.simplex_529163614)"
-file="https://f000.backblazeb2.com/file/jbphd-pub/as/453_noise.simplex-am.mp3"
-peaks="https://f000.backblazeb2.com/file/jbphd-pub/as/453_noise.simplex-am.dat"
+file="as/453_noise.simplex-am.mp3"
+peaks="/as/453_noise.simplex-am.dat"
 id="audio2"
 />
 
@@ -131,8 +131,8 @@ The sound which dominates the first two minutes of iteration [453_noise.simplex_
 
 <Waveform
 title="AUDIO 3 (738_noise.simplex_529152854.aiff)"
-file="https://f000.backblazeb2.com/file/jbphd-pub/as/738_noise.simplex-am.mp3"
-peaks="https://f000.backblazeb2.com/file/jbphd-pub/as/738_noise.simplex-am.dat"
+file="/as/738_noise.simplex-am.mp3"
+peaks="/as/738_noise.simplex-am.dat"
 id="audio3"
 />
 
@@ -142,8 +142,8 @@ A number of good iterations were made, and those that were not chosen as the sin
 
 <Waveform
 title="AUDIO 4: 'Annealing Strategies' (738_noise.simplex_529135023)"
-file="https://f000.backblazeb2.com/file/jbphd-pub/as/annealing_strategies.mp3"
-peaks="https://f000.backblazeb2.com/file/jbphd-pub/as/annealing_strategies.dat"
+file="/as/annealing_strategies.mp3"
+peaks="/as/annealing_strategies.dat"
 id="audio4"
 segments={segs4}
 />
