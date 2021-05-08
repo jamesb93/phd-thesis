@@ -52,8 +52,6 @@ It consists of four "Fourse" oscillators which are signal generating modules tha
     <p slot="caption">IMAGE 1: A visual depiction of the interconnected Fourses oscillators. Though the picture is unlabelled it depicts the boundaries of each Fourse oscillator "ricocheting" off another Fourse. Taken from <a href="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html">http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html</a>.
 </ImageMedia>
 
-<!-- WIDGET: Web fourses.-->
-
 The version of Fourses that was used for Annealing Strategies is included as a Max patch in the additional materials. In addition to this you may also want to experiment with a web version put together by [Oli Larkin](http://www.olilarkin.co.uk/). This can be found at [https://olilarkin.github.io/fourses/](https://olilarkin.github.io/fourses/).
 
 ### One-To-Many Mapping For Fourses
