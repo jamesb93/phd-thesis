@@ -20,7 +20,6 @@
 		<li><a  on:click={handleClick} class="link subsection" class:selected='{$page.path === m.ss}' href={m.ss}>4.1 Stitch/Strata</a></li>
 		<li><a  on:click={handleClick} class="link subsection" class:selected='{$page.path === m.as}' href={m.as}>4.2 Annealing Strategies</a></li>
 		<li><a  on:click={handleClick} class="link subsection" class:selected='{$page.path === m.rt}' href={m.rt}>4.3 Refracted Touch</a></li>
-		<li><a  on:click={handleClick} class="link subsection" class:selected='{$page.path === 'interlude'}' href={'interlude'}>interlude</a></li>
 		<li><a  on:click={handleClick} class="link subsection" class:selected='{$page.path === m.re}' href={m.re}>4.4 Reconstruction Error</a></li>
 		<li><a  on:click={handleClick} class="link subsection" class:selected='{$page.path === m.em}' href={m.em}>4.5 Interferences</a></li>
 
@@ -78,6 +77,7 @@
 	.selected {
 		display: inline-block;
 		color: rgb(0, 0, 0);
+		font-weight: bold;
 	}
 
 	.subsection {
