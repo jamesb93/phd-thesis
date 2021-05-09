@@ -17,16 +17,19 @@
 <style>
     .container {
         position: relative;
-        background-color: #fff;
+        width: 95%;
         border-radius: 5px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 1px 3px 4px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         -webkit-transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
         transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
-        text-align: center;
-        padding-top: 10px;
-        min-width: 50%;
-        max-width: 100%;
+        background-color: transparent;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 20px;
+        padding-top: 20px
     }
 
     .container:hover {
@@ -66,11 +69,13 @@
 
     .container :global(video) {
         width: 80%;
+        display: block;
         margin: 0 auto;
     }
 
     .container :global(iframe) {
         width: 80%;
+        display: block;
         margin: 0 auto;
     }
 </style>

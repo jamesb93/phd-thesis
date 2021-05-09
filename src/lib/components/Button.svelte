@@ -57,12 +57,12 @@ class="btn zoom">
     }
     
     .zoom {
-        background-color: darkcyan;
+        background-color: var(--blue);
         font-size: 15px;
         min-width: 2em;
     }
     .zoom:hover, .zoom:focus {
-        background-color: rgb(2, 196, 196);
+        background-color: var(--dark-blue);
     }
 
     .unselected {

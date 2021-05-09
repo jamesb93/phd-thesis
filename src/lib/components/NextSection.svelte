@@ -14,7 +14,7 @@
         outline: none;
         border-radius: 1px;
         box-shadow: 0 1px 4px rgba(0, 0, 0, .6);    
-        background-color: #782ecc;
+        background-color: var(--blue);
         color: #ecf0f1;
         transition: background-color .5s;
     }
