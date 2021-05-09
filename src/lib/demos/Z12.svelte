@@ -1,6 +1,7 @@
 <script>
 
     import * as Tone from 'tone';
+    import Button from '$lib/components/Button.svelte';
     import { browser } from '$app/env';
     export let id="demo2";
     let ready = false;
@@ -69,14 +70,16 @@
     Change the probability of each potential outcome by modifying the slider's value.
     Observe how different ordering of samples can be created by changing the probabilities.
     <div id='btn-array'>
-        <button class='btn' on:click={play}>play</button>
-        <button class='btn' on:click={stop}>stop</button>
+        <Button clickHandler={play} text='Play' />
+        <Button clickHandler={stop} text='Stop' />
     </div>
     <div id="probs">
         {#each probs as i, x}
             <div class='slider'>
-                <input class:selected={x === current} type="range" step="0.1" min="0.0" max="1.0" bind:value={probs[x]} on:change={updateProbs} />
-                <span>Probability {x}: {probs[x]}</span>
+                <div class='input'>
+                    <span>Probability {x}: {probs[x]}</span>
+                    <input class:selected={x === current} type="range" step="0.1" min="0.0" max="1.0" bind:value={probs[x]} on:change={updateProbs} />
+                </div>
                 <button class='sample-notify' class:selected={x === current}></button>
             </div>
         {/each}
@@ -95,14 +98,21 @@
         padding: 20px;
     }
 
+    .input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     #btn-array {
         display: flex;
         flex-direction: column;
         padding-top: 30px;
         padding-bottom: 30px;
         justify-content: center;
+        width: 50%;
+        margin: 0 auto;
     }
-
 
     .btn {
         width: 35%;
@@ -121,6 +131,9 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
     }
 
     .selected {
@@ -133,7 +146,7 @@
     }
 
     input {
-        width: 100px;
+        width: 140px;
     }
 </style>
 
