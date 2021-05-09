@@ -1,52 +1,52 @@
 export const states = [
     {
         startTime: 0.0,
-        endTime: 114.0,
+        endTime: 61.0,
         labelText: 'State 1'
     },
     {
-        startTime: 114.0,
-        endTime: 122.0,
+        startTime: 61.0,
+        endTime: 69.0,
         labelText: 'State 2'
     },
     {
-        startTime: 122.0,
-        endTime: 179.0,
+        startTime: 69.0,
+        endTime: 126.0,
         labelText: 'State 3'
     },
     {
-        startTime: 179.0,
-        endTime: 206.0,
+        startTime: 126.0,
+        endTime: 153.0,
         labelText: 'State 4'
     },
     {
-        startTime: 206.0,
-        endTime: 259.0,
+        startTime: 153.0,
+        endTime: 203.0,
         labelText: 'State 5'
     },
     {
-        startTime: 259.0,
-        endTime: 313.0,
+        startTime: 203.0,
+        endTime: 260.0,
         labelText: 'State 6'
     },
     {
-        startTime: 313.0,
-        endTime: 416.0,
+        startTime: 260.0,
+        endTime: 363.0,
         labelText: 'State 7'
     },
     {
-        startTime: 416.0,
-        endTime: 481.0,
+        startTime: 363.0,
+        endTime: 428.0,
         labelText: 'State 8'
     },
     {
-        startTime: 481.0,
-        endTime: 572.0,
+        startTime: 428.0,
+        endTime: 519.0,
         labelText: 'State 9'
     },
     {
-        startTime: 572.0,
-        endTime: 646.0,
+        startTime: 519.0,
+        endTime: 593.0,
         labelText: 'State 10'
     }
 ]
