@@ -112,7 +112,7 @@ Using the computer to query the corpus and find groups of samples matching a par
 
 This descriptor query process underpinned much of the compositional process to follow. From this point, I attempted to devise ways in which the computer could arrange material at a higher formal level by imposing ordering and patterns on to groups of samples and by modifying descriptor queries dynamically. This is discussed in ["Constructing Formal Change Computationally"]({m.ss}#constructing-formal-change-computationally)
 
-### Constructing Formal Change Computationally
+### Attempts To Make The Computer Generate Form
 In this phase of the composition process I faced a number of challenges when trying to devise systems for controlling form based on audio descriptor querying and matching A number of strategies were explored in which I attempted to have the computer impose a level of control over what queries were made in order to dynamically create material groups on-the-fly.
 
 One approach was to create predefined query "shapes" that structured a dynamic query over a given period of time. Using this, I could define the overall quality and percept of the gesture, without specifying any of the details and decisions such as which samples would form that gesture would be taken up by the matching algorithm. A similar approach is discussed in Harker (2012), in which he outlines how bespoke Max externals have been used toward similar ends in his compositional practice. [VIDEO 3]({m.ss}#vid3) demonstrates one version of this, where queries are changed according to a gesture that is defined by a number of points to be reached at specific times. This creates a parabolic trajectory that increases and decreases the amplitude and spectral centroid query values over a set amount of time. This produces a strong perceptual link between the query and the sound which as a compositional tool is a useful way of having the computer render complex morphologies through a set of constraints.
@@ -163,7 +163,7 @@ By using Python, the composition process accelerated, and I quickly found good r
 
 <!-- REVIEW: At this point you havent said that you rejected the notion of high-level form. -->
 
-#### Organisation Processes
+#### Processes For Micro- and Meso-Scale Structures
 Using Python made it possible and easier for me to express a number of organisational procedures that would operate on collections of descriptor-based selections from the wider corpus. These procedures are described next.
 
 The `accum_phrase` process concatenates samples until a maximum total duration has been satisfied. The output of the process also rendered each stage of the accumulation so the results could be navigated as a phrase of increasing complexity and duration. This can be heard in [AUDIO 3]({m.ss}#audio3). While this is perhaps the most simplistic one, it produced results that were largely promising as a first attempt. 
