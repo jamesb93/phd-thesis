@@ -23,9 +23,9 @@ dependencies:
   tone: 14.7.77
 
 devDependencies:
-  '@sveltejs/adapter-node': 1.0.0-next.18
-  '@sveltejs/adapter-static': 1.0.0-next.8
-  '@sveltejs/kit': 1.0.0-next.99_svelte@3.38.2+vite@2.2.4
+  '@sveltejs/adapter-node': 1.0.0-next.19
+  '@sveltejs/adapter-static': 1.0.0-next.9
+  '@sveltejs/kit': 1.0.0-next.102_svelte@3.38.2
   d3: 6.7.0
   svelte: 3.38.2
   vite: 2.2.4
@@ -48,21 +48,20 @@ packages:
       picomatch: 2.2.3
     dev: true
 
-  /@sveltejs/adapter-node/1.0.0-next.18:
-    resolution: {integrity: sha512-w0w9KKo2p/Aq68JIQyWjNVBg/OuNqaYbVNFf9TVgXcdlPJcY1NncwujqUqejBATTm+ZhQzyQqXoosgqYtTI5tA==}
+  /@sveltejs/adapter-node/1.0.0-next.19:
+    resolution: {integrity: sha512-8QXOm0x9xiRGNZl9H0VplhIRVk14tO67bHDihxpUuOG3gFYxsNvdISC0wrvdGHOOINDUj4K2pdSn8LEjPrml/A==}
     dev: true
 
-  /@sveltejs/adapter-static/1.0.0-next.8:
-    resolution: {integrity: sha512-goE3v68y+pn+fayPDJCCQ7W1QQpSMl86pZS9RvjuG64+TEI/PGsZwYR1RRgvwIiDqu33wBEHj+3ZYHEpJO/gwg==}
+  /@sveltejs/adapter-static/1.0.0-next.9:
+    resolution: {integrity: sha512-yqZ+4dzi+2+2jDPHCrI7WrLdXyQ/0U56a7aFdepmodpvpxhazF203D1ez+AtTo27FjMmHjfI+q0O2FivUOosxg==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.99_svelte@3.38.2+vite@2.2.4:
-    resolution: {integrity: sha512-eLVo8/fE6DrNFRCx4fLU2MKolVhMPHlBkhA04kpsNaojC6PW9kW9w7DEpeK5WCYYzxhirvmABsUyw37pQfjZVA==}
+  /@sveltejs/kit/1.0.0-next.102_svelte@3.38.2:
+    resolution: {integrity: sha512-zLCPiKguhN3LjOTnAqudYm9uhkc3O1ELAV8SkXvs1O/a7hWSMFlbuF0aWXE8g6f79aCKjihd29RrdFkLnaZrog==}
     engines: {node: '>= 12.17.0'}
     hasBin: true
     peerDependencies:
-      svelte: ^3.34.0
-      vite: ^2.2.3
+      svelte: ^3.38.2
     dependencies:
       '@sveltejs/vite-plugin-svelte': 1.0.0-next.9_svelte@3.38.2+vite@2.2.4
       cheap-watch: 1.0.3
@@ -547,8 +546,8 @@ packages:
     engines: {node: '>=8.6'}
     dev: true
 
-  /postcss/8.2.13:
-    resolution: {integrity: sha512-FCE5xLH+hjbzRdpbRb1IMCvPv9yZx2QnDarBEYSN0N0HYk+TcXsEhwdFcFb+SRWOKzKGErhIEbBK2ogyLdTtfQ==}
+  /postcss/8.2.14:
+    resolution: {integrity: sha512-+jD0ZijcvyCqPQo/m/CW0UcARpdFylq04of+Q7RKX6f/Tu+dvpUI/9Sp81+i6/vJThnOBX09Quw0ZLOVwpzX3w==}
     engines: {node: ^10 || ^12 || >=14}
     dependencies:
       colorette: 1.2.2
@@ -646,8 +645,8 @@ packages:
     resolution: {integrity: sha512-q/JSVd1Lptzhf5bkYm4ob4iWPjx0KiRe3sRFBNrVqbJkFaBm5vbbowy1mymoPNLRa52+oadOhJ+K49wsSeSjTA==}
     dev: false
 
-  /standardized-audio-context/25.1.18:
-    resolution: {integrity: sha512-GAyrrmr9Ym3Va6ASd/OgN19+cP/BH9z1llC2so/8EtRRwrYyp25DvvK5chG+WfTepzEo3IHlmhOwdNq7ekI0tQ==}
+  /standardized-audio-context/25.2.0:
+    resolution: {integrity: sha512-EnUloaqmd+ovLt0dTXEq750WhGCQmyKY1SwbvqCiBv+iqrzQSn7eKdZKrRE+28+tJWaG1+GhENUDTIqXl/zwaA==}
     dependencies:
       '@babel/runtime': 7.14.0
       automation-events: 3.0.13
@@ -682,7 +681,7 @@ packages:
   /tone/14.7.77:
     resolution: {integrity: sha512-tCfK73IkLHyzoKUvGq47gyDyxiKLFvKiVCOobynGgBB9Dl0NkxTM2p+eRJXyCYrjJwy9Y0XCMqD3uOYsYt2Fdg==}
     dependencies:
-      standardized-audio-context: 25.1.18
+      standardized-audio-context: 25.2.0
       tslib: 2.2.0
     dev: false
 
@@ -728,7 +727,7 @@ packages:
     hasBin: true
     dependencies:
       esbuild: 0.9.7
-      postcss: 8.2.13
+      postcss: 8.2.14
       resolve: 1.20.0
       rollup: 2.47.0
     optionalDependencies:
