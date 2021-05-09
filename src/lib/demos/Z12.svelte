@@ -2,8 +2,10 @@
 
     import * as Tone from 'tone';
     import { browser } from '$app/env';
+    export let id="demo2";
     let ready = false;
-    let sampler, loop;
+    let sampler, loop, current;
+    let bpm = 120;
     if (browser) {
         sampler = new Tone.Sampler({
             urls: {
@@ -15,12 +17,14 @@
                 A6: "1904.mp3"
             },
             baseUrl: "/ss/z12/",
-            onLoad: () => {ready = true}
         }).toDestination();
+
+        
+        Tone.loaded().then(() => ready = true);
 
         loop = new Tone.Loop(time => {
             step(time)
-        }, "0.05").start(0);
+        }, "16n").start(0);
     }
 
     const table = ["A1", "A2", "A3", "A4", "A5", "A6"]
@@ -29,12 +33,10 @@
     let probArray = [];
     let overflowArray = [];
 
-    $: {
+    function updateProbs() {
         overflowArray = new Array(probs.length).fill(0);
-
         let probSum = probs.reduce((accum, current) => accum + current);
         let normFactor = 1.0 / probSum;
-
         probArray = probs.map(v => v * normFactor)
     }
 
@@ -43,9 +45,11 @@
         const maxIndex =  overflowArray.reduce((iMax, x, i, arr2) => x > arr2[iMax] ? i : iMax, 0);
         overflowArray[maxIndex] = overflowArray[maxIndex] - 1.0;
         sampler.triggerAttackRelease(table[maxIndex], 1.0, time);
+        current = maxIndex;
     }
 
     function play() {
+        updateProbs()
         Tone.start();
         Tone.Transport.start();
         loop.start();
@@ -58,24 +62,28 @@
 
 </script>
 
-<div class="container">
-    <button on:click={play}>play</button>
-    <button on:click={stop}>stop</button>
-    <button on:click={step}>step</button>
-
+{#if browser}
+<div class="container" id={id}>
+    {#if ready}
+    
     Change the probability of each potential outcome by modifying the slider's value.
     Observe how different ordering of samples can be created by changing the probabilities.
+    <div id='btn-array'>
+        <button class='btn' on:click={play}>play</button>
+        <button class='btn' on:click={stop}>stop</button>
+    </div>
     <div id="probs">
         {#each probs as i, x}
-            <input type="range" step="0.1" min="0.0" max="1.0" bind:value={probs[x]}/>
+            <div class='slider'>
+                <input class:selected={x === current} type="range" step="0.1" min="0.0" max="1.0" bind:value={probs[x]} on:change={updateProbs} />
+                <span>Probability {x}: {probs[x]}</span>
+                <button class='sample-notify' class:selected={x === current}></button>
+            </div>
         {/each}
     </div>
-    <div id="notifiers">
-        {#each probs as i, x}
-            <button></button>
-        {/each}
-    </div>
+    {/if}
 </div>
+{/if}
 
 <style>
     .container {
@@ -86,14 +94,46 @@
         transition: border .5s;
         padding: 20px;
     }
-    #probs {
+
+    #btn-array {
         display: flex;
         flex-direction: column;
-        max-width: 30%;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        justify-content: center;
+    }
+
+
+    .btn {
+        width: 35%;
+        margin: 0 auto;
+    }
+
+    .sample-notify {
+        width: 40px;
+        height: 40px;
+        border-width: 0;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .slider {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .selected {
+        background-color: var(--blue);
+
+    }
+    #probs {
+        display: grid;
+        grid-template-rows: repeat(6, auto);
     }
 
     input {
-        padding: 3px;
+        width: 100px;
     }
 </style>
 
