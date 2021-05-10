@@ -61,7 +61,7 @@
 {/each}
 
 
-# Discography
+# Discography and Works
 <!-- THERE MUST BE A SPACE HERE -->
 {#each sortedDiscog as d}
     <div class="link-container">
