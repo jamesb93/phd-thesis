@@ -1,11 +1,16 @@
-<div class='container'>
+<script>
+    export let id = "";
+</script>
+
+<div class='container' id={id}>
     <slot />
 </div>
 
 <style>
     .container {
         position: relative;
-        width: 95%;
+        max-width: 95%;
+        min-width: 95%;
         border-radius: 5px;
         box-shadow: 0 1px 3px 4px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
@@ -43,6 +48,27 @@
 
     .container::hover::after {
         opacity: 1;
+    }
+
+    .container :global(img) {
+        max-width: 90%;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    :global(video), :global(iframe) {
+        width: 93%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .container :global(.caption) {
+        font-style: italic;
+        text-align: center;
+        width: 80%;
+        margin: 0 auto;
     }
 
 </style>
