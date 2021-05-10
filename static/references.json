@@ -47,7 +47,7 @@
         },
         {
             "id" : "bachsite",
-            "name" : "Ghisi, D. (n.d.). Bach. Retrieved April 14, 2021 from https://www.bachproject.net/",
+            "name" : "Ghisi, D. (n.d.). *Bach*. Bach Project. Retrieved April 14, 2021 from https://www.bachproject.net/",
             "url" : "https://www.bachproject.net/"
         },
         {
@@ -148,8 +148,12 @@
             "url" : "https://totem.menneske.dk/batch_totem/ARCHIVE/TEXT/Thomson.Phil-Atoms.and.Errors-Towards.a.History.and.Aestheti.pdf"
         },
         {
+            "id" : "From The Ground Up In Order, Embrace",
+            "name" : "Briz, N. (n.d.). *From The Ground Up In Order, Embrace*. Vimeo. Retrieved 10 May, 2021, from https://vimeo.com/4506517"
+        },
+        {
             "id" : "microsound.org",
-            "name" : "Cascone, K. (n.d.). microsound.org. Microsound.Org. Retrieved 4 March 2021, from http://microsound.org",
+            "name" : "Cascone, K. (n.d.). *microsound.org*. www.microsound.org. Retrieved 4 March, 2021, from http://microsound.org",
             "url" : "http://microsound.org"
         },
         {

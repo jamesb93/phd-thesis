@@ -1,9 +1,34 @@
 {
     "discog" : [
         {
+            "name" : "Datamatics",
+            "artist" : "Ryoji Ikeda",
+            "year" : 2006
+        },
+        {
+            "name" : "Electronic Tax Return",
+            "artist" : "Pimmon",
+            "year" : 2007
+        },
+        {
+            "name" : "Unitxt Code (Data to AIFF)",
+            "artist" : "Alva Noto",
+            "year" : 2008
+        },
+        {
+            "name" : "Binary Self-Portraits",
+            "artist" : "Nick Briz",
+            "year" : "2008"
+        },
+        {
+            "name" : "From The Ground Up In Order, Embrace",
+            "artist" : "Nick Briz",
+            "year" : "2007"
+        },
+        {
             "name" : "Lichen",
             "artist" : "Matthew Sergeant",
-            "year" : 2017
+            "year" : "2017"
         },
         {
             "name" : "Danger in the Air",
