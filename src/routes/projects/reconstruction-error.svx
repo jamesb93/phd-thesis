@@ -1,62 +1,104 @@
 <script>
-	import NextSection from "$lib/components/NextSection.svelte"
-    import {metadata as m} from "../directory.svx"
-
+    import {metadata as m} from '../directory.svx'
+    import NextSection from '$lib/components/NextSection.svelte';
+    import VideoMedia from '$lib/components/VideoMedia.svelte';
+    import VideoMedia2 from '$lib/components/VideoMedia2.svelte';
+    import ImageMedia2 from '$lib/components/ImageMedia2.svelte';
+    import YouTube from '$lib/components/YouTube.svelte';
 </script>
 
 # Reconstruction Error
 ## Motivation
+- Listening to highly artifical sound worlds
+    - Alva Noto, Autechre, Ikedia, 
+- I wanted to return to using more synthetic
 ### Databending/moshing
-<!-- https://vimeo.com/4506517 -->
 <!-- - Michael Chinen -->
-<!-- - Alva Noto -->
-<!-- https://oss.adm.ntu.edu.sg/xqtoh1/tag/ikeda/ -->
-<!-- https://www.clotmag.com/sound/yuichi-ito -->
-<!-- https://totem.menneske.dk/batch_totem/ARCHIVE/TEXT/Thomson.Phil-Atoms.and.Errors-Towards.a.History.and.Aestheti.pdf -->
-<!-- Pimmon - electronic tax return -->
-<!-- .s - taiwanese artist -->
-### Computer _finding_ material
-### Initialising material boundaries
+- FuckingAudacity
+    - https://vimeo.com/8144372
+- FuckingWebBrowser
+    - https://vimeo.com/9635993
+- lstn
+    - https://vimeo.com/17617200
 
-FluidCorpusMap as a key influencing technology
+Nick Briz
+<!-- https://vimeo.com/4506517 -->
+<!-- - Alva Noto -->
+https://www.youtube.com/watch?v=vN9FrqrPptg - Unitxt Code (Data to AIFF)
+<!-- https://oss.adm.ntu.edu.sg/xqtoh1/tag/ikeda/ -->
+https://www.youtube.com/watch?v=eaIrSZIyxxk - Ikeda Datamatics
+- Depth, detail and chaotic orderedness
+
+<!-- Pimmon - electronic tax return -->
+Thompson (2004, p. 20)
+
+### Computer _finding_ material
+
+- FluidCorpusMap as a key technology that influenced me
+    - I saw video demonstrations
+    - no code available
+    - The computer suggests a set of relationships between sounds encoded into space
+
+<VideoMedia>
+    <iframe slot='media' src="https://player.vimeo.com/video/314301724" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <p><a href="https://vimeo.com/314301724">FluCoMa Descriptor Space Redux Experiment</a> from <a href="https://vimeo.com/user94520852">Fluid Corpus Manipulations</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+</VideoMedia>
 
 ## Development Process
 ### Generation
 ### Segmentation
 ### Analysis
 ### Dimension Reduction
-<!-- Grill -->
+<YouTube
+url="https://www.youtube.com/embed/nq6iPZVUxZU"
+caption="Leland Mcinnes presenting on the UMAP algorithm"
+/>
+
+Grill mentioned 
 ### Clustering
-<!-- Pulling together temporally discontiguous samples with perceptual similarity -->
-## Responding to the Output
+In other projects used raw descriptor data for matching
+Pulling together samples with perceptual similarity
+## Responding To The Output Of The Computer
 ### dotmaxwave
 ### X86Desc.a
 ### segmenoitte
 ### 340685107feisraebbaatsaed--isn.sqlite
 ### sys.ji 
 
-Noise is good but only in the context of not-noise. This piece 
-
-The practice of cracked media can also be heard as deliberately playing on the expectations of an audience for music, unexpectedly throwing them into noise. This noise might well blast them out of the comfort of a safe musical performance. This tactic can only work a small number of times, however, before an audience comes to expect the blast of sound or the noisy destruction of musical instruments. Here too we can imagine an audience split between those who find the sounds to be noisy and shocking, and those who hear them simply as sounds and an expected part of the performance.
+Noise is good but only in the context of not-noise.
+ 
 ## Reflection
-<!-- Tempus Ex machina | Stuff about time -->
 ### Intervention and Iteration
-<!-- - Intervention as paramount
+
+Intervention as paramount
 - Compositional fluidity
 - Being thrown ideas works! (remember how you explained it to Oli Bown...)
 - Honing initially 'blunt' questions
 - Forming clear compositional intent
-- Responding to constraints _with_ the computer -->
+- Responding to constraints _with_ the computer 
+
 ### A New Workflow
 #### Issues of friction leading to FTIS
-<!-- 1. Discovering structure in a corpus
+
+1. Discovering structure in a corpus
 2. Finding groupings of perceptually similar materials
 3. Discovering unknown and unique items
 4. Capitalisation on known points of interest
-5. Forming/finding connections between corpus items  -->
+5. Forming/finding connections between corpus items 
+
 #### Re-embracing the DAW
-<!-- - Linking the DAW to extra information (i.e extending the role of the DAW through FTIS by letting me work with information that is not well represented in a timeline view)
-- navigating-sample-based-music -->
+- Stitch/Strata, i explain some of the benefits that re-embracing the DAW did for that project, especially for managing intermediate states of projects and "scaffolding" or "sketching"
+Linking the DAW to extra information (i.e extending the role of the DAW through FTIS by letting me work with information that is not well represented in a timeline view)
+navigating-sample-based-music 
+
+
+## Other Related Links and Media
+
+<YouTube 
+url="https://www.youtube.com/embed/-FNO0QovfsI"
+caption="Me present"
+title="foo"
+/>
 
 <NextSection 
 next="ElectroMagnetic"
