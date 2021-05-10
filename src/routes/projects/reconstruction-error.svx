@@ -8,35 +8,63 @@
 </script>
 
 # Reconstruction Error
-## Motivation
-- Listening to highly artifical sound worlds
-    - Alva Noto, Autechre, Ikedia, 
-- I wanted to return to using more synthetic
-### Databending/moshing
-<!-- - Michael Chinen -->
-- FuckingAudacity
-    - https://vimeo.com/8144372
-- FuckingWebBrowser
-    - https://vimeo.com/9635993
-- lstn
-    - https://vimeo.com/17617200
 
-Nick Briz
+<!-- WIDGET: album player??? -->
+
+Reconstruction Error is the fourth project in this portfolio. It is a set of five pieces, presented in an EP format.
+
+## Motivation and Influences
+
+In the previous three projects, I explored a number of techniques, approaches and workflows for computer-aided composition. These took several forms and for me were encompassed in a period of exploration, driven by opportunities to compose for visiting artists or by responding to immediate influences in my creative coding practice and listening. From this phase of testing new technologies that were new to me and incorporating them into my creative practice, I found that the most successful workflow was that from [Stitch/Strata]({m.ss}). Despite being a difficult process and requiring many failed attempts to reach the finished state of the piece, using the computer to sieve through a corpus of sounds in order to help guide me towards organisations of material felt like a fluid and meaningful workflow that I could develop in the future. Given these conditions produced by reflection and consideration of the work done up to this point, I decided to move forward with this in mind. I wanted to create a piece by using the computer in a similar fashion.
+
+### Databending
+Amongst this reflection on my own practice, I had been listening to artists who embody post-digital aesthetics, including Alva Noto, Autechre and Ryoji Ikeda. Their work draws on hyper-digital, surgical and sometimes ultra-minimalist sonic materials. The raw digital sounds found in such artists work have always been appealing to me, and to some extent a part of my compositional vocabulary and aesthetic. [Stitch/Strata]({m.ss}), while focusing on the sound of experimental vocal techniques...
+
+I was also exploring the practice of databending, a process in which raw data is used for the purposes of constructing visual and sound materials in art. This can be achieved a number of ways, and the process one chooses to realise this is as instrumental int he practice as performing the act itself. A number of tools exist that facilitate databending either intentionally or through divergent use of the features in unintended ways. This includes programs such as [SoundHack](https://www.soundhack.com/) which allows you to make any file a valid WAVE audio file, [Audacity](https://www.audacityteam.org/) which supports the reading of raw bytes as audio data, or [PhotoShop](https://digital-photography-school.com/make-abstract-glitch-art-photographs/) by opening non-image files as if they were images. 
+
+A number of artists have experimented with databending in varying capacities.
+[Nick Briz](http://nickbriz.com/), an "new-media artist"  explores various "attacks" on data to degrade and produce distortions of video data in *Binary Self-Portraits*. Another video-art piece, *From The Group Up In Order, Embrace*, explores the creation of visual material through the interface of the binary code that represents itself. Briz states: 
+
+<div class="bigquote">
+
+*Anything that is digital contains beneath it layers of code and at the base is an immense series of ones and zeroes known as binary code. Like the atom in the natural world, the ones and zeroes of binary code are the smallest component of the digital medium. In my efforts to strengthen my relationship with the digital medium I set out to create a piece where I dealt directly with the binary code of a video file. The result was this video as well as an obsession with the digital medium, and a first in a series of binary video pieces.* (Briz, n.d )
+
+</div>
+
+<!-- http://nickbriz.com/databending101/raw-data-playground.html -->
 <!-- https://vimeo.com/4506517 -->
+https://vimeo.com/4510943
 <!-- - Alva Noto -->
 https://www.youtube.com/watch?v=vN9FrqrPptg - Unitxt Code (Data to AIFF)
 <!-- https://oss.adm.ntu.edu.sg/xqtoh1/tag/ikeda/ -->
 https://www.youtube.com/watch?v=eaIrSZIyxxk - Ikeda Datamatics
+https://www.ryojiikeda.com/project/datamatics/
 - Depth, detail and chaotic orderedness
 
 <!-- Pimmon - electronic tax return -->
 Thompson (2004, p. 20)
+
+<!-- WIDGET: potentially one for databending a cat by editing image data -->
+
+In particular, [Michael Chinen's](https://michaelchinen.com/) practical experiments in databending made it clear to me that 
+<!-- - Michael Chinen -->
+- FuckingAudacity
+https://michaelchinen.com/music/fuckingaudacity/
+    - https://vimeo.com/8144372
+- FuckingWebBrowser
+https://michaelchinen.com/music/fuckingwebbrowser/
+    - https://vimeo.com/9635993
+- lstn
+    - https://vimeo.com/17617200
+
+
 
 ### Computer _finding_ material
 
 - FluidCorpusMap as a key technology that influenced me
     - I saw video demonstrations
     - no code available
+    - Processing pipeline of segmentation > analysis > dimensionality reduction to facilitate latent space exploration
     - The computer suggests a set of relationships between sounds encoded into space
 
 <VideoMedia>
@@ -46,20 +74,45 @@ Thompson (2004, p. 20)
 
 ## Development Process
 ### Generation
+modified ibuffer~
+    - some preliminary sounds?
+SoX
+[mosh]({m.mosh})
 ### Segmentation
 ### Analysis
+Derivative! Very Important to mention here
+
+Do other applications use the derivative?
+https://audiostellar.xyz/
+<!-- WIDGET: stats widget? -->
 ### Dimension Reduction
+Lots of data - what can I do with it?
+https://experiments.withgoogle.com/ai/drum-machine/view/
+https://www.xlnaudio.com/products/xo
+
+
+#### UMAP
+
+**t-SNE**
+https://distill.pub/2016/misread-tsne/
+
+perplexity value is good, but one dimensional. Balancing neighbours and the minimum distances gives you power of the preservation of local and global topology while also giving you influence on the shape and nature of the projection. Global geometry is also hard to balance in t-SNE because perplexity is relative to the size of the input data in order to preserve the same treatment. Distances between well-separated clusters in a t-SNE plot may mean nothing. UMAP is also faster
+
+https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf
+
 <YouTube
 url="https://www.youtube.com/embed/nq6iPZVUxZU"
 caption="Leland Mcinnes presenting on the UMAP algorithm"
 />
 
-Grill mentioned 
+
 ### Clustering
-In other projects used raw descriptor data for matching
+In other projects used raw descriptor data for matching. There are numerous issues with this approach and achieving good congruence between input data and matching. You have to know your data really well. Data might not be distributed evenly, making searching for in one subset of the data require fine tuning, while another has is more sparse. 
+
 Pulling together samples with perceptual similarity
 ## Responding To The Output Of The Computer
 ### dotmaxwave
+- similar morphologies brought together from the .maxwave input data
 ### X86Desc.a
 ### segmenoitte
 ### 340685107feisraebbaatsaed--isn.sqlite
@@ -99,6 +152,8 @@ url="https://www.youtube.com/embed/-FNO0QovfsI"
 caption="Me present"
 title="foo"
 />
+
+https://zenodo.org/record/4285398
 
 <NextSection 
 next="ElectroMagnetic"
