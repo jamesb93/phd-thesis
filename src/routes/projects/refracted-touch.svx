@@ -224,7 +224,8 @@ figure="IMAGE 1"
 id="img1"
 />
 
-In addition to the granular synthesis changes, a new module titled "low" was created. This module was a combination of an onset detector aimed at responding to onsets in the low frequency range connected to a playback mechanism. When these onsets are triggered, it randomly selects fragments of harmonic material from the harmonic component buffer and plays it back at a reduced playback speed. This idea was influenced by the way that in his recorded improvisations, Daryl would strike heavily detuned strings to create metallic almost non instrumental sounds. I experimented by stretching recordings of this out in REAPER and liked the way that this could create textural material. In real-time, I imagined that this would provide a contrasting behaviour to Daryl's often erratic style of playing.
+<!-- REVIEW: its not so much changes in the low frequency range but changes in spectral difference, which worked well for low frequency content -->
+In addition to the granular synthesis changes, a new module titled *low* was created. This module was comprised of an onset detector designed to responding to changes between consecutive spectral fames, which is connected to a playback mechanism. The onset detector worked well for creating onsets in recorded gestural material focused on the low register of the guitar. When these onsets are triggered, it selects random sections from the harmonic component buffer and plays them back at a reduced playback speed. This idea was influenced by the way that in his recorded improvisations, Daryl would strike heavily detuned strings to create metallic almost non instrumental sounds. I experimented by stretching recordings of this out in REAPER and liked the way that this could create textural material. In real-time, I imagined that this would provide a contrasting behaviour to Daryl's often erratic style of playing.
 
 <!-- WIDGET: low frequency onset detection  -->
 
