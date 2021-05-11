@@ -561,6 +561,18 @@
             "url": "https://github.com/flucoma/FluidCorpusMap"
         },
         {
+            "name": "SoX (Sound eXchange )",
+            "url": "http://sox.sourceforge.net"
+        },
+        {
+            "name": "scrape_files.py",
+            "url": "https://github.com/jamesb93/data_bending/blob/master/python_scripts/scraping/scrape_files.py"
+        },
+        {
+            "name": "Francesco Cameli",
+            "url": "https://github.com/vitreo12"
+        },
+        {
             "name": "cycling 74",
             "url": "https://cycling74.com/forums/recreating-a-horsefourses-oscillator/"
         },
