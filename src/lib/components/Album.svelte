@@ -1,23 +1,19 @@
 <script>
     import { onMount } from "svelte";
     import { browser } from "$app/env";
-    import Button from '$lib/components/Button.svelte';
     import Container from '$lib/components/Container.svelte';
-    import PlayPause from '$lib/components/PlayPause.svelte';
 
     export let id = "";
     export let tracks = [];
     export let title = "";
     export let figure = "";
 
-    let Peaks, instance, audio;
+    let Peaks, instance, audio, overview;
     let selectedTrack = 0;
-    let overview;
     let playState = false;
-    let fakeAudio = new Array(tracks.length).fill(null);
-
+    let fakeAudio = new Array(tracks.trackData.length).fill(null);
+    let loading = true;
     onMount (async()=>{
-        console.log(fakeAudio)
         if (browser) {
             const module = await import("peaks.js");
             Peaks = module.default;
@@ -25,7 +21,7 @@
                     containers: {
                     overview: overview
                 },
-                dataUri: { arraybuffer: tracks[0].peaks },
+                dataUri: { arraybuffer: tracks.prefix + tracks.trackData[0].peaks },
                 mediaElement: audio,
                 height: 80,
                 segmentStartMarkerColor: '#a0a0a0',
@@ -45,6 +41,7 @@
                 if (err) {
                     console.log(err)
                 } else {
+                    loading = false;
                     instance = p
                 }
             })
@@ -67,8 +64,8 @@
             playState = false;
             selectedTrack = i;
             const options = {
-                mediaUrl: tracks[i].audio,
-                dataUri: { arraybuffer: tracks[i].peaks },
+                mediaUrl: tracks.prefix + tracks.trackData[i].audio,
+                dataUri: { arraybuffer: tracks.prefix + tracks.trackData[i].peaks },
             };
             instance.setSource(options, err => {
                 if (err) console.log(err)
@@ -91,31 +88,39 @@
             <span class='figure'>{figure}</span>
         </div>
         <div class="vis">
+            {#if !loading}
             <button on:click={ clickHandler }>
                 { playState === true ? 'stop' : 'play' }
             </button>
+            {/if}
             <div class="overview" bind:this={ overview } />
         </div>
         <div class="peaks-controls">
             <audio bind:this={audio}>
-                <source src={tracks[0].audio} type="audio/mp3">
+                <source src={ tracks.prefix + tracks.trackData[0].audio } type="audio/mp3">
                 <track kind="captions">
             </audio>
         </div>
 
         <div class='track-list'>
-            {#each tracks as track, i}
-                <audio src={track.audio} bind:this={ fakeAudio[i] } />
-                <div on:click={ () => setSource(i) } class='track-selector' class:selected={ selectedTrack === i} >
-                    <span>{i+1}. {track.name}</span>
-                    <div class='duration'>
-                    {#if fakeAudio[i] !== null}
-                        { convertTime(fakeAudio[i].duration) }
-                    {/if}
-                    </div>
+            {#if loading}Loading...{/if}
+            {#each tracks.trackData as track, i}
+            <audio src={tracks.prefix + track.audio} bind:this={ fakeAudio[i] }>
+                <track kind="captions">
+            </audio>
+            {#if !loading}
+            <div on:click={ () => setSource(i) } class='track-selector' class:selected={ selectedTrack === i} >
+                <span>{i+1}. {track.name}</span>
+                <div class='duration'>
+                {#if fakeAudio[i] !== null}
+                    { convertTime(fakeAudio[i].duration) }
+                {/if}
                 </div>
+            </div>
+            {/if}
             {/each}
         </div>
+        
     </div>
 </Container>
 
