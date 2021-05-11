@@ -14,16 +14,14 @@
 Reconstruction Error is the fourth project in this portfolio. It is a set of five pieces, presented in an EP format.
 
 ## Motivation and Influences
-
-In the previous three projects, I explored a number of techniques, approaches and workflows for computer-aided composition. These took several forms and for me were encompassed in a period of exploration, driven by opportunities to compose for visiting artists or by responding to immediate influences in my creative coding practice and listening. From this phase of testing new technologies that were new to me and incorporating them into my creative practice, I found that the most successful workflow was that from [Stitch/Strata]({m.ss}). Despite being a difficult process and requiring many failed attempts to reach the finished state of the piece, using the computer to sieve through a corpus of sounds in order to help guide me towards organisations of material felt like a fluid and meaningful workflow that I could develop in the future. Given these conditions produced by reflection and consideration of the work done up to this point, I decided to move forward with this in mind. I wanted to create a piece by using the computer in a similar fashion.
+In the previous three projects, I explored a number of techniques, approaches and workflows for computer-aided composition. These approaches took several forms and were motivated by different factors such as opportunities to compose for visiting artists or by responding to immediate influences in my creative coding practice and musical listening. Throughout each project in the process of testing new technologies and strategies for working with the computer, I found that the most successful workflow was developed in [Stitch/Strata]({m.ss}). Despite being a difficult process and inducing many failed attempts to reach the finished state of the piece, using the computer to sieve through a corpus of sounds in order to help guide me towards organisations of material felt like a fluid and meaningful workflow that I could develop in the future. Given these conditions produced by reflection and consideration of the work done up to this point, I decided to move forward with this in mind. I wanted to create a piece by using the computer in a similar fashion.
 
 ### Databending
-Amongst this reflection on my own practice, I had been listening to artists who embody post-digital aesthetics, including Alva Noto, Autechre and Ryoji Ikeda. Their work draws on hyper-digital, surgical and sometimes ultra-minimalist sonic materials. The raw digital sounds found in such artists work have always been appealing to me, and to some extent a part of my compositional vocabulary and aesthetic. [Stitch/Strata]({m.ss}), while focusing on the sound of experimental vocal techniques...
+Amongst this reflection on my own practice up to this point, I had been listening to artists such as Alva Noto, Autechre and Ryoji Ikeda. Their work draws on hyper-digital, surgical and sometimes ultra-minimalist sonic materials associated with post-digital aesthetics. The raw digital sounds found in such artists work have always been appealing to me, and to some extent a part of my compositional vocabulary and aesthetic. [Stitch/Strata]({m.ss}), while focusing on the sound of experimental vocal techniques at times arranged sounds into glitch-like, artificial and quasi-rhythmic structures.
 
-I was also exploring the practice of databending, a process in which raw data is used for the purposes of constructing visual and sound materials in art. This can be achieved a number of ways, and the process one chooses to realise this is as instrumental int he practice as performing the act itself. A number of tools exist that facilitate databending either intentionally or through divergent use of the features in unintended ways. This includes programs such as [SoundHack](https://www.soundhack.com/) which allows you to make any file a valid WAVE audio file, [Audacity](https://www.audacityteam.org/) which supports the reading of raw bytes as audio data, or [PhotoShop](https://digital-photography-school.com/make-abstract-glitch-art-photographs/) by opening non-image files as if they were images. 
+I was also becoming interested in databending, a process in which raw data is used for the purposes of constructing visual and sound materials in art. This can be achieved a number of ways, and the process one chooses to realise this is as instrumental in the practice as performing the act itself. A number of tools exist that facilitate databending either intentionally or through divergent use. Sch programs include [SoundHack](https://www.soundhack.com/) which allows you to convert any file on a computer into a valid WAVE audio file, [Audacity](https://www.audacityteam.org/) which supports the reading of raw bytes as audio data, or [PhotoShop](https://digital-photography-school.com/make-abstract-glitch-art-photographs/) by opening non-image files as if they were images. 
 
-A number of artists have experimented with databending in varying capacities.
-[Nick Briz](http://nickbriz.com/), an "new-media artist"  explores various "attacks" on data to degrade and produce distortions of video data in *Binary Self-Portraits*. Another video-art piece, *From The Group Up In Order, Embrace*, explores the creation of visual material through the interface of the binary code that represents itself. Briz states: 
+A number of artists have experimented with databending in their own work and this guided my own research of this digital practice. [Nick Briz](http://nickbriz.com/), an "new-media artist"  explores various "attacks" on data to degrade and produce distortions of video data in *Binary Self-Portraits* (see [VIDEO 1]({m.re}#vid1)). Another video-art piece, *From The Group Up In Order, Embrace* (see [VIDEO 2]({m.re}#vid2)), explores the creation of visual material through the interface of the binary code that represents itself. Briz states: 
 
 <div class="bigquote">
 
@@ -31,48 +29,81 @@ A number of artists have experimented with databending in varying capacities.
 
 </div>
 
-<!-- http://nickbriz.com/databending101/raw-data-playground.html -->
-<!-- https://vimeo.com/4506517 -->
-https://vimeo.com/4510943
-<!-- - Alva Noto -->
-https://www.youtube.com/watch?v=vN9FrqrPptg - Unitxt Code (Data to AIFF)
-<!-- https://oss.adm.ntu.edu.sg/xqtoh1/tag/ikeda/ -->
-https://www.youtube.com/watch?v=eaIrSZIyxxk - Ikeda Datamatics
-https://www.ryojiikeda.com/project/datamatics/
-- Depth, detail and chaotic orderedness
-
-<!-- Pimmon - electronic tax return -->
-Thompson (2004, p. 20)
-
-<!-- WIDGET: potentially one for databending a cat by editing image data -->
-
-In particular, [Michael Chinen's](https://michaelchinen.com/) practical experiments in databending made it clear to me that 
-<!-- - Michael Chinen -->
-- FuckingAudacity
-https://michaelchinen.com/music/fuckingaudacity/
-    - https://vimeo.com/8144372
-- FuckingWebBrowser
-https://michaelchinen.com/music/fuckingwebbrowser/
-    - https://vimeo.com/9635993
-- lstn
-    - https://vimeo.com/17617200
-
-
-
-### Computer _finding_ material
-
-- FluidCorpusMap as a key technology that influenced me
-    - I saw video demonstrations
-    - no code available
-    - Processing pipeline of segmentation > analysis > dimensionality reduction to facilitate latent space exploration
-    - The computer suggests a set of relationships between sounds encoded into space
-
-<VideoMedia>
-    <iframe slot='media' src="https://player.vimeo.com/video/314301724" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-    <p><a href="https://vimeo.com/314301724">FluCoMa Descriptor Space Redux Experiment</a> from <a href="https://vimeo.com/user94520852">Fluid Corpus Manipulations</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<VideoMedia id='vid1'>
+<iframe slot='media' src="https://player.vimeo.com/video/4510943" width="640" height="524" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/4510943">Binary Self-Portraits</a> from <a href="https://vimeo.com/nickbriz">Nick Briz</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<p slot="caption">VIDEO 1: Binary Self-Portraits by Nick Briz</p>
 </VideoMedia>
 
-## Development Process
+<VideoMedia id='vid2'>
+<iframe slot='media' src="https://player.vimeo.com/video/4506517" width="640" height="524" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/4506517">From The Ground Up In Order, Embrace</a> from <a href="https://vimeo.com/nickbriz">Nick Briz</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+<p slot="caption">VIDEO 2: From The Ground Up In Order, Embrace by Nick Briz</p>
+</VideoMedia>
+
+*Unitxt Code (Data to AIFF)* (see [VIDEO 3]({m.re}#vid3)) by [Alva Noto](http://www.alvanoto.com/) although not explicitly stated in liner notes or interviews, likely uses data converted to audio (as suggested by the name) for the core compositional material of that work. The harsh and degraded noise sounds are commonly produced when converting text files into audio. [*Datamatics*](https://www.ryojiikeda.com/project/datamatics/) (see [VIDEO 4]({m.re}#vid4)), by[Ryoji Ikeda's](https://www.ryojiikeda.com)  incorporates raw data as source material which drives both the visual and audio of this installation work. [Pimmon's] album *Electronic Tax Return*  (see [VIDEO 5]({m.re}#vid5))has several works based on synthesising sound by converting dynamic link libraries (.dll files) into files for playback and manipulation.
+
+<YouTube 
+url="https://www.youtube.com/embed/vN9FrqrPptg"
+figure="VIDEO 3"
+caption="Unitxt Code (Data to AIFF) by Alva Noto"
+id='vid3'
+/>
+
+<YouTube 
+url="https://www.youtube.com/embed/eaIrSZIyxxk" 
+figure="VIDEO 4"
+caption="Datamatics (Limited Section) by Ryoji Ikeda"
+id='vid4'
+/>
+
+<YouTube 
+url="https://www.youtube.com/embed/AbF8NFanUdQ"
+figure="VIDEO 5"
+caption="Electronic Tax Return by Pimmon"
+id='vid5'
+/>
+
+These works of sound art and composition were influential in my exposure and research into databending. 
+
+In particlar though, [Michael Chinen's](https://michaelchinen.com/) practical experiments demonstrated a tactile, hands on approach to databending in which he developed various fledged programs. 
+
+These programs, explore sonification of raw bytes held in memory for different applications across a variety of different use cases. [FuckingAudacity](https://michaelchinen.com/music/fuckingaudacity/) is a fork of the popular audio application Audacity. Mischievously, instead of actually being able to play any audio files, the sound output from this program is a snapshot of the memory state at regular intervals. Interactions with the user interface and user-driven processes such as importing files or enabling effects themselves become ways of generating sound. [VIDEO 6]({m.re}#vid6) is a demonstration of Chinen playing with the program.
+
+<VideoMedia id='vid6'>
+<iframe slot='media' src="https://player.vimeo.com/video/8144372?byline=0&portrait=0" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p slot='caption'>VIDEO 6: FuckingAudacity demonstration by Michael Chinen.</p>
+</VideoMedia>
+
+[FuckingWebBrowser](https://michaelchinen.com/music/fuckingwebbrowser/) (see [VIDEO 7]({m.re}#vid7)) follows in suit with its Audacity counterpart. The application presents as a standard web browser. However, the memory state of the program is used to generate audio data which is then played back as the user interacts with it. Navigating to or from a website or interacting with a page generates sounds in unpredictable ways. Even doing nothing at times reveals the hidden internal workings as sounds. Making http requests, polling for data or caching files in the background result in sounds that are detached from the user's interaction with the application.
+
+<VideoMedia id='vid7'>
+<iframe slot='media' src="https://player.vimeo.com/video/9635993?byline=0&portrait=0" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p slot='caption'>VIDEO 7: FuckingWebBrowser demonstration by Michael Chinen.</p>
+</VideoMedia>
+
+The logical conclusion for this pattern of application development is one that can be attached to anything running on a computer and be able to sonify the memory state as it runs. [lstn](https://michaelchinen.com/2010/12/09/listen-to-your-computer-lstn/) performs this function, and can observe and sonify the opcodes, callstack and active memory of any program on the computer. [VIDEO 8]({m.re}#vid8) is a demonstration of this in practice.
+
+<VideoMedia id='vid8'>
+<iframe slot='media' src="https://player.vimeo.com/video/17617200?byline=0&portrait=0" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p slot='caption'>VIDEO 8: lstn demonstration by Michael Chinen.</p>
+</VideoMedia>
+
+### Employing The Computer To Structure A Corpus
+
+<!-- !!! proof -->
+Coming into contact with Chinen's work was influential because there is a mixture of predictable and unpredictable behaviours exhibited by the computer through his memory observation programs. There is a sense that the sounds that can be produced from such procedures are constrained to digital, harsh and noise-based worlds, but occasionally the results can be surprising. Silence, fragility and delicacy can emerge at times, and for me this motivated me to experiment with this tension myself. I wanted to be surprised by what could be found in the process of excavating data and wading through it with the aid of the computer.
+
+As part of my preliminary research and engagement with data bending, I was more widely in the research outputs of the Fluid Corpus Manipulation project. At this time specifically, they had released a video demonstration for software called [FluidCorpusMap](https://github.com/flucoma/FluidCorpusMap) (see [VIDEO 9]({m.re}#vid9)).  Neither the paper (see Roma et. al. (2019)) or source code for this program were released at the time. However, I was able to discern from the information in the video that the program was using a processing pipeline of producing mel-cepstrum frequency coefficients (MFCCs) analysis, calculating statistics on this data and passing this through a  dimensionality reduction algorithm to create a two dimensional latent space for exploration and navigation. I found two aspects of this process fascinating. Firstly,  the *global* shapes produced from the dimensionality reduction process are highly characteristic and dependent on the algorithm. The various layouts to me, were evocative in a sense, in that the computer produces its own understanding of the corpus and structures your engagement with it by rendering different kinds of layouts. Secondly, the *local* space of samples was incredibly perceptually smooth. Movements in the demonstration between adjacent points returned sounds that were similar. Even aspects such as their morphology were captured (this can be seen around 1:19 where sounds with upwards glissandi are grouped together spatially) giving the sense that the computer could capture both texture *and* morphology. 
+
+In previous projects, the notion of computational sound searching had been already been explored, albeit in different ways to what was found in FluCoMa's research. The workflow of [Stitch/Strata]({m.ss}) was predicated on forming groups of material from a corpus of voice samples by audio descriptor query. Similarly, [Annealing Strategies]({m.as}) was motivated by the desire to have the computer find parameter inputs that would produce particular perceptual quality from the Fourses synthesiser. To me, this approach of mapping samples seemed like it could be useful for enabling the computer to be suggestive and for it to be instrumental in structuring my engagement with sound materials. With that motivation, I moved forward into the practical part of this project. This is discussed in ["Composition Process"]({m.re}#composition-process).
+
+<VideoMedia id='vid9'>
+    <iframe slot='media' src="https://player.vimeo.com/video/314301724?byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    <p slot='caption'>VIDEO 9: FluidCorpusMap demonstration.</p>
+</VideoMedia>
+
+## Composition Process
 ### Generation
 modified ibuffer~
     - some preliminary sounds?
@@ -81,24 +112,36 @@ SoX
 ### Segmentation
 ### Analysis
 Derivative! Very Important to mention here
-
-Do other applications use the derivative?
-https://audiostellar.xyz/
+Not used to describe the morphology of sounds in other similar applications and processing pipelines. Some of these are illuminated next in [Dimension Reduction.] (ljudmap and audiostellar do not)
 <!-- WIDGET: stats widget? -->
 ### Dimension Reduction
 Lots of data - what can I do with it?
+
 https://experiments.withgoogle.com/ai/drum-machine/view/
 https://www.xlnaudio.com/products/xo
+LjudMap
+https://www.diva-portal.org/smash/get/diva2:1449586/FULLTEXT01.pdf
+https://www.youtube.com/watch?v=b1KjMk40j1k
 
+#### PCA
+non-linearities are not captured
 
-#### UMAP
+#### t-SNE
 
+https://discourse.flucoma.org/t/descriptor-based-sample-navigation-via-dimensional-reduction-ish-proof-of-concept/298/8
+
+<ImageMedia2 
+url="/re/umap-voila.jpg"
+/>
 **t-SNE**
 https://distill.pub/2016/misread-tsne/
 
 perplexity value is good, but one dimensional. Balancing neighbours and the minimum distances gives you power of the preservation of local and global topology while also giving you influence on the shape and nature of the projection. Global geometry is also hard to balance in t-SNE because perplexity is relative to the size of the input data in order to preserve the same treatment. Distances between well-separated clusters in a t-SNE plot may mean nothing. UMAP is also faster
-
 https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf
+
+#### UMAP
+
+
 
 <YouTube
 url="https://www.youtube.com/embed/nq6iPZVUxZU"
