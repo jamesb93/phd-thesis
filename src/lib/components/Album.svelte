@@ -101,7 +101,7 @@
             {#each tracks as track, i}
                 <audio src={track.audio} bind:this={ fakeAudio[i] } />
                 <div on:click={ () => setSource(i) } class='track-selector' class:selected={ selectedTrack === i} >
-                    {i}: {track.name} 
+                    {i+1}. {track.name} 
                     <div class='duration'>
                     {#if fakeAudio[i] !== null}
                         { convertTime(fakeAudio[i].duration) }
@@ -152,12 +152,13 @@
     }
 
     .duration {
-
+        color: grey;
     }
 
     button {
         height: 30px;
         border-radius: 0;
-        width: 90px;
+        width: 76px;
+        align-self: center;
     }
 </style>
