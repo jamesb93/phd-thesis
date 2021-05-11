@@ -1,6 +1,11 @@
 {
     "references" : [
         {
+            "id" : "fluidcorpusmap",
+            "name" : "Roma, G., Green, O., & Tremblay, P. A. (2019, June). Adaptive Mapping of Sound Collections for Data-driven Musical Interfaces. In *NIME* (pp. 313-318).",
+            "url" : "https://www.nime.org/proceedings/2019/nime2019_paper060.pdf"
+        },
+        {
             "id" : "owen-thesis",
             "name" : "Green, O. (2013). User serviceable parts: Practice, technology, sociality and method in live electronic musicking (Doctoral dissertation, City University London).",
             "url" : "https://openaccess.city.ac.uk/id/eprint/2730/"
@@ -158,7 +163,7 @@
         },
         {
             "id" : "aesthetics-of-failure",
-            "name" : "Cascone, K. (2000). The aesthetics of failure:“Post-digital” tendencies in contemporary computer music. *Computer Music Journal, 24*(4), 12-18.",
+            "name" : "Cascone, K. (2000). The aesthetics of failure: “Post-digital” tendencies in contemporary computer music. *Computer Music Journal, 24*(4), 12-18.",
             "url" : "https://www.mitpressjournals.org/doi/pdf/10.1162/014892600559489"
         },
         {
