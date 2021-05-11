@@ -7,9 +7,10 @@
 
     export let id = "";
     export let tracks = [];
+    export let title = "";
+    export let figure = "";
 
     let Peaks, instance, audio;
-    let title = "";
     let selectedTrack = 0;
     let overview;
     let playState = false;
@@ -72,6 +73,8 @@
             instance.setSource(options, err => {
                 if (err) console.log(err)
             });
+            audio.play();
+            playState = true;
         }
     }
 
@@ -83,7 +86,10 @@
 </script>
 <Container id={id}>
     <div class="inner">
-        <div class='title'>{title}</div>
+        <div class='top-text'>
+            <span class='title'>{title}</span>
+            <span class='figure'>{figure}</span>
+        </div>
         <div class="vis">
             <button on:click={ clickHandler }>
                 { playState === true ? 'stop' : 'play' }
@@ -101,7 +107,7 @@
             {#each tracks as track, i}
                 <audio src={track.audio} bind:this={ fakeAudio[i] } />
                 <div on:click={ () => setSource(i) } class='track-selector' class:selected={ selectedTrack === i} >
-                    {i+1}. {track.name} 
+                    <span>{i+1}. {track.name}</span>
                     <div class='duration'>
                     {#if fakeAudio[i] !== null}
                         { convertTime(fakeAudio[i].duration) }
@@ -114,6 +120,9 @@
 </Container>
 
 <style>
+    :root {
+        --text-margin: 10px;
+    }
     .inner {
         padding: 10px;
     }
@@ -130,6 +139,17 @@
         margin: 0 auto;
         height: 80px;
     }
+    .top-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .title {
+        font-weight: bold;
+    }
+    .figure {
+        font-style: italic;
+    }
 
     .track-list {
         display: flex;
@@ -141,6 +161,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-left: var(--text-margin);
     }
 
     .track-selector:hover {
@@ -153,6 +174,7 @@
 
     .duration {
         color: grey;
+        margin-right: var(--text-margin);
     }
 
     button {
