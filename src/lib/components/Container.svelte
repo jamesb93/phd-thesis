@@ -7,10 +7,13 @@
 </div>
 
 <style>
+    :root {
+        --width: 80%
+    }
     .container {
         position: relative;
-        max-width: 95%;
-        min-width: 95%;
+        max-width: var(--width);
+        min-width: var(--width);
         border-radius: 5px;
         box-shadow: 0 1px 3px 4px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
@@ -21,15 +24,15 @@
         margin-bottom: 30px;
         margin-left: auto;
         margin-right: auto;
-        padding-bottom: 20px;
-        padding-top: 20px;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+
     }
 
     .container:hover {
-        -webkit-transform: scale(1.05, 1.05);
-        transform: scale(1.05, 1.05);
+        --scale: 1.03;
+        -webkit-transform: scale(var(--scale), var(--scale));
+        transform: scale(var(--scale), var(--scale));
     }
 
     .container::after {
@@ -52,7 +55,7 @@
 
     .container :global(img) {
         max-width: 90%;
-        text-align: center;
+        text-align: center; 
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -62,6 +65,10 @@
         width: 93%;
         display: block;
         margin: 0 auto;
+    }
+
+    :global(iframe) {
+        height: 400px;
     }
 
     .container :global(.caption) {
