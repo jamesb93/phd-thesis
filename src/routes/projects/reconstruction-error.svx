@@ -145,6 +145,10 @@ id="aud3"
 Derivative! Very Important to mention here
 Not used to describe the morphology of sounds in other similar applications and processing pipelines. Some of these are illuminated next in [Dimension Reduction.] (ljudmap and audiostellar do not)
 <!-- WIDGET: stats widget? -->
+
+### Classification
+pretty good... but... noise is okay! just not all together.
+I felt that with this approach I would be removing potentially valuable samples from composing due to the crudeness of the classification 
 ### Dimension Reduction
 Lots of data - what can I do with it?
 
