@@ -76,8 +76,13 @@
     }
 
     function convertTime(time) {
-        const date = new Date(time * 1000).toISOString().substr(11, 8)
-        return date.toString().substr(3);
+        console.log(time)
+        if (time !== null && time !== NaN) {
+            const date = new Date(time * 1000).toISOString().substr(11, 8)
+            return date.toString().substr(3);
+        }
+
+        return 'Invalid Time Format'
     }
 
 </script>
@@ -112,8 +117,9 @@
             <div on:click={ () => setSource(i) } class='track-selector' class:selected={ selectedTrack === i} >
                 <span>{i+1}. {track.name}</span>
                 <div class='duration'>
-                {#if fakeAudio[i] !== null}
+                {#if fakeAudio[i] !== null && fakeAudio[i].duration !== NaN}
                     { convertTime(fakeAudio[i].duration) }
+                    { console.log(fakeAudio[i]) }
                 {/if}
                 </div>
             </div>
