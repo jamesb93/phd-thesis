@@ -1,6 +1,11 @@
 {
     "references" : [
         {
+            "id" : "mymumepaper",
+            "name" : "Bradbury, J. (2020). Computer-assisted corpus exploration with UMAP and agglomerative clustering. In *Proceedings of the 1st Joint Conference on AI Music Creativity* (p. 4). Stockholm, Sweden: AIMC. http://doi.org/10.5281/zenodo.4285398",
+            "url" : "http://doi.org/10.5281/zenodo.4285398"
+        },
+        {
             "id" : "fluidcorpusmap",
             "name" : "Roma, G., Green, O., & Tremblay, P. A. (2019, June). Adaptive Mapping of Sound Collections for Data-driven Musical Interfaces. In *NIME* (pp. 313-318).",
             "url" : "https://www.nime.org/proceedings/2019/nime2019_paper060.pdf"
@@ -67,7 +72,7 @@
         },
         {
             "id" : "assayag",
-            "name" : "Assayag, G. (1998, October). Computer assisted composition today. In 1st symposium on music and computers, Corfu.",
+            "name" : "Assayag, G. (1998, October). Computer assisted composition today. In *1st symposium on music and computers*, Corfu.",
             "url" : "https://www.music.mcgill.ca/~gary/306/week11/Assayag_ComputerAssisted_1998.pdf"
         },
         {
