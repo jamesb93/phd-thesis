@@ -38,7 +38,7 @@
 
 {#each sortedRefs as ref}
     <div class="ref-container">
-        <p><a class="ref-link" target="_blank" href={ref.url}>{@html marked(ref.name)}</a></p>
+       <a class="ref-link" target="_blank" href={ref.url}>{@html marked(ref.name)}</a>
     </div>
 {/each}
 
@@ -76,11 +76,11 @@
     h4 > a {
         color: black;
     }
+
     .link-container {
         padding-bottom: 1em;
         padding-top: 1em;
         word-wrap:normal;
-        /* overflow-wrap: break-word; */
     }
 
     .link-container > h4 {
