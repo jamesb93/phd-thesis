@@ -11,7 +11,7 @@
 
     // Album Tracks
 
-    import { reAlbum, ibuffer, generation } from '$lib/data/reconstruction-error.js'
+    import { reAlbum, ibuffer, generation, libllvmSlices, noveltySlices } from '$lib/data/reconstruction-error.js'
 </script>
 
 # Reconstruction Error
@@ -139,17 +139,57 @@ tracks={generation}
 figure="AUDIO 3"
 caption=" hmm "
 id="aud3"
+title='Samples generated using the mosh command line tool'
 />
 
 ### Segmentation
-Samples from the databending process ranged in length from 1 second to 53 minutes. For longer samples they often contained within them what might be considered discrete musical ideas, gestures or sections even. An example that exemplifies this is *libLLVMAMDGPUDecs.a.wav* (see [AUDIO 4]({m.re}#aud4)).
+Samples from the databending process ranged in length from 1 second to 53 minutes. For longer samples especially, they often were comprised of what might be considered discrete musical ideas, gestures or sections depending on the length.  An example that exemplifies this finding is  *libLLVMAMDGPUDecs.a.wav* (see [AUDIO 4]({m.re}#aud4)) which I have manually segmented to show where I would intuitively segment and separate out the various ideas within this single sample. This functioned as a type of "ground truth" for trying to develop an automatic segmentation process later.
 
 <Waveform 
 file='/re/generation/libLLVMAMDGPUDesc.a.mp3'
 peaks = '/re/generation/libLLVMAMDGPUDesc.a.dat'
 id='aud4'
+title='AUDIO 4: libLLVMAMDGPUDesc.a'
+segments={libllvmSlices}
 />
 
+These sounds in their original form were not entirely useful to me compositionally. They were too long to compose with directly and I wanted to separate discrete sections within each sample so that I could operate on small homogenous bits of sound. As such, I devised a strategy to *automatically* segment the entire corpus. Devising an appropriate algorithm for this was based on replicating how I had segmented *libLLVMAMDGPUDesc.a*. After experimenting with several algorithms from Librosa (McFee et al. 2015), such as [Laplacian Segmentation](https://librosa.org/doc/latest/auto_examples/plot_segmentation.html) I came to the conclusion that the demarcations I had made were based on differences in the spectrum. There are algorithms for performing automatic segmentation based on this principle, such as measuring the *spectral flux* between windows of contiguous spectral frames and I experimented with this using the FluCoMa `fluid.onsetslice~` object. However, I found that while the algorithm was intuitive to understand it was very sensitive to parameter changes. Similarly, the Laplacian Segmentation approach was too far beyond my grasp to understand and use effectively. from this research into segmentation techniques, was the recurrence matrix visualisations that describe the self-similarity of data in time which are used . I created one of these for *libLLVMAMDGPUDesc.a*, and interpreted the structure of this matrix visually to be reflective of the demarcations that I had made manually before. The recurrence matrix plot be seen in [IMAGE 1]({m.re}#img1). 
+
+<ImageMedia2 
+url='/re/recurrence.png'
+figure="IMAGE 1"
+caption='Recurrence matrix visualisation for libLLVMAMDGPUDesc.a.wav.'
+id='img1'
+/>
+
+I made a thread on the [FluCoMa discourse](https://discourse.flucoma.org/) asking how I might approach segmentation based on these types of representations or if there were any existing tools which already did something similar to this. The thread can be found as ["Difficult segmentation"](https://discourse.flucoma.org/t/difficult-segmentation/222). Owen Green responded (see [IMAGE 2]({m.re}#img2)), and made it clear to me that the`fluid.noveltyslice~` object (part of the FluCoMa first toolbox) was based on Andrew Foote's novelty slicing algorithm (Foote, 2000). This algorithm is predicated on shifting a sliding window of a specified size (the kernel) across a recurrence matrix created from spectral data. This produces a one dimensional time series, a novelty *curve* that in theory captures the *novelty* of the audio. A peak detection strategy can then be applied to this time series in order to derive time points of significance within the sound, based on the data from which the original recurrence matrix was produced. An example of a *novelty curve* can be found in [IMAGE 3]({m.re}#im3), extracted from Foote (2000, p. 454). 
+
+<ImageMedia2 
+url='/re/owen.jpeg'
+figure='IMAGE 2'
+caption='Owen Green answering my question in the FluCoMa discourse'
+id='img2'
+/>
+
+<ImageMedia2
+url='/re/noveltycurve.jpg'
+figure='IMAGE 3'
+caption='Example of a novelty curve, taken from Foote (2000, p. 454)'
+/>
+
+I  produced segmentations on several test items that aligned well with perceptually notable spectral change. I applied the settings from these tests in a pass over every corpus item, as I did not want to spend an indefinite amount of time solving a segmentation problem, accepting that some files might be poorly segmented.
+
+Oversensitivity was also okay to an extent, and I reasoned that over-segmentation was better than oversegmentation.
+
+Seemed to capture the intuitive process well, and also give it some tunability. I could computationally explore the kind of changes I heard. 
+
+<Waveform 
+file='/re/generation/libLLVMAMDGPUDesc.a.mp3'
+peaks = '/re/generation/libLLVMAMDGPUDesc.a.dat'
+id='aud5'
+title='AUDIO 5: libLLVMAMDGPUDesc.a segmented with the fluid.noveltyslice~ algorithm'
+segments={noveltySlices}
+/>
 
 
 
