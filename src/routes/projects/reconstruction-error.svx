@@ -177,11 +177,7 @@ figure='IMAGE 3'
 caption='Example of a novelty curve, taken from Foote (2000, p. 454)'
 />
 
-I  produced segmentations on several test items that aligned well with perceptually notable spectral change. I applied the settings from these tests in a pass over every corpus item, as I did not want to spend an indefinite amount of time solving a segmentation problem, accepting that some files might be poorly segmented.
-
-Oversensitivity was also okay to an extent, and I reasoned that over-segmentation was better than oversegmentation.
-
-Seemed to capture the intuitive process well, and also give it some tunability. I could computationally explore the kind of changes I heard. 
+Using a *threshold* of 0.61, *kernelsize* of 3, *filtersize* of 1, *fftsettings* of 1024 512 1024 and a *minslicelength* of 2, I produced the segmentation which can be seen in [AUDIO 5]({m.re}#aud5). To me, this segmentation produced a segmentation that was similar to my intuitive one(seen in [AUDIO 4]({m.re}#aud4)). While at some points the results of `fluid.noveltyslice~` were over-segmented (slices one to five) it seemed sensitive to the changes I heard and was able to extract the longer musical phrases such as slice seven and twelve without having to tune the parameters intensively.
 
 <Waveform 
 file='/re/generation/libLLVMAMDGPUDesc.a.mp3'
@@ -191,62 +187,45 @@ title='AUDIO 5: libLLVMAMDGPUDesc.a segmented with the fluid.noveltyslice~ algor
 segments={noveltySlices}
 />
 
-
-
+I then segmented every corpus item with these settings accepting that some files might be segmented strangely or not close to how I would do it manually, as I did not want to spend an indefinite amount of time working on segmentation. At this point I had accrued 21551 corpus items.
 
 ### Analysis
-Derivative! Very Important to mention here
-Not used to describe the morphology of sounds in other similar applications and processing pipelines. Some of these are illuminated next in [Dimension Reduction.] (ljudmap and audiostellar do not)
-<!-- WIDGET: stats widget? -->
 
-### Classification
-pretty good... but... noise is okay! just not all together.
-I felt that with this approach I would be removing potentially valuable samples from composing due to the crudeness of the classification 
+https://github.com/jamesb93/data_bending/blob/master/python_scripts/descriptor_analysis/6_mfccs.py
 
-Still left with a massive group of samples to deal with, doesn't make it any easier to make compositional decisions or choices.
+The next stage of the compositional process was to analyse the corpus of segmented samples. I planned to use audio descriptors that I was comfortable understanding and had used before such as spectral centroid, loudness, pitch and spectral flatness. However, I wanted to focus on the spectrum of the sounds, and attempt to analyse the changes in the perception of texture. This led me to use MFCCs for analysis as they are robust against differences in loudness and are capable of differentiating the textural characteristics of sounds in a more detailed fashion compared to three previously mentioned descriptors. For each corpus item, an MFCC analysis was conducted using `fluid.mfcc~` with an *fftsize* of 2048 1024 2048, 40 *melbands* and 13 *coefficients*. I then calculated seven statistics- mean, standard deviation, skewness, kurtosis, minimum, median and the maximum and up to the third derivative for each coefficient . 
+
+This stage was imperative in determining what features of the sounds the computer would be listening to as well as for guiding "downstream" processes such as [Dimension Reduction]({m.re}#dimension-reduction) and [Clustering]({m.re}#clustering). I anticipated that calculating two derivates of the statistics would capture the morphology of the sound by describing both the change of these statistics between frames as well as the change in the change. These statistical summaries were flattened to one-dimension and each column of these vectors is standardised in order to scale the data for each corpus item within a commensurate range.
 
 ### Dimension Reduction
-Lots of data - what can I do with it?
 
-https://experiments.withgoogle.com/ai/drum-machine/view/
-https://www.xlnaudio.com/products/xo
-LjudMap
-https://www.diva-portal.org/smash/get/diva2:1449586/FULLTEXT01.pdf
-https://www.youtube.com/watch?v=b1KjMk40j1k
+https://github.com/jamesb93/data_bending/tree/master/python_scripts/dimensionality_reduction
 
-#### PCA
-non-linearities are not captured
+At this point I had a wealth of corpus items and MFCC analysis data. While MFCC values are strictly defined, they lack the approachability of other descriptors such as spectral centroid.  Reading MFCC values is far less intuitive in being able to discern any human perceptual value for example than interpreting how a spectral centroid calculation might map onto our perception of the brightness of a sound. In other similar corpus navigation and exploration work, dimensionality reduction techniques have been implemented in order for the computer to compress dense data such as this and to facilitate exploring the latent structure of a corpus. Examples include the work of Stefano Fascinai (Fasciani, 2015), *Flow Synthesizer* (Esling, Masuda, Bardet, Despres, & Chemla-Romeu-Santos, 2019), [AudioStellar](https://audiostellar.xyz/) (Garber et. al. 2020), Thomas Grill (Grill & Flexer, 2012), LjudMap (Vegeborn, 2020) and the previously mentioned *FluidCorpusMap*. My aim for using dimensionality reduction at this point was to start moving away from mostly analytical work, and to begin enabling the computer so that it could facilitate exploring the corpus. One of my primary goals in this regard, was to find a way so that the computer could draw together perceptually similar sounds.
 
-#### t-SNE
+To do this, I used the Uniform Manifold Approximation and Projection (UMAP) algorithm and reduced the 273 points in each vector for each sample to 2 points. This way, I could visualise the results as a two-dimensional *map* where each sample would be represented as a singular point. A strength of UMAP is its potency for capturing non-linear features in data compared to algorithms such as Principal Component Analysis (PCA). Furthermore, UMAP can be coerced to favour global or local structure by altering the *minimum distance* and *number of neighbours parameters*. A number of projections which were made with various parameters can be seen in [DEMO 1]({m.re}#demo1).
 
-https://discourse.flucoma.org/t/descriptor-based-sample-navigation-via-dimensional-reduction-ish-proof-of-concept/298/8
-
-<ImageMedia2 
-url="/re/umap-voila.jpg"
-/>
-**t-SNE**
-https://distill.pub/2016/misread-tsne/
-
-perplexity value is good, but one dimensional. Balancing neighbours and the minimum distances gives you power of the preservation of local and global topology while also giving you influence on the shape and nature of the projection. Global geometry is also hard to balance in t-SNE because perplexity is relative to the size of the input data in order to preserve the same treatment. Distances between well-separated clusters in a t-SNE plot may mean nothing. UMAP is also faster
-https://www.jmlr.org/papers/volume9/vandermaaten08a/vandermaaten08a.pdf
-
-#### UMAP
-
-
-
-<YouTube
-url="https://www.youtube.com/embed/nq6iPZVUxZU"
-caption="Leland Mcinnes presenting on the UMAP algorithm"
-/>
-
+I used such visual projections to intuitively interpret the results of the dimension reduction process.  For me, the topology of the projection became a source of inspiration compositionally by observing the location, shape and relationships between clusters of samples. In particular, the UMAP process would often produce characteristic outputs, where clusters could be located away from the main body of the projection or the overall shape would be comprised of a repeating shape or feature. These were novel and interesting to me and were investigated further through manual audition. Most importantly I found that the UMAP algorithm produced a layout of samples in space which samples were perceptually meaningful relative to each other in the space. Navigating around a single area of the space rendered samples that were similar to each other. Moving across the space more broadly positioned different morphological sounds away from each other as well as creating small pockets where samples were unique and novel. These successes aside, I did not have a way to really incorporate these findings into a compositional workflow where pieces were being made. It was mostly motivating and inspirational in the sense that I found the technology exciting and capable of dealing with large listening tasks competently, rather than bringing me closer to the creation of a piece.
 
 ### Clustering
-In other projects used raw descriptor data for matching. There are numerous issues with this approach and achieving good congruence between input data and matching. You have to know your data really well. Data might not be distributed evenly, making searching for in one subset of the data require fine tuning, while another has is more sparse. 
 
-Pulling together samples with perceptual similarity
+Part of my positive response to the dimension reduction process was the robustness in which samples with similar perceptual qualities were drawn together in the two dimensional projection. I wanted to take this further, and have the computer perform clustering on this data  in order to return groups of samples which I imagined would be useful as a starting point for composition.
 
-Exploring them with a max patch + Lua to pull them into REAPER
+https://github.com/jamesb93/data_bending/tree/master/python_scripts/clustering
+
+To do this I experimented with several algorithms including [k-means](https://en.wikipedia.org/wiki/K-means_clustering), [HDBSCAN](https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html) and [Agglomerative Clustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html). Each of these algorithms offers a different interface and will cluster input data based on a different set of assumptions. K-means for example operates by partioning a data space into a fixed number of partitions set by the user, and then drawing individual points into these based on their barycentres. This application assumes that the data is spherically arranged in clusters which can be a problematic assumption depending on the data. HDBSCAN, on the other hand 
+
+<!-- WIDGET: clustering comparison -->
+
+Agglomerative clustering
+
+
+
+
+
+
 ## Responding To The Output Of The Computer
+Exploring them with a max patch + Lua to pull them into REAPER
 ### dotmaxwave
 - similar morphologies brought together from the .maxwave input data
 ### X86Desc.a
@@ -283,13 +262,19 @@ navigating-sample-based-music
 
 ## Other Related Links and Media
 
+I gave two presentations that discussed this project at different points in its development. The first presentation I gave was at the November 2019 FluCoMa plenary, where the pieces were partially composed and I focused on demonstrating my application of the FluCoMa tools. Much longer after the pieces had finished and I moved on to composing [{m.emname}]({m.em}), I reflected on the entire development process and its relationship to the compositions in a [short article](https://zenodo.org/record/4285398) for the 2020 AI Music Creativity Conference. This involved creating a short video demo too.
+
 <YouTube 
-url="https://www.youtube.com/embed/-FNO0QovfsI"
-caption="Me present"
-title="foo"
+url="https://www.youtube.com/embed/IpD_XzW1Az4" 
+figure='VIDEO'
+caption='"Finding Things In Stuff" presentation at the November 2019 FluCoMa Plenary'
 />
 
-https://zenodo.org/record/4285398
+<YouTube 
+url="https://www.youtube.com/embed/-FNO0QovfsI"
+caption='"Corpus exploration with UMAP and agglomerative clustering" presentation at the AI Music Creativity Conference 2020.'
+figure='VIDEO'
+/>
 
 <NextSection 
 next="ElectroMagnetic"
