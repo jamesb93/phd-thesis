@@ -1,11 +1,12 @@
 {
-  "name": "~TODO~",
+  "name": "phd",
   "version": "0.0.1",
   "scripts": {
     "dev": "pnpm run scrape && svelte-kit dev --host --port 3001",
     "build": "svelte-kit build",
     "start": "svelte-kit start",
-    "scrape": "python3 scrape_links.py"
+    "scrape": "python3 scrape_links.py",
+    "convert": "sh convert.sh"
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "next",
