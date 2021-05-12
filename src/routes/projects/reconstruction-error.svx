@@ -7,6 +7,7 @@
     import YouTube from '$lib/components/YouTube.svelte';
     import Album from '$lib/components/Album.svelte';
     import Code from '$lib/components/Code.svelte';
+    import Waveform from '$lib/components/Waveform.svelte';
 
     // Album Tracks
 
@@ -141,7 +142,15 @@ id="aud3"
 />
 
 ### Segmentation
-libllvmamdGPU
+Samples from the databending process ranged in length from 1 second to 53 minutes. For longer samples they often contained within them what might be considered discrete musical ideas, gestures or sections even. An example that exemplifies this is *libLLVMAMDGPUDecs.a.wav* (see [AUDIO 4]({m.re}#aud4)).
+
+<Waveform 
+file='/re/generation/libLLVMAMDGPUDesc.a.mp3'
+peaks = '/re/generation/libLLVMAMDGPUDesc.a.dat'
+id='aud4'
+/>
+
+
 
 
 
@@ -153,6 +162,9 @@ Not used to describe the morphology of sounds in other similar applications and 
 ### Classification
 pretty good... but... noise is okay! just not all together.
 I felt that with this approach I would be removing potentially valuable samples from composing due to the crudeness of the classification 
+
+Still left with a massive group of samples to deal with, doesn't make it any easier to make compositional decisions or choices.
+
 ### Dimension Reduction
 Lots of data - what can I do with it?
 
@@ -192,6 +204,8 @@ caption="Leland Mcinnes presenting on the UMAP algorithm"
 In other projects used raw descriptor data for matching. There are numerous issues with this approach and achieving good congruence between input data and matching. You have to know your data really well. Data might not be distributed evenly, making searching for in one subset of the data require fine tuning, while another has is more sparse. 
 
 Pulling together samples with perceptual similarity
+
+Exploring them with a max patch + Lua to pull them into REAPER
 ## Responding To The Output Of The Computer
 ### dotmaxwave
 - similar morphologies brought together from the .maxwave input data
