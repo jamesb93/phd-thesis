@@ -76,8 +76,7 @@
     }
 
     function convertTime(time) {
-        console.log(time)
-        if (time !== null && time !== NaN) {
+        if (time !== null && !Number.isNaN(time)) {
             const date = new Date(time * 1000).toISOString().substr(11, 8)
             return date.toString().substr(3);
         }
