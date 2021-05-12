@@ -66,8 +66,8 @@
         <span id="caption">{caption}</span>
         {/if}
         <div bind:this={controls} class="audio-controls">
-            <Button clickHandler={ () => instance.zoom.zoomOut() } text="+" />
-            <Button clickHandler={ () => instance.zoom.zoomIn() } text="-" />
+            <Button clickHandler={ () => instance.zoom.zoomIn() } text="+" />
+            <Button clickHandler={ () => instance.zoom.zoomOut() } text="-" />
         </div>
     </div>
     <div class="vis">
@@ -83,7 +83,6 @@
     {#if segments}
     <ul class="segments">
         <span id="timecodes">List of referenced time codes</span>
-        <hr>
         {#each segments as segment}
             <li>
                 <a on:click={ () => instance.player.seek(segment.startTime) }>
@@ -157,16 +156,28 @@
 
     ul li {
         display: block;
+        border-top: 1px rgb(197, 197, 197) solid;
+    }
+
+    ul li:hover {
+        background-color: rgb(240, 240, 240);
     }
 
     a { 
-        color: black;
+        color: black
+    }
+
+    a:hover {
+        background-color: inherit;
+        text-decoration: none;
     }
 
     .segments {
         padding-top: 5px;
         margin: 1em auto;
         margin-right: 3em;
+        border-top: 1px rgb(197, 197, 197) solid;
+        justify-content: space-between;
     }
 </style>
 
