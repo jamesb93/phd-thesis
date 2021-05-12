@@ -1,6 +1,16 @@
 {
     "references" : [
         {
+            "id" : "foote",
+            "name" : "Foote, J. (2000, July). Automatic audio segmentation using a measure of audio novelty. In *2000 IEEE International Conference on Multimedia and Expo. ICME2000. Proceedings. Latest Advances in the Fast Changing World of Multimedia (Cat. No. 00TH8532)* (Vol. 1, pp. 452-455). IEEE.",
+            "url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.1040.9957&rep=rep1&type=pdf"
+        },
+        {
+            "id" : "librosa",
+            "name" : "McFee, B., Raffel, C., Liang, D., Ellis, D. P., McVicar, M., Battenberg, E., & Nieto, O. (2015, July). librosa: Audio and music signal analysis in python. In *Proceedings of the 14th python in science conference* (Vol. 8, pp. 18-25).",
+            "url" : "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.701.4288&rep=rep1&type=pdf"
+        },
+        {
             "id" : "mymumepaper",
             "name" : "Bradbury, J. (2020). Computer-assisted corpus exploration with UMAP and agglomerative clustering. In *Proceedings of the 1st Joint Conference on AI Music Creativity* (p. 4). Stockholm, Sweden: AIMC. http://doi.org/10.5281/zenodo.4285398",
             "url" : "http://doi.org/10.5281/zenodo.4285398"
