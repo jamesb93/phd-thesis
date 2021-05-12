@@ -573,6 +573,26 @@
             "url": "https://github.com/vitreo12"
         },
         {
+            "name": "Laplacian Segmentation",
+            "url": "https://librosa.org/doc/latest/auto_examples/plot_segmentation.html"
+        },
+        {
+            "name": "FluCoMa discourse",
+            "url": "https://discourse.flucoma.org/"
+        },
+        {
+            "name": "\"Difficult segmentation\"",
+            "url": "https://discourse.flucoma.org/t/difficult-segmentation/222"
+        },
+        {
+            "name": "AudioStellar",
+            "url": "https://audiostellar.xyz/"
+        },
+        {
+            "name": "Ljudmap",
+            "url": "https://github.com/victorwegeborn/LjudMAP"
+        },
+        {
             "name": "cycling 74",
             "url": "https://cycling74.com/forums/recreating-a-horsefourses-oscillator/"
         },

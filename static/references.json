@@ -1,6 +1,24 @@
 {
     "references" : [
         {
+            "id" : "Garber, L., y Ciencia, M. A., Ciccola, T., & Amusategui, J. C. (2020). AudioStellar, an open source corpus-based musical instrument for latent sound structure discovery and sonic experimentation."
+        },
+        {
+            "id" : "ljudmap",
+            "name" : "Vegeborn, V. H. (2020). *LjudMAP: A Visualisation Tool For Exploring Audio Collections With Real-Time Concatenative Synthesis Capabilities* [Master's thesis, KTH Royal Institute of Technology]. DiVA. https://www.diva-portal.org/smash/get/diva2:1449586/FULLTEXT01.pdf",   
+            "url" : "https://www.diva-portal.org/smash/get/diva2:1449586/FULLTEXT01.pdf"
+        },
+        {
+            "id" : "flow-synthesiser",
+            "name" : "Esling, P., Masuda, N., Bardet, A., & Despres, R. (2019). Universal audio synthesizer control with normalizing flows. *arXiv preprint arXiv:1907.00971.*",
+            "url" : "https://arxiv.org/pdf/1907.00971.pdf"
+        },
+        {
+            "id" : "fasciani",
+            "name" : "Fasciani, S. (2015). Interactive computation of timbre spaces for sound synthesis control. *Sound and Interactivity, 20*, 69.",
+            "url" : "https://ro.uow.edu.au/dubaipapers/751/"
+        },
+        {
             "id" : "foote",
             "name" : "Foote, J. (2000, July). Automatic audio segmentation using a measure of audio novelty. In *2000 IEEE International Conference on Multimedia and Expo. ICME2000. Proceedings. Latest Advances in the Fast Changing World of Multimedia (Cat. No. 00TH8532)* (Vol. 1, pp. 452-455). IEEE.",
             "url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.1040.9957&rep=rep1&type=pdf"
@@ -285,11 +303,6 @@
             "id" : "formalizedmusic",
             "name" : "Xenakis, I. (1992). *Formalized music: thought and mathematics in composition* (No. 6). Pendragon Press.",
             "url" : "https://books.google.co.uk/books?hl=en&lr=&id=y6lL3I0vmMwC&oi=fnd&pg=PR7&dq=Formalized+Music&ots=W-k1lzkqc1&sig=BW6uo7ievipZzHfn-ye1KPDEPZA&redir_esc=y#v=onepage&q=Formalized%20Music&f=false"
-        },
-        {
-            "id" : "musescape",
-            "name" : "Tzanetakis, G. (2003, September). MUSESCAPE: An interactive content-aware music browser. In *Proc. Conference on Digital Audio Effects (DAFX).*",
-            "url" : "https://www.researchgate.net/profile/George_Tzanetakis/publication/2884094_Musescape_An_Interactive_Content-Aware_Music_Browser/links/0912f50f72395c4cef000000.pdf"
         },
         {
             "id" : "content-based-gran",
