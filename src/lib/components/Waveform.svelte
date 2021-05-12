@@ -13,6 +13,7 @@
     let Peaks;
     let instance, overview, zoom, audio, controls;
     let peaksControls;
+    let lastSelected = 0;
 
     const convert = (time) => {
         const date = new Date(time * 1000).toISOString().substr(11, 8)
@@ -33,12 +34,9 @@
                 },
                 mediaElement: audio,
                 height: 60,
-                segmentStartMarkerColor: '#a0a0a0',
-                segmentEndMarkerColor: '#a0a0a0',
                 zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
                 overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
                 overviewHighlightColor: 'grey',
-                segmentColor: 'rgba(255, 161, 39, 1)',
                 playheadColor: 'rgba(0, 0, 0, 1)',
                 playheadTextColor: '#aaa',
                 showPlayheadTime: false,
@@ -57,6 +55,11 @@
             })
         }
     });
+
+    function clickHandler(segment, i) {
+        instance.player.seek(segment.startTime)
+        lastSelected = i
+    }
 </script>
 
 <div class="audio-box" id={id}>
@@ -83,11 +86,12 @@
     {#if segments}
     <ul class="segments">
         <span id="timecodes">List of referenced time codes</span>
-        {#each segments as segment}
+        {#each segments as segment, i}
             <li>
-                <a on:click={ () => instance.player.seek(segment.startTime) }>
-                    {convert(segment.startTime)} - {convert(segment.endTime)} | {segment.labelText}
-                </a>
+                    <a class:selected={ lastSelected === i } class='timecode' on:click={ () => clickHandler(segment, i) }>
+                        <span>{convert(segment.startTime)} - {convert(segment.endTime)}</span>
+                        <span id="label">{segment.labelText}</span>
+                    </a>
             </li>
         {/each}
     </ul>
@@ -170,6 +174,21 @@
     a:hover {
         background-color: inherit;
         text-decoration: none;
+    }
+
+    .timecode {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: 10px;
+    }
+
+    .selected {
+        font-weight: bold;
+    }
+
+    #label {
+        color: grey;
     }
 
     .segments {
