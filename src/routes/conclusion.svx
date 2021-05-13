@@ -5,6 +5,10 @@
 </script>
 
 # Conclusion
+
+What did you set out to do and what does each piece explore?
+
+Overall the first three porjects started as experimentation and attempts to see what would stick. The last two projects honed my compositional practice toward a way of working supported by building a set of tools that facilitated computer-aided composition with samples in a highly novel and unique manner.
 ## Composition Workflow and Process
 - First three pieces branched out in terms of techniques and scope. I tried a number of different strategies almost in a kind of blind fashion to see what would "stick". The last two projects are  more directed toward a specific approach and workflow that developed between them.
 
