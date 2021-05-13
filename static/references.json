@@ -1,7 +1,9 @@
 {
     "references" : [
         {
-            "id" : "Garber, L., y Ciencia, M. A., Ciccola, T., & Amusategui, J. C. (2020). AudioStellar, an open source corpus-based musical instrument for latent sound structure discovery and sonic experimentation."
+            "id" : "audiostellar",
+            "name" : "Garber, L., y Ciencia, M. A., Ciccola, T., & Amusategui, J. C. (2020). AudioStellar, an open source corpus-based musical instrument for latent sound structure discovery and sonic experimentation.",
+            "url" : "https://www.researchgate.net/profile/Leandro-Garber/publication/347983748_AudioStellar_an_open_source_corpus-based_musical_instrument_for_latent_sound_structure_discovery_and_sonic_experimentation/links/5feb4df892851c13fed35d83/AudioStellar-an-open-source-corpus-based-musical-instrument-for-latent-sound-structure-discovery-and-sonic-experimentation.pdf"
         },
         {
             "id" : "ljudmap",
