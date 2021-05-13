@@ -589,8 +589,24 @@
             "url": "https://audiostellar.xyz/"
         },
         {
-            "name": "Ljudmap",
-            "url": "https://github.com/victorwegeborn/LjudMAP"
+            "name": "k-means",
+            "url": "https://en.wikipedia.org/wiki/K-means_clustering"
+        },
+        {
+            "name": "HDBSCAN",
+            "url": "https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html"
+        },
+        {
+            "name": "Agglomerative Clustering",
+            "url": "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html"
+        },
+        {
+            "name": "this discussion on the drawbacks of k-means",
+            "url": "https://stats.stackexchange.com/a/133841"
+        },
+        {
+            "name": "short article",
+            "url": "https://zenodo.org/record/4285398"
         },
         {
             "name": "cycling 74",
@@ -789,10 +805,6 @@
         {
             "name": "Lichen by Matthew Sergent",
             "url": "https://www.youtube.com/embed/b9s-8BPXd58"
-        },
-        {
-            "name": "foo",
-            "url": "https://www.youtube.com/embed/-FNO0QovfsI"
         },
         {
             "name": "Stefano Fasciani demonstrating the 'TSAM' program",
