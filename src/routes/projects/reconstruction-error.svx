@@ -205,12 +205,15 @@ As such, I used the Uniform Manifold Approximation and Projection (UMAP) algorit
 
 I responded to these  visual projections to intuitively interpret the results of the dimension reduction process. For me, the topology of the projections became a source of inspiration compositionally by observing the location, shape and relationships between clusters of samples. In particular, the UMAP process would often produce characteristic outputs, where clusters could be located away from the main body of the projection or the overall shape would be comprised of a consistent character or feature. These were novel to me and were investigated further through manual audition. This will be described in more detail in ["Responding To Computer Outputs"]({m.re}#responding-to-computer-outputs). Most importantly I found that the UMAP algorithm produced a layout where perceptually similar samples were located relatively close to each other in the space. Navigating around a single area of the space rendered samples that were similar to each other. Moving across the space more broadly positioned different morphological sounds away from each other as well as creating small pockets where samples were unique and novel. These successes aside, I did not have a way to really incorporate these findings into a compositional workflow where pieces were being made. It was mostly motivating and inspirational in the sense that I found the technology exciting and capable of dealing with large listening tasks competently, rather than bringing me closer to the creation of a piece. It also functioned as a way of rapidly discerning the overall nature of the corpus. Up to this point I had never really listened to most of the sounds and was operating in good faith that there would be something interesting buried. I was encouraged by this initial form of soundful exploration.
 
+<!-- TODO explain that these parameters were used -->
+7 Neighbours and 0.1 mindist were selected
+
 ### Clustering
 https://github.com/jamesb93/data_bending/tree/master/python_scripts/clustering
 
 Part of my positive response to the dimension reduction process was the robustness in how samples with similar perceptual qualities were drawn together in the two dimensional projection. I wanted to take this further, and have the computer perform clustering on this data in order to return groups of samples. I imagined this type of output would be useful as a starting point for composition.
 
-To do this I experimented with several algorithms including [k-means](https://en.wikipedia.org/wiki/K-means_clustering), [HDBSCAN](https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html) and [Agglomerative Clustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html). Each of these algorithms offers a different interface and will cluster input data based on a different set of assumptions. K-means, for example, operates by partioning data into a fixed number of partitions set by the user. Individual points are then drawn into these partitions to create clusters. This process assumes that the data is spherically distributed and that each cluster will have approximately the same number of clusters. This can be a problematic assumption to make and a number of conclusions can be drawn if these limitations are not accepted. In particular, I found [this discussion on the drawbacks of k-means](https://stats.stackexchange.com/a/133841) useful when researching different clustering methods.  
+To do this I experimented by running several clustering algorithms on UMAP reduction data,  including [k-means](https://en.wikipedia.org/wiki/K-means_clustering), [HDBSCAN](https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html) and [Agglomerative Clustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html). Each of these algorithms offers a different interface and will cluster input data based on a different set of assumptions. K-means, for example, operates by partioning data into a fixed number of partitions set by the user. Individual points are then drawn into these partitions to create clusters. This process assumes that the data is spherically distributed and that each cluster will have approximately the same number of clusters. This can be a problematic assumption to make and a number of conclusions can be drawn if these limitations are not accepted. In particular, I found [this discussion on the drawbacks of k-means](https://stats.stackexchange.com/a/133841) useful when researching different clustering methods.  
 
 HDBSCAN, on the other hand determines an appropriate number of clusters automatically depending on a set of constraints that determine *linkage* between data points. It uses a minimum spanning tree to hierarchically divide the space into clusters and so it can often respect the presence of nested structures within a larger dataset. This means that it can respect non-spherical shaped groupings of data too.
 
@@ -226,28 +229,140 @@ htmlCap={true}
 
 https://scikit-learn.org/stable/modules/clustering.html#hierarchical-clustering
 
-To get the benefits of both of these features, I settled on using another algorithm, *Agglomerative Clustering*,  which allows the user to specify a desired number of clusters while also working in the same fashion to HDBSCAN and creating a minimum spanning tree. Despite my best efforts to parse and understand the minimum spanning tree, I found it difficult to reason around programatically and to draw any value from it. Nonetheless, my exposure to the minimum spanning tree concept informed my further application of clustering. I used the agglomerative clustering algorithm to calculate various results on the reduced data, asking for three increasing numbers of clusters. This returned a collection of clustering outputs with different granularities and specifities. The first output produced 125 clusters, then 1600 and then 3200. These were chosen based on the number's relationship to the total number of corpus items.
+To get the benefits of both of these features, I settled on using another algorithm, *Agglomerative Clustering*,  which allows the user to specify a desired number of clusters while also working in the same fashion to HDBSCAN and creating a minimum spanning tree. Despite my best efforts to parse and understand the minimum spanning tree, I found it difficult to reason around programatically and to draw any value from it. Nonetheless, my exposure to the minimum spanning tree concept informed my further application of clustering. I used the agglomerative clustering algorithm to calculate various results on the reduced data, asking for four increasing numbers of clusters. This returned a collection of clustering outputs with different granularities and specifities. The first output produced 250 clusters, then 500, then 1600 and finally 3200. These were chosen based on the number's relationship to the total number of corpus items.
 
-From these three different ouputs, I then was able to perform a meta-analysis by obsering the shared membership of each sample between different clusters. This created a graph-like structure, where the intersection of each sample was described as a group of linked clusters.
+I then performed a meta-analysis discerning the shared membership of each sample to clusters across the various outputs. From this I could determine different analysis. Because each analysis level is producing a higher number of clusters, they always return increasingly smaller clusters. As such, a cluster containing 500 samples in the 250 clusters analysis might have the same samples spread across two different clusters. The result of this is another set of JSON files that describes clusters which share samples and how many samples they share. In [CODE 1]({m.re}#code1), a portion of the analysis describing the shared membership of the 250 and 500 analysis is shown. The information in this example expresses that cluster 36 in the 250 clusters analysis is comprised of clusters 317 *and* 327 in the 500 clusters analysis.  
 
-### Final Remarks
+<Code
+figure='CODE 1'
+caption='Meta-analysis data describing the shared membership of clusters. This portion describes the shared membership of clusters between the 250 and 500 clusters output.'
+>
+
+```json
+{
+    "36": {
+        "317": 8,
+        "327": 16
+    },
+    "89": {
+        "277": 52,
+        "105": 82,
+        "491": 34
+    },
+    "70": {
+        "39": 63,
+        "214": 75,
+        "425": 15
+    },
+}
+```
+
+</Code>
+
+### Moving Forward
 At this stage I moved into *soundful* play with the various computer outputs resulting from the process described above. Using the data from led the development of these pieces, and the next section [Responding To Computer Outputs]({m.re}#responding-to-computer-outputs) discusses this.
 
 ## Responding To Computer Outputs
 
-After producing the clustering data I began working sonically with the data and usinng it to play specific samples...
+After producing the clustering data I used it to drive lightweight processes to audition samples in Max and REAPER. In Max, I created an interface in which I could retrieve the samples from clusters and simultaneously navigate between the shared membership connections. The samples were played back contiguously by a sequencer so that I could quickly hear the samples in the selected group. This allowed me to audition samples rapidly and to ascertain the nature of each cluster quickly. In part, the decision to structure the playback in this way also serendipitously lead me to arranging some of the materil in similar ways in the compositions. It also allowed me to start with a broad cluster of samples and hone the selection by following the connections of shared membership. This allowed me to find very specific "pockets" of sounds within the entire corpus by whittling down the selection from a broad collection of perceptually similar sounds, to those that were more similar. A screen capture demonstrating this auditioning process can be found in [VIDEO 10]({m.re}#vid10).
 
-Exploring them with a max patch + Lua to pull them into REAPER
-### dotmaxwave
-- similar morphologies brought together from the .maxwave input data
+<VideoMedia2 
+url="/re/meta-analysis.mp4"
+figure="VIDEO 10"
+caption="Using Max and the meta-analysis data to explore the corpus in a structured manner."
+id="vid10"
+/>
+
+This process was immensely useful for becoming acquainted with the samples from the corpus in a structured manner. Most importantly, this engagement was based on perception and each cluster that I selected would present a microcosm of the larger corpus with novel and coherent sounds existing in each one. Despite the fact that the source material was generated from disparate sources of raw data on my hard drive, connections began to form in my mind about how the material could be used in composition and what an EP of different pieces might explore as a collection of pieces. I created a set of written annotations for each cluster and their imagined usefulness. Although rough and not particularly clear, I think that it demonstrates the level of engagement that this process enabled. Chronologically, the notes capture increasingly specific imagined applications, ranging from just recording which samples I thought were similar, to composing pathways between different clusters. These notes can be found at this link: https://github.com/jamesb93/data_bending/blob/master/clusters.md.
+
+I did not want to compose entirely in Max though. This had already proven to be problematic in [Stitch/Strata]({m.ss}), especially in the earlier phases of composition for that project. Instead, I wanted to be able to access these clusters and manipulate their contents in a more musically fluid process as well as modify and alter them with audio effects. In order to achieve this workflow,  I built a series of Lua scripts that allowed me to turn a cluster from a JSON file into a track in REAPER by leveraging the ReaScript API. This can be found in [CODE 2]({m.re}#code2). 
+
+<Code
+figure='CODE 2'
+caption='Lua script for importing a cluster of samples as a track of contiguous samples into REAPER'
+id='code2'
+>
+
+```lua
+local info = debug.getinfo(1,'S');
+local script_path = info.source:match[[^@?(.*[\/])[^\/]-$]]
+package.path = package.path .. ';' .. script_path .. '?.lua'
+package.path = package.path .. ';' .. script_path .. 'lunajson/src/?.lua'
+loadfile(script_path .. "../ReaCoMa/lib/reacoma.lua")()
+local lunajson = require 'lunajson'
+
+local confirm, user_input = reaper.GetUserInputs('Provide JSON info', 2, 'JSON Path:, Cluster Number:, extrawidth=100', '')
+
+if confirm then
+    reaper.Undo_BeginBlock()
+
+    -------- start processing --------
+    reaper.SetEditCurPos(0.0, false, false)
+    reaper.InsertTrackAtIndex(0, true)
+
+    -- Parse user input --
+    local fields = reacoma.utils.commasplit(user_input)
+    local json_path = fields[1]
+    local cluster_num = fields[2]
+
+    -- Do json parsing --
+    local file_in = assert(io.open(json_path, "r"))
+    local content = file_in:read("*all")
+    local cluster_data = lunajson.decode(content)
+    for k, p in ipairs(cluster_data[cluster_num]) do
+        reaper.InsertMedia('/Users/james/Cloud/Projects/DataBending/DataAudioUnique/'..p, 0)
+    end
+    reaper.SetEditCurPos(0.0, false, false)
+    reaper.Undo_EndBlock("Insert Media Cluster", 0)
+end
+```
+
+</Code>
+
+Running this script would present me with the option to provide a JSON file and a cluster number. This would generate a new track containing the samples belonging to that cluster. This allowed me to rapidly audition samples in Max, then draw them into a REAPER session without having to deal with clumsy file system interfaces. Instead, I could work with the same data in a familiar fashion. [VIDEO 11]({m.re}#vid11) demonstrates the process of importing a cluster into REAPER. This was the basis on which I composed the next few pieces. I would oscillate between listening, importing sounds into REAPER as clusters and then using intuitive compositional processes to organise that material. When I hit a creative block in the DAW I would return to listening and try to find something new in the material, guided by the computer.
+
+<VideoMedia2 
+url="/re/scripting.mp4"
+figure="VIDEO 11"
+caption="Using ReaScript API to create tracks of samples from cluster data."
+id="vid11"
+/>
+
+The next sections, [_.dotmaxwave]({m.re}#_dotmaxwave), [X86Desc.a]({m.re}#x86desca), [segmenoitte]({m.re}#segmenoitte), [--isn]({m.re}#--isn) and [sys.ji_]({m.re}#sysji_) describe the specific compositional processes for each piece of Reconstruction Error and how this combination of Max and REAPER informed my compositional choices.
+
+### _.dotmaxwave
+
+*_.dotmaxwave* was the first piece I composed in the EP. The samples that I used in this piece were all derived from cluster 131 which I discovered through audition in Max. While listening to this cluster I realised that the source material was all derived from a particular raw data type with the .maxwave extension. Each of the samples generated from moshing created a file with a similar morphological template with slight alterations. All of the samples begin in a similar fashion with four repeated iterated pitched sounds leading into a static texture. This texture is predominantly pitch material with some underlying noise.
+
+I wanted to capitalise on what I had found, and create a track that focused on the relationship between pitch and noise in these sounds, and the shared morpholog between them.
+
+I started by pulling cluster 131 into REAPER and listening to the samples. I parsed the large section and identified samples which I found to have the most novel differences in the opening sequence. As such I was able to create a pallette of small iterations on the same idea. These are presented in [AUDIO 6]({.re}#aud6).
+
+<!-- DO AN ALBUM OF THE THINGS -->
+<!-- <Album/> -->
+
+harmonic percussive separation to listen to each component in isolation. The noise components were relatively quiet compared to the pich component. I boosted the volume of these and found that while the harmonic part is relatively stable, the noisy part has its own complex noise-based morpholgy and character. I wanted to emphasise this and recombine the sound by summing the two components back together after increasing the volume of the percussive component.
+
+The rest of the piece followed from this type of manipulation of the two components. The first section highlights the different morphological character of each variant, the middle section focuses on pure pitch and the last section is a simple crescendo from a sample which possessed perhaps the most complex percussive component which was only discovered after performing decomposition.
+
+This piece also gave me the idea to create [ReaComa]({m.}). I was constantly stepping in and out of the command line to process files...
+
+
+### --isn
+Robert Wanamaker
 ### X86Desc.a
+Otoacoustic Thomas Ankerschmidt
 ### segmenoitte
-### 340685107feisraebbaatsaed--isn.sqlite
-### sys.ji 
+### sys.ji_
 
 Noise is good but only in the context of not-noise.
  
 ## Reflection
+
+The computer structured my engagement with materials.
+I was *led* to different ideas in a hybrid of my intuition and using the computer to structure the initially unstructured corpus.
+
+Computer never imposed on my process, rather acted as a sounding board. In other projects I have had to fight the influecne of the computer, or find ways to curtail it. Although the computer has no intentionality, This is the first project where it felt like there was mutuality in the compositional approach. At times I would compose intuitively, returning to the computer intending to find a specific result - perhaps a new sound or a different way of listening to a cluster of samples. This itself would allow me to find something new in the corpus or to discover a tangent I hadn't thought of before. The pieces almost emerged from each other in a way, despite my best efforts to make each one unique and to explore different elements of the corpus.
 ### Intervention and Iteration
 
 Intervention as paramount
@@ -259,6 +374,10 @@ Intervention as paramount
 
 ### A New Workflow
 #### Issues of friction leading to FTIS
+
+Simplify the workflow and make it a tool, rather than set of ad-hoc scripts.
+
+Create data that could be used anywhere, REAPER, Max whatever. Almost completely agnostic to environment supporting flexibility in approach and no "lock in".
 
 1. Discovering structure in a corpus
 2. Finding groupings of perceptually similar materials
