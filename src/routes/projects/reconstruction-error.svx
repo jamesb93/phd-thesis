@@ -336,16 +336,18 @@ The next sections, [_.dotmaxwave]({m.re}#_dotmaxwave), [X86Desc.a]({m.re}#x86des
 
 I wanted to capitalise on what I had found, and create a track that focused on the relationship between pitch and noise in these sounds, and the shared morpholog between them.
 
-I started by pulling cluster 131 into REAPER and listening to the samples. I parsed the large section and identified samples which I found to have the most novel differences in the opening sequence. As such I was able to create a pallette of small iterations on the same idea. These are presented in [AUDIO 6]({.re}#aud6).
+I started by pulling cluster 131 into REAPER and listening to the samples. I parsed the large section and identified samples which I found to have the most novel differences in the opening sequence. As such I was able to create a pallette of small iterations on the same idea. These are presented in [AUDIO 6]({m.re}#aud6).
 
 <!-- DO AN ALBUM OF THE THINGS -->
 <!-- <Album/> -->
 
 harmonic percussive separation to listen to each component in isolation. The noise components were relatively quiet compared to the pich component. I boosted the volume of these and found that while the harmonic part is relatively stable, the noisy part has its own complex noise-based morpholgy and character. I wanted to emphasise this and recombine the sound by summing the two components back together after increasing the volume of the percussive component.
 
+time codes for bits where you do different stuff
+
 The rest of the piece followed from this type of manipulation of the two components. The first section highlights the different morphological character of each variant, the middle section focuses on pure pitch and the last section is a simple crescendo from a sample which possessed perhaps the most complex percussive component which was only discovered after performing decomposition.
 
-This piece also gave me the idea to create [ReaComa]({m.}). I was constantly stepping in and out of the command line to process files...
+This piece also gave me the idea to create [ReaComa]({m.reacoma}). I was constantly stepping in and out of the command line to process files...
 
 
 ### --isn

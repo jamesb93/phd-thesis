@@ -11,7 +11,18 @@
 </script>
 
 # Refracted Touch
-After composing both [Stitch/Strata]({m.ss}) and [Annealing Strategies]({m.as}) I felt as if the techniques and approaches that were explored in these works had little room to be developed. I discuss and reflect on this in ["Reflecting On The Balance Of Human And Computer Agency"]({m.ss}#reflecting-on-the-balance-of-human-and-computer-agency) and ["Reflecting On Issues Of Control And Intervention"]({m.as}#reflecting-on-issues-of-control-and-intervention). At this time, the [ELISION Ensemble](https://www.elision.org.au) we're in Huddersfield as guest artists and I put myself forward to write a piece for [Daryl Buckley (Electric Guitar)](https://twitter.com/darylelision?lang=en) and Electronics. [Refracted Touch]({m.rt}) was composed for this residency by ELISION.
+
+<Waveform 
+title="Refracted Touch, first performance"
+file="/rt/Refracted_Touch.mp3"
+peaks="/rt/Refracted_Touch.dat"
+id="rtpiece"
+segments={states}
+/>
+
+After composing both [Stitch/Strata]({m.ss}) and [Annealing Strategies]({m.as}) I felt as if the techniques and approaches that were explored in these works had little room to be developed. I discuss and reflect on this in ["Reflecting On The Balance Of Human And Computer Agency"]({m.ss}#reflecting-on-the-balance-of-human-and-computer-agency) and ["Reflecting On Issues Of Control And Intervention"]({m.as}#reflecting-on-issues-of-control-and-intervention). At this time, the [ELISION Ensemble](https://www.elision.org.au) were in Huddersfield as guest artists and I put myself forward to write a piece for [Daryl Buckley (Electric Guitar)](https://twitter.com/darylelision?lang=en) and Electronics. [Refracted Touch]({m.rt}) was composed for this residency by ELISION.
+
+Alongside the audio recording of this piece, the patch used in the performance alongside its predecessors is available in a github repository. The [final patch is linked here](https://github.com/jamesb93/refracted-touch/tree/main/patcher_versions/Refracted%20Touch), and the [repository is linked here](https://github.com/jamesb93/refracted-touch).
 
 ## Motivations and Influences
 A major part of my motivation for writing Refracted Touch was to take the opportunity of working with a professional instrumentalist and performer, Daryl Buckley. I was not entirely sure what this creative work was going to be, so I thought that throwing myself into the deep end (what is a better way to express this) without too many preconceptions or plans would create an environment where I would be challenged and pushed. Despite not having a clear or formal plan for what this work would be, I always envisaged it would be based on improvisation and real-time electronics, between Daryl and an content-aware computer system. In addition to these motivations, the last two pieces, [Stitch/Strata]({m.ss}) and [Annealing Strategies]({m.as}), had explored compositional workflows in which I engaged the computer across different levels of agency and relinquishing of control. I thought that this would be a good opportunity to see how a real-time, interactive content-aware system might be able to foster different modes of agency and compositional workflow.
@@ -75,8 +86,7 @@ The technicalities of this piece are straightforward. An onset detector generate
 
 <VideoMedia id="vid6">
 <iframe slot="media" src="https://player.vimeo.com/video/111283604" width="640" height="362" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/111283604">gruntCount instruction video - June 2014</a> from <a href="https://vimeo.com/user5763633">Martin Parker</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-<p slot="caption">VIDEO 6 Martin Parker demonstrating how to configure and run gruntCount.</p>
+<p slot="caption">VIDEO 6: Martin Parker demonstrating how to configure and run gruntCount.</p>
 </VideoMedia>
 
 Similarly, the work of Owen Green from his PhD thesis was influential to me. I largely drew on signal processing concepts from two pieces, [*Danger in the Air*](http://owengreen.net/portfolio/danger-in-the-air/) and [*Cardboard Cutout*](http://owengreen.net/portfolio/cardboard-cutout/). *Danger in the Air*, features live electronic components that adaptively respond to the input of the performer and occupy a range of agent-like behaviours from sound processing module to co-player. From this work I was inspired by the way that Green made the electronic processing transform over the duration of the piece by having the real-time granular synthesiser's parameters adapt to the sound of the input through audio description and digital signal processing. This adaptivity and temporal evolution was something that I wanted to capture in my own efforts. *Cardboard Cutout*, uses signal decomposition to separate harmonic from percussive components from a live input signal, in this case a bowed cardboard box. Each of these layers is processed with granulation and similar to *Danger in the Air* the granular synthesis adapts and is responsive to the qualities of the input signal through audio descriptors. Green's approach to time and form in this work is constructed as a negotiation between pre-composed sections and the behaviour of the performer which drives a sequencer that moves between those sections. Green describes his approach as follows:
@@ -176,11 +186,16 @@ id="vid11"
 
 **Temporal Changes**
 
-Alongside the sound processing modules, I began creating modules that could create change in the modules over time. These would create or interpret events (such as those from onsets), or drive modifications to parameters in response to the input signal, in order to make overall changes flexible in nature. I I decided on an approach of *accumulation*, whereby the values of the incoming live signal are measured and accumulated up to a specified limit. 
+Alongside the sound processing modules, I began creating modules that could create change in the modules over time. These would create or interpret events (such as those from onsets), or drive modifications to parameters in response to the input signal, in order to make overall changes flexible in nature. I decided on an approach of *accumulation*, whereby the values of the incoming live signal are measured and accumulated up to a specified limit. Once the limit has been reached the accumulator resets and triggers a generic event that can be used to drive changes elsewhere in the patch. An example of this is demonstrated in [VIDEO 12]({m.rt}#vid12)
 
-<!-- WIDGET: example of accumulator to make it very clear how this works -->
+<VideoMedia2 
+url="/rt/accumulation.mp4"
+figure="VIDEO 12"
+caption="Example of accumulation with a sample as input. The original audio is played back through the left channel, and a single sample impulse is triggered in the right channel ever time the accumulator resets."
+id="vid12"
+/>
 
-Once the limit has been reached the accumulator resets and triggers a generic event that can be used to drive changes elsewhere in the patch. From this process different interactions can be setup. For example, the envelope length of the resonator module is based on the interval between resets of the harmonic components accumulator. The more harmonic energy that is put into the system, the longer the envelopes become. When the same harmonic accumulator resets, the resonator itself is toggled between the on and off status. My thinking in this regard was that this would make the resonator interactive and playable over longer time scales, rather than having all interactions coupled to local changes.  In the first version of the patch I noted some imagined applications where this idea of accumulation might be useful.
+From this process different interactions can be setup. For example, the envelope length of the resonator module is based on the interval between resets of the harmonic components accumulator. The more harmonic energy that is put into the system, the longer the envelopes become. When the same harmonic accumulator resets, the resonator itself is toggled between the on and off status. My thinking in this regard was that this would make the resonator interactive and playable over longer time scales, rather than having all interactions coupled to local changes.  In the first version of the patch I noted some imagined applications where this idea of accumulation might be useful.
 
 ```
 The timers could be used for....
@@ -252,13 +267,13 @@ This last module includes the cubic non-linear distortion module and the granula
 
 Much of my thinking up to this point was that the formal aspects of the work would be governed by the state of the modules. Switching them on and off, or modifying parameters were to me the only way to shape the piece through the interaction between Daryl and the computer. Each module had been designed and conceived of with certain material types in the first place, so I theorised that a "state" detector that could alter the internal components of the patch in response to the input of the guitar signal could be a way that the machine could be dynamic, while also being cohesive with the performer. In addition to this, I envisaged that this strategy might introduce a level of flexibility for the performer and provide them with a way to interact with the computer in order to influence the form of the piece. Depending on their in-the-moment listening , Daryl could decide to maintain a single idea for as long as needed or explore the localised behaviours of a state before moving on at their own pace. From the inverse perspective, I also imagined that this would give the computer some ability to be more divergent in the construction of form in real-time by creating a kind of "game", whereby the performer is working either with or against the behaviour of that process.
 
-In my first attempt to realise this, I used the [mubu](https://ismm.ircam.fr/mubu/) Max package, specifically the `mubu.gmm` object. This object uses a gaussian mixture model to compare live input data against a set of trained exemplars and produces a set of values that determine the confidence it has that the incoming data is represented by the trained exemplars. This is shown in [VIDEO 12]({m.rt}#vid12) I used mel-frequency cepstrum coefficients by analysing audio files of extended techniques played provided by Daryl to create some fixed musical behaviours as exemplars. 
+In my first attempt to realise this, I used the [mubu](https://ismm.ircam.fr/mubu/) Max package, specifically the `mubu.gmm` object. This object uses a gaussian mixture model to compare live input data against a set of trained exemplars and produces a set of values that determine the confidence it has that the incoming data is represented by the trained exemplars. This is shown in [VIDEO 13]({m.rt}#vid13) I used mel-frequency cepstrum coefficients by analysing audio files of extended techniques played provided by Daryl to create some fixed musical behaviours as exemplars. 
 
 <VideoMedia2 
 url="/rt/gmm-demo.mp4"
-figure="VIDEO 12"
+figure="VIDEO 13"
 caption="State recognition with mubu.gmm"
-id="vid12"
+id="vid13"
 />
 
 Using audio samples as input I tested this in practice by having the classified state turn groups of modules on and off. I found that the classification process was extremely temperamental. Sometimes even th e same input data would not necessarily be classified in the same group that it was trained as. Furthermore, there was very little scope for measuring the balance of states and the results were often heavily weighted towards one result. I envisaged that an interesting interaction might emerge if the performer was able to operate in between states. However, the reality of both performing the right type of material to do this, and for it to be measured accurately began to introduce a number of contingencies that I would not even be able to test until the rehearsal. As such I decided not to develop this idea further.
@@ -317,7 +332,14 @@ The following list enumerates the states and points to the times in the recordin
 - *More frequent bursts of intensity*
 - *Use more range*
 
-For these first three states the electronics occupy a background role and the overall dynamic of both Daryl and the electronics  is intended to be quiet. I wanted the guitar and the eletronics to be hard to discern from each other and to be interwoven texturally and behaviourally. There is light processing from the cubic non-linear distortion throughout, and states two and three progressively introduce modules from the *rt.bits* group of modules. These modules perform descriptor-based concatenative synthesis using samples of  extended techniques on a dobro guitar and from modular synthesis. The samples are selected and concatenated based on measuring the input signal of the guitar in terms of spectral centroid and amplitude, with the intention that the morphology of the sound produced from this process will be responsive to Daryl's playing. In addition to this, from state three and throughout state three, amplitude onsets from Daryl cause the computer to ignore the input of the guitar for matching samples and to generate gestures that smoothly navigate through the descriptor space. [IMAGE 4]({m.rt}#image4) describes how this works inside the patch.
+For these first three states the electronics occupy a background role and the overall dynamic of both Daryl and the electronics  is intended to be quiet. I wanted the guitar and the electronics to be hard to discern from each other and to be interwoven texturally and behaviourally. There is light processing from the cubic non-linear distortion throughout, and states two and three progressively introduce modules from the *rt.bits* group of modules. These modules perform descriptor-based concatenative synthesis using samples of  extended techniques on a dobro guitar and from modular synthesis. The samples are selected and concatenated based on measuring the input signal of the guitar in terms of spectral centroid and amplitude, with the intention that the morphology of the sound produced from this process will be responsive to Daryl's playing. In addition to this, from state three amplitude onsets from Daryl trigger pre-composed gestural controls that dictate the selection of samples. This is demonstrated in [AUDIO 1]({m.rt}#aud1), a selection from 1:10 to 1:40 which has been isolated in the performance recording.
+
+<Waveform 
+file='/rt/fixed-gesture.mp3'
+peaks='/rt/fixed-gesture.dat'
+title='AUDIO 4: Pre-composed gestures generated by the rt.bits module group,  isolated in the performance recording.'
+id='aud4'
+/>
 
 <!-- WIDGET: image 4 -->
 Daryl has very limited accumulation to play with in the first two states, which encourages him to be reserved compared to the rest of the piece.  
