@@ -1,6 +1,16 @@
 {
     "discog" : [
         {
+            "name" : "I want to tell you something...",
+            "artist" : "Robert Wannamaker",
+            "year" : 1999
+        },
+        {
+            "name" : "Herbig-Haro",
+            "artist" : "Olivier Pasquet",
+            "year" : 2019
+        },
+        {
             "name" : "Datamatics",
             "artist" : "Ryoji Ikeda",
             "year" : 2006
