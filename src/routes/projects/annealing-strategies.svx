@@ -159,7 +159,6 @@ id="aud5"
 segments={segs4}
 />
 
-<!-- LINK:ING TO time stamps might be good here -->
 This iteration possessed a sophisticated macro-structure that satisfied my original aims and goals. Compared to any of the other iterations, [738_noise.simplex_529135023]({m.as}#aud5) exhibited a natural and organic taper from initially chaotic and bombastic sounds towards a narrow and controlled final section focused toward intricate and quiet sounds. Many other iterations would seem to be stuck and focused on exploring a small range of parameters, while this iteration does not have that problem and the overall linear form is ornamented by complex and novel diversions. In particular, this iteration exhibited a set of behaviours in which pitched and noise-based material are put in opposition with each other. At the higher formal level, the overall loudness is decreasing, while different sections emerge in which these two material groups are portrayed antagonistically and exhibit their own development.
 
 For example, the opening section from 0:00 to approximately 1:10 presents a dense mixture of interwoven noise and pitched elements. At 1:11, the opening section is concluded, demarcated by a new longer section of primarily noise-based material. From this point onwards there are increasingly longer spans of time that alternate between noise and pitched material with less interleaving. Within each of these longer sections, the prominent sound type is developed further. The period between 1:30 and 1:50 is an example of this.

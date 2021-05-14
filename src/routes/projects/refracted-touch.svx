@@ -13,11 +13,10 @@
 # Refracted Touch
 
 <Waveform 
-title="Refracted Touch, first performance"
+title="Refracted Touch"
 file="/rt/Refracted_Touch.mp3"
 peaks="/rt/Refracted_Touch.dat"
-id="rtpiece"
-segments={states}
+id="rtbumper"
 />
 
 After composing both [Stitch/Strata]({m.ss}) and [Annealing Strategies]({m.as}) I felt as if the techniques and approaches that were explored in these works had little room to be developed. I discuss and reflect on this in ["Reflecting On The Balance Of Human And Computer Agency"]({m.ss}#reflecting-on-the-balance-of-human-and-computer-agency) and ["Reflecting On Issues Of Control And Intervention"]({m.as}#reflecting-on-issues-of-control-and-intervention). At this time, the [ELISION Ensemble](https://www.elision.org.au) were in Huddersfield as guest artists and I put myself forward to write a piece for [Daryl Buckley (Electric Guitar)](https://twitter.com/darylelision?lang=en) and Electronics. [Refracted Touch]({m.rt}) was composed for this residency by ELISION.
@@ -281,25 +280,25 @@ Using audio samples as input I tested this in practice by having the classified 
 In the final version of the patch I removed state classification with machine learning from [version four]({m.rt}#version-4). However I still wanted to leverage this idea of the computer automatically shifting between states where different modules were activated or deactivated in various combinations. To do this I took a much simpler approach in which a set of pre-composed states are progressed through linearly in a preset order. The duration of each state, and thus the rate at which these are navigated though is dependent on a process of *amplitude accumulation*, a mechanism that was experimented with in previous versions. While each state is active, the amplitude of the input signal is accumulated up to a specified limit. Once this limit is reached, the state ends and the next one in the linear series begins. Playing quietly could make a state last longer than playing loudly or stopping playing entirely could extend a state infinitely. Each state enables different combinations of modules from the four groups. This governs the overall nature of the piece at the highest level of form, while micro- and meso-level detail emerges from Daryl interacting with the specific modules and the relationships they are designed to have with the input signal. 
 
 ### Final Version and Performance
-Each state is also accompanied with a set of text-based prompts that are delivered to Daryl remotely. He used an iPad in the performance, where the text was presented to him in real-time alongside other information such as his current "progress" through a state. This is depicted in [IMAGE 3]({m.rt}#img3).
+Each state is also accompanied with a set of text-based prompts that are delivered to Daryl remotely. He used an iPad in the performance, where the text was presented to him in real-time alongside other information such as his current "progress" through a state. This is depicted in [IMAGE 2]({m.rt}#img2).
 
 <ImageMedia2 
 url="/rt/webgui.jpg"
 caption="Daryl's web-based interface for receiving real-time information about patch states. Text-based prompts can be seen in the middle/top-half of the screen. A large progress bar occupies the centre showing his progress through a state."
-figure="IMAGE 3"
-id="img3"
+figure="IMAGE 2"
+id="img2"
 />
 
 I found this overall system simple to express to Daryl  as well as malleable -  If either of us wanted a state to last longer overall, all that was required was to increase the limit for the state. Through this simple approach there was enough flexibility for Daryl to shape the structure of the piece of the piece while still being constrained by the deterministic aspects that I imposed by ordering and designing the states.
 
 #### Patch States and Performance
-To discuss the relationship between patch states and the navigation between these negotiated by Daryl and the computer it is relevant to now look at the performance itself and to observe how each state manifested and the kinds of musical behaviours that emerged. The following recording is taken from the performance of the piece which occurred in St Paul's Cathedral at the University of Huddersfield. The setup of electronics and amplification is detailed in [IMAGE 4]({m.rt}#img4). Despite having access to the raw electronic outputs from the recording I decided not to use them and instead have used a recording from a single X/Y pair of microphones situated in the centre of the room. I think that this gives a more natural representation of the performance and how the speaker positioning would have affected the experience of hearing the piece.
+To discuss the relationship between patch states and the navigation between these negotiated by Daryl and the computer it is relevant to now look at the performance itself and to observe how each state manifested and the kinds of musical behaviours that emerged. The following recording is taken from the performance of the piece which occurred in St Paul's Cathedral at the University of Huddersfield. The setup of electronics and amplification is detailed in [IMAGE 3]({m.rt}#img3). Despite having access to the raw electronic outputs from the recording I decided not to use them and instead have used a recording from a single X/Y pair of microphones situated in the centre of the room. I think that this gives a more natural representation of the performance and how the speaker positioning would have affected the experience of hearing the piece.
 
 <ImageMedia2
 url="/rt/rt-setup.svg"
 caption="Electronics, microphone and amplification configuration for the first Refracted Touch performance"
-figure="IMAGE 4"
-id="img4"
+figure="IMAGE 3"
+id="img3"
 />
 
 <Waveform 
@@ -337,11 +336,10 @@ For these first three states the electronics occupy a background role and the ov
 <Waveform 
 file='/rt/fixed-gesture.mp3'
 peaks='/rt/fixed-gesture.dat'
-title='AUDIO 4: Pre-composed gestures generated by the rt.bits module group,  isolated in the performance recording.'
-id='aud4'
+title='AUDIO 1: Pre-composed gestures generated by the rt.bits module group,  isolated in the performance recording.'
+id='aud1'
 />
 
-<!-- WIDGET: image 4 -->
 Daryl has very limited accumulation to play with in the first two states, which encourages him to be reserved compared to the rest of the piece.  
 
 **Four | 2:06 - 2:33**
@@ -387,7 +385,7 @@ Daryl continues to extend and reuse techniques and gestures from state six. I im
 - *Electronics recycle material when you are not playing*
 - *Create a dialogue with electronics*
 
-State eight is somewhat of an extension to state seven in that all the same modules are active except for an additional sub-module of *rt.low* that plays back buffered harmonic material at a slow playback rate. gain, due to the reverse facing speaker this creates diffuse and ambient textures. Daryl continues to alternate between different registers in order to play around the interaction of onsets derived from low frequency playing.
+State eight is somewhat of an extension to state seven in that all the same modules are active except for an additional sub-module of *rt.low* that plays back buffered harmonic material at a slow playback rate. Due to the reverse facing speaker this creates diffuse and ambient textures. Daryl continues to alternate between different registers in order to play around the interaction of onsets derived from low frequency playing.
 
 **Nine | 7:08 - 8:39**
 - Maximum Accumulation: 3000
@@ -396,9 +394,13 @@ State eight is somewhat of an extension to state seven in that all the same modu
 - *Feedback seeps in when not playing*
 - *Give space to the electronics*
 
-The feedback module of *rt.low* enters the foray in state nine. Despite being a part of the *rt.low* group, which mostly deals with low frequency content and sound the feedback can produce high frequency content by the nature of the feedback system. [IMAGE 5]({m.rt}#image5) describes the signal path for this module which uses four delay lines connected to filters and a compressor to automatically attenuate the volume and intensity of the feedback. The delay times are configured by randomly selecting a combination of delay times from a set of pre-designed presets. 
+The feedback module of the *rt.low* group enters the foray in state nine. [IMAGE 4]({m.rt}#image5) shows the patching for this module which uses four delay lines connected to filters and a compressor to automatically attenuate the volume and intensity of the feedback. The delay times dynamically change in response to onsets by selecting one of several predetermined presets. 
 
-<!-- WIDGET: IMAGE 5 -->
+<ImageMedia2 
+url='/rt/feedback.jpg'
+figure='IMAGE 4'
+caption='The feedback module part of the rt.low module group.'
+/>
 
 Daryl sparingly activates the fuzz bass module and overall responds more directly to the feedback sound by matching it in intensity. Through his focused interaction with with the feedback module Daryl tapers the dynamics of this state towards the next one by simply waiting and choosing not to behave in such a way that will excite the feedback delay network too much, trigger the low fuzz sound or to create a low frequency onset that would trigger slow playback of buffered harmonic content.
 
