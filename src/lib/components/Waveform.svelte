@@ -127,8 +127,7 @@
     #title {
         font-style: italic;
         font-size: 16px;
-        text-align: center;
-        display: inline-block;
+        text-align: left;
     }
     
     #caption{
