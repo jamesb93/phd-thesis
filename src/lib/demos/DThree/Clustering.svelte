@@ -54,7 +54,7 @@
 <div class="box" bind:offsetHeight={height} bind:offsetWidth={width}>
 <svg bind:this={container} class="d3-container"></svg>
 </div>
-<p class="caption">DEMO 1: A network of actions and outputs. Observing different outputs can lead to more direct creative action or lead back to further computational exploration and new outputs to be made.</p>
+<p class="caption">DEMO 2: A network of actions and outputs. Observing different outputs can lead to more direct creative action or lead back to further computational exploration and new outputs to be made.</p>
 
 <style>
     .box {

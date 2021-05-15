@@ -161,5 +161,7 @@
     .caption {
         font-style: italic;
         text-align: center;
+        width: 80%;
+        margin: 0 auto;
     }
 </style>
