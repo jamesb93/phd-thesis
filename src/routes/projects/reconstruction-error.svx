@@ -418,32 +418,19 @@ What is intersting about this to me and my practice is that it shows how an algo
  
 ## Reflection
 
-The computer structured my engagement with materials.
-I was *led* to different ideas in a hybrid of my intuition and using the computer to structure the initially unstructured corpus.
+Reconstruction Error was the first project in this PhD research where I felt like I had achieved a computer-aided compositional processwhere the computer and myself were engaged in a mutual dialogue. At times I would compose intuitively, returning to the computer intending to find a specific result - perhaps a new sound or a different organisation of cluster of samples. Through this back and forth I was *led* through the creative process, where the computer amplified and enhanced my own textural and timbral focused listening to a corpus of sounds that I could not otherwise do manually. This application of content-awareness allowed me to hone my initially "blunt" question and to transform my surface-level appreciation for databending into a process where I discovered. This encapsulates the nature of a wicked question, a concept I discuss in ["Content Awareness"]({m.ca}) briefly in regards to Rebecca Fiebrink's work. I could not know the solution to the problem because it began ill-defined or vague. Using the computer to solve intermediate problems and to follow ad-hoc musical interests in the moment, the question itself reached an internal consistency creating a kind of feedback between answering the question and forming the question itself.
 
-The corpus on its own is that not interesting or useful. The computer gives me a way structured way to explore the space and drives the process of formulating compositional intent.
-
-Magic of the computer being used in this way... sausage machine... worth mentioning!
-
-Computer never imposed on my process, rather acted as a sounding board. In other projects I have had to fight the influecne of the computer, or find ways to curtail it. Although the computer has no intentionality, This is the first project where it felt like there was mutuality in the compositional approach. At times I would compose intuitively, returning to the computer intending to find a specific result - perhaps a new sound or a different way of listening to a cluster of samples. This itself would allow me to find something new in the corpus or to discover a tangent I hadn't thought of before. The pieces almost emerged from each other in a way, despite my best efforts to make each one unique and to explore different elements of the corpus.
-
-Alignment of intuition and computational help, while still having some pusback and suggestive powers:
-
-An interesting occurance was that **after** making some more detailed notes on clusters which I thought had more long term compositional fruit, I went back and listened to some of the `short_spines` and went about looking which clusters they belonged to. On more than one occasion I found clusters that I was interested in contained spines I had selected much earlier and I think that this somehow gives validity to the use of dimensionality reduction and clustering to create hierarchies and groupings. 
+Musically, the ability to "switch off" the computer at certain points led me to writing not only the most *authentic* music at this point in the PhD but it also allowed me to try out more radical and daring presentations of material.  
 
 Form and trying out conceptual ideas. Highly reduced sound worlds in some of the tracks, but also blow out noise
 
-### Intervention and Iteration
+Solidifying the DAW + other friends as tools
+- Stitch/Strata, i explain some of the benefits that re-embracing the DAW did for that project, especially for managing intermediate states of projects and "scaffolding" or "sketching"
+Linking the DAW to extra information (i.e extending the role of the DAW through FTIS by letting me work with information that is not well represented in a timeline view)
+navigating-sample-based-music 
 
-Intervention as paramount
-- Compositional fluidity
-- Being thrown ideas works! (remember how you explained it to Oli Bown...)
-- Honing initially 'blunt' questions
-- Forming clear compositional intent
-- Responding to constraints _with_ the computer 
 
-### A New Workflow
-#### Issues of friction leading to FTIS
+### Development of FTIS
 
 Simplify the workflow and make it a tool, rather than set of ad-hoc scripts.
 
@@ -454,11 +441,6 @@ Create data that could be used anywhere, REAPER, Max whatever. Almost completely
 3. Discovering unknown and unique items
 4. Capitalisation on known points of interest
 5. Forming/finding connections between corpus items 
-
-#### Re-embracing the DAW
-- Stitch/Strata, i explain some of the benefits that re-embracing the DAW did for that project, especially for managing intermediate states of projects and "scaffolding" or "sketching"
-Linking the DAW to extra information (i.e extending the role of the DAW through FTIS by letting me work with information that is not well represented in a timeline view)
-navigating-sample-based-music 
 
 
 ## Other Related Links and Media
