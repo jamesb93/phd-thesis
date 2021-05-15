@@ -293,7 +293,7 @@
             "url": "http://www.benhackbarth.com/audioGuide/"
         },
         {
-            "name": "*Volleys of Light and Shadow* (2014)",
+            "name": "Volleys of Light and Shadow",
             "url": "http://www.benhackbarth.com/vls/"
         },
         {
@@ -759,10 +759,6 @@
     ],
     "videos": [
         {
-            "name": "Sam Pluta webinar on neural networks, machine listening and chaotic synthesisers.",
-            "url": "https://player.vimeo.com/video/470864627"
-        },
-        {
             "name": "FluCoMa vs Orchidea MFCC matching comparison",
             "url": "https://www.youtube.com/embed/DQ_hPkrbgzQ"
         },
@@ -804,7 +800,7 @@
         },
         {
             "name": "Yasunao Tone - Solo for Wounded Part II",
-            "url": "https://www.youtube.com/embed/1RtKWy3G9PM"
+            "url": "https://www.youtube.com/embed/L62y1g58ICw"
         },
         {
             "name": "Matthew Sergeant in conversation with ELISION's Daryl Buckley (1 of 2)",
