@@ -286,10 +286,11 @@ In my practice, micro- and meso-level structures are often derived through syste
 For example, the [first gesture (see AUDIO 1)]({m.preoc}#ss-opening-gesture) of [Stitch/Strata]({m.ss}) is made by concatenating samples based on analysis of their loudness and spectral centroid with [audio descriptors]({m.ca}#audio-descriptors). At the start and end of this first gesture, samples with low centroid and loudness are selected, and in the middle samples with high centroid and loudness are chosen. By interpolating between these three points over time, a parabolic gesture that rises and then falls in volume and brightness is produced. As a listener you might be completely unaware of the technical procedure that created this process but you can still grasp the shape of the musical gesture in terms of how its perceptual qualities change over time. In this case, the computer has helped me to construct this gesture without me having to arrange those samples manually. Instead, I can communicate the perceptual shape of the gesture numerically and the computer resolves those details automatically. This allows me to produce that desired musical effect more successfully and in dialogue with the computer. Whether or not the listener can derive the technical origins through listening alone is irrelevant to me.
 
 <Waveform
-title = "AUDIO 1: Opening gesture of Stitch/Strata"
-file = "/preoccupations/ss-intro-gesture.mp3"
-peaks = "/preoccupations/ss-intro-gesture.dat"
-id = "ss-opening-gesture"
+title = "Opening gesture of Stitch/Strata"
+caption='AUDIO 1'
+file="/preoccupations/ss-intro-gesture.mp3"
+peaks="/preoccupations/ss-intro-gesture.dat"
+id="ss-opening-gesture"
 />
 
 Another example can be found in the material selection process for [--isn.]({m.re}#isn) in [Reconstruction Error]({m.re}). The samples used in this work are a small subset from a larger corpus. The computer derives this subset automatically using clustering, a process that groups together data from a set based on their similarity. Clustering in this case is calculated on mel-frequency cepstral coefficients (MFCCs) data, with the intention that texturally similar items will be grouped together into individual clusters. As such, this initial subset derived from the overall corpus is a relatively homogenous group of impulse-based samples with some variation between the items. This group of samples is clustered further to derive clusters containing fewer items that are increasingly similar and homogenous as a collection.

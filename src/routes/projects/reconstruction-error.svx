@@ -148,10 +148,11 @@ title='Samples generated using the mosh command line tool'
 Samples from the databending process ranged in length from 1 second to 53 minutes. For longer samples especially, they often were comprised discrete musical ideas, gestures or even what may have been considered sections.  An example that exemplifies this finding is  *libLLVMAMDGPUDecs.a.wav* (see [AUDIO 4]({m.re}#aud4)) which has been manually segmented to demonstrate where I perceived such divisions of the databending material.
 
 <Waveform 
+title='libLLVMAMDGPUDesc.a'
+caption='AUDIO 4'
 file='/re/generation/libLLVMAMDGPUDesc.a.mp3'
 peaks = '/re/generation/libLLVMAMDGPUDesc.a.dat'
 id='aud4'
-title='AUDIO 4: libLLVMAMDGPUDesc.a'
 segments={libllvmSlices}
 />
 
@@ -182,10 +183,11 @@ caption='Example of a novelty curve, taken from Foote (2000, p. 454)'
 Using a *threshold* of 0.61, *kernelsize* of 3, *filtersize* of 1, *fftsettings* of 1024 512 1024 and a *minslicelength* of 2, I produced the segmentation which can be seen in [AUDIO 5]({m.re}#aud5). To me, this segmentation result was commensurate with my initial intuitive approach seen in [AUDIO 4]({m.re}#aud4). While at some points the results of `fluid.noveltyslice~` were over-segmented (slices one to five) it seemed like it could discern the changes I perceived as salient, and was able to extract the longer musical phrases such as slice seven and twelve without having to tune the parameters intensely.
 
 <Waveform 
+title='libLLVMAMDGPUDesc.a segmented with the fluid.noveltyslice~ algorithm'
+caption='AUDIO 5'
 file='/re/generation/libLLVMAMDGPUDesc.a.mp3'
 peaks = '/re/generation/libLLVMAMDGPUDesc.a.dat'
 id='aud5'
-title='AUDIO 5: libLLVMAMDGPUDesc.a segmented with the fluid.noveltyslice~ algorithm'
 segments={noveltySlices}
 />
 
@@ -368,10 +370,11 @@ This piece developed on ideas presented in [--isn]({m.re}#isn) and perhaps was a
 For example, the transient material created at 0:45 is created using a transient extraction algorithm from [ReaCoMa]({m.reacoma}). The original source material, *libLLVM-6.0.dylib_144.wav*, is predominantly pitched though and the end result is perhaps not recognisable as the source material due to the removal of the non-transient component of that sound. This process is used throughout the piece to generate different qualities. Depending on the morphological properties of the input sound, a number of different quasi-rhythmic patterns and impulse passages are carved away from the spectrally rich sources. For example,  at 2:07, one of the key sonic elements in that texture was derived by taking a cluster of samples and passing them through the transient extraction algorithm. I did this with three different settings, to create variations on that material which I then used to formulate a morphing passage of sound. This is isolated in [AUDIO 7]({m.re}#aud7).
 
 <Waveform 
+title='Material from cluster 165 processed with the transient extraction algorithm in three different ways. 2:07 in X86Desc.a.'
+caption='AUDIO 7'
 file='/re/cluster165-preparation.mp3'
 peaks='/re/cluster165-preparation.dat'
 id='aud7'
-title='AUDIO 7: Material from cluster 165 processed with the transient extraction algorithm in three different ways. 2:07 in X86Desc.a.'
 />
 
 In isolation these samples are relatively uninspiring to me and the musical effect underwhelming. However, when composing this piece I was always experimenting by layering multiple instances and using [ReaCoMa]({m.reacoma}) to explore the hidden internal components of each sound.
@@ -388,7 +391,8 @@ I began making this piece with a mindset that I wanted to create something that 
 file='/re/initial-segm.mp3'
 peaks='/re/initial-segm.dat'
 id='aud8'
-title='AUDIO 8: A short section of composed music using various clusters of mechanical material.'
+title='A short section of composed music using various clusters of mechanical material.'
+caption='AUDIO 8'
 />
 
 I found that the conceptual idea driving the composition at this point was limited, and I was rapidly running out of material that inherently displayed the kind of mechanised qualities I was looking for. Most, if not all the material that I had used up to this point was derived from the 250 cluster output so I started following the links to the higher resolution clusters. Although this did not introduce much more new material, it did present new configurations of what I had already been working with. In [IMAGE 5]({m.re}#img5), the REAPER session of this piece is shown, and displays numerous tracks that were used to incorporate the sub clusters of the original material into the session. They colour coded to represent the shared membership and annotated such that I could discern which output tey originated from

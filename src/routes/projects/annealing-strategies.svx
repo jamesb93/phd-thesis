@@ -124,7 +124,8 @@ An iteration of [Annealing Strategies]({m.as}) is created by running this algori
 [Annealing Strategies[({m.as})] is a single output from the system which I select after auditioning. The selection process was judged by how well it suited my conceptual goals I made prior to the compositional process as well as how satisfying it was in relation to my aesthetic preferences. Hundreds of iterations were made from this back and forth, and were sorted into "bad" and "good" iterations. Some of these bad iterations can be found in [AUDIO 2]({m.as}#aud2), [AUDIO 3]({m.as}#aud3), and [AUDIO 4]({m.as}#aud4) alongside explanations of why they were classified in this way. The iterations are named by the computer according to the random seed which is used, the type of procedural noise basis and then a random identifier.
 
 <Waveform
-title="AUDIO 2 (592_noise.simplex_529155534)"
+title="592_noise.simplex_529155534"
+caption='AUDIO 2'
 file="/as/592_noise.simplex-am.mp3"
 peaks="/as/592_noise.simplex-am.dat"
 id="aud2"
@@ -133,8 +134,9 @@ id="aud2"
 In iteration [592_noise.simplex_529155534]({m.as}#aud2) there is little variation from the initial state which is set up at the start. In this case my understanding is that the algorithm failed to discover any quiet states in its search or that too fast a cooling rate or not a high enough initial temperature were set.
 
 <Waveform
-title="AUDIO 3 (453_noise.simplex_529163614)"
-file="as/453_noise.simplex-am.mp3"
+title="453_noise.simplex_529163614"
+caption='AUDIO 3'
+file="/as/453_noise.simplex-am.mp3"
 peaks="/as/453_noise.simplex-am.dat"
 id="aud3"
 />
@@ -142,7 +144,8 @@ id="aud3"
 The sound which dominates the first two minutes of iteration [453_noise.simplex_529163614]({m.as}#aud3) exhibits morphological and textural properties that I liked. This kind of sound was what I initially intended for the simulated annealing to be able to discover as it ran. However, this initial sound is never altered significantly until around 2:12, at which point a low pitched and wandering bass sound is introduced. The changes at this point seem abrupt and it contributes to a behaviour that is more like a random search than a controlled and increasingly focused progression towards quieter sounds.
 
 <Waveform
-title="AUDIO 4 (738_noise.simplex_529152854.aiff)"
+title="738_noise.simplex_529152854.aiff"
+caption='AUDIO 4'
 file="/as/738_noise.simplex-am.mp3"
 peaks="/as/738_noise.simplex-am.dat"
 id="aud4"
@@ -153,7 +156,8 @@ Iteration [738_noise.simplex_529152854]({m.as}#aud4) possesses a pitched "whine"
 A number of good iterations were made, and those that were not chosen as the single "best" output will be discussed briefly in ["Issues of Control and Intervention"]({m.as}#issues-of-control-and-intervention). The output that was selected to be [Annealing Strategies]({m.as}) was iteration 738_noise.simplex_529135520 which can be heard in [AUDIO 5]({m.as}#aud5).
 
 <Waveform
-title="AUDIO 5: 'Annealing Strategies' (738_noise.simplex_529135023)"
+title="Annealing Strategies (738_noise.simplex_529135023)"
+caption='AUDIO 5'
 file="/as/annealing_strategies.mp3"
 peaks="/as/annealing_strategies.dat"
 id="aud5"

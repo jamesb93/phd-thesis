@@ -138,7 +138,8 @@ id="vid4"
 Another approach involved designing a behaviour on the metaphor of "adversarial searching".  For this, I took two starting points within the descriptor space and attached those starting points to two simultaneous searches, one that attempts to minimise the volume of the output by changing the spectral centroid and one that tries to find the maximum centroid by minimising the volume. This adversarial process has no end, but produces longer term morphologies and structures without having to specifically design them from moment-to-moment. This kind of thinking carried over and was a precursor in many ways to my engagement with Simulated Annealing in [Annealing Strategies]({m.as}), which exploits a similar searching behaviour to structure music automatically. The adversarial searching technique had the potential to create some sophisticated meso-scale forms. However, it mostly generated dull and uninspired macro-scale structures . [AUDIO 2]({m.ss}#audio2) presents an output of this process.
 
 <Waveform 
-title="AUDIO 2: Adversarial searching"
+title="Adversarial searching"
+caption='AUDIO 2'
 id="audio2"
 file="/ss/5712433.mp3"
 peaks="/ss/5712433.dat"
@@ -169,7 +170,8 @@ Using Python made it possible and easier for me to express a number of organisat
 The `accum_phrase` process concatenates samples until a maximum total duration has been satisfied. The output of the process also rendered each stage of the accumulation so the results could be navigated as a phrase of increasing complexity and duration. This can be heard in [AUDIO 3]({m.ss}#audio3). While this is perhaps the most simplistic one, it produced results that were largely promising as a first attempt. 
 
 <Waveform 
-title="AUDIO 3"
+title="A single output from the accum_phrase process"
+caption='AUDIO 3'
 file="/ss/a12.mp3"
 peaks="/ss/a12.dat"
 id="audio3"
@@ -178,14 +180,16 @@ id="audio3"
 `jank` creates phrases where samples are repeated in chunks of a given length and variation to that length. The result is a stutter effect that can produce robotic, artificial outputs with tones and pitches as a side-effect. An example of this can be heard in [AUDIO 4]({m.ss}#audio4) and [AUDIO 5]({m.ss}#audio5).
 
 <Waveform 
-title="AUDIO 4"
+title='A single output from the jank process (1)'
+caption='AUDIO 4'
 file="/ss/g17.mp3"
 peaks="/ss/g17.dat"
 id="audio4"
 />
 
 <Waveform
-title="AUDIO 5"
+title="A single output from the jank process (2)"
+caption='AUDIO 5'
 file="/ss/h0.mp3"
 peaks="/ss/h0.dat"
 id="audio5"
@@ -194,7 +198,8 @@ id="audio5"
 `search_small` creates its own random descriptor query within a narrow search range for the amplitude, spectral flatness measure and spectral centroid. This process produces perceptually tight organisations of samples without me having to specify those constraints exactly. I produced many iterations with this and selected ones that I found to be the most aesthetically pleasing. Working with this process allowed me to blindly discover descriptor queries that I could then use elsewhere. An example can be heard in [AUDIO 6]({m.ss}#audio6).
 
 <Waveform 
-title="AUDIO 6"
+title="A single output from the search_small process (1)."
+caption='AUDIO 6'
 file="/ss/e22.mp3"
 peaks="/ss/e22.dat"
 id="audio6"
@@ -206,25 +211,28 @@ For me, this methodology of generating sample phrases, auditioning them and reta
 `search_small` in one iteration randomly selected samples with high spectral flatness, high centroid and low amplitude. This created a whispering texture which was used amongst several superimposed textural phrases at 3:03. The phrase itself can be heard in [AUDIO 7]({m.ss}#audio7).
 
 <Waveform 
-title="AUDIO 7"
+title="A single output from the search_small process (2)."
+caption="AUDIO 7"
 file="/ss/whispering-texture.mp3"
 peaks="/ss/whispering-texture.dat"
 id="audio7"
 />
 
-`jank` created a number of phrases that were glitch-like and robotic in character. I composed with these more sparingly and wove them amongst other phrases, at times allowing it to exhibit the artifical qualities for longer periods of time. This can be heard in [AUDIO 8]({m.ss}#audio8) which relates to 4:38 in the piece.
+`jank` created a number of glitch-like and robotic phrases. I composed with these more sparingly and wove them amongst other phrases, at times allowing it to exhibit the artifical qualities for longer periods of time. This can be heard in [AUDIO 8]({m.ss}#audio8) which is located at 4:38 in the piece.
 
 <Waveform
-title="AUDIO 8"
+title="Glitch-like and robotic phrases produced by the jank process."
+caption='AUDIO 8'
 file="/ss/g.mp3"
 peaks="/ss/g.dat"
 id="audio8"
 />
 
-In addition to this, the outputs of `jank` were used to create dynamically constrained and tense textures that were prolonged. These became formal reprieves throughout the latter half of the piece and can be heard at 4:53 for example. [AUDIO 9]({m.ss}#audio9) shows this in isolation. 
+In addition to this, the outputs of `jank` were used to create constrained and tense textures that were prolonged. These became formal reprieves throughout the latter half of the piece and can be heard at 4:53 for example. [AUDIO 9]({m.ss}#audio9) shows this in isolation. 
 
 <Waveform 
-title="AUDIO 9"
+title='Constrained and tense textures created with the jank process'
+caption='AUDIO 9'
 file="/ss/h.mp3"
 peaks="/ss/h.dat"
 id="audio9"
@@ -232,7 +240,8 @@ id="audio9"
 
 `search_small` phrases were interspersed with other materials and heavily edited from their original form to be presented more intermittently in the overall texture. [AUDIO 10]({m.ss}#audio10) captures this, which can be heard at 4:47 in the piece.
 <Waveform 
-title="AUDIO 10"
+title='search_small outputs interspersed'
+caption='AUDIO 10'
 file="/ss/e.mp3"
 peaks="/ss/e.dat"
 id="audio10"
@@ -241,16 +250,18 @@ id="audio10"
 Outputs from `accum_phrase`were combined together to create unrelenting concatenations of vocal utterances. The repetition of short repeated phrases amongst the larger phrase itself can be heard. An example of this is in [AUDIO 11]({m.ss}#audio11). This was used as a long gesture that underpins the middle section of the piece at 3:15.
 
 <Waveform 
-title="AUDIO 11"
+title='several accum_phrase outputs concatenated together'
+caption='AUDIO 11'
 file="/ss/a+b.mp3"
 peaks="/ss/a+b.dat"
 id="audio11"
 />
 
-Even given the radical paradigm shift towards Python, I returned to using the dynamic descriptor query approach, described in ["Selecting Segments"]({m.ss}#selecting-segments). This became a pivotal method for generating material that I then manually composed with and produced contrasting gestural material in comparison to the more static and iterated nature of the Python scripts output. The first section of the piece is entirely composed from long dynamic queries spanning over up to a minute. This created slowly evolving gestures where the change in query increases the spectral bandwidth and diversity of samples selected. This is demonstrated in [AUDIO 12]({m.ss}#audio12).
+Even given the radical paradigm shift towards Python, I returned to using the dynamic descriptor query approach, described in ["Attempts To Make The Computer Generate Form"]({m.ss}#attempts-to-make-the-computer-generate-form). This became a pivotal method for generating material that I then manually composed with. It was useful in creating contrasting gestural material in comparison to the more static and iterated nature of the Python scripts output. The first section of the piece is entirely composed from long dynamic queries spanning over up to a minute. This created slowly evolving gestures where the change in query increases the spectral bandwidth and diversity of samples selected. This is demonstrated in [AUDIO 12]({m.ss}#audio12).
 
 <Waveform
-title='AUDIO 12'
+title='Dynamic descriptor query outputs (1)'
+caption='AUDIO 12'
 file='/ss/ramping-1.mp3'
 peaks='/ss/ramping-1.dat'
 id='audio12'
@@ -259,7 +270,8 @@ id='audio12'
 At 2:27, a dynamic query is used to create a rapidly changing texture encompassing highly noisy materials that reduce in amplitude over time. Refer to [AUDIO 13]({m.ss}#audio13).
 
 <Waveform
-title='AUDIO 13'
+title='Dynamic descriptor query outputs (2)'
+caption='AUDIO 13'
 file='/ss/ramping-2.mp3'
 peaks='/ss/ramping-2.dat'
 id='audio13'
@@ -268,7 +280,8 @@ id='audio13'
 A less linearly shaped query creates an oscillating gesture at 3:15. This is used to punctuate the beginning of a new section. Refer to [AUDIO 14]({m.ss}#audio14).
 
 <Waveform
-title='AUDIO 14'
+title='Dynamic descriptor query outputs (3)'
+caption='AUDIO 14'
 file='/ss/ramping-3.mp3'
 peaks='/ss/ramping-3.dat'
 id='audio14'
