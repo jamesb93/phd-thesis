@@ -418,47 +418,37 @@ What is intersting about this to me and my practice is that it shows how an algo
  
 ## Reflection
 
-Reconstruction Error was the first project in this PhD research where I felt like I had achieved a computer-aided compositional processwhere the computer and myself were engaged in a mutual dialogue. At times I would compose intuitively, returning to the computer intending to find a specific result - perhaps a new sound or a different organisation of cluster of samples. Through this back and forth I was *led* through the creative process, where the computer amplified and enhanced my own textural and timbral focused listening to a corpus of sounds that I could not otherwise do manually. This application of content-awareness allowed me to hone my initially "blunt" question and to transform my surface-level appreciation for databending into a process where I discovered. This encapsulates the nature of a wicked question, a concept I discuss in ["Content Awareness"]({m.ca}) briefly in regards to Rebecca Fiebrink's work. I could not know the solution to the problem because it began ill-defined or vague. Using the computer to solve intermediate problems and to follow ad-hoc musical interests in the moment, the question itself reached an internal consistency creating a kind of feedback between answering the question and forming the question itself.
+Reconstruction Error gave rise to a major point of development in this PhD research, in terms of compositional workflow and the relationship that I built with the computer for composition. By engaging in a dialogue with the computer , I was *led* through the creative process and the computer amplified and enhanced my textural and timbral focused listening as a primary driver of compositional action. The technical development described in ["Initial Technical Development"]({m.re}#initial-technical-development) was also a part of this dialogue and I do not consider it as a "preamble" to the composition process but rather a highly integrated part of creating the conditions in which the pieces emerged. This fusion of technology and musical thinking was one of the most successful aspects in this project. The computer's function of grouping material into clusters was commensurate with my own interpretation of the sounds while still offering something unique and producing results that were *beyond* what I could cognise. It functioned as both a way of gathering material into compositional units that were compatible with my preference for perceptual homogeneity as well as offering unexpected and divergent results. This application of content-awareness allowed me to hone my initially blunt interests and to transform my surface-level appreciation for the [databending practice]({m.re}#databending), into a project where I incorporated those ideas in an artistically authentic and personalised manner
 
-Musically, the ability to "switch off" the computer at certain points led me to writing not only the most *authentic* music at this point in the PhD but it also allowed me to try out more radical and daring presentations of material.  
+<!-- REVIEW: as a result fix -->
+Musically, being able to flexibly put aside or work entirely with the computer allowed me to compose more radical and daring presentations of material. In previous projects I had been thinking more formalistically and trying to make the computer structure works with constraints or algorithms. This was entirely not the case for Reconstruction Error and formal decision making was up to me for the most part. Although the computer had a significant effect in suggesting strategies for organising samples across local scales of time (this is prevalent in [--isn]({m.re}isn) for example), a majority of the high-level formal thinking and approach to creating overarching structures was my own doing. This was mediated by the process of the computer structuring my listening and engagement to materials and the conceptual underpinnings of each work were formulated by what  I discovered using machine listening and learning. As a result, each piece to me feels more focused in terms of compositional material and perhaps has a higher level of conceptual purity.
 
-content-awareness#concluding-remarks extraction and constructing
+Another key aspect in this work is the technological contribution and success of Python combined with the DAW. The same combination was used in [Stitch/Strata]({m.ss}) and I reflect on the success of the back and forth workflow of generation, computational curation and my responding to the output of that. For me, Reconstruction Error was proof that this workflow is how I compose the most effective music and incorporate the computer in a meaningful way that integrates with my musical thinking and motivations. It engenders the right level of interaction, where I can step between the mindset of listening and action without those two things necessarily being intertwined temporally.  As an analogy to flesh out this idea, my workflow could be contrasted to that of the live coder - who inputs their commands to the computer in real-time and listens to the response in order to guide their future actions. This process is temporally bound up in a musical setting and that kind of cybernetic prosthesis is bounded by the constraints and demands of musical time. Their reactions and interactions are entrenched in what will happen next musically. My script-based workflow separates the immediate musical concerns from the compositional and conceptual thinking that I want to explore in my creative process. This allows me to stretch, compress, shift, cut and reorganise the temporal aspects of my work apart from the material that will occupy it. The building blocks of that process are selected and navigated, *out of time* through structured listening by the computer. I realised on reflection in this project that this is an essential aspect to how I want to interact with the computer to make music. 
 
-Form and trying out conceptual ideas. Highly reduced sound worlds in some of the tracks, but also blow out noise
+### Finding Things In Stuff
 
-Solidifying the DAW + other friends as tools
-- Stitch/Strata, i explain some of the benefits that re-embracing the DAW did for that project, especially for managing intermediate states of projects and "scaffolding" or "sketching"
-Linking the DAW to extra information (i.e extending the role of the DAW through FTIS by letting me work with information that is not well represented in a timeline view)
-navigating-sample-based-music 
+The success I had with scripting in combination with REAPER motivated me to create a software framework for facilitating similar types of processes in the future. Much of the code I had written for this project would have been difficult to use for future projects. Elements such as hard-coded paths, an unstandardised file strucutre for keeping corpus materials and a general inflexibility in the code to modify it meant that it would just be easier to start again. Similary, a majority of the iterative back and forth is not necessarily well captured in the technical work. In the latter technical implementations I moved towards of system of providing the scripts with configuration files and these act as a form of documentation for what I did in the creative process, but on the whole it is difficult to trace the compositional process back to the technology. This is largely a consequence of not knowing in the moment if something I am doing is going to be significant later. Ideally, these aspects are abstracted away and performed automatically by the computer.
 
+In response to this I developed [FTIS (Finding Things In Stuff)]({m.ftis}), an extensible Python-based framework for performing audio analysis and machine learning that enables the outputs of these processes to be drawn into REAPER and Max rapidly. Instead of relying on "single-use" scripts, FTIS was designed to facilitate the construction of computer-aided processes as extensible and flexible pipelines of connected *components* that could be modified in response to creative exploration. I discuss and outline the capabiltiies and possibilities in FTIS' section of the ["Technical Implementation"]({m.ti}) as well as outline the underlying programming aspects that service my compositional thinking and workflow.
 
-### Development of FTIS
-
-Simplify the workflow and make it a tool, rather than set of ad-hoc scripts.
-
-Create data that could be used anywhere, REAPER, Max whatever. Almost completely agnostic to environment supporting flexibility in approach and no "lock in".
-
-1. Discovering structure in a corpus
-2. Finding groupings of perceptually similar materials
-3. Discovering unknown and unique items
-4. Capitalisation on known points of interest
-5. Forming/finding connections between corpus items 
-
+The next project, [{m.emname}]({m.em} ) is the final project in this PhD portfolio. Technologically it incorporates FTIS heavily and informed the development of various alpha versions of that software. To me, it is the the next step in development of processes that I discovered and used in Reconstruction Error. Musically, it draws on a similar digital and synthetic sound world. That said, the treatment of material is different and focuses on long form structure and opening up deeper modes of listening. Developing FTIS reduced the amount of time I needed to spend on building the tools necessary for my computer-aided pracitce allowing me more time to be daring an explorative with my own compositional expression.
 
 ## Other Related Links and Media
 
-I gave two presentations that discussed this project at different points in its development. The first presentation I gave was at the November 2019 FluCoMa plenary, where the pieces were partially composed and I focused on demonstrating my application of the FluCoMa tools. Much longer after the pieces had finished and I moved on to composing [{m.emname}]({m.em}), I reflected on the entire development process and its relationship to the compositions in a [short article](https://zenodo.org/record/4285398) for the 2020 AI Music Creativity Conference. This involved creating a short video demo too.
+I gave two presentations that discussed this project at different points in its development. The first presentation I gave was at the November 2019 FluCoMa plenary, where the pieces were partially composed and I focused on demonstrating my application of the FluCoMa tools. This can be seen in [VIDEO 13]({m.re}#vid13). Much longer after the pieces had finished and I moved on to composing [{m.emname}]({m.em}), I reflected on the entire development process and its relationship to the compositions in a [short article](https://zenodo.org/record/4285398) for the 2020 AI Music Creativity Conference. This involved creating a short video demo too which can be watched in [VIDEO 14]({m.re}#vid14).
 
 <YouTube 
 url="https://www.youtube.com/embed/IpD_XzW1Az4" 
-figure='VIDEO'
+figure='VIDEO 13'
 caption='"Finding Things In Stuff" presentation at the November 2019 FluCoMa Plenary'
+id='vid13'
 />
 
 <YouTube 
 url="https://www.youtube.com/embed/-FNO0QovfsI"
 caption='"Corpus exploration with UMAP and agglomerative clustering" presentation at the AI Music Creativity Conference 2020.'
-figure='VIDEO'
+figure='VIDEO 14'
+id='vid14'
 />
 
 <NextSection 

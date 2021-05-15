@@ -15,6 +15,10 @@ At the beginning I thought I was interested in formal systems, and devising stra
 - First three pieces branched out in terms of techniques and scope. I tried a number of different strategies almost in a kind of blind fashion to see what would "stick". The last two projects are  more directed toward a specific approach and workflow that developed between them.
 
 - I found more ways for computer to suggest me things, rather than me using the computer to go and find things I thought I wanted to find...
+
+<!-- This process is perhaps my personalised answer to the notion of a wicked question in my compositional practice, a concept I discuss in ["Content Awareness"]({m.ca}) in regards to Rebecca Fiebrink's work. Using
+
+and to follow ad-hoc musical interests in the moment, the question itself reached an internal consistency creating a kind of feedback between answering and forming the question itself.  -->
 ## Realisational and Functional Interfaces
 ### Four Phases
 
@@ -28,15 +32,11 @@ https://llllllll.co/t/quotes-on-music-composition/12794/38
 
 Tightening the iterative development cycle as much as possible.
 
-## Convergence
-<!-- 
-    While I tout technology being non-deterministic as a feature, 
-    a prominent feature of the last two projects is a focusing on processes that are similar
-    When compared to the the first 3 projects, the last 2 show a much more refined approach 
-    that has been shaped by musical interest converging alongside a number of technological tools
--->
+The PhD journey for me was about finding the workflow that I created in the last two pieces. Finding myself? Too lame? FTIS and Interfences was the logical conclusion to a three year development process
 ## Continuing Concerns and the Future
 Building methods for intervention. Being able to adjust outputs with a sensible interface or set of tools
+
+
 ### Technology
 #### Rebuilding the Workflow
 - Part of this PhD research has been about developing a workflow maintains contuinity between projects while allowing a level of flexibility. Developing a relatively stable set software tools and practice toward this end has been a process of refining and understanding what it is I want to derive from this hybrid computer-assisted workflow as well as conceiving of interfaces for exploring those interests. I believe FTIS's role will extend into the future...

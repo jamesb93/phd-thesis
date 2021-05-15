@@ -33,7 +33,6 @@ Significantly improving the gain of the source material, bringing out the detail
 
 ### Static vs gestural
 ### ClusterFck
-### Early FTIS
 
 ## Exploring with FTIS
 ### Borrowing From [Reconstruction Error]({m.re})
@@ -59,6 +58,8 @@ https://hal.archives-ouvertes.fr/hal-00512744/document
 ## Reflection
 ### Using the computer to work from more knowns in composition
 ### Towards a stable workflow
+
+Would have I been able to segment the material at the scale it existed at, analyse it and do the other various processes without the computer?
 
 <NextSection 
 next="Technical Implementation and Software"
