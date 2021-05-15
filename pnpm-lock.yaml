@@ -401,8 +401,8 @@ packages:
     resolution: {integrity: sha1-xs0OwbBkLio8Z6ETfvxeeW2k+I4=}
     dev: false
 
-  /esbuild/0.11.20:
-    resolution: {integrity: sha512-QOZrVpN/Yz74xfat0H6euSgn3RnwLevY1mJTEXneukz1ln9qB+ieaerRMzSeETpz/UJWsBMzRVR/andBht5WKw==}
+  /esbuild/0.11.22:
+    resolution: {integrity: sha512-1e6BDytHzTxRlUOCe7M0+ZV5JqKARByHwz1iP5UNmxt2TEOyI8E/1gLLNCyaPjpXfCr1TThxTyFO9MjF5mFLvA==}
     hasBin: true
     requiresBuild: true
     dev: true
@@ -643,8 +643,8 @@ packages:
       path-parse: 1.0.6
     dev: true
 
-  /rollup/2.47.0:
-    resolution: {integrity: sha512-rqBjgq9hQfW0vRmz+0S062ORRNJXvwRpzxhFXORvar/maZqY6za3rgQ/p1Glg+j1hnc1GtYyQCPiAei95uTElg==}
+  /rollup/2.48.0:
+    resolution: {integrity: sha512-wl9ZSSSsi5579oscSDYSzGn092tCS076YB+TQrzsGuSfYyJeep8eEWj0eaRjuC5McuMNmcnR8icBqiE/FWNB1A==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -781,10 +781,10 @@ packages:
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
-      esbuild: 0.11.20
+      esbuild: 0.11.22
       postcss: 8.2.15
       resolve: 1.20.0
-      rollup: 2.47.0
+      rollup: 2.48.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
