@@ -5,10 +5,10 @@
 </script>
 
 # Projects
+In this section, five compositional projects are examined and the way that content-awareness is used in computer-aided composition is outlined.
 
-In this section, five compositional projects are examined and the way that content-awareness is used in computer-aided composition is outlined. The sections can be accessed via the links below.
 
-[4.1 Stitch Strata]({m.ss})
+<!-- [4.1 Stitch Strata]({m.ss})
 
 [4.2 Annealing Strategies]({m.as})
 
@@ -16,7 +16,7 @@ In this section, five compositional projects are examined and the way that conte
 
 [4.4 Reconstruction Error]({m.re})
 
-[4.5 Electromagnetic]({m.em})
+[4.5 Electromagnetic]({m.em}) -->
 
 <NextSection 
 next="Stitch/Strata"
