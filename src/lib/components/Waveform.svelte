@@ -6,7 +6,7 @@
 
     export let segments;
     export let title = "title";
-    export let caption = null;
+    export let caption = "";
     export let file;
     export let peaks;
     export let id = "";
@@ -66,13 +66,8 @@
 <Container id={id}>
     <div class="horizontal overview">
         <span id="title">{title}</span>
-        {#if caption}
         <span id="caption">{caption}</span>
-        {/if}
-        <div bind:this={controls} class="audio-controls">
-            <Button clickHandler={ () => instance.zoom.zoomIn() } text="+" />
-            <Button clickHandler={ () => instance.zoom.zoomOut() } text="-" />
-        </div>
+
     </div>
     <div class="vis">
         <div class="overview" bind:this={overview} />
@@ -83,6 +78,10 @@
             <source src={file} type="audio/mp3">
             <track kind="captions">
         </audio>
+        <div bind:this={controls} class="audio-controls">
+            <Button clickHandler={ () => instance.zoom.zoomIn() } text="+" />
+            <Button clickHandler={ () => instance.zoom.zoomOut() } text="-" />
+        </div>
     </div>
     {#if segments}
     <ul class="segments">
@@ -104,24 +103,22 @@
     .audio-controls {
         display: flex;
         flex-direction: row;
-        gap : 5px;
     }
     
     #title {
-        font-style: italic;
-        font-size: 16px;
         text-align: left;
+        font-weight: bold;
     }
     
     #caption{
         display: inline-block;
+        font-style: italic;
     }
     
     .horizontal {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        height: 10%;
         padding-bottom: 15px;
     }
     
@@ -132,7 +129,7 @@
     
     .peaks-controls {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         padding-top: 3px;
     }
     
