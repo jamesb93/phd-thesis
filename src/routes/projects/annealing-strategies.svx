@@ -15,7 +15,8 @@
 # Annealing Strategies
 
 <Waveform
-title='AUDIO 1: "Annealing Strategies" (738_noise.simplex_529135023)'
+title='Annealing Strategies (738_noise.simplex_529135023)'
+caption='AUDIO 1'
 file="/pieces/as.mp3"
 peaks="/pieces/as.dat"
 id="aud1"
