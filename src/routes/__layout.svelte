@@ -7,6 +7,7 @@
 	let w;
 	let navshow = false;
 	const minWidth = 1276;
+	let justifyText = true;
 	$: navshow = (w >= minWidth);
 	
 	const pagesWithoutNav = ['/', '/projects', '/conclusion', '/tech'];
@@ -36,14 +37,15 @@
 	{/if}
 	
 	{#if navshow || w > minWidth}
-	<StaticNav bind:navshow={navshow}/>
+	<StaticNav bind:navshow={ navshow } bind:value={ justifyText } />
 	{/if}
 	
 	<article
 	id="article"
 	on:click={backgroundClickHandle} 
 	class="content" 
-	class:dim='{w < minWidth && navshow}'
+	class:dim={ w < minWidth && navshow }
+	class:justify={ justifyText }
 	>
 	<slot />
 </article>
@@ -59,12 +61,15 @@
 
 
 <style>
+	.justify {
+		text-align: justify;
+		text-justify: inter-word;
+	}
+
 	.wrapper {
 		display: grid;
 		grid-template-columns: auto min(80ch, 100%) auto;
 		justify-content: center;
-		padding-left: 0em;
-		padding-right: 0em;
 		max-width: 160ch;
 		margin: 0 auto;
 	}
@@ -74,9 +79,6 @@
 	}
 	
 	.content {
-		margin-top: 5em;
-		justify-content: center;
-		padding-left: 1em;
 		height: 100%;
 	}
 	

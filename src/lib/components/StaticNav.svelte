@@ -1,14 +1,20 @@
 <script>
     import {metadata as m} from "../../routes/directory.svx"
+	import Button from '$lib/components/Button.svelte';
 	import { page } from "$app/stores";
 	export let navshow;
+	export let value;
 	function handleClick(){
 		navshow = false;
 	};
+
+	function handleButton() {
+		value = !value			
+	}
 </script>
 
-
 <nav class="container">
+	<Button clickHandler={handleButton} text="toggle justification"/>
 	<ul>
 		<li><a  on:click={handleClick} class="link section" class:selected='{$page.path === "/"}'	href='.'>Home</a></li>
 		
@@ -45,21 +51,14 @@
 	.container {
 		position: fixed;
 		height: 100%;
-		background-color: white;
-		z-index: 99;
 		box-shadow: 1em;
-		padding-left: 5em;
-	}
-
-	nav {
 		min-width: max-content;
-		max-width: max-content;
-		padding-left: 0;
-		transition: 0.1s;
-		height: 100%;
 		padding-right: 1em;
 		z-index: 200;
+		margin-left: 100px;
+		padding-top: 23px;
 	}
+
 
 	ul {
 		font-size: 12px;
@@ -67,7 +66,6 @@
 		word-wrap: none;
 		padding-left: 0;
 		opacity: 1;
-		padding-top: 5em;
 	}
 
 	ul li {
@@ -75,7 +73,6 @@
 	}
 
 	.selected {
-		display: inline-block;
 		color: rgb(0, 0, 0);
 		font-weight: bold;
 	}
@@ -88,7 +85,6 @@
 		color: rgb(127, 127, 127);
 		text-decoration: none;
 		padding: 0.1em;
-		display: block;
 	}
 
 	.link:hover {

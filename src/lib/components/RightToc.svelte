@@ -99,9 +99,9 @@
         z-index: 99;
 		height: 100%;
         position: fixed;
-        line-height: 2em;
-        padding-top: 5em;
+        line-height: 1.8em;
         font-size: 11px;
+        padding-top: 13px;
     }
 
     .shown {
