@@ -48,15 +48,15 @@
 	class:justify={ justifyText }
 	>
 	<slot />
-</article>
+	</article>
 
-<div class="pagenav">
-	{#if w > minWidth}
-	{#if !pagesWithoutNav.includes($page.path)}
-	<RightToc/>
-	{/if}
-	{/if}
-</div>
+	<div class="pagenav">
+		{#if w > minWidth}
+			{#if !pagesWithoutNav.includes($page.path)}
+			<RightToc/>
+			{/if}
+		{/if}
+	</div>
 </main>
 
 
@@ -65,7 +65,6 @@
 		text-align: justify;
 		text-justify: inter-word;
 	}
-
 	.wrapper {
 		display: grid;
 		grid-template-columns: auto min(80ch, 100%) auto;
@@ -73,42 +72,33 @@
 		max-width: 160ch;
 		margin: 0 auto;
 	}
-	
 	.wrapper > article {
 		grid-column: 2;
 	}
-	
 	.content {
 		height: 100%;
 	}
-	
 	.dim {
 		opacity: 0.25;
 	}
-	
 	svg {
 		min-height: 24px;
 		transition: transform 0.3s ease-in-out;
 	}
-	
 	svg line {
 		stroke: darkgray;
 		stroke-width: 2;
 	}
-	
 	.btn {
 		background-color: white;
 		box-shadow: none;
 		border-width: 0px;
 	}
-	
 	.btn-container {
 		position:fixed;
 		z-index: 100;
 	}
-	
 	.pagenav {
-		display: grid;
+		min-width: max-content;
 	}
-	
 </style>

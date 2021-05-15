@@ -42,7 +42,11 @@
         })
     }
 
-    const makeObserver = () => {
+    function clipLinks(t, maxLen) {
+        return t.length >= maxLen ? t.substr(0, maxLen)+'...' : t 
+    }
+
+    function makeObserver() {
         iteratePage();
         observer = new IntersectionObserver(handleIntersect, options);
         if (contents) {
@@ -76,46 +80,42 @@
 
 </script>
 
-<div class="container">
-    {#if contents}
-        <ul>
-            {#each contents as section}
-                    <li>
-                        <a 
-                        class="link depth-{section.depth}" 
-                        href="{$page.path}#{section.url}"
-                        class:shown={visibility === section.url} 
-                        > 
-                            {section.heading}
-                        </a>
-                    </li>
-            {/each}
-        </ul>
-    {/if}
-</div>
+
+{#if contents}
+    <div class='container'>
+        {#each contents as section}
+                    <a 
+                    class="link depth-{section.depth}" 
+                    href="{$page.path}#{section.url}"
+                    class:shown={visibility === section.url} 
+                    > 
+                        { clipLinks(section.heading, 40) }
+                    </a>
+        {/each}
+    </div>
+{/if}
+
+
 
 <style>
-	.container {
+
+    .container {
+        display: flex;
+        flex-direction: column;
         z-index: 99;
 		height: 100%;
         position: fixed;
         line-height: 1.8em;
         font-size: 11px;
         padding-top: 13px;
+        padding-left: 20px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .shown {
         font-weight:bold;
-    }
-    
-    ul li{
-        display: block;
-    }
-
-    .link {
-        text-overflow: ellipsis;
-        word-wrap: ellipsis;
-        white-space: nowrap;
     }
 
     .depth-1 {margin-left: 0em}
