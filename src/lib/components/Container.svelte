@@ -24,9 +24,7 @@
         margin-bottom: 30px;
         margin-left: auto;
         margin-right: auto;
-        padding-top: 10px;
-        padding-bottom: 10px;
-
+        padding: 10px;
     }
 
     .container:hover {
