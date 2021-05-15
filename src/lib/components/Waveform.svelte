@@ -1,6 +1,7 @@
 <script>
     import { onMount } from "svelte";
     import { browser } from "$app/env";
+    import Container from '$lib/components/Container.svelte';
     import Button from '$lib/components/Button.svelte';
 
     export let segments;
@@ -62,7 +63,7 @@
     }
 </script>
 
-<div class="audio-box" id={id}>
+<Container id={id}>
     <div class="horizontal overview">
         <span id="title">{title}</span>
         {#if caption}
@@ -96,27 +97,9 @@
         {/each}
     </ul>
     {/if}
-</div>
+</Container>
 
 <style>
- .audio-box {
-        padding-top: 20px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding-bottom: 20px;
-        border-radius: 12px;
-        border: 3px solid rgba(128, 128, 128, 0.575);
-        transition: border .5s;
-        padding-left: 20px;
-        padding-right: 20px;
-
-    }
-    
-    .audio-box:hover {
-        border: 3px solid #2b5aa1a2;
-        transition: border .5s;
-        gap: 3px;
-    }
     
     .audio-controls {
         display: flex;
