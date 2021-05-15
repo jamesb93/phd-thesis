@@ -7,14 +7,16 @@
     export let inFunc;
     export let chFunc;
     export let showValue = true;
+    export let showMin = true;
+    export let showMax = true;
 </script>
 
 <div class="pad">
     <span class="text title">{title}</span>
     <div class="container">
-        <span class="text min">{min}</span>
+        <span class:hidden={showMin === false} class="text min">{min}</span>
         <input class="slider" type="range" min={min} max={max} step={step} bind:value={value} on:input={inFunc} on:change={chFunc} />
-        <span class="text max">{max}</span>
+        <span class:hidden={showMax === false} class="text max">{max}</span>
     </div>
     {#if showValue}
         <span class="text value">{value}</span>
@@ -79,5 +81,9 @@
         border-radius: 50%;
         background: #4c87af;
         cursor: pointer;
+    }
+
+    .hidden {
+        display: none;
     }
 </style>
