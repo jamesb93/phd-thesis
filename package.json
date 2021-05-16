@@ -3,10 +3,12 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "pnpm run scrape && svelte-kit dev --host --port 3001",
-    "build": "svelte-kit build",
+    "build": "pnpm run scrape && svelte-kit build",
     "start": "svelte-kit start",
     "scrape": "python3 scrape_links.py",
-    "convert": "sh convert.sh"
+    "convert": "pnpm run scrape && sh convert.sh",
+    "deploy" : "pnpm run scrape && sh deploy.sh",
+    "update" : "pnpm run build && pnpm run deploy"
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "next",
