@@ -15,7 +15,7 @@
     let plot1, plot2, plot3, plot4;
     let canvas;
     let neighbours, mindist, d;
-
+    let ready = false;
     function update() {
         // Band the interpolation
         if (interp <= 1.0 && interp >= 0.0)
@@ -66,11 +66,13 @@
         await fetch('/plots/umap30-0.1.json')
             .then(response => response.json())
             .then(data => plot4 = data)
-        
+
+            
         blend1 = d3.interpolateObject(plot1, plot2);
         blend2 = d3.interpolateObject(plot2, plot3);
         blend3 = d3.interpolateObject(plot3, plot4);
         update();
+        ready = true;
         let space = new CanvasSpace('#sketch').setup({ bgcolor: '#fff' });
         let form = space.getForm();
         space.add({
@@ -105,6 +107,9 @@
         </div>
     </div>
     <Slider showValue={ false } showMin={ false } showMax={ false } bind:value={ interp } inFunc={ update } min={0.0} max={3.0} step={0.005} />
+    {#if ready === false}
+    <span>Loading UMAP Data...</span>
+    {/if}
     <canvas id='sketch' bind:this={ canvas } />
 </Container>
 
