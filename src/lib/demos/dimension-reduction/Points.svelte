@@ -1,6 +1,7 @@
 <script>
     import * as d3 from 'd3';
     import { onMount } from 'svelte';
+    import { browser } from '$app/env';
     import { CanvasSpace, Pt } from 'pts';
     import Container from '$lib/components/Container.svelte';
     import Slider from '$lib/components/Slider.svelte';
@@ -12,11 +13,14 @@
     export let title = 'title'
     export let caption = 'DEMO'
     export let id = ''
-
     let interp = 0.0;
-    const blend1 = d3.interpolateObject(plot1, plot2);
-    const blend2 = d3.interpolateObject(plot2, plot3);
-    const blend3 = d3.interpolateObject(plot3, plot4);
+    let blend1, blend2, blend3;
+
+    if (browser) {
+        blend1 = d3.interpolateObject(plot1, plot2);
+        blend2 = d3.interpolateObject(plot2, plot3);
+        blend3 = d3.interpolateObject(plot3, plot4);
+    }
     let canvas, anchor, mousedown
     let neighbours = plot1.parameters.neighbours;
     let mindist = plot2.parameters.mindist
