@@ -9,18 +9,18 @@
     import plot4 from './umap30-0.1.json';
 
     let interp = 0.0;
-    const zoom = 1.0;
     const blend1 = d3.interpolateObject(plot1, plot2);
     const blend2 = d3.interpolateObject(plot2, plot3);
     const blend3 = d3.interpolateObject(plot3, plot4);
-    let canvas, anchor, mousedown, config;
+    let canvas, anchor, mousedown
+    let config = 100;
     let d = plot1;
 
     function update() {
         // Band the interpolation
         if (interp <= 1.0 && interp >= 0.0) {
             d = blend1(interp);
-            config = 'config 1'
+            config = 'config dasdsadas'
         }
 
         if (interp <= 2.0 && interp > 1.0 ) {
@@ -44,14 +44,11 @@
                 d.data.forEach(z => {
                     form.fillOnly('grey').point( 
                         new Pt(
-                            z.x*space.width*zoom, 
-                            z.y*space.height*zoom
+                            z.x*space.width*0.95, 
+                            z.y*space.height* 0.95
                         ), 0.6, 'square' 
                     );
                 })
-            },
-            action: (t,x,y,e) => {
-
             }
         });
         space.play().bindMouse();
