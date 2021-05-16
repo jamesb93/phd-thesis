@@ -43,8 +43,6 @@ a:hover, a:link:hover {
 	color: white;
 	background-color: var(--blue);
 	text-decoration: underline;
-	transition: background-color 0.08s linear;
-	transition: color 0.08s linear;
 }
 
 .bigquote { /* A style for long indented quotes*/
