@@ -63,7 +63,7 @@
 
 	ul {
 		font-size: 12px;
-		color: rgb(127, 127, 127);
+		color: rgb(2, 2, 2);
 		word-wrap: none;
 		padding-left: 0;
 		opacity: 1;
@@ -83,14 +83,14 @@
 	}
 
 	.link {
-		color: rgb(127, 127, 127);
+		color: rgb(2, 2, 2);
 		text-decoration: none;
 		padding: 0.1em;
 	}
 
 	.link:hover {
 		color: white;
-		background-color: rgb(95, 95, 95);
+		/* background-color: rgb(2, 2, 2); */
 		text-decoration: underline;
 	}
 
