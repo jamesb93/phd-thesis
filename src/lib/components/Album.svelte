@@ -13,6 +13,7 @@
     let playState = false;
     let fakeAudio = new Array(tracks.trackData.length).fill(null);
     let loading = true;
+
     onMount (async()=>{
         if (browser) {
             const module = await import("peaks.js");
@@ -80,7 +81,6 @@
             const date = new Date(time * 1000).toISOString().substr(11, 8)
             return date.toString().substr(3);
         }
-
         return 'Invalid Time Format'
     }
 
@@ -118,7 +118,6 @@
                 <div class='duration'>
                 {#if fakeAudio[i] !== null && fakeAudio[i].duration !== NaN}
                     { convertTime(fakeAudio[i].duration) }
-                    { console.log(fakeAudio[i]) }
                 {/if}
                 </div>
             </div>
