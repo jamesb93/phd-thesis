@@ -11,6 +11,7 @@
 
     export let title = 'title'
     export let caption = 'DEMO'
+    export let id = ''
 
     let interp = 0.0;
     const blend1 = d3.interpolateObject(plot1, plot2);
@@ -75,7 +76,7 @@
     })
 </script>
 
-<Container zoom={false}>
+<Container zoom={false} id={id}>
     <div id='top-text'>
         <div id='info'>
             <span id='title'>{title}</span>
