@@ -3,36 +3,56 @@
     import { onMount } from 'svelte';
     import { CanvasSpace, Pt } from 'pts';
     import Container from '$lib/components/Container.svelte';
+    import Slider from '$lib/components/Slider.svelte';
     import plot1 from './umap7-0.1.json';
     import plot2 from './umap15-0.75.json';
     import plot3 from './umap15-0.1.json';
     import plot4 from './umap30-0.1.json';
+
+    export let title = 'title'
+    export let caption = 'DEMO'
 
     let interp = 0.0;
     const blend1 = d3.interpolateObject(plot1, plot2);
     const blend2 = d3.interpolateObject(plot2, plot3);
     const blend3 = d3.interpolateObject(plot3, plot4);
     let canvas, anchor, mousedown
-    let config = 100;
+    let neighbours = plot1.parameters.neighbours;
+    let mindist = plot2.parameters.mindist
     let d = plot1;
 
     function update() {
         // Band the interpolation
-        if (interp <= 1.0 && interp >= 0.0) {
+        if (interp <= 1.0 && interp >= 0.0)
             d = blend1(interp);
-            config = 'config dasdsadas'
-        }
 
-        if (interp <= 2.0 && interp > 1.0 ) {
+        if (interp <= 2.0 && interp > 1.0 )
             d = blend2(interp-1.0);
-            config = 'config 2'
-        }
 
-
-        if (interp <= 3.0 && interp > 2.0) {
+        if (interp <= 3.0 && interp > 2.0)
             d = blend3(interp-2.0);
-            config = 'config 3'
-        } 
+        
+        neighbours = d.parameters.neighbours;
+        mindist = d.parameters.mindist;
+        // if (interp <= 0.5 && interp >= 0.0) {
+        //     neighbours = plot1.parameters.neighbours;
+        //     mindist = plot1.parameters.mindist;
+        // }
+
+        // if (interp <= 1.5 && interp > 0.5) {
+        //     neighbours = plot2.parameters.neighbours;
+        //     mindist = plot2.parameters.mindist;
+        // }
+
+        // if (interp <= 2.5 && interp > 1.5) {
+        //     neighbours = plot3.parameters.neighbours;
+        //     mindist = plot3.parameters.mindist;
+        // }
+
+        // if (interp <= 4.0 && interp > 2.5) {
+        //     neighbours = plot4.parameters.neighbours;
+        //     mindist = plot4.parameters.mindist;
+        // }
     };
 
     onMount(async() => {
@@ -42,7 +62,7 @@
         space.add({
             animate: (time, ftime, space) => {
                 d.data.forEach(z => {
-                    form.fillOnly('grey').point( 
+                    form.fillOnly('#0d47a1').point( 
                         new Pt(
                             z.x*space.width*0.95, 
                             z.y*space.height* 0.95
@@ -55,10 +75,22 @@
     })
 </script>
 
-<h1>Points</h1>
-<Container>
-    { config }
-    <input type='range' bind:value={ interp } on:input={ update } min=0.0 max=3.0 step=0.001 />
+<Container zoom={false}>
+    <div id='top-text'>
+        <div id='info'>
+            <span id='title'>{title}</span>
+            <span id='caption'>{caption}</span>
+        </div>
+        <div id='parameters'>
+            <span>
+                Neighbours: { parseFloat(neighbours).toFixed(2) }
+            </span>
+            <span>
+                Minimum Distance: { parseFloat(mindist).toFixed(2) }
+            </span>
+        </div>
+    </div>
+    <Slider showValue={ false } showMin={ false } showMax={ false } bind:value={ interp } inFunc={ update } min={0.0} max={3.0} step={0.005} />
     <canvas id='sketch' bind:this={ canvas } />
 </Container>
 
@@ -66,6 +98,31 @@
     #sketch {
         width: 100%;
         height: 600px;
+    }
+
+    #top-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #title {
+        font-weight: bold;
+    }
+
+    #caption {
+        font-style: italic;
+    }
+
+    #parameters {
+        display: flex;
+        flex-direction: column;
+        text-align: right;
     }
 </style>
 

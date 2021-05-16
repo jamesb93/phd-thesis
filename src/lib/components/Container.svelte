@@ -1,8 +1,9 @@
 <script>
     export let id = "";
+    export let zoom = true;
 </script>
 
-<div class='container' id={id}>
+<div class='container' id={id} class:zoomable={ zoom === true }>
     <slot />
 </div>
 
@@ -27,13 +28,13 @@
         padding: 10px;
     }
 
-    .container:hover {
+    .zoomable:hover {
         --scale: 1.03;
         -webkit-transform: scale(var(--scale), var(--scale));
         transform: scale(var(--scale), var(--scale));
     }
 
-    .container::after {
+    .zoomable::after {
         content: "";
         border-radius: 5px;
         position: absolute;
@@ -47,7 +48,7 @@
         transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
-    .container::hover::after {
+    .zoomable::hover::after {
         opacity: 1;
     }
 

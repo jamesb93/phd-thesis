@@ -61,8 +61,8 @@
         background: #d3d3d3;
         outline: none;
         opacity: 0.7;
-        -webkit-transition: .2s;
-        transition: opacity .2s;
+        /* -webkit-transition: .2s;
+        transition: opacity .2s; */
     }
     
     .slider::-webkit-slider-thumb {
