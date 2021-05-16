@@ -14,8 +14,8 @@
 
 <Waveform 
 title="Refracted Touch"
-file="/rt/Refracted_Touch.mp3"
-peaks="/rt/Refracted_Touch.dat"
+file="/pieces/Refracted_Touch.mp3"
+peaks="/pieces/Refracted_Touch.dat"
 id="rtbumper"
 />
 
@@ -303,8 +303,8 @@ id="img3"
 
 <Waveform 
 title="Refracted Touch, first performance"
-file="/rt/Refracted_Touch.mp3"
-peaks="/rt/Refracted_Touch.dat"
+file="/pieces/Refracted_Touch.mp3"
+peaks="/pieces/Refracted_Touch.dat"
 id="rtpiece"
 segments={states}
 />
