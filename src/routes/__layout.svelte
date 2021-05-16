@@ -10,7 +10,7 @@
 	let justifyText = true;
 	$: navshow = (w >= minWidth);
 	
-	const pagesWithoutNav = ['/', '/projects', '/conclusion', '/tech'];
+	const pagesWithoutNav = ['/', '/projects', '/conclusion', '/tech', '/test'];
 	
 	function clickHandle(){
 		navshow = !navshow
