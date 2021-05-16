@@ -14,12 +14,12 @@
     "@sveltejs/adapter-node": "next",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
-    "d3": "^6.7.0",
     "svelte": "^3.38.2",
     "vite": "^2.3.2"
   },
   "type": "module",
   "dependencies": {
+    "d3": "^6.7.0",
     "marked": "^2.0.3",
     "mdsvex": "^0.9.5",
     "peaks.js": "^0.25.0",
