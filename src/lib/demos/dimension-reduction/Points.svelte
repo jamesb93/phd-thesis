@@ -15,13 +15,7 @@
     export let id = ''
     let interp = 0.0;
     let blend1, blend2, blend3;
-
-    if (browser) {
-        blend1 = d3.interpolateObject(plot1, plot2);
-        blend2 = d3.interpolateObject(plot2, plot3);
-        blend3 = d3.interpolateObject(plot3, plot4);
-    }
-    let canvas, anchor, mousedown
+    let canvas;
     let neighbours = plot1.parameters.neighbours;
     let mindist = plot2.parameters.mindist
     let d = plot1;
@@ -61,6 +55,9 @@
     };
 
     onMount(async() => {
+        blend1 = d3.interpolateObject(plot1, plot2);
+        blend2 = d3.interpolateObject(plot2, plot3);
+        blend3 = d3.interpolateObject(plot3, plot4);
         update();
         let space = new CanvasSpace('#sketch').setup({ bgcolor: '#fff' });
         let form = space.getForm();
