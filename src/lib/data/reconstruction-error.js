@@ -12,13 +12,13 @@ export const reAlbum = {
 export const ibuffer = {
     prefix: '/re/db-initial/',
     trackData : [
-        { name: 'AEC.pdf', audio: 'AEC-attenuated.mp3',  peaks: 'AEC.dat' },
-        { name: 'carl.png', audio: 'carl-attenuated.mp3',  peaks: 'carl.dat' },
-        { name: 'crash.rtf', audio: 'crash-attenuated.mp3',  peaks: 'crash.dat' },
-        { name: 'clickers.RPP', audio: 'clickers-attenuated.mp3',  peaks: 'clickers.dat' },
-        { name: 'er022ew.pdf', audio: 'er022ew-attenuated.mp3',  peaks: 'er022ew.dat' },
-        { name: 'picture.raw', audio: 'picture-attenuated.mp3',  peaks: 'picture.dat' },
-        { name: 'screenie.pdf', audio: 'screenie-attenuated.mp3',  peaks: 'screenie.dat' },
+        { name: 'AEC.pdf', audio: 'AEC.mp3',  peaks: 'AEC.dat' },
+        { name: 'carl.png', audio: 'carl.mp3',  peaks: 'carl.dat' },
+        { name: 'crash.rtf', audio: 'crash.mp3',  peaks: 'crash.dat' },
+        { name: 'clickers.RPP', audio: 'clickers.mp3',  peaks: 'clickers.dat' },
+        { name: 'er022ew.pdf', audio: 'er022ew.mp3',  peaks: 'er022ew.dat' },
+        { name: 'picture.raw', audio: 'picture.mp3',  peaks: 'picture.dat' },
+        { name: 'screenie.pdf', audio: 'screenie.mp3',  peaks: 'screenie.dat' },
         { name: 'Screenshot 2019-04-26 at 11.04.50.png', audio: 'Screenshot 2019-04-26 at 11.04.50-attenuated.mp3',  peaks: 'Screenshot 2019-04-26 at 11.04.50.dat' },
         { name: 'Screenshot 2019-04-26 at 11.05.00.png', audio: 'Screenshot 2019-04-26 at 11.05.00-attenuated.mp3',  peaks: 'Screenshot 2019-04-26 at 11.05.00.dat' }
     ]
