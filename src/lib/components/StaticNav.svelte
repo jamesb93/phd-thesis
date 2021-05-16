@@ -49,13 +49,14 @@
 		color:rgb(178, 178, 178)
 	}
 	.container {
+		background-color:white;
 		position: fixed;
 		height: 100%;
 		box-shadow: 1em;
 		min-width: max-content;
 		padding-right: 1em;
 		z-index: 200;
-		margin-left: 100px;
+		padding-left: 100px;
 		padding-top: 23px;
 	}
 
