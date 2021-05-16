@@ -26,6 +26,7 @@
         margin-left: auto;
         margin-right: auto;
         padding: 10px;
+        text-align: left;
     }
 
     .zoomable:hover {
