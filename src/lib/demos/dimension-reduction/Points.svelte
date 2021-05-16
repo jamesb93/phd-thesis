@@ -5,20 +5,16 @@
     import { CanvasSpace, Pt } from 'pts';
     import Container from '$lib/components/Container.svelte';
     import Slider from '$lib/components/Slider.svelte';
-    import plot1 from './umap7-0.1.json';
-    import plot2 from './umap15-0.75.json';
-    import plot3 from './umap15-0.1.json';
-    import plot4 from './umap30-0.1.json';
 
     export let title = 'title'
     export let caption = 'DEMO'
     export let id = ''
+
     let interp = 0.0;
     let blend1, blend2, blend3;
+    let plot1, plot2, plot3, plot4;
     let canvas;
-    let neighbours = plot1.parameters.neighbours;
-    let mindist = plot2.parameters.mindist
-    let d = plot1;
+    let neighbours, mindist, d;
 
     function update() {
         // Band the interpolation
@@ -55,6 +51,22 @@
     };
 
     onMount(async() => {
+        await fetch('/plots/umap7-0.1.json')
+            .then(response => response.json())
+            .then(data => plot1 = data)
+
+        await fetch('/plots/umap15-0.1.json')
+            .then(response => response.json())
+            .then(data => plot2 = data)
+
+        await fetch('/plots/umap15-0.75.json')
+            .then(response => response.json())
+            .then(data => plot3 = data)
+            
+        await fetch('/plots/umap30-0.1.json')
+            .then(response => response.json())
+            .then(data => plot4 = data)
+        
         blend1 = d3.interpolateObject(plot1, plot2);
         blend2 = d3.interpolateObject(plot2, plot3);
         blend3 = d3.interpolateObject(plot3, plot4);
