@@ -1,0 +1,1 @@
+7 [ descriptor amp < - 75 centroid $2 $1 ] [ temperature 5000 ] [ anneal_rate 100 ] [ anneal_strats centroid -> amp ] [ seed bang ] 
