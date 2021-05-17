@@ -11,10 +11,14 @@ What did you set out to do and what does each piece explore?
 Overall the first three porjects started as experimentation and attempts to see what would stick. The last two projects honed my compositional practice toward a way of working supported by building a set of tools that facilitated computer-aided composition with samples in a highly novel and unique manner.
 
 At the beginning I thought I was interested in formal systems, and devising strategies in which the computer could structure elements in a coherent way from the lowest to highest formal levels. Now, I am more interested in the computer functioning as a facilitator of exploration and for finding material which I then structure.
+
+The way I ended up using technology supported the way that I reason around compositional materials, as well defined perceptually homogenous units. This is both grounded in the perception of their timbre also morphology. Reconstruction Error and Electromangetic focused on this hugely
 ## Composition Workflow and Process
 - First three pieces branched out in terms of techniques and scope. I tried a number of different strategies almost in a kind of blind fashion to see what would "stick". The last two projects are  more directed toward a specific approach and workflow that developed between them.
 
 - I found more ways for computer to suggest me things, rather than me using the computer to go and find things I thought I wanted to find...
+
+“This is the essence of intuitive heuristics: when faced with a difficult question, we often answer an easier one instead, usually without noticing the substitution.” - Thinking Fast and Slow
 
 - Also relying more on the DAW
     - ReaScripting to modify items as compositional groups/units
