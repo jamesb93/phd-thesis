@@ -113,6 +113,7 @@
     #caption{
         display: inline-block;
         font-style: italic;
+        min-width: max-content;
     }
     
     .horizontal {
