@@ -16,6 +16,10 @@ At the beginning I thought I was interested in formal systems, and devising stra
 
 - I found more ways for computer to suggest me things, rather than me using the computer to go and find things I thought I wanted to find...
 
+- Also relying more on the DAW
+    - ReaScripting to modify items as compositional groups/units
+    - Statefulness, reference where this is discussed elsewhere.
+
 <!-- This process is perhaps my personalised answer to the notion of a wicked question in my compositional practice, a concept I discuss in ["Content Awareness"]({m.ca}) in regards to Rebecca Fiebrink's work. Using
 
 and to follow ad-hoc musical interests in the moment, the question itself reached an internal consistency creating a kind of feedback between answering and forming the question itself.  -->

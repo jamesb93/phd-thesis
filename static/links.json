@@ -573,7 +573,7 @@
             "url": "http://sox.sourceforge.net"
         },
         {
-            "name": "scrape_files.py",
+            "name": "`scrape_files.py`",
             "url": "https://github.com/jamesb93/data_bending/blob/master/python_scripts/scraping/scrape_files.py"
         },
         {
@@ -593,8 +593,16 @@
             "url": "https://discourse.flucoma.org/t/difficult-segmentation/222"
         },
         {
+            "name": "`6_mfcc.py`",
+            "url": "https://github.com/jamesb93/data_bending/blob/master/python_scripts/descriptor_analysis/6_mfccs.py"
+        },
+        {
             "name": "AudioStellar",
             "url": "https://audiostellar.xyz/"
+        },
+        {
+            "name": "_dimensionality_reduction",
+            "url": "https://github.com/jamesb93/data_bending/blob/master/python_scripts/dimensionality_reduction/_reduction.py"
         },
         {
             "name": "k-means",
@@ -611,6 +619,14 @@
         {
             "name": "this discussion on the drawbacks of k-means",
             "url": "https://stats.stackexchange.com/a/133841"
+        },
+        {
+            "name": "`_clustering.py`",
+            "url": "https://github.com/jamesb93/data_bending/blob/master/python_scripts/clustering/_clustering.py"
+        },
+        {
+            "name": "cluster notes",
+            "url": "https://github.com/jamesb93/data_bending/blob/master/clusters.md"
         },
         {
             "name": "here",
