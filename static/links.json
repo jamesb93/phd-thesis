@@ -525,6 +525,18 @@
             "url": "https://youtu.be/b9s-8BPXd58?t=162"
         },
         {
+            "name": "Alva Noto",
+            "url": "http://www.alvanoto.com/"
+        },
+        {
+            "name": "Opiate",
+            "url": "https://en.wikipedia.org/wiki/Thomas_Knak"
+        },
+        {
+            "name": "Ryoji Ikeda",
+            "url": "https://www.ryojiikeda.com/"
+        },
+        {
             "name": "SoundHack",
             "url": "https://www.soundhack.com/"
         },
@@ -539,10 +551,6 @@
         {
             "name": "Nick Briz",
             "url": "http://nickbriz.com/"
-        },
-        {
-            "name": "Alva Noto",
-            "url": "http://www.alvanoto.com/"
         },
         {
             "name": "Datamatics",
@@ -574,7 +582,7 @@
         },
         {
             "name": "`scrape_files.py`",
-            "url": "https://github.com/jamesb93/data_bending/blob/master/python_scripts/scraping/scrape_files.py"
+            "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/scraping/scrape_files.py"
         },
         {
             "name": "Francesco Cameli",
@@ -594,7 +602,7 @@
         },
         {
             "name": "`6_mfcc.py`",
-            "url": "https://github.com/jamesb93/data_bending/blob/master/python_scripts/descriptor_analysis/6_mfccs.py"
+            "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/descriptor_analysis/6_mfccs.py"
         },
         {
             "name": "AudioStellar",
@@ -602,7 +610,7 @@
         },
         {
             "name": "_dimensionality_reduction",
-            "url": "https://github.com/jamesb93/data_bending/blob/master/python_scripts/dimensionality_reduction/_reduction.py"
+            "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/dimensionality_reduction/_reduction.py"
         },
         {
             "name": "k-means",
@@ -622,15 +630,15 @@
         },
         {
             "name": "`_clustering.py`",
-            "url": "https://github.com/jamesb93/data_bending/blob/master/python_scripts/clustering/_clustering.py"
+            "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/clustering/_clustering.py"
         },
         {
             "name": "cluster notes",
-            "url": "https://github.com/jamesb93/data_bending/blob/master/clusters.md"
+            "url": "https://github.com/jamesb93/reconstruction_error/blob/master/clusters.md"
         },
         {
             "name": "here",
-            "url": "https://github.com/jamesb93/data_bending/blob/master/clusters.md#short-fast--delicate"
+            "url": "https://github.com/jamesb93/reconstruction_error/blob/master/clusters.md#short-fast--delicate"
         },
         {
             "name": "I want to tell you something...",
