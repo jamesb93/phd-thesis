@@ -1,3 +1,17 @@
+export const classifier = {
+    prefix : '/inter/classifier/',
+    trackData : [
+        { name: 'Kindle_02_1.wav (Active)', audio: 'A_Kindle_02_1.mp3', peaks: 'A_Kindle_02_1.dat' },
+        { name: 'Xiamo_Note 4X_01_1.wav (Active)', audio: 'A_Xiamo_Note 4X_01_1.mp3', peaks: 'A_Xiamo_Note 4X_01_1.dat' },
+        { name: 'Kindle_02_2.wav (Active)', audio: 'A_Kindle_02_2.mp3', peaks: 'A_Kindle_02_2.dat' },
+        { name: 'Kindle_04_9.wav (Passive)', audio: 'P_Kindle_04_9.mp3', peaks: 'P_Kindle_04_9.dat' },
+        { name: 'Mouse_01_1.wav (Passive)', audio: 'P_Mouse_01_1.mp3', peaks: 'P_Mouse_01_1.dat' },
+        { name: 'RME_Face_Panel_01_1.wav (Passive)', audio: 'P_RME_Face_Panel_01_1.mp3', peaks: 'P_RME_Face_Panel_01_1.dat' },
+        { name: 'Xiamo Note 4X_01_0.wav (Passive)', audio: 'P_Xiamo Note 4X_01_0.mp3', peaks: 'P_Xiamo Note 4X_01_0.dat' },
+
+    ]
+}
+
 export const xboxModes = [
     {
         startTime: 0.0,
@@ -45,21 +59,9 @@ export const interAlbum = {
 }
 
 export const kindleModes = [
-    {
-        startTime : 0.0,
-        endTime: 1.83,
-        labelText: 'Initial static state.'
-    },
-    {
-        startTime: 1.83,
-        endTime: 119.0,
-        labelText: 'Activity induced through user interaction.'
-    },
-    {
-        startTime: 119.0,
-        endTime: 127.0,
-        labelText: 'Static state returns after activity ends.'
-    }
+    { startTime : 0.0, endTime: 1.83, labelText: 'Initial static state.' },
+    { startTime: 1.83, endTime: 119.0, labelText: 'Activity induced through user interaction.' },
+    { startTime: 119.0, endTime: 127.0, labelText: 'Static state returns after activity ends.'}
 ]
 
 export const xiaomiModes = [
