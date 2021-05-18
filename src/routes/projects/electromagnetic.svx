@@ -130,7 +130,9 @@ figure='AUDIO 5'
 ### Pathways Through The Corpus
 Once I had produced this classification of the segmentation, I wanted to begin exploring this data in order to spark compositional action. As such, this next section describes different *pathways* through the corpus of segmented and classified sounds I created, and experiments which led to the compositional works. In hindsight, the technological experimentation in this project was much more bound up in *soundful* forms of practice. Largely, this is because [FTIS]({m.fits}) enabled a workflow where I could fluidly move between REAPER, Max and scripting different machine learning and content-aware programs.
 
-To begin with I was interested mostly in the sounds which were classified as *active*
+To begin with I was interested mostly in the sounds which were classified as *active* and how these could be broken down further into individual impulses, and micro-gestures. For example, I imagined that a sample such as [](), might be restructured to be less chaotic and more ordered - or perhaps something regularised and rhythmic could be imposed on to individual segments.
+
+I used [FTIS]({m.ftis}) to segment only the *active* sounds and then clustered them based on their perceptual similarity. I explored the results aurally in Max, similar to how I had explored the corpus in [Reconstruction Error]({m.re}). From this exploration I was presented with 
 
 - micro-clustering
     - HDBSCluster Exploration
