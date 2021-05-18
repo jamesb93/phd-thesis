@@ -2,7 +2,7 @@
     import NextSection from "$lib/components/NextSection.svelte"
     import Waveform from "$lib/components/Waveform.svelte"
     import YouTube from "$lib/components/YouTube.svelte"
-    import ImageMedia from "$lib/components/ImageMedia.svelte"
+    import ImageMedia2 from "$lib/components/ImageMedia2.svelte"
     import {metadata as m} from "../directory.svx"
     import X86 from '$lib/demos/reacoma/X86.svelte';
     import MaxwaveStart from '$lib/demos/reacoma/MaxwaveStart.svelte';
@@ -49,38 +49,31 @@ In X86.Desc.a, a section spanning 1:20 to 1:37 is built from from several interl
 ## Implementation
 There is not a native [REAPER extension](https://www.reaper.fm/sdk/plugin/plugin.php) or audio plug-in that allows composers to use the FluCoMa first toolbox algorithms directly within the REAPER environment. As such, ReaCoMa is designed as a scripting bridge between the command line executables and the REAPER session where media items are positioned, selected and manipulated on a timeline. Thus, ReaCoMa offers a suite of scripts, where each script is responsible for implementing a single algorithm. For example, `fluid-hpss.lua` is used to execute the `fluid.hpss` algorithm, the same as what is found in Max as the object `fluid.hpss~`. To start, the user runs one of the Lua scripts while a media item or group of items are selected.
 
-<ImageMedia>
-    <img alt="step 1" 
-    src="/tech-reacoma/step1.jpg" 
-    slot="media">
-    <p slot="caption">
-        The user interface for parameter selection is shown after selecting and running one of the Lua scripts.
-    </p>
-</ImageMedia>
+<ImageMedia2 
+url="/tech-reacoma/step1.jpg" 
+figure=''
+caption='The user interface for parameter selection is shown after selecting and running one of the Lua scripts.'
+id=''
+/>
 
 Once the user has configured the parameters they can execute the algorithm by clicking the "Okay" button. Depending on the type of algorithm an update will be made to the REAPER session. In this case, `fluid.hpss` returns two new takes and appends it to the source media item. One take will contain the harmonic component while the other take will contain the percussive component. This facilitates rapid auditioning of the decomposition results by toggling which take is active and playing back the session. I have found this procedure particularly useful in my compositional process as the source material is always stored and attached to the decomposition process, allowing me to follow the development of sonic materials directly in the session.
 
-<ImageMedia>
-    <img 
-    alt="step 2" 
-    src="/tech-reacoma/step2.jpg"  
-    slot="media"
-    >
-    <p slot="caption">
-        Takes containing the harmonic and percussive components are appended to the source media item.
-    </p>
-</ImageMedia>
+
+<ImageMedia2 
+url="/tech-reacoma/step2.jpg"  
+caption='Takes containing the harmonic and percussive components are appended to the source media item.'
+figure=''
+id=''
+/>
 
 For the segmentation algorithms (fluid.onsetslice, fluid.noveltyslice, fluid.ampslice, fluid.ampgate, fluid.transientslice) the original source media item is divided at the slice time points returned by the algorithm. This does not create new audio files on disk, rather, it creates new takes with the original source audio file and adjusts the start and length of those takes. Below the file is segmented with `fluid-noveltyslice.lua`.
 
-<ImageMedia>
-    <img alt="step 3" 
-    src="/tech-reacoma/step3.jpg" 
-    slot="media">
-    <p slot="caption">
-        fluid-noveltyslice.lua is applied with default parameters, rendering new takes at each slice time point.
-    </p>
-</ImageMedia>
+<ImageMedia2 
+url="/tech-reacoma/step2.jpg"  
+caption='fluid-noveltyslice.lua is applied with default parameters, rendering new takes at each slice time point.'
+figure=''
+id=''
+/>
 
 ## Experimental Scripts
 
@@ -93,26 +86,24 @@ These scripts sort media items in the REAPER session timeline by ordering them a
 ### Auto-Slicing
 Performing segmentation with the computer often requires the user to specify a series of parameters such as the sensitivity of a threshold. Sometimes this process is not intuitive or it can be difficult to find a combination of parameters that achieves the desired segmentation. The goal of the 'auto-slicing' scripts is to automatically find the optimal settings for the `fluid.noveltyslice` algorithm so that it produces a fixed amount of slices. It solves this problem iteratively through brute force, incrementally adjusting how far it tunes the parameter at each iteration as it gets closer to the result. The main downside of the 'auto-slicing' scripts is that they only find a solution by changing a single parameter and leaving the others fixed. Another approach could use a neural network to discover combinations of changes effect the output. This would allow the process of automatic parameter finding to take into account the coupled nature of the parameters.
 
-<ImageMedia>
-    <img alt="auto slicing" 
-    src="/tech-reacoma/autoslice.jpg" 
-    slot="media">
-    <p slot="caption">
-        10 slices are found for this sound file by automatically tuning the 'threshold' parameter of fluid.novetlyslice.
-    </p>
-</ImageMedia>
+<ImageMedia2 
+url="/tech-reacoma/autoslice.jpg" 
+caption='10 slices are found for this sound file by automatically tuning the "threshold" parameter of fluid.novetlyslice.'
+figure=''
+id=''
+/>
 
 ### Tagging
 For mixing I wanted to be able to annotate media items with descriptor analysis data. The tagging scripts, `tag-centroid.lua`, `tag-loudness.lua` and `tag-pitch.lua`, use the relevant descriptor algorithm from the toolbox (fluid.spectralcentroid, fluid.loudness, fluid pitch) to calculate statistics (average, minimum, maximum, median) of that audio descriptor across all the frames or values of a media item. This analysis is appended as a note to the media item and can be quickly viewed by hovering over the note icon. Instead of having to alternate between REAPER and another environment, I could make quick assumptions about the perceived loudness, brightness or pitch of samples to inform decisions involved in selecting sounds or their organisation.
 
-<ImageMedia>
-    <img alt="tagging" 
-    src="/tech-reacoma/tagging.jpg" 
-    slot="media">
-    <p slot="caption">
-        Each item has been tagging using tag-loudness.lua. The results can be quickly viewed by hovering over the note.
-    </p>
-</ImageMedia>
+<ImageMedia2 
+url="/tech-reacoma/tagging.png" 
+caption='Each item has been tagging using tag-loudness.lua. The results can be quickly viewed by hovering over the note.'
+figure=''
+id=''
+/>
+
+
 
 ## Other Links
 I produced a series of video tutorials that demonstrate how to install and use ReaCoMa. This video series is useful as a resource that documents how the user facing parts of ReaCoMa work and demonstrate some use cases outside my own practice.
