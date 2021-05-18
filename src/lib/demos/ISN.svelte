@@ -1,7 +1,7 @@
 <script>
     import * as Tone from 'tone';
     import { onMount } from 'svelte';
-    const urlBase = "https://jbphd-pub.s3.us-west-000.backblazeb2.com/preoccupations/isn/isn_0";
+    const urlBase = "/preoccupations/isn/isn_0";
     let readyState = false;
     let playState = false;
     let players;
