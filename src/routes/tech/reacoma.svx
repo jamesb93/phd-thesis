@@ -12,14 +12,6 @@
     const d = 250;
 </script>
 
-<style>
-    .video-grid {
-        display: grid;
-        grid-template-columns: 50% 50%;
-    }
-</style>
-
-
 # ReaCoMa
 
 [ReaCoMa Source Code](https://www.github.com/jamesb93/reacoma)
@@ -54,13 +46,12 @@ In X86.Desc.a, a section spanning 1:20 to 1:37 is built from from several interl
 
 <X86 title="DEMO 4" id="demo4"/>
 
-
 ## Implementation
 There is not a native [REAPER extension](https://www.reaper.fm/sdk/plugin/plugin.php) or audio plug-in that allows composers to use the FluCoMa first toolbox algorithms directly within the REAPER environment. As such, ReaCoMa is designed as a scripting bridge between the command line executables and the REAPER session where media items are positioned, selected and manipulated on a timeline. Thus, ReaCoMa offers a suite of scripts, where each script is responsible for implementing a single algorithm. For example, `fluid-hpss.lua` is used to execute the `fluid.hpss` algorithm, the same as what is found in Max as the object `fluid.hpss~`. To start, the user runs one of the Lua scripts while a media item or group of items are selected.
 
 <ImageMedia>
     <img alt="step 1" 
-    src="https://jbphd-pub.s3.us-west-000.backblazeb2.com/tech-reacoma/step1.jpg" 
+    src="/tech-reacoma/step1.jpg" 
     slot="media">
     <p slot="caption">
         The user interface for parameter selection is shown after selecting and running one of the Lua scripts.
@@ -72,7 +63,7 @@ Once the user has configured the parameters they can execute the algorithm by cl
 <ImageMedia>
     <img 
     alt="step 2" 
-    src="https://jbphd-pub.s3.us-west-000.backblazeb2.com/tech-reacoma/step2.jpg"  
+    src="/tech-reacoma/step2.jpg"  
     slot="media"
     >
     <p slot="caption">
@@ -84,7 +75,7 @@ For the segmentation algorithms (fluid.onsetslice, fluid.noveltyslice, fluid.amp
 
 <ImageMedia>
     <img alt="step 3" 
-    src="https://jbphd-pub.s3.us-west-000.backblazeb2.com/tech-reacoma/step3.jpg" 
+    src="/tech-reacoma/step3.jpg" 
     slot="media">
     <p slot="caption">
         fluid-noveltyslice.lua is applied with default parameters, rendering new takes at each slice time point.
@@ -96,6 +87,7 @@ For the segmentation algorithms (fluid.onsetslice, fluid.noveltyslice, fluid.amp
 The main goal of ReaCoMa was to implement scripts where the first toolbox algorithms could be incorporated into a REAPER session where audio files are manipulated, positioned and processed. Achieving this required significant research to understand the ReaScript API. New possibilities became apparent in this research, such as attaching additional metadata to items through notes, organising media items according to audio descriptor data and enhancing the segmentation workflow through automatic parameter selection. From this, three categories of experimental scripts emerged.
 
 ### Sorters
+<!-- LINK: link to anchors piece in Interferences. You used it to organise sounds in this piece. -->
 These scripts sort media items in the REAPER session timeline by ordering them according to audio descriptor analysis. There are two variants, one that sorts by spectral centroid and one that sorts by loudness. To produce a descriptor for each media item it performs a frame-by-frame analysis and then averages the per-frame values. Each segment is then sorted along the timeline according to this summary. Below is a recording of experimentation with slide and electric guitar that was made for [Refracted Touch]({m.rt}). This recording can be segmented using `fluid-amp.lua` which divides the source into several samples. By running `sort-by-loudness.lua`, the quietest segmented sections are shifted earlier in time and the loudest later in a contiguous arrangement. I have found this useful for selecting materials based on descriptors, or for constructing short phrases where the arrangement of materials according to descriptor values is desired.
 
 ### Auto-Slicing
@@ -103,7 +95,7 @@ Performing segmentation with the computer often requires the user to specify a 
 
 <ImageMedia>
     <img alt="auto slicing" 
-    src="https://jbphd-pub.s3.us-west-000.backblazeb2.com/tech-reacoma/autoslice.jpg" 
+    src="/tech-reacoma/autoslice.jpg" 
     slot="media">
     <p slot="caption">
         10 slices are found for this sound file by automatically tuning the 'threshold' parameter of fluid.novetlyslice.
@@ -115,7 +107,7 @@ For mixing I wanted to be able to annotate media items with descriptor analysis 
 
 <ImageMedia>
     <img alt="tagging" 
-    src="https://jbphd-pub.s3.us-west-000.backblazeb2.com/tech-reacoma/tagging.jpg" 
+    src="/tech-reacoma/tagging.jpg" 
     slot="media">
     <p slot="caption">
         Each item has been tagging using tag-loudness.lua. The results can be quickly viewed by hovering over the note.
@@ -134,8 +126,14 @@ I produced a series of video tutorials that demonstrate how to install and use R
 <YouTube title="ReaCoMa Tutorial 6" url="https://www.youtube.com/embed/GEyut6MePgY" height={d} width={d}/>
 </div>
 
-
 <NextSection 
 next="Finding Things in Stuff"
 link={m.ftis}
 />
+
+<style>
+    .video-grid {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+</style>
