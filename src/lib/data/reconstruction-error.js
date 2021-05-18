@@ -73,3 +73,7 @@ export const noveltySlices = [
     { startTime: 30.116, endTime: 31.881 , labelText: 'Slice 17' },
     { startTime: 31.881, endTime: 32.743 , labelText: 'Slice 18' },
 ]
+
+export const segmPoints = [
+    { time: 70.0, editable: false, labelText: 'Filtered cluster concatenation'}
+]
