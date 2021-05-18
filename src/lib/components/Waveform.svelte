@@ -132,10 +132,10 @@
         display: flex;
         justify-content: space-between;
         padding-top: 3px;
+        align-items: center;
     }
     
     #timecodes {
-        font-weight: bold;
     }
 
     ul li {
@@ -173,10 +173,10 @@
 
     .segments {
         padding-top: 5px;
-        margin: 1em auto;
-        margin-right: 3em;
+        margin-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
         border-top: 1px rgb(197, 197, 197) solid;
-        justify-content: space-between;
     }
 </style>
 
