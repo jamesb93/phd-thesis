@@ -5,15 +5,14 @@
     import Button from '$lib/components/Button.svelte';
 
     export let segments;
+    export let points;
     export let title = "title";
     export let caption = "";
     export let file;
     export let peaks;
     export let id = "";
 
-    let Peaks;
-    let instance, overview, zoom, audio, controls;
-    let peaksControls;
+    let Peaks, instance, overview, zoom, audio, controls, peaksControls;
     let lastSelected = 0;
 
     const convert = (time) => {
@@ -34,7 +33,7 @@
                     arraybuffer: peaks 
                 },
                 mediaElement: audio,
-                height: 60,
+                height: 150,
                 zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
                 overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
                 overviewHighlightColor: 'grey',
@@ -45,7 +44,8 @@
                 axisGridlineColor: '#ccc',
                 axisLabelColor: '#aaa',
                 randomizeSegmentColor: true,
-                segments: segments
+                segments: segments,
+                points: points
             }
             instance = Peaks.init(options, (err, p) => {
                 if (err) {
@@ -64,15 +64,16 @@
 </script>
 
 <Container id={id}>
-    <div class="horizontal overview">
+    <div class="horizontal">
         <span id="title">{title}</span>
         <span id="caption">{caption}</span>
+    </div>
 
-    </div>
     <div class="vis">
-        <div class="overview" bind:this={overview} />
-        <div class="overview" bind:this={zoom} />
+        <div bind:this={overview} />
+        <div bind:this={zoom} />
     </div>
+
     <div class="peaks-controls" bind:this={peaksControls}>
         <audio controls bind:this={audio}>
             <source src={file} type="audio/mp3">
@@ -120,6 +121,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 10%;
         padding-bottom: 15px;
     }
     
