@@ -6,9 +6,11 @@
 
 # Conclusion
 
-What did you set out to do and what does each piece explore?
+From this PhD research I have built and developed a computer-aided workflow with content-aware programs that facilitate composition in the studio.
 
-Overall the first three porjects started as experimentation and attempts to see what would stick. The last two projects honed my compositional practice toward a way of working supported by building a set of tools that facilitated computer-aided composition with samples in a highly novel and unique manner.
+In each project I have documented and reflected on the development of this process, and the relationship this has to specific pieces.
+
+Overall the first three projects started as experimentation and attempts to see what would stick. The last two projects honed my compositional practice toward a way of working supported by building a set of tools that facilitated computer-aided composition with samples in a highly novel and unique manner.
 
 At the beginning I thought I was interested in formal systems, and devising strategies in which the computer could structure elements in a coherent way from the lowest to highest formal levels. Now, I am more interested in the computer functioning as a facilitator of exploration and for finding material which I then structure.
 
