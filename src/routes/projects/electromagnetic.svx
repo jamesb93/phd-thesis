@@ -13,7 +13,8 @@
         interAlbum, 
         kindleModes, 
         xiaomiModes,
-        xboxModes
+        xboxModes,
+        classifier
     } from '$lib/data/interferences.js';
 </script>
 
@@ -21,7 +22,7 @@
 
 <Album
 tracks={interAlbum}
-title="Interferences"
+title='Interferences'
 id='audio1'
 figure='AUDIO 1'
 />
@@ -116,10 +117,15 @@ id='img1'
 
 Some of the results from these experiments were not satisfactory, while others created results which were much more suitable. I decided to make this algorithm into a [FTIS]({m.ftis}) analyser. The concept of analysers is described in ["Analysers"]({m.ftis}#analysers), a part of the technical implementation section. I then ran the algorithm on all of the induction recordings using this script: [segmentation.py](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation.py). The results from this were satisfactory to start, but not necessarily perfect. This was not an issue though as I planned to do further segmentation later to further separate the material. At this point it only had to be a general division of the sounds in time to facilitate clustering static and active sounds.
 
-#### Classification and Clustering
+#### Classification Through Clustering
 I devised a strategy for classifying each of these newly generated segments into two distinct groups. I did this by calculating the statistics of spectral flux across windowed frames in each sample and then clustering each this data using the Agglomerative Clustering algorithm. The code for this can be found here: [split_by_activity.py](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/split_by_activity.py). This was very successful, and quite potent for dividing sounds into these two groups of static and active. A selection of different results from this process are presented in [AUDIO 5]({m.em}#aud5).
 
-
+<Album 
+tracks={classifier}
+id='aud5'
+title='Several classification results.'
+figure='AUDIO 5' 
+/>
 
 ### Pathways Through The Corpus
 
