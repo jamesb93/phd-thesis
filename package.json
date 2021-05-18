@@ -7,15 +7,15 @@
     "start": "svelte-kit start",
     "scrape": "python3 scrape_links.py",
     "convert": "pnpm run scrape && sh convert.sh",
-    "deploy" : "pnpm run scrape && sh deploy.sh",
-    "update" : "pnpm run build && pnpm run deploy"
+    "deploy": "pnpm run scrape && sh deploy.sh",
+    "update": "pnpm run build && pnpm run deploy"
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "next",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "svelte": "^3.38.2",
-    "vite": "^2.3.2"
+    "vite": "^2.3.3"
   },
   "type": "module",
   "dependencies": {
