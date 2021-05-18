@@ -118,7 +118,7 @@ id='img1'
 Some of the results from these experiments were not satisfactory, while others created results which were much more suitable. I decided to make this algorithm into a [FTIS]({m.ftis}) analyser. The concept of analysers is described in ["Analysers"]({m.ftis}#analysers), a part of the technical implementation section. I then ran the algorithm on all of the induction recordings using this script: [segmentation.py](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation.py). The results from this were satisfactory to start, but not necessarily perfect. This was not an issue though as I planned to do further segmentation later to further separate the material. At this point it only had to be a general division of the sounds in time to facilitate clustering static and active sounds.
 
 #### Classification Through Clustering
-I devised a strategy for classifying each of these newly generated segments into two distinct groups. I did this by calculating the statistics of spectral flux across windowed frames in each sample and then clustering each this data using the Agglomerative Clustering algorithm. The code for this can be found here: [split_by_activity.py](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/split_by_activity.py). This was very successful, and quite potent for dividing sounds into these two groups of static and active. A selection of different results from this process are presented in [AUDIO 5]({m.em}#aud5).
+I devised a strategy for classifying each of these newly generated segments into two distinct groups. I did this by calculating the statistics of spectral flux across windowed frames in each sample and then clustering each this data using the Agglomerative Clustering algorithm. The code for this can be found here: [split_by_activity.py](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/split_by_activity.py). To me this process was perceptually successful and potent for dividing sounds into static and active groups. A selection of different results from this process are presented in [AUDIO 5]({m.em}#aud5).
 
 <Album 
 tracks={classifier}
@@ -128,54 +128,86 @@ figure='AUDIO 5'
 />
 
 ### Pathways Through The Corpus
+Once I had produced this classification of the segmentation, I wanted to begin exploring this data in order to spark compositional action. As such, this next section describes different *pathways* through the corpus of segmented and classified sounds I created, and experiments which led to the compositional works. In hindsight, the technological experimentation in this project was much more bound up in *soundful* forms of practice. Largely, this is because [FTIS]({m.fits}) enabled a workflow where I could fluidly move between REAPER, Max and scripting different machine learning and content-aware programs.
 
-- Passive states not sure... look it up
-- Active states are segmented and clustered
-- HDBSCluster Exploration
-    - Mechanised nature produced by looping, while still maintaining a sense that it could have been generated from machinery or by electromagnetic interference.
-    - Cluster 37 note??
-    - Cluster 18 (quiet sounds)
-    - Cluster 33
+To begin with I was interested mostly in the sounds which were classified as *active*
+
+- micro-clustering
+    - HDBSCluster Exploration
+        - Mechanised nature produced by looping, while still maintaining a sense that it could have been generated from machinery or by electromagnetic interference.
+        - Cluster 37 note??
+        - Cluster 18 (quiet sounds) > sorting by quietness > hinting at rhythmic pulsation at times but never committing to it fully > convolution anchors
+        - Cluster 33
 - Sorting by quietness
     - Using FTIS's corpus filtering to create pockets of material
     - Don't have to deal with a whole corpus, start with a subsection and then operate on that. very powerful and flexible compared to 
+    - This would be instrumental later in finding material for Anchors
 
 - REAPER exporting and "sketching"
+    - cluster 67
     - idea2-loops-iteration.RPP
+    
+#### Mixing Sounds From [Reconstruction Error]({m.re}) MULTICORPUS
+
+Felt like I was had explored a lot of the corners of the corpus and the material was unsurprising. I could discern what I liked quite rapidly and knew what it belonged to, whereas in [Reconstruction Error]({m.re}), I always felt like there was more corpus to dive into when I ran out of ideas or felt stuck compositionally. 
+
+As such
+
+- This demonstrated the expressive power of FTIS, in that I could rapidly combine corpora and begin making connections between different parts of my practice. (Quietest.RPP for example)
 
 
-### Mixing Sounds From [Reconstruction Error]({m.re})
+Som other tangential approaches, although mostly dead ends. I kinda just found something that worked... the dead ends are important. It's not about finding one right approach, but honing in on what is important to me through discovery ...
 
-- This demonstrated the expressive power of FTIS, in that I could rapidly combine corpora and begin making connections between different parts of my pratice. (Quietest.RPP for example)
-
-06/08/2020 16:36:09
-
-There seems to be some solid material interests emerging now. 
-
-1. Iterated sounds that have some kind of rhythmic qualitiy to them
-2. Time stretched textures that might have a noisy quality to them
-3. Rapidly changing micro gesture
-
-
-## Compositions
-### EEE (placeholder)
-- Focus on disintegrating the kindle sample and finding connections to the disintegrated parts
-- 
 ### Anchors (placeholder)
-convolution_three_anchors.py
+The connection here is the multicorpus approach.
+
+
+Developing anchors using a searching process and composing from there. A main source of inspiration is the juxtaposition and superimposition of stationary textures. Many of the initial discoveries were made by looking suitable for convolution, ideally pitched and quasi-textural in nature. There are also numerous notes above that show the development of the source material.
+
+convolution_base_materials.py - take static sounds and create three clusters out of this
+
+convolution_three_anchors.py - took three sounds 
+convolution_find_tuned.py - find more pitchy sounds using CQT and kdtree to branch outward from known samples to get 200 more samples.
 
 https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/MultiCorpus/scripts/convolution_three_anchors.py
+
+Sorting these 200 samples by centroid using ReaCoMa
+
+A mid-way version of the piece emerged from intuitively moving these samples around. I tried to create complex 
+
+<ImageMedia2 
+url='/inter/anchors-mid-way-session.png'
+/>
+
+<Waveform 
+file='/inter/28-10-20.mp3'
+peaks='/inter/28-10-20.dat'
+/>
+
+For this particular track 'anchors', I want the form to almost feel shapeless in the long term. I don't want it to feel like its necessarily pushing toward a climatic point, rather that the music exists in a holding pattern and has ebbs and flows of material within that pattern. This is also part of making the material work musically, I have a quasi-conceptual idea of the sounds being reconstructed into the machines from which they were extracted. Part of frustrations in databending was the fact that the forms felt quite similar because I was focusing on stringing together various meso-form ideas without much consideration for how they would exist as a long term structure. By the time I got to the natural conclusion of each piece's materials in the composition process I had already crystallised a structure that wasn't that malleable.
+
+The Gunter meanders and hovers and restrains from developing intentionally to heighten the suspense.
+
+
+
+### EEE (placeholder)
+- Take the KNN approach and apply it so other material. Building up a piece around a single sample.
+- [isolate_static.py](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/MultiCorpus/scripts/isolate_sample.py)
+- Finding what material from the databending corpus was close to 06-Kindle Off-200513_1547-glued-04.wav
+- Focus on disintegrating the kindle sample and finding connections to the disintegrated parts
+- 07-200622_1602.wav composing around the morphology
 
 For this particular track 'anchors', I want the form to almost feel shapeless in the long term. I don't want it to feel like its necessarily pushing toward a climatic point, rather that the music exists in a holding pattern and has ebbs and flows of material within that pattern. This is also part of making the material work musically, I have a quasi-conceptual idea of the sounds being reconstructed into the machines from which they were extracted. Part of frustrations in databending was the fact that the forms felt quite similar because I was focusing on stringing together various meso-form ideas without much consideration for how they would exist as a long term structure. By the time I got to the natural conclusion of each piece's materials in the composition process I had already crystallised a structure that wasn't that malleable.
 
 ## Reflection
 
+Frustration drives technological development - and technological development drives compositional innovation and breakthroughs. They feed off each other. Anchors only came about because of the multi-corpus approach, which was enabled by extending FTIS. I was thinking about gathering material in a specific way (*branching* out from a single compositional anchor towards similar sounds) which gave rise to the knn method of searching. This sparked the idea for the Kindle active gesture to be used, which I had an appreciation before at the verys tart of listening but didn't know how to incorporate it.
 
 Aestheticise the unheard and procedural sounds of technology. Kindle on/off thing.
 
-Mouse-2.wav sample becoming a pitched motif.
-Xiaomi sample in Anchors
-The way that my listening is structured through technology leads me to these kinds of concepts.
+- Mouse-2.wav sample becoming a pitched motif.
+ - Xiaomi sample in Anchors
+- The way that my listening is structured through technology leads me to these kinds of concepts.
 
 
 
