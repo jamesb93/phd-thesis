@@ -10,7 +10,14 @@
     import Waveform from '$lib/components/Waveform.svelte';
     import Points from '$lib/demos/dimension-reduction/Points.svelte';
 
-    import { reAlbum, ibuffer, generation, libllvmSlices, noveltySlices } from '$lib/data/reconstruction-error.js'
+    import { 
+        reAlbum, 
+        ibuffer, 
+        generation, 
+        libllvmSlices, 
+        noveltySlices,
+        segmPoints 
+    } from '$lib/data/reconstruction-error.js'
 </script>
 
 # Reconstruction Error
@@ -297,7 +304,11 @@ package.path = package.path .. ';' .. script_path .. 'lunajson/src/?.lua'
 loadfile(script_path .. "../ReaCoMa/lib/reacoma.lua")()
 local lunajson = require 'lunajson'
 
-local confirm, user_input = reaper.GetUserInputs('Provide JSON info', 2, 'JSON Path:, Cluster Number:, extrawidth=100', '')
+local confirm, user_input = reaper.GetUserInputs(
+    'Provide JSON info', 
+    2, 
+    'JSON Path:, Cluster Number:, extrawidth=100', ''
+)
 
 if confirm then
     reaper.Undo_BeginBlock()
@@ -316,7 +327,10 @@ if confirm then
     local content = file_in:read("*all")
     local cluster_data = lunajson.decode(content)
     for k, p in ipairs(cluster_data[cluster_num]) do
-        reaper.InsertMedia('/Users/james/Cloud/Projects/DataBending/DataAudioUnique/'..p, 0)
+        reaper.InsertMedia(
+            '/Users/james/Cloud/Projects/DataBending/DataAudioUnique/'..p, 
+            0
+        )
     end
     reaper.SetEditCurPos(0.0, false, false)
     reaper.Undo_EndBlock("Insert Media Cluster", 0)
@@ -334,7 +348,7 @@ caption="Using ReaScript API to create tracks of samples from cluster data."
 id="vid11"
 />
 
-The next sections, [_.dotmaxwave]({m.re}#_dotmaxwave), [X86Desc.a]({m.re}#x86desca), [segmnoitte]({m.re}#segmnoitte), [--isn]({m.re}#isn) and [sys.ji_]({m.re}#sysji_) describe the specific compositional processes for each piece in Reconstruction Error and how the computer informed my compositional choices and led the computer-aided compositional process.
+The next sections, [_.dotmaxwave]({m.re}#_dotmaxwave), [X86Desc.a]({m.re}#x86desca), [segmnoittet]({m.re}#segmnoittet), [--isn]({m.re}#isn) and [sys.ji_]({m.re}#sysji_) describe the specific compositional processes for each piece in Reconstruction Error and how the computer informed my compositional choices and led the computer-aided compositional process.
 
 ### _.dotmaxwave
 
@@ -389,14 +403,19 @@ id='aud7'
 
 In isolation the results of these types decomposition processes were uninspiring to me and the musical effect was underwhelming. However, I found that by layering multiple instances I could create complex interactions between different *streams* of transient-based material. The rest of the piece was intuitively composed around my experimentation with this layering. Overall, this piece contained all of the trailing ideas that I did not want to pollute [--isn]({m.re}#isn) with. For me the results were distinct enough that it warranted making a new piece in the album, although the mechanics of composing the piece were quite similar.
 
-### segmnoitte
+### segmnoittet
 
-<!-- WIDGET: segmnoitte 
+<!-- WIDGET: segmnoittet 
 1:10
 3:14
 3:38
 3:43
 -->
+<Waveform 
+file='/pieces/re/segmnoittet.mp3'
+peaks='/pieces/re/segmnoittet.dat'
+points={segmPoints}
+/>
 For this piece, I wanted to create something that was less rhythmically homogenous than the previous tracks and to create something more mechanical and sparse. The first idea I had involved taking clusters that when concatenated would create such aspects. This would result if for example the samples within a cluster had significantly differing lengths. I was able to control this aspect by selecting samples from different hierarchical levels of the meta analysis. The deeper I went into the hierarchy, the more homogenous the clusters would become when concatenated. A short composed section of music emerged from this and can be heard in [AUDIO 8]({m.re}#aud8}).  
 
 <Waveform 
@@ -412,7 +431,7 @@ This short section did not develop and I had exhausted a lot of the material whi
 <ImageMedia2 
 url='/re/segmnoitte-session.jpg'
 figure='IMAGE 5'
-caption='REAPER session for segmnoitte. Tracks displayed on the left side of the screen contain various tracks of clusters and their respective "sub-clusters".'
+caption='REAPER session for segmnoittet. Tracks displayed on the left side of the screen contain various tracks of clusters and their respective "sub-clusters".'
 id='img5'
 />
 
