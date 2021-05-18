@@ -134,9 +134,6 @@
         padding-top: 3px;
         align-items: center;
     }
-    
-    #timecodes {
-    }
 
     ul li {
         display: block;
