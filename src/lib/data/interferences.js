@@ -1,3 +1,41 @@
+export const xboxModes = [
+    {
+        startTime: 0.0,
+        endTime: 3.4,
+        labelText: 'Static'
+    },
+    {
+        startTime : 3.4,
+        endTime: 4.65,
+        labelText: 'Active',
+    },
+    {
+        startTime : 4.65,
+        endTime: 9.08,
+        labelText: 'Static',
+    },
+    {
+        startTime : 9.08,
+        endTime: 10.235,
+        labelText: 'Active',
+    },
+    {
+        startTime : 10.235,
+        endTime: 12.453,
+        labelText: 'Static',
+    },
+    {
+        startTime: 12.453,
+        endTime: 26.0,
+        labelText: 'Active'
+    },
+    {
+        startTime: 26.0,
+        endTime: 31.0,
+        labelText: 'Static'
+    }
+]
+
 export const interAlbum = {
     prefix : '/pieces/inter/',
     trackData : [
