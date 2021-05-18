@@ -12,7 +12,8 @@
     import { 
         interAlbum, 
         kindleModes, 
-        xiaomiModes 
+        xiaomiModes,
+        xboxModes
     } from '$lib/data/interferences.js';
 </script>
 
@@ -45,6 +46,8 @@ Secondly, I wanted to iterate on using the connected process of segmentation, an
 The composition process can roughly be divided into  two phases of composition. The first phase involved a lot of experimentation with [FTIS]({m.ftis}) implementing various ways navigating through the corpus using machine learning and listening.  In the second phase, two pieces emerged out of these experiments and instead of using the computer to explore more broadly, I used it to search for and hone in on specific materials within the corpus of electromagnetic sounds. 
 
 ### Recording Objects With Induction
+
+<!-- REVIEW: do i need to give the corpus here for listening maybe? -->
 As discussed in ["Motivations And Influences"]({m.em}#motivations-and-influences), I procured an electromagnetic induction microphone and wanted to use it to generate a corpus of digital and synthetic type sounds. To do this, I took electronic objects from around the home and recorded them, at times while operating them simultaneously. I was surprised by the diversity of sounds this produced. Despite the devices seeming dormant, the induction recording technique could detect and uncover their invisible mechanisms and operation. I recorded a number of devices, including my computer keyboard, mouse, a mobile phone, a sound card, a laptop and an e-reader. Each device produced its own characteristic sounds - and some of these objects offered me the ability to trigger certain sonic behaviours. For example, [AUDIO 2]({m.em}#aud2) captures the sound of the e-reader in a dormant state. The change at 0:02 is triggered by switching the aeroplane mode on or off. This user interaction causes the components in the e-reader to operate differently, which is captured by the induction microphone. Eventually the initial static state is returned to. This can be heard at 1:59 lasting until the end of the clip.
 
 <Waveform 
@@ -56,7 +59,7 @@ caption='AUDIO 2'
 segments={kindleModes}
 />
 
-Other objects produced their own characteristic material, but to my interpretation would always possess some kind of distinction between *active* and *passive* states.  For example, [AUDIO 3]({m.em}#aud3) is an induction recording taken from a mobile phone. I left the microphone to record this device for some time. In my interpretation this recording can be divided into these two classes, where 0:00 to 0:40 is static, and the remainder of the recording is passive.
+Other objects produced their own characteristic material. I found that across all of the samples, my interpretation would always result in some kind of distinction between *active* and *passive* states.  For example, [AUDIO 3]({m.em}#aud3) is extracted from the electromagnetic interferences of a mobile phone. I left the microphone to record this device for some time. To me, I could divided the sounds of this into these two classes, where 0:00 to 0:40 is *static*, and the remainder of the recording is *active*.
 
 <Waveform
 file='/inter/xiaomi-gesture.mp3'
@@ -67,34 +70,61 @@ caption='AUDIO 3'
 segments={xiaomiModes}
 />
 
-Across several of the samples I heard this presentation of two different types of material. It resonated with other works I knew and I started to build a sound world in my head for how these electromagnetic recordings might be drawn into composition. Thinking in terms of activity. This relates to other listening influences
+As I recorded and browsed through these sounds, I was reminded of the quasi-documentary work of Australian field-recording artist Jay-Dea Lopez and the way he taps into "unseen" sources using contact microphones attached to monolithic infrastructural objects in the outback. In particular, two blog posts of his, ["Low Frequencies"](https://soundslikenoise.org/2019/09/07/low-frequencies/) and ["Coil pickups and microsounds"](https://soundslikenoise.org/2020/08/16/coil-pickups-and-microsounds) contain these types of material. Similarly, I felt a certain connection between my experiments and the morphologies and textures present in Bernhard Gunter's *Untitled I/92* ([VIDEO 2]({m.em}#vid2)), and Alvin Lucier's *Sferics* ([VIDEO 3]({m.em}#vid3)). Both of these pieces to me encapsulate the essence and character of what I was discovering with the electromagnetic microphone - delicate and fragile sound worlds full of intimate clicks, pops and spectrally constrained fragments. Furthermore, these external musical references started to funnel into my conceptualisation of the initial material as that which can occupy two distinct states - busy and rapidly changing or unchanging and glacial in nature. This became an essential starting point in the technological process of dissecting these sounds in order to become more familiar with them.
 
-<!-- - Alvin Lucier
-- https://www.youtube.com/watch?v=4T7qkYY7LZM&list=PLyFW-rnLqSeGxwsL0FL160g8y6XmdHZcQ
-- Jay-Dea Lopez
-- Bernhard Gunter - A little bit of dirty snow
--->
+<YouTube 
+url="https://www.youtube.com/embed/QZfMp6tredw"
+caption="Untitled I/92  from Un Peu De Neige Salie by Bernhard Gunter"
+figure='VIDEO 2'
+id='vid2'
+/>
 
-I found 
-
-Relationship to musical sounds.
-
+<YouTube 
+url="https://www.youtube.com/embed/rxUvMl_IxoQ"
+caption="Sferics by Alvin Lucier"
+figure="VIDEO 3"
+id="vid3"
+/>
 
 ### Static Versus Gestural Material
-- Examples
+I began by trying to dissect the corpus into two groups based on classifying whether they were *static* or *active*. To do this, I first had to segment the corpus, and then find a way of crudely sorting it into either of these two classifications.
 
-- ClusterFck
+#### Segmentation
+The goal of segmentation was to automatically divide each sound into *salient* sections. *Salience*, in this context, was not yet based on creating divisions into *static* and *active* classes yet, rather to achieve an automatic division of each file into perceptually heterogenous sounds. After this process, I planned to apply a classification or clustering analysis so that the computer could discern which group each segment might belong to. There are complicated aspects to this though as the time span of static and active states, in my perception, varied a lot depending on the file. [AUDIO 2]({m.em}#aud2) only shows a portion of that e-reader recording, and the static and active states last for up to minutes between alternations. [AUDIO 4]({m.em}#aud4) shows another recording taken from a wireless game controller, which demonstrates similar alternations between stasis and activity. These changes occur on a much smaller time scale, in the region of seconds rather than minutes. In this context, a frame-by-frame analysis was likely to be unsuitable to this range of sounds and hard to tune appropriately to capture the sparse and specific moments in time in longer samples, while also being sensitive to the shorter-term changes.
 
-### Segmentation
-- Clustered Segmentation
-    - Oversegmenting the sound andusing clustering to combine adjacent clusters that are similar
-        - Gives the process a kind of "lookahead" because the differences across the entire window of analysis contribute to the clustering behaviour.
-        - Thus, avoids the problem of trying to find the perfect threshold, and off-loads that to a process well suited to the conceptual and practical goal.
-    - Similar work https://hal.archives-ouvertes.fr/hal-00512744/document
-        - This gave me a good separation, although revealed as well how much of the material was relatively,e specially among the static classification.
+<Waveform 
+file='/inter/xbox-gesture.mp3'
+peaks='/inter/xbox-gesture.dat'
+caption='AUDIO 4'
+title='Shorter induction recording taken from a game controller.'
+id='aud4'
+segments={xboxModes}
+/>
+
+To tackle this, I created a bespoke algorithm influenced by Lefèvre, S., & Vincent, N. (2011) which performs segmentation by sampling short sequences within a sound and clustering those sequences together. In my algorithm, I perform a two phase process. The first phase, *over-segments* a sample into numerous small divisions. The second phase applies audio descriptor analysis to each segment and then groups each one into a user-specified number of clusters. From this, the algorithm recursively operates on a specified number of windows of clustered segments and merges contiguous segments with the same cluster label. It starts at the first segment in time and performs this by shifting forward in time, merging inside the loop. As such, it gradually creates larger and larger combined segments until consecutive segments all belong to different clusters.
+
+This approach avoids the situation where I have to find a suitable combination of settings as there are fewer parameters to deal and when it is required they are much more general in scope. It also avoids some of the issues with frame-by-frame approaches to segmentation, which often only target short windows of time and do not respect the longer term implications of changes in the signal necessarily. By using a shifting window that merges while it slides across the segments, it gives the algorithm a "lookahead" and "look behind" that constantly updates as it goes.
+
+I experimented with my implementation in a number of ways, by changing the initial over-segmentation algorithm, the audio descriptor analysis and then the window size and number of clusters. I tested this visually and aurally by running the algorithm with these underlying components being modified and exchanged and rendering the results as a REAPER session. Overall, I found that the choice of segmentation algorithm did not really matter and had little effect on the final result. What had the most significance though was the initial granularity of the segments. If the segments were too large the algorithm would usually find contiguous segments to be quite similar as the analysis often regressed to the mean. It was important to begin a high level of differentiation between segments to avoid this. The window size and number of clusters had a bigger effect on the results. In preliminary tests I found that they could diverge significantly in unexpected ways. Unlike changing a threshold for an amplitude-based slicer for example, which as it is lowered one expects to see more clusters emerge, the combination of window size and number of clusters presented a non-linear spectrum of segmentations. [IMAGE 1]({m.em}#img1) depicts such a REAPER session, where each track is the result of a different combination of these two parameters. The session itself can also be found in the repository here: [session.rpp](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation_scripts/2020-06-18%2004-09-54.718681/session.rpp) and the code for these experiments can be located here: [clustered_segmentation.py](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation_scripts/clustered_segmentation.py).
+
+<ImageMedia2 
+url='/inter/clusterd-segmentation.jpg'.
+figure='IMAGE 1'
+caption='Clustered segmentation results rendered as a REAPER session.'
+id='img1'
+/>
+
+Some of the results from these experiments were not satisfactory, while others created results which were much more suitable. I decided to make this algorithm into a [FTIS]({m.ftis}) analyser. The concept of analysers is described in ["Analysers"]({m.ftis}#analysers), a part of the technical implementation section. I then ran the algorithm on all of the induction recordings using this script: [segmentation.py](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation.py). The results from this were satisfactory to start, but not necessarily perfect. This was not an issue though as I planned to do further segmentation later to further separate the material. At this point it only had to be a general division of the sounds in time to facilitate clustering static and active sounds.
+
+#### Classification and Clustering
+I devised a strategy for classifying each of these newly generated segments into two distinct groups. I did this by calculating the statistics of spectral flux across windowed frames in each sample and then clustering each this data using the Agglomerative Clustering algorithm. The code for this can be found here: [split_by_activity.py](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/split_by_activity.py). This was very successful, and quite potent for dividing sounds into these two groups of static and active. A selection of different results from this process are presented in [AUDIO 5]({m.em}#aud5).
+
 
 
 ### Pathways Through The Corpus
+
+- Passive states not sure... look it up
+- Active states are segmented and clustered
 - HDBSCluster Exploration
     - Mechanised nature produced by looping, while still maintaining a sense that it could have been generated from machinery or by electromagnetic interference.
     - Cluster 37 note??
