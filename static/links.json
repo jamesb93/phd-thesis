@@ -333,7 +333,7 @@
             "url": "https://grrrr.org/data/research/texmap/"
         },
         {
-            "name": "*Fake Fish Distribution*",
+            "name": "Fake Fish Distribution*",
             "url": "https://www.icarus.nu/FFD/"
         },
         {
@@ -491,6 +491,30 @@
         {
             "name": "Elektrosluch Mini induction microphone",
             "url": "https://store.lom.audio/products/elektrosluch-mini-city-diy-kit-1?variant=4542176460832"
+        },
+        {
+            "name": "\"Low Frequencies\"",
+            "url": "https://soundslikenoise.org/2019/09/07/low-frequencies/"
+        },
+        {
+            "name": "\"Coil pickups and microsounds\"",
+            "url": "https://soundslikenoise.org/2020/08/16/coil-pickups-and-microsounds"
+        },
+        {
+            "name": "session.rpp",
+            "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation_scripts/2020-06-18%2004-09-54.718681/session.rpp"
+        },
+        {
+            "name": "clustered_segmentation.py",
+            "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation_scripts/clustered_segmentation.py"
+        },
+        {
+            "name": "segmentation.py",
+            "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation.py"
+        },
+        {
+            "name": "split_by_activity.py",
+            "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/split_by_activity.py"
         },
         {
             "name": "ELISION Ensemble",
