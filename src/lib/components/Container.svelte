@@ -9,7 +9,7 @@
 
 <style>
     :root {
-        --width: 80%
+        --width: 87%
     }
     .container {
         position: relative;
