@@ -14,7 +14,8 @@
         kindleModes, 
         xiaomiModes,
         xboxModes,
-        classifier
+        classifier,
+        loopExperiments
     } from '$lib/data/interferences.js';
 </script>
 
@@ -87,7 +88,7 @@ figure="VIDEO 3"
 id="vid3"
 />
 
-### Static Versus Gestural Material
+### Static And Active Material
 I began by trying to dissect the corpus into two groups based on classifying whether they were *static* or *active*. To do this, I first had to segment the corpus, and then find a way of crudely sorting it into either of these two classifications.
 
 #### Segmentation
@@ -130,39 +131,94 @@ figure='AUDIO 5'
 ### Pathways Through The Corpus
 Once I had produced this classification of the segmentation, I wanted to begin exploring this data in order to spark compositional action. As such, this next section describes different *pathways* through the corpus of segmented and classified sounds I created, and experiments which led to the compositional works. In hindsight, the technological experimentation in this project was much more bound up in *soundful* forms of practice. Largely, this is because [FTIS]({m.fits}) enabled a workflow where I could fluidly move between REAPER, Max and scripting different machine learning and content-aware programs.
 
-To begin with I was interested mostly in the sounds which were classified as *active* and how these could be broken down further into individual impulses, and micro-gestures. For example, I imagined that a sample such as [](), might be restructured to be less chaotic and more ordered - or perhaps something regularised and rhythmic could be imposed on to individual segments.
+To begin with I was interested mostly in the sounds which were classified as *active* and how these could be broken down further into individual impulses, and *micro-gestures*. For example, I imagined that [AUDIO 6]({m.em}#aud6), a segment from *Kindle_04_08.wav*, might be restructured to be less chaotic and more ordered - or perhaps a rhythmic structure could be imposed on to individual segments extracted from this. 
 
-I used [FTIS]({m.ftis}) to segment only the *active* sounds and then clustered them based on their perceptual similarity. I explored the results aurally in Max, similar to how I had explored the corpus in [Reconstruction Error]({m.re}). From this exploration I was presented with 
+<Waveform 
+file='/inter/kindle-04-8-seg.mp3'
+peaks='/inter/kindle-04-8-seg.dat'
+id='aud6'
+figure='AUDIO 6'
+title='Kindle_04_08.wav segment'
+/>
 
-- micro-clustering
-    - HDBSCluster Exploration
-        - Mechanised nature produced by looping, while still maintaining a sense that it could have been generated from machinery or by electromagnetic interference.
-        - Cluster 37 note??
-        - Cluster 18 (quiet sounds) > sorting by quietness > hinting at rhythmic pulsation at times but never committing to it fully > convolution anchors
-        - Cluster 33
-- Sorting by quietness
-    - Using FTIS's corpus filtering to create pockets of material
-    - Don't have to deal with a whole corpus, start with a subsection and then operate on that. very powerful and flexible compared to 
-    - This would be instrumental later in finding material for Anchors
+I used [FTIS]({m.ftis}) to segment the *active* sounds and then clustered these segments based on their perceptual similarity. This was orchestrated with two separate [FTIS]({m.ftis}) scripts for. This [segmentation script](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/micro_segmentation.py) uses the clustered segmentation algorithm to create very granular slices. This [clustering script](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/micro_clustering.py) calculates MFCC descriptors for each segment and clusters them into an unspecified number of clusters using the HDBSCAN algorithm. I explored the results aurally in Max, similar to how I had explored the corpus in [Reconstruction Error]({m.re}). From this exploration I was presented with perceptually homogenous groups in terms of texture and morphology. [VIDEO 4]({m.em}#vid4) I captures some of this audition-based exploring.
 
-- REAPER exporting and "sketching"
-    - cluster 67
-    - idea2-loops-iteration.RPP
-    
-#### Mixing Sounds From [Reconstruction Error]({m.re}) MULTICORPUS
+<VideoMedia2 
+url='/inter/exploring-clusters.mp4'
+caption='Exploring segmented and clustered active material'
+figure='VIDEO 4'
+id='vid4'
+/>
 
-Felt like I was had explored a lot of the corners of the corpus and the material was unsurprising. I could discern what I liked quite rapidly and knew what it belonged to, whereas in [Reconstruction Error]({m.re}), I always felt like there was more corpus to dive into when I ran out of ideas or felt stuck compositionally. 
+This Max patch used for exploring looped a selected sample from a cluster. As I navigated between clusters and samples within them, the intricacy and fragility of certain clusters was foregrounded. Curiously too, some material that I perceived as static had been included in these clusters. The nature of the looping playback, combined with already mechanised and artificial nature of these sounds was evocative and I was drawn to different groups - imagining composing with the segments to form my own artificial machine-like sounds composites. Clusters 1, 2, and 37, for example, produced structured rhythmic sounds articulated by sparse and subtle transients. When I was changing the sample while exploring, the rhythmic patterns of these articulations could be altered.  I imagined that combining several of these could be useful in constructing layers of  intricate quasi-rhythmic patterns. Clusters 0, 11 and 18 contained a large amount of drone-like static material with a prominent pitch content. To an extent, I was thankful this material had been poorly grouped into the *active* classification causing it to be discovered in this exploring process. The playback of short segments of such material highlighted how it could be transformed from its originally directionless form into something else perhaps.
 
-As such
+For me, this was a starting point at which I began to conceive of the material in the corpus as two distinct types that I could treat discretely in composition. I imagined those sounds with more rhythmic and iterated qualities could form a piece in this EP, while those with drone-like qualities might form another. This sparked further utilisation of [FTIS]({m.ftis}) to further hone in on these two types of material and to become more familiar with them. These experiments did not necessarily lead to concrete pieces or incremental stages of the final compositions, rather, they acted as different limited *tests* designed to provoke me through further listening.
 
-- This demonstrated the expressive power of FTIS, in that I could rapidly combine corpora and begin making connections between different parts of my practice. (Quietest.RPP for example)
+#### Ad-Hoc Experiments
+
+One such experiment was to run similar clustering processes on a subset of the corpus, derived by filtering each item according to its average loudness. The aim of this was to hone in on those faint, drone-like sounds and to purify the corpus towards only those sounds and away from those more rhythmic sounds. This was facilitated by extending [FTIS]({m.ftis}) and the implementation of a *Corpus* object, a programming construct which contains both the data (a collection of samples and audio descriptor analysis), and a series of methods to operate on that data. Up to this point, *Corpus* objects only held the names of files in their data structure as a way of establishing where a corpus resided on a hard disk. I then added a number of filtering methods which allowed me to sieve the corpus in some blunt ways. These methods were composable, and could be combined in order to carve away samples from the overall corpus and to return a new corpus. [CODE 1]({m.em}#code1), for example, demonstrates filtering a corpus by the loudness of each item so that only the bottom 10% of samples would remain. Any number of those methods can be chained to increasingly filter what is returned by each filter method.
+
+<Code
+caption='Corpus filtering by loudness example using the loudness() method of a Corpus() object.'
+figure='CODE 1'
+id='code1'
+>
+
+```py
+from ftis.corpus import Corpus
+corpus = Corpus('path/to/corpus')
+corpus.loudness(max_loudness=10)
+```
+
+</Code>
+
+The extension to the *Corpus* object was effective for capturing the quietest and most delicate sounds, although it did not specifically isolate those that were more drone-like as I had intended. I embraced this and combined the materials into a short sketch which can be heard in [AUDIO 7]({m.em}#aud7), playing with these sounds culminated something representing an early draft of a piece which became instrumental as a catalyst for  the creation of [Anchors]({m.em}#anchors).
+
+<Waveform 
+file='/inter/short-quiet-idea.mp3'
+peaks='/inter/short-quiet-idea.dat'
+title='Short draft of a piece composed with sounds derived by corpus filtering'
+caption='AUDIO 7'
+id='aud7'
+/>
+
+Another ad-hoc experiment incorporated the type of approach developed in [Reconstruction Error]({m.re}), by which samples explored aurally in Max were rapidly exported to REAPER to be composed with intuitively. Taking material from clusters such as 1, 2, and 37 I constructed a series of different loop-based palettes as I had been roughly experimenting with in Max. This was more decisive and informed while performing it REAPER, and I aimed to create several iterated structures that were cyclical in nature, but also could have been perceived as relatively static simultaneously. Several of these experiments can be heard in [AUDIO 8]({m.em}#aud8). These experiments were less evocative for me, and I felt like the underlying concept of what I was trying to do was not explored in as much detail as it demanded. That said, it did inform some of the way that material was constructed in [EEE]({m.em}#eee), in terms of which materials I incorporated and how they were structured through intuitive means.
+
+<Album 
+tracks={loopExperiments}
+id='aud8'
+title='Various loop experiments using clusters such as 1, 2, and 37'
+figure='AUDIO 8'
+/>
+
+#### Mixing Sounds From [Reconstruction Error]({m.re})
+
+These experiments were useful in acquainting me with the broader nature of the corpus and were meaningful as a way of stepping back into a compositional mindset after much technical work had taken place. While I was doing them though, I had a constant feeling that the amount of variation in the corpus was not enough for me to carry forward the initial compositional sketches into something more fully fledged. Specifically, the shorter segments lost a lot of their significance when pulled apart from the original temporal structures with other segments. This was unlike [Reconstruction Error]({m.re}), in which I found a lot of value in dissecting sounds into atomic units and composing with them in that deconstructed state. In response to this I perceived that there was a certain overlap and kinship between the sound world of the two projects and that allowing myself to draw in previously used material might expand the possibilities. This was not easy to do though however, as [FTIS]({m.ftis}) was built with the mindset that a project only has one corpus which was not the case for me.
+
+This frustration led me to again develop and extend the functionality of [FTIS]({m.ftis}) to service these emerging compositional aims. Up till now, a *Corpus* object represented a single folder of samples or a single sample on the computer. Using operator overloading I made it possible to combine corpora programmatically. Using this new functionality I was able to take any number of corpora and treat them as a single corpus, or as I termed it internally a *multi-corpus*. [CODE 2]({m.em}#code2) shows an example of how this is orchestrated as [FTIS]({m.ftis}) code.
+
+<Code 
+id='code2'
+caption='Adding two FTIS Corpus objects together using operator overloading. the variable multi_corpus is a new corpus as a result of adding corpus_one to corpus_two.'
+figure='CODE 2'
+>
+
+```py
+from ftis.corpus import Corpus
+corpus_one = Corpus('path/to/corpus')
+corpus_two = Corpus('path/to/corpus')
+multi_corpus = corpus_one + corpus_two
+```
+
+</Code>
+
+ A number of experiments emerged from this which ultimately 
 
 
-Som other tangential approaches, although mostly dead ends. I kinda just found something that worked... the dead ends are important. It's not about finding one right approach, but honing in on what is important to me through discovery ...
+
 
 ### Anchors (placeholder)
 The connection here is the multicorpus approach.
-
 
 Developing anchors using a searching process and composing from there. A main source of inspiration is the juxtaposition and superimposition of stationary textures. Many of the initial discoveries were made by looking suitable for convolution, ideally pitched and quasi-textural in nature. There are also numerous notes above that show the development of the source material.
 
@@ -203,6 +259,15 @@ For this particular track 'anchors', I want the form to almost feel shapeless in
 
 ## Reflection
 
+Something as simple programatically as allowing the composability of Corpus objects engendered a whole different mode of interaction with FTIS, and thus lead to pieces based on the exploration of highly specific material types.
+
+Also, delving donw multiple levels of hierarchy. Starting very broadly, what is in the corpus, what is in the group, what is in the sample, how do the samples fit together... This was a new way of hierarchically thinking about structure and form that developed from this increasingly atomic way of dealing with sounds with computer-aid.
+
+Material hierarchies driven by FTIS
+    - Cluster exploration in microsegmentation
+    - KNN searches
+    - The electromagnetic stuff creates a foundation, a base from which I created material links elsewhere and drew into single compositions.
+
 Frustration drives technological development - and technological development drives compositional innovation and breakthroughs. They feed off each other. Anchors only came about because of the multi-corpus approach, which was enabled by extending FTIS. I was thinking about gathering material in a specific way (*branching* out from a single compositional anchor towards similar sounds) which gave rise to the knn method of searching. This sparked the idea for the Kindle active gesture to be used, which I had an appreciation before at the verys tart of listening but didn't know how to incorporate it.
 
 Aestheticise the unheard and procedural sounds of technology. Kindle on/off thing.
@@ -211,10 +276,8 @@ Aestheticise the unheard and procedural sounds of technology. Kindle on/off thin
  - Xiaomi sample in Anchors
 - The way that my listening is structured through technology leads me to these kinds of concepts.
 
+- For me, this was a highly successful pilot project, where FTIS was at the basis of my computer-aided compositional practice. The computer was a partner through corpora exploration and structured my engagement with sounds
 
-
-### Using the computer to work from more knowns in composition
-- The electromagnetic stuff creates a foundation, a base from which I created material links elsewhere and drew into single compositions.
 ### Towards a stable workflow
 
 Would have I been able to segment the material at the scale it existed at, analyse it and do the other various processes without the computer?
