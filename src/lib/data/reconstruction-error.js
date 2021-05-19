@@ -19,8 +19,8 @@ export const ibuffer = {
         { name: 'er022ew.pdf', audio: 'er022ew.mp3',  peaks: 'er022ew.dat' },
         { name: 'picture.raw', audio: 'picture.mp3',  peaks: 'picture.dat' },
         { name: 'screenie.pdf', audio: 'screenie.mp3',  peaks: 'screenie.dat' },
-        { name: 'Screenshot 2019-04-26 at 11.04.50.png', audio: 'Screenshot 2019-04-26 at 11.04.50-attenuated.mp3',  peaks: 'Screenshot 2019-04-26 at 11.04.50.dat' },
-        { name: 'Screenshot 2019-04-26 at 11.05.00.png', audio: 'Screenshot 2019-04-26 at 11.05.00-attenuated.mp3',  peaks: 'Screenshot 2019-04-26 at 11.05.00.dat' }
+        { name: 'Screenshot 2019-04-26 at 11.04.50.png', audio: 'screen1.mp3',  peaks: 'screen1.dat' },
+        { name: 'Screenshot 2019-04-26 at 11.05.00.png', audio: 'screen2.mp3',  peaks: 'screen2.dat' }
     ]
 }
 
@@ -75,5 +75,31 @@ export const noveltySlices = [
 ]
 
 export const segmPoints = [
-    { time: 70.0, editable: false, labelText: 'Filtered cluster concatenation'}
+    { time: 25.597, editable: false, labelText: 'Concatenated clusters as interjections to static material (1)' },
+    { time: 35.597, editable: false, labelText: 'Concatenated clusters as interjections to static material (2)' },
+    { time: 40.0, editable: false, labelText: 'Concatenated clusters as interjections to static material (3)' },
+    { time: 70.0,  editable: false, labelText: 'Filtered cluster concatenation'}
+]
+
+export const sysPoints = [
+    { time: 78.0, editable: false, labelText: 'Cross referenced samples are gradually included'},
+    { time:  154.0, editable: false, labelText: 'New category of noise samples derived from .reapeaks data included.'}
+]
+
+export const descPoints = [
+    { time: 45.0, editable: false, labelText: 'Transient material created with a transient separation algorithm.'},
+    { time: 127.0, editable: false, labelText: 'Three settings of transient extraction to derive variation.'}
+]
+
+export const isnPoints = [
+    { time: 155.0, editable: false, labelText: 'Reduction two fewer simultaneous cluster streams.'}
+]
+
+export const isnSegments = [
+    { startTime: 0.0, endTime: 154.0, labelText: 'Superimposed clusters as looping textural streams'},
+]
+
+export const maxwaveSegs = [
+    { startTime: 0.0, endTime: 73.0, labelText: 'This section highlights various morphologies of the .maxwave derived sounds.' },
+    { startTime: 145.0, endTime: 217.0, labelText: 'Noisy percussive component boosted and highlighted for a formal build to the end.'}
 ]

@@ -16,7 +16,11 @@
         generation, 
         libllvmSlices, 
         noveltySlices,
-        segmPoints 
+        segmPoints, 
+        sysPoints, 
+        isnSegments, isnPoints,
+        descPoints,
+        maxwaveSegs
     } from '$lib/data/reconstruction-error.js'
 </script>
 
@@ -353,10 +357,16 @@ The next sections, [_.dotmaxwave]({m.re}#_dotmaxwave), [X86Desc.a]({m.re}#x86des
 ### _.dotmaxwave
 
 <!-- WIDGET: dotmaxwave -->
+<Waveform 
+file='/pieces/re/dotmaxwave.mp3'
+peaks='/pieces/re/dotmaxwave.dat'
+segments={maxwaveSegs}
+title='_.dotmaxwave'
+/>
 
 *_.dotmaxwave* was the first piece I composed The samples that I used in this piece were all derived from cluster 131 which I discovered by auditioning cluster samples in Max. While listening to this cluster I realised that the source material was all derived from a particular raw data type with the .maxwave extension and had similar morphological properties. All of the samples begin in a similar fashion, with four repeated iterated pitched sounds leading into a static texture (see [AUDIO 6]({m.re}#aud6)). This static texture contains a predominant pitch component with some quiet narrow-band noise. I wanted to capitalise on what I had found, and create a track that focused on the relationship between pitch and noise as well as the shared morphology between each sample.
 
-I started by pulling cluster 131 into REAPER and listening to the samples. I navigated through the cluster relationships and identified samples which I found to have the most novel differences in the opening sequence. As such I was able to create a pallette of small iterations on the same idea. These are presented in [AUDIO 6]({m.re}#aud6).
+I started by importing cluster 131 into REAPER and listening to the samples. I navigated through the cluster relationships and identified samples which I found to have the most novel differences in the opening sequence. As such I was able to create a pallette of small iterations on the same idea. These are presented in [AUDIO 6]({m.re}#aud6).
 
 <!-- WIDGET: album of dee dee doo sounds -->
 
@@ -367,12 +377,18 @@ The rest of the piece grew from this concept. The first section from 0:00 to 1:1
 While composing this first piece I constantly was stepping in and out of REAPER to perform decomposition processes. It was tedious to have to move *out* of the DAW to perform audio processing as well as constantly having to move between the command line, the file system and the DAW timeline in order to setup the necessary media items for audition and composition. This friction led me to create [ReaComa]({m.reacoma}), a set of ReaScripts that bridge the FluCoMa command-line tools with REAPER. These scripts allow one to process media items directly in REAPER, and to configure the parameters of various decomposition algorithms such as harmonic percussive source separation, non-negative matrix factorisation, transient extraction, sinunsoidal isolation. In addition to this, the segmentation algorithms from FluCoMa's first toolbox are implemented so that media items can be split in time using several different approaches to dividing sounds in time. In the remaining pieces of Reconstruction Error [ReaCoMa]({m.reacoma}) played a vital role in unpicking the internal content of sounds, once I had discovered and selected them through analysis. It also led me to performing additional layers of segmentation in order to restructure sounds in time.
 
 ### --isn
-
-<!-- WIDGET: --isn -->
+<Waveform 
+file='/pieces/re/isn.mp3'
+peaks='/pieces/re/isn.dat'
+segments={isnSegments}
+points={isnPoints}
+/>
 
 [--isn]({m.re}#isn) is composed from clusters of samples with short impulse-based material. While composing I was often using the annotations and notes I made for each cluster as a way of informing me of what samples to experiment with next. I noticed that I classified a large number of clusters as short, fast and delicate. This specific portion can be read [here](https://github.com/jamesb93/reconstruction_error/blob/master/clusters.md#short-fast--delicate).
 
-<!-- WIDGET: maxwave start -->
+<!-- WIDGET: 
+maxwave start, able to select different streams of impulses overlapping each other 
+-->
 
 I selected these specific clusters and auditioned them by playing samples back-to-back in a sequencer-like fashion. The repetition of impulses formed rhythmic looping patterns where the length of the samples dictated the internal structure. The slight differences in the shape of the impulses gave these patterns a musical quality. From this method of concatenating and arranging samples, the internal dynamics of each cluster were brought to the foreground and I wanted to capitalise on the tension this created between the tight perceptual grouping of each cluster, the slight differences between the samples within these and the overall perceptual separability between clusters. 
 
@@ -383,15 +399,16 @@ From 0:00 to 2:34, I created a passage of gradually increasing intensity and tex
 I imagined that I might proliferate the musical ideas I had built up to this point. However, I could not derive any more novel superimpositions of clusters that I found satisfactory and envisaged that to continue the piece I woudl need to introduce more material or to start moving in another musical direction. I decided to keep the material constrained to just the clusters I initially grouped in my annotations and to keep the piece very focused.
 
 ### X86Desc.a
-
-<!-- WIDGET:  
-0:45
-2:07
--->
+<Waveform 
+file='/pieces/re/X86desc.a.mp3'
+peaks='/pieces/re/X86desc.a.dat'
+caption='X86Desc.a'
+points={descPoints}
+/>
 
 This piece developed the concepts which underpinned [--isn]({m.re}#isn) and perhaps was a response to restricting myself to a narrow selection of impulse-based material. [X86Desc.a]({m.re}#x86desca) focuses on the incorporation and treatment of similar sound types but expands the palette of transient-based material through processing complex sounds from other clusters. 
 
-For example, the transient material created at 0:45 is created using a transient extraction algorithm from [ReaCoMa]({m.reacoma}). The original source material, *libLLVM-6.0.dylib_144.wav*, is predominantly pitched though and the end result is perhaps not recognisable as the source material due to the removal of the non-transient component of that sound. This process is used throughout the piece to generate different materials. Depending on the morphological properties of the input sound, a number of different quasi-rhythmic patterns and impulse passages are carved away from the spectrally rich sources. For example,  at 2:07, one of the key sonic elements in that texture was derived by taking a cluster of samples and passing them through the transient extraction algorithm. I did this with three different settings, to create variations on that material which I then used to formulate a morphing passage of sound. This is isolated in [AUDIO 7]({m.re}#aud7).
+For example, the transient material at 0:45 is created using a transient extraction algorithm from [ReaCoMa]({m.reacoma}). The original source material, *libLLVM-6.0.dylib_144.wav*, is predominantly pitched though and the end result is perhaps not recognisable as the source material due to the removal of the non-transient component of that sound. This process is used throughout the piece to generate different materials. Depending on the morphological properties of the input sound, a number of different quasi-rhythmic patterns and impulse passages are carved away from the spectrally rich sources. For example,  at 2:07, one of the key sonic elements in that texture was derived by taking a cluster of samples and processing them through the transient extraction algorithm. I did this with three different settings, to create variations on that material which I then used to formulate a morphing passage of sound. This is isolated in [AUDIO 7]({m.re}#aud7).
 
 <Waveform 
 title='Material from cluster 165 processed with the transient extraction algorithm in three different ways. 2:07 in X86Desc.a.'
@@ -405,16 +422,11 @@ In isolation the results of these types decomposition processes were uninspiring
 
 ### segmnoittet
 
-<!-- WIDGET: segmnoittet 
-1:10
-3:14
-3:38
-3:43
--->
 <Waveform 
 file='/pieces/re/segmnoittet.mp3'
 peaks='/pieces/re/segmnoittet.dat'
 points={segmPoints}
+title='segmnoittet'
 />
 For this piece, I wanted to create something that was less rhythmically homogenous than the previous tracks and to create something more mechanical and sparse. The first idea I had involved taking clusters that when concatenated would create such aspects. This would result if for example the samples within a cluster had significantly differing lengths. I was able to control this aspect by selecting samples from different hierarchical levels of the meta analysis. The deeper I went into the hierarchy, the more homogenous the clusters would become when concatenated. A short composed section of music emerged from this and can be heard in [AUDIO 8]({m.re}#aud8}).  
 
@@ -435,7 +447,7 @@ caption='REAPER session for segmnoittet. Tracks displayed on the left side of th
 id='img5'
 />
 
-After importing these clusters I was able to keep composing, and eventually the compositional process took a new direction. The overall aesthetic became much more relaxed and less rhythmically assertive and block-like. The presentation of short gestures became much more reserved as many of them were superimposed or more sparingly used to ornament longer textural sounds. I was able to create various effects by carefully selecting perceptually homogenous groups of materials and treating them as individual compositional units. For example, at 1:10 a small cluster processed is processed with a moving filter. The original impulses in this small section of source material are very bright and contain lots of high frequency content, so the result is punchy and almost overdriven. A similar process is applied to ther clusters at 3:14, 3:38 and 3:43 where concatenations function as interjections to the base texture that is introduced at the start.
+After importing these clusters I was able to keep composing, and eventually the compositional process took a new direction. The overall aesthetic became much more relaxed and less rhythmically assertive and block-like. The presentation of short gestures became much more reserved as many of them were superimposed or more sparingly used to ornament longer textural sounds. I was able to create various effects by carefully selecting perceptually homogenous groups of materials and treating them as individual compositional units. For example, at 1:10 a small cluster processed is processed with a moving filter. The original impulses in this small section of source material are very bright and contain lots of high frequency content, so the result is punchy and almost overdriven. A similar process is applied to ther clusters at 0:25, 0:35 and 0:40 where concatenations function as interjections to the base texture that is introduced at the start.
 
 The slow unfolding ending is created by taking another subcluster of samples and concatenating them with different spacings. This occurs both vertically, in that multiple spacings are layered simultaneously, and over time all of the spacings become much longer. This creates the effect of pitch disspearing and only the impulse remaining. To orchestrate this, I created a Lua script which could interactively space out items in the timeline by setting an amount, as well as a noise factor which could skew values along the fixed spacing. This is demonstrated in [VIDEO 12]({m.re}#vid12), in which I take several impulse samples and modify the spacing between them.
 
@@ -448,12 +460,14 @@ caption='Interactive item spacing with Lua accessing the ReaScript API.'
 
 ### sys.ji_
 
-<!-- WIDGET:  
-1:18
-2:34
--->
+<Waveform 
+file='/pieces/re/sys.ji_.mp3'
+peaks='/pieces/re/sys.ji_.dat'
+id=''
+title='sys.ji_'
+points={sysPoints}
+/>
 
-<!-- REVIEW this again -->
 This was the last piece that was composed for the album. It is the most different in compositional approach and the material that was used. For me, it signified a developmental milestone in the compositiona process, where I was comfortable enough with the corpus that I could navigate almost intuitively. Instead of entirely relying on the computer to seek out sounds, or to be offered potential groupings, I relied on knowledge I had built up throughout composing the other four pieces. In three of the previous pieces I relied on using short impulse-based material to compose. The way that I arranged and incorporated these sounds were delicate, and focused on intricate and fragile qualities with quasi-interlocking rhythms. I wanted to create something antaganostic to these pieces, and include the more bombastic and spectrally rich sounds that I knew existed elsewhere in the corpus.
 
 When I was experimenting with different clustering algorithms, I tried another algorithm, HDBSCAN, which is discussed in some detail in ["Clustering"]({m.re}#clustering). One cannot specify HDBSCAN to produce a set number of clusters, rather it determines this for itself in response to a number of constraints in the algorithm. I found this clustering technique much worse in the results, and the clusters often contained only two or three samples across a large parameter range. Most interestingly though, this algorithm creates a cluster that contains everything it can not confidently assign membership to. I auditioned this cluster in my data and found exactly the type of sounds I was looking for - noise-filled, chaotic and spectrally rich. I noticed that many samples in this cluster had originated as segments from the file *sys.ji_.wav*. I isolated several of them that I instinctively liked the sound of and worked backwards by looking at the agglomerative clustering data to see where those files had been grouped by that algorithm. This led me to a number of other noise-based samples which were not present in the HDBSCAN data. In effect, I used the two different clustering algorithms as a mechanism for discovery through *cross referencing*. 
@@ -494,6 +508,6 @@ id='vid14'
 />
 
 <NextSection 
-next="ElectroMagnetic"
+next="Interferences"
 link={m.em}
 />
