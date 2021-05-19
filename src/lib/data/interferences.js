@@ -76,3 +76,14 @@ export const xiaomiModes = [
         labelText: 'Active state.'
     }
 ]
+
+export const loopExperiments = {
+    prefix: '/inter/loop-experiments/',
+    trackData : [
+        { name: 'Loop Experiment 1', audio: '1.mp3', peaks: '1.dat' },
+        { name: 'Loop Experiment 2', audio: '2.mp3', peaks: '2.dat' },
+        { name: 'Loop Experiment 3', audio: '3.mp3', peaks: '3.dat' },
+        { name: 'Loop Experiment 4', audio: '4.mp3', peaks: '4.dat' },
+        { name: 'Loop Experiment 5', audio: '5.mp3', peaks: '5.dat' }
+    ]
+}
