@@ -17,6 +17,7 @@
 	<Button clickHandler={handleButton} text="toggle justification"/>
 	<ul>
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === "/"}	href='.'>Home</a></li>
+		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === "/howto"}	href='/howto'>How To</a></li>
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === "/acknowledgements"} href='/acknowledgements'>Acknowledgements</a></li>
 		
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === m.intro} href={m.intro}>1. Introduction</a></li>
