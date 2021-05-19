@@ -1,0 +1,22 @@
+<script>
+	import NextSection from "$lib/components/NextSection.svelte"
+    import {metadata as m} from "./directory.svx"
+</script>
+
+# How To Use And Read This Web Thesis
+
+To navigate, select a section on the left hand.
+
+All samples on this page are in a compressed format in order to make the document fast and usable over the web. However, high quality WAV files for  examples can be found at some location yet to specify, somewhere in the source maybe. Each piece will have a link where high quality uncompressed WAVE versions are provided as links in each section.
+
+There are many interactive elements throughout this digital dissertation such as annotated waveforms and data visualisations. There are also numerous [hyperlinks (I'm just an example)]() which I encourage you to follow to see how these integral digital resources feed into the work.
+
+Images can be expanded by clicking the element which displays the image.
+
+Where possible I have linked to the *most* permanent resource that is relevant and applicable. Even where it might be more appropriate to link directly to a person's personal website for example, I may choose to link to long-standing resources that are less prone to changing, becoming dead or unreachable. A clone of all of these websites is provided as an archive with this dissertation using `wget` to scrape a copy of the websites. 
+
+
+<NextSection 
+next="Introduction"
+link={m.intro}
+/>
