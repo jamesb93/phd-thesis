@@ -15,7 +15,8 @@
         xiaomiModes,
         xboxModes,
         classifier,
-        loopExperiments
+        loopExperiments,
+        baseSketchSegs
     } from '$lib/data/interferences.js';
 </script>
 
@@ -72,7 +73,7 @@ caption='AUDIO 3'
 segments={xiaomiModes}
 />
 
-As I recorded and browsed through these sounds, I was reminded of the quasi-documentary work of Australian field-recording artist Jay-Dea Lopez and the way he taps into "unseen" sources using contact microphones attached to monolithic infrastructural objects in the outback. In particular, two blog posts of his, ["Low Frequencies"](https://soundslikenoise.org/2019/09/07/low-frequencies/) and ["Coil pickups and microsounds"](https://soundslikenoise.org/2020/08/16/coil-pickups-and-microsounds) contain these types of material. Similarly, I felt a certain connection between my experiments and the morphologies and textures present in Bernhard Gunter's *Untitled I/92* ([VIDEO 2]({m.em}#vid2)), and Alvin Lucier's *Sferics* ([VIDEO 3]({m.em}#vid3)). Both of these pieces to me encapsulate the essence and character of what I was discovering with the electromagnetic microphone - delicate and fragile sound worlds full of intimate clicks, pops and spectrally constrained fragments. Furthermore, these external musical references started to funnel into my conceptualisation of the initial material as that which can occupy two distinct states - busy and rapidly changing or unchanging and glacial in nature. This became an essential starting point in the technological process of dissecting these sounds in order to become more familiar with them.
+As I recorded and browsed through these sounds, I was reminded of the quasi-documentary work of Australian field-recording artist Jay-Dea Lopez and the way he taps into "unseen" sources using contact microphones attached to monolithic infrastructural objects in the outback. In particular, three blog posts of his, ["Low Frequencies"](https://soundslikenoise.org/2019/09/07/low-frequencies/), ["Coil pickups and microsounds"](https://soundslikenoise.org/2020/08/16/coil-pickups-and-microsounds) and ["Raising the Inaudible to the Surface"](https://soundslikenoise.org/2014/08/31/listening-to-the-inaudible-field-recording-and-the-pursuit-of-the-microsound/) contain these types of material. Similarly, I felt a certain connection between my experiments and the morphologies and textures present in Bernhard Gunter's *Untitled I/92* ([VIDEO 2]({m.em}#vid2)), and Alvin Lucier's *Sferics* ([VIDEO 3]({m.em}#vid3)). Both of these pieces to me encapsulate the essence and character of what I was discovering with the electromagnetic microphone - delicate and fragile sound worlds full of intimate clicks, pops and spectrally constrained fragments. Furthermore, these external musical references started to funnel into my conceptualisation of the initial material as that which can occupy two distinct states - busy and rapidly changing or unchanging and glacial in nature. This became an essential starting point in the technological process of dissecting these sounds in order to become more familiar with them.
 
 <YouTube 
 url="https://www.youtube.com/embed/QZfMp6tredw"
@@ -172,7 +173,7 @@ corpus.loudness(max_loudness=10)
 
 </Code>
 
-The extension to the *Corpus* object was effective for capturing the quietest and most delicate sounds, although it did not specifically isolate those that were more drone-like as I had intended. I embraced this and combined the materials into a short sketch which can be heard in [AUDIO 7]({m.em}#aud7), playing with these sounds culminated something representing an early draft of a piece which became instrumental as a catalyst for  the creation of [Anchors]({m.em}#anchors).
+The extension to the *Corpus* object was effective for capturing the quietest and most delicate sounds, although it did not specifically isolate those that were more drone-like as I had intended. I embraced this and combined the materials into a short sketch which can be heard in [AUDIO 7]({m.em}#aud7), playing with these sounds culminated something representing an early draft of a piece which became instrumental as a catalyst for  the creation of [{m.anchors}]({m.em}#{m.anchors}).
 
 <Waveform 
 file='/inter/short-quiet-idea.mp3'
@@ -182,7 +183,7 @@ caption='AUDIO 7'
 id='aud7'
 />
 
-Another ad-hoc experiment incorporated the type of approach developed in [Reconstruction Error]({m.re}), by which samples explored aurally in Max were rapidly exported to REAPER to be composed with intuitively. Taking material from clusters such as 1, 2, and 37 I constructed a series of different loop-based palettes as I had been roughly experimenting with in Max. This was more decisive and informed while performing it REAPER, and I aimed to create several iterated structures that were cyclical in nature, but also could have been perceived as relatively static simultaneously. Several of these experiments can be heard in [AUDIO 8]({m.em}#aud8). These experiments were less evocative for me, and I felt like the underlying concept of what I was trying to do was not explored in as much detail as it demanded. That said, it did inform some of the way that material was constructed in [EEE]({m.em}#eee), in terms of which materials I incorporated and how they were structured through intuitive means.
+Another ad-hoc experiment incorporated the type of approach developed in [Reconstruction Error]({m.re}), by which samples explored aurally in Max were rapidly exported to REAPER to be composed with intuitively. Taking material from clusters such as 1, 2, and 37 I constructed a series of different loop-based palettes as I had been roughly experimenting with in Max. This was more decisive and informed while performing it REAPER, and I aimed to create several iterated structures that were cyclical in nature, but also could have been perceived as relatively static simultaneously. Several of these experiments can be heard in [AUDIO 8]({m.em}#aud8). These experiments were less evocative for me, and I felt like the underlying concept of what I was trying to do was not explored in as much detail as it demanded. That said, it did inform some of the way that material was constructed in [{m.eee}]({m.em}#{m.eee}), in terms of which materials I incorporated and how they were structured through intuitive means.
 
 <Album 
 tracks={loopExperiments}
@@ -195,7 +196,7 @@ figure='AUDIO 8'
 
 These experiments were useful in acquainting me with the broader nature of the corpus and were meaningful as a way of stepping back into a compositional mindset after much technical work had taken place. While I was doing them though, I had a constant feeling that the amount of variation in the corpus was not enough for me to carry forward the initial compositional sketches into something more fully fledged. Specifically, the shorter segments lost a lot of their significance when pulled apart from the original temporal structures with other segments. This was unlike [Reconstruction Error]({m.re}), in which I found a lot of value in dissecting sounds into atomic units and composing with them in that deconstructed state. In response to this I perceived that there was a certain overlap and kinship between the sound world of the two projects and that allowing myself to draw in previously used material might expand the possibilities. This was not easy to do though however, as [FTIS]({m.ftis}) was built with the mindset that a project only has one corpus which was not the case for me.
 
-This frustration led me to again develop and extend the functionality of [FTIS]({m.ftis}) to service these emerging compositional aims. Up till now, a *Corpus* object represented a single folder of samples or a single sample on the computer. Using operator overloading I made it possible to combine corpora programmatically. Using this new functionality I was able to take any number of corpora and treat them as a single corpus, or as I termed it internally a *multi-corpus*. [CODE 2]({m.em}#code2) shows an example of how this is orchestrated as [FTIS]({m.ftis}) code.
+This frustration led catalysed a new development to the [FTIS]({m.ftis}) *Corpus* object to service these emerging compositional aims. Up till now, a *Corpus* represented a single folder of samples or a single sample on the computer. Using [operator overloading](https://docs.python.org/3/reference/datamodel.html#special-method-names), I made it possible to combine corpora programmatically. This functionality made it possible for me to combine multiple corpora and treat them as a single corpus, or as I termed it internally a *multi-corpus*. [CODE 2]({m.em}#code2) shows an example of how this is orchestrated as [FTIS]({m.ftis}) code.
 
 <Code 
 id='code2'
@@ -212,54 +213,131 @@ multi_corpus = corpus_one + corpus_two
 
 </Code>
 
- A number of experiments emerged from this which ultimately 
+While the notion of combining multiple sources of sonic materials is not novel to compositional method with digital samples, for me this change allowed me to use [FTIS]({m.ftis}) more flexibly  to overcome the mental pattern of one project having one corpora or set of sonic interests. Instead of having to merge files a number of different directories on disk to form a corpus, I could instead point a script to a number of places and deal with this in a fashion where the organisational house-keeping is separated from the creative workflow. This provoked another phase of exploration with FTIS that ultimately generated the two works presented as [Interferences]({m.em}). The next two sections, [{m.anchors}]({m.em}#{m.anchors}) and [{m.eee}]){m.em}#{m.eee}) discuss how these works emerged through computer-aided practice with the improved version of [FTIS]({m.ftis}).
+
+### {m.anchors}
+
+Developing the *multi-corpus* capabilities of [FTIS]({m.ftis}) prompted further questions about how I might capitalise on the drone-like and semi-pitched material I encountered in the earliest cluster auditioning process. This is outlined in ["Pathways Through The Corpus"]({m.em}#pathways-through-the-corpus). I found that while these sounds were evocative, there was not enough variety in the material for me to build a piece from it. 
+
+The first step I took in addressing this was to investigate in more detail what level of variation was actually within these *static* sounds. To facilitate this I created a [FTIS]({m.ftis}) script to take all of the initial material classed as *static*, and to create three clusters from this. The number of clusters was an intuitive choice, and I imagined that by dividing it into three rough groups I might be able to differentiate the broader differences within that collection of sounds. From this, I generated a REAPER session and inspected the outputs. This script can be found here: [base_materials.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/base_materials.py).
+
+Combing through this output REAPER session confirmed my earlier instinctive response that there was not much variation in the static material. While three clusters were produced by the clustering process, the sounds placed into clusters 1 and 2 possessed almost identical morphologies and textural qualities. The differences between clusters 1 and 2 compared to cluster 0 though were much greater and obvious in their perception. I played with these differences and created a sketch based on hard panning clusters 1 and 2 to left and rich channels respectively, and maintaining cluster 0 monophonic and centred. I also slightly arranged the material in order to explore different juxtapositions of these two material identities. This sketch can be heard in [AUDIO 9]({m.em}#aud9) alongside some annotations of my perception of different combinations between the clusters.
+
+<Waveform 
+id='aud9'
+title='A sketch created from the output of base_materials.py'
+caption='AUDIO 9'
+file='/inter/base-materials-sketch.mp3'
+peaks='/inter/base-materials-sketch.dat'
+segments={baseSketchSegs}
+/>
+
+I wanted to discover within a larger scope what other sounds were similar to this heavily pitched material and could be drawn into for further superimpositions of layering. Pushing the utilisation of *multi-corpus* techniques in [FTIS]({m.ftis}) further, I created a script for creating a spatial representation of samples from both the [Reconstruction Error]({m.re}) corpus *and* this set of static materials I was already working with. This script can be found here: [find_tuned.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py). This spatial representation was based on a Constant-Q Transform (CQT) analysis, which I selected based on the assumption that its logarithmic representation of the spectrum would be suitable in order for the computer to discern differences in pitch. From this spatial representation I computed a [k-d tree](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html) which would enable me to query for a number of neighbours to a specific point in that space. Using this data structure, I selected a sample from the sketch heard in [AUDIO 9]({m.em}#aud9) with a prominent pitch component and queried for 200 samples closest to that sample in the spatial representation of the newly generated *multi-corpus*. This selected sample is presented in [AUDIO 10]({m.em}#aud10). 
+
+<!-- WIDGET: 
+DEMO 1
+200 knn branching searcher -->
 
 
+<Waveform 
+id='aud10'
+title='Central query point for find_tuned.py'
+caption='AUDIO 10'
+file='/inter/find-tuned-centre.mp3'
+peaks='/inter/find-tuned-centre.dat'
+/>
 
+I auditioned the sounds curated from the [find_tuned.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py) script and found that many of them would be cohesive compositional materials. A short video demonstrating this listening process can be seen in [VIDEO 5]({m.em}#vid5)}. I imported all of these files into REAPER and created a longer-form sketch with them which can be heard in [AUDIO 11]({m.em}#aud11). 
 
-### Anchors (placeholder)
-The connection here is the multicorpus approach.
-
-Developing anchors using a searching process and composing from there. A main source of inspiration is the juxtaposition and superimposition of stationary textures. Many of the initial discoveries were made by looking suitable for convolution, ideally pitched and quasi-textural in nature. There are also numerous notes above that show the development of the source material.
-
-convolution_base_materials.py - take static sounds and create three clusters out of this
-
-convolution_three_anchors.py - took three sounds 
-convolution_find_tuned.py - find more pitchy sounds using CQT and kdtree to branch outward from known samples to get 200 more samples.
-
-https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/MultiCorpus/scripts/convolution_three_anchors.py
-
-Sorting these 200 samples by centroid using ReaCoMa
-
-A mid-way version of the piece emerged from intuitively moving these samples around. I tried to create complex 
-
-<ImageMedia2 
-url='/inter/anchors-mid-way-session.png'
+<VideoMedia2 
+url='/inter/exploring-tuned-anchors.mp4'
+caption='Auditioning the output of find_tuned.py'
+figure='VIDEO 5'
+id='vid5'
 />
 
 <Waveform 
 file='/inter/28-10-20.mp3'
 peaks='/inter/28-10-20.dat'
+title='Sketch using a combination of files from find_tuned.py and those previously worked with'
+caption='AUDIO 11'
+id='aud11'
 />
 
-For this particular track 'anchors', I want the form to almost feel shapeless in the long term. I don't want it to feel like its necessarily pushing toward a climatic point, rather that the music exists in a holding pattern and has ebbs and flows of material within that pattern. This is also part of making the material work musically, I have a quasi-conceptual idea of the sounds being reconstructed into the machines from which they were extracted. Part of frustrations in databending was the fact that the forms felt quite similar because I was focusing on stringing together various meso-form ideas without much consideration for how they would exist as a long term structure. By the time I got to the natural conclusion of each piece's materials in the composition process I had already crystallised a structure that wasn't that malleable.
+At this point I was beginning to formulate a clearer idea for the the structure of a work in which I could apply these discovered compositional materials. From the process of creating the longer sketch shown in [AUDIO 11]({m.em}#aud11), I began to place a type of conceptual importance on three samples due to their characteristic qualities. These are presented in [AUDIO 12]({m.em}#aud12). Using the same k-d tree approach as before, I branched out through a spatial representation of the *multi-corpus* containing [Reconstruction Error]({m.re}) samples and those I had been previously working with.
 
-The Gunter meanders and hovers and restrains from developing intentionally to heighten the suspense.
+This collected similar samples to the [find_tuned.py]() script but produced a more structured organisation of those samples in my view attracting each of the results from this towards one of these key conceptual samples recently outlined.
+
+<!-- WIDGET: AUDIO 12 -->
+
+https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/three_anchors.py
+
+From this point onwards I no longer used [FTIS]({m.ftis}) and completed the piece through intuitive compositional methods. My compositional decision in this process making was mostly focused on creating and manipulating different combinations between those materials with prominent pitch content, and those which were dynamically striated and transient in nature ranging from loud to soft. The entire piece is underpinned by a foundational layer of the original cluster 1 and 2 material described toward the beginning of this section while other materials are superimposed on top and longer form developments are orchestrated to operate "above" this and to ornament this layer. 
+
+There is only one intentionally constructed dramatic moment that occurs at 6:20, while the rest of this piece is purposefully crafted to be less directed and narrative in nature. I wanted to explore this type of musical behaviour more deeply in response to the wealth of coherent and constrained material I was able to extract with the aid of the computer and through the use of k-d trees. For me this was a contrasting mindset to that which I embodied in [Reconstruction Error]({m.re}). Comparatively, I had much less material to work with in [Reconstruction Error]({m.re}) and so often I was driven towards extracting as much musical value from the samples I had found. This often culminated in generating several meso-scale structures and then blending them together in order to form works three to five minutes in length. By the time I had utilised those samples as much as I felt I could, the form of a piece had crystallised. This work emerged differently, and by having access to much more material and a more detailed process of sample discovery engendered by [FTIS]({m.ftis}) a more integrated form of the work emerged organically from this process. In reality, the conceptual goal of the work had been fostered along the way and the final stage of the compositional process was to fill that structure that had been forming in my mind with the last curated set of samples.
+
+### {m.eee}
+
+This second piece of [Interferences]({m.em}) was catalysed by the technical development to FTIS and success of its application in creating {m.anchors}. While recording the induction source material, I found the e-reader recording (file name 06-Kindle Off-200513_1547.wav) perhaps the most vibrant and fascinating result and I wanted to revisit this sound and deconstruct with the tools which at the start of this project were not yet developed. The most striking aspect of this e-reader recording was the inherent structural and formal properties present in the oscillation between *active* and *static* states. The *static* musical behaviour was characterised by the same qualities of stationary textures discovered through previously performed corpus exploration strategies. Indeed, it is probably that most of these types of sounds were originally separated from this original source material and presented as short segments. The *active* material It contained a strong pitch component while the other was more active, gestural and dynamic. By now this dichotomy between sound types was something that had been centred in the conceptual roots of this project and was shaping my entire approach. These two behaviours are isolated from the larger recording to be heard in [AUDIO 13]({m.em}#aud13). 
+
+<Waveform 
+title='E-reader sample section displaying active and static states (06-Kindle Off-200513_1547.wav)'
+file='/inter/eee-seed.mp3'
+peaks='/inter/eee-seed.dat'
+id='aud13'
+caption='AUDIO 13'
+points={ [ { time: 18.3, editable: false, labelText: 'Interjection'} ] }
+segments= {[
+    { startTime: 0.0, endTime: 18.3, labelText: 'Static' },
+    { startTime: 18.3, endTime: 136.0, labelText: 'Active' },
+    { startTime: 136.0, endTime: 216.0, labelText: 'Static' }
+]}
+/>
+
+I wanted to deconstruct this relationship between the two sound behaviours and incorporate it as a formal aspect of this piece. As such, I employ different treatments toward each musical behaviour.
+
+The static portion is developed and grown by searching for other similar material using the k-d tree approach described in [{m.anchors}]({m.em}#{m.anchors}). I then layer this and create thick and detailed textures through superimposing several different arrangement of these curated sounds. The script for collecting these samples can be found here: [isolate_sample.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/isolate_sample.py).
+
+The active material is deconstructed using ReaCoMa and reassembled into several different forms. Doing this allows me to temporally elongate and extend the material by restitching it together into new forms where different micro-gestures are recycled. This form of manipulation cross-pollinates the approach to static material, and the final section of this piece sees a culmination of these two sound objects merging into one.
+The first three and a half minutes of the track resulted from me intuitively segmenting and deconstructing the sample using [ReaCoMa]({m.reacoma}). I segmented it manually first, separating *active* and *static* material from each other. I then further segmented the *active* material using `fluid.bufnoveltyslice~` with a very high kernel size in order to perform a broad division of this sound. From this collection of material I created an extended section where the two components are alternated synthetically, in order to extend this behaviour of stasis leading into interjections. I modify the interjections by slightly re-arranging materials each time they are presented.
+
+From the tail end of this at 3:41, I refrain from introducing any new interjections and instead start developing the *static* material. Using the k-d tree approach, I sought out samples which were perceptually similar including sounds from [Reconstruction Error]({m.re}). This returned a corpus of complementary sounds which I structured into very quiet and sympathetic textures. They blend very subtly, and in some cases are almost unheard with the intention that they join this texture seamlessly. These are progressively layered until 6:48 which begins a new section.
+
+At 6:48 the interjection returns and demarcates the beginning of a new section in which I deconstructed and reconstructed the *active* gesture to temporally extend it. I used [ReaCoMa]({m.reacoma}) to create small granular segments first, and then duplicated and concatenated these segments. To avoid a sense of strong repetition I then used another Lua script to shuffle the order of those contiguous items randomly. [VIDEO 6]({m.em}#vid6) demonstrates how this is performed in practice.
+
+<VideoMedia2 
+url='/inter/reorganising-material.mp4'
+caption='Using ReaCoMa to segment and extend the active gesture '
+figure='VIDEO 6'
+id='vid6'
+/>
+
+Similarly, I processed the same granular segments using one of the [ReaCoMa]({m.reacoma}) "sorting" scripts, which take a number of selected media items and arrange them in the timeline view according to audio descriptor values. I performed this using their perceptual loudness which causes sounds with similar intensities to be grouped together. The result is glitch-like and digital organisations of those segments. This can be heard in [AUDIO 14]({m.em}#aud14).
+
+<Waveform 
+id='aud14'
+title='ReaCoMa sorting used on small segments of active gesture.'
+caption='AUDIO 14'
+peaks='/inter/sorter-reacoma.dat'
+file='/inter/sorter-reacoma.mp3'
+/>
 
 
 
-### EEE (placeholder)
-- Take the KNN approach and apply it so other material. Building up a piece around a single sample.
-- [isolate_static.py](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/MultiCorpus/scripts/isolate_sample.py)
-- Finding what material from the databending corpus was close to 06-Kindle Off-200513_1547-glued-04.wav
-- Focus on disintegrating the kindle sample and finding connections to the disintegrated parts
-- 07-200622_1602.wav composing around the morphology
 
-For this particular track 'anchors', I want the form to almost feel shapeless in the long term. I don't want it to feel like its necessarily pushing toward a climatic point, rather that the music exists in a holding pattern and has ebbs and flows of material within that pattern. This is also part of making the material work musically, I have a quasi-conceptual idea of the sounds being reconstructed into the machines from which they were extracted. Part of frustrations in databending was the fact that the forms felt quite similar because I was focusing on stringing together various meso-form ideas without much consideration for how they would exist as a long term structure. By the time I got to the natural conclusion of each piece's materials in the composition process I had already crystallised a structure that wasn't that malleable.
+<!-- - Samples derived from the closest 
+    - 0000009.log_0.wav
+    - 018EB0E804881BDC028D3014CDBFAA98FEA94F78_3.wav -->
 
 ## Reflection
 
 Something as simple programatically as allowing the composability of Corpus objects engendered a whole different mode of interaction with FTIS, and thus lead to pieces based on the exploration of highly specific material types.
+
+as much about building ad-hoc scripts for finding specific material, as those same scripts are about formulating the concept for a piece.
+
+Being able to search multiple corpus spaces with the computer, allows me to sustain ideas for much longer periods of time. I can find organic and meaningful ways to encounter sounds that I can fit into a composition.
+
+Division of transient, non transient/ harmonic etc informing formal thinking in the works. Anchors devised around the division of three distinctive components and EEE built from a foundation in which a sound is devided into transient and harmonic components
 
 Also, delving donw multiple levels of hierarchy. Starting very broadly, what is in the corpus, what is in the group, what is in the sample, how do the samples fit together... This was a new way of hierarchically thinking about structure and form that developed from this increasingly atomic way of dealing with sounds with computer-aid.
 
