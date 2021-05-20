@@ -11,8 +11,8 @@ export const classifier = {
 
     ]
 }
-
-export const xboxModes = [
+    
+    export const xboxModes = [
     {
         startTime: 0.0,
         endTime: 3.4,
@@ -87,3 +87,11 @@ export const loopExperiments = {
         { name: 'Loop Experiment 5', audio: '5.mp3', peaks: '5.dat' }
     ]
 }
+
+export const baseSketchSegs = [
+    { startTime: 33.0 , endTime: 67.0, labelText: 'Machine-like "error" tones (1)' },
+    { startTime: 100.0, endTime: 135.0, labelText: 'Machine-like "error" tones (2)' },
+    { startTime: 284.0, endTime: 372.0, labelText: 'High frequency content panned centre between conflicting tones' },
+    { startTime: 402.0, endTime: 438.0, labelText: 'Mid to low frequency "rhythmic static"' },
+    { startTime: 468.0, endTime: 516.0, labelText: 'Detailed, chaotic and rapidly morphing sounds'}
+]
