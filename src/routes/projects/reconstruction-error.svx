@@ -284,7 +284,7 @@ At this stage I moved into *soundful* play with the various computer outputs whi
 After producing the clustering data, I used it to drive audition processes in Max and REAPER. In Max, I created an interface allowing me to retrieve the samples from clusters and simultaneously navigate between the shared membership connections. The samples were played back contiguously by a sequencer so that I could quickly hear the samples in the selected group in succession. This allowed me to audition samples rapidly and to ascertain a rough relationship between the cluster members. It also allowed me to start with a broad cluster of samples and hone the selection by following the connections of shared membership. This allowed me to find very specific "pockets" of sounds within the entire corpus by whittling down the selection from broad collections of perceptually similar sounds to those that were even more similar. A screen capture demonstrating this auditioning process can be found in [VIDEO 10]({m.re}#vid10).
 
 <VideoMedia2 
-url="/re/meta-analysis.mp4"
+url="/re/meta-analysis.webm"
 figure="VIDEO 10"
 caption="Using Max and the meta-analysis data to explore the corpus in a structured manner."
 id="vid10"
@@ -346,7 +346,7 @@ end
 Running this script would present me with the option to provide a JSON file and a cluster number. This would generate a new track containing the samples belonging to that cluster. This allowed me to rapidly audition samples in Max, then draw them into a REAPER session without friction.[VIDEO 11]({m.re}#vid11) demonstrates the process of importing a cluster into REAPER. This was the basis on which I composed the next few pieces. I would oscillate between listening in Max, importing sounds into REAPER as clusters and then using intuitive compositional processes to organise that material. When I hit a creative block in the DAW I would return to listening and try to find something new in the material, guided by the computer.
 
 <VideoMedia2 
-url="/re/scripting.mp4"
+url="/re/scripting.webm"
 figure="VIDEO 11"
 caption="Using ReaScript API to create tracks of samples from cluster data."
 id="vid11"
@@ -452,7 +452,7 @@ After importing these clusters I was able to keep composing, and eventually the 
 The slow unfolding ending is created by taking another subcluster of samples and concatenating them with different spacings. This occurs both vertically, in that multiple spacings are layered simultaneously, and over time all of the spacings become much longer. This creates the effect of pitch disspearing and only the impulse remaining. To orchestrate this, I created a Lua script which could interactively space out items in the timeline by setting an amount, as well as a noise factor which could skew values along the fixed spacing. This is demonstrated in [VIDEO 12]({m.re}#vid12), in which I take several impulse samples and modify the spacing between them.
 
 <VideoMedia2 
-url='/re/quantise-gui-demo.mp4'
+url='/re/quantise-gui-demo.webm'
 figure='VIDEO 12'
 id='vid12'
 caption='Interactive item spacing with Lua accessing the ReaScript API.'

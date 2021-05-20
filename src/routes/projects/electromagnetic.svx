@@ -145,7 +145,7 @@ title='Kindle_04_08.wav segment'
 I used [FTIS]({m.ftis}) to segment the *active* sounds and then clustered these segments based on their perceptual similarity. This was orchestrated with two separate [FTIS]({m.ftis}) scripts for. This [segmentation script](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/micro_segmentation.py) uses the clustered segmentation algorithm to create very granular slices. This [clustering script](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/micro_clustering.py) calculates MFCC descriptors for each segment and clusters them into an unspecified number of clusters using the HDBSCAN algorithm. I explored the results aurally in Max, similar to how I had explored the corpus in [Reconstruction Error]({m.re}). From this exploration I was presented with perceptually homogenous groups in terms of texture and morphology. [VIDEO 4]({m.em}#vid4) I captures some of this audition-based exploring.
 
 <VideoMedia2 
-url='/inter/exploring-clusters.mp4'
+url='/inter/exploring-clusters.webm'
 caption='Exploring segmented and clustered active material'
 figure='VIDEO 4'
 id='vid4'
@@ -250,7 +250,7 @@ peaks='/inter/find-tuned-centre.dat'
 I auditioned the sounds curated from the [find_tuned.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py) script and found that many of them would be cohesive compositional materials. A short video demonstrating this listening process can be seen in [VIDEO 5]({m.em}#vid5)}. I imported all of these files into REAPER and created a longer-form sketch with them which can be heard in [AUDIO 11]({m.em}#aud11). 
 
 <VideoMedia2 
-url='/inter/exploring-tuned-anchors.mp4'
+url='/inter/exploring-tuned-anchors.webm'
 caption='Auditioning the output of find_tuned.py'
 figure='VIDEO 5'
 id='vid5'
@@ -306,7 +306,7 @@ From the tail end of this at 3:41, I refrain from introducing any new interjecti
 At 6:48 the interjection returns and demarcates the beginning of a new section in which I deconstructed and reconstructed the *active* gesture to temporally extend it. I used [ReaCoMa]({m.reacoma}) to create small granular segments first, and then duplicated and concatenated these segments. To avoid a sense of strong repetition I then used another Lua script to shuffle the order of those contiguous items randomly. [VIDEO 6]({m.em}#vid6) demonstrates how this is performed in practice.
 
 <VideoMedia2 
-url='/inter/reorganising-material.mp4'
+url='/inter/reorganising-material.webm'
 caption='Using ReaCoMa to segment and extend the active gesture '
 figure='VIDEO 6'
 id='vid6'

@@ -102,7 +102,7 @@ In this regard, I began by using audio descriptors to analyse the amplitude, spe
 3. Samples that have an amplitude **within 6dB** of the threshold
 
 <VideoMedia2 
-url="/ss/descriptorspace.mp4"
+url="/ss/descriptorspace.webm"
 figure="VIDEO 2"
 caption="Querying the corpus of voice segments using dynamic audio descriptor queries."
 id="vid2"
@@ -118,7 +118,7 @@ In this phase of the composition process I faced a number of challenges when try
 One approach was to create predefined query "shapes" that structured a dynamic query over a given period of time. Using this, I could define the overall quality and percept of the gesture, without specifying any of the details and decisions such as which samples would form that gesture would be taken up by the matching algorithm. A similar approach is discussed in Harker (2012), in which he outlines how bespoke Max externals have been used toward similar ends in his compositional practice. [VIDEO 3]({m.ss}#vid3) demonstrates one version of this, where queries are changed according to a gesture that is defined by a number of points to be reached at specific times. This creates a parabolic trajectory that increases and decreases the amplitude and spectral centroid query values over a set amount of time. This produces a strong perceptual link between the query and the sound which as a compositional tool is a useful way of having the computer render complex morphologies through a set of constraints.
 
 <VideoMedia2 
-url="/ss/dynamic-gesture.mp4"
+url="/ss/dynamic-gesture.webm"
 figure="VIDEO 3"
 caption="Dynamic gestures created by dynamically querying a corpus of vocal segments based on audio descriptors."
 id="vid3"
@@ -127,7 +127,7 @@ id="vid3"
 [VIDEO 4]({m.ss}#vid4) shows another strategy in which a static state of very low amplitude is intermittently "escaped" from, by updating the query for new samples in real-time and almost immediately returning to the low amplitude state. This creates a series of jumps between static states.
 
 <VideoMedia2 
-url="/ss/static-jumps.mp4"
+url="/ss/static-jumps.webm"
 figure="VIDEO 4"
 caption='A self-contained static musical behaviour is formed by creating an "anchor" in the descriptor space and momentarily departing and then returning to it.'
 id="vid4"

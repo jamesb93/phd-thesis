@@ -62,7 +62,7 @@ The Max patch version of Fourses that was used for Annealing Strategies can be <
 There are 24 parameters that control the Fourses synth and the unpredictable nature of changing one parameter only slightly makes it difficult to "learn" how they effect the output sound. I wanted to create a method of manual control for exploring different states of the synth where I was not required to interact with a single parameter at a time and instead could explore by moving "backward" and "forward" through a set of states. Toward this end I devised a one-to-many mapping strategy that constrained the number of states by reading through a procedural basis function graph. Using the input of a single linear dial, a deterministic "map" of values is used to control each parameter. [VIDEO 2]({m.as}#vid2) is a screen capture demonstrating how this single input interface creates a one-to-many mapping. As the "origin" is changed the procedural basis function graph is scanned. Different basis are also demonstrated, showing the variety of relationships between parameters that can be arbitrarily created through this method. A set of 24 parameters are derived by creating the graph with 2x12 jitter matrix that is then flattened to a one dimensional row.
 
 <VideoMedia2
-url="/as/jitbfg.mp4"
+url="/as/jitbfg.webm"
 figure="VIDEO 1"
 caption="A screen capture demonstrating the single input interface in practice."
 id="vid1"
