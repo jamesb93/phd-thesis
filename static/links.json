@@ -501,6 +501,10 @@
             "url": "https://soundslikenoise.org/2020/08/16/coil-pickups-and-microsounds"
         },
         {
+            "name": "\"Raising the Inaudible to the Surface\"",
+            "url": "https://soundslikenoise.org/2014/08/31/listening-to-the-inaudible-field-recording-and-the-pursuit-of-the-microsound/"
+        },
+        {
             "name": "session.rpp",
             "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation_scripts/2020-06-18%2004-09-54.718681/session.rpp"
         },
@@ -523,6 +527,26 @@
         {
             "name": "clustering script",
             "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/micro_clustering.py"
+        },
+        {
+            "name": "operator overloading",
+            "url": "https://docs.python.org/3/reference/datamodel.html#special-method-names"
+        },
+        {
+            "name": "base_materials.py",
+            "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/base_materials.py"
+        },
+        {
+            "name": "find_tuned.py",
+            "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py"
+        },
+        {
+            "name": "k-d tree",
+            "url": "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html"
+        },
+        {
+            "name": "isolate_sample.py",
+            "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/isolate_sample.py"
         },
         {
             "name": "isolate_static.py",
