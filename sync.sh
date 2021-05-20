@@ -1,1 +1,1 @@
-rclone sync -i static back:jbphd-pub --transfers 32 --auto-confirm
+rclone sync static back:jbphd-pub -P --transfers 8 --auto-confirm
