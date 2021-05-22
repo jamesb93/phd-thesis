@@ -7,8 +7,8 @@
     "start": "svelte-kit start",
     "scrape": "python3 scrape_links.py",
     "convert": "pnpm run scrape && sh convert.sh",
-    "deploy": "pnpm run scrape && sh deploy.sh",
-    "update": "pnpm run build && pnpm run deploy"
+    "update": "svelte-kit build && sh deploy.sh"
+    
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "next",
