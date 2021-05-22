@@ -2,82 +2,58 @@
     import * as d3 from 'd3';
     import * as THREE from "three";
     import { onMount } from 'svelte';
-    import Slider from '$lib/components/Slider.svelte';
     import Container from '$lib/components/Container.svelte';
-    export let title = 'UMAP parameters effect on the projection.';
-    export let caption='DEMO 1';
+    export let title = 'Agglomerative Clustering with different levels of granularity';
+    export let caption='DEMO 2';
     export let id = 'demo1'
 
     let ready = false;
+    let needsUpdate = false;
     let container;
     let height = 600;
     let width = 450;
     // Animation Code
     let camera, scene, renderer;
-    let focused;
     let group;
     let pointsGeometry, pointCloud;
-    const pointSize = 1.5;
+    const pointSize = 8.0;
     const r = 9500;
 
-    // Interplation
-    let interp = 0.0;
-    let plot1, plot2, plot3, plot4;
-    let blend1, blend2, blend3;
-    let data;
-    let neighbours, mindist;
+    let d, data;
+    let cluster = 0;
+    let clusterValues = [2, 4, 8];
+    $: key = clusterValues[cluster];
+    const colourScale = d3.scaleOrdinal(d3.schemeSet1).domain([0.0, 1.0])
 
     // Buffers
     let positionBuffer, colorBuffer, positions, colors;
 
+
     function update(init) {
-        // Band the interpolation
-        if (interp <= 1.0 && interp >= 0.0)
-            data = blend1(interp);
-
-        if (interp <= 2.0 && interp > 1.0 )
-            data = blend2(interp-1.0);
-
-        if (interp <= 3.0 && interp > 2.0)
-            data = blend3(interp-2.0);
-        
-        neighbours = data.parameters.neighbours;
-        mindist = data.parameters.mindist;
-
+        data = d[key];
         if (!init) {
-            data.data.forEach((d, i) => {
+            data.forEach((point, i) => {
                 positions.set([
-                    d.x * r - (r / 2), 
-                    d.y * r - (r / 2), 
+                    point.coords[0] * r - (r / 2), 
+                    point.coords[1] * r - (r / 2), 
                     0
                 ], i * 3)
+                let col = colourScale(point.cluster / Object.entries(data).length);
+                const hex = d3.color(col);
+                colors.set([hex.r/255, hex.g/255, hex.b/255], i * 3)
             })
-            pointsGeometry.setAttribute('position', new THREE.BufferAttribute( positions, 3));
+            pointsGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+            pointsGeometry.setAttribute('position', new THREE.BufferAttribute( positions, 3))
         }
+        needsUpdate = true;
     };
     
     onMount(async() => {
-        await fetch('/plots/umap7-0.1.json')
+        await fetch('/re/cluster-data.json')
             .then(response => response.json())
-            .then(data => plot1 = data)
+            .then(data => d = data)
 
-        await fetch('/plots/umap15-0.1.json')
-            .then(response => response.json())
-            .then(data => plot2 = data)
-
-        await fetch('/plots/umap15-0.75.json')
-            .then(response => response.json())
-            .then(data => plot3 = data)
-            
-        await fetch('/plots/umap30-0.1.json')
-            .then(response => response.json())
-            .then(data => plot4 = data)
-        
-        blend1 = d3.interpolateObject(plot1, plot2);
-        blend2 = d3.interpolateObject(plot2, plot3);
-        blend3 = d3.interpolateObject(plot3, plot4);
-        
-        update(true);
+        update(true)
         init();
         animate();
         render();
@@ -100,25 +76,25 @@
         })
 
         pointsGeometry = new THREE.BufferGeometry();
-        positionBuffer = new ArrayBuffer(data.data.length * 3 * 4);
-        colorBuffer = new ArrayBuffer(data.data.length * 3 * 4);
+        positionBuffer = new ArrayBuffer(data.length * 3 * 4);
+        colorBuffer = new ArrayBuffer(data.length * 3 * 4);
         positions = new Float32Array(positionBuffer)
         colors = new Float32Array(colorBuffer);
 
-        data.data.forEach((d, i) => {
+        data.forEach((point, i) => {
             positions.set([
-                d.x * r - (r / 2), 
-                d.y * r - (r / 2), 
+                point.coords[0] * r - (r / 2), 
+                point.coords[1] * r - (r / 2), 
                 0
             ], i * 3)
-
-            colors.set([d.x, d.y, 0.5], i * 3)
+            const col = colourScale(point.cluster / Object.entries(data).length);
+            const hex = d3.color(col);
+            colors.set([hex.r/255, hex.g/255, hex.b/255], i * 3)
         })
-        let sizes = data.data.map(d => 1.0);
-        sizes = Float32Array.from(sizes)
-        pointsGeometry.setAttribute('size', new THREE.BufferAttribute( sizes, 1 ));
-        pointsGeometry.setAttribute('position', new THREE.BufferAttribute( positions, 3));
+        const sizes = Float32Array.from(new Array(data.length).fill(1.0))
         pointsGeometry.setAttribute('color', new THREE.BufferAttribute( colors, 3 ));
+        pointsGeometry.setAttribute('size', new THREE.BufferAttribute( sizes, 1 ))
+        pointsGeometry.setAttribute('position', new THREE.BufferAttribute( positions, 3))
 
         // particles/points
         pointCloud = new THREE.Points( pointsGeometry, pointsMaterial );
@@ -133,15 +109,16 @@
     
     function animate() {
         requestAnimationFrame( animate );
-        if (focused) {
+        // Only render if the slider is focused to conserve idle CPU.
+        if (needsUpdate) {
             render()
+            needsUpdate = false
         }
     }
 
     function render() {
         renderer.render( scene, camera );
     }
-
 </script>
 
 <svelte:window />
@@ -152,18 +129,28 @@
             <div class='vertical'>
                 <span id='title'>{title}</span>
                 <span id='caption'>{caption}</span>
+                <span id='instructions'>
+                    Change the number of clusters on the right hand radio group.
+                </span>
             </div>
-            <div class='vertical' id='parameters'>
-                <span>
-                    Neighbours: { parseFloat(neighbours).toFixed(2) }
-                </span>
-                <span>
-                    Minimum Distance: { parseFloat(mindist).toFixed(2) }
-                </span>
+            <div id='parameters'>
+                <label>
+                    <input type=radio bind:group={ cluster } on:change={ ()=>update(false) } value={0} />
+                    2 Clusters
+                </label>
+            
+                <label>
+                    <input type=radio bind:group={ cluster } on:change={ ()=>update(false) } value={1} />
+                    4 Clusters
+                </label>
+            
+                <label>
+                    <input type=radio bind:group={ cluster } on:change={ ()=>update(false) } value={2} />
+                    8 Clusters
+                </label>
             </div>
         </div>
-        <span id='instructions'>Move the slider to adjust the UMAP parameters!</span>
-        <Slider bind:focused={ focused } showValue={ false } showMin={ false } showMax={ false } bind:value={ interp } inFunc={ () => update(false) } min={0.0} max={3.0} step={0.005} />
+
         <span id='status'>{#if !ready}Loading... {/if}</span>
         <div id="view" bind:this={container} bind:offsetHeight={height} bind:offsetWidth={width}></div>
     </div>
@@ -182,7 +169,9 @@
         justify-content: space-between;
     }
 
-    #parameters { 
+    #parameters {
+        display: flex;
+        flex-direction: column;
         text-align: right;
     }
 
@@ -204,7 +193,6 @@
     }
 
     #instructions {
-        text-align: center;
         color: grey;
     }
 
