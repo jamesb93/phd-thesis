@@ -6,15 +6,19 @@ from sklearn.cluster import AgglomerativeClustering
 import umap
 import json
 
+colour_string = 'e41a1c377eb84daf4a984ea3ff7f00ffff33a65628f781bf999999'
+colour_map = [f'#{colour_string[i:i+6]}' for i in range(0, len(colour_string), 6)]
+
 def write_json(path, data):
     with open(path, 'w') as f:
         json.dump(data, f)
 
 def structure_data(cluster, key):
     labels = cluster.labels_
+    print(set(labels))
     for i, x in enumerate(labels):
         d[key].append({
-            'cluster' : int(x),
+            'cluster' : colour_map[int(x)],
             'coords' : normalised[i].tolist()
         })
 
