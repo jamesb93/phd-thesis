@@ -20,7 +20,7 @@ def structure_data(cluster, key):
 
 digits = load_breast_cancer()
 
-embedding = umap.UMAP(min_dist=0.01, n_neighbors=3).fit_transform(digits.data)
+embedding = umap.UMAP(min_dist=0.01, n_neighbors=2).fit_transform(digits.data)
 normalised = MinMaxScaler().fit_transform(embedding)
 
 a = AgglomerativeClustering(n_clusters=2).fit(normalised)
