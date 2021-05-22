@@ -24,7 +24,7 @@
                 },
                 dataUri: { arraybuffer: tracks.prefix + tracks.trackData[0].peaks },
                 mediaElement: audio,
-                height: 80,
+                height: 75,
                 segmentStartMarkerColor: '#a0a0a0',
                 segmentEndMarkerColor: '#a0a0a0',
                 zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
@@ -100,7 +100,7 @@
             <div class="overview" bind:this={ overview } />
         </div>
         <div class="peaks-controls">
-            <audio bind:this={audio}>
+            <audio bind:this={audio} on:ended={ ()=>playState=false }>
                 <source src={ tracks.prefix + tracks.trackData[0].audio } type="audio/mp3">
                 <track kind="captions">
             </audio>
