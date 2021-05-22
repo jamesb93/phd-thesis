@@ -1,6 +1,12 @@
 # https://trac.ffmpeg.org/wiki/Encode/VP9
 # Uses a two pass encoder to get high quality stereo WEBM's for compatability with most browsers.
 
+# some additional guidance on how to encode video properly for the web:
+# https://superuser.com/questions/424015/what-bunch-of-ffmpeg-scripts-do-i-need-to-get-html5-compatible-video-for-everyb
+
+# and some docs from google on quality settings
+# https://developers.google.com/media/vp9/settings/vod/
+
 import subprocess
 from pathlib import Path
 
