@@ -23,7 +23,6 @@
     let cluster = 0;
     let clusterValues = [2, 4, 8];
     $: key = clusterValues[cluster];
-    const colourScale = d3.scaleOrdinal(d3.schemeSet1).domain([0.0, 1.0])
 
     // Buffers
     let positionBuffer, colorBuffer, positions, colors;
@@ -38,8 +37,8 @@
                     point.coords[1] * r - (r / 2), 
                     0
                 ], i * 3)
-                let col = colourScale(point.cluster / Object.entries(data).length);
-                const hex = d3.color(col);
+
+                const hex = d3.color(point.cluster);
                 colors.set([hex.r/255, hex.g/255, hex.b/255], i * 3)
             })
             pointsGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
@@ -86,8 +85,7 @@
                 point.coords[1] * r - (r / 2), 
                 0
             ], i * 3)
-            const col = colourScale(point.cluster / Object.entries(data).length);
-            const hex = d3.color(col);
+            const hex = d3.color(point.cluster);
             colors.set([hex.r/255, hex.g/255, hex.b/255], i * 3)
         })
         const sizes = Float32Array.from(new Array(data.length).fill(1.0))
