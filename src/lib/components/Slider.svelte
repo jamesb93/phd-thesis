@@ -9,13 +9,21 @@
     export let showValue = true;
     export let showMin = true;
     export let showMax = true;
+    export let focused = false;
 </script>
 
 <div class="pad">
     <span class="text title">{title}</span>
     <div class="container">
         <span class:hidden={showMin === false} class="text min">{min}</span>
-        <input class="slider" type="range" min={min} max={max} step={step} bind:value={value} on:input={inFunc} on:change={chFunc} />
+        <input 
+        type=range
+        on:mousedown={ ()=>focused=true } 
+        on:mouseup  ={ ()=>focused=false } 
+        class="slider" 
+        min={min} max={max} step={step} 
+        bind:value={value} on:input={inFunc} on:change={chFunc} 
+        />
         <span class:hidden={showMax === false} class="text max">{max}</span>
     </div>
     {#if showValue}
