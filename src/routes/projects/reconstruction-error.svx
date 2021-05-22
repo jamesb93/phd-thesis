@@ -9,7 +9,7 @@
     import Code from '$lib/components/Code.svelte';
     import Waveform from '$lib/components/Waveform.svelte';
     import Points from '$lib/demos/dimension-reduction/Points.svelte';
-    import HierarchicalClustering from '$lib/demos/clustering/HierarchicalClustering.svelte';
+    import Agglom from '$lib/demos/clustering/Agglom.svelte';
 
     import { 
         reAlbum, 
@@ -248,7 +248,7 @@ To get the benefits of both of these features, I settled on using another algori
 I then performed a meta-analysis discerning the shared membership of each sample to clusters across the various levels. Because each analysis level is producing a higher number of clusters, they always return increasingly smaller clusters. As such, a cluster containing 500 samples in the 250 clusters analysis might have the same samples spread across two different clusters. There is no guarantee that a sample will remain in the same groups though and changing the level of specificity in the hierarchical divisions can cause samples to be reclustered in different ways. This means that while clusters often share samples between levels, new samples can also be 
 introduced. By doing this, it allowed me to "peek" outside of a cluster and to see where the edges of it start to become blurry as the constraints for analysis change. In a sense it allows me to reason around the project space with a complex venn diagram, where different portions overlap and intersect.
 
-<HierarchicalClustering />
+<Agglom />
 
 The result of this is a set of JSON files that describes clusters which share samples and how many samples they share. In [CODE 1]({m.re}#code1), a portion of the analysis describing the shared membership of the 250 and 500 analysis is shown. The information in this example expresses that cluster 36 in the 250 clusters analysis is comprised of clusters 317 *and* 327 in the 500 clusters analysis.  
 
