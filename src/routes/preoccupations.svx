@@ -295,8 +295,6 @@ id="ss-opening-gesture"
 
 Another example can be found in the material selection process for [--isn.]({m.re}#isn) in [Reconstruction Error]({m.re}). The samples used in this work are a small subset from a larger corpus. The computer derives this subset automatically using clustering, a process that groups together data from a set based on their similarity. Clustering in this case is calculated on mel-frequency cepstral coefficients (MFCCs) data, with the intention that texturally similar items will be grouped together into individual clusters. As such, this initial subset derived from the overall corpus is a relatively homogenous group of impulse-based samples with some variation between the items. This group of samples is clustered further to derive clusters containing fewer items that are increasingly similar and homogenous as a collection.
 
-<Clustering />
-
 Each of the samples within the smallest clusters is concatenated together to form a sequence of rapid impulses. While each impulse alone only presents subtle differences, concatenating them into streams magnifies their inherent quality and builds a new perceptual unit of sound. When those groups of impulses are superimposed, this creates multiple audio streams or gestalts that feature phasing and interference between them. By additively introducing these streams, a high-level parabolic formal structure was created and the psychoacoustic repercussions of this process emerged as a structural feature of the piece. This was not designed beforehand but rather emerged as a consequence of technical experimentation with clustering techniques.
 
 Further to this, the limitations of operational procedures can affect the boundaries of high-level structures. The end of [--isn.]({m.re}#--isn) was determined when the meta-class materials were exhausted and all of them had been superimposed. Thus, the piece represents an exploration of a technologically constrained set of possibilities which, once explored, have no further appeal to me. There was the possibility of me finding more material to extend the duration of the piece and to compose new sections of music, however, working like this is essentially unbounded. I want there to be limitations enforced by the computer and this gives me a set of constraints to work against. The notion that the computer somehow constrains how I compose is one that I only came to realise through this PhD research which is documented in the development of the [projects]({m.proj}). As such, the limit of operational and technical aspects imposes formal limits on the music.
@@ -315,7 +313,6 @@ The perception of technology is an important guiding principal in how I compose,
 	import NextSection from "$lib/components/NextSection.svelte";
 	import Caption from "$lib/components/Caption.svelte";
     import Bricolage from "$lib/demos/DThree/Bricolage.svelte";
-    import Clustering from "$lib/demos/DThree/Clustering.svelte";
     import Waveform from "$lib/components/Waveform.svelte";
     import {metadata as m} from "./directory.svx"
 </script>

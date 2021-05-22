@@ -1,63 +1,34 @@
 <script>
 	import NextSection from "$lib/components/NextSection.svelte"
     import {metadata as m} from "./directory.svx"
-
 </script>
 
 # Conclusion
 
-From this PhD research I have built and developed a computer-aided workflow with content-aware programs that facilitate composition in the studio.
+This PhD thesis has presented five creative projects that outline the development of my computer-aided compositional practice with content-aware programs over the last four years. For each project, I have documented the compositional process and traced the evolution of technological tools and creative coding practice, as well as the growth of musical and compositional ideas specific to those projects. From the tools presented alongside the varying musical outcomes, I hope to have answered the question: *How can I use content-aware programs to compose with digital samples in a studio-based computer-aided compositional practice?*
 
-In each project I have documented and reflected on the development of this process, and the relationship this has to specific pieces.
+Two sub-questions emerged from my initial question: *What compositional procedures do I delegate to either human or computer and what is the balance of these two?* and *What procedures do I defer to the computer and how do those procedures work?*. Reflecting on the portfolio works as a collection, I think there is a clear delineation between the first three projects, [Stitch/Strata]({m.ss}), [Annealing Strategies]({m.as}), [Refracted Touch]({m.rt}) and the last two, [Reconstruction Error]({m.re}) and [Interferences]({m.em}) and how they grapple with these questions. With the benefit of hindsight, I consider those first three projects as almost "blind" experimentation and an attempt to consolidate what capabilities of the computer I deemed valuable in computer-aided composition as well as what forms of content-awareness were interesting and useful to me. As a result, each of these initial projects explored a different approach entirely, and imbued the computer with different decision making capabilities without necessarily working towards the consolidation of technological forces in my practice.
 
-Overall the first three projects started as experimentation and attempts to see what would stick. The last two projects honed my compositional practice toward a way of working supported by building a set of tools that facilitated computer-aided composition with samples in a highly novel and unique manner.
+[Stitch/Strata]({m.ss}) revealed to me that interacting with the computer by creating automated procedures for organising atomic units of sounds is essentially incompatible with the level of intervention and control that I want to have over those processes. Furthermore, high-level formal structures are complex to generate in this manner because for me they are predicated on there even being a knowable model in the first place. I initially set out in this project trying to make the computer responsible for many fundamental aspects of the work through procedural generation involving such a model. Frustrated with the lack of satisfying results emerging from this almost complete deference of decision making to the computer, I reigned the computer's agency back toward a workflow in which the computer offered solutions to ad-hoc musical questions and tasks. This was transformative, and accelerated the compositional process once I was able to "have my say" with the aid of the computer. Another important facet of this was the dialogical nature of my interactions with the computer from that point on. These were situated in manoeuvres between listening and coding and the computer offering perceptually relevant organisations of the sound materials.
 
-At the beginning I thought I was interested in formal systems, and devising strategies in which the computer could structure elements in a coherent way from the lowest to highest formal levels. Now, I am more interested in the computer functioning as a facilitator of exploration and for finding material which I then structure.
+On the other hand, [Annealing Strategies]({m.as}) involved almost complete cognitive off-load of compositional decision making to the computer. I had few opportunities to intervene in neither the generative process undertaken by the simulated annealing algorithm, nor (as a result) the outcome of the music it produced. Instead, my control was communicated through the management of constraints and parameters as well as the curatorial control over what "iteration" of this process would become the final work. This balance of agency was successful to an extent, despite requiring me to give away my ability to intervene almost entirely. However, I did not feel that it was necessarily a generalisable workflow, nor was it one that could be applied to many different future compositional projects.
 
-I have illustrated that low-level musical decision making is an integrated process involving content-aware programs.
+[Refracted Touch]({m.rt}) explored agent behaviours in terms of machine listening and the ability for the computer to interact and react in real-time inside a set of musical and parametric constraints. In the reflection of this project I outline a number of issues pertaining to my workflow within the paradigm of live electronics, illustrating the complexities of managing improvisation, programming and clarifying my musical intentions at the same time. Giving up agency to the computer in this way offered little in return, and thus I view it as the least successful in this regard in the PhD.
 
-The way I ended up using technology supported the way that I reason around compositional materials, as well defined perceptually homogenous units. This is both grounded in the perception of their timbre also morphology. Reconstruction Error and Electromangetic focused on this hugely
-## Composition Workflow and Process
-- First three pieces branched out in terms of techniques and scope. I tried a number of different strategies almost in a kind of blind fashion to see what would "stick". The last two projects are  more directed toward a specific approach and workflow that developed between them.
+The last two projects in this portfolio are characterised by a much more refined and focused technological approach using [FTIS]({m.ftis}), [ReaCoMa]({m.reacoma}) and the DAW as central interfaces for interacting with the computer. Thus, the technological efforts of those works were invested less so in creating new specific tools and instead were put into incrementally improving an interconnected framework of systems for analysis ([FTIS]({m.ftis})/Python), manipulation ([ReaCoMa]({m.reacoma})) and representation (REAPER).
 
-- I found more ways for computer to suggest me things, rather than me using the computer to go and find things I thought I wanted to find...
+This combination of technologies influenced the procedures and tasks I deferred to the computer and thus the broader balance of agency. Overall, I arrived at a workflow in which the computer was responsible for organising samples according to machine listening tasks and processes. Through this, the computer functioned as a co-listener, co-pilot and facilitator for my engagement with sample-based materials collected into corpora. As a result, the computer structured pathways to the solution of ad-hoc compositional questions, and aided in higher level musical concepts reaching internal consistency through *feedback* and experimentation with perceptually relevant organisations of sounds. Rather than being responsible for the generation of certain compositional aspects itself,  the form of the works and the organisation of materials within these forms *emerged* through a dialogue between myself and the computer. In this relationship I retain ultimate control over decision making and use the computer like a cognitive resource to influence this process. In comparison to projects such as [Annealing Strategies]({m.as}), the computer is relatively limited in what it can concretely contribute to the work. It never fixes certain aspects of the music, and instead *suggests* what could be done with certain materials by proposing it in different arrangements and structures. Thus, by the end of this PhD, the relationship between myself had shifted in terms of myself having more control but still heavily relying on the computer in order to drive my compositional thinking. 
 
-“This is the essence of intuitive heuristics: when faced with a difficult question, we often answer an easier one instead, usually without noticing the substitution.” - Thinking Fast and Slow
+To an extent this conclusion was foreshadowed in the first three projects as I always started out by imbuing the computer with a high degree of agency and then taking it back in response to dissatisfaction with the results. This has already been thoroughly discussed in relationship to [Stitch/Strata]({m.ss}), but can also be observed in how formal control was imposed in the final compositional stages of [Refracted Touch]({m.rt}). Annealing Strategies is perhaps an exception to this, but the shortcomings of the approach are described in detail in the relevant section.
 
-- Also relying more on the DAW
-    - ReaScripting to modify items as compositional groups/units
-    - Statefulness, reference where this is discussed elsewhere.
+## Further Research And The Future
+Over the course of this PhD developing various technological tools has furnished me with a more sophisticated creative coding practice which is intertwined deeply with my musical thinking and compositional decision making. At the start of the PhD I was limited to just using Max and the externals and packages available for it in order to add new functionality. As I became interested in [machine learning]({m.ca}#machine-learning) and [machine listening]({m.ca}#machine-listening), I naturally had to expand my knowledge of other languages such as Python to meet the demands of my changing and evolving interests. This ultimately gave rise to the necessary skills and conditions in which [FTIS]({m.ftis}) could be built, which draws on several technologies to function.
 
-<!-- This process is perhaps my personalised answer to the notion of a wicked question in my compositional practice, a concept I discuss in ["Content Awareness"]({m.ca}) in regards to Rebecca Fiebrink's work. Using
+In the future I think that developing [FTIS]({m.ftis}) will be essential to the development of my overall artistic practice, rather than the creation of new tools. While the start of this PhD saw several technological shifts between projects, I have now found an extensible methodology for incorporating technology that does not require me to "reinvent the wheel" in response to new musical ideas and aims. I have already put in place the necessary architectural work allowing [FTIS]({m.ftis}) to extended programmatically without having to modify the underlying system and framework itself. This is described in the ["Architecture"]({m.ftis}#architecture) section. As such I think the future for my practice will be shaped in part on how [FTIS]({m.ftis}) develops.
 
-and to follow ad-hoc musical interests in the moment, the question itself reached an internal consistency creating a kind of feedback between answering and forming the question itself.  -->
-## Realisational and Functional Interfaces
-### Four Phases
+One development that is not explored in this research in depth is visualisation and visual interfaces, which could potentially open up new and novel ways of interacting with the computer for composition. As it currently stands the only way to interact with the outputs of [FTIS]({m.ftis}) is to draw them into other environments such as Max or REAPER in order to aurally inspect the results. This has been an effective workflow so far as it allows me to situate my engagement with terse and complex data within the realm of listening and soundful experimentation. That said, I have in some instances visualised data, such as with the UMAP results described in ["Dimension Reduction"]({m.re}#dimension-reduction) and this has been a useful process in dealing with the scale and complexity of audio descriptor analysis and machine learning processes. I anticipate that this could be more thoroughly explored, perhaps by creating a "frontend" interface to FTIS which allows both the data and representation of a corpus to be visually portrayed and even operated on through a set of intuitive tactile metaphors such as cutting and drawing. Such an interface would allow me to physically transform and curate samples in a corpus all in response to the outputs of machine learning and listening. 
 
-https://llllllll.co/t/quotes-on-music-composition/12794/38
-    1. Collecting or Generating
-    2. Analysing
-    3. Organising
-    4. Manipulating
-
-- I've established a way of controlling high-level form while also having it be responsive to the iterative development process.
-
-Tightening the iterative development cycle as much as possible.
-
-The PhD journey for me was about finding the workflow that I created in the last two pieces. Finding myself? Too lame? FTIS and Interfences was the logical conclusion to a three year development process
-## Continuing Concerns and the Future
-Building methods for intervention. Being able to adjust outputs with a sensible interface or set of tools
-
-
-### Technology
-#### Rebuilding the Workflow
-- Part of this PhD research has been about developing a workflow maintains contuinity between projects while allowing a level of flexibility. Developing a relatively stable set software tools and practice toward this end has been a process of refining and understanding what it is I want to derive from this hybrid computer-assisted workflow as well as conceiving of interfaces for exploring those interests. I believe FTIS's role will extend into the future...
-<!-- I don't want to rebuild the workflow each time -->
-<!-- Suggested Interfaces -->
-### Aesthetic
-<!-- Some of the work that has been completed here will guide how I work in the future -->
-<!-- In particular rhythmicising textural sounds -->
-
+In addition to this I would think that a frontend interface could support more rapid transportation of computer outputs between different creative coding and composition environments. Instead of having to rely on scripts, such as when I would import cluster data into REAPER, I imagine a visual workflow based on physically transporting data between FTIS and REAPER. This could function to tighten the feedback loop between scripting and composition.
 
 <NextSection 
 next="References"
