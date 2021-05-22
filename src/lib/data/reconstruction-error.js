@@ -1,3 +1,19 @@
+export const maxwave = {
+    prefix: '/re/maxwave/',
+    trackData : [
+        { name: '0-019.wav.maxwave', audio: '0-019.wav.maxwave.mp3', peaks: '0-019.wav.maxwave.dat'},
+        { name: '01_bass_wobbly.wav.maxwave', audio: '01_bass_wobbly.wav.maxwave.mp3', peaks: '01_bass_wobbly.wav.maxwave.dat'},
+        { name: '738_fractial.multi.ridged_829174126.aiff.maxwave', audio: '738_fractial.multi.ridged_829174126.aiff.maxwave.mp3', peaks: '738_fractial.multi.ridged_829174126.aiff.maxwave.dat'},
+        { name: 'fuzz_bass_graphical.aif.maxwave', audio: 'fuzz_bass_graphical.aif.maxwave.mp3', peaks: 'fuzz_bass_graphical.aif.maxwave.dat'},
+        { name: 'ircamdescriptor-2.8.6.wav.maxwave', audio: 'ircamdescriptor-2.8.6.wav.maxwave.mp3', peaks: 'ircamdescriptor-2.8.6.wav.maxwave.dat'},
+        { name: 'loop.aiff.maxwave.dat', audio: 'loop.aiff.maxwave.mp3', peaks: 'loop.aiff.maxwave.dat'},
+        { name: 'maxcrt_p.lib.wav.maxwave', audio: 'maxcrt_p.lib.wav.maxwave.mp3', peaks: 'maxcrt_p.lib.wav.maxwave.dat'},
+        { name: 'maxcrt.lib.wav.maxwave', audio: 'maxcrt.lib.wav.maxwave.mp3', peaks: 'maxcrt.lib.wav.maxwave.dat'},
+        { name: 'SIMDSupport.hpp.wav.maxwave-001', audio: 'SIMDSupport.hpp.wav.maxwave-001.mp3', peaks: 'SIMDSupport.hpp.wav.maxwave-001.dat'},
+        { name: 'snd.aif.maxwave', audio: 'snd.aif.maxwave.mp3', peaks: 'snd.aif.maxwave.dat'}
+    ]
+}
+
 export const reAlbum = {
     prefix : '/pieces/re/',
     trackData : [
