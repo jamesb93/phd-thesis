@@ -649,12 +649,8 @@
             "url": "http://sox.sourceforge.net"
         },
         {
-            "name": "`scrape_files.py`",
+            "name": "scrape_files.py",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/scraping/scrape_files.py"
-        },
-        {
-            "name": "Francesco Cameli",
-            "url": "https://github.com/vitreo12"
         },
         {
             "name": "Laplacian Segmentation",
@@ -675,6 +671,10 @@
         {
             "name": "AudioStellar",
             "url": "https://audiostellar.xyz/"
+        },
+        {
+            "name": "LjudMap",
+            "url": "https://github.com/victorwegeborn/LjudMAP"
         },
         {
             "name": "_dimensionality_reduction",
