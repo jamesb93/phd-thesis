@@ -71,7 +71,6 @@
         const pointsMaterial = new THREE.PointsMaterial({
             vertexColors: true,
             size: pointSize,
-            transparent: true,
             sizeAttenuation: false,
         })
 
