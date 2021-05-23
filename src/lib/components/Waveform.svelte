@@ -3,6 +3,7 @@
     import { browser } from "$app/env";
     import Container from '$lib/components/Container.svelte';
     import Button from '$lib/components/Button.svelte';
+    import { noext, cloudPrefix } from '$lib/utility/paths.js';
 
     export let segments;
     export let points;
@@ -12,6 +13,10 @@
     export let peaks;
     export let id = "";
 
+    const noExtension = noext(file);
+    const lossless = cloudPrefix + noExtension + '.wav'
+
+    // Form path to lossless download
     let Peaks, instance, overview, zoom, audio, controls, peaksControls;
     let lastSelected = 0;
 
@@ -97,9 +102,28 @@
         {/each}
     </ul>
     {/if}
+
+    <div id='lossless'>
+        <a rel='external' id='lossless-link' href={lossless} download>
+            Download Lossless Version
+        </a>
+    </div>
 </Container>
 
 <style>
+    #lossless {
+        margin-top: 10px;
+    }
+    #lossless-link {
+        font-style: italic;
+        text-align: right;
+        color: rgb(96, 96, 96);
+    }
+
+    #lossless-link:hover {
+        background-color: var(--dark-blue);
+        color: white;
+    }
     
     .audio-controls {
         display: flex;

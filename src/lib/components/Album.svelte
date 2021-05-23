@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import { browser } from "$app/env";
     import Container from '$lib/components/Container.svelte';
+    import { cloudPrefix, noext } from '$lib/utility/paths.js';
 
     export let id = "";
     export let tracks = [];
@@ -109,21 +110,28 @@
         <div class='track-list'>
             {#if loading}Loading...{/if}
             {#each tracks.trackData as track, i}
-            <audio src={tracks.prefix + track.audio} bind:this={ fakeAudio[i] }>
-                <track kind="captions">
-            </audio>
-            {#if !loading}
-            <div on:click={ () => setSource(i) } class='track-selector' class:selected={ selectedTrack === i} >
-                <span>{i+1}. {track.name}</span>
-                <div class='duration'>
-                {#if fakeAudio[i] !== null && fakeAudio[i].duration !== NaN}
-                    { convertTime(fakeAudio[i].duration) }
-                {/if}
+                <audio src={tracks.prefix + track.audio} bind:this={ fakeAudio[i] }>
+                    <track kind="captions">
+                </audio>
+                {#if !loading}
+                <div on:click={ () => setSource(i) } class='track-selector'>
+                    <div id='name-time' class:selected={ selectedTrack === i}>
+                        <span>{i+1}. {track.name}</span>
+                        <div class='duration'>
+                        {#if fakeAudio[i] !== null && fakeAudio[i].duration !== NaN}
+                            { convertTime(fakeAudio[i].duration) }
+                        {/if}
+                        </div>
+                    </div>
+                    <div id='single-lossless' >
+                        <a rel='external' href={ cloudPrefix + tracks.prefix + noext(track.audio) + '.wav'}>Download Lossless Version</a>
+                    </div>
                 </div>
-            </div>
-            {/if}
+                {/if}
             {/each}
         </div>
+        
+        <!-- { cloudPrefix + (tracks.prefix).slice(0, -1) + '.zip' } -->
         
     </div>
 </Container>
@@ -132,6 +140,18 @@
     :root {
         --text-margin: 10px;
     }
+
+    #name-time {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    #single-lossless {
+        font-style: italic;
+        font-size: 12px;
+    }
+
     .inner {
         padding: 10px;
     }
