@@ -693,10 +693,6 @@
             "url": "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html"
         },
         {
-            "name": "this discussion on the drawbacks of k-means",
-            "url": "https://stats.stackexchange.com/a/133841"
-        },
-        {
             "name": "`_clustering.py`",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/clustering/_clustering.py"
         },
