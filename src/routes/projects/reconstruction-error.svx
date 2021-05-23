@@ -232,11 +232,7 @@ The topology of the projections became a source of inspiration compositionally f
 
 This success was dependent on the parameters of the UMAP algorithm, and I trialled several different combinations. I found that configurations with small minimum distances and a relatively high number of neigbours created projections where individual samples in close proximity to each other were perceptually similar, but nearby clusters were not necessarily as coherent. In other words, I encouraged UMAP to preserve the *local* toplogy at the expense of warping the *global* topology.  I chose this because I was not interested in how *all* of the samples were related, rather, what perceptually relevant groups existed within this large corpus. That said, the projections still functioned well as a way of rapidly discerning the overall nature of the corpus. Up to this point I had not listened deeply to the sounds in the corpus and was operating in good faith that there was a collection of rich sounds in the corpus.  
 
-In this way, the computer 
-
-<!-- TODO: this needs to be consolidated -->
-The computer pre-loaded my engagement with the sound. I imagined that databending would produce loads of different sounds, but actually what I found was variation on similar ideas.
-I was encouraged by this initial form of soundful exploration
+In this way, the computer biased my first engagement with the corpus as a unified collection. In particular, the spatial characteristics of the UMAP projection encouraged me to navigate and listen to sounds within their respective toplogical clustered. What I discovered through this was that there was a wide variety of variation across the corpus, and in particular those clusters distributed far away from the central mass ocassionally would contain total outliers, such as *ner.dat.wav*. I was inspired by this initial form of soundful exploration to explore the notion of clusters further.
 
 Future processes all were calculated on a single projection with a minimum distance of 0.1 and 7 neighbours. The dimension reduction script can be found here: [_dimensionality_reduction](https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/dimensionality_reduction/_reduction.py).
 
