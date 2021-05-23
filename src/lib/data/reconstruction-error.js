@@ -35,8 +35,8 @@ export const ibuffer = {
         { name: 'er022ew.pdf', audio: 'er022ew.mp3',  peaks: 'er022ew.dat' },
         { name: 'picture.raw', audio: 'picture.mp3',  peaks: 'picture.dat' },
         { name: 'screenie.pdf', audio: 'screenie.mp3',  peaks: 'screenie.dat' },
-        { name: 'Screenshot 2019-04-26 at 11.04.50.png', audio: 'screen1.mp3',  peaks: 'screen1.dat' },
-        { name: 'Screenshot 2019-04-26 at 11.05.00.png', audio: 'screen2.mp3',  peaks: 'screen2.dat' }
+        { name: 'Screenshot1.png', audio: 'screen1.mp3',  peaks: 'screen1.dat' },
+        { name: 'Screenshot2.png', audio: 'screen2.mp3',  peaks: 'screen2.dat' }
     ]
 }
 
