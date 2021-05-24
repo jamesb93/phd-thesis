@@ -2,9 +2,8 @@ Server.killAll();
 
 (
 s.waitForBoot({
-    b = Buffer.read(s, "/Users/james/Documents/Max 8/Packages/FluidCorpusManipulation/media/Tremblay-ASWINE-ScratchySynth-M.wav");
+    b = Buffer.read(s, "/Users/james/dev/webdev/phd-kit/static/ss/gesture.wav");
     s.sync;
-
     c = Buffer.new(s);
 
     FluidBufNoveltySlice.process(s, b, indices:c, action:{
@@ -12,12 +11,6 @@ s.waitForBoot({
         c.loadToFloatArray(action:{ | indices | ~indices = indices.as(Array) });
 
         s.sync;
-
-        if(~indices.size > 0, {
-            if(~indices[0] != 0, {
-                ~indices = ~indices.insert(0, 0)
-            })
-        });
 
         ~indices.do({ | index, i |
             var color, next_index;
@@ -59,10 +52,7 @@ s.waitForBoot({
 
         s.sync;
 
-        d.play;
-
         ~final_array.postln;
-
     });
 });
 )
