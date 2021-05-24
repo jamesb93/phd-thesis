@@ -45,9 +45,8 @@ export const generation = {
     trackData : [
         { name: 'libLLVMAMDGPUDesc.a', audio: 'libLLVMAMDGPUDesc.a.mp3', peaks: 'libLLVMAMDGPUDesc.a.dat'},
         { name: 'rainstick.aif.maxwave', audio: 'rainstick.aif.maxwave.mp3', peaks: 'rainstick.aif.maxwave.dat'},
-        { name: 'Library.storedata-shm', audio: 'Library.storedata-shm.mp3', peaks: 'Library.storedata-shm.dat'},
         { name: '01-190328_1317-glued-08.wav.reapeaks', audio: '01-190328_1317-glued-08.wav.reapeaks.mp3', peaks: '01-190328_1317-glued-08.wav.reapeaks.dat' },
-        { name: '5253E668F50FA300CF9497D3952DBDE3837C6CB9', audio: '5253E668F50FA300CF9497D3952DBDE3837C6CB9.mp3', peaks: '5253E668F50FA300CF9497D3952DBDE3837C6CB9.dat' },
+        { name: '5253E668F50FA300CF9497', audio: '5253E668F50FA300CF9497D3952DBDE3837C6CB9.mp3', peaks: '5253E668F50FA300CF9497D3952DBDE3837C6CB9.dat' },
         { name: 'ABAssistantChangelog.aclcddb-wal', audio: 'ABAssistantChangelog.aclcddb-wal.mp3', peaks: 'ABAssistantChangelog.aclcddb-wal.dat'},
         { name: 'cache_54_3', audio: 'cache_54_3.mp3', peaks: 'cache_54_3.dat'},
         { name: 'Default_4.0.ReaperThemeZip', audio: 'Default_4.0.ReaperThemeZip.mp3', peaks: 'Default_4.0.ReaperThemeZip.dat'},
