@@ -12,6 +12,8 @@ s.waitForBoot({
 
         s.sync;
 
+		~indices_desc = Array.newClear;
+
         ~indices.do({ | index, i |
             var color, next_index;
             if(i < (~indices.size - 1), {
@@ -20,7 +22,12 @@ s.waitForBoot({
                 next_index = b.numFrames
             });
             color = Color.rand(0.0, 1.0).hexString;
-            ~indices[i] = [index, next_index, color]
+            ~indices[i] = [index, next_index, color];
+			~indices_desc = ~indices_desc.add((
+                start: index,
+                end: next_index,
+                color: color
+            ));
         });
 
         ~rand_indices = ~indices.scramble;
