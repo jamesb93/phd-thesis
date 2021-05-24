@@ -22,6 +22,10 @@ ReaCoMa is a collection of [Lua](http://www.lua.org/) scripts that facilitate us
 
 ReaCoMa matured over a number of iterations as I incorporated into my compositional practice. Nonetheless, even it its earliest versions it facilitated computer-led decomposition of sounds which had a large impact on how I composed the works and structured my engagement with audio-based corpora.
 
+Dimension Reduction for sound searching
+
+Clustering Approaches
+
 
 In sys.ji_ from [Reconstruction Error]({m.re}) the `fluid.transients.lua` script is used to decompose a longer passage of material into a transient component and a residual component (everything except the transients). A long fade in envelope is applied to the residual component and both components are played back at the same time. This gradually introduces the residual parts of the sound while the transients dominate from the outset. I chose this effect as a way of generating various colours of short click-like sounds and as a way of suppressing the noisier aspects of the sound temporarily and to create a formal shape from this.
 
