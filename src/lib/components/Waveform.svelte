@@ -25,6 +25,10 @@
         return date.toString().substr(3);
     }
 
+    const dragHandler = (seg) => {
+        console.log(seg);
+    }
+
     onMount (async()=>{
         if (browser) {
             const module = await import("peaks.js");
@@ -38,7 +42,6 @@
                     arraybuffer: peaks 
                 },
                 mediaElement: audio,
-                height: 150,
                 zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
                 overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
                 overviewHighlightColor: 'grey',
@@ -57,8 +60,12 @@
                     console.log(err)
                 } else {
                     instance = p
+                    instance.views.getView('overview').fitToContainer();
+                    // instance.on('segments.enter', (segs) => {
+                    //     console.log(segs)
+                    // });
                 }
-            })
+            });
         }
     });
 
@@ -75,8 +82,8 @@
     </div>
 
     <div class="vis">
-        <div bind:this={overview} />
-        <div bind:this={zoom} />
+        <div id='waveform-overview' bind:this={overview} />
+        <div id='waveform-zoom' bind:this={zoom} />
     </div>
 
     <div class="peaks-controls" bind:this={peaksControls}>
@@ -111,6 +118,13 @@
 </Container>
 
 <style>
+    #waveform-zoom {
+    }
+
+    #waveform-overview {
+        height: 65px;
+    }
+
     #lossless {
         margin-top: 10px;
     }
@@ -151,7 +165,9 @@
     
     .vis {
         padding-bottom: 5px;
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
     }
     
     .peaks-controls {
