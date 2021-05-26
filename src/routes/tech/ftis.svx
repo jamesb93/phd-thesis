@@ -4,7 +4,6 @@
     import VideoMedia from '$lib/components/VideoMedia.svelte'
     import YouTube from "$lib/components/YouTube.svelte"
     import {metadata as m} from "../directory.svx"
-
 </script>
 
 # Finding Things in Stuff (`ftis`)
@@ -20,6 +19,14 @@ Below are some of the guidelines I devised for myself when I decided that I woul
 2. *`ftis` should be self-documenting* in the sense that every time it is run it should automatically produce useful documentation regarding the materials it operated on, the `git` version of the software, the time and date, whether or not there were errors and what settings each analysis stage was configured to use. Most of the code from [Reconstruction Error]({m.re}) was not adequately documented as I did not foresee that the code would even remain relevant to the creative project in its earliest stages. In hindsight, automatically producing documentation would have been helpful for informing critical reflection, keeping a record of successful and unsuccessful working patterns or settings, and for ensuring even nascent experiments would be in some way attached to a record.
 
 3. *`ftis` should operate rapidly as a part of the compositional process*. While the code made in [Reconstruction Error]({m.re}) served my creative purposes in that particular project, alternating between code, auditioning sounds files, Max and REAPER was sometimes slow and diminished the ability to rapidly test different analytical processes and ideas. This friction was largely due to the fact the interface did not abstract away framework code and required a lot of that code to be duplicated each time I wanted to test a new idea. To meet these concerns, I envisaged `ftis` presenting a minimalist control interface such as the command line, and contain methods for rapidly auditioning sounds, organising them into pre-compositional structures such as a REAPER session and for inspecting the data produced from analysis. Re-analysis should also be cached to increase the rate at which analysis chains can be reconfigured and experimented with.
+
+## Sound Searching With Ftis
+- Automatic segmentation
+- Clustering
+- Visual representations
+- kd trees
+
+gitui
 
 ## Implementation
 `ftis` is structured as a Python package. This means that it can be installed by Python's package manager `pip` and accessed through `import` in a python script. While this increases the barrier for entry and requires the user to know Python, it simplifies many architectural decisions by keeping everything within one language. One idea I pursued briefly and early on was creating a domain-specific language written in configuration files which would then be parsed by `ftis`. After building out a prototype of this interface, I found it was not expressive and was frustrating to develop around. Confining `ftis` to pure Python also means that any of the code written in `ftis` is relatively interoperable with other Python code. This makes it flexible when you need to do something not offered by `ftis` itself.
@@ -502,6 +509,7 @@ def analyse(self, workable):
 Even though the integrity of a chain of `ftis` analysers can easily be modified, it has several strategies for finding any data possible that has already been computed and stored. While the work required to implement such caching was mostly technical, it overall improves the usability of `ftis` within a creative practice by making iteration on ideas quicker. Prior to implementing this feature, I would sometimes avoid certain types of analysis such as creating long chains of analysers for fear of having to wait for reanalysis to complete if I wanted to change their parameters or slightly modify them each time.
 
 ## Other Links
+<!-- TODO Replace with zenodo link -->
 I published a paper for The 2020 Joint Conference on AI Music Creativity that alludes to the development of `ftis` and provides some context for the working method (and its frustrations) that inspired its creation. Here is [the published paper](https://boblsturm.github.io/aimusic2020/papers/CSMC__MuMe_2020_paper_6.pdf) and the video presentation is below.
 
 <YouTube 
