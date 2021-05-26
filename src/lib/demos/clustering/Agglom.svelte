@@ -5,7 +5,7 @@
     import Container from '$lib/components/Container.svelte';
     export let title = 'Agglomerative Clustering with different levels of granularity';
     export let caption='DEMO 2';
-    export let id = 'demo1'
+    export let id = 'demo2'
 
     let ready = false;
     let needsUpdate = false;
