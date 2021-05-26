@@ -113,7 +113,6 @@ A step-by-step procedure is followed to realise this.
 6. Lower the temperature of the annealing process according to the cooling rate.
 6. Return to step 2.
 
-<!-- LINK: link to reflective part of section -->
 This process has several hyperparameters: learning rate, cooling rate and the maximum temperature. Changing these can alter the outcome of using simulated annealing in a number of ways, perhaps most importantly by effecting the success of the algorithm in terms of discovering the most optimal state. If the system is cooled too quickly, or the temperature does not have a sufficiently high starting temperature then the algorithm is less likely to discover the global optimum. The learning rate is my own addition to the algorithm which determines the maximum distance from the current state the new state can be. This is scaled to the current temperature, making it such that the algorithm can select new states at each iteration which are not necessarily direct neighbours but are in close proximity and only nearby states when the temperature is low.
 
 An iteration of [Annealing Strategies]({m.as}) is created by running this algorithm and recording the audio output produced while the SA solves for an optimal solution. As a result, the technical implementation contributes significantly to the shape of the work and how I interacted with the system to compose.

@@ -10,7 +10,9 @@
     import Waveform from '$lib/components/Waveform.svelte'; 
 
     import { 
-        interAlbum, 
+        interAlbum, foundations, rhythmicConstructs,
+        eeeSegments, 
+        anchors, anchorsSegments,
         kindleModes,xiaomiModes,xboxModes,
         classifier,loopExperiments,baseSketchSegs
     } from '$lib/data/interferences.js';
@@ -44,7 +46,6 @@ The composition process can roughly be divided into  two phases of composition. 
 
 ### Recording Objects With Induction
 
-<!-- REVIEW: do i need to give the corpus here for listening maybe? -->
 As discussed in ["Motivations And Influences"]({m.em}#motivations-and-influences), I procured an electromagnetic induction microphone and wanted to use it to generate a corpus of digital and synthetic type sounds. To do this, I took electronic objects from around the home and recorded them, at times while operating them simultaneously. I was surprised by the diversity of sounds this produced. Despite devices in my environment seeming dormant, the induction microphone could detect and uncover their invisible electronic mechanisms and operation. I recorded a number of devices, including my computer keyboard, mouse, a mobile phone, a sound card, a laptop and an e-reader. Each device produced its own characteristic sounds and some of these objects offered me the ability to trigger certain sonic behaviours. For example, [AUDIO 2]({m.em}#aud2) captures the sound of the e-reader left untouched. The change at 0:02 is triggered by switching the aeroplane mode on or off. This user interaction causes the components in the e-reader to operate differently, which is captured by the induction microphone. Eventually the initial static state is returned to. This can be heard at 1:59 lasting until the end of the clip.
 
 <Waveform 
@@ -98,21 +99,24 @@ id='aud4'
 segments={xboxModes}
 />
 
-To tackle this, I created a bespoke algorithm influenced by Lefèvre, S., & Vincent, N. (2011) which performs segmentation by sampling short sequences within a sound and clustering those sequences together. The algorithm is structured as a two phase process. The first phase, *over-segments* a sample into numerous small divisions. These divisions are not necessarily meaningful, rather, the process aims to divide the signal excessively so that these small divisions can be recombined later in the second phase. The second phase applies audio descriptor analysis to each segment and then groups each one into a user-specified number of clusters. From this, the algorithm recursively operates on a windows of clustered segments and merges contiguous segments with the same cluster label. It starts at the first segment in time and performs this by shifting forward in time, merging inside the loop. As such, it gradually creates larger and larger combined segments until consecutive segments all belong to different clusters.
+To tackle this, I created a bespoke algorithm influenced by Lefèvre, S., & Vincent, N. (2011) which performs segmentation by sampling short sequences within a sound and clustering those sequences together. The algorithm is structured as a two phase process. The first phase, *over-segments* a sample into numerous small divisions. These divisions are not necessarily meaningful, rather, the process aims to divide the signal excessively so that these small divisions can be recombined later in the second phase. The second phase applies audio descriptor analysis to each segment and then groups each one into a user-specified number of clusters. From this, the algorithm recursively operates on a windows of clustered segments and merges contiguous segments with the same cluster label. It starts at the first segment in time and performs this by shifting forward in time, merging inside the loop. As such, it gradually creates larger and larger combined segments until consecutive segments all belong to different clusters. [IMAGE 1]({m.em}#img1) is a visual representation of this algorithm.
 
-<!-- WIDGET: explanation of the algorithm in visual format
+<ImageMedia2 
+url='/inter/clusterseg-explanation.svg'
+caption='Visual depiction of "cluster segmentation" algorithm'
+figure='IMAGE 1'
+id='img1'
+/>
 
- -->
+My intention was to create a generalisable algorithm that would be relatively agnostic toward the nature of the material it was segmenting. I also wanted to avoid some the issue whereby  frame-by-frame approaches often only target short windows of time and do not respect the longer term implications of changes in the signal necessarily. By using a shifting window that merges while it slides across the segments, it gives the algorithm a "lookahead" and "look behind" that constantly updates as it progresses.
 
-The intent for this algorithm was to create a generalisable algorithm that would be relatively agnostic toward the nature of the material it was segmenting. I also wanted to avoid some the issue whereby  frame-by-frame approaches often only target short windows of time and do not respect the longer term implications of changes in the signal necessarily. By using a shifting window that merges while it slides across the segments, it gives the algorithm a "lookahead" and "look behind" that constantly updates as it progresses.
-
-I evaluated the effectiveness of the algorithm by modifying each component of this two-phase segmentation algorithm and observing the results as a REAPER session. Overall, I found that the choice of initial segmentation strategy had little effect on the final result. What had the most significant in this aspect though was the initial granularity of the segments which it produced. If the segments were too large the algorithm would often deem contiguous segments to be similar as the data in each segment regressed to the  mean. Thus, it was important to begin a high level of granularity and differentiation between segments to avoid this. The window size and number of clusters had a bigger effect on the results. In preliminary tests I found that they could diverge significantly in unexpected ways. Unlike changing a threshold for an amplitude-based slicer for example, which as it is lowered one expects to see more clusters emerge, the combination of window size and number of clusters was difficult to predict. [IMAGE 1]({m.em}#img1) depicts the REAPER session I used to inspect the results, where each track is the result of a different combination of these two parameters. The session itself can also be found in the repository here: [session.rpp](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation_scripts/2020-06-18%2004-09-54.718681/session.rpp) and the code that performed the segmentation can be found here: [clustered_segmentation.py](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation_scripts/clustered_segmentation.py).
+I evaluated the effectiveness of the algorithm by modifying each component of this two-phase segmentation algorithm and observing the results as a REAPER session. Overall, I found that the choice of initial segmentation strategy had little effect on the final result. What had the most significant in this aspect though was the initial granularity of the segments which it produced. If the segments were too large the algorithm would often deem contiguous segments to be similar as the data in each segment regressed to the  mean. Thus, it was important to begin a high level of granularity and differentiation between segments to avoid this. The window size and number of clusters had a bigger effect on the results. In preliminary tests I found that they could diverge significantly in unexpected ways. Unlike changing a threshold for an amplitude-based slicer for example, which as it is lowered one expects to see more clusters emerge, the combination of window size and number of clusters was difficult to predict. [IMAGE 2]({m.em}#img1) depicts the REAPER session I used to inspect the results, where each track is the result of a different combination of these two parameters. The session itself can also be found in the repository here: [session.rpp](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation_scripts/2020-06-18%2004-09-54.718681/session.rpp) and the code that performed the segmentation can be found here: [clustered_segmentation.py](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation_scripts/clustered_segmentation.py).
 
 <ImageMedia2 
 url='/inter/clusterd-segmentation.jpg'.
-figure='IMAGE 1'
+figure='IMAGE 2'
 caption='Clustered segmentation results rendered as a REAPER session.'
-id='img1'
+id='img2'
 />
 
 Testing different parameters produced a variety of results, both clearly unsatisfactory from over-segmentation while others were borderline and harder to evaluate. Between different parameter settings, slice points I would deem as salient changes had been detected, but rarely did one configuration agree on the same results. Given this disparity it was difficult to determine if there a clear "best" configuration. Moving forward I turned this algorithm into a [FTIS]({m.ftis}) analyser so that I could integrate it with the technical exploration which followed this. The concept of analysers is described in ["Analysers"]({m.ftis}#analysers). 
@@ -153,8 +157,7 @@ id='vid4'
 
 This Max patch looped a selected sample from a cluster. As I navigated between clusters and samples within them, the intricacy and fragility of the sounds within certain clusters was foregrounded. Curiously too, some material that I would have perceived as static had been included in what was the *active* classification performed earlier . The nature of the looping playback, combined with already mechanised and artificial nature of these sounds was evocative and I was drawn to different groups - imagining composing with the segments to form my own artificial machine-like sound composites. Clusters 1, 2, and 37, for example, produced structured rhythmic sounds articulated by sparse and subtle transients. When I was changing the sample the rhythmic patterns of these articulations could be altered.  I imagined that combining several of these could be used to build layers of  intricate quasi-rhythmic patterns. Clusters 0, 11 and 18 contained a large amount of drone-like static material with a prominent pitch content. To an extent, I was thankful this material had been poorly grouped into the *active* classification causing it to be discovered by me in this process. Looping short segments of this material highlighted how it could be transformed from its originally glacial and static form into a more musically driven behaviour.
 
-<!-- REVIEW -->
-For me this this was a significant revelatory point in the compositional process. I imagined those sounds with more rhythmic and iterated qualities could form a piece in this EP, while those with drone-like qualities might form another. This incited further utilisation of [FTIS]({m.ftis}) to hone my exploration and deconstruction of these materials. This work did not directly lead to the creation of the two works in the EP, rather, I would characterise this portion of the creative process as a series of experiments which were essential in leading me toward important applications of software in creating the last two pieces. The technologically led exploring performed next became stepping stones in formulating my compositional intent.
+For me this this was a revelatory listening experience  in the compositional process. I imagined those sounds with more rhythmic and iterated qualities could form a piece in this EP, while those with drone-like qualities might form another. This elicited my further utilisation of [FTIS]({m.ftis}) to hone my exploration and deconstruction in terms of these two compositional aims. This nxt next phase of exploration and computer-aided composition did not directly lead to the creation of the two works in the EP, rather, I would characterise it as a series of experiments that functioned as stepping stones in formulating my compositional intent.
 
 <!-- REVIEW: hierarchy of headings here -->
 #### Ad-Hoc Experiments
@@ -222,12 +225,19 @@ multi_corpus = corpus_one + corpus_two
 While the notion of combining multiple sources of sonic materials is not novel to compositional method with digital samples, for me this change allowed me to use [FTIS]({m.ftis}) more flexibly  to overcome the mental pattern of one project having one corpora or set of sonic interests. Instead of having to merge files a number of different directories on disk to form a corpus, I could instead point a script to a number of places and deal with this in a fashion where the organisational house-keeping is separated from the creative workflow. This provoked another phase of exploration with FTIS that ultimately generated the two works presented as [Interferences]({m.em}). The next two sections, [{m.anchors}]({m.em}#{m.anchors}) and [{m.eee}]){m.em}#{m.eee}) discuss how these works emerged from this point onward.
 
 ### {m.anchors}
-<!-- REVIEW: is it capitalise or recontextualise within the greater corpus including databending samples?? -->
-Developing the *multi-corpus* capabilities of [FTIS]({m.ftis}) prompted me to think how I might capitalise on the drone-like material I encountered in the earliest cluster auditioning process described in ["Pathways Through The Corpus"]({m.em}#pathways-through-the-corpus) and ["Clusters as Compositional Units"]({m.em}#clusters-as-compositional-units.)
+<Waveform 
+file='/pieces/inter/anchors.mp3'
+peaks='/pieces/inter/anchors.dat'
+id=''
+title={ m.anchors }
+caption=''
+/>
+
+Developing the *multi-corpus* capabilities of [FTIS]({m.ftis}) prompted me to think how I might re-approach composing with the drone-like material I encountered in the earliest cluster auditioning process described in ["Pathways Through The Corpus"]({m.em}#pathways-through-the-corpus) and ["Clusters as Compositional Units"]({m.em}#clusters-as-compositional-units.)
 
 The first step I took in addressing this was to investigate in more detail what level of variation existed between these *static* sounds. To facilitate this I created a [FTIS]({m.ftis}) script to take all of the samples initially classed as *static* (see ["Static And Active Material"]({m.em}#static-and-active-material) as a reminder), and to create three clusters from this. The number of clusters was an intuitive choice, and I imagined that by dividing *static* material into three rough groups I might be able to discern if there were any significant differences within this sub-section of the corpus. From this, I generated a REAPER session and auditioned the outputs. This script can be found here: [base_materials.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/base_materials.py).
 
-Combing through this REAPER session confirmed my instinctive impression that there was not much variation in the static material. While three clusters were produced by the clustering process, the sounds grouped into clusters 1 and 2 possessed almost identical morphologies and textural qualities. The differences between clusters 1 and 2 compared to cluster 0 though were more perceptually obvious. I played with these differences and created a sketch based on hard panning clusters 1 and 2 to left and right channels respectively, and situating cluster 0 centrally. I also slightly arranged the material in order to explore different juxtapositions of these two sonic identities. This sketch can be heard in [AUDIO 9]({m.em}#aud9) alongside some annotations of my perception of different combinations between the clusters.
+Combing through this REAPER session confirmed my instinctive impression that there was not much variation in the static material. While three clusters were produced by the clustering process, the sounds grouped into clusters 1 and 2 possessed almost identical morphologies and textural qualities. The differences between clusters 1 and 2 compared to cluster 0 though were more perceptually obvious. I played with these differences and created a sketch based on hard panning clusters 1 and 2 to left and right channels respectively, and situating cluster 0 centrally. I arranged the material in order to explore different juxtapositions of these two sonic identities. This sketch can be heard in [AUDIO 9]({m.em}#aud9) alongside some annotations of my perception of different combinations between the clusters.
 
 <Waveform 
 id='aud9'
@@ -238,12 +248,9 @@ peaks='/inter/base-materials-sketch.dat'
 segments={baseSketchSegs}
 />
 
-<!-- REVIEW: is this confusing? -->
-Following the composition of this sketch, I wanted to discover if there were other sounds which could be useful for creating increasingly detailed superimpositions of similar material. By utilising the *multi-corpus* techniques in [FTIS]({m.ftis}) further, I produced a two dimensional map, containing samples from both the [Reconstruction Error]({m.re}) corpus *and* the *static* materials I was already working with. This script can be found here: [find_tuned.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py). This spatial representation was computed by reducing the dimensions of a Constant-Q Transform (CQT) analysis for each sample to two dimensions. I selected this audio descriptor based on the assumption that its logarithmic representation of the spectrum would be suitable for capturing differences and similarities in pitch as well as fine-grained spectral complexity in the high frequencies. From this spatial representation I computed a [k-d tree](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html) which would enable me to query for a number of neighbours to a specific point in that space. Using this data structure, I selected a sample ([AUDIO 10]({m.em}#aud10)) from the sketch heard in [AUDIO 9]({m.em}#aud9) with a prominent pitch component and queried for 200 samples closest to that sample in the spatial representation.
+Following the composition of this sketch, I aimed to discover sounds which could be used for creating detailed superimpositions and expanding the palette of possible superimpositions demonstrated in [AUDIO 9]({m.em}#aud9). By utilising the *multi-corpus* techniques in [FTIS]({m.ftis}) further, I produced a two dimensional map, containing samples from both the [Reconstruction Error]({m.re}) corpus *and* the *static* materials I was already working with. This script can be found here: [find_tuned.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py). This spatial representation was computed by reducing the dimensions of a Constant-Q Transform (CQT) analysis for each sample to two dimensions. I selected this audio descriptor based on the assumption that its logarithmic representation of the spectrum would be suitable for capturing differences and similarities in pitch as well as fine-grained spectral complexity in the high frequencies. From this spatial representation I computed a [k-d tree](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html) which would enable me to query for a number of neighbours to a specific point in that space. Using this data structure, I selected a sample ([AUDIO 10]({m.em}#aud10)) from the sketch heard in [AUDIO 9]({m.em}#aud9) with a prominent pitch component and queried for 200 samples closest to that sample in the spatial representation.
 
-<!-- WIDGET: 
-DEMO 1
-200 knn branching searcher 
+<!-- WIDGET:  DEMO 1 200 knn branching searcher 
 -->
 
 <Waveform 
@@ -271,27 +278,35 @@ caption='AUDIO 11'
 id='aud11'
 />
 
-<!-- REVIEW: this is just terrible and unclear -->
-https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/three_anchors.py
+After creating these two sketches I was beginning to formulate a clearer idea for the final work. I began to develop an affinity for three specific samples that throughout the computer-aided searching and compositional process had consistently emerged and presented characteristic textural qualities. These three samples can be heard in [AUDIO 12]({m.em}#aud12).
 
-At this point after creating two sketches and exploring this particular type of material more deeply, I was beginning to formulating a clearer idea for the the structure of the final work.
+<Album 
+tracks={anchors}
+title=''
+caption=''
+id=''
+/>
 
-From the process of creating the longer sketch shown in [AUDIO 11]({m.em}#aud11), I began to place a type of conceptual importance on three samples due to their characteristic qualities. These are presented in [AUDIO 12]({m.em}#aud12). Using the same k-d tree approach as before, I branched out through a spatial representation of the *multi-corpus* containing [Reconstruction Error]({m.re}) samples and those I had been previously working with.
+I created a two dimensional spatial representation of a combined corpus containing [Reconstruction Error]({m.re}) samples, and the *static* samples which I had been sketching with . This script can be found here: [three_anchors.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/three_anchors.py). I then constructed a k-d tree from this representation and *branched* out from each of the three samples I just described in an attempt to structure the *static* material around these three key sounds. This returned the same samples that [find_tuned.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py) did, but separated the results into three perceptually orientated groups, with each sound acting as templates, or markers for what those groups should contain.
 
-<!-- similar samples, but structured into groups with different identities. -->
-This collected similar samples to the [find_tuned.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py) script but produced a more structured organisation of those samples in my view attracting each of the results from this towards one of these key conceptual samples recently outlined.
+My compositional decision making was largely a response to the division of material into these distinct groups. I focused on blending them in different ways to create composite textures with a distinct musical behaviours. Such combinations were based on forming chordal sounds from the summation of pitched material or layering dynamically striated and texturally "bumpy" sounds with those that were more static and inactive. This concept informed the high-level structure of the work, which is underpinned by a drone comprised of material belonging to a single one of the three groups. Longer form developments are orchestrated as interactions with this layer either emphasising and adding to it or occupying the behaviour of a sonic antagonist. 
 
-<!-- WIDGET: AUDIO 12 -->
- 
-My compositional decision making was largely a response to the division of material into these distinct groups. I focused on blending them in different ways to create composite textures with a variety of musical behaviours. Such combinations were based on forming almost chordal sounds from the summation of pitched material or layering dynamically striated and texturally "bumpy" sounds with those that were more static and inactive. This concept informed the high-level structure of the work which is underpinned by a drone layer comprised of the original cluster 1 and 2 material (described toward the beginning of this section). Longer form developments are orchestrated as interactions with this layer either emphasising and adding to it or occupying the role of a sonic antagonist. 
-
-<!-- WIDGET: Different interactions -->
+<!-- WIDGET: album of interactions here annotated -->
 
 There is only one intentionally constructed dramatic moment that occurs at 6:20, while the rest of this piece is purposefully crafted to be less directed and non-narrative in nature. This emerged from a contrasting mindset to that which I embodied in [Reconstruction Error]({m.re}). Comparatively, I had much less material to work with in [Reconstruction Error]({m.re}) and so often I had to extract as much musical value from the samples I had found within perceptually homogenous clusters. This pushed me toward recycling the material as much as possible and composing several meso-scale structures which I then blended and arranged intuitively. By the time I had utilised those meso-structures as much as I felt I could, the form of a piece had crystallised and was less flexible or adaptable.
 
 By having access to much more material in [{m.anchors}][{m.em}#{m.anchors}], and several different computational structures representing those materials the conceptual goals and frame of the work was fostered my strongly *outside* of the finalised compositional state. In reality, the final stage of the compositional process following from the rough sketches was a feeling that I was "firming up" the idea, rather than creating something entirely new. It also engendered an integration between my conceptual goal and realising that with the aid of the computer. I felt as if I did not have to compromise on the conceptual aims of the piece, rather something was catalysed and mediated by myself and the computer.
 
 ### {m.eee}
+<Waveform 
+file='/pieces/inter/eee.mp3'
+peaks='/pieces/inter/eee.dat'
+id=''
+caption=''
+segments={eeeSegments}
+title={m.eee}
+/>
+
 This second piece of [Interferences]({m.em}) grew in response to the development of the [FTIS]({m.ftis}) *Corpus* object while creating {m.anchors}, and my desire to revisit some of the raw materials recorded with the Elektroslusch mini. While I was gathering these initial recordings, I had a strong aesthetic response to the e-reader recording (06-Kindle Off-200513_1547.wav). I wanted to return this sound, and deconstruct it with the tools which at the start of this project were not yet developed or as sophisticated as they had become. The most striking aspect of this e-reader recording, in my perception, was the clarity and definition between *active* and *static* states as well as how the entire sample was structured around these two distinctive musical behaviours. The *static* component possessed a strong pitch element and was completely unwavering in dynamic, while the *active* was more gestural and had a varied morphology. A small segment of the longer recording demonstrates the antiphonal character of these two musical behaviours in [AUDIO 13]({m.em}#aud13). 
 
 <Waveform 
@@ -317,9 +332,7 @@ Broadly speaking, the *active* and *static* states were treated differently and 
 
 The first three and a half minutes of the track are based around extending the antiphonal nature of the source material. To do this, I began by manually segmenting the unprocessed sample (06-Kindle Off-200513_1547.wav) in to regions of *active* and *static* behaviour. This way, I had access to those two different behaviours in isolation. I created various configurations in which *static* texture is interjected with the initial gesture found in the *active* state. Using [ReaCoMa]({m.reacoma}) to segment the *active* materials allowed me to create slight variations by reordering short granular segments, and by removing and cutting this musical phrase. The *static* material is mostly left untouched.
 
-At 3:41, I refrain from introducing any new interjections and started developing the *static* musical behaviour. I used the k-d approach (the same one described and employed in {m.anchors}) to have the computer return perceptually similar sounds from the combined corpus containing[Reconstruction Error]({m.re}) and [Interferences]({m.em}) samples. The code to perform this can be found here: [isolate_sample.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/isolate_sample.py). Several complementary sounds were derived from this which I then incrementally superimposed onto the static texture. These sounds blend subtly, and in some cases are almost unheard with the intention that they merge with the this texture seamlessly. These are progressively layered until 6:48 which begins a new section.
-
-<!-- WIDGET some examples of the audio which joins in -->
+At 3:41, I refrain from introducing any new interjections and started developing the *static* musical behaviour. I used the k-d approach (the same one described and employed in {m.anchors}) to have the computer return perceptually similar sounds from the combined corpus containing[Reconstruction Error]({m.re}) and [Interferences]({m.em}) samples. The code that performed this can be found here: [isolate_sample.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/isolate_sample.py). Several complementary sounds were derived from this which I then incrementally superimposed onto the static texture. Some of the sounds returned were very short so I juxtaposed them contiguously in order to create textural material. These blended subtly, and merge with the the *static* material. These are progressively layered until 6:48 which begins a new section.
 
 At 6:48 the texturally dense musical behaviour is interrupted by the return of a gesture extracted from the *active* material. This demarcates the beginning of a new section in which I deconstructed and reconstructed this gesture in a number of ways to temporally extend and iterate it. In order to achieve this, I used [ReaCoMa]({m.reacoma}) to first create short granular segments which I then rearrange into prolonged concatenated sequences. To avoid a sense of strong repetition I then used a Lua script to shuffle the order of those contiguous items randomly. [VIDEO 6]({m.em}#vid6) demonstrates how this is performed in practice.
 
@@ -330,8 +343,8 @@ figure='VIDEO 6'
 id='vid6'
 />
 
-Similarly, I processed the same granular segments using one of the [ReaCoMa]({m.reacoma}) "sorting" scripts, which takes a group of selected media items and arranges them in the timeline view according to audio descriptor values. I used this to sort the segments according to perceptual loudness. The would tends toward grouping segments with similar dynamic profiles resulting in a glitch-like and artificial sonic outcome. This can be heard in [AUDIO 15]({m.em}#aud15). This particular type of gesture can be heard at...
-<!-- TODO: time codes -->
+Similarly, I processed the same granular segments using one of the [ReaCoMa]({m.reacoma}) "sorting" scripts, which takes a group of selected media items and arranges them in the timeline view according to audio descriptor values. I used this to sort the segments according to perceptual loudness. The would tends toward grouping segments with similar dynamic profiles resulting in a glitch-like and artificial sonic outcome. This can be heard in [AUDIO 15]({m.em}#aud15). This particular type of gesture can be heard at 7:22, 7:36, 8:03 and 10:46.
+
 <Waveform 
 id='aud15'
 title='ReaCoMa sorting used on small segments of active gesture.'
@@ -346,15 +359,24 @@ What aspects are shared?
 
 This section is structured around carefully placing whole samples which themselves are inherently rhythmic or iterated, as well as my synthesis of such musical behaviours through segmentation and intuitive arrangement.
 
-For example, I returned to some of the original data produced by the process described in ["Classification Through Clustering"]({m.em}#classification-through-clustering). Several of the groups within this clustering output contained samples that were borderline between *active* and *static* states. They were relatively stationary in nature when observed over longer time scales presented localised repeating and looping changes in texture and dynamics. These samples were drawn into this section as foundational layers upon which other rhythmic structures are composed. These can be heard in isolation in [AUDIO 16]({m.em}#aud16) and [AUDIO 16]({m.em}#aud17).
+For example, I returned to some of the original data produced by the process described in ["Classification Through Clustering"]({m.em}#classification-through-clustering). Several of the groups within this clustering output contained samples that were borderline between *active* and *static* states. They were relatively stationary in nature when observed over longer time scales presented localised repeating and looping changes in texture and dynamics. These samples were drawn into this section as foundational layers upon which other rhythmic structures are composed. These can be heard in isolation in [AUDIO 16]({m.em}#aud16).
 
-<!-- WIDGET AUDIO 16 -->
-<!-- WIDGET AUDIO 17 -->
+<Album 
+title=''
+figure=''
+tracks={foundations}
+id='aud16'
+/>
 
 These foundational layers were left mostly untreated, while I performed surgical segmentation and rearrangement of short granular materials extracted from the *active* state in order to create my own synthetic rhythmic passages. The segmentation was again executed with [ReaCoMa]({m.reacoma}), and the organisation of the results were structured using the same Lua script described in [this section of Reconstruction Error](http://localhost:3001/projects/reconstruction-error#vid12). Two examples of this can be heard in [AUDIO 18]() and [AUDIO 19]().
 
-<!-- WIDGET: audio 18 -->
-<!-- WIDGET audio 19 -->
+<Album 
+title=''
+figure=''
+tracks={rhythmicConstructs}
+id=''
+/>
+
 
 ## Reflection
 Interferences was a highly successful project in terms of consolidating my computer-aided workflow towards a stable set of tools and creative coding interfaces. It was the first project where I was able to use [FTIS]({m.ftis}) and although I anticipated additional friction from having to support my a complex piece of bespoke software, this created a fruitful dialogue between myself and the computer. Compositional blockages and frustrations drove technological development, and those technological developments catalysed further compositional innovation and breakthroughs. {m.anchors}, for example, was significantly influenced improvements to the *Corpus* object, allowing me to seamlessly draw together multiple corpora together and to be treated as a single collection. This development itself was prompted by my feeling that there was not enough variety in the induction recordings and so I needed to create mechanisms for drawing together other sources in my computer-aided sample searching. Furthermore, working with the computer in this project was more often situated in *soundful* forms of exploration and experimentation. This can be attributed to the fact that [FTIS]({m.fits}) enabled me to fluidly move between REAPER, Max and scripting different machine learning and content-aware programs.
