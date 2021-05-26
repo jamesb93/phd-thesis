@@ -1,12 +1,12 @@
 <script>
 
     import * as Tone from 'tone';
+    import Container from '$lib/components/Container.svelte';
     import Button from '$lib/components/Button.svelte';
     import { browser } from '$app/env';
     export let id="demo2";
     let ready = false;
     let sampler, loop, current;
-    let bpm = 120;
     if (browser) {
         sampler = new Tone.Sampler({
             urls: {
@@ -63,8 +63,8 @@
 
 </script>
 
+<Container id={id} zoom={false}>
 {#if browser}
-<div class="container" id={id}>
     {#if ready}
     
     Change the probability of each potential outcome by modifying the slider's value.
@@ -85,18 +85,11 @@
         {/each}
     </div>
     {/if}
-</div>
 {/if}
+</Container>
+
 
 <style>
-    .container {
-        display: flex;
-        flex-direction: column;
-        border-radius: 12px;
-        border: 3px solid rgba(128, 128, 128, 0.575);
-        transition: border .5s;
-        padding: 20px;
-    }
 
     .input {
         display: flex;
