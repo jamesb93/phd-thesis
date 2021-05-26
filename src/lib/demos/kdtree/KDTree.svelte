@@ -1,0 +1,1 @@
+<!-- Should show 100 points and alawys select the nearest 10 to the mouse -->
