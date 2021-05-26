@@ -21,16 +21,28 @@ This combination of technologies influenced the procedures and tasks I deferred 
 
 To an extent this conclusion was foreshadowed in the first three projects as I always started out by imbuing the computer with a high degree of agency and then taking it back in response to dissatisfaction with the results. This has already been thoroughly discussed in relationship to [Stitch/Strata]({m.ss}), but can also be observed in how formal control was imposed in the final compositional stages of [Refracted Touch]({m.rt}). Annealing Strategies is perhaps an exception to this, but the shortcomings of the approach are described in detail in the relevant section.
  
- ## Contribution To Knowledge
- - How compositional intent and reasoning can be mediated computationally
- - My workflows are open source and generalisable as well as extendable
- - They extend the computer-aided practice with samples
- - Extend the DAW in some highgly specialised ways
+## Contribution To Knowledge
+- Networks and Research groups of artists interested in what machine learning and listening can offer to their practices.
+    - MIMIC, FluCoMa
+    - 
+- Compositional intent and reasoning mediated by machines that listen and are adaptive
+    - Heuristic for testing compositional ideas at intermediate stages of conceptual and aesthetic development in composition
+    - Thinking in the abstract about what I want and encoding that into, content-aware program and listening to the result forming a feedback loop.
+    - The questions and thoughts which drive the querying itself adapt in response to the results. This modifies the question and leads me to pursue different lines of inquiry into the compositional process. 
+    - Going back to the notion of wicked questions, this is my way of dealing with this problem in composition where the question is sometimes as unknown as the answer. First we must formulate a temporary question from which the internal consistency and clarity of ideas can initiall emerge.
+
+    - This positions the computer as a tool for speculation. Rather than reaching a pre-defined resolution quicker, it allows me to discover what *I want* while also imparting some of itself onto that process.
+    - creating a dialogue between workflow, creative coding, listening, taste and composition in a computer-aided, studio-based pracitce with content aware machines.
+
+- Extend the DAW in some highgly specialised ways
+- My workflows are open source and generalisable as well as extendable
 
 ## Further Research And The Future
 Over the course of this PhD developing various technological tools has furnished me with a more sophisticated creative coding practice which is intertwined deeply with my musical thinking and compositional decision making. At the start of the PhD I was limited to just using Max and the externals and packages available for it in order to add new functionality. As I became interested in [machine learning]({m.ca}#machine-learning) and [machine listening]({m.ca}#machine-listening), I naturally had to expand my knowledge of other languages such as Python to meet the demands of my changing and evolving interests. This ultimately gave rise to the necessary skills and conditions in which [FTIS]({m.ftis}) could be built, which draws on several technologies to function.
 
-In the future I think that developing [FTIS]({m.ftis}) will be essential to the development of my overall artistic practice, rather than the creation of new tools. While the start of this PhD saw several technological shifts between projects, I have now found an extensible methodology for incorporating technology that does not require me to "reinvent the wheel" in response to new musical ideas and aims. I have already put in place the necessary architectural work allowing [FTIS]({m.ftis}) to extended programmatically without having to modify the underlying system and framework itself. This is described in the ["Architecture"]({m.ftis}#architecture) section. As such I think the future for my practice will be shaped in part on how [FTIS]({m.ftis}) develops.
+In the future I think that developing [FTIS]({m.ftis}) will be essential to the evolution of my overall artistic practice, rather than the creation of new tools. While the start of this PhD saw several technological shifts between projects, I have now found an extensible methodology for incorporating technology that does not require me to "reinvent the wheel" in response to new musical ideas and aims. I have already put in place the necessary architectural work allowing [FTIS]({m.ftis}) to extended programmatically without having to modify the underlying system and framework itself. This is described in the ["Architecture"]({m.ftis}#architecture) section. As such I think the future for my practice will be shaped in part on how [FTIS]({m.ftis}) develops.
+
+- Expand this network of actions to create a dialogue more broadly across my practice, where pieces open dialogues with each other facilitated and grounded in FTIS.
 
 One development that is not explored in this research in depth is visualisation and visual interfaces, which could potentially open up new and novel ways of interacting with the computer for composition. As it currently stands the only way to interact with the outputs of [FTIS]({m.ftis}) is to draw them into other environments such as Max or REAPER in order to aurally inspect the results. This has been an effective workflow so far as it allows me to situate my engagement with terse and complex data within the realm of listening and soundful experimentation. That said, I have in some instances visualised data, such as with the UMAP results described in ["Dimension Reduction"]({m.re}#dimension-reduction) and this has been a useful process in dealing with the scale and complexity of audio descriptor analysis and machine learning processes. I anticipate that this could be more thoroughly explored, perhaps by creating a "frontend" interface to FTIS which allows both the data and representation of a corpus to be visually portrayed and even operated on through a set of intuitive tactile metaphors such as cutting and drawing. Such an interface would allow me to physically transform and curate samples in a corpus all in response to the outputs of machine learning and listening. 
 
