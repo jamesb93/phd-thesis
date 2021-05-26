@@ -1,3 +1,46 @@
+export const anchors = {
+    prefix: '/inter/anchors/',
+    trackData: [
+        { name: 'Anchor 1', audio: 'anchor1.mp3', peaks: 'anchor1.dat' },
+        { name: 'Anchor 2', audio: 'anchor2.mp3', peaks: 'anchor2.dat' },
+        { name: 'Anchor 3', audio: 'anchor3.mp3', peaks: 'anchor3.dat' },
+    ]
+}
+
+export const anchorsInteractions = {
+    prefix: '/inter/anchors/',
+    trackData: {
+        
+    }
+}
+
+export const eeeSegments = [
+    { startTime: 0.0, endTime: 221.0, labelText: 'Extension of antiphony between active and static states.' },
+    { startTime: 221.0, endTime: 408.0, labelText: 'Development of static musical behaviour' },
+    { startTime: 408.0 , endTime: 712, labelText: 'Rhythmicised static and active behaviours' },
+]
+
+export const anchorsSegments = [
+    {}
+]
+
+export const rhythmicConstructs = {
+    prefix: '/inter/rhythmic-constructs/',
+    trackData : [
+        { name: 'Rhythmic Construct 1', audio: '1.mp3', peaks: '1.dat' },
+        { name: 'Rhythmic Construct 2', audio: '2.mp3', peaks: '2.dat' },
+        { name: 'Rhythmic Construct 3', audio: '3.mp3', peaks: '3.dat' }
+    ]
+}
+
+export const foundations = {
+    prefix : '/inter/',
+    trackData : [
+      { name: "Foundational Layer 1", audio: "foundation-1.mp3", peaks: "foundation-1.dat" },
+      { name: "Foundational Layer 2", audio: "foundation-2.mp3", peaks: "foundation-2.dat" }
+    ]
+}
+
 export const classifier = {
     prefix : '/inter/classifier/',
     trackData : [
