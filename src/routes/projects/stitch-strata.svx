@@ -142,7 +142,7 @@ file="/ss/5712433.mp3"
 peaks="/ss/5712433.dat"
 />
 
-The last strategy I tried and have record of is taking perceptually defined groups of samples from queries and trying to apply a more rigorous selection procedure. This selection procedure was an implementation of the "z12" algorithm described in Puckette (2015) which can generate different patterns by specifying probabilities between different outcomes. [DEMO 2]([m.ss]#demo2) shows an example of the patterns this process can generate.
+The last strategy I tried and have record of is taking perceptually defined groups of samples from queries and trying to apply a more rigorous selection procedure. This selection procedure was an implementation of the "z12" algorithm described in Puckette (2015) which can generate different patterns by specifying probabilities between different outcomes. [DEMO 2]({m.ss}#demo2) shows an example of the patterns this process can generate.
 
 <Z12 />
 
