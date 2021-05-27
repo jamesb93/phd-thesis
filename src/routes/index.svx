@@ -2,14 +2,26 @@
 	import NextSection from "$lib/components/NextSection.svelte"
     import {metadata as m} from "./directory.svx"
 </script>
-# Home
 
-Not supported on Chromium, because it does not compile with by default with the necessary codecs to playback video.
-This digital document can also be read in reader mode if your browser supports it and has been tested on Safari 14.1.
+<br>
 
-The source code for this is available below.
+#### Harnessing Content-Aware Programs For Computer-Aided Composition In A Studio-Based Workflow
 
-https://github.com/jamesb93/phd-kit
+This research represents an attempt to explore how content-aware programs can be harnessed for studio-based, computer-aided composition with digital samples in my practice. A portfolio of compositions and software are submitted, and are used as the subject of critical reflection and discussion. This explores how the dialogue between content-aware machines and my decision making can be used as heuristics to solve aesthetic, creative and compositional problems. This dialogue is based on the notion of querying, in which compositional problems are formulated in the abstract as machine listening tasks and functions. My response to the results of these processes generates new questions, or inform the development and honing of existing ones, thus focusing and clarifying my creative aims.
+
+Within the submitted portfolio, compositions are presented as standalone works and in two cases as a set of pieces in an EP. These works are anchored in a sample-based, digital aesthetic that is non-referential and abstract in nature. The music heavily features noise-based material, synthetic impulses and a proclivity toward sounds that could be interpreted as machine generated errors and digital detritus, much like the work of [Kim Cascone](https://www.discogs.com/artist/4789-Kim-Cascone), [Alva Noto](http://alvanoto.com), [Ryoji Ikeda](https://www.ryojiikeda.com) and [Olivier Pasquet](https://www.opasquet.fr). At the same time a driving aesthetic force behind these works is to explore how such harsh sounds can be coerced into fragile, delicate and texturally nuanced sonic territories that foreground microscopic detail and [microsound](http://microsound.org). 
+
+The written text accompanies a portfolio of five creative projects. The first three of these are solo works totalling in 20:47 minutes of music. The final two projects are EP's presenting a set of five and two pieces respectively. These final two projects contain 18:56 and 22:25 minutes of music. Alongside this, there are three software outputs, [FTIS]({m.ftis}) a Python-based framework for computer-aided composition, [ReaCoMa]({m.reacoma}) a set of ReaScripts to facilitate signal decomposition and segmentation in REAPER and [mosh]({m.mosh}), a command line tool for converting raw data into audio files.
+
+<!-- TODO Breakdown of format -->
+
+["Preoccupations"]({m.preoc}), discusses my compositional and technological influences and preoccupations.
+
+["Content-Awareness"]({m.ca}) examines the notion of content-awareness in regards to current creative practice in computer-aided composition and connected practices.
+
+["Projects"] describes 
+
+Keywords: computer-aided
 
 <NextSection 
 next="How To Read This Thesis"

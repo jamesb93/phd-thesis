@@ -23,13 +23,13 @@ This thesis documents how the initial question, *"How can the computer be creati
 
 This PhD will examine how content-aware programs have been used in my computer-aided compositional practice. This examination is framed around the following question.
 
-How can I use content-aware programs to compose with digital samples in a studio-based computer-aided compositional practice?
+*How can I use content-aware programs to compose with digital samples in a studio-based computer-aided compositional practice?*
 
 This leads to two sub-questions.
     
-What compositional procedures do I delegate to either human or computer and what is the balance of these two?
+*What compositional procedures do I delegate to either human or computer and what is the balance of these two?*
 
-What procedures do I defer to the computer and how do those procedures work?
+*What procedures do I defer to the computer and how do those procedures work?*
      
 To examine this research question a portfolio of five works has been composed. In each project, the computer is used to explore different types of content-awareness, and varying forms of computer-assistance in studio-based composition. While each work presents its own line of enquiry in terms of aesthetic aims and programming practice, the portfolio exists as an ensemble of works rather than isolated, individual "experiments".
 
