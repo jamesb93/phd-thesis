@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import { browser } from "$app/env";
+    import { durations } from '$lib/stores.js';
     import Container from '$lib/components/Container.svelte';
     import { cloudPrefix, noext } from '$lib/utility/paths.js';
 
@@ -12,42 +12,42 @@
     let Peaks, instance, audio, overview;
     let selectedTrack = 0;
     let playState = false;
-    let fakeAudio = new Array(tracks.trackData.length).fill(null);
     let loading = true;
 
-    onMount (async()=>{
-        if (browser) {
-            const module = await import("peaks.js");
-            Peaks = module.default;
-            const options = {
-                    containers: {
-                    overview: overview
-                },
-                dataUri: { arraybuffer: tracks.prefix + tracks.trackData[0].peaks },
-                mediaElement: audio,
-                height: 75,
-                segmentStartMarkerColor: '#a0a0a0',
-                segmentEndMarkerColor: '#a0a0a0',
-                zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
-                overviewWaveformColor: '#0d47a1',
-                overviewHighlightColor: 'grey',
-                playheadColor: 'rgba(0, 0, 0, 1)',
-                playheadTextColor: '#aaa',
-                showPlayheadTime: false,
-                pointMarkerColor: '#FF0000',
-                axisGridlineColor: '#ccc',
-                axisLabelColor: '#aaa',
-            }
-
-            instance = Peaks.init(options, (err, p) => {
-                if (err) {
-                    console.log(err)
-                } else {
-                    loading = false;
-                    instance = p
-                }
-            })
+    onMount (async () => {
+        const module = await import("peaks.js");
+        Peaks = module.default;
+        const options = {
+                containers: {
+                overview: overview
+            },
+            dataUri: { arraybuffer: tracks.prefix + tracks.trackData[0].peaks },
+            mediaElement: audio,
+            height: 75,
+            segmentStartMarkerColor: '#a0a0a0',
+            segmentEndMarkerColor: '#a0a0a0',
+            zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
+            overviewWaveformColor: '#0d47a1',
+            overviewHighlightColor: 'grey',
+            playheadColor: 'rgba(0, 0, 0, 1)',
+            playheadTextColor: '#aaa',
+            showPlayheadTime: false,
+            pointMarkerColor: '#FF0000',
+            axisGridlineColor: '#ccc',
+            axisLabelColor: '#aaa',
         }
+
+        instance = Peaks.init(options, (err, p) => {
+            if (err) {
+                console.log(err)
+            } else {
+                loading = false;
+                instance = p
+            }
+        })
+
+        // Get Track Lengths
+
     });
 
     function clickHandler() {
@@ -78,6 +78,7 @@
     }
 
     function convertTime(time) {
+        console.log(time)
         if (time !== null && !Number.isNaN(time)) {
             const date = new Date(time * 1000).toISOString().substr(11, 8)
             return date.toString().substr(3);
@@ -108,19 +109,16 @@
         </div>
 
         <div class='track-list'>
-            {#if loading}Loading...{/if}
+            {#if loading}
+            Loading...
+            {/if}
             {#each tracks.trackData as track, i}
-                <audio src={tracks.prefix + track.audio} bind:this={ fakeAudio[i] }>
-                    <track kind="captions">
-                </audio>
                 {#if !loading}
                 <div on:click={ () => setSource(i) } class='track-selector'>
                     <div id='name-time' class:selected={ selectedTrack === i}>
                         <span>{i+1}. {track.name}</span>
                         <div class='duration'>
-                        {#if fakeAudio[i] !== null && fakeAudio[i].duration !== NaN}
-                            { convertTime(fakeAudio[i].duration) }
-                        {/if}
+                            { $durations[track.audio] } 
                         </div>
                     </div>
                     <div id='single-lossless' >
@@ -130,9 +128,6 @@
                 {/if}
             {/each}
         </div>
-        
-        <!-- { cloudPrefix + (tracks.prefix).slice(0, -1) + '.zip' } -->
-        
     </div>
 </Container>
 
