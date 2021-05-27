@@ -377,6 +377,22 @@
             "url": "https://apps.dtic.mil/dtic/tr/fulltext/u2/289565.pdf"
         },
         {
+            "name": "MIMIC",
+            "url": "https://mimicproject.com/about"
+        },
+        {
+            "name": "FluCoMa",
+            "url": "https://www.flucoma.org/"
+        },
+        {
+            "name": "AI Music Creativity",
+            "url": "https://aimusiccreativity.org/about/"
+        },
+        {
+            "name": "MuMe",
+            "url": "https://musicalmetacreation.org/"
+        },
+        {
             "name": "OpenMusic (OM)",
             "url": "https://openmusic-project.github.io"
         },
