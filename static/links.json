@@ -825,14 +825,6 @@
             "url": "https://sagemusick.bandcamp.com/track/2016-02-16-one-breath-poem-failure"
         },
         {
-            "name": "ReaCoMa Source Code",
-            "url": "https://www.github.com/jamesb93/reacoma"
-        },
-        {
-            "name": "ReaCoMa Website",
-            "url": "https://www.reacoma.xyz"
-        },
-        {
             "name": "Lua",
             "url": "http://www.lua.org/"
         },
@@ -843,6 +835,10 @@
         {
             "name": "REAPER extension",
             "url": "https://www.reaper.fm/sdk/plugin/plugin.php"
+        },
+        {
+            "name": "ReaCoMa Source Code",
+            "url": "https://www.github.com/jamesb93/reacoma"
         },
         {
             "name": "FTIS Source Code",
@@ -953,30 +949,6 @@
         {
             "name": "Tongues of Fire by Trevor Wishart",
             "url": "https://www.youtube.com/embed/Ude4717dlsQ?start=786"
-        },
-        {
-            "name": "ReaCoMa Tutorial 1",
-            "url": "https://www.youtube.com/embed/r3uHMXmlPRo"
-        },
-        {
-            "name": "ReaComa Tutorial 2",
-            "url": "https://www.youtube.com/embed/ejQu06GDDXE"
-        },
-        {
-            "name": "ReaCoMa Tutorial 3",
-            "url": "https://www.youtube.com/embed/HcF_lssW2Tg"
-        },
-        {
-            "name": "ReaCoMa Tutorial 4",
-            "url": "https://www.youtube.com/embed/og_5hCm5AGc"
-        },
-        {
-            "name": "ReaCoMa Tutorial 5",
-            "url": "https://www.youtube.com/embed/8__dtafBTD4"
-        },
-        {
-            "name": "ReaCoMa Tutorial 6",
-            "url": "https://www.youtube.com/embed/GEyut6MePgY"
         }
     ]
 }

@@ -1,10 +1,10 @@
 <script>
     import { onMount } from 'svelte';
-    import { browser } from '$app/env';
     import Button from '$lib/components/Button.svelte';
-    
+    import Container from '$lib/components/Container.svelte';
     export let id = "";
     export let title = "";
+    export let caption = ""
     
     const rAudio = '/reacoma/x86/residu.mp3'
     const tAudio = '/reacoma/x86/transi.mp3'
@@ -25,57 +25,57 @@
             instance.setSource(options, err => {
                 if (err) console.log(err)
             });
+
+            instance.player.play();
         }
     }
     
     
     onMount(async() => {
-        if (browser) {
-            const options = {
-                containers: {
-                    zoomview: zoom,
-                    overview: overview
-                },
-                dataUri: { arraybuffer: rData },
-                mediaElement: audio,
-                height: 60,
-                segmentStartMarkerColor: '#a0a0a0',
-                segmentEndMarkerColor: '#a0a0a0',
-                zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
-                overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
-                overviewHighlightColor: 'grey',
-                segmentColor: 'rgba(255, 161, 39, 1)',
-                playheadColor: 'rgba(0, 0, 0, 1)',
-                playheadTextColor: '#aaa',
-                showPlayheadTime: false,
-                pointMarkerColor: '#FF0000',
-                axisGridlineColor: '#ccc',
-                axisLabelColor: '#aaa',
-                randomizeSegmentColor: true,
-                segments: null
-            }
-            const module = await import("peaks.js");
-            Peaks = module.default;
-            
-            Peaks.init(options, (err, p) => {
-                if (err) {  
-                    console.log(err)
-                } else {
-                    instance = p
-                }
-            });
+        const options = {
+            containers: {
+                zoomview: zoom,
+                overview: overview
+            },
+            dataUri: { arraybuffer: rData },
+            mediaElement: audio,
+            height: 60,
+            segmentStartMarkerColor: '#a0a0a0',
+            segmentEndMarkerColor: '#a0a0a0',
+            zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
+            overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
+            overviewHighlightColor: 'grey',
+            segmentColor: 'rgba(255, 161, 39, 1)',
+            playheadColor: 'rgba(0, 0, 0, 1)',
+            playheadTextColor: '#aaa',
+            showPlayheadTime: false,
+            pointMarkerColor: '#FF0000',
+            axisGridlineColor: '#ccc',
+            axisLabelColor: '#aaa',
+            randomizeSegmentColor: true,
+            segments: null
         }
+        const module = await import("peaks.js");
+        Peaks = module.default;
+        
+        Peaks.init(options, (err, p) => {
+            if (err) {  
+                console.log(err)
+            } else {
+                instance = p
+            }
+        });
     })
     
 </script>
 
-<div class="audio-box" id={id}>
-    
-    <div>
+<Container id={id}>
+    <div id='top-text'>
         <span id="title">{title}</span>
-        <p>
-            Choose either the transient and residual components by clicking the respective button. Playback will be paused between selections.
-        </p>
+        <span id="caption">{caption}</span>
+    </div>
+    <div id='comment'>
+        Choose either the transient and residual components by clicking the respective button. Playback will be paused between selections.
     </div>
     <div class="horizontal">
         <div>
@@ -97,42 +97,37 @@
             <track kind="captions">
         </audio>
     </div>
-</div>
+</Container>
+
         
 <style>
-    .audio-box {
-        padding-top: 20px;
-        margin-top: 20px;
-        padding-bottom: 20px;
-        border-radius: 12px;
-        border: 3px solid rgba(128, 128, 128, 0.575);
-        transition: border .5s;
-        padding-left: 20px;
-        padding-right: 20px;
-
-    }
-    
-    .audio-box:hover {
-        border: 3px solid #2b5aa1a2;
-        transition: border .5s;
-        gap: 3px;
-    }
     
     .audio-controls {
         display: flex;
         flex-direction: row;
         gap : 5px;
     }
+
+    #top-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
     
     #title {
+        font-weight: bold;
+    }
+    
+    #caption{
         font-style: italic;
         font-size: 16px;
         text-align: center;
         display: inline-block;
     }
-    
-    #caption{
-        display: inline-block;
+
+    #comment {
+        padding-top: 10px;
+        padding-bottom: 20px;
     }
     
     .horizontal {
@@ -153,9 +148,6 @@
         justify-content: center;
         padding-top: 3px;
     }
-    
-    #timecodes {
-        font-weight: bold;
-    }
+
 </style>
         

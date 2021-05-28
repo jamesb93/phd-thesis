@@ -8,111 +8,108 @@
     import MaxwaveStart from '$lib/demos/reacoma/MaxwaveStart.svelte';
     import MaxwaveEnd from '$lib/demos/reacoma/MaxwaveEnd.svelte';
     import Sys from '$lib/demos/reacoma/Sys.svelte';
-
-    const d = 250;
 </script>
 
 # ReaCoMa
-
-[ReaCoMa Source Code](https://www.github.com/jamesb93/reacoma)
-
-[ReaCoMa Website](https://www.reacoma.xyz)
-
-ReaCoMa is a collection of [Lua](http://www.lua.org/) scripts that facilitate using the [Fluid Corpus Manipulation](https://www.flucoma.org) (FluCoMa) first toolbox algorithms within the [REAPER digital audio workstation](https://www.reaper.fm). This suite of algorithms are designed to facilitate signal decomposition, audio descriptor analysis and automatic segmentation. My main motivation to creating ReaCoMa, was to consolidate my compositional workflow within REAPER by extending that environment so that I did not have to switch between various pieces of software such as Max or the command line. Prior to the existence of ReaCoMa there was no way to directly use FluCoMa's tools within REAPER. There were and are Max objects, but for me, having to alternate between two distinct pieces of software, with vastly different interfaces and setups is a suboptimal compositional workflow, especially for tasks which benefit from a tight feedback loop between processing and listening. For example, processing audio files in Max and accessing the results within REAPER requires outputting those results to disk and making them a part of the REAPER session. This workflow is potentially time consuming if there are lots of audio files and requires several stages of manual file management. My imagined ideal workflow was to instead perform that processing directly within REAPER on media items and to be able to observe the results immediately after processing had complete. ReaCoMa solves this problem, and makes FluCoMa's first toolbox algorithms feel like a first class citizen in REAPER, enabling possibilities within that environment for sound design, sound decomposition, analysis and segmentation that are otherwise not readily available. From ReaCoMa's nascent stages of development I liberally used it for processing sound materials in [Reconstruction Error]({m.re}). Since then it has found its place as a fixture of my practice and a key tool for processing, manipulating and organising sounds such as in [{m.emname}]({m.em}).
+ReaCoMa is a collection of [Lua](http://www.lua.org/) scripts that facilitate using the [Fluid Corpus Manipulation](https://www.flucoma.org) (FluCoMa) first toolbox algorithms within the [REAPER digital audio workstation](https://www.reaper.fm). This suite of algorithms are designed to facilitate signal decomposition, audio descriptor analysis and automatic segmentation. My main motivation to creating ReaCoMa, was to consolidate my compositional workflow within REAPER by extending that environment so that I did not have to switch between various pieces of software such as Max or the command line. Prior to the existence of ReaCoMa there was no way to directly use FluCoMa's tools within REAPER. There were and are Max objects, but for me, having to alternate between two distinct pieces of software, with vastly different interfaces and setups is a suboptimal compositional workflow, especially for tasks which benefit from a tight feedback loop between processing and listening. For example, processing audio files in Max and accessing the results within REAPER requires outputting those results to disk and making them a part of the REAPER session. This workflow is potentially time consuming if there are lots of audio files and requires several stages of manual file management. My imagined ideal workflow was to instead perform that processing directly within REAPER on media items and to be able to observe the results immediately after processing had complete. ReaCoMa solves this problem, and makes FluCoMa's first toolbox algorithms feel like a first class citizen in REAPER, enabling possibilities within that environment for sound design, sound decomposition, analysis and segmentation that are otherwise not readily available. From ReaCoMa's nascent stages of development I liberally used it for processing sound materials in [Reconstruction Error]({m.re}). Since then it has found its place as a fixture of my practice and a key tool for processing, manipulating and organising sounds such as in [Interferences]({m.em}).
 
 ReaCoMa matured over a number of iterations as I incorporated into my compositional practice. Nonetheless, even it its earliest versions it facilitated computer-led decomposition of sounds which had a large impact on how I composed the works and structured my engagement with audio-based corpora.
 
-## Examples in Practice
-
-In [sys.ji_]({m.re}) from [Reconstruction Error]({m.re}) the `fluid.transients.lua` script is used to decompose a longer passage of material into a transient component and a residual component (everything except the transients). A long fade in envelope is applied to the residual component and both components are played back at the same time. This gradually introduces the residual parts of the sound while the transients dominate from the outset. I chose this effect as a way of generating various colours of short click-like sounds and as a way of suppressing the noisier aspects of the sound temporarily and to create a formal shape from this.
-
-1:18 - 2:00
-<Sys />
-
-In dotmaxwave, `fluid.hpss.lua` is used to separate the harmonic component and percussive component of source material with a very dominant pitch content and a subtle amount of noise.  With this separation I achieved a level of control over shaping the sound that would be otherwise difficult without such decomposition techniques. It also guided me towards structuring the piece as an exhibition of the two components antagonising each other in different capacities. In this way, the decomposition process situated within a tight feedback loop of listening and processing created a computer-led process of sound discovery and conceptual development.
-
-1:14 - 2:00 i strip away the noise component leaving only the most harmonic parts. Creates a kind of purity in the sound world momentarily
-
-<MaxwaveStart />
-
-3:07 to 3:37 i accentuate the noise entirely and over-compress in order to flatten the dynamics of the sound into a more static texture.
-
-<MaxwaveEnd/>
-
-In X86.Desc.a, a section spanning 1:20 to 1:37 is built from from several interlocking streams of impulse-based materials or clicks. These were not manually created in an intuitive way or generated by the computer, rather, they were discovered by extracting the transients from an noise-based source material that I encountered through other computer-aided processes. With this approach, I was able to find intricate and varied patterns of this type of material by exploring with decomposition processes.  This is demonstrated in [DEMO 4]({m.reacoma}#demo4).
-
-<X86 title="DEMO 4" id="demo4"/>
-
 ## Implementation
-There is not a native [REAPER extension](https://www.reaper.fm/sdk/plugin/plugin.php) or audio plug-in that allows composers to use the FluCoMa first toolbox algorithms directly within the REAPER environment. As such, ReaCoMa is designed as a scripting bridge between the command line executables and the REAPER session where media items are positioned, selected and manipulated on a timeline. Thus, ReaCoMa offers a suite of scripts, where each script is responsible for implementing a single algorithm. For example, `fluid-hpss.lua` is used to execute the `fluid.hpss` algorithm, the same as what is found in Max as the object `fluid.hpss~`. To start, the user runs one of the Lua scripts while a media item or group of items are selected.
+There is not a native [REAPER extension](https://www.reaper.fm/sdk/plugin/plugin.php) or audio plug-in that allows one to use the FluCoMa first toolbox algorithms directly within the REAPER environment. As such, ReaCoMa functions as a scripting bridge between the command line executables and the REAPER session where media items are positioned, selected and manipulated on a timeline. Thus, ReaCoMa offers a suite of scripts, where each script is responsible for implementing a single algorithm and orchestrating the necessary processing and changes to the session. For example, `fluid-hpss.lua` is used to execute the `fluid.hpss` algorithm, the same as what is found in Max as the object `fluid.hpss~`. 
+
+To start, the user runs one of the Lua scripts while a media item or group of items are selected. This provides an interface for configuring parameters. This is shown in [IMAGE 1]({m.reacoma}#img1).
 
 <ImageMedia2 
 url="/tech-reacoma/step1.jpg" 
-figure=''
-caption='The user interface for parameter selection is shown after selecting and running one of the Lua scripts.'
-id=''
+figure='IMAGE 1'
+caption='User interface for parameter selection is shown after selecting and running one of the Lua scripts.'
+id='img1'
 />
 
-Once the user has configured the parameters they can execute the algorithm by clicking the "Okay" button. Depending on the type of algorithm an update will be made to the REAPER session. In this case, `fluid.hpss` returns two new takes and appends it to the source media item. One take will contain the harmonic component while the other take will contain the percussive component. This facilitates rapid auditioning of the decomposition results by toggling which take is active and playing back the session. I have found this procedure particularly useful in my compositional process as the source material is always stored and attached to the decomposition process, allowing me to follow the development of sonic materials directly in the session.
-
+Once the user has configured the parameters they can execute the algorithm by clicking the "Okay" button. Depending on the type of algorithm, an update will be made to the REAPER session. In this case, `fluid-hpss.lua` returns two new takes and appends it to the source media item. This is depicted in [IMAGE 2]({m.reacoma}#img2). One take will contain the harmonic component while the other take will contain the percussive component. This facilitates rapid auditioning of the decomposition results by toggling which take is active. I have found this interface particularly potent in my compositional process as the source material is always stored and attached to the decomposition results, allowing me to follow the development of sonic materials directly in the REAPER session.
 
 <ImageMedia2 
 url="/tech-reacoma/step2.jpg"  
-caption='Takes containing the harmonic and percussive components are appended to the source media item.'
-figure=''
-id=''
+caption='New takes containing the harmonic and percussive components are appended to the source media item.'
+figure='IMAGE 2'
+id='img2'
 />
 
-For the segmentation algorithms (fluid.onsetslice, fluid.noveltyslice, fluid.ampslice, fluid.ampgate, fluid.transientslice) the original source media item is divided at the slice time points returned by the algorithm. This does not create new audio files on disk, rather, it creates new takes with the original source audio file and adjusts the start and length of those takes. Below the file is segmented with `fluid-noveltyslice.lua`.
+For the segmentation algorithms (`fluid-onsetslice.lua`, `fluid-noveltyslice.lua`, `fluid-ampslice.lua`, `fluid-ampgate.lua`, `fluid-transientslice.lua`) the original source media item is divided at the slice time points returned by the algorithm. This does not create new audio files on disk, rather, it creates new takes with the original source audio file and adjusts the start and length of those takes. [IMAGE 3]({m.reacoma}#img3) shows a file segmented with `fluid-noveltyslice.lua`.
 
 <ImageMedia2 
-url="/tech-reacoma/step2.jpg"  
-caption='fluid-noveltyslice.lua is applied with default parameters, rendering new takes at each slice time point.'
-figure=''
-id=''
+url="/tech-reacoma/step3.jpg"  
+caption='fluid-noveltyslice.lua is used with default parameters, rendering new takes at each slice point.'
+figure='IMAGE 3'
+id='img3'
 />
 
 ## Experimental Scripts
-
-The main goal of ReaCoMa was to implement scripts where the first toolbox algorithms could be incorporated into a REAPER session where audio files are manipulated, positioned and processed. Achieving this required significant research to understand the ReaScript API. New possibilities became apparent in this research, such as attaching additional metadata to items through notes, organising media items according to audio descriptor data and enhancing the segmentation workflow through automatic parameter selection. From this, three categories of experimental scripts emerged.
+The initial aim of ReaCoMa was to only bridge the first toolbox algorithms. Achieving this required significant research to understand the ReaScript API. New possibilities became apparent in this research, such as how I could attach additional metadata to items through notes, organise media items according to audio descriptor data and enhance the segmentation workflow through automatic parameter selection. From this, three categories of experimental scripts emerged.
 
 ### Sorters
-<!-- LINK: link to anchors piece in Interferences. You used it to organise sounds in this piece. -->
-These scripts sort media items in the REAPER session timeline by ordering them according to audio descriptor analysis. There are two variants, one that sorts by spectral centroid and one that sorts by loudness. To produce a descriptor for each media item it performs a frame-by-frame analysis and then averages the per-frame values. Each segment is then sorted along the timeline according to this summary. Below is a recording of experimentation with slide and electric guitar that was made for [Refracted Touch]({m.rt}). This recording can be segmented using `fluid-amp.lua` which divides the source into several samples. By running `sort-by-loudness.lua`, the quietest segmented sections are shifted earlier in time and the loudest later in a contiguous arrangement. I have found this useful for selecting materials based on descriptors, or for constructing short phrases where the arrangement of materials according to descriptor values is desired.
+These scripts sort media items in the REAPER session timeline by ordering them according to audio descriptor analysis. There are two variants, one that sorts by spectral centroid and one that sorts by loudness. To produce a descriptor for each media item it performs a frame-by-frame analysis and then averages the per-frame values. Each segment is then sorted along the timeline according to this summary.
 
 ### Auto-Slicing
-Performing segmentation with the computer often requires the user to specify a series of parameters such as the sensitivity of a threshold. Sometimes this process is not intuitive or it can be difficult to find a combination of parameters that achieves the desired segmentation. The goal of the 'auto-slicing' scripts is to automatically find the optimal settings for the `fluid.noveltyslice` algorithm so that it produces a fixed amount of slices. It solves this problem iteratively through brute force, incrementally adjusting how far it tunes the parameter at each iteration as it gets closer to the result. The main downside of the 'auto-slicing' scripts is that they only find a solution by changing a single parameter and leaving the others fixed. Another approach could use a neural network to discover combinations of changes effect the output. This would allow the process of automatic parameter finding to take into account the coupled nature of the parameters.
-
-<ImageMedia2 
-url="/tech-reacoma/autoslice.jpg" 
-caption='10 slices are found for this sound file by automatically tuning the "threshold" parameter of fluid.novetlyslice.'
-figure=''
-id=''
-/>
+Performing segmentation with the computer often requires specifying a number of parameters to achieve the intended results. Sometimes this process is not intuitive or it can be difficult to find a combination of parameters that achieves the desired segmentation. The goal of the "auto-slicing" scripts is to automatically find the optimal settings for the `fluid-noveltyslice` algorithm so that it produces a predetermined number of slices. It solves this problem through brute force, incrementally adjusting the threshold and measuring how many slices were produced. Based on the results of this process it will increase or decrease the parameter to achieve the desired result. There is also a variant of this script which will keep the threshold the same while altering the `kernelsize` parameter. With the same amount of desired slices these two variants produce different results.
 
 ### Tagging
-For mixing I wanted to be able to annotate media items with descriptor analysis data. The tagging scripts, `tag-centroid.lua`, `tag-loudness.lua` and `tag-pitch.lua`, use the relevant descriptor algorithm from the toolbox (fluid.spectralcentroid, fluid.loudness, fluid pitch) to calculate statistics (average, minimum, maximum, median) of that audio descriptor across all the frames or values of a media item. This analysis is appended as a note to the media item and can be quickly viewed by hovering over the note icon. Instead of having to alternate between REAPER and another environment, I could make quick assumptions about the perceived loudness, brightness or pitch of samples to inform decisions involved in selecting sounds or their organisation.
+For the purposes of aiding my mixing, I wanted to be able to annotate media items with descriptor analysis data. The tagging scripts, `tag-centroid.lua`, `tag-loudness.lua` and `tag-pitch.lua`, use the relevant descriptor algorithm from the toolbox (`fluid.spectralshape`, `fluid.loudness`, `fluid pitch`) to calculate statistics (average, minimum, maximum, median) of the relevant audio descriptor across all the frames or values of a media item. This analysis is appended as a note to the media item and can be quickly viewed by hovering over the note icon. Instead of having to alternate between REAPER and another environment, I could make quick assumptions about the perceived loudness, brightness or pitch of samples to inform decisions involved in selecting sounds or their organisation. This also supported rectifying differences in my intuitive perception of sounds and how they would be processed by analysis in [FTIS]({m.ftis}) for example. [IMAGE 4]({m.reacoma}#img4) demonstrates the output of the tagging script and how it can be viewed on a media item.
 
 <ImageMedia2 
 url="/tech-reacoma/tagging.png" 
 caption='Each item has been tagging using tag-loudness.lua. The results can be quickly viewed by hovering over the note.'
+figure='IMAGE 4'
+id='img4'
+/>
+
+## The Role In My Practice and Case Studies
+
+While FTIS supports much more computationally grounded forms of processing, machine learning and listening, ReaCoMa supports the phase of my compositional workflow by which I intuitively operate on materials within the frame of decomposition and deconstruction.
+
+FTIS supports querying that is general and "big picture" while ReaCoMa becomes more important as I delve into the more tactile phase of my practice, whereby I compose intuitively and manipulate and treat materials through trial and error and experimentation. 
+
+### Transient Extraction
+
+In [sys.ji_]({m.re}) from [Reconstruction Error]({m.re}), a combination of `fluid.noveltyslice.lua` and `fluid.transients.lua` scripts are used to take a long sample and reshape it into a passage of music. I first deconstructed the sample into short segments which are randomly reshuffled to obfuscate the original morphology. Progressively, these random shuffles are "undone" so that the morphology of the original sample by the end of this passage is reconstructed. I then decomposed those segments into a transient and residual component (everything except the transients). A fade in envelope is applied to the residual component and both components are summed together back. This modifies the morphological and textural properties of the sound as the residual component is gradually introduced while the transients are *exposed*.  This functioned to also generate various colours of impulse-based material, and as a way of temporarily suppressing the noisier aspects of the sound. The affordances of being able to treat the sound as two distinct components catalysed the formal shape, thus positioning ReaCoMa in another form of computer-led compositional decision making.  [DEMO 1]({m.reacoma}) allows you to explore this decomposition process interactively.
+
+<!-- WIDGET: sys widget -->
+<Sys />
+
+In [X86Desc.a]({m.re}#x86desca), a section spanning 1:20 to 1:37 is built from from several interlocking streams of impulse-based materials or clicks. These were not manually created by my own manual methods, rather, they were discovered by extracting the transients from an noise-based source material. With this approach, I was able to find intricate and varied patterns of this type of material by exploring with the extraction algorithm decomposition processes.  This is demonstrated in [DEMO 2]({m.reacoma}#demo2).
+
+<X86 
+title='Transient Extraction in X86Desc.a from Reconstruction Error' 
+caption="DEMO 2" 
+id="demo2"
+/>
+
+### Harmonic Percussive Source Separation
+In [_.dotmaxwave]({m.re}#_dotmaxwave), `fluid.hpss.lua` is used to separate the harmonic component and percussive component from source material possessing a dominant pitch component and a subtle shade of noise.  I achieved a level of control over shaping the sound that would be otherwise difficult without such decomposition techniques using this approach. It also guided me towards structuring the piece around manipulating the relationship between the two extracted components. In this way, the decomposition process situated within a tight feedback loop of listening and processing facilitated computer-led sound discovery and conceptual development. [DEMO 3]({m.reacoma}#demo3) allows you to isolate the harmonic and percussive components to observe the decomposition results in this piece.
+<MaxwaveStart />
+
+### Non-Negative Matrix Factorisation
+<!-- WIDGET: NMF widget -->
+When working with thick and texturally dense sounds, non-negative matrix factorisation (NMF) processing became useful as a means to to *unpack* those sounds into distinguished components. An example can be found in [Interferences]({m.em}#{m.anchors}) at 1:35 and 3:39, in which a sample is split into two channels through NMF decomposition. This displaces prominent perceptual qualities which are superimposed in the source. The overall morphology and structure of the sound remains in tact, but can be manipulated and reconfigured to situate better with other materials. [DEMO 4]({m.reacoma}#demo4) allows you to audition the source material before and after it was processed in this way.
+
+### Chaining Processes
+<!-- WIDGET: chaining video -->
+As I became more fluent with ReaCoMa in my workflow I began to use it in more sophisticated ways, such as by chaining together processes to deconstruct sounds. In [{m.anchors}]({m.em}#{m.anchors}) of [Interferences]({m.em}), one particular texture I created serves as a pertinent demonstration for how chaining allowed me to retrieve specific and nested segments from a composite sound and to compose with it directly in REAPER.
+
+The resulting texture can be heard at 8:02 in [{m.anchors}]({m.em}#{m.anchors}) and was extracted through a multi-step process. I began by decomposing the sound into transient and residual components. Because the output of ReaCoMa scripts which decompose into layers occupy new takes, I can easily change which component I operate on afterwards. I then used the novelty slicing algorithm on the transient component, which produced segmentations that were perceptually aligned with moments of rapid changes in the signal. Using a ReaCoMa sorting script, I arranged the segments on the timeline by their spectral centroid. This allowed me to then manually audition and select a group of samples with delicate and fragile qualities by listening to sounds only arranged at the right edge of the group of samples. I then constructed the final texture by intuitively arranging those samples which I carved off from the main section into blocks. [VIDEO 1]({m.reacoma}#vid1) shows how this process worked in practice, although it is a recreation of the steps after the fact.
+
+This process was not designed in a step-by-step plan to begin with and at each stage I would attempt different combinations of processes to try and extract the delicate and fragile sounds from within the block of source material I began with. Being able to audition, test, undo and rapidly weave between different strategies allowed me to find a specific moment of sound across a whole sound file relatively easily.
+
+## Related Links
+I produced a series of video tutorials that demonstrate how to install and use ReaCoMa. This video series is useful as a resource that documents how the user facing parts of ReaCoMa work and shows some use cases related to my own practice. The [ReaCoMa Source Code](https://www.github.com/jamesb93/reacoma) is available as well as an external site with additional documentation at https://www.reacoma.xyz.
+
+<YouTube 
+url="https://www.youtube.com/embed/r3uHMXmlPRo"
+title='ReaCoMa Tutorial Video Series'
 figure=''
 id=''
 />
-
-
-
-## Other Links
-I produced a series of video tutorials that demonstrate how to install and use ReaCoMa. This video series is useful as a resource that documents how the user facing parts of ReaCoMa work and demonstrate some use cases outside my own practice.
-
-<div class="video-grid"> 
-<YouTube title="ReaCoMa Tutorial 1" url="https://www.youtube.com/embed/r3uHMXmlPRo" height={d} width={d}/>
-<YouTube title="ReaComa Tutorial 2" url="https://www.youtube.com/embed/ejQu06GDDXE" height={d} width={d}/>
-<YouTube title="ReaCoMa Tutorial 3" url="https://www.youtube.com/embed/HcF_lssW2Tg" height={d} width={d}/>
-<YouTube title="ReaCoMa Tutorial 4" url="https://www.youtube.com/embed/og_5hCm5AGc" height={d} width={d}/>
-<YouTube title="ReaCoMa Tutorial 5" url="https://www.youtube.com/embed/8__dtafBTD4" height={d} width={d}/>
-<YouTube title="ReaCoMa Tutorial 6" url="https://www.youtube.com/embed/GEyut6MePgY" height={d} width={d}/>
-</div>
 
 <NextSection 
 next="Finding Things in Stuff"
