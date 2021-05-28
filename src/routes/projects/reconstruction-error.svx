@@ -395,7 +395,8 @@ The rest of the piece grew from this concept and workflow. I would decompose dif
 While composing this first piece I had to constantly work outside of REAPER to perform decomposition processes. It was tedious to have to leave the DAW to perform audio processing as well as constantly structuring command line invocations, navigating the file system and the DAW timeline in order to setup the necessary media items for audition and composition. This friction led me to create [ReaCoMa]({m.reacoma}), a set of ReaScripts that bridge the FluCoMa command line tools with REAPER. These scripts allow one to process media items directly in REAPER, and to configure the parameters of various decomposition algorithms such as harmonic percussive source separation, non-negative matrix factorisation, transient extraction, sinunsoidal isolation with a graphical user interface. In addition to this, the segmentation algorithms from FluCoMa's first toolbox are implemented so that media items can be split in time using several different approaches to dividing sounds in time. In the remaining pieces of Reconstruction Error [ReaCoMa]({m.reacoma}) played a vital role in unpicking the internal content of sounds, once I had discovered and selected them through analysis. It also led me to performing additional segmentation in order to restructure sounds in time.
 
 ### --isn
-<Waveform 
+<Waveform
+title="--isn" 
 file='/pieces/re/isn.mp3'
 peaks='/pieces/re/isn.dat'
 segments={isnSegments}
@@ -419,6 +420,7 @@ I imagined that I might proliferate the musical ideas I had built up to this poi
 
 ### X86Desc.a
 <Waveform 
+title='X86Desc.a'
 file='/pieces/re/X86desc.a.mp3'
 peaks='/pieces/re/X86desc.a.dat'
 caption='X86Desc.a'
@@ -440,12 +442,11 @@ id='aud7'
 In isolation the results of these types decomposition processes were uninspiring to me and the musical effect was underwhelming. However, I found that by layering multiple instances I could create complex interactions between different *streams* of transient-based material. The rest of the piece was intuitively composed around my experimentation with this decomposition and layering process. Overall, this piece contained all of the trailing ideas that I did not want to conceptually pollute [--isn]({m.re}#isn) with. For me the results were distinct enough that it warranted making a new piece in the album, although the mechanics of composing the piece were quite similar.
 
 ### segmnoittet
-
 <Waveform 
+title='segmnoittet'
 file='/pieces/re/segmnoittet.mp3'
 peaks='/pieces/re/segmnoittet.dat'
 points={segmPoints}
-title='segmnoittet'
 />
 
 For this piece, I wanted to create something that was less rhythmically homogenous than the previous tracks and to create something more mechanical and sparse. The first idea I had involved taking clusters that when concatenated would create such aspects inherently and without much low-level editing. I found that sample groups often created such results through sequencing if the samples within a cluster had significantly differing lengths. I was able to control and search for this  aspect by selecting samples from different hierarchical levels of the meta analysis. The deeper I went into the hierarchy, the more similar samples were in both duration and perceptual quality. As such, "high-level" clusters would be more variegated and mixed, while "low-level" clusters were highly constrained and repetitive. A short composed section of music in response to this finding can be heard in [AUDIO 8]({m.re}#aud8}).  
@@ -487,7 +488,6 @@ caption='Interactive item spacing with Lua accessing the ReaScript API.'
 <Waveform 
 file='/pieces/re/sys.ji_.mp3'
 peaks='/pieces/re/sys.ji_.dat'
-id=''
 title='sys.ji_'
 points={sysPoints}
 />
@@ -499,7 +499,6 @@ When I was experimenting with different clustering algorithms, I trialled anothe
 This approach revelead to me how the curation of algorithms and technical implementation can be instrumental as an expressive tool. Each of the clustering algorithms produced different representations of the corpus, and through their differences I was afforded a novel method of corpus exploration leading to the incorporation of new samples. The first half uses segments from *sys.ji_.wav*, and as material develops around 1:18, samples derived through cross referencing are gradually included. These samples are more striated and iterative, and start to display shades of almost filtered noise as well as some pitched components. This high-level structure change is emphasised at 2:34  in which a totally new category of noise samples are presented and are derived from source files with the *.reapeaks* extension. 
  
 ## Reflection
-
 Reconstruction Error was a major point of development in this PhD, in terms of compositional workflow and the relationship that culminated between mysef and the computer. The balance of agency was more equal than it has been in other projects, at times I composed entirely intuitively, and sometimes I was responding reactively to the outputs of the computer and the computer led me compositional decision making. This fusion of my musical thinking and the computers numerical and machine listening was one of the most successful aspects in this project. 
 
 Clustering was significant in this aspect, and structured my engagement with the materials of the corpus *hierarchically*. As a result, the forms of the works emerged as responses to the structures encoded into the clustering hierarchies and what I was able to discern from the comparison of several different outputs. This aligned conceptually with my approach to form, as composites of atomic compositional units. This is discussed in ["Form and Hierarchy]({m.preoc}#form-and-hierarchy).
@@ -514,8 +513,6 @@ Being able to flexibly put aside or work entirely with the computer encouraged m
 A key development in my practice which emerged in Reconstruction Error is the shift towards using Python and the DAW as a combined compositional workspace. This combination had been used in [Stitch/Strata]({m.ss}) and I reflected on the positive aspects of this technology in ["State And The Digital Audio Workstation"]({m.ss}#state-and-the-digital-audio-workstation).
 
 Returning back to this combination in Reconstruction Error proved effective as it balanced the interactive aspects in a way where I could step between the mindset of listening, soundful experimentation and compositional decision making without those two things necessarily being intertwined temporally. 
-
-<!-- This coupling of interaction and listening was problematic from the start of this PhD. In particular for intervening with computationally orchestrated processes. like annealing strategies and machine listening stuff.. -->
 
 As an analogy to flesh out this idea, my workflow could be contrasted to that of the live coder - who inputs their commands to the computer in real-time and listens to the response in order to guide their future actions. Their reactions and interactions are entrenched in what will happen next musically. The workflow in this project separated immediate soundful musical action and play from the compositional and conceptual thinking mediated by the computer.
 
