@@ -65,10 +65,7 @@ id='img4'
 />
 
 ## The Role In My Practice and Case Studies
-
-While FTIS supports much more computationally grounded forms of processing, machine learning and listening, ReaCoMa supports the phase of my compositional workflow by which I intuitively operate on materials within the frame of decomposition and deconstruction.
-
-FTIS supports querying that is general and "big picture" while ReaCoMa becomes more important as I delve into the more tactile phase of my practice, whereby I compose intuitively and manipulate and treat materials through trial and error and experimentation. 
+ReaCoMa supports the phase of my compositional workflow by which I intuitively operate on materials within the frame of decomposition and deconstruction. [FTIS]({m.ftis}) supports querying that is operating on corpora, while ReaCoMa is important when I enter the more tactile phase of my practice in which I compose intuitively and manipulate materials through trial and error as well as experimentation. ReaCoMa has proven to facilitate different forms of querying to [FTIS]({m.ftis}) too, especially when I work with individual sounds. The following case studies demonstrate these. 
 
 ### Transient Extraction
 
