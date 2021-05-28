@@ -26,8 +26,6 @@ Below are some of the guidelines I devised for myself when I decided that I woul
 - Visual representations
 - kd trees
 
-gitui
-
 ## Implementation
 `ftis` is structured as a Python package. This means that it can be installed by Python's package manager `pip` and accessed through `import` in a python script. While this increases the barrier for entry and requires the user to know Python, it simplifies many architectural decisions by keeping everything within one language. One idea I pursued briefly and early on was creating a domain-specific language written in configuration files which would then be parsed by `ftis`. After building out a prototype of this interface, I found it was not expressive and was frustrating to develop around. Confining `ftis` to pure Python also means that any of the code written in `ftis` is relatively interoperable with other Python code. This makes it flexible when you need to do something not offered by `ftis` itself.
 
