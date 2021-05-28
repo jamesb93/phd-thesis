@@ -1,24 +1,35 @@
 from pydub import AudioSegment
 from pathlib import Path
 import json
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from multiprocessing import Manager
+
+from rich.progress import Progress
 
 
 
-files = [x for x in Path("static").rglob('*.mp3')]
+if __name__ == "__main__":
+    files = [x for x in Path("static").rglob('*.mp3')]
 
-d = {}
+    d = Manager().dict()
 
-for i, x in enumerate(files):
-    print( i / len(files) )
-    au = AudioSegment.from_mp3(str(x))  
-    seconds = au.duration_seconds
+    def get_time(f):
+        au = AudioSegment.from_mp3(str(f))  
+        seconds = au.duration_seconds
 
-    m, s = divmod(seconds, 60)
-    h, m = divmod(m, 60)
+        m, s = divmod(seconds, 60)
+        h, m = divmod(m, 60)
 
-    time_string = f'{int(m)}:{int(s)}'
+        time_string = f'{int(m)}:{int(s)}'
 
-    d[str(x.name)] = time_string
+        d[str(f.name)] = time_string
 
-with open("static/durations.json", "w+") as f:
-    json.dump(d, f, indent=4)
+    with Progress() as progress:
+        task = progress.add_task('Parsing', total=len(files))
+        with ThreadPoolExecutor() as pool:
+            futures = [pool.submit(get_time, f) for f in files]
+            for result in as_completed(futures):
+                progress.update(task, advance=1)
+
+    with open("static/durations.json", "w+") as f:
+        json.dump(dict(d), f, indent=4)
