@@ -7,6 +7,9 @@ echo "--- Cleaning Up Old Runs ---"
 rm -rf docx
 mkdir -p docx
 
+echo "--- Converting Abstract/Home ---"
+pandoc -f markdown -s src/routes/index.svx -o docx/0-abstract.docx
+
 echo "--- Converting Introduction and Literature Review ---"
 pandoc -f markdown -s src/routes/introduction.svx -o docx/1-introduction.docx
 pandoc -f markdown -s src/routes/preoccupations.svx -o docx/2-preoccupations.docx
