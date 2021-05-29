@@ -845,23 +845,27 @@
             "url": "https://www.github.com/jamesb93/ftis"
         },
         {
+            "name": "YAML syntax",
+            "url": "https://yaml.org/"
+        },
+        {
             "name": "UMAP algorithm",
             "url": "https://arxiv.org/abs/1802.03426"
         },
         {
-            "name": "the published paper",
-            "url": "https://boblsturm.github.io/aimusic2020/papers/CSMC__MuMe_2020_paper_6.pdf"
+            "name": "FTISAnalyser definition",
+            "url": "https://github.com/jamesb93/ftis/blob/3fdef209d3259783cbc4c4d296dd99f94cab727f/ftis/ftis/common/analyser.py"
         },
         {
             "name": "mosh Source Code",
             "url": "https://www.github.com/jamesb93/mosh"
         },
         {
-            "name": "'databending'",
+            "name": "\"databending\"",
             "url": "https://en.wikipedia.org/wiki/Databending"
         },
         {
-            "name": "'datamoshing'",
+            "name": "\"datamoshing\"",
             "url": "http://datamoshing.com"
         },
         {
@@ -875,6 +879,10 @@
         {
             "name": "WAVE header",
             "url": "http://soundfile.sapp.org/doc/WaveFormat/"
+        },
+        {
+            "name": "Francesco Cameli",
+            "url": "https://github.com/vitreo12"
         }
     ],
     "videos": [
