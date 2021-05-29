@@ -178,7 +178,7 @@ corpus.loudness(max_loudness=10)
 
 </Code>
 
-The extension to the *Corpus* object was effective for filtering toward the quietest and most delicate sounds in a collection, although it did not specifically isolate those that were more drone-like as I had intended. I embraced this, and combined the materials into a short sketch which can be heard in [AUDIO 7]({m.em}#aud7). Reflecting on this sketch, there are noticeable sonic connections to [{m.anchors}]({m.em}#{m.anchors}) in terms of the type of material and the focus on static sounds.
+The extension to the *Corpus* object was effective for filtering toward the quietest and most delicate sounds in a collection, although it did not specifically isolate those that were more drone-like as I had intended. I embraced this, and combined the materials into a short sketch which can be heard in [AUDIO 7]({m.em}#aud7). Reflecting on this sketch, there are noticeable sonic connections to [{m.anchors}]({m.em}#manchors) in terms of the type of material and the focus on static sounds.
 
 <Waveform 
 file='/inter/short-quiet-idea.mp3'
@@ -221,7 +221,7 @@ multi_corpus = corpus_one + corpus_two
 
 </Code>
 
-While the notion of combining multiple sources of sonic materials is not novel to composition with digital samples, for me this change allowed me to use [FTIS]({m.ftis}) more flexibly  to overcome the mental pattern of one project pertainting to a single corpora. Instead of having to merge files from a number of different directories on disk to form a corpus, I could instead point a script to a number of places and deal with this in a fashion where the organisational house-keeping is separated from the creative workflow. This provoked another phase of exploration with FTIS that ultimately generated the two works presented as [Interferences]({m.em}). The next two sections, [{m.anchors}]({m.em}#{m.anchors}) and [{m.eee}]){m.em}#{m.eee}) discuss how these works emerged from this point onward.
+While the notion of combining multiple sources of sonic materials is not novel to composition with digital samples, for me this change allowed me to use [FTIS]({m.ftis}) more flexibly  to overcome the mental pattern of one project pertainting to a single corpora. Instead of having to merge files from a number of different directories on disk to form a corpus, I could instead point a script to a number of places and deal with this in a fashion where the organisational house-keeping is separated from the creative workflow. This provoked another phase of exploration with FTIS that ultimately generated the two works presented as [Interferences]({m.em}). The next two sections, [{m.anchors}]({m.em}#manchors) and [{m.eee}]){m.em}#{m.eee}) discuss how these works emerged from this point onward.
 
 ### {m.anchors}
 <Waveform 
@@ -289,11 +289,11 @@ I created a two dimensional spatial representation of a combined corpus containi
 
 My compositional decision making was largely a response to the division of material into these distinct groups. I focused on blending the groups in different ways to create composite textures with a distinct musical behaviours. Such combinations were based on forming chordal sounds from the summation of pitched material or layering dynamically striated and texturally "bumpy" sounds with those that were more static and inactive. This concept informed the high-level structure of the work, which is underpinned by a drone comprised of material belonging to a single one of the three groups. Longer form developments are orchestrated as interactions with this layer either emphasising and adding to it or assuming the role of a sonic antagonist. 
 
-<!-- WIDGET: album of interactions here annotated -->
+<!-- REVIEW: potential album of interactions here annotated -->
 
 There is only one intentionally constructed dramatic moment that occurs at 6:20, while the rest of this piece is purposefully crafted to be less directed and non-narrative in nature. This emerged from a contrasting mindset to that which I embodied in [Reconstruction Error]({m.re}). Comparatively, I had much less material to work with in [Reconstruction Error]({m.re}) and so often I had to extract as much musical value from the samples I had found within perceptually homogenous clusters. This pushed me toward recycling the material as much as possible and composing several meso-scale structures which I then blended and arranged intuitively. By the time I had utilised those meso-structures as much as I felt I could, the form of a piece had crystallised and was less flexible or adaptable.
 
-By having access to much more material in [{m.anchors}][{m.em}#{m.anchors}], and several different computational structures representing those materials, the conceptual goals and frame of the work was fostered by much more flexible forms of interaction with the computer. In reality, the final stage of the compositional process following on from the sketches was entrenched in a feeling that I was "firming up" the conceptual ideas of the piece and developing them iteratively. It also engendered an integration between my conceptual goal and realising that with the aid of the computer. I felt as if I did not have to compromise on the conceptual aims of the piece, rather something was catalysed and mediated by myself and the computer.
+By having access to much more material in [{m.anchors}][{m.em}#manchors], and several different computational structures representing those materials, the conceptual goals and frame of the work was fostered by much more flexible forms of interaction with the computer. In reality, the final stage of the compositional process following on from the sketches was entrenched in a feeling that I was "firming up" the conceptual ideas of the piece and developing them iteratively. It also engendered an integration between my conceptual goal and realising that with the aid of the computer. I felt as if I did not have to compromise on the conceptual aims of the piece, rather something was catalysed and mediated by myself and the computer.
 
 ### {m.eee}
 <Waveform 
