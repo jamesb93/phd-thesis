@@ -40,7 +40,7 @@ At the time of submitting this thesis, there are several groups comprised of art
 
 ## Further Research And The Future
 
-AESTHETIC
+<!-- TODO aesthetic -->
 
 Over the course of this PhD developing various technological tools has furnished me with a more sophisticated creative coding practice which is intertwined deeply with my musical thinking and compositional decision making. At the start of the PhD I was limited by my programming abilities to Max. As I became interested in [machine learning]({m.ca}#machine-learning) and [machine listening]({m.ca}#machine-listening), I naturally had to expand my knowledge of other languages, libraries and ecosystems such as Python and sci-kit learn to meet the demands of my changing and evolving interests. This ultimately gave rise to the necessary skills and conditions in which [FTIS]({m.ftis}) could be built, which draws on several technologies.
 
