@@ -1,6 +1,5 @@
 <script>
     import { onMount } from "svelte";
-    import { browser } from "$app/env";
     import Container from '$lib/components/Container.svelte';
     import Button from '$lib/components/Button.svelte';
     import { noext, cloudPrefix } from '$lib/utility/paths.js';
@@ -25,48 +24,42 @@
         return date.toString().substr(3);
     }
 
-    const dragHandler = (seg) => {
-        console.log(seg);
-    }
-
     onMount (async()=>{
-        if (browser) {
-            const module = await import("peaks.js");
-            Peaks = module.default;
-            const options = {
-                containers: {
-                    zoomview: zoom,
-                    overview: overview
-                },
-                dataUri: { 
-                    arraybuffer: peaks 
-                },
-                mediaElement: audio,
-                zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
-                overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
-                overviewHighlightColor: 'grey',
-                playheadColor: 'rgba(0, 0, 0, 1)',
-                playheadTextColor: '#aaa',
-                showPlayheadTime: false,
-                pointMarkerColor: '#FF0000',
-                axisGridlineColor: '#ccc',
-                axisLabelColor: '#aaa',
-                randomizeSegmentColor: true,
-                segments: segments,
-                points: points
-            }
-            instance = Peaks.init(options, (err, p) => {
-                if (err) {
-                    console.log(err)
-                } else {
-                    instance = p
-                    instance.views.getView('overview').fitToContainer();
-                    // instance.on('segments.enter', (segs) => {
-                    //     console.log(segs)
-                    // });
-                }
-            });
+        const module = await import("peaks.js");
+        Peaks = module.default;
+        const options = {
+            containers: {
+                zoomview: zoom,
+                overview: overview
+            },
+            dataUri: { 
+                arraybuffer: peaks 
+            },
+            mediaElement: audio,
+            zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
+            overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
+            overviewHighlightColor: 'grey',
+            playheadColor: 'rgba(0, 0, 0, 1)',
+            playheadTextColor: '#aaa',
+            showPlayheadTime: false,
+            pointMarkerColor: '#FF0000',
+            axisGridlineColor: '#ccc',
+            axisLabelColor: '#aaa',
+            randomizeSegmentColor: true,
+            segments: segments,
+            points: points
         }
+        instance = Peaks.init(options, (err, p) => {
+            if (err) {
+                console.log(err)
+            } else {
+                instance = p
+                instance.views.getView('overview').fitToContainer();
+                // instance.on('segments.enter', (segs) => {
+                //     console.log(segs)
+                // });
+            }
+        });
     });
 
     function clickHandler(segment, i) {
