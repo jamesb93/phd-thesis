@@ -12,7 +12,7 @@ s.waitForBoot({
 
         s.sync;
 
-		~indices_desc = Array.newClear;
+        ~indices_desc = Array.newClear;
 
         ~indices.do({ | index, i |
             var color, next_index;
@@ -23,7 +23,7 @@ s.waitForBoot({
             });
             color = Color.rand(0.0, 1.0).hexString;
             ~indices[i] = [index, next_index, color];
-			~indices_desc = ~indices_desc.add((
+            ~indices_desc = ~indices_desc.add((
                 start: index,
                 end: next_index,
                 color: color
@@ -57,9 +57,32 @@ s.waitForBoot({
 
         d = Buffer.loadCollection(s, ~rand_samples, b.numChannels);
 
-        s.sync;
+        d.write("~/sage-shuffled.wav".standardizePath,"WAV","float");
 
+        // Resort the ~rand_samples
         ~final_array.postln;
+
+        // Write JSON
+
+        g = File("~/pre.json".standardizePath, "w");
+        g.write("{ \n");
+        ~indices_desc.do({ |slice|
+            ~s = slice.asString.replace("(", "{").replace(")", "}");
+            g.write(~s + "," + "\n");
+        });
+        g.write("} \n");
+        g.close();
+
+
+/*        f = File("~/post.json".standardizePath,"w");
+        f.write("{ \n");
+        ~formatted.do({ |slice|
+            ~s = slice.asString.replace("(", "{").replace(")", "}");
+            f.write(~s + "," + "\n");
+        });
+        f.write("} \n");
+        f.close();*/
+
     });
 });
 )
