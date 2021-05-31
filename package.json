@@ -22,7 +22,7 @@
     "marked": "^2.0.6",
     "mdsvex": "^0.9.6",
     "peaks.js": "^0.25.0",
-    "pts": "^0.10.5",
+    "pts": "^0.10.6",
     "remark-external-links": "^8.0.0",
     "remark-slug": "^6.0.0",
     "three": "^0.128.0",
