@@ -14,7 +14,6 @@ class="btn zoom">
 <style>
     .btn {
         position: relative;
-        display: inline-block;
         width: fit-content;
         height: 2em;
         padding: 5px;
