@@ -21,10 +21,6 @@
             "url": "https://www.opasquet.fr"
         },
         {
-            "name": "microsound",
-            "url": "http://microsound.org"
-        },
-        {
             "name": "Journal of Creative Music Systems",
             "url": "https://www.jcms.org.uk"
         },
@@ -33,24 +29,12 @@
             "url": "https://aimusiccreativity.org"
         },
         {
-            "name": "Oliver Bown",
-            "url": "http://www.olliebown.com"
-        },
-        {
-            "name": "Margaret Boden",
-            "url": "https://www.sciencedirect.com/science/article/pii/S0004370298000551"
-        },
-        {
             "name": "Anna Jordanous",
             "url": "https://www.kent.ac.uk/computing/people/3051/jordanous-anna"
         },
         {
-            "name": "Steven Jan",
-            "url": "https://orcid.org/0000-0001-6370-3713"
-        },
-        {
-            "name": "Valerio Velardo",
-            "url": "https://valeriovelardo.com"
+            "name": "Daniele Ghisi",
+            "url": "https://www.danieleghisi.com"
         },
         {
             "name": "Gerard Assayag",
@@ -61,12 +45,24 @@
             "url": "https://jeromenika.com"
         },
         {
-            "name": "Daniele Ghisi",
-            "url": "https://www.danieleghisi.com"
+            "name": "Margaret Boden",
+            "url": "https://www.sciencedirect.com/science/article/pii/S0004370298000551"
+        },
+        {
+            "name": "Oliver Bown",
+            "url": "http://www.olliebown.com"
         },
         {
             "name": "Owen Green",
             "url": "https://scholar.google.co.uk/citations?user=1gvtW3MAAAAJ&hl=en"
+        },
+        {
+            "name": "Steven Jan",
+            "url": "https://orcid.org/0000-0001-6370-3713"
+        },
+        {
+            "name": "Valerio Velardo",
+            "url": "https://valeriovelardo.com"
         },
         {
             "name": "_derivations",
@@ -379,6 +375,10 @@
         {
             "name": "Douglas Engelbart's position on computing in 1962",
             "url": "https://apps.dtic.mil/dtic/tr/fulltext/u2/289565.pdf"
+        },
+        {
+            "name": "microsound",
+            "url": "http://microsound.org"
         },
         {
             "name": "this FluCoMa thread",
