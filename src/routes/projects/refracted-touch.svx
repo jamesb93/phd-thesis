@@ -407,7 +407,7 @@ Daryl sparingly activates the fuzz bass module and overall responds more directl
 **Ten | 8:39 - 9:53**
 - Maximum Accumulation: 20000
 - *Fiery, searing harmonic tones captured and held*
-- *Granular synthesis will regurgitate - exploit this*
+- *Granular synthesis will regurgitate — exploit this*
 - *Finish with a rich cluster of feedback and frozen sounds*
 
 State ten concludes the piece and focuses on sustaining sounds created by Daryl. The granular synthesis, feedback and harmonic freezer are the only modules active. Each of these modules are harder to interact with in a direct fashion due to the way that they process sounds. Because they all focus on elongating different aspects of what Daryl is doing, they appear to be more autonomous and decoupled from him. This creates a state that is suspended in time and is only concluded by Daryl stopping. 
