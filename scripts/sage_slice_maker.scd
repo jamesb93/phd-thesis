@@ -6,7 +6,7 @@ s.waitForBoot({
     s.sync;
     c = Buffer.new(s);
 
-    FluidBufNoveltySlice.process(s, b, indices:c, action:{
+    FluidBufNoveltySlice.process(s, b, threshold:0.45, indices:c, action:{
 
         c.loadToFloatArray(action:{ | indices | ~indices = indices.as(Array) });
 
@@ -16,11 +16,7 @@ s.waitForBoot({
 
         ~indices.do({ | index, i |
             var color, next_index;
-            if(i < (~indices.size - 1), {
-                next_index = ~indices[i + 1]
-            }, {
-                next_index = b.numFrames
-            });
+            if(i < (~indices.size - 1), {next_index = ~indices[i+1]}, {next_index = b.numFrames});
             color = Color.rand(0.0, 1.0).hexString;
             ~indices[i] = [index, next_index, color];
             ~indices_desc = ~indices_desc.add((
@@ -58,6 +54,7 @@ s.waitForBoot({
 
         d.write("~/sage-shuffled.wav".standardizePath,"WAV","float");
 
+        s.sync;
 
         ~prev = ~final_array[0].start;
         ~length = 0.0;
@@ -71,8 +68,8 @@ s.waitForBoot({
 
             ~formatted = ~formatted.add((
                 start: ~length,
-                end: ~length + len,
-                color: slice.color.asString.quote
+                end: (~length + len),
+                color: slice.color
             ));
 
             ~length = ~length + len;
