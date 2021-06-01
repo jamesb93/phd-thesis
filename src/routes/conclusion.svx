@@ -3,7 +3,7 @@
     import {metadata as m} from "./directory.svx"
 </script>
 
-# Conclusion
+# 6. Conclusion
 
 This PhD thesis has presented five creative projects that outline the development of my computer-aided compositional practice with content-aware programs over the last four years. For each project, I have documented the compositional process and traced the evolution of technological tools and creative coding practice, as well as the growth of musical and compositional ideas specific to those projects. From the tools presented alongside the varying musical outcomes, I hope to have answered the question: *How can I use content-aware programs to compose with digital samples in a studio-based computer-aided compositional practice?*
 

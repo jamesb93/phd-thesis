@@ -4,7 +4,7 @@
     console.log(m)
 </script>
 
-# Technical Implementation and Software
+# 5. Technical Implementation and Software
 
 This section outlines three items of software that have been integral in my compositional process with content-aware programs. These three software projects are submitted separately to the compositions despite them often having strongly contributed to individual projects and works. For each section within this chapter, an outline describing how the program works and what it does is included among a detailing of my motivations for creating it. 
 

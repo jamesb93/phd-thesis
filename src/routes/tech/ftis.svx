@@ -8,7 +8,7 @@
     import Code2 from '$lib/components/Code2.svelte';
 </script>
 
-# Finding Things in Stuff (`FTIS`)
+# Finding Things in Stuff (FTIS)
 
 [FTIS Source Code](https://www.github.com/jamesb93/ftis)
 
@@ -378,3 +378,30 @@ By implementing caching the overall usability is improved by tightening the feed
 next="Conclusion"
 link={m.conc}
 />
+
+<style>
+	h1 {counter-reset: h2}
+    h2 {counter-reset: h3}
+    h3 {counter-reset: h4}
+    h4 {counter-reset: h5}
+
+    h1:before {content: "5.3." " "}
+
+    h2:before {
+        content: "5.3." counter(h2, decimal) " ";
+        counter-increment: h2;
+    }
+    h3:before {
+        content: "5.3." counter(h2, decimal) "." counter(h3, decimal) " ";
+        counter-increment: h3;
+    }
+    h4:before {
+        content: "5.3." counter(h2, decimal) "." counter(h3, decimal) "." counter(h4, decimal) " ";
+        counter-increment: h4;
+    }
+
+    h2.nocount:before, h3.nocount:before, h4.nocount:before {
+        content : "";
+        counter-increment: none;
+    }
+</style>

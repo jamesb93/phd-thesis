@@ -4,19 +4,8 @@
 
 </script>
 
-# Projects
-In this section, five compositional projects are examined and the way that content-awareness is used in computer-aided composition is outlined.
-
-
-<!-- [4.1 Stitch Strata]({m.ss})
-
-[4.2 Annealing Strategies]({m.as})
-
-[4.3 Refracted Touch]({m.rt})
-
-[4.4 Reconstruction Error]({m.re})
-
-[4.5 Electromagnetic]({m.em}) -->
+# 4. Projects
+In this section, I reflect on the compositional process for the five compositional projects and the way that content-awareness is used in computer-aided composition.
 
 <NextSection 
 next="Stitch/Strata"
