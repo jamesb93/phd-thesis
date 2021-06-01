@@ -84,16 +84,7 @@ At this point of development in my practice, extended vocal techniques were a ma
 
 I began by segmenting all of the recordings using REAPER's dynamic split tool and configuring it to segment based on the detection of transients. I selected this strategy because I wanted to extract individual utterances and phoneme sounds to be rearranged and concatenated by the computer. [DEMO 1]({m.ss}#demo1) shows an example of this process, in which I  took a portion of *[One Breath Poem Failure](https://sagemusick.bandcamp.com/track/2016-02-16-one-breath-poem-failure)*, segmented it and then recombined those segments randomly. The colours of each segment track the change in arrangement of each utterance between the segmentation and reordering stages.
 
-<!-- WIDGET: fix this sage one -->
-<Sage
-    file1="/ss/gesture.mp3"
-    peaks1="/ss/gesture.dat"
-    file2="/ss/shuffled_gesture.mp3"
-    peaks2="/ss/shuffled_gesture.dat"
-    segs1={sageUnshuffled}
-    segs2={sageShuffled}
-    id="demo1"
-/>
+<Sage id="demo1" />
 
 This was only a single experiment, and applying it to other source material revealed to me a number of compositional possibilities which could be achieved through this deconstructive process. Depending on the qualities and nature of the source, individual segments could synthesise new forms and sounds with their own novel character and synthetic qualities. Thus, this spawned the next level of compositional development in this project, and I imagined that a whole piece could be made by creating a system that would be responsible for organising samples in this way into *phrases* and organising those phrases into a whole piece. I did not have a strong idea about what would specifically constitute a phrase at this time, but I knew that I wanted to explore recombining segments such that result would be less random than the initial experiments, and that phrases could be given strong perceptual qualities that would differentiate them from each other. With this idea in mind, I set out to experiment with a number of approaches in which individual segments would be concatenated into phrases.
 
@@ -167,16 +158,42 @@ By using Python, the compositional process accelerated, and I quickly found good
 
 #### Processes For Micro- and Meso-Scale Structures
 
-Using Python made it possible and easier for me to express a number of organisational procedures that would operate on collections of descriptor-based selections from the wider corpus. These procedures were composed as named functions that accepted a set of arguments and created an output sound file. Each function has its own logic that drives the basis for selecting samples, thus making each one produce outputs of a certain character. These functions are described next.
+Using Python made it possible and easier for me to express a number of organisational procedures that would operate on collections of descriptor-based selections from the wider corpus. I composed these procedures as functions that could be called to create output sound files. Each function has its own logic that drives the basis for selecting samples, thus making each one produce outputs of a certain character. These functions are described next and code has been provided for reference.
 
-<!-- REVIEW: what large-scale sectionalisation planning was made and at what stage
 
-Mention that the high-level form was an aspect of the work that emerged out of the material derived from using Python; rather than something which was planned beforehand.
- -->
+ <Code2 
+ id='code1'
+ figure='CODE 1'
+ caption='accum_phrase'
+ expanded={false}
+ >
 
- <!-- REVIEW: FOLDOUTS OF THE CODE? -->
+```py
+def accum_phrase(iterations, joins): #accumulatively builds phrases
+    iterations = int(iterations)
+    joins = int(joins)
+    sample_set = EntryMatcher()
+    sample_set.input_vars(input('Enter a descriptor set - Format is [Amp, AmpSpread, CentOp, Centroid, DurOp, Duration]'))
+    sample_set.match()
+    sample_set.store_metadata()
+    concat = AudioSegment.empty()
+    join_sound = AudioSegment.empty()
+    if len(sample_set.results) != 0:
+        for x in range(iterations):
+            for i in range(joins):
+                rand = rn.randint(0, len(sample_set.results)- 1)
+                choice = str(sample_set.results[rand])
+                join_sound = AudioSegment.from_file(source+choice+affix)
+                concat = concat.append(join_sound, crossfade=0)
+            num_iter = str(x) #convert the iteration number to string
+            concat.export(new_dir+num_iter+affix, format="wav") #export cmd
+    else:
+        print("No samples matched")
+```
 
-The `accum_phrase` function concatenates samples until a maximum total duration has been satisfied. The output of the process also renders each stage of the accumulation, so the results can be navigated as a phrase of increasing complexity and duration. This can be heard in [AUDIO 3]({m.ss}#audio3). While this is perhaps the most simplistic example, it produced results that were largely promising as a first attempt. 
+ </Code2>
+
+The `accum_phrase` function (see [CODE 1]({m.ss}#code1)) concatenates samples until a maximum total duration has been satisfied. The output of the process also renders each stage of the accumulation, so the results can be navigated as a phrase of increasing complexity and duration. This can be heard in [AUDIO 3]({m.ss}#audio3). While this is perhaps the most simplistic example, it produced results that were largely promising as a first attempt. 
 
 <Waveform 
 title="A single output from the accum_phrase process"
@@ -186,7 +203,52 @@ peaks="/ss/a12.dat"
 id="audio3"
 />
 
-The `jank` function generates phrases where samples are repeated in chunks of a given length as well as applying some variation to that length. The result is a stutter effect that can contain robotic, artificial qualities with tones and pitches as a side-effect. An example of this can be heard in [AUDIO 4]({m.ss}#audio4) and [AUDIO 5]({m.ss}#audio5).
+<Code2 
+id='code2'
+figure='CODE 2'
+caption='jank'
+expanded={false}
+>
+
+```py
+def jank(iterations, joins, join_length_min, join_length_max):
+
+    #Function Variables#
+    iterations = int(iterations)
+    joins      = int(joins)
+    concat     = AudioSegment.empty()
+    join_sound = AudioSegment.empty()
+
+    #Generate a list of samples under 500ms and scramble/permute them#
+    jank_samps = [None] * joins
+    short_samples = EntryMatcher()
+    short_samples.input_vars("-96 48 > 0 > 100")
+    short_samples.match()
+
+    for j in range (joins):
+        jank_samps[j] = rn.choice(short_samples.results)
+
+    #NO DESCRIPTORS#
+    for x in range(iterations):
+        concat = AudioSegment.empty()
+        rn.shuffle(jank_samps)
+
+        for i in range(joins):
+            rep = rn.randint(join_length_min, join_length_max)
+            choice = str(jank_samps[i])
+            join_sound = AudioSegment.from_file(source+choice+affix) # append the sound to the concatenation stream
+            concat += join_sound * rep
+
+        num_iter = str(x) # convert the iteration number to string
+        concat.export(new_dir+num_iter+affix, format="wav") # export cmd
+
+    short_samples.store_metadata()
+    print("I am done")
+```
+
+</Code2>
+
+The `jank` function (see [CODE 2]({m.ss}#code2)) generates phrases where samples are repeated in chunks of a given length as well as applying some variation to that length. The result is a stutter effect that can contain robotic, artificial qualities with tones and pitches as a side-effect. An example of this can be heard in [AUDIO 4]({m.ss}#audio4) and [AUDIO 5]({m.ss}#audio5).
 
 <Waveform 
 title='A single output from the jank process (1)'
@@ -204,7 +266,47 @@ peaks="/ss/h0.dat"
 id="audio5"
 />
 
-`search_small` generates a random descriptor query of a narrow range for the amplitude, spectral flatness measure and spectral centroid. This process produces perceptually tight organisations of samples without my having to specify those constraints exactly. I produced many iterations using this and selected those that I found to be the most aesthetically pleasing. Working with this process allowed me blindly to discover descriptor queries that I could then supply to the other functions, generating more avenues for exploration. An example can be heard in [AUDIO 6]({m.ss}#audio6).
+<Code2 
+id='code3'
+figure='CODE 3'
+caption='search_small'
+expanded={false}
+>
+
+```py
+def search_small(iterations, joins): # search for small groups with random properties
+    length_results = 0
+    small = EntryMatcher()
+    while length_results < 10 or length_results > 20:
+        small.results = []
+        rand_amp = rn.randint(int(amp.min()), int(amp.max()))
+        rand_spread = rn.randint(3, 18)
+        rand_cent = rn.randint(int(centroid.min()), int(centroid.max()))
+        rand_dur = rn.randint(int(duration.min()), int(duration.max()))
+        small.input_vars(rand_amp, rand_spread, rand_cent, rand_dur)
+        small.match()
+        length_results = len(small.results)
+        print(length_results)
+    for x in range(iterations):
+        concat = AudioSegment.empty()
+        prev_rand = -1
+        for i in range(joins):
+            rand = rn.randint(0, len(small.results) - 1)
+            if prev_rand != rand:
+                choice = str(small.results[rand])
+                join_sound = AudioSegment.from_file(source+choice+affix)
+                concat = concat.append(join_sound, crossfade=0)
+                prev_rand = rand
+                rand = rn.randint(0, len(small.results) - 1)
+            elif prev_rand == rand: 
+                rand = rn.randint(0, len(small.results) - 1)
+        num_iter = str(x) #convert the iteration number to string
+        concat.export(new_dir+num_iter+affix, format="wav") # export cmd
+```
+
+</Code2>
+
+`search_small` (see [CODE 3]({m.ss}#code3) generates a random descriptor query of a narrow range for the amplitude, spectral flatness measure and spectral centroid. This process produces perceptually tight organisations of samples without my having to specify those constraints exactly. I produced many iterations using this and selected those that I found to be the most aesthetically pleasing. Working with this process allowed me blindly to discover descriptor queries that I could then supply to the other functions, generating more avenues for exploration. An example can be heard in [AUDIO 6]({m.ss}#audio6).
 
 <Waveform 
 title="A single output from the search_small process (1)."
@@ -214,8 +316,12 @@ peaks="/ss/e22.dat"
 id="audio6"
 />
 
-#### Traces Of Unaltered Outputs In Stitch/Strata
-For me, this methodology of generating sample phrases, auditioning them and retaining those that I anticipated would be useful for composing with was a more fluid compositional workflow than having to step back into the mindset of an algorithm designer as I had been before moving to Python. The final stages of work for [Stitch/Strata]({m.ss}) retain traces of the raw phrases, although many were additionally processed with playback-rate modifications and were rearranged or re-segmented manually in REAPER. This section describes how some of them were incorporated into the final composition.
+There were several other functions that I developed, `highest_centroid`, `long_short`, `long_short_exp` and `meta_construction`  which I trialled but did not use for composition. Despite only using the three just described (`jank`, `search_small`, `accum_phrase`),  I was able to generate sufficiently varied material, because each of these functions could be supplied with a different subset of the overall corpus by changing the descriptor constraints.
+
+#### Traces Of Function Outputs In Stitch/Strata
+This methodology consisted of generating sample phrases, auditioning them and retaining those that I anticipated would be compositionally useful. For me, this workflow felt more fluid than the algorithm designer mindset that was predominant prior to my shift to Python. My interaction with the computer at this point was largely centred around a back and forth between scripting with Python and then importing the sound files into REAPER for audition. This began as a pragmatic approach to listening to the sounds as small collections, but I found that while engaging with those materials, I was compelled to experiment with the sounds — to combine different outputs together, and to apply further audio processing and arrange the materials into larger musical structures. The piece evolved from this process and a higher-level formal structure emerged as a result of the dialogue between the various workflow aspects: scripting in Python, listening in REAPER and the ad-hoc arrangements I made with those materials as a result.
+
+[Stitch/Strata]({m.ss}) retained traces of the computer outputs, although many were additionally processed with playback-rate modifications and were rearranged or re-segmented manually in REAPER. The remainder of this section describes how some of them were incorporated into the final composition.
 
 In one of the iterations generated by `search_small`, the query that was generated constrained the curation of samples to those with with high spectral flatness, high centroid and low amplitude. This created a whispering texture which was used amongst several superimposed textural phrases at 3:03. The phrase itself can be heard in [AUDIO 7]({m.ss}#audio7).
 
