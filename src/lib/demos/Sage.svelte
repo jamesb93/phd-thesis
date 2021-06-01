@@ -1,115 +1,91 @@
 <script>
     import { onMount } from "svelte";
-    import { browser } from "$app/env";
-
+    import Container from '$lib/components/Container.svelte';
 
     export let title = "title";
-    export let file1;
-    export let file2
-    export let peaks1;
-    export let peaks2;
-    export let segs1;
-    export let segs2;
     export let id = "";
 
-    let Peaks;
-    let unshuffled;
-    let shuffled;
-    let unshuffledOverview;
-    let shuffledOverview;
-    let audio1;
-    let audio2;
-    let peaksControls;
+    let sounds = {
+        pre : {
+            file: '/ss/sage-pre.mp3',
+            peaks: '/ss/sage-pre.dat',
+            overview: null,
+            instance: null,
+            audioElement : null,
+            slices : '/ss/pre.json'
+        },
+        post : {
+            file: '/ss/sage-post.mp3',
+            peaks: '/ss/sage-pre.mp3',
+            overview: null,
+            instance: null,
+            audioElement : null,
+            slices : '/ss/post.json'
+        },
+    }
+
+    let Peaks, peaksControls;
 
     onMount (async()=>{
-        if (browser) {
-            try {
-                const module = await import("peaks.js");
-                Peaks = module.default;
+
+        // Fetch data
+        
+        const module = await import("peaks.js");
+        Peaks = module.default;
     
-                unshuffled = Peaks.init({
-                    containers: {overview: unshuffledOverview},
-                    dataUri: {arraybuffer: peaks1},
-                    mediaElement: audio1,
-                    height: 60,
-                    segmentStartMarkerColor: '#a0a0a0',
-                    segmentEndMarkerColor: '#a0a0a0',
-                    zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
-                    overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
-                    overviewHighlightColor: 'grey',
-                    segmentColor: 'rgba(255, 161, 39, 1)',
-                    playheadColor: 'rgba(0, 0, 0, 1)',
-                    playheadTextColor: '#aaa',    
-                    showPlayheadTime: false,
-                    pointMarkerColor: '#FF0000',
-                    axisGridlineColor: '#ccc',
-                    axisLabelColor: '#aaa',
-                    segments: segs1
-                })
-    
-                shuffled = Peaks.init({
-                    containers: {overview: shuffledOverview},
-                    dataUri: {arraybuffer:  peaks2},
-                    mediaElement: audio2,
-                    height: 60,
-                    segmentStartMarkerColor: '#a0a0a0',
-                    segmentEndMarkerColor: '#a0a0a0',
-                    zoomWaveformColor: 'rgba(0, 30, 128, 0.61)',
-                    overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
-                    overviewHighlightColor: 'grey',
-                    segmentColor: 'rgba(255, 161, 39, 1)',
-                    playheadColor: 'rgba(0, 0, 0, 1)',
-                    playheadTextColor: '#aaa',    
-                    showPlayheadTime: false,
-                    pointMarkerColor: '#FF0000',
-                    axisGridlineColor: '#ccc',
-                    axisLabelColor: '#aaa',
-                    segments: segs2
-                })
-            } catch (err) {
-                console.error(err);
+        for ( const [key, wf] of Object.entries(sounds)) {
+            const options = {
+                containers: {
+                    overview: wf.overview
+                },
+                dataUri: { 
+                    arraybuffer: wf.peaks
+                },
+                mediaElement: wf.audioElement,
+                overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
+                overviewHighlightColor: 'grey',
+                playheadColor: 'rgba(0, 0, 0, 1)',
+                playheadTextColor: '#aaa',
+                showPlayheadTime: false,
+                pointMarkerColor: '#FF0000',
+                axisGridlineColor: '#ccc',
+                axisLabelColor: '#aaa',
+                randomizeSegmentColor: false,
+                segments: wf.segments
             }
+
+            wf.instance = Peaks.init(options, (error, instance) => {
+                if (error) {
+                    console.log(error)
+                } else {
+                    wf.instance = instance
+                }
+            })
         }
     });
 
 
 </script>
 
-<div class="audio-box" id={id}>
+<Container id={id}>
     <div class="vis">
-        <div class="overview" bind:this={unshuffledOverview} />
-        <div class="overview" bind:this={shuffledOverview} />
+        <div class="overview" bind:this={sounds.pre.overview} />
+        <div class="overview" bind:this={sounds.post.overview} />
     </div>
     <div class="peaks-controls" bind:this={peaksControls}>
-        <audio controls bind:this={audio1}>
-            <source src={file1} type="audio/mp3">
+        <audio controls bind:this={sounds.pre.audioElement}>
+            <source src={sounds.pre.file} type="audio/mp3">
             <track kind="captions">
         </audio>
-        <audio controls bind:this={audio2}>
-            <source src={file2} type="audio/mp3">
+        <audio controls bind:this={sounds.post.audioElement}>
+            <source src={sounds.post.file} type="audio/mp3">
             <track kind="captions">
         </audio>
     </div>
-</div>
+</Container>
+
 
 <style>
-    .audio-box {
-        padding-top: 20px;
-        margin-top: 20px;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-        border-radius: 12px;
-        border: 3px solid rgba(128, 128, 128, 0.575);
-        transition: border .5s;
-    }
-
-    .audio-box:hover {
-        border: 3px solid #2b5aa1a2;
-        transition: border .5s;
-        gap: 3px;
-    }
-
-
     .overview {
         margin-left: 3em;
         margin-right: 3em;
