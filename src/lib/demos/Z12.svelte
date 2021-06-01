@@ -25,7 +25,7 @@
 
         loop = new Tone.Loop(time => {
             step(time)
-        }, "16n").start(0);
+        }, 0.1).start(0);
     }
 
     const table = ["A1", "A2", "A3", "A4", "A5", "A6"]
@@ -67,12 +67,25 @@
 {#if browser}
     {#if ready}
     
-    Change the probability of each potential outcome by modifying the slider's value.
-    Observe how different ordering of samples can be created by changing the probabilities.
+    <div class='top-text'>
+        <div class='desc'>
+            Change the probability for each sound playing by modifying the slider values. Observe how changing the probabilities alters the patterning of the individual samples.
+        </div>
+        <div class='cap'>
+            DEMO 2
+        </div>
+    </div>
+
     <div id='btn-array'>
         <Button clickHandler={play} text='Play' />
         <Button clickHandler={stop} text='Stop' />
+        <div class='rate'>
+            <span>Iteration Rate: {loop.interval.toFixed(2)} </span>
+            <input type='range' bind:value={ loop.interval } step=0.01 min=0.05 max=0.2 />
+        </div>
     </div>
+
+
     <div id="probs">
         {#each probs as i, x}
             <div class='slider'>
@@ -90,7 +103,25 @@
 
 
 <style>
+    .top-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
+
+
+    .desc {
+        display: flex;
+        flex-direction: column;
+        max-width: 85%;
+        font-weight: bold;
+    }
+
+    .cap {
+        font-style: italic;
+        min-width: max-content;
+    }
     .input {
         display: flex;
         flex-direction: column;
@@ -99,17 +130,17 @@
 
     #btn-array {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         padding-top: 30px;
-        padding-bottom: 30px;
-        justify-content: center;
+        justify-content: space-around;
         width: 50%;
         margin: 0 auto;
+        align-items: center;
     }
 
-    .btn {
-        width: 35%;
-        margin: 0 auto;
+    .rate {
+        display: flex;
+        flex-direction: column;
     }
 
     .sample-notify {
