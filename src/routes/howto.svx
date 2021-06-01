@@ -5,20 +5,27 @@
 
 # How To Read This Web Thesis
 
+## Compatability
 This thesis supports a number of web browsers. It has been tested on:
-+ Firefox 88.0
-+ Safari 14.1
++ Firefox +88.0
++ Safari +14.1
 + Chromium 91
 
 If for any reason something is not working or fails to load, please first try viewing the thesis in another browser.
 
+## Navigation
 To navigate to different sections of this thesis, use the left hand navigation panel. The right hand navigation panel allows you to move between the structure of a page more conveniently.
 
-There are many interactive elements throughout this thesis, such as annotated waveforms and data visualisations. There are also numerous [hyperlinks (I'm just an example)]() which I encourage you to follow to see how these integral digital resources feed into my work and support the research. There five key types of interactive or observable elements.
+## Widgets And Interactivity
+There are many interactive elements throughout this thesis, such as annotated waveforms and data visualisations. There are also numerous [hyperlinks (I'm just an example)]() which I encourage you to follow to see how these integral digital resources feed into my work and support the research. There five archetypes of interactive widgets that you will see. This will introduce you to them.
 
+<Waveform 
+file='/test.mp3'
+peaks='/
+/>
+
+## Audio Samples
 All audio samples in this document are in a compressed format in order to make the document fast and usable over the web. However, high quality WAV files for  examples can be found embedded into the audio playback widgets.
-
-Where possible I have linked to the *most* permanent resource that is relevant and applicable. Even where it might be more appropriate to link directly to a person's personal website for example, I may choose to link to long-standing resources that are less prone to changing, becoming dead or unreachable.
 
 The source code is available at the [github repo](https://github.com/jamesb93/phd-kit) if you are inclined that way or would like to learn how this was put together.
 
