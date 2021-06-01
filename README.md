@@ -1,3 +1,5 @@
+This is the code which generates my thesis: *Harnessing Content-Aware Programs For Computer-Aided Composition In A Studio-Based Workflow*. It is created with [Svelte Kit](https://kit.svelte.dev/) and uses a node runtime.
+
 How do I host this thesis locally?
 `pnpm i`
 `pnpm run dev`
