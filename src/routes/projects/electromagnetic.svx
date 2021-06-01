@@ -57,7 +57,7 @@ caption='AUDIO 2'
 segments={kindleModes}
 />
 
-Other objects produced their own characteristic material although I found that across all of the objects I had listened to, my interpretation would always distill toward a distinction between *active* and *passive* musical states.  For example, [AUDIO 3]({m.em}#aud3) is extracted from the electromagnetic interferences of a mobile phone. In my perception, there are two sonic classes at work here, where 0:00 to 0:40 is *static*, and the remainder of the recording is *active*.
+Other objects produced their own characteristic material although I found that across all of the objects I had listened to, my interpretation would always distil toward a distinction between *active* and *passive* musical states.  For example, [AUDIO 3]({m.em}#aud3) is extracted from the electromagnetic interferences of a mobile phone. In my perception, there are two sonic classes at work here, where 0:00 to 0:40 is *static*, and the remainder of the recording is *active*.
 
 <Waveform
 file='/inter/xiaomi-gesture.mp3'
@@ -218,7 +218,7 @@ multi_corpus = corpus_one + corpus_two
 
 </Code2>
 
-While the notion of combining multiple sources of sonic materials is not novel to composition with digital samples, for me this change allowed me to use [FTIS]({m.ftis}) more flexibly  to overcome the mental pattern of one project pertainting to a single corpora. Instead of having to merge files from a number of different directories on disk to form a corpus, I could instead point a script to a number of places and deal with this in a fashion where the organisational house-keeping is separated from the creative workflow. This provoked another phase of exploration with FTIS that ultimately generated the two works presented as [Interferences]({m.em}). The next two sections, [{m.anchors}]({m.em}#manchors) and [{m.eee}]({m.em}#{m.eee}) discuss how these works emerged from this point onward.
+While the notion of combining multiple sources of sonic materials is not novel to composition with digital samples, for me this change allowed me to use [FTIS]({m.ftis}) more flexibly  to overcome the mental pattern of one project pertaining to a single corpora. Instead of having to merge files from a number of different directories on disk to form a corpus, I could instead point a script to a number of places and deal with this in a fashion where the organisational house-keeping is separated from the creative workflow. This provoked another phase of exploration with FTIS that ultimately generated the two works presented as [Interferences]({m.em}). The next two sections, [{m.anchors}]({m.em}#manchors) and [{m.eee}]({m.em}#{m.eee}) discuss how these works emerged from this point onward.
 
 ### {m.anchors}
 <Waveform 
@@ -302,7 +302,7 @@ caption='AUDIO 13'
 segments={eeeSegments}
 />
 
-This second piece of [Interferences]({m.em}) grew in response to the development of the [FTIS]({m.ftis}) *Corpus* object while creating {m.anchors}, and my desire to revisit some of the raw materials recorded with the Elektroslusch mini. While I was gathering these initial recordings, I had a strong aesthetic response to the recording of the e-reader. I wanted to return to this sound, and deconstruct it with the tools which at the start of this project were not yet developed or as sophisticated as they had become. The most striking aspect of this e-reader recording, in my perception, was the clarity and definition between *active* and *static* states as well as how the entire sample was structured around these two distinctive musical behaviours. The *static* component possessed a strong pitch element and was unwavering in dynamic, while the *active* was more gestural and exhibited a varied morphology. A small segment of the longer recording demonstrates the antiphonal character of these two musical behaviours in [AUDIO 14]({m.em}#aud14). 
+This second piece of [Interferences]({m.em}) grew in response to the development of the [FTIS]({m.ftis}) *Corpus* object while creating {m.anchors}, and my desire to revisit some of the raw materials recorded with the Elektrosluch mini. While I was gathering these initial recordings, I had a strong aesthetic response to the recording of the e-reader. I wanted to return to this sound, and deconstruct it with the tools which at the start of this project were not yet developed or as sophisticated as they had become. The most striking aspect of this e-reader recording, in my perception, was the clarity and definition between *active* and *static* states as well as how the entire sample was structured around these two distinctive musical behaviours. The *static* component possessed a strong pitch element and was unwavering in dynamic, while the *active* was more gestural and exhibited a varied morphology. A small segment of the longer recording demonstrates the antiphonal character of these two musical behaviours in [AUDIO 14]({m.em}#aud14). 
 
 <Waveform 
 title='E-reader sample section displaying active and static states (06-Kindle Off-200513_1547.wav)'
