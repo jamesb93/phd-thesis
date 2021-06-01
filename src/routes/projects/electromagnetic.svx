@@ -40,7 +40,6 @@ figure='VIDEO 1'
 id='vid1'
 />
 
-<!-- REVIEW -->
 Secondly, I wanted to iterate on the pipeline of segmentation, analysis, dimension reduction and clustering and apply it more fluidly to new compositional materials. The technology implemented in [Reconstruction Error]({m.re}) was successful for enabling me to be creative, but was largely inflexbile and to perform the same tasks on new material would require rewriting the scripts. Thus, [FTIS]({m.ftis}) supported this goal, and made it possible create  scripts that supported experimentation and data manipulation. This aspect is discussed in more detail in ["Pathways Through The Corpus"]({m.em}#pathways-through-the-corpus).
 
 ## Composition Process
