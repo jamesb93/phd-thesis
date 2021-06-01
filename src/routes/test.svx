@@ -1,0 +1,37 @@
+<script>
+    import Code2 from '$lib/components/Code2.svelte';
+    import marked from 'marked';
+</script>
+
+<Code2>
+
+```py
+def accum_phrase(iterations, joins): #accumulatively builds phrases
+    iterations = int(iterations)
+    joins = int(joins)
+    sample_set = EntryMatcher()
+    sample_set.input_vars(
+        input(
+            'Enter a descriptor set - Format is [Amp, AmpSpread, CentOp, Centroid, DurOp, Duration]'
+        )
+    )
+    sample_set.match()
+    sample_set.store_metadata()
+    concat = AudioSegment.empty()
+    join_sound = AudioSegment.empty()
+    if len(sample_set.results) != 0:
+        for x in range(iterations):
+            for i in range(joins):
+                rand = rn.randint(0, len(sample_set.results)- 1)
+                choice = str(sample_set.results[rand])
+                join_sound = AudioSegment.from_file(source+choice+affix)
+                concat = concat.append(join_sound, crossfade=0)
+            num_iter = str(x) #convert the iteration number to string
+            concat.export(new_dir+num_iter+affix, format="wav") #export cmd
+    else:
+        print("No samples matched")
+```
+
+</Code2>
+
+
