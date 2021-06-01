@@ -5,26 +5,33 @@
     import YouTube from "$lib/components/YouTube.svelte"
     import {metadata as m} from "../directory.svx"
     import Points from '$lib/demos/dimension-reduction/Points.svelte';
+    import Code2 from '$lib/components/Code2.svelte';
 </script>
 
-# Finding Things in Stuff (`ftis`)
+# Finding Things in Stuff (`FTIS`)
 
 [FTIS Source Code](https://www.github.com/jamesb93/ftis)
 
-`ftis` is a computer-aided composition framework framework that facilitates audio descriptor analysis and composition with corpora of digital samples. `ftis` is designed to aid sample selection from within a corpus, clustering of samples into perceptually similar groups and filtering of corpora by audio descriptor analysis. It also provides *adapters*- bits of code which allow the outputs of these analytical processes to be rapidly transported into compositional or creative coding environments. My interest in performing such tasks came from experimenting with them in [Reconstruction Error]({m.re}). However, I felt that much of the code I had written for that project was not reusable or extensible. I wanted to carry forward the compositional strategies from this work into future projects in a way where code would not have to be significantly rewritten or transformed to fit my creative needs. As such, `ftis` was used throughout [{m.emname}]({m.em}).
+`FTIS` is a computer-aided composition framework framework that facilitates audio descriptor analysis and composition with corpora of digital samples. `FTIS` is designed to aid sample selection from within a corpus, clustering of samples into perceptually similar groups and filtering of corpora by audio descriptor analysis. It also provides *adapters*- bits of code which allow the outputs of these analytical processes to be rapidly transported into compositional or creative coding environments. My interest in performing such tasks came from experimenting with them in [Reconstruction Error]({m.re}). However, I felt that much of the code I had written for that project was not reusable or extensible. I wanted to carry forward the compositional strategies from this work into future projects in a way where code would not have to be significantly rewritten or transformed to fit my creative needs. As such, `FTIS` was used throughout [{m.emname}]({m.em}).
 
 Below are some of the guidelines I devised for myself when I decided that I would create a piece of software from scratch.
 
-1. *`ftis` should be able to compose arbitrary chains or tree structures of processes* where multiple stages of analysis can share their data. 
+1. *`FTIS` should be able to compose arbitrary chains or tree structures of processes* where multiple stages of analysis can share their data. 
 
-2. *`ftis` should be self-documenting*. Every time it is run or used it should automatically produce documentation capturing the sound materials that were processed, the version of the software, the time and date, an error log, and what parameters were used. Most of the code from [Reconstruction Error]({m.re}) was not adequately documented as I did not foresee that the code would even remain relevant to the creative project in its earliest stages. Automatically producing documentation would have been helpful for informing critical reflection, keeping a record of successful and unsuccessful working patterns or settings, and for ensuring even nascent experiments would be in some produce a trace which could be linked throughout the compositional process.
+2. *`FTIS` should be self-documenting*. Every time it is run or used it should automatically produce documentation capturing the sound materials that were processed, the version of the software, the time and date, an error log, and what parameters were used. Most of the code from [Reconstruction Error]({m.re}) was not adequately documented as I did not foresee that the code would even remain relevant to the creative project in its earliest stages. Automatically producing documentation would have been helpful for informing critical reflection, keeping a record of successful and unsuccessful working patterns or settings, and for ensuring even nascent experiments would be in some produce a trace which could be linked throughout the compositional process.
 
-3. *`ftis` should operate rapidly as a part of the compositional process*. While the code made in [Reconstruction Error]({m.re}) served my creative purposes for that particular project, alternating between code, auditioning sounds files, Max and REAPER was sometimes slow and diminished the ability to rapidly test different analytical processes and ideas. This friction was largely due to the fact the interface did not abstract away "house keeping" code and required a lot of that type of work to be duplicated each time I wanted to test something. To meet these concerns, I envisaged `ftis` presenting a minimalist control interface such as the command line, and contain methods for rapidly auditioning sounds, organising them into pre-compositional structures such as a REAPER session and for inspecting the data produced from analysis. Re-analysis should also be cached to increase the rate at which analysis chains can be reconfigured and experimented with.
+3. *`FTIS` should operate rapidly as a part of the compositional process*. While the code made in [Reconstruction Error]({m.re}) served my creative purposes for that particular project, alternating between code, auditioning sounds files, Max and REAPER was sometimes slow and diminished the ability to rapidly test different analytical processes and ideas. This friction was largely due to the fact the interface did not abstract away "house keeping" code and required a lot of that type of work to be duplicated each time I wanted to test something. To meet these concerns, I envisaged `FTIS` presenting a minimalist control interface such as the command line, and contain methods for rapidly auditioning sounds, organising them into pre-compositional structures such as a REAPER session and for inspecting the data produced from analysis. Re-analysis should also be cached to increase the rate at which analysis chains can be reconfigured and experimented with.
 
 ## Implementation
-`ftis` is implemented as a Python package. This means that it can be installed by Python's package manager `pip` and accessed by importing it in a python script. While this increases the barrier for entry and requires the user to know Python, it simplifies many architectural decisions by keeping everything within one language. One idea I pursued briefly and early on was creating a domain-specific language based on the [YAML syntax](https://yaml.org/) which would then be parsed by `ftis`. After building out a prototype of this interface, I found it was not expressive and was frustrating to develop around. Confining `ftis` to pure Python also meant that any of the code written in `ftis` is relatively interoperable with other Python code. This makes it flexible for drawing in other libraries and modules as well for blending traditional scripting.
+`FTIS` is implemented as a Python package. This means that it can be installed by Python's package manager `pip` and accessed by importing it in a python script. While this increases the barrier for entry and requires the user to know Python, it simplifies many architectural decisions by keeping everything within one language. One idea I pursued briefly and early on was creating a domain-specific language based on the [YAML syntax](https://yaml.org/) which would then be parsed by `FTIS`. After building out a prototype of this interface, I found it was not expressive and was frustrating to develop around. Confining `FTIS` to pure Python also meant that any of the code written in `FTIS` is interoperable with other Python code. This makes it flexible for combining with existing code, libraries and modules.
 
-`ftis` is imported as a module into a Python script and exposes classes that perform specific functions related to analysis as well as file and data management. A didactic example is given below of a Python script which uses `ftis` to perform automatic segmentation across a corpus of audio files. Each line is annotated with a comment for clarity on its purpose and function. More specific information is given in the [architecture section below]({m.ftis}#architecture).
+`FTIS` is imported as a module into a Python script and exposes classes that perform specific functions related to analysis as well as file and data management. A didactic example is given in [CODE 1]({m.ftis}#code1) of a Python script which uses `FTIS` to perform automatic segmentation on a corpus of audio files. Each line is annotated with a comment for clarity on its purpose and function. More specific information is given in ["Architecture"]({m.ftis}#architecture).
+
+<Code2
+id='code1'
+caption='Didactic FTIS example for segmenting a corpus'
+figure='CODE 1'
+>
 
 ```python
 from ftis.world import World # import the World class
@@ -58,6 +65,8 @@ This stage connects together the inputs and outputs of the analysers
 world.run() # The run() method is then called which starts processing.
 ```
 
+</Code2>
+
 This script, stored in a file of the user's choosing would then be executed by running it as a normal python script. For example, if the file was named `segmentation.py`, the user would then invoke `python segmentation.py`. The script would then create an output folder at the sink (if it does not exist), log the [metadata]({m.ftis}#world), and then segment of all audio files in `/path/to/corpus/`.
 
 ## The Role In My Practice
@@ -71,7 +80,7 @@ The notion of a corpus having "structure" refers to the local and global relatio
 Such an approach was instrumental in the early phases of composing [Reconstruction Error]({m.re}). A visual representation of the corpus was created by analysing the samples with audio descriptors and reducing that data to two dimensions using the UMAP algorithm. The topology of the visual representation lead to a subsequent application of clustering, in response my impression that computer had attracted samples spatially into their own distinct *neighbourhoods*. [DEMO 1]({m.ftis}#demo1), reflects this characteristics of the data, showing how different collections of samples with similar colours tend to move around the latent space together across different parameter configurations.
 
 <Points 
-title='A variety of UMAP projections derived by modifying its parameters'
+title='UMAP parameters and their effect on the projection'
 caption='DEMO 1'
 id='demo1'
 />
@@ -94,11 +103,16 @@ The gathering of compositional materials in [{m.anchors}]({m.em}#manchors) was i
 Similarly, in [{m.eee}]({m.em}#meee), I proliferated stationary and morphologically invariant material through the superimposition of similar sounds. This allowed me to find ways of compositionally developing the piece using a single sample as a point of starting. This was facilitated again by the k-d tree to search for sounds which were similar to this specific static sample.
 
 ## Architecture
-This section explains the architecture of `ftis` and the relationship between its two key components, *analysers* and *worlds*.
+This section explains the architecture of `FTIS` and the relationship between its two key components, *analysers* and *worlds*.
 
 ### Analysers
-One of the primary elements of `ftis` are sub-modules named analysers. An analyser is a Python class that inherits the parent class `FTISAnalyser`. This makes the development of new analysers quick as much of the boilerplate code exists in the superclass rather than in the analyser that inherits the class itself. It also means that the underlying features of all analysers can be improved without having to modify each one individually. An annotated code example for the Uniform Manifold Approximation and Projection (UMAP) dimension reduction analyser can be seen below. This analyser accepts a matrix of arbitrarily sized data and transforms it into a new matrix according to the [UMAP algorithm](https://arxiv.org/abs/1802.03426)
+One of the primary elements of `FTIS` are sub-modules named analysers. An analyser is a Python class that inherits the parent class `FTISAnalyser`. This makes the development of new analysers quick as much of the boilerplate code exists in the superclass rather than in the analyser itself. It also means that the underlying features of all analysers can be improved without having to modify each one individually. [CODE 2]({m.ftis}#code2) contains the Uniform Manifold Approximation and Projection (UMAP) dimension reduction analyser as a reference to how an analyser can be implemented. This analyser accepts a matrix of arbitrarily sized data and transforms it into a new matrix according to the [UMAP algorithm](https://arxiv.org/abs/1802.03426)
 
+<Code2
+id='code2'
+figure='CODE 2'
+caption='UMAP Analyser'
+>
 
 ```python
 class UMAP(FTISAnalyser):
@@ -160,16 +174,33 @@ class UMAP(FTISAnalyser):
         staticproc(self.name, self.analyse)
 ```
 
+</Code2>
+
+
 The `UMAP` class definition only deals class methods that are responsible for data processing, [caching]({m.ftis}#caching) and defining parameters. The superclass is more complex and contains code that deals with behaviour that is not directly related to data processing. The `FTISAnalyser` class can be read in the source code: [FTISAnalyser definition](https://github.com/jamesb93/ftis/blob/3fdef209d3259783cbc4c4d296dd99f94cab727f/ftis/ftis/common/analyser.py).
 
 ### World
-A `ftis` `World()` connects several `analysers` together so they can communicate important bits of information to each other, such as their relationship in a hierarchical chain and their input and output data. A `World()` is made by creating an instance of the class and specifying where the output (or *sink*) should be. The *sink* is a location on disk where analysis and outputs are stored.
+A `FTIS` `World()` connects several `analysers` together so they can communicate important bits of information to each other, such as their relationship in a hierarchical chain and their input and output data. A `World()` is made by creating an instance of the class and specifying where the output (or *sink*) should be. The *sink* is a location on disk where analysis and outputs are stored. [CODE3]({m.ftis}#code3) demonstrates how a world is created and a *sink* is defined.
+
+<Code2
+id='code3'
+figure='CODE 3'
+caption="Creating a FTIS World() and defining the sink"
+>
 
 ```python
 world = World(sink="/Users/james/my-output")
 ```
 
-Once analysers have been connected together with the `>>` operator, the first node in the chain of connected analysers is passed as an argument to the `build()` method of the world. Calling this function prompts the analyser passed to `build()` to recurse through the chain of connected analysers so that a linked list type structure can be formed. This is essential so that analysers are executed in the right order and the correct output data is passed to the input of the connected analyser.
+</Code2>
+
+Once analysers have been connected together with the `>>` operator, the first node in the chain of connected analysers is passed as an argument to the `build()` method of the world. Calling this function prompts the analyser passed to `build()` to recurse through the chain of connected analysers so that a linked list type structure can be formed. This is essential so that analysers are executed in the right order and the correct output data is passed to the input of the next connected analyser. [CODE 4]({m.ftis}#code4) illustrates this in an annotated example.
+
+<Code2
+id='code4'
+figure='CODE 4'
+caption='Connecting analysers together with >> operator and building the chain'
+>
 
 ```python
 src = Corpus("~/my-audio-files")
@@ -180,13 +211,29 @@ src >> FluidNoveltySlice(threshold=0.35, feature=1)
 world.build(src)
 ```
 
-Once the `build()` method is called the connections between analysers is finalised and the series of analysers can start processing. This is executed by calling the `run()` method. 
+</Code2>
+
+Once the `build()` method is called the connections between analysers is finalised and the series of analysers can start processing. This is executed by calling the `run()` method, demonstrated in [CODE 5]({m.ftis}#code5)
+
+<Code2
+id='code5'
+figure='CODE 5'
+caption='Calling the run() method of the World() instance'
+>
 
 ```python
 world.run() # finally run the chain of connected analysers
 ```
 
-The `World()` also handles self-documentation. Self-documentation produces a `metadata.json` file in the *sink* location that records the connection between analysers, their parameters and the time of execution. An example `metadata.json` file is given below.
+</Code2>
+
+When the`World()` is built it automatically produces metadata. This metadata is recorded in a `metadata.json` file inside the *sink* folder and documents the connection between analysers, their parameters and the time of execution. An example `metadata.json` file is given in [CODE 6]({m.ftis}#code6).
+
+<Code2
+id='code6'
+figure='CODE 6'
+caption='An example of automatically produced metadata'
+>
 
 ```json
 {
@@ -250,23 +297,46 @@ The `World()` also handles self-documentation. Self-documentation produces a `me
 }
 ```
 
+</Code2>
+
+
 This is an important feature in my practice, as it enables me to trace compositional decision making and choices in projects as well as *between* projects. For example, while reflecting on [Stitch/Strata]({m.ss}) to write this PhD, it was difficult to connect how some musical outcomes were achieved by looking at only the code. There is no record of what sounds or data the code actually produced. Throughout the creative process of that piece, I created several different scripts that asked for input when they were run and they did not make a record of what those parameters and commands were. Automatically producing documentation automatically manages this aspect and allows me to focus entirely on compositional concerns.
 
 ### Caching
-One of the most creatively inhibiting experiences for me is waiting for re-analysis to complete between consecutive executions of a script that have been changed in a minor way. Working creatively with `ftis` often involves editing a script such that analysis can be reused. The pseudocode example below describes a chain of `ftis` analysers that calculate the median spectral centroid value for each sample in a corpus. This is performed by first computing a frame-by-frame spectral analysis and then summarising the resulting data.
+One of the most creatively inhibiting experiences for me is waiting for re-analysis to complete between consecutive executions of a script that have been changed in a minor way. This was a common occurrence when I used `FTIS`, especially in phases of experimentation. The pseudocode example in [CODE 7]({m.ftis}#code7) describes a chain of `FTIS` analysers that calculate the median spectral centroid value for each sample in a corpus. This is performed by first computing a frame-by-frame spectral analysis and then summarising the resulting data.
+
+<Code2
+id='code7'
+figure='CODE 7'
+caption='Pseudocode example connecting three analysers together'>
 
 ```py
 Corpus() >> SpectralCentroid() >> Median()
 ```
 
-If after running this first script I decide the average is a better statistic to use instead of the median, the script could be modified to instead pass the data from `SpectralCentroid()` to the `Average()` analyser. 
+</Code2>
+
+
+If after running this first script I decide that the average might be a more suitable statistic to use instead of the median, the script could be modified to instead pass the data from `SpectralCentroid()` to the `Average()` analyser. This is shown in [CODE 8]({m.ftis}#code8).
+
+<Code2
+id='code8'
+figure='CODE 8'
+caption='Pseudocode example where the Median() is replaced by the Average() analyser'>
+
 ```py
 Corpus() >> SpectralCentroid() >> Average()
 ```
 
-For both examples, the output of `SpectralCentroid()` will be exactly the same, as the preceding analysers of the chain are identical. Significant time can be saved here by storing the `SpectralCentroid()` output from the first execution and retrieving it on the second execution. `ftis` is designed so that it can identify these types of changes, respecting both the order and analysers of the chain as well as parameter configuration for each.
+</Code2>
 
-`ftis` is able to detect this by generating a unique identifier hash from the input data and the parameters of each analyser. Below is the hash creation function:
+For both examples, the output of `SpectralCentroid()` will be exactly the same, as the parent analysers and that analyser are unchanged. Significant time can be saved here by storing the analysis produced from `SpectralCentroid()` calculated on the first execution and retrieving it on the second execution. `FTIS` is designed so that it can identify these types of changes, respecting both the order and analysers of the chain as well as parameter configuration for each. This is performed by generating a unique hash from the input data and the parameters of each analyser. [CODE 9]({m.ftis}#code9) shows the hash creation function.
+
+<Code2 
+id='code9'
+figure='CODE 9'
+caption='Hash creation function in FTIS'
+>
 
 ```python
 def create_hash(*items) -> str: # accept an arbitrary amount of items
@@ -277,7 +347,14 @@ def create_hash(*items) -> str: # accept an arbitrary amount of items
     return m.hexdigest() # return a string that is the new hash
 ```
 
-Using this function, a 20 character hash can be created from any number of inputs passed as `items` to the function. An internal method `create_identity()` defined in `FTISAnalyser` creates the hash from passing its own parameters, the input data and its parent analyser's hash to `create_hash()`. This ensures that the analyser itself and all the preceding analysers and their parameters are included in the creation of a unique identifier at each stage.
+</Code2>
+
+Using this function, a 20 character hash can be created from any number of inputs passed as `items` to the function. An internal method `create_identity()` defined in `FTISAnalyser` creates the hash from passing its own parameters, the input data and its parent analyser's hash to `create_hash()`. This ensures that the analyser itself and all the preceding analysers and their parameters are included in the creation of a unique identifier at each stage. [CODE 10]({m.ftis}#code10) shows the `create_identity()` function.
+
+<Code2
+id='code10'
+figure='CODE 10'
+caption='The create_identity() function'>
 
 ```python
 def create_identity(self) -> None:
@@ -290,6 +367,8 @@ self.parent_parameters = {}
 self.traverse_parent_parameters()
 self.identity["hash"] = create_hash(self.parent_parameters, p)
 ```
+
+</Code2>
 
 When an analyser successfully completes its analysis, it records the hash inside the `metadata.json` file, which is created in the location of the `World()` sink that the analyser is bound to. Before any analysis is performed, the analyser will check to see if a `metadata.json`exists, and if it contains a matching hash. If both of these constraints are satisfied same it will look for stored analysis data and use that.
 
