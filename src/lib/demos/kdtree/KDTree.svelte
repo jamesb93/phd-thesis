@@ -69,7 +69,7 @@
                 As you move the mouse, the nearest sample to the pointer is highlighted in red. The 10 samples closest to this have lines drawn to them and are emboldened.
             </p>
             <p>
-                This method of navigating through the sample space depicts my <i>k-d approach</i> to finding sounds which are similar to a specifically selected sample within a corpus. The selected sampl is represented by the highlighted red point, and the 10 most similar sounds are derived by branching out into nearby space.
+                This method of navigating through the sample space depicts my <i>k-d approach</i> to finding sounds which are similar to a specifically selected sample within a corpus. The selected sample is represented by the highlighted red point, and the 10 most similar sounds are derived by branching out into nearby space.
             </p>
         </div>
     </div>
