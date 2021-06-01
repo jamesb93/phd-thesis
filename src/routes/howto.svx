@@ -1,6 +1,12 @@
 <script>
 	import NextSection from "$lib/components/NextSection.svelte"
     import {metadata as m} from "./directory.svx"
+
+    import Waveform from '$lib/components/Waveform.svelte';
+    import ImageMedia2 from '$lib/components/ImageMedia2.svelte';
+    import VideoMedia2 from '$lib/components/VideoMedia2.svelte';
+    import YouTube from '$lib/components/YouTube.svelte';
+    import Code2 from '$lib/components/Code2.svelte';
 </script>
 
 # How To Read This Web Thesis
@@ -17,12 +23,29 @@ If for any reason something is not working or fails to load, please first try vi
 To navigate to different sections of this thesis, use the left hand navigation panel. The right hand navigation panel allows you to move between the structure of a page more conveniently.
 
 ## Widgets And Interactivity
-There are many interactive elements throughout this thesis, such as annotated waveforms and data visualisations. There are also numerous [hyperlinks (I'm just an example)]() which I encourage you to follow to see how these integral digital resources feed into my work and support the research. There five archetypes of interactive widgets that you will see. This will introduce you to them.
+There are many interactive elements throughout this thesis, such as annotated waveforms and data visualisations. There are also numerous [hyperlinks (I'm just an example)]() that lead between different parts of the thesis as well as outside. I encourage you to follow to see how these integral digital resources feed into my work and support the research. There five archetypes of interactive widgets that you will see. This will introduce you to them.
+
+### Waveform or Album
 
 <Waveform 
-file='/test.mp3'
-peaks='/
+file='/howto/pink.mp3'
+peaks='/howto/pink.dat'
+title='Pink noise at -23 LUFS'
 />
+
+### Image
+<ImageMedia2 />
+
+### Video
+
+<VideoMedia2 />
+
+<YouTube />
+
+### Code
+<Code2 />
+
+
 
 ## Audio Samples
 All audio samples in this document are in a compressed format in order to make the document fast and usable over the web. However, high quality WAV files for  examples can be found embedded into the audio playback widgets.
