@@ -377,10 +377,6 @@
             "url": "https://apps.dtic.mil/dtic/tr/fulltext/u2/289565.pdf"
         },
         {
-            "name": "microsound",
-            "url": "http://microsound.org"
-        },
-        {
             "name": "this FluCoMa thread",
             "url": "https://discourse.flucoma.org/t/using-flucoma-tools-with-reaper/311/7"
         },
@@ -495,6 +491,10 @@
         {
             "name": "Bernard Parmegiani",
             "url": "https://en.wikipedia.org/wiki/Bernard_Parmegiani"
+        },
+        {
+            "name": "Microsound",
+            "url": "http://microsound.org"
         },
         {
             "name": "Kim Cascone",
