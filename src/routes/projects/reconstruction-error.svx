@@ -6,7 +6,7 @@
     import ImageMedia2 from '$lib/components/ImageMedia2.svelte';
     import YouTube from '$lib/components/YouTube.svelte';
     import Album from '$lib/components/Album.svelte';
-    import Code from '$lib/components/Code.svelte';
+    import Code2 from '$lib/components/Code2.svelte';
     import Waveform from '$lib/components/Waveform.svelte';
     import Points from '$lib/demos/dimension-reduction/Points.svelte';
     import Agglom from '$lib/demos/clustering/Agglom.svelte';
@@ -262,7 +262,7 @@ I then performed a meta-analysis discerning the shared membership of each sample
 
 The result of this is a set of JSON files that describes clusters which share samples and how many samples they share. In [CODE 1]({m.re}#code1), a portion of the analysis describing the shared membership of the 250 and 500 analysis is shown. The information in this example expresses that cluster 36 in the 250 clusters analysis is comprised of clusters 317 *and* 327 in the 500 clusters analysis.  
 
-<Code
+<Code2
 figure='CODE 1'
 caption='Meta-analysis data describing the shared membership of clusters. This portion describes the shared membership of clusters between the 250 and 500 clusters output.'
 >
@@ -286,7 +286,7 @@ caption='Meta-analysis data describing the shared membership of clusters. This p
 }
 ```
 
-</Code>
+</Code2>
 
 The clustering code can be found here: [`_clustering.py`](https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/clustering/_clustering.py).
 
@@ -307,7 +307,7 @@ This process was immensely useful for becoming acquainted with the samples from 
 
 Up to this point, the audition process was orchestrated entirely in Max. However, I did not want to further compose in this environment as I was begining to formulate concepts around formal structures and the way these samples would actually be constructed into a set of compositions. Working entirely in Max had already proven to be problematic in [Stitch/Strata]({m.ss}), especially in the earlier phases for that project. Instead, I wanted to be able to access samples as clusters  in a environment where I could "freeze" them, arrange them, as well as modify and alter them with audio effects. In order to achieve this workflow,  I built a series of Lua scripts that allowed me to turn a cluster represented in JSON format,  into a track in REAPER by leveraging the ReaScript API. This can be found in [CODE 2]({m.re}#code2). 
 
-<Code
+<Code2
 figure='CODE 2'
 caption='Lua script for importing a cluster of samples as a track of contiguous samples into REAPER'
 id='code2'
@@ -354,7 +354,7 @@ if confirm then
 end
 ```
 
-</Code>
+</Code2>
 
 Running this script would present me with the option to provide a JSON file and a cluster number. This would generate a new track containing the samples belonging to that cluster. This allowed me to rapidly audition samples in Max, then draw them into a REAPER session without friction. [VIDEO 11]({m.re}#vid11) demonstrates this process. This was the basis on which I composed the next few pieces. I would oscillate between listening in Max, importing sounds into REAPER as clusters and then using intuitive compositional processes to organise that material. When I hit a creative block in the DAW I would return to listening and try to find something new in the material, guided by the computer.
 

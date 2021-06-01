@@ -6,7 +6,7 @@
     import ImageMedia2 from '$lib/components/ImageMedia2.svelte';
     import YouTube from '$lib/components/YouTube.svelte';
     import Album from '$lib/components/Album.svelte';
-    import Code from '$lib/components/Code.svelte';
+    import Code2 from '$lib/components/Code2.svelte';
     import Waveform from '$lib/components/Waveform.svelte'; 
     import KDTree from '$lib/demos/kdtree/KDTree.svelte';
 
@@ -164,7 +164,7 @@ For me this this was a revelatory listening experience in the compositional proc
 
 One such experiment was to run similar clustering processes on a subset of the corpus, derived by filtering each item according to its average loudness. The aim of this was to hone in on quiet, drone-like sounds and to curate the corpus towards only those sounds and away the active rhythmic sounds. This was facilitated by extending [FTIS]({m.ftis}) and the implementation of a *Corpus* object, a programming construct which contains both the data (a collection of samples and audio descriptor analysis), and a series of methods to operate on that data. Up to this point, *Corpus* objects only held the names of files in their data structure as a way of establishing where a corpus resided on a hard disk. I then added a number of filtering methods which allowed me to sieve the list of files contained in the corpus. These methods were composable, and could be combined in order to carve away samples from the overall corpus and to return a new corpus. [CODE 1]({m.em}#code1), for example, demonstrates filtering a corpus by the loudness of each item so that only the quietest 10% of samples would remain. Any number of those methods can be chained to increasingly filter what is returned by each filter method.
 
-<Code
+<Code2
 caption='Corpus filtering by loudness example using the loudness() method of a Corpus() object.'
 figure='CODE 1'
 id='code1'
@@ -176,7 +176,7 @@ corpus = Corpus('path/to/corpus')
 corpus.loudness(max_loudness=10)
 ```
 
-</Code>
+</Code2>
 
 The extension to the *Corpus* object was effective for filtering toward the quietest and most delicate sounds in a collection, although it did not specifically isolate those that were more drone-like as I had intended. I embraced this, and combined the materials into a short sketch which can be heard in [AUDIO 7]({m.em}#aud7). Reflecting on this sketch, there are noticeable sonic connections to [{m.anchors}]({m.em}#manchors) in terms of the type of material and the focus on static sounds.
 
@@ -206,7 +206,7 @@ In response to this I estimated that *combining* the [Reconstruction Error]({m.r
 
 This catalysed another new development to the [FTIS]({m.ftis}) *Corpus* object to service these emerging compositional aims. Up till now, a *Corpus* represented a single folder of samples or a single sample on the computer. Using [operator overloading](https://docs.python.org/3/reference/datamodel.html#special-method-names), I made it possible to combine corpora programmatically. This functionality made it possible for me to combine multiple corpora and treat them as a single corpus, or as I termed it internally a *multi-corpus*. [CODE 2]({m.em}#code2) shows an example of how this is orchestrated as [FTIS]({m.ftis}) code.
 
-<Code 
+<Code2
 id='code2'
 caption='Adding two FTIS Corpus objects together using operator overloading. the variable multi_corpus is a new corpus as a result of adding corpus_one to corpus_two.'
 figure='CODE 2'
@@ -219,7 +219,7 @@ corpus_two = Corpus('path/to/corpus')
 multi_corpus = corpus_one + corpus_two
 ```
 
-</Code>
+</Code2>
 
 While the notion of combining multiple sources of sonic materials is not novel to composition with digital samples, for me this change allowed me to use [FTIS]({m.ftis}) more flexibly  to overcome the mental pattern of one project pertainting to a single corpora. Instead of having to merge files from a number of different directories on disk to form a corpus, I could instead point a script to a number of places and deal with this in a fashion where the organisational house-keeping is separated from the creative workflow. This provoked another phase of exploration with FTIS that ultimately generated the two works presented as [Interferences]({m.em}). The next two sections, [{m.anchors}]({m.em}#manchors) and [{m.eee}]){m.em}#{m.eee}) discuss how these works emerged from this point onward.
 

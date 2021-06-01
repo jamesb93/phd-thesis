@@ -188,10 +188,10 @@ In a similar vein to C-C-Combine, [Ben Hackbarth's](http://www.benhackbarth.com)
 
 AudioGuide offers an extensive interface for shaping this process, allowing corpus filtering, data transposition, normalisation and deeply customisable constraints for sample matching. This design reflects Hackbarth's vision for how he can resolve his own compositional problems and affords the program a role in constructing long and complex continuous sections of musical material based on such configurations. Hackbarth demonstrates how this interface was used to great effect in [VIDEO 6]({m.ca}#vid6) referencing his piece *[Volleys of Light and Shadow](http://www.benhackbarth.com/vls/)*. While AudioGuide requires the user to specify matching and concatenation constraints in an abstract configuration syntax (see [CODE 1]({m.ca}#code1)), this provides a powerful interface where the complexity of superimposition and time-varying matches can be defined and expressed. In this sense, the machine listening component, however complex embedded behind layers of configuration it is, becomes an interface where one can *show* the computer an example and then "guide" the pathway it takes to reach that. In the video below, Hackbarth posits that a program like AudioGuide is not necessarily a new form of tool; rather it resembles a composer testing out harmonic or melodic structures at the piano and then orchestrating them fully later.
 
-<Code 
+<Code2 
 id='code1'
 figure='CODE 1'
-caption='An example of the configuration interface for AudioGuide'
+caption='A configuration example for AudioGuide'
 >
 
 ```python
@@ -207,7 +207,7 @@ SEARCH = [
 SUPERIMPOSE = si(maxSegment=6)
 ```
 
-</Code>
+</Code2>
 
 AudioGuide has directly influenced the technical aspects of my practice and by extension the creative possibilities. This is evident by comparing the architecture of software I programmed at the start of this PhD research, which was Max and real-time based and the later technical developments which are text-based and mostly use the Python programming language in conjunction with a DAW. A significant influence that shaped this trajectory from AudioGuide is the separation of audio segmentation, machine listening analysis and synthesis (concatenation) into discrete stages of a processing pipeline. Dividing each of these stages is not only pragmatic for development and maintenance, it is an advantageous choice that allows the user to hone each aspect in isolation from each other. This is important because each component in this pipeline has an impact on the following component's results. For example, segmentation is often the first step in my practice, and the granularity at which this is performed will affect how recognisable the source material is when composing with those segmented units. As such, separation of different processes becomes a powerful interface for sculpting the overall process and for engaging with sound materials with the aid of the computer.
 
@@ -327,7 +327,7 @@ link={m.proj}
 <script>
     import Caption from "$lib/components/Caption.svelte";
     import VideoMedia from "$lib/components/VideoMedia.svelte"
-    import Code from '$lib/components/Code.svelte';
+    import Code2 from '$lib/components/Code2.svelte';
     import ImageMedia2 from "$lib/components/ImageMedia2.svelte"
     import YouTube from "$lib/components/YouTube.svelte"
     import HPSS from "$lib/demos/HPSS.svelte"
