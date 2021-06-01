@@ -26,14 +26,13 @@ s.waitForBoot({
             ~indices_desc = ~indices_desc.add((
                 start: index,
                 end: next_index,
-                color: color
+                color: color.asString.quote;
             ));
         });
 
         ~rand_indices = ~indices.scramble;
 
         ~final_array  = Array.newClear;
-
         ~rand_samples = Array.newClear;
 
         ~rand_indices.do({ | entry |
@@ -47,7 +46,7 @@ s.waitForBoot({
             ~final_array = ~final_array.add((
                 start: index,
                 end: next_index,
-                color: color
+                color: color.asString.quote
             ));
         });
 
@@ -59,29 +58,56 @@ s.waitForBoot({
 
         d.write("~/sage-shuffled.wav".standardizePath,"WAV","float");
 
-        // Resort the ~rand_samples
-        ~final_array.postln;
+
+        ~prev = ~final_array[0].start;
+        ~length = 0.0;
+        ~formatted = Array.newClear;
+
+        ~final_array.do({
+            arg slice;
+            var len;
+
+            len = slice.end - slice.start;
+
+            ~formatted = ~formatted.add((
+                start: ~length,
+                end: ~length + len,
+                color: slice.color.asString.quote
+            ));
+
+            ~length = ~length + len;
+        });
 
         // Write JSON
+        // pre
+        ~pre = File("~/pre.json".standardizePath, "w");
+        ~pre.write("{" + "segments".quote + ": [\n");
+        ~indices_desc.do({ |slice, i|
+            var str;
+            str = slice.asString.replace("(", "{");
+            str = str.replace(")", "}");
+            str = str.replace("'", '"');
+            ~pre.write(str);
+            if (i < (~indices_desc.size - 1), { ~pre.write("," ++ "\n") }, { ~pre.write("\n") });
 
-        g = File("~/pre.json".standardizePath, "w");
-        g.write("{ \n");
-        ~indices_desc.do({ |slice|
-            ~s = slice.asString.replace("(", "{").replace(")", "}");
-            g.write(~s + "," + "\n");
         });
-        g.write("} \n");
-        g.close();
+        ~pre.write("] } \n");
+        ~pre.close();
 
+        // post
+        ~post = File("~/post.json".standardizePath, "w");
+        ~post.write("{" + "segments".quote + ": [\n");
+        ~formatted.do({ |slice, i|
+            var str;
+            str = slice.asString.replace("(", "{");
+            str = str.replace(")", "}");
+            str = str.replace("'", '"');
+            ~post.write(str);
+            if (i < (~formatted.size - 1), { ~post.write("," ++ "\n") }, { ~post.write("\n") });
 
-/*        f = File("~/post.json".standardizePath,"w");
-        f.write("{ \n");
-        ~formatted.do({ |slice|
-            ~s = slice.asString.replace("(", "{").replace(")", "}");
-            f.write(~s + "," + "\n");
         });
-        f.write("} \n");
-        f.close();*/
+        ~post.write("] } \n");
+        ~post.close();
 
     });
 });
