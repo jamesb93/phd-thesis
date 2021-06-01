@@ -4,8 +4,7 @@
 	export let caption = "The description of the code";
     export let figure = "CODE N";
     export let id = 'coden';
-	
-	let expanded = true;
+	export let expanded = true;
 
 	function clickHandler(e) {
 		expanded = !expanded
