@@ -39,7 +39,6 @@
     };
 
     function updateVolume() {
-        console.log('updating volume')
         harmVol.gain.rampTo(balance / 100.0, 0.05);
         percVol.gain.rampTo(1 - (balance / 100.0), 0.05);
     };
