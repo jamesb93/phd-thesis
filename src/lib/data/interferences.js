@@ -15,7 +15,7 @@ export const anchorsInteractions = {
 }
 
 export const eeeSegments = [
-    { startTime: 0.0, endTime: 221.0, labelText: 'Extension of antiphony between active and static states.' },
+    { startTime: 0.0, endTime: 221.0, labelText: 'Extension of antiphony between active and static states' },
     { startTime: 221.0, endTime: 408.0, labelText: 'Development of static musical behaviour' },
     { startTime: 408.0 , endTime: 712, labelText: 'Rhythmicised static and active behaviours' },
 ]
@@ -102,21 +102,21 @@ export const interAlbum = {
 }
 
 export const kindleModes = [
-    { startTime : 0.0, endTime: 1.83, labelText: 'Initial static state.' },
-    { startTime: 1.83, endTime: 119.0, labelText: 'Activity induced through user interaction.' },
-    { startTime: 119.0, endTime: 127.0, labelText: 'Static state returns after activity ends.'}
+    { startTime : 0.0, endTime: 1.83, labelText: 'Initial static state' },
+    { startTime: 1.83, endTime: 119.0, labelText: 'Activity induced through user interaction' },
+    { startTime: 119.0, endTime: 127.0, labelText: 'Static state returns after activity ends'}
 ]
 
 export const xiaomiModes = [
     {
         startTime : 0.0,
         endTime: 40.0,
-        labelText: 'Static state.'
+        labelText: 'Static state'
     },
     {
         startTime: 40.0,
         endTime: 102.0,
-        labelText: 'Active state.'
+        labelText: 'Active state'
     }
 ]
 
