@@ -98,7 +98,7 @@ At the output stage, outputs have been made by the computer which invokes a refl
 
 I also engage with outputs from the computer that are not necessarily audibly perceptual. In some cases the computer offers text-based outputs such as [JavaScript Object Notation (JSON)](https://www.json.org/json-en.html) (for example see [CODE 1]({m.preoc}#code1)) containing analysis and statistical summaries produced from [machine listening]({m.ca}#machine-listening) and [machine learning]({m.ca}#machine-learning).
 
-<Code
+<Code2
 id='code1'
 figure='CODE 1'
 caption='JSON output describing computationally generated clusters of perceptually similar audio samples segments.'
@@ -138,7 +138,7 @@ caption='JSON output describing computationally generated clusters of perceptual
     ],
 ```
 
-</Code>
+</Code2>
 
 I can discover valuable information that then informs reaction from such data. For example, in both [Reconstruction Error]({m.re}) and [{m.emname}]({m.em}) different sets of data were produced by the computer using [machine learning]({m.ca}#machine-learning) and [machine listening]({m.ca}#machine-listening) in order to take a larger collection of samples and segregate individual samples into perceptually homogenous groups or clusters. I explored this clustering data aurally using small Max patches and computer-generated REAPER sessions as well as visually by reading the data. This informed compositional decision making and the selection of audio samples and without the aid of the computer, I would not have been to explore the original corpus in such a structured way and on the basis of perceptual similarity between samples.
 
@@ -285,7 +285,7 @@ The perception of technology is an important guiding principal in how I compose,
 />
 
 <script>
-    import Code from '$lib/components/Code.svelte';
+    import Code2 from '$lib/components/Code2.svelte';
     import YouTube from "$lib/components/YouTube.svelte";
     import ImageMedia2 from "$lib/components/ImageMedia2.svelte";
 	import NextSection from "$lib/components/NextSection.svelte";
