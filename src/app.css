@@ -72,6 +72,7 @@ a:hover, a:link:hover {
  */
  code[class*="language-"],
  pre[class*="language-"] {
+	 font-size: 13px;
 	 color: #111b27;
 	 background: none;
 	 font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
