@@ -9,7 +9,7 @@
     import Container from '$lib/components/Container.svelte';
 
     export let title = 'k-d tree sample searching'
-    export let caption = 'DEMO'
+    export let caption = 'DEMO 1'
     export let id = ''
 
     let canvas;
@@ -32,16 +32,16 @@
         let form = space.getForm();
         rect = canvas.getBoundingClientRect();
         space.add({
-            start: (bounds) => {
+            start: () => {
                 pts = Create.distributeRandom( space.innerBound, 300 );
             },
             animate: (time, ftime, space) => {
-                pts.sort( (a,b) => a.$subtract(mouse).magnitudeSq() - b.$subtract(mouse).magnitudeSq() );
+                pts.sort( (a,b) => a.$subtract(mouse).magnitude() - b.$subtract(mouse).magnitude() );
                 for (let i=1; i < 10; i++) {
                     form.fillOnly("#123").points( pts.slice(0, 10), 3, "circle" );
                 }
                 for (let i=0; i < 10; i++) {
-                    form.strokeOnly('#0d47a1', 2).line( [ pts[i], mouse ] );
+                    form.strokeOnly('#0d47a1', 2).line( [ pts[i], pts[0] ] );
                 }
                 form.fill("#f03").point( pts[0], 6, "circle" );
                 form.fillOnly("#123").points( pts.slice(10), 2, "circle" );
