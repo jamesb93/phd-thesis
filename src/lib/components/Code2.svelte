@@ -75,14 +75,14 @@
 		min-height: 40px;
 		flex-direction: row;
 		justify-content: space-between;
-		border: 1px solid #eeeeee;
+		border: 1px solid #f7f7f7;
 		background: #ededed;
 		box-shadow: none;
 		border-radius: 0px;
 	}
 
 	#top-bar:hover {
-		background-color: #f7f7f7;
+		background-color: #dfdfdf;
 	}
 
 </style>
