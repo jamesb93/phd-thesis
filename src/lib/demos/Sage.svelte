@@ -2,46 +2,54 @@
     import { onMount } from "svelte";
     import Container from '$lib/components/Container.svelte';
 
-    export let title = "title";
+    export let title = "Random Recombination Of Vocal Segments";
+    export let caption = "DEMO 1"
     export let id = "";
 
     let sounds = {
         pre : {
             file: '/ss/sage-pre.mp3',
             peaks: '/ss/sage-pre.dat',
+            slices : '/ss/pre.json',
             overview: null,
             instance: null,
             audioElement : null,
-            slices : '/ss/pre.json'
+            segments : []
         },
         post : {
             file: '/ss/sage-post.mp3',
-            peaks: '/ss/sage-pre.mp3',
+            peaks: '/ss/sage-post.dat',
+            slices : '/ss/post.json',
             overview: null,
             instance: null,
             audioElement : null,
-            slices : '/ss/post.json'
+            segments : []
         },
     }
 
     let Peaks, peaksControls;
 
     onMount (async()=>{
-
-        // Fetch data
-        
-        const module = await import("peaks.js");
-        Peaks = module.default;
-    
         for ( const [key, wf] of Object.entries(sounds)) {
+            await fetch(wf.slices)
+                .then(response => response.json())
+                .then(data => {
+                    wf.segments = data.segments.map(seg => { return {
+                            startTime : seg.start / 44100,
+                            endTime : seg.end / 44100,
+                            color : seg.color,
+                            editable: false
+                        } 
+                    })
+                })
+
+            const module = await import("peaks.js");
+            Peaks = module.default;
             const options = {
-                containers: {
-                    overview: wf.overview
-                },
-                dataUri: { 
-                    arraybuffer: wf.peaks
-                },
+                containers: {overview: wf.overview},
+                dataUri: { arraybuffer: wf.peaks},
                 mediaElement: wf.audioElement,
+                height: 100,
                 overviewWaveformColor: 'rgba(0, 15, 100, 0.3)',
                 overviewHighlightColor: 'grey',
                 playheadColor: 'rgba(0, 0, 0, 1)',
@@ -52,7 +60,7 @@
                 axisLabelColor: '#aaa',
                 randomizeSegmentColor: false,
                 segments: wf.segments
-            }
+            };
 
             wf.instance = Peaks.init(options, (error, instance) => {
                 if (error) {
@@ -64,51 +72,67 @@
         }
     });
 
+    function playHandler(e){
+        if (e.audioElement.paused)
+            e.audioElement.play()
+        else
+            e.audioElement.pause()
+    }
 
 </script>
 
 <Container id={id}>
-    <div class="vis">
-        <div class="overview" bind:this={sounds.pre.overview} />
-        <div class="overview" bind:this={sounds.post.overview} />
+    <div class='top-text'>
+        <div class='title'>{title}</div>
+        <div class='cap'>{caption}</div>
     </div>
-    <div class="peaks-controls" bind:this={peaksControls}>
+    
+    <div class='vis'>
+        <span class='desc'>Original Source</span>
+        <div bind:this={sounds.pre.overview} />
         <audio controls bind:this={sounds.pre.audioElement}>
             <source src={sounds.pre.file} type="audio/mp3">
             <track kind="captions">
         </audio>
+    </div>
+
+    <div class='vis'>
+        <span class='desc'>Segmented and Shuffled Output</span>
+        <div bind:this={sounds.post.overview} />
         <audio controls bind:this={sounds.post.audioElement}>
             <source src={sounds.post.file} type="audio/mp3">
             <track kind="captions">
         </audio>
     </div>
+
 </Container>
 
 
 <style>
-    .overview {
-        margin-left: 3em;
-        margin-right: 3em;
+    .top-text {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    #title {
+    .cap {
+        max-width: max-content;
         font-style: italic;
-        font-size: 16px;
-        text-align: center;
-        display: inline-block;
+    }
+
+    .title {
+        font-weight: bold;
     }
 
     .vis {
-        padding-bottom: 5px;
-        margin: 0 auto;
-    }
-
-    .peaks-controls {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        padding-top: 3px;
-        width: 80%;
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+
+    .vis > audio {
+        max-width: 50%;
         margin: 0 auto;
     }
 </style>

@@ -1,5 +1,5 @@
 <script>
-
+    // TODO: highlight that this DEMO 2 somewhere in the text - probs needs a top bar
     import * as Tone from 'tone';
     import Container from '$lib/components/Container.svelte';
     import Button from '$lib/components/Button.svelte';

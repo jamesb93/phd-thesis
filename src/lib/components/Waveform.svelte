@@ -111,8 +111,6 @@
 </Container>
 
 <style>
-    #waveform-zoom {
-    }
 
     #waveform-overview {
         height: 65px;
@@ -139,11 +137,11 @@
     
     #title {
         text-align: left;
-        font-weight: bold;
+		font-weight: bold;
+
     }
     
     #caption{
-        display: inline-block;
         font-style: italic;
         min-width: max-content;
     }

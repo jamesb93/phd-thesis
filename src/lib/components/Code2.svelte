@@ -15,9 +15,9 @@
 
 <div class='container' id={id}>
 	<button id='top-bar' on:click={ clickHandler }>
-		<div id='figure'>{figure}</div>
+		<div id='caption'>{caption}</div>
 		<div id='top-cap'>
-			<div id='caption'>{caption}</div>
+			<div id='figure'>{figure}</div>
 			<div id='status'>
 				{#if expanded}
 					-
@@ -41,8 +41,7 @@
 <style>
 
 	#status {
-		padding-left: 15px;
-		width: 20px;
+		width: 15px;
 		margin-top: 6px;
 	}
 	#figure {
@@ -52,6 +51,7 @@
 	
 	#caption {
 		text-align: justify;
+		font-weight: bold;
 	}
 
 	#caption, #figure {

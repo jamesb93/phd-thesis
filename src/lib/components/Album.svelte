@@ -136,6 +136,10 @@
         --text-margin: 10px;
     }
 
+    .title {
+        font-weight: bold;
+    }
+
     #name-time {
         display: flex;
         flex-direction: row;
@@ -167,9 +171,6 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-    }
-    .title {
-        font-weight: bold;
     }
     .figure {
         font-style: italic;
