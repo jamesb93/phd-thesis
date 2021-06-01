@@ -5,6 +5,10 @@
 		}
 	],
 	"settings": {
-		"cSpell.enabled": true
+		"cSpell.enabled": true,
+		"cSpell.words": [
+			"elektrosluch",
+			"reacoma"
+		]
 	}
 }
