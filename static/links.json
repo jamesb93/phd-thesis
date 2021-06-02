@@ -241,7 +241,7 @@
             "url": "https://github.com/IoSR-Surrey/untwist"
         },
         {
-            "name": "The Bregmann Toolkit",
+            "name": "The Bregman Toolkit",
             "url": "https://github.com/bregmanstudio/SoundscapeEcology"
         },
         {
@@ -259,6 +259,10 @@
         {
             "name": "Google Research",
             "url": "https://ai.google"
+        },
+        {
+            "name": "\"curse of dimensionality\"",
+            "url": "https://en.wikipedia.org/wiki/Curse_of_dimensionality"
         },
         {
             "name": "Mari Kimura",
