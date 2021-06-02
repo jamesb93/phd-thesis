@@ -405,6 +405,10 @@
             "url": "https://musicalmetacreation.org/"
         },
         {
+            "name": "scikit-learn",
+            "url": "https://scikit-learn.org/stable/"
+        },
+        {
             "name": "OpenMusic (OM)",
             "url": "https://openmusic-project.github.io"
         },
@@ -463,10 +467,6 @@
         {
             "name": "Python",
             "url": "https://www.python.org/"
-        },
-        {
-            "name": "scikit-learn",
-            "url": "https://scikit-learn.org/stable/"
         },
         {
             "name": "JavaScript Object Notation (JSON)",
