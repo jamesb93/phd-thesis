@@ -10,7 +10,6 @@
 
     const options = {
         rootMargin: "0px",
-        threshold : [0.1, 0.9],
     }
 
     function handleIntersect(entries, observer) {

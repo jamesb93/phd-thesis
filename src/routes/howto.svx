@@ -11,7 +11,7 @@
 
 # How To Read This Web Thesis
 
-## Compatability
+## Compatibility
 This thesis supports a number of web browsers. It has been tested on:
 + Firefox +88.0
 + Safari +14.1
