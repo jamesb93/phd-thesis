@@ -1,4 +1,4 @@
-# Content-Awareness in my Sampled-Based Practice
+# Content-Awareness In My Sampled-Based Practice
 This section provides an overview of content-awareness in relation to my compositional practice. To preface this, I outline conceptual and pragmatic areas of machine listening and machine learning, two subject areas that are fundamental to the design of my own content-aware programs. I then provide a technology review by discussing other practices, software and projects where machine listening and content-awareness is pivotal. I conclude this section by situating technology within my practice as "augmentative", in comparison to "semi-supervised" and "unsupervised" approaches.
 
 ## Machine Listening 
