@@ -10,6 +10,7 @@
 			"elektrosluch",
 			"reacoma"
 		],
-		"editor.codeLens": false
+		"editor.codeLens": false,
+		"python.pythonPath": "/Users/james/.virtualenvs/phd/bin/python"
 	}
 }
