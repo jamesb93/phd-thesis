@@ -35,12 +35,14 @@
             observer.disconnect();
         observer = new IntersectionObserver(handleIntersect, {rootMargin: '0px'});
 
-        thisPage.forEach(c => {
-            let element = document.getElementById(c.url);
-            if (element)
-                observer.observe(element);
-        })
-        ready = true;
+        if (thisPage) {
+            thisPage.forEach(c => {
+                let element = document.getElementById(c.url);
+                if (element)
+                    observer.observe(element);
+            })
+            ready = true;
+        }
     }
 
     onMount(async () => {
