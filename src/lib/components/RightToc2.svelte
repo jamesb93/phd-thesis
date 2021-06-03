@@ -7,67 +7,52 @@
     let ready = false;
     let contents = [];
     let thisPage = null;
-    let nodes = ["H1", "H2", "H3", "H4"];
     let tempIntersect;
-
-    const options = {
-        rootMargin: "0px",
-    }
 
     function handleIntersect(entries, observer) {
         let lowest = Infinity;
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                var y = entry.boundingClientRect.y;
+        entries = entries.filter(entry => entry.isIntersecting);
+        if (entries.length > 0) {
+            entries.forEach(entry => {
+                const y = entry.boundingClientRect.y;
                 if (y < lowest) {
                     lowest = y;
                     tempIntersect = entry.target.id; // hold the value for now
                 }
-            }
-        })    
+            })    
+        }
         visibility = tempIntersect;
     }
 
-    function iteratePage() {
-        contents = [];
-        let element = document.getElementById("article");
-        let children = Array.from(element.childNodes);
-        children.forEach(child => {
-            if (nodes.includes(child.tagName)) {
-                contents.push({
-                    depth: child.tagName[1],
-                    url: child.id,
-                    heading: child.textContent
-                })
-            }
-        })
-    }
 
     function clipLinks(t, maxLen) {
         return t.length >= maxLen ? t.substr(0, maxLen)+'...' : t 
     }
+    $: thisPage = contents[$page.path];
 
-    function makeObserver() {
-        iteratePage();
-        observer = new IntersectionObserver(handleIntersect, options);
-        if (contents) {
-            contents.forEach((c) => {
-                let element = document.getElementById(c.url)
+    async function makeObserver() {
+        if (observer)
+            observer.disconnect();
+        observer = new IntersectionObserver(handleIntersect, {rootMargin: '0px'});
+
+        thisPage.forEach(c => {
+            let element = document.getElementById(c.url);
+            if (element)
                 observer.observe(element);
-            })
-        }
+        })
+        ready = true;
     }
 
-    onMount(async() => {
+    onMount(async () => {
         await fetch('/structure.json')
-        .then(response => response.json())
-        .then(data => contents = data)
-        thisPage = contents[$page.path]
-        ready = true;
+            .then(response => response.json())
+            .then(data => contents = data);
+
+        await makeObserver();
     })
 
-    afterUpdate(()=> {
-        thisPage = contents[$page.path]
+    afterUpdate(async()=> {
+        await makeObserver();
     })
 
     onDestroy(() => {
