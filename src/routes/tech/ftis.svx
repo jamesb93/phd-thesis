@@ -375,8 +375,8 @@ When an analyser successfully completes its analysis, it records the hash inside
 By implementing caching the overall usability is improved by tightening the feedback loop between scripting and other aspects of my compositional process. Prior to implementing this feature, I would avoid certain types of analysis or creating long chains of analysers, for fear of having to wait for reanalysis to complete if I changed their parameters or modified the chain between uses. Thus, this created new affordances and a sense of fluidity when using the software.
 
 <NextSection 
-next="Conclusion"
-link={m.conc}
+next="ReaCoMa"
+link={m.reacoma}
 />
 
 <style>

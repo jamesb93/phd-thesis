@@ -54,10 +54,9 @@ mosh convert -i ~/example_input.a -o ~/example_output.wav --bitDepth 16 --numCha
 
 `mosh` would not have been possible without the generous contributions from [Francesco Cameli](https://github.com/vitreo12) to the code base.
 
-
 <NextSection 
-next="ReaCoMa"
-link={m.reacoma}
+next="Finding Things in Stuff"
+link={m.ftis}
 />
 
 <style>

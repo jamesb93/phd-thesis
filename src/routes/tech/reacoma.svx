@@ -112,8 +112,8 @@ id=''
 />
 
 <NextSection 
-next="Finding Things in Stuff"
-link={m.ftis}
+next="Conclusion"
+link={m.conc}
 />
 
 <style>

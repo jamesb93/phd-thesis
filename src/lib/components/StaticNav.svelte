@@ -33,9 +33,8 @@
 
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === m.ti} href="/tech">5. Technical Implementation</a></li>
 		<li><a  on:click={handleClick} class="link subsection" class:selected={$page.path === m.mosh} href={m.mosh}>5.1 mosh</a></li>
-		<li><a  on:click={handleClick} class="link subsection" class:selected={$page.path === m.reacoma} href={m.reacoma}>5.2 ReaCoMa</a></li>
-		<li><a  on:click={handleClick} class="link subsection" class:selected={$page.path === m.ftis} href={m.ftis}>5.3 FTIS</a></li>
-
+		<li><a  on:click={handleClick} class="link subsection" class:selected={$page.path === m.ftis} href={m.ftis}>5.2 FTIS</a></li>
+		<li><a  on:click={handleClick} class="link subsection" class:selected={$page.path === m.reacoma} href={m.reacoma}>5.3 ReaCoMa</a></li>
 
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === m.conc} href={m.conc}>6. Conclusion</a></li>
 		
