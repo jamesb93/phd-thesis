@@ -21,3 +21,5 @@ for i, x in enumerate(videos):
     second_pass = f"ffmpeg -i {str(x)} -hide_banner -v quiet -stats -c:v libvpx-vp9 -b:v 0 -crf 23 -ac 2 -pass 2 -c:a libopus {str(x.with_suffix('.webm'))} -y"
     subprocess.call(first_pass.split(' '))
     subprocess.call(second_pass.split(' '))
+
+subprocess.call(['pmset', 'sleepnow']) 
