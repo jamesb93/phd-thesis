@@ -14,7 +14,7 @@ class="btn zoom">
 <style>
     .btn {
         position: relative;
-        width: fit-content;
+        min-width: 70px;
         height: 2em;
         padding: 5px;
         font-size: 15px;
@@ -25,6 +25,7 @@ class="btn zoom">
         box-shadow: 0 1px 4px rgba(0, 0, 0, .6);    
         color: #ecf0f1;
         transition: background-color .25s;
+        text-align: center;
     }
     
     .btn:before {
