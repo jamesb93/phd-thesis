@@ -2,11 +2,14 @@
 	import NextSection from "$lib/components/NextSection.svelte"
     import {metadata as m} from "./directory.svx"
 
+    import { reAlbum } from '$lib/data/reconstruction-error.js';
+
     import Waveform from '$lib/components/Waveform.svelte';
     import ImageMedia2 from '$lib/components/ImageMedia2.svelte';
     import VideoMedia2 from '$lib/components/VideoMedia2.svelte';
     import YouTube from '$lib/components/YouTube.svelte';
     import Code2 from '$lib/components/Code2.svelte';
+    import Album from '$lib/components/Album.svelte';
 </script>
 
 # How To Read This Web Thesis
@@ -15,7 +18,7 @@
 This thesis supports a number of web browsers. It has been tested on:
 + Firefox +88.0
 + Safari +14.1
-+ Chromium 91
++ Chromium +90 (and thus should support variants such as Edge, Vivaldi, Brave etc...)
 
 If for any reason something is not working or fails to load, please first try viewing the thesis in another browser.
 
@@ -23,14 +26,24 @@ If for any reason something is not working or fails to load, please first try vi
 To navigate to different sections of this thesis, use the left hand navigation panel. The right hand navigation panel allows you to move between the structure of a page more conveniently.
 
 ## Widgets And Interactivity
-There are many interactive elements throughout this thesis, such as annotated waveforms and data visualisations. There are also numerous [hyperlinks (I'm just an example)]() that lead between different parts of the thesis as well as outside. I encourage you to follow to see how these integral digital resources feed into my work and support the research. There five archetypes of interactive widgets that you will see. This will introduce you to them.
+There are many interactive elements throughout this thesis, such as annotated waveforms and data visualisations. There are also numerous [hyperlinks (I'm just an example)]() that lead between different parts of the thesis as well as to external pages. I encourage you to follow to see how these integral digital resources feed into my work and support the research. There five archetypes of interactive widgets that you will see. This will introduce you to them.
 
 ### Waveform or Album
+This is the waveform widget. It shows a single sound file with an overview and zoom waveform view. You can zoom in by clicking the +/- buttons and stop and start the audio with the widget beneath the waveform.
 
 <Waveform 
 file='/howto/pink.mp3'
 peaks='/howto/pink.dat'
 title='Pink noise at -23 LUFS'
+/>
+
+There is also the album widget, which groups together various files. You can select different files from the album by clicking them in the list and then clicking "Play".
+
+<Album 
+tracks={reAlbum}
+title="Reconstruction Error"
+id="audio1"
+figure="AUDIO 1"
 />
 
 ### Image
