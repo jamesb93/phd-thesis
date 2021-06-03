@@ -4,6 +4,7 @@
     import { page } from '$app/stores';
     let visibility;
     let observer = null;
+    let ready = false;
     let contents = [];
     let nodes = ["H1", "H2", "H3", "H4"];
     let tempIntersect;
@@ -14,6 +15,7 @@
 
     function handleIntersect(entries, observer) {
         let lowest = Infinity;
+        let tempIntersect;
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 var y = entry.boundingClientRect.y;
@@ -28,7 +30,7 @@
 
     function iteratePage() {
         contents = [];
-        let element = document.getElementById("article")
+        let element = document.getElementById("article");
         let children = Array.from(element.childNodes);
         children.forEach(child => {
             if (nodes.includes(child.tagName)) {
@@ -57,42 +59,50 @@
     }
 
     onMount(() => {
+        contents = [];
+        ready = false;
         if (observer) {
             observer.disconnect();
         }
         makeObserver();
+        ready = true;
     })
 
     afterUpdate(()=> {
+        contents = [];
+        ready = false;
         if (observer) {
             observer.disconnect();
         }
         makeObserver();
+        ready = true;
     })
 
     onDestroy(() => {
         if (observer) {
             observer.disconnect();
         }
+        contents = [];
+        ready = false;
     })
 
 
 </script>
 
 
-{#if contents}
-    <div class='container'>
-        {#each contents as section}
-                    <a 
-                    class="link depth-{section.depth}" 
-                    href="{$page.path}#{section.url}"
-                    class:shown={visibility === section.url} 
-                    > 
-                        { clipLinks(section.heading, 40) }
-                    </a>
-        {/each}
+<div class='container'>
+        {#if ready === true}
+            {#each contents as section}
+                        <a 
+                        class="link depth-{section.depth}" 
+                        href="{$page.path}#{section.url}"
+                        class:shown={visibility === section.url} 
+                        > 
+                            { clipLinks(section.heading, 40) }
+                        </a>
+            {/each}
+        {/if}
     </div>
-{/if}
 
 
 
