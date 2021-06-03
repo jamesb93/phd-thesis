@@ -15,7 +15,6 @@
 
     function handleIntersect(entries, observer) {
         let lowest = Infinity;
-        let tempIntersect;
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 var y = entry.boundingClientRect.y;
@@ -58,7 +57,7 @@
         }
     }
 
-    onMount(() => {
+    onMount(async () => {
         contents = [];
         ready = false;
         if (observer) {
@@ -68,7 +67,7 @@
         ready = true;
     })
 
-    afterUpdate(()=> {
+    afterUpdate(async()=> {
         contents = [];
         ready = false;
         if (observer) {
