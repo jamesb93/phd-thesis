@@ -6,7 +6,7 @@
     "build": "pnpm run scripts && svelte-kit build",
     "start": "svelte-kit start",
     "scripts": "python scrape_links.py && python get_structure.py",
-    "convert": "pnpm run scrape && sh convert.sh",
+    "convert": "pnpm run scripts && sh convert.sh",
     "update": "svelte-kit build && sh deploy.sh"
   },
   "devDependencies": {
