@@ -4,7 +4,7 @@
     console.log(m)
 </script>
 
-# 5. Technical Implementation and Software
+# Technical Implementation and Software
 
 This section outlines three items of software that have been integral in my compositional process with content-aware programs. For each section within this chapter, I outline my motivations for creating the software and its role in my practice of composing with content-aware programs. 
 
@@ -12,3 +12,30 @@ This section outlines three items of software that have been integral in my comp
 next="mosh"
 link={m.mosh}
 />
+
+<style>
+	h1 {counter-reset: h2}
+    h2 {counter-reset: h3}
+    h3 {counter-reset: h4}
+    h4 {counter-reset: h5}
+
+    h1:before {content: "5." " "}
+
+    h2:before {
+        content: "5." counter(h2, decimal) " ";
+        counter-increment: h2;
+    }
+    h3:before {
+        content: "5." counter(h2, decimal) "." counter(h3, decimal) " ";
+        counter-increment: h3;
+    }
+    h4:before {
+        content: "5." counter(h2, decimal) "." counter(h3, decimal) "." counter(h4, decimal) " ";
+        counter-increment: h4;
+    }
+
+    h2.nocount:before, h3.nocount:before, h4.nocount:before {
+        content : "";
+        counter-increment: none;
+    }
+</style>

@@ -4,10 +4,37 @@
 
 </script>
 
-# 4. Projects
+# Projects
 In this section, I reflect on the compositional process for the five compositional projects and the way that content-awareness is used in computer-aided composition.
 
 <NextSection 
 next="Stitch/Strata"
 link={m.ss}
 />
+
+<style>
+	h1 {counter-reset: h2}
+    h2 {counter-reset: h3}
+    h3 {counter-reset: h4}
+    h4 {counter-reset: h5}
+
+    h1:before {content: "4." " "}
+
+    h2:before {
+        content: "4." counter(h2, decimal) " ";
+        counter-increment: h2;
+    }
+    h3:before {
+        content: "4." counter(h2, decimal) "." counter(h3, decimal) " ";
+        counter-increment: h3;
+    }
+    h4:before {
+        content: "4." counter(h2, decimal) "." counter(h3, decimal) "." counter(h4, decimal) " ";
+        counter-increment: h4;
+    }
+
+    h2.nocount:before, h3.nocount:before, h4.nocount:before {
+        content : "";
+        counter-increment: none;
+    }
+</style>
