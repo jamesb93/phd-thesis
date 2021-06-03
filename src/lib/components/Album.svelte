@@ -2,6 +2,7 @@
     import { onMount } from "svelte";
     import { durations } from '$lib/stores.js';
     import Container from '$lib/components/Container.svelte';
+    import Button from '$lib/components/Button.svelte';
     import { cloudPrefix, noext } from '$lib/utility/paths.js';
 
     export let id = "";
@@ -96,9 +97,11 @@
         </div>
         <div class="vis">
             {#if !loading}
-            <button on:click={ clickHandler }>
+            <!-- <button on:click={ clickHandler }>
                 { playState === true ? 'stop' : 'play' }
-            </button>
+            </button> -->
+
+            <Button clickHandler={clickHandler} text={ playState === true ? 'pause' : 'play'} />
             {/if}
             <div class="overview" bind:this={ overview } />
         </div>
@@ -155,18 +158,14 @@
     .inner {
         padding: 10px;
     }
+
     .vis {
-        display:flex;
-        flex-direction: row;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: 9% 90%;
+        justify-content: space-between;
         padding-top: 10px;
         padding-bottom: 10px;
-    }
-
-    .overview {
-        width: 90%;
         margin: 0 auto;
-        height: 80px;
     }
     .top-text {
         display: flex;
