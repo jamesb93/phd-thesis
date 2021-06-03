@@ -24,6 +24,7 @@ def get_url(line):
     line = line.lstrip()
     line = line.lower()
     line = line.replace(' ', '-')
+    line = line.replace('.', '')
     return line
 
 for page in svx:
@@ -47,4 +48,4 @@ for page in svx:
                 
 
 with open('static/structure.json', 'w') as output:
-    json.dump(structure, output, indent=4)
+    json.dump(structure, output)
