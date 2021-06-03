@@ -49,8 +49,9 @@
 	}
 	
 	#caption {
-		text-align: justify;
+		text-align: left;
 		font-weight: bold;
+		margin-left: 10px;
 	}
 
 	#caption, #figure {
