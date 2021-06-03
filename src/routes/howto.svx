@@ -31,6 +31,8 @@ There are many interactive elements throughout this thesis, such as annotated wa
 ### Waveform or Album
 This is the waveform widget. It shows a single sound file with an overview and zoom waveform view. You can zoom in by clicking the +/- buttons and stop and start the audio with the widget beneath the waveform. You can also scrub through the sound file with your mouse on any of the views.
 
+All audio samples in this document are in a compressed format in order to make the document fast and usable over the web. However, links to high quality WAV files can be found embedded into the audio playback widgets. Look for the *Download Lossless Version* text to navigate to these links. This can be found on the bottom left hand corner of the waveform widget, and in the list of individual album items in the album widget.
+
 <Waveform 
 file='/howto/pink.mp3'
 peaks='/howto/pink.dat'
@@ -47,6 +49,8 @@ figure="AUDIO 1"
 />
 
 ### Image
+This is the image widget. It displays images. They can be maximised if they are too small by clicking the image. This will load the raw file in your browser.
+
 <ImageMedia2 
 url="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/06.gif"
 caption='A visual depiction of the interconnected Fourses oscillators. Though the picture is unlabelled it depicts the boundaries of each Fourse oscillator "ricocheting" off another Fourse. Taken from <a href="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html">http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html</a>'
@@ -56,15 +60,17 @@ htmlCap={true}
 />
 
 ### Video
+The video widget is used to play videos. Click the video to start playback.
 
 <VideoMedia2 
 url="/ss/descriptorspace"
-figure="Video 2"
+figure="VIDEO 2"
 caption="This is a test video."
 id="vid1"
 />
 
 ### Code
+The code widget displays examples of code in a collapsible text box. You can collapse the text by clicking anywhere in the title bar of the widget.
 <Code2>
 
 
@@ -73,11 +79,6 @@ let sampleCode = 'samples!'
 ```
 
 </Code2>
-
-
-
-## Audio Samples
-All audio samples in this document are in a compressed format in order to make the document fast and usable over the web. However, high quality WAV files for  examples can be found embedded into the audio playback widgets.
 
 The source code is available at the [github repo](https://github.com/jamesb93/phd-kit) if you are inclined that way or would like to learn how this was put together.
 
