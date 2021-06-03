@@ -2,4 +2,5 @@
 *.wav binary
 *.dat binary
 *.mp4 binary
+*.mov binary
 *.webm binary

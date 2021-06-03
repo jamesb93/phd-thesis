@@ -7,7 +7,6 @@ build
 docx
 docx-conversion.zip
 .svelte-kit
-*.mov
 txt
 stripped_text.txt
 static/re/db-initial/raw
