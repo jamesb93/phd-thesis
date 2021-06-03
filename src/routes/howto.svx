@@ -29,7 +29,7 @@ To navigate to different sections of this thesis, use the left hand navigation p
 There are many interactive elements throughout this thesis, such as annotated waveforms and data visualisations. There are also numerous [hyperlinks (I'm just an example)]() that lead between different parts of the thesis as well as to external pages. I encourage you to follow to see how these integral digital resources feed into my work and support the research. There five archetypes of interactive widgets that you will see. This will introduce you to them.
 
 ### Waveform or Album
-This is the waveform widget. It shows a single sound file with an overview and zoom waveform view. You can zoom in by clicking the +/- buttons and stop and start the audio with the widget beneath the waveform.
+This is the waveform widget. It shows a single sound file with an overview and zoom waveform view. You can zoom in by clicking the +/- buttons and stop and start the audio with the widget beneath the waveform. You can also scrub through the sound file with your mouse on any of the views.
 
 <Waveform 
 file='/howto/pink.mp3'
