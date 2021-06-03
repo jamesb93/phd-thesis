@@ -27,7 +27,7 @@
         },
     }
 
-    let Peaks, peaksControls;
+    let Peaks;
 
     onMount (async()=>{
         for ( const [key, wf] of Object.entries(sounds)) {
