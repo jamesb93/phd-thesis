@@ -415,8 +415,6 @@ From 0:00 to 2:34, I created a passage of gradually increasing intensity and tex
 
 I imagined that I might proliferate the musical ideas I had built up to this point. However, I could not derive any more novel superimpositions of clusters that I found satisfactory and envisaged that to continue the piece I would need to introduce more material or to move in another musical direction. I decided to keep the material constrained to just the clusters I initially grouped in my annotations and to keep the piece very focused on my initial idea.
 
-<!-- REVIEW: do you need some reflection about the way the samples structured the piece... relate this back to the computer agency -->
-
 ### X86Desc.a
 <Waveform 
 title='X86Desc.a'
