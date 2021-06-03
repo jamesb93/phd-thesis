@@ -3,7 +3,7 @@
     import {metadata as m} from "./directory.svx"
 </script>
 
-# 6. Conclusion
+# Conclusion
 
 This written text has presented five creative projects that outline the development of my computer-aided compositional practice with content-aware programs over the last four years. For each project, I have documented the compositional process and traced the evolution of technological tools and creative coding practice, as well as the growth of musical and compositional ideas specific to those projects. From the tools presented alongside the varying musical outcomes, I hope to have answered the question: *How can I use content-aware programs to compose with digital samples in a studio-based computer-aided compositional practice?*
 
@@ -53,3 +53,30 @@ In addition to this, I anticipate that a frontend interface could support more r
 next="References"
 link={m.ref}
 />
+
+<style>
+	h1 {counter-reset: h2}
+    h2 {counter-reset: h3}
+    h3 {counter-reset: h4}
+    h4 {counter-reset: h5}
+
+    h1:before {content: "6." " "}
+
+    h2:before {
+        content: "6." counter(h2, decimal) " ";
+        counter-increment: h2;
+    }
+    h3:before {
+        content: "6." counter(h2, decimal) "." counter(h3, decimal) " ";
+        counter-increment: h3;
+    }
+    h4:before {
+        content: "6." counter(h2, decimal) "." counter(h3, decimal) "." counter(h4, decimal) " ";
+        counter-increment: h4;
+    }
+
+    h2.nocount:before, h3.nocount:before, h4.nocount:before {
+        content : "";
+        counter-increment: none;
+    }
+</style>

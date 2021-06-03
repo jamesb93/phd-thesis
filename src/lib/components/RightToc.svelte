@@ -58,7 +58,7 @@
         }
     }
 
-    onMount(() => {
+    onMount(async () => {
         contents = [];
         ready = false;
         if (observer) {
@@ -68,7 +68,7 @@
         ready = true;
     })
 
-    afterUpdate(()=> {
+    afterUpdate(async()=> {
         contents = [];
         ready = false;
         if (observer) {
