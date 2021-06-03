@@ -1,6 +1,7 @@
 <script>
 	import StaticNav from "$lib/components/StaticNav.svelte"
 	import RightToc from "$lib/components/RightToc.svelte"
+	import RightToc2 from "$lib/components/RightToc2.svelte"
 	import { page } from "$app/stores";
 	import '../app.css';
 
@@ -53,7 +54,7 @@
 	<div class="pagenav">
 		{#if w > minWidth}
 			{#if !pagesWithoutNav.includes($page.path)}
-			<RightToc/>
+				<RightToc2/>
 			{/if}
 		{/if}
 	</div>
