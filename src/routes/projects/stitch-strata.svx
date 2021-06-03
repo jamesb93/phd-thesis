@@ -165,7 +165,7 @@ Using Python made it possible and easier for me to express a number of organisat
  id='code1'
  figure='CODE 1'
  caption='accum_phrase'
- expanded={false}
+ expanded={true}
  >
 
 ```py
@@ -207,7 +207,7 @@ id="audio3"
 id='code2'
 figure='CODE 2'
 caption='jank'
-expanded={false}
+expanded={true}
 >
 
 ```py
@@ -270,7 +270,7 @@ id="audio5"
 id='code3'
 figure='CODE 3'
 caption='search_small'
-expanded={false}
+expanded={true}
 >
 
 ```py
