@@ -525,7 +525,7 @@ The next project, [{m.emname}]({m.em} ) is the final project in this PhD portfol
 
 Musically, it draws on a similar digital and synthetic sound world to Reconstruction Error. It also continues to explore how the computer can be engaged in a creative dialogue by leveraging dimension reduction and clustering again. This is explored in much more detail facilitated by the flexibility of [FTIS]({m.fits}). That said, the treatment of material is different and I focused on creating longer form works.
 
-## Other Related Links and Media
+## Further Information
 I gave two presentations that discussed this project at different points in its development. The first presentation I gave was at the November 2019 FluCoMa plenary, where the pieces were partially composed and I focused on demonstrating my application of the FluCoMa tools. This can be seen in [VIDEO 13]({m.re}#vid13). Much longer after the pieces had finished and I moved on to composing [{m.emname}]({m.em}), I reflected on the entire development process and its relationship to the compositions in a [short article](https://zenodo.org/record/4285398) for the 2020 AI Music Creativity Conference. This involved creating a short video demo too which can be watched in [VIDEO 14]({m.re}#vid14).
 
 <YouTube 

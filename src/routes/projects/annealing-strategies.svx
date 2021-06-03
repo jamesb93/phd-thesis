@@ -185,7 +185,7 @@ Furthermore, there were moments in the creative process where I was not sure tha
 
 The confluence of many aspects made Annealing Strategies successful, but did not engender a replicable workflow that could be iterated on in the future. After I had completed this project, I felt as if I had explored the semi-supervised and unsupervised range of the spectrum of computer agency. I was able to re-visit and potentially solve many issues I came across in [Stitch/Strata]({m.ss}), but it also raised new questions about how much immediacy and influence I would like to retain in future works. As such, I was motivated going forward to keep experimenting with the different balances of agency in my creative practice. The next project, [Refracted Touch]({m.rt}) investigates how real-time live electronics can be used as a way of structuring formal events through improvisation. In terms of the overall portfolio, it is quite experimental and divergent, perhaps demonstrating a last effort to explore widely before honing my compositional practice toward a more stable set of techniques and practices in [Reconstruction Error]({m.re}) and [{m.emname}]({m.em}).
 
-## Related Links and Media
+## Further Information
 I gave a presentation at the <a href="http://electricspring.co.uk/electric-spring-2018/">2018 Electric Spring Creative Coding Lab Symposium</a> that discussed the motivations and creative process for Annealing Strategies. While this video at times skims over detail due to time constraints of the presentation it is documentation that supports this work and thus deserves inclusion in this thesis. This can be viewed in [VIDEO 3]({m.as}#vid3)
 
 <YouTube 
