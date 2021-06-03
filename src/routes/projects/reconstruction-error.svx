@@ -420,8 +420,8 @@ I imagined that I might proliferate the musical ideas I had built up to this poi
 ### X86Desc.a
 <Waveform 
 title='X86Desc.a'
-file='/pieces/re/X86desc.a.mp3'
-peaks='/pieces/re/X86desc.a.dat'
+file='/pieces/re/X86Desc.a.mp3'
+peaks='/pieces/re/X86Desc.a.dat'
 caption='X86Desc.a'
 points={descPoints}
 />
