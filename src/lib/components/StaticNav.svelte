@@ -16,7 +16,7 @@
 <nav class="container">
 	<Button clickHandler={handleButton} text="toggle justification"/>
 	<ul>
-		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === "./"}	href='.'>Home</a></li>
+		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === "/"}	href='/'>Home</a></li>
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === "/howto"}	href='/howto'>How To</a></li>
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === "/acknowledgements"} href='/acknowledgements'>Acknowledgements</a></li>
 		
