@@ -147,7 +147,7 @@ title='Kindle_04_08.wav segment'
 Following this intuitive desire, I used [FTIS]({m.ftis}) to segment the *active* sounds and then clustered these segments based on their perceptual similarity. This was orchestrated with two separate [FTIS]({m.ftis}) scripts. This [segmentation script](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/micro_segmentation.py) uses the clustered segmentation algorithm to create granular slices and is followed by this [clustering script](https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/micro_clustering.py) which calculates MFCCs for each segment and clusters them using the HDBSCAN algorithm. I explored the results aurally in Max and found that this process rendered perceptually homogenous clusters in terms of texture and morphology. [VIDEO 4]({m.em}#vid4) captures this audition process and demonstrates the perceptual homogeneity.
 
 <VideoMedia2 
-url='/inter/exploring-clusters.webm'
+url='/inter/exploring-clusters'
 caption='Exploring segmented and clustered active material'
 figure='VIDEO 4'
 id='vid4'
@@ -196,7 +196,7 @@ title='Various loop experiments using clusters such as 1, 2, and 37'
 figure='AUDIO 8'
 />
 
-#### Mixing Sounds From [Reconstruction Error]({m.re})
+#### Mixing Sounds From Reconstruction Error
 These experiments were useful in acquainting me with the broader nature of the corpus and were meaningful as a way of stepping back into a compositional mindset after much technical work had taken place. While I was performing them though, I had a constant impression that the amount of variation in the corpus was not enough for me to carry forward initial compositional sketches into something more fully fledged as a piece. Specifically, the more I worked with short segments, the more they seemed to lose their significance when pulled apart from the original temporal structures. This was unlike [Reconstruction Error]({m.re}), in which I found a lot of value in dissecting sounds into atomic units and composing with them in that deconstructed state. 
 
 In response to this I estimated that *combining* the [Reconstruction Error]({m.re}) databending corpus and this electromagnetic induction recording one might expand the possibilities for working with small segments of sounds while maintaining a sense of coherence in the sonic identity of the project. Technically though, this was not straightforward to realise, because [FTIS]({m.ftis}) was built in such a way that a corpus represented files contained inside a single folder. I did not want to "pollute" each corpus by copying them around the file system or have to create copies which would be operated on differently to their master copies. My ideal interface would instead point [FTIS]({m.ftis}) to the location of several different corpora and be able to programmatically combine them at the script level.
@@ -259,7 +259,7 @@ peaks='/inter/find-tuned-centre.dat'
 I auditioned the sounds curated from the [find_tuned.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py) script and found that in the 200 samples there were many cohesive compositional materials. Many had a similarly strong pitched component, while others were texturally similar. A short video capturing this listening process can be seen in [VIDEO 5]({m.em}#vid5)}. I imported all of these files into REAPER and created a longer-form sketch with them which can be heard in [AUDIO 11]({m.em}#aud11). 
 
 <VideoMedia2 
-url='/inter/exploring-tuned-anchors.webm'
+url='/inter/exploring-tuned-anchors'
 caption='Auditioning the output of find_tuned.py'
 figure='VIDEO 5'
 id='vid5'
@@ -330,7 +330,7 @@ At 3:41, I refrained from introducing any new interjections and started developi
 At 6:48 the texturally dense musical behaviour is interrupted by the return of a gesture extracted from the *active* material. This demarcates the beginning of a new section in which I deconstructed and reconstructed this gesture in a number of ways to iterate on, and temporally extend it. In order to achieve this, I used [ReaCoMa]({m.reacoma}) to first create short granular segments which I then rearranged and duplicated into prolonged concatenated sequences. To avoid a sense of strong repetition I then used a Lua script to shuffle the order of those contiguous items randomly. [VIDEO 6]({m.em}#vid6) demonstrates how this was performed.
 
 <VideoMedia2 
-url='/inter/reorganising-material.webm'
+url='/inter/reorganising-material'
 caption='Using ReaCoMa to segment and extend the active gesture '
 figure='VIDEO 6'
 id='vid6'
