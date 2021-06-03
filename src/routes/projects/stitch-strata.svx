@@ -69,7 +69,7 @@ One particular aspect of *By The Stream* that was evocative for me, was the way 
     <p slot="caption">AUDIO 1: By The Stream by Phil Minton and Audrey Chen</p>
 </VideoMedia>
 
-In addition to this work, I came across [Trevor Wishart's](http://www.trevorwishart.co.uk) [*Tongues of Fire*](https://www.youtube.com/watch?v=Ude4717dlsQ) (1994). This piece uses vocal sounds as a source material and introduces signal processing in order to manipulate sounds into new forms. I took particular interest in the way that the Wishart occupied the sonic territory between organic and synthetic presentations of the source material, facilitated by rapid concatenation and processing. 13:06 to 15:24 in particular emphasises this in [VIDEO 1]({m.ss}#video1)
+In addition to this work, I came across [Trevor Wishart's](http://www.trevorwishart.co.uk) *[Tongues of Fire](https://www.youtube.com/watch?v=Ude4717dlsQ)* (1994). This piece uses vocal sounds as a source material and introduces signal processing in order to manipulate sounds into new forms. I took particular interest in the way that the Wishart occupied the sonic territory between organic and synthetic presentations of the source material, facilitated by rapid concatenation and processing. 13:06 to 15:24 in particular emphasises this in [VIDEO 1]({m.ss}#video1)
 
 <YouTube
 url="https://www.youtube.com/embed/Ude4717dlsQ?start=786"

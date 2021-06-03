@@ -51,21 +51,21 @@ id="vid2"
 />
 
 <YouTube
-title="The Wreck of Former Boundaries by Aaron Cassidy"
+title="The Wreck of Former Boundaries (2015) by Aaron Cassidy"
 url="https://www.youtube.com/embed/bLKRJ2GfFEY"
 figure="VIDEO 3"
 id="vid3"
 />
 
 <YouTube
-title="Dark Matter: Transmission by Richard Barrett"
+title="Dark Matter: Transmission (2012) by Richard Barrett"
 url="https://www.youtube.com/embed/ov9ZcOrONiY"
 figure="VIDEO 4"
 id="vid4"
 />
 
 <YouTube
-title="Lichen by Matthew Sergent"
+title="Lichen (2007) by Matthew Sergent"
 url="https://www.youtube.com/embed/b9s-8BPXd58"
 figure="VIDEO 5"
 id="vid5"
@@ -89,7 +89,7 @@ The technicalities of this piece are straightforward. An onset detector generate
 <p slot="caption">VIDEO 6: Martin Parker demonstrating how to configure and run gruntCount.</p>
 </VideoMedia>
 
-Similarly, the work of Owen Green from his PhD thesis was influential to me. I largely drew on signal processing concepts from two pieces, [*Danger in the Air*](http://owengreen.net/portfolio/danger-in-the-air/) and [*Cardboard Cutout*](http://owengreen.net/portfolio/cardboard-cutout/). *Danger in the Air*, features live electronic components that adaptively respond to the input of the performer and occupy a range of agent-like behaviours from sound processing module to co-player. From this work I was inspired by the way that Green made the electronic processing transform over the duration of the piece by having the real-time granular synthesiser's parameters adapt to the sound of the input through audio description and digital signal processing. This adaptivity and temporal evolution was something that I wanted to capture in my own efforts. *Cardboard Cutout*, uses signal decomposition to separate harmonic from percussive components from a live input signal, in this case a bowed cardboard box. Each of these layers is processed with granulation and similar to *Danger in the Air* the granular synthesis adapts and is responsive to the qualities of the input signal through audio descriptors. Green's approach to time and form in this work is constructed as a negotiation between pre-composed sections and the behaviour of the performer which drives a sequencer that moves between those sections. Green describes his approach as follows:
+Similarly, the work of Owen Green from his PhD thesis was influential to me. I largely drew on signal processing concepts from two pieces, *[Danger in the Air](http://owengreen.net/portfolio/danger-in-the-air/)* (2013) and *[Cardboard Cutout](http://owengreen.net/portfolio/cardboard-cutout/)* (2013). *Danger in the Air*, features live electronic components that adaptively respond to the input of the performer and occupy a range of agent-like behaviours from sound processing module to co-player. From this work I was inspired by the way that Green made the electronic processing transform over the duration of the piece by having the real-time granular synthesiser's parameters adapt to the sound of the input through audio description and digital signal processing. This adaptivity and temporal evolution was something that I wanted to capture in my own efforts. *Cardboard Cutout*, uses signal decomposition to separate harmonic from percussive components from a live input signal, in this case a bowed cardboard box. Each of these layers is processed with granulation and similar to *Danger in the Air* the granular synthesis adapts and is responsive to the qualities of the input signal through audio descriptors. Green's approach to time and form in this work is constructed as a negotiation between pre-composed sections and the behaviour of the performer which drives a sequencer that moves between those sections. Green describes his approach as follows:
 
 <div class="bigquote">
 
@@ -422,7 +422,7 @@ I also think that the overall technological approach was too diffuse, and that I
 ### Discrepancies Between Speculation and Reality
 A majority of my speculative design methodology for the modules was based on them responding to specific imagined or designed aspects of the slide guitar. As an improvisational piece, many of these specific ideas never came to fruition and Daryl's style and approach was to explore broad sonic territories and gestural behaviours. In other words, I had implemented many modules that were responsive to aspects of an improvisation I might be interested in, but not necessarily what Daryl would or did do in the performance. For example, we can hear that for the first three states, the onset detection that provokes and controls the electronics doesn't necessarily align in a meaningful way with the gestures Daryl is performing. This difference largely arose because I was testing this interaction with my own samples, and the way that Daryl improvises is so vastly different from my style and performative behaviours. What Daryl and I consider to be extremely quiet were different, and while my artistic planning is necessary and fundamental to the creation of the piece, so is Daryl's comfort and expression as a performer interacting with the computer. In some cases, these two things did not end up coalescing in something which was interactively successful. Similarly, certain states ask the performer to use specific techniques or adhere to constraints such as strings or range. While these are not strict commands I designed the modules to work with certain materials that I had heard Daryl was able to produce in other recordings found online. Undoubtedly though, the natural flow of an improvisation sometimes leads improvisers elsewhere and at times it would not have made musical sense for Daryl to confine himself to those techniques in the moment. As such, the modules belonging to a certain state sometimes were incompatible with the material that Daryl was exploring at that moment in the improvisation.
 
-These forms of discrepancies emerged in states six, seven, eight and nine, where I ask Daryl to only use the lowest pitched three strings (six, five and four). I planned for him to explore extremely low frequency material throughout these states, mainly informed by the sounds that I heard him produce in Matthew Sergeant's piece [Lichen]({m.rt}#video5) at [2:42](https://youtu.be/b9s-8BPXd58?t=162). In the performance though, states six to ten lasted for almost six minutes and I believe that this was too long and constraining for Daryl which is why he decided to explore other techniques and areas of his playing. This allowed him to excite and provoke the electronics in ways that I had not planned, such as in where high material is juxtaposed against the low, fuzzy and distorted electronics, although it diminished many of the core interactive relationships I had planned and set up.
+These forms of discrepancies emerged in states six, seven, eight and nine, where I ask Daryl to only use the lowest pitched three strings (six, five and four). I planned for him to explore extremely low frequency material throughout these states, mainly informed by the sounds that I heard him produce in Matthew Sergeant's piece *[Lichen]({m.rt}#video5)* (2017) at [2:42](https://youtu.be/b9s-8BPXd58?t=162). In the performance though, states six to ten lasted for almost six minutes and I believe that this was too long and constraining for Daryl which is why he decided to explore other techniques and areas of his playing. This allowed him to excite and provoke the electronics in ways that I had not planned, such as in where high material is juxtaposed against the low, fuzzy and distorted electronics, although it diminished many of the core interactive relationships I had planned and set up.
 
 ### Final Remarks
 After listening back to the dress rehearsal and performance recording, I was satisfied in some aspects of the approach, and to me the music was a result that I would not have been able to achieve through an intuitive approach. Despite these successes though, these aspects were not controllable or reproducible due to the sheer complexity of how interactive, real-time improvisational decision making occurs as well as how the sound modules were mostly indeterminate at a micro- and meso- scale and could change each time they were played with.
