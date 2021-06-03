@@ -34,16 +34,32 @@ title='Pink noise at -23 LUFS'
 />
 
 ### Image
-<ImageMedia2 />
+<ImageMedia2 
+url="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/06.gif"
+caption='A visual depiction of the interconnected Fourses oscillators. Though the picture is unlabelled it depicts the boundaries of each Fourse oscillator "ricocheting" off another Fourse. Taken from <a href="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html">http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html</a>'
+figure="IMAGE 1"
+id="img1"
+htmlCap={true}
+/>
 
 ### Video
 
-<VideoMedia2 />
-
-<YouTube />
+<VideoMedia2 
+url="/ss/descriptorspace"
+figure="Video 2"
+caption="This is a test video."
+id="vid1"
+/>
 
 ### Code
-<Code2 />
+<Code2>
+
+
+```js
+let sampleCode = 'samples!'
+```
+
+</Code2>
 
 
 
