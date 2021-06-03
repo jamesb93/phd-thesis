@@ -385,18 +385,18 @@ link={m.reacoma}
     h3 {counter-reset: h4}
     h4 {counter-reset: h5}
 
-    h1:before {content: "5.3." " "}
+    h1:before {content: "5.2." " "}
 
     h2:before {
-        content: "5.3." counter(h2, decimal) " ";
+        content: "5.2." counter(h2, decimal) " ";
         counter-increment: h2;
     }
     h3:before {
-        content: "5.3." counter(h2, decimal) "." counter(h3, decimal) " ";
+        content: "5.2." counter(h2, decimal) "." counter(h3, decimal) " ";
         counter-increment: h3;
     }
     h4:before {
-        content: "5.3." counter(h2, decimal) "." counter(h3, decimal) "." counter(h4, decimal) " ";
+        content: "5.2." counter(h2, decimal) "." counter(h3, decimal) "." counter(h4, decimal) " ";
         counter-increment: h4;
     }
 
