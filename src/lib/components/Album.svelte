@@ -72,8 +72,9 @@
             instance.setSource(options, err => {
                 if (err) console.log(err)
             });
-            audio.play();
-            playState = true;
+            // Automatic playback on selection
+            // audio.play();
+            // playState = true;
         }
     }
 
