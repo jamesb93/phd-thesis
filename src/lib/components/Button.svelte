@@ -16,7 +16,6 @@ class="btn zoom">
         position: relative;
         min-width: 70px;
         height: 2em;
-        padding: 5px;
         font-size: 15px;
         overflow: hidden;
         border-width: 0;

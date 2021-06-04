@@ -19,7 +19,7 @@
         const module = await import("peaks.js");
         Peaks = module.default;
         const options = {
-                containers: {
+            containers: {
                 overview: overview
             },
             dataUri: { arraybuffer: tracks.prefix + tracks.trackData[0].peaks },
@@ -46,9 +46,6 @@
                 instance = p
             }
         })
-
-        // Get Track Lengths
-
     });
 
     function clickHandler() {
@@ -73,19 +70,7 @@
             instance.setSource(options, err => {
                 if (err) console.log(err)
             });
-            // Automatic playback on selection
-            // audio.play();
-            // playState = true;
         }
-    }
-
-    function convertTime(time) {
-        console.log(time)
-        if (time !== null && !Number.isNaN(time)) {
-            const date = new Date(time * 1000).toISOString().substr(11, 8)
-            return date.toString().substr(3);
-        }
-        return 'Invalid Time Format'
     }
 
 </script>
@@ -97,13 +82,10 @@
         </div>
         <div class="vis">
             {#if !loading}
-            <!-- <button on:click={ clickHandler }>
-                { playState === true ? 'stop' : 'play' }
-            </button> -->
-
-            <Button clickHandler={clickHandler} text={ playState === true ? 'pause' : 'play'} />
+                <Button clickHandler={clickHandler} text={ playState === true ? 'pause' : 'play'} />
             {/if}
-            <div class="overview" bind:this={ overview } />
+
+            <div id='overview' bind:this={ overview } />
         </div>
         <div class="peaks-controls">
             <audio bind:this={audio} on:ended={ ()=>playState=false }>
@@ -160,13 +142,17 @@
     }
 
     .vis {
-        display: grid;
-        grid-template-columns: 9% 90%;
+        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         padding-top: 10px;
         padding-bottom: 10px;
-        margin: 0 auto;
     }
+
+    #overview {
+        min-width: 90%;
+    }
+
     .top-text {
         display: flex;
         flex-direction: row;
@@ -186,9 +172,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        margin-left: var(--text-margin);
     }
-
     .track-selector:hover {
         background-color: rgb(240, 240, 240);
     }
@@ -200,12 +184,5 @@
     .duration {
         color: grey;
         margin-right: var(--text-margin);
-    }
-
-    button {
-        height: 30px;
-        border-radius: 0;
-        width: 76px;
-        align-self: center;
     }
 </style>
