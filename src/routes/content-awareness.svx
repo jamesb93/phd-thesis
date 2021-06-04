@@ -261,8 +261,8 @@ I consider this incorporation of content-aware programs in computer-aided compos
 
 ### A Spectrum Of Autonomy
 
-#### Fake Fish Distribution
-An example of a *semi-supervised* approach is *[Fake Fish Distribution*](https://www.icarus.nu/FFD/)* (2012) by [Icarus](https://www.icarus.nu/wp/). This album "in 1000 variations" is created algorithmically, and each copy of the album differs slightly while sharing some structural features across variants of tracks. Using [Max for Live (M4L)](https://www.ableton.com/en/live/max-for-live/) the standard timeline environment of [Ableton Live](https://www.ableton.com/en/) is extended so that fixed "keyframes" (as explained [in this interview with Icarus](https://www.soundonsound.com/news/icarus-fake-fish-distribution)) are represented as edges of breakpoint functions. More detail is provided in [another interview between Icarus and Marsha Vdovin](https://cycling74.com/articles/an-interview-with-icarus).  See [IMAGE 2]({m.ca}#img2) for a depiction of the breakpoint function module they used to interpolate between keyframes and [VIDEO 8]({m.ca}#vid8) for an explanation of how this system was implemented in Ableton Live.
+#### Fake Fish Distribution (2012) - Icarus
+An example of a *semi-supervised* approach is *[Fake Fish Distribution](https://www.icarus.nu/FFD/)* (2012) by [Icarus](https://www.icarus.nu/wp/). This album "in 1000 variations" is created algorithmically, and each copy of the album differs slightly while sharing some structural features across variants of tracks. Using [Max for Live (M4L)](https://www.ableton.com/en/live/max-for-live/) the standard timeline environment of [Ableton Live](https://www.ableton.com/en/) is extended so that fixed "keyframes" (as explained [in this interview with Icarus](https://www.soundonsound.com/news/icarus-fake-fish-distribution)) are represented as edges of breakpoint functions. More detail is provided in [another interview between Icarus and Marsha Vdovin](https://cycling74.com/articles/an-interview-with-icarus).  See [IMAGE 2]({m.ca}#img2) for a depiction of the breakpoint function module they used to interpolate between keyframes and [VIDEO 8]({m.ca}#vid8) for an explanation of how this system was implemented in Ableton Live.
 
 <ImageMedia2
 url="http://1cyjknyddcx62agyb002-web-assets.s3.amazonaws.com/interviews/icarus/BreakpointFunctionEditor.jpg"
@@ -273,7 +273,7 @@ id='img2'
 
 Interpolating between these keyframes provides variation in between known points, so a limited amount of material can be manually composed and further iterations of that material are derived computationally by interpolating along the breakpoint functions between the fixed points. As an external observer, it is not completely transparent to what extent the computer is responsible for deciding how far to interpolate and when to do this. However, the important facet of this generative strategy is that some immediate control over the shape and structure of the music is given away to the computer to produce. In the first interview, they describe a process of drawing shapes into the breakpoint editor in order to guide the result of that process. As such, this approach is *semi-supervised* as they control the computer and its agency is manifest in a process which is ultimately humanly managed.
 
-<VideoMedia>
+<VideoMedia id='vid8'>
 <iframe slot="media" src="https://player.vimeo.com/video/38404732" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <p slot="caption">VIDEO 8: Icarus (Ollie Bown and Sam Britton) in a brief interview about Fake Fish Distribution</p>
 </VideoMedia>
