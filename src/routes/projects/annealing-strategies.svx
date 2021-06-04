@@ -105,11 +105,12 @@ In [Annealing Strategies]({m.as}), SA is used in conjunction with the single inp
 
 A step-by-step procedure is followed to realise this.
 
-1. Generate an origin value
-2. Update the *Fourses* synthesis
-3. Measure the loudness of the synthesis in decibels and pass to the simulated annealing algorithm
-4. Generate a new parameter set
-5. Go to step 2.
+1. Generate an origin value and create new parameters
+2. Update the *Fourses* synthesis with the new parameters
+3. Measure the loudness of the synthesis in decibels
+4. SA evaluates the next move based on loudness measurement
+5. Generate a new parameter set based on the outcome of the SA algorithm
+6. Go to step 2.
 
 This process has several hyperparameters: learning rate, cooling rate and the maximum temperature. Changing these can alter the outcome of using SA in a number of ways, perhaps most importantly by affecting the success of the algorithm in terms of discovering a quiet state. If the system is cooled too quickly, or the temperature does not start sufficiently high, then the algorithm is less likely to discover the global optimum. The learning rate is my own addition to the algorithm which determines the maximum distance from the current state the new state can be. This is scaled to the current temperature so that the algorithm can select states which are not necessarily direct neighbours at high temperatures and only nearby states when the temperature is low.
 
