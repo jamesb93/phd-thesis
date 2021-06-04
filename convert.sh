@@ -29,8 +29,8 @@ echo "--- Converting Tech ---"
 # Tech
 pandoc -f markdown -s src/routes/tech/index.svx -o docx/5-tech.docx
 pandoc -f markdown -s src/routes/tech/mosh.svx -o docx/5.1-mosh.docx
-pandoc -f markdown -s src/routes/tech/reacoma.svx -o docx/5.2-reacoma.docx
-pandoc -f markdown -s src/routes/tech/ftis.svx -o docx/5.3-ftis.docx
+pandoc -f markdown -s src/routes/tech/ftis.svx -o docx/5.2-ftis.docx
+pandoc -f markdown -s src/routes/tech/reacoma.svx -o docx/5.3-reacoma.docx
 
 echo "--- Converting Conclusion ---"
 # Conclusion
