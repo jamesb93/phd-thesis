@@ -33,7 +33,7 @@ id='img1'
 Once the user has configured the parameters they can execute the algorithm by clicking the "OK" button. In response to this the REAPER session will be updated. The nature of the update depends on the type of algorithm. In this case, `fluid-hpss.lua` returns two new takes and appends them to the source media item. This is depicted in [IMAGE 2]({m.reacoma}#img2). One take will contain the harmonic component while the other take will contain the percussive component. This facilitates rapid auditioning of the decomposition results by toggling which take is active. I have found this interface particularly potent in my compositional process as the source material is always stored and attached to the decomposition results, allowing me to follow the development of sonic materials directly in the REAPER session.
 
 <ImageMedia2 
-url="/tech-reacoma/step2.jpg"  
+url="/tech-reacoma/step2.jpg" 
 caption='New takes containing the harmonic and percussive components are appended to the source media item.'
 figure='IMAGE 2'
 id='img2'
@@ -42,7 +42,7 @@ id='img2'
 For the segmentation algorithms (`fluid-onsetslice.lua`, `fluid-noveltyslice.lua`, `fluid-ampslice.lua`, `fluid-ampgate.lua`, `fluid-transientslice.lua`) the original source media item is divided at the slice time points returned by the algorithm. This does not create new audio files on disk, rather, it creates new takes with the original source audio file and adjusts the start and length of those takes. [IMAGE 3]({m.reacoma}#img3) shows a file segmented with `fluid-noveltyslice.lua`.
 
 <ImageMedia2 
-url="/tech-reacoma/step3.jpg"  
+url="/tech-reacoma/step3.jpg" 
 caption='fluid-noveltyslice.lua is used with default parameters, rendering new takes at each slice point.'
 figure='IMAGE 3'
 id='img3'
@@ -72,7 +72,7 @@ ReaCoMa supports the phase of my compositional workflow during which I intuitive
 
 ### Transient Extraction
 
-In [sys.ji_]({m.re}) from [Reconstruction Error]({m.re}), a combination of `fluid.noveltyslice.lua` and `fluid.transients.lua` scripts are used to take a long sample and reshape it into a passage of music. I first deconstructed the sample into short segments which are randomly reshuffled to obfuscate the original morphology. Progressively by the end of this process, these random shuffles are "undone" so that the morphology of the original sample is reconstructed. I then decomposed those segments into a transient and residual component (everything except the transients). A fade in envelope is applied to the residual component and both components are summed together. This modifies the morphological and textural properties of the sound as the residual component is gradually introduced while the transients are exposed.  This functioned to also generate various colours of impulse-based material, and as a way of temporarily suppressing the noisier aspects of the sound. The affordances of being able to treat the sound as two distinct components catalysed the formal shape, thus positioning ReaCoMa in another form of computer-led compositional decision making.  [DEMO 1]({m.reacoma}) allows you to explore this decomposition process interactively.
+In [sys.ji_]({m.re}) from [Reconstruction Error]({m.re}), a combination of `fluid.noveltyslice.lua` and `fluid.transients.lua` scripts are used to take a long sample and reshape it into a passage of music. I first deconstructed the sample into short segments which are randomly reshuffled to obfuscate the original morphology. Progressively by the end of this process, these random shuffles are "undone" so that the morphology of the original sample is reconstructed. I then decomposed those segments into a transient and residual component (everything except the transients). A fade in envelope is applied to the residual component and both components are summed together. This modifies the morphological and textural properties of the sound as the residual component is gradually introduced while the transients are exposed. This functioned to also generate various colours of impulse-based material, and as a way of temporarily suppressing the noisier aspects of the sound. The affordances of being able to treat the sound as two distinct components catalysed the formal shape, thus positioning ReaCoMa in another form of computer-led compositional decision making. [DEMO 1]({m.reacoma}) allows you to explore this decomposition process interactively.
 
 <!-- WIDGET: sys widget -->
 <Sys />

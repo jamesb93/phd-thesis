@@ -78,7 +78,7 @@ Dealing with compositional structure and form with the aid of the computer has b
 
 <div class="bigquote">
 
-*Each edition of gruntCount is personalised from the outset, with composer and performer working together to produce the elements of a system for creating well-­‐defined and structured musical pieces that invite liberal performer input, spontaneity and intuition. In the bass clarinet version (2012-­‐14), this preparatory stage involved a period of system "training", in which the composer engaged in real-­‐time free improvisations between himself and the player, creating at speed a unique set of interrelated DSP parameter presets... Having designed these settings, gruntCount’s compositional agenda proceeds with the plotting of various journeys or curves through the DSP settings. These curves may resemble a graph or automation curve, but in fact represent specific trajectories through a parameter space, which itself has nested settings within it. There is a formal design here, a quality and style, and yet the manner in which the piece is individuated is entirely defined by the live performer, whose physical efforts (or "grunts") move the assemblage forward.*  (Parker & Furniss, 2014, p. 1) 
+*Each edition of gruntCount is personalised from the outset, with composer and performer working together to produce the elements of a system for creating well-­‐defined and structured musical pieces that invite liberal performer input, spontaneity and intuition. In the bass clarinet version (2012-­‐14), this preparatory stage involved a period of system "training", in which the composer engaged in real-­‐time free improvisations between himself and the player, creating at speed a unique set of interrelated DSP parameter presets... Having designed these settings, gruntCount’s compositional agenda proceeds with the plotting of various journeys or curves through the DSP settings. These curves may resemble a graph or automation curve, but in fact represent specific trajectories through a parameter space, which itself has nested settings within it. There is a formal design here, a quality and style, and yet the manner in which the piece is individuated is entirely defined by the live performer, whose physical efforts (or "grunts") move the assemblage forward.* (Parker & Furniss, 2014, p. 1) 
 
 </div>
 
@@ -141,7 +141,7 @@ id="vid8"
     
 *Granular Synthesis* 
 
-- The  portion of the most recent input from the percussive component is used as the source for a granular synthesis module. This enables the granular synthesis to be dynamic when generating grains, as well as creating a feeling that material is being recycled by the computer. The parameters for this are manually fixed to create a textural companion to the input sound. A demonstration is provided in [VIDEO 10]({m.rt}#vid10)
+- The portion of the most recent input from the percussive component is used as the source for a granular synthesis module. This enables the granular synthesis to be dynamic when generating grains, as well as creating a feeling that material is being recycled by the computer. The parameters for this are manually fixed to create a textural companion to the input sound. A demonstration is provided in [VIDEO 10]({m.rt}#vid10)
 
 <VideoMedia2
 url="/rt/gran-demo"
@@ -197,7 +197,7 @@ caption="Example of accumulation with a sample as input. The original audio is p
 id="vid12"
 />
 
-From this process different interactions can be set up. For example, the envelope length of the resonator module is based on the interval between resets of the harmonic components accumulator. The more harmonic energy that is put into the system, the longer the envelopes become. When the same harmonic accumulator resets, the resonator itself is toggled between the on and off status. My thinking in this regard was that this would make the resonator interactive and playable over longer time scales, rather than having all interactions coupled to local changes.  In the first version of the patch I noted some imagined applications where this idea of accumulation might be useful.
+From this process different interactions can be set up. For example, the envelope length of the resonator module is based on the interval between resets of the harmonic components accumulator. The more harmonic energy that is put into the system, the longer the envelopes become. When the same harmonic accumulator resets, the resonator itself is toggled between the on and off status. My thinking in this regard was that this would make the resonator interactive and playable over longer time scales, rather than having all interactions coupled to local changes. In the first version of the patch I noted some imagined applications where this idea of accumulation might be useful.
 
 ```
 The timers could be used for....
@@ -331,17 +331,17 @@ The following list enumerates the states and points to the times in the recordin
 - *More frequent bursts of intensity*
 - *Use more range*
 
-For these first three states the electronics occupy a background role and the overall dynamic of both Daryl and the electronics  is intended to be quiet. I wanted the guitar and the electronics to be hard to discern from each other and to be interwoven texturally and behaviourally. There is light processing from the cubic nonlinear distortion throughout, and states two and three progressively introduce modules from the *rt.bits* group of modules. These modules perform descriptor-based concatenative synthesis using samples of  extended techniques on a dobro guitar and from modular synthesis. The samples are selected and concatenated based on measuring the input signal of the guitar in terms of spectral centroid and amplitude, with the intention that the morphology of the sound produced from this process will be responsive to Daryl's playing. In addition to this, from state three amplitude onsets from Daryl trigger pre-composed gestural controls that dictate the selection of samples. This is demonstrated in [AUDIO 1]({m.rt}#aud1), a selection from 1:10 to 1:40 which has been isolated in the performance recording.
+For these first three states the electronics occupy a background role and the overall dynamic of both Daryl and the electronics is intended to be quiet. I wanted the guitar and the electronics to be hard to discern from each other and to be interwoven texturally and behaviourally. There is light processing from the cubic nonlinear distortion throughout, and states two and three progressively introduce modules from the *rt.bits* group of modules. These modules perform descriptor-based concatenative synthesis using samples of extended techniques on a dobro guitar and from modular synthesis. The samples are selected and concatenated based on measuring the input signal of the guitar in terms of spectral centroid and amplitude, with the intention that the morphology of the sound produced from this process will be responsive to Daryl's playing. In addition to this, from state three amplitude onsets from Daryl trigger pre-composed gestural controls that dictate the selection of samples. This is demonstrated in [AUDIO 1]({m.rt}#aud1), a selection from 1:10 to 1:40 which has been isolated in the performance recording.
 
 <Waveform 
-title='Pre-composed gestures generated by the rt.bits module group,  isolated in the performance recording.'
+title='Pre-composed gestures generated by the rt.bits module group, isolated in the performance recording.'
 caption='AUDIO 1'
 file='/rt/fixed-gesture.mp3'
 peaks='/rt/fixed-gesture.dat'
 id='aud1'
 />
 
-Daryl also has very limited accumulation to play with in the first two states, which encourages him to be reserved compared to the rest of the piece.  
+Daryl also has very limited accumulation to play with in the first two states, which encourages him to be reserved compared to the rest of the piece. 
 
 **Four | 2:06 - 2:33**
 - Maximum Accumulation: 900
@@ -429,7 +429,7 @@ After listening back to the dress rehearsal and performance recording, I was sat
 
 I came to a similar realisation in this reflection that I had experienced in the previous two pieces; that harnessing the computer for composition is a sensitive process of balancing my compositional control and the computer's contribution to the overall creative process. While I want the computer to influence the emergence of musical ideas and sounds, I need to be able to interact with what it does and build on these outputs. For me, being able to store, modify and have ways of incorporating materials in states of varied completeness is essential to this, but [Refracted Touch]({m.rt}) engendered a workflow that was not based on the creation of materials that could be collected like this. Instead, I had to operate through multiple layers of abstraction and distance. Firstly, I had to create modules to generate sound. Secondly I had to devise mechanisms to organise the behaviour of those modules. Lastly, I had to consider the complex role that a musician would have in this process. Given these issues, the paradigm of live electronics and improvisation was not a path forward from this piece that I believed would have value further in this research.
 
-The next project that is discussed is [Reconstruction Error]({m.re}).  [Reconstruction Error]({m.re}) and [Interferences]({m.em}) are particularly important in the set of works for this PhD thesis in that they developed a computer-aided workflow that had more traction than these first three projects, and spurred on the generation of tools which I have integrated into my practice more deeply.
+The next project that is discussed is [Reconstruction Error]({m.re}). [Reconstruction Error]({m.re}) and [Interferences]({m.em}) are particularly important in the set of works for this PhD thesis in that they developed a computer-aided workflow that had more traction than these first three projects, and spurred on the generation of tools which I have integrated into my practice more deeply.
 
 <NextSection 
 next="Reconstruction Error"
