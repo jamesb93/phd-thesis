@@ -25,7 +25,9 @@ def get_url(line):
     line = line.lower()
     line = line.replace(' ', '-')
     line = line.replace('.', '')
-    line = line.replace('--', '')
+    if line.startswith('--'):
+        line = line.replace('--', '')
+    line = line.replace('/', '')
     return line
 
 for page in svx:
