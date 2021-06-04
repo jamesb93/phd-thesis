@@ -1,4 +1,5 @@
-import { writable, readable } from 'svelte/store';
+import { writable } from 'svelte/store';
+import { browser } from '$app/env';
 
 // Durations for all audio files in the thesis
 export const durations = writable({});
@@ -10,7 +11,9 @@ async function getDurations() {
         console.log(e)
     }
 }
-getDurations()
+
+if (browser)
+    getDurations()
 
 // export const directory = readable({
 //     intro : '/introduction',
