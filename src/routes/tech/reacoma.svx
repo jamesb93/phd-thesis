@@ -6,8 +6,8 @@
     import {metadata as m} from "../directory.svx"
     import X86 from '$lib/demos/reacoma/X86.svelte';
     import MaxwaveStart from '$lib/demos/reacoma/MaxwaveStart.svelte';
-    import MaxwaveEnd from '$lib/demos/reacoma/MaxwaveEnd.svelte';
     import Sys from '$lib/demos/reacoma/Sys.svelte';
+    import NMF from '$lib/demos/reacoma/NMF.svelte';
 </script>
 
 # ReaCoMa
@@ -72,30 +72,44 @@ ReaCoMa supports the phase of my compositional workflow during which I intuitive
 
 ### Transient Extraction
 
-In [sys.ji_]({m.re}) from [Reconstruction Error]({m.re}), a combination of `fluid.noveltyslice.lua` and `fluid.transients.lua` scripts are used to take a long sample and reshape it into a passage of music. I first deconstructed the sample into short segments which are randomly reshuffled to obfuscate the original morphology. Progressively by the end of this process, these random shuffles are "undone" so that the morphology of the original sample is reconstructed. I then decomposed those segments into a transient and residual component (everything except the transients). A fade in envelope is applied to the residual component and both components are summed together. This modifies the morphological and textural properties of the sound as the residual component is gradually introduced while the transients are exposed. This functioned to also generate various colours of impulse-based material, and as a way of temporarily suppressing the noisier aspects of the sound. The affordances of being able to treat the sound as two distinct components catalysed the formal shape, thus positioning ReaCoMa in another form of computer-led compositional decision making. [DEMO 1]({m.reacoma}) allows you to explore this decomposition process interactively.
+In [sys.ji_]({m.re}) from [Reconstruction Error]({m.re}), a combination of `fluid.noveltyslice.lua` and `fluid.transients.lua` scripts are used to take a long sample and reshape it into a passage of music. I first deconstructed the sample into short segments which are randomly reshuffled to obfuscate the original morphology. Progressively by the end of this process, these random shuffles are "undone" so that the morphology of the original sample is reconstructed. I then decomposed those segments into a transient and residual component (everything except the transients). A fade in envelope is applied to the residual component and both components are summed together. This modifies the morphological and textural properties of the sound as the residual component is gradually introduced while the transients are exposed. This functioned to also generate various colours of impulse-based material, and as a way of temporarily suppressing the noisier aspects of the sound. The affordances of being able to treat the sound as two distinct components catalysed the formal shape, thus positioning ReaCoMa in another form of computer-led compositional decision making. [DEMO 1]({m.reacoma}#demo1) allows you to explore this decomposition process by listening to each of the extractions in isolation.
 
-<!-- WIDGET: sys widget -->
-<Sys />
+<Sys 
+title='Transient Extraction In sys.ji_'
+caption='DEMO 1'
+id='demo1'
+/>
 
 In [X86Desc.a]({m.re}#x86desca), a section spanning 1:20 to 1:37 is built from several interlocking streams of impulse-based materials or clicks. These were not created manually; rather, they were discovered by extracting the transients from spectrally complex noise-based source material. With this approach, I was able to find intricate and varied patterns of this type of material by exploring with the extraction algorithm decomposition processes.  This is demonstrated in [DEMO 2]({m.reacoma}#demo2).
 
 <X86 
-title='Transient Extraction in X86Desc.a from Reconstruction Error' 
+title='Transient Extraction in X86Desc.a' 
 caption="DEMO 2" 
 id="demo2"
 />
 
 ### Harmonic-Percussive Source Separation
 In [_.dotmaxwave]({m.re}#_dotmaxwave), `fluid.hpss.lua` is used to separate the harmonic component and percussive component from source material possessing a dominant pitch component and a subtle shade of noise. With this approach, I achieved a high degree of control over the sound that would be otherwise difficult. It also guided me towards structuring the piece around manipulating the relationship between the two extracted components. In this way, the decomposition process situated within a tight feedback loop of listening and processing, facilitated sound discovery and conceptual development. [DEMO 3]({m.reacoma}#demo3) allows you to isolate the harmonic and percussive components to observe the decomposition results in this piece.
-<MaxwaveStart />
+
+<MaxwaveStart 
+title='Harmonic-percussive source separation in _.dotmaxwave'
+id='demo3'
+caption='DEMO 3'
+/>
 
 ### Non-Negative Matrix Factorisation
-<!-- WIDGET: NMF widget -->
-When working with thick and texturally dense sounds, non-negative matrix factorisation (NMF) processing became useful as a means to *unpack* those sounds into distinct components. An example can be found in [Interferences]({m.em}#manchors) at 1:35 and 3:39, in which a sample is split into two channels through NMF decomposition. This disentangles prominent perceptual qualities which are superimposed in the source. The overall morphology and structure of the sound remains intact, but can be manipulated and reconfigured to aid in melding this sound with other materials, especially across the stereo image. [DEMO 4]({m.reacoma}#demo4) allows you to audition the source material before and after it was processed in this way.
+
+When working with thick and texturally dense sounds, non-negative matrix factorisation (NMF) processing became useful as a means to *unpack* those sounds into distinct components. An example can be found in [{m.anchors}]({m.em}#manchors) at 1:35 and 3:39, in which a sample is split into two channels through NMF decomposition. This disentangles prominent perceptual qualities which are superimposed in the source. The overall morphology and structure of the sound remains intact, but can be manipulated and reconfigured to aid in melding this sound with other materials, especially across the stereo image. [DEMO 4]({m.reacoma}#demo4) allows you to audition the source material from [Interferences]({m.em}) that I processed with this technique, before and after the result.
+
+<NMF 
+title='Non-negative matrix factorisation decomposition in {m.anchors}'
+caption='DEMO 4'
+id='demo4'
+/>
 
 ### Chaining Processes
 <!-- WIDGET: chaining video -->
-As I became more fluent with ReaCoMa in my workflow I began to use it in more sophisticated ways, such as by chaining together processes to deconstruct sounds. In [{m.anchors}]({m.em}#manchors) of [Interferences]({m.em}), one particular texture I created serves as a pertinent demonstration for how chaining allowed me to retrieve specific and nested segments from a composite sound and to compose with it directly in REAPER.
+As I became more fluent with ReaCoMa in my workflow I began to use it in more sophisticated ways, such as by chaining together processes to deconstruct sounds. In [{m.anchors}]({m.em}#manchors) from [Interferences]({m.em}), one particular texture I created serves as a pertinent demonstration for how chaining allowed me to retrieve specific and nested segments from a composite sound and to compose with it directly in REAPER.
 
 The resulting texture can be heard at 8:02 in [{m.anchors}]({m.em}#manchors) and was extracted through a multi-step process. I began by decomposing the sound into transient and residual components. Because ReaCoMa produces new takes in this scenario, I could easily toggle between which component I wanted to operate on afterwards. I then used the novelty slicing algorithm on the transient component, which produced segmentations that were perceptually aligned with moments of rapid changes in the signal. Using a ReaCoMa sorting script, I arranged the segments on the timeline by their spectral centroid. This allowed me to then manually audition and select a group of samples with delicate and fragile qualities by listening to sounds only arranged at the right edge of the group of samples. Because these segments are sorted, these were sounds with a high average spectral centroid. Thus, I was able to isolate gentle high frequency material from the longer source material. I then constructed the final texture by intuitively arranging those samples that I extracted from the main section into blocks. [VIDEO 1]({m.reacoma}#vid1) shows how this process worked in practice, although it is a recreation of the steps after the fact.
 
