@@ -1,17 +1,6 @@
 from pathlib import Path
 import json
 
-files = [x for x in Path("src/routes").rglob("*.svx")]
-ignores = ['test', 'references', 'directory', 'index', 'acknowledgements']
-svx = [x for x in files if x.stem not in ignores]
-route_lookup = {
-    'routes' : '',
-    'projects' : '/projects',
-    'tech' : '/tech'
-}
-
-structure = {}
-
 def get_heading(line):
     line = line.rstrip()
     line = line.replace('#', '')
@@ -29,6 +18,17 @@ def get_url(line):
         line = line.replace('--', '')
     line = line.replace('/', '')
     return line
+
+files = [x for x in Path("src/routes").rglob("*.svx")]
+ignores = ['test', 'directory', 'index', 'acknowledgements']
+svx = [x for x in files if x.stem not in ignores]
+route_lookup = {
+    'routes' : '',
+    'projects' : '/projects',
+    'tech' : '/tech'
+}
+
+structure = {}
 
 for page in svx:
     route = route_lookup[page.parent.name]
