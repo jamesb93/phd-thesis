@@ -137,7 +137,7 @@ id="vid8"
 - They have two parameters: a delay time and a feedback amount.
 - They are self-modifying: as the output gets louder, the feedback amount is lowered. The feedback will never exceed 1.0 and attenuating it in this way helps to prevent it from becoming consistently overpowering as well as creating slight variation in response to the input signal.
 - The delay time is modulated to a random value between 1 and 7.9 milliseconds for the first metallic feedback module and 7.34 and 9 milliseconds for the second one. The different delay times and the way that they are connected in series creates complex morphing properties to the processing ranging from tight feedback "plucks" to longer metallic resonances.
-- The output of the short resonators is connected to the input of the first feedback comb filter, making an already resonant and tonal sound become temporally stretched, metallic and giving the impression that that material is being recycled.
+- The output of the short resonators is connected to the input of the first feedback comb filter, making an already resonant and tonal sound become temporally stretched, metallic and giving the impression that material is being recycled.
     
 ##### *Granular Synthesis* 
 

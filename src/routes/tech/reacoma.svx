@@ -91,7 +91,7 @@ In [_.dotmaxwave]({m.re}#_dotmaxwave), `fluid.hpss.lua` is used to separate the 
 
 ### Non-Negative Matrix Factorisation
 <!-- WIDGET: NMF widget -->
-When working with thick and texturally dense sounds, non-negative matrix factorisation (NMF) processing became useful as a means to to *unpack* those sounds into distinct components. An example can be found in [Interferences]({m.em}#manchors) at 1:35 and 3:39, in which a sample is split into two channels through NMF decomposition. This disentangles prominent perceptual qualities which are superimposed in the source. The overall morphology and structure of the sound remains intact, but can be manipulated and reconfigured to aid in melding this sound with other materials, especially across the stereo image. [DEMO 4]({m.reacoma}#demo4) allows you to audition the source material before and after it was processed in this way.
+When working with thick and texturally dense sounds, non-negative matrix factorisation (NMF) processing became useful as a means to *unpack* those sounds into distinct components. An example can be found in [Interferences]({m.em}#manchors) at 1:35 and 3:39, in which a sample is split into two channels through NMF decomposition. This disentangles prominent perceptual qualities which are superimposed in the source. The overall morphology and structure of the sound remains intact, but can be manipulated and reconfigured to aid in melding this sound with other materials, especially across the stereo image. [DEMO 4]({m.reacoma}#demo4) allows you to audition the source material before and after it was processed in this way.
 
 ### Chaining Processes
 <!-- WIDGET: chaining video -->
