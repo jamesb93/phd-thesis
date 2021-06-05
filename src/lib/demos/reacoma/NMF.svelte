@@ -6,44 +6,30 @@
     export let caption = 'DEMO 1';
     export let id = 'demox';
 
-    const prefix = '/tech-reacoma/sys/';
-    const summed = 'summed';
-    const transient = 'transient';
-    const residual = 'residual';
-
-    const sel = '#0d47a1';
-    const nosel = 'rgba(0, 15, 100, 0.3)';
-
-    let lastSelected = 'summed';
+    const prefix = '/tech-reacoma/'
+    const pre = 'nmf-pre'
+    const post = 'nmf-post'
 
     const sounds = {
-        summed: {
-            audio: prefix + summed + '.mp3',
-            peaks: prefix + summed + '.dat',
+        pre: {
+            audio: prefix + pre + '.mp3',
+            peaks: prefix + pre + '.dat',
             instance: null,
             overview: null,
             audioElement: null,
-            displayName: 'Summed'
+            displayName: 'Raw Source'
         },
-        transient: {
-            audio: prefix + residual + '.mp3',
-            peaks: prefix + residual + '.dat',
+        post: {
+            audio: prefix + post + '.mp3',
+            peaks: prefix + post + '.dat',
             instance: null,
             overview: null,
             audioElement: null,
-            displayName: 'Residual'
+            displayName: 'Processed with NMF'
         },
-        residual : {
-            audio: prefix + transient + '.mp3',
-            peaks: prefix + transient + '.dat',
-            instance: null,
-            overview: null,
-            audioElement: null,
-            displayName: 'Transient'
-        }
     }
 
-    let selectedComponent = sounds.summed.displayName;
+    let selectedComponent = sounds.pre.displayName;
     let Peaks;
 
     onMount (async () => {
@@ -75,7 +61,7 @@
                 } else {
                     sounds[key].instance = p
                     sounds[key].instance.views.getView('overview').fitToContainer();
-                    if (key === 'summed') {
+                    if (key === 'pre') {
                         const view = sounds[key].instance.views.getView('overview');
                         view.setWaveformColor('#0d47a1');
                     } else {
@@ -86,25 +72,24 @@
         }
     });
 
-    let playState = false
+    let playState = false;
     $: playStateText = playState === false ? 'Play' : 'Pause'
 
     function playStateHandler() {
 
         if (playState) {
-            sounds.summed.instance.player.pause();
-            sounds.transient.instance.player.pause();
-            sounds.residual.instance.player.pause();
+            sounds.pre.instance.player.pause();
+            sounds.post.instance.player.pause();
         } else {
-            sounds.summed.instance.player.play();
-            sounds.transient.instance.player.play();
-            sounds.residual.instance.player.play();
+            sounds.pre.instance.player.play();
+            sounds.post.instance.player.play();
         }
     }
 
     function handleClick(component) {
-        lastSelected = component;
         selectedComponent = sounds[component].displayName
+        const sel = '#0d47a1';
+        const nosel = 'rgba(0, 15, 100, 0.3)';
         const currentTime = sounds[component].instance.player.getCurrentTime();
 
         for (const [name, c] of Object.entries(sounds)) {   
@@ -117,15 +102,6 @@
                 c.instance.player.seek(currentTime);
             }
         } 
-    }
-
-    function seekView(seek, component) {
-        if (component === lastSelected) {
-            for (const [name, c] of Object.entries(sounds)) {   
-                if (name != component)
-                    c.instance.player.seek(seek.target.currentTime);
-            } 
-        }
     }
 </script>
 
@@ -147,58 +123,37 @@
     <div class="vis">
         <div 
         class='overview' 
-        bind:this={sounds.summed.overview} 
-        on:mousedown={ () => handleClick('summed') }
+        bind:this={sounds.pre.overview} 
+        on:click={ () => handleClick('pre') }
         />
-
+        
         <div 
         class='overview' 
-        bind:this={sounds.transient.overview} 
-        on:mousedown={ () => handleClick('transient') }
-        />
-
-        <div 
-        class='overview' 
-        bind:this={sounds.residual.overview} 
-        on:mousedown={ () => handleClick('residual') }
+        bind:this={sounds.post.overview} 
+        on:click={ () => handleClick('post') }
         />
     </div>
 
 
-    <div class="vis">
-        <audio 
-        bind:this={sounds.summed.audioElement}
-        on:play={ () => playState = true }
-        on:pause={ () => playState = false }
-        on:ended={ () => playState = false }
-        on:seeking={ (seek) => seekView(seek, 'summed') }
-        >
-            <source src={sounds.summed.audio} type="audio/mp3">
-            <track kind='captions' />
-        </audio>
+    <audio 
+    bind:this={sounds.pre.audioElement}
+    on:play={ () => playState = true }
+    on:pause={ () => playState = false }
+    on:ended={ () => playState = false }
+    >
+        <source src={sounds.pre.audio} type="audio/mp3">
+        <track kind='captions' />
+    </audio>
 
-        <audio 
-        bind:this={sounds.transient.audioElement}
-        on:play={ () => playState = true }
-        on:pause={ () => playState = false }
-        on:ended={ () => playState = false }
-        on:seeking={ (seek) => seekView(seek, 'transient') }
-        >
-            <source src={sounds.transient.audio} type="audio/mp3">
-            <track kind='captions' />
-        </audio>
-
-        <audio 
-        bind:this={sounds.residual.audioElement}
-        on:play={ () => playState = true }
-        on:pause={ () => playState = false }
-        on:ended={ () => playState = false }
-        on:seeking={ (seek) => seekView(seek, 'residual') }
-        >
-            <source src={sounds.residual.audio} type="audio/mp3">
-            <track kind='captions' />
-        </audio>
-    </div>
+    <audio 
+    bind:this={sounds.post.audioElement}
+    on:play={ () => playState = true }
+    on:pause={ () => playState = false }
+    on:ended={ () => playState = false }
+    >
+        <source src={sounds.post.audio} type="audio/mp3">
+        <track kind='captions' />
+    </audio>
 </Container>
 
 <style>
