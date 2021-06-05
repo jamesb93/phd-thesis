@@ -73,7 +73,8 @@
                         <a 
                         class="link depth-{section.indent}" 
                         href="{$page.path}#{section.url}"
-                        class:shown={visibility === section.url} 
+                        class:shown={visibility === section.url}
+                        on:click={ visibility = section.url } 
                         > 
                             { clipLinks(section.heading, 40) }
                         </a>
