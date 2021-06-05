@@ -157,8 +157,8 @@
             "url": "http://www.e--j.com/WordPress/wp-content/SBCM09_Malt_Jourdan_v1.2.pdf"
         },
         {
-            "name": "Fluid Corpus Manipulation (FluCoMa)",
-            "url": "https://www.flucoma.org"
+            "name": "Fluid Decomposition Toolbox",
+            "url": "https://pure.hud.ac.uk/ws/portalfiles/portal/17022941/towardscorpus_final.pdf"
         },
         {
             "name": "Python",
@@ -247,6 +247,10 @@
         {
             "name": "Spleeter",
             "url": "https://github.com/deezer/spleeter"
+        },
+        {
+            "name": "Fluid Corpus Manipulation (FluCoMa) project",
+            "url": "https://www.flucoma.org/"
         },
         {
             "name": "Tone Transfer",
@@ -391,10 +395,6 @@
         {
             "name": "MIMIC",
             "url": "https://mimicproject.com/about"
-        },
-        {
-            "name": "FluCoMa",
-            "url": "https://www.flucoma.org/"
         },
         {
             "name": "AI Music Creativity",
