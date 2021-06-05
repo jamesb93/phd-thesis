@@ -188,8 +188,6 @@ caption="Cubic non-linear distortion module with two different samples from Dary
 id="vid11"
 />
 
-<!-- REVIEW aesthetic decisions for accumulation -->
-
 Alongside the sound processing modules, I began creating modules that could create change in the sound processing modules over time. These would create or interpret events (such as those from onsets), or drive modifications to parameters in response to the input signal. I decided on an approach of *accumulation*, whereby the values of the incoming live signal are measured and accumulated up to a specified limit. Once the limit has been reached, the accumulator resets and triggers a generic event that can be used to cause changes elsewhere in the patch. An example of this is demonstrated in [VIDEO 12]({m.rt}#vid12).
 
 <VideoMedia2 
