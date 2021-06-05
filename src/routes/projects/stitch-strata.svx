@@ -372,7 +372,7 @@ peaks="/ss/a+b.dat"
 id="audio11"
 />
 
-Even given the radical paradigm shift towards Python, I returned to using the dynamic descriptor-query approach, described in [[4.1.2.3 Attempts To Have The Computer Generate Form]]({m.ss}#attempts-to-make-the-computer-generate-form). This became a pivotal method for generating material that I then manually composed with. It was useful in creating contrasting gestural material in comparison to the more static and iterated nature of the Python scripts output. The first section of the piece is entirely composed from long dynamic queries spanning up to a minute. This created slowly evolving gestures where the change in query increases the spectral bandwidth and diversity of samples selected. This is demonstrated in [AUDIO 12]({m.ss}#audio12).
+Even given the radical paradigm shift towards Python, I returned to using the dynamic descriptor-query approach, described in [[4.1.2.3 Attempts To Have The Computer Generate Form]]({m.ss}#attempts-to-make-the-computer-generate-form). This became a pivotal method for generating material that I then manually composed with. It was useful in creating contrasting gestural material in comparison to the more static and iterated nature of the Python scripts output. The first section of the piece is entirely composed of long dynamic queries spanning up to a minute. This created slowly evolving gestures where the change in query increases the spectral bandwidth and diversity of samples selected. This is demonstrated in [AUDIO 12]({m.ss}#audio12).
 
 <Waveform
 title='Dynamic descriptor query outputs (1)'

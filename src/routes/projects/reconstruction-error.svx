@@ -402,7 +402,7 @@ segments={isnSegments}
 points={isnPoints}
 />
 
-[--isn]({m.re}#isn) is composed from clusters of samples with short impulse-based material. While composing I was often using the annotations and notes I made for each cluster as a way of informing me of what samples to experiment with next. I noticed that I classified a large number of clusters as "short", "fast" and "delicate". This specific portion can be read [here](https://github.com/jamesb93/reconstruction_error/blob/master/clusters.md#short-fast--delicate).
+[--isn]({m.re}#isn) is composed using clusters of samples with short impulse-based material. While composing I was often using the annotations and notes I made for each cluster as a way of informing me of what samples to experiment with next. I noticed that I classified a large number of clusters as "short", "fast" and "delicate". This specific portion can be read [here](https://github.com/jamesb93/reconstruction_error/blob/master/clusters.md#short-fast--delicate).
 
 <!-- <ISN /> -->
 <!-- WIDGET: maxwave start, able to select different streams of impulses overlapping each other-->
