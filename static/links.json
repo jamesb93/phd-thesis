@@ -309,7 +309,7 @@
             "url": "https://discourse.flucoma.org/t/nnsize-question/450/27"
         },
         {
-            "name": "simulated annealing (SA)",
+            "name": "simulated Annealing (SA)",
             "url": "https://en.wikipedia.org/wiki/Simulated_annealing"
         },
         {
@@ -589,10 +589,6 @@
             "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/isolate_sample.py"
         },
         {
-            "name": "this section of Reconstruction Error",
-            "url": "http://localhost:3001/projects/reconstruction-error#vid12"
-        },
-        {
             "name": "ELISION Ensemble",
             "url": "https://www.elision.org.au"
         },
@@ -685,7 +681,7 @@
             "url": "https://github.com/flucoma/FluidCorpusMap"
         },
         {
-            "name": "SoX (Sound eXchange )",
+            "name": "SoX (Sound eXchange)",
             "url": "http://sox.sourceforge.net"
         },
         {
