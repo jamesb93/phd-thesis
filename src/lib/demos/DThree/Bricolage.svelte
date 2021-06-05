@@ -72,7 +72,6 @@
             counter += 1
         }
     })
-    // TODO: weighted nodes, so there can be more importance on content-aware program output
     onMount(() => {
         let svg = d3.select(container)
         simulation = d3.forceSimulation(nodes)
