@@ -85,7 +85,7 @@ caption="DEMO 2"
 id="demo2"
 />
 
-### Harmonic Percussive Source Separation
+### Harmonic-Percussive Source Separation
 In [_.dotmaxwave]({m.re}#_dotmaxwave), `fluid.hpss.lua` is used to separate the harmonic component and percussive component from source material possessing a dominant pitch component and a subtle shade of noise. With this approach, I achieved a high degree of control over the sound that would be otherwise difficult. It also guided me towards structuring the piece around manipulating the relationship between the two extracted components. In this way, the decomposition process situated within a tight feedback loop of listening and processing, facilitated sound discovery and conceptual development. [DEMO 3]({m.reacoma}#demo3) allows you to isolate the harmonic and percussive components to observe the decomposition results in this piece.
 <MaxwaveStart />
 
