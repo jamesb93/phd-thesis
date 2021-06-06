@@ -1,6 +1,11 @@
 {
     "references" : [
         {
+            "id": "flucoma",
+            "name" : "Tremblay, P. A., Green, O., Roma, G., & Harker, A. (2019, March). From collections to corpora: Exploring sounds through fluid decomposition. In *International Computer Music Conference and New York City Electroacoustic Music Festival.*",
+            "url" : "https://pure.hud.ac.uk/ws/files/17022941/towardscorpus_final.pdf"
+        },
+        {
             "id" : "two-pass-segmentation",
             "name" : "Lefèvre, S., & Vincent, N. (2011). A two level strategy for audio segmentation. *Digital Signal Processing, 21*(2), 270-277.",
             "url" : "https://hal.archives-ouvertes.fr/hal-00512744/document"
