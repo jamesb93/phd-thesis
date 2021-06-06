@@ -1,9 +1,10 @@
 <script>
-    import NextSection from "$lib/components/NextSection.svelte"
-    import Waveform from "$lib/components/Waveform.svelte"
-    import YouTube from "$lib/components/YouTube.svelte"
-    import ImageMedia2 from "$lib/components/ImageMedia2.svelte"
-    import {metadata as m} from "../directory.svx"
+    import {metadata as m} from "../directory.svx";
+    import NextSection from "$lib/components/NextSection.svelte";
+    import Waveform from "$lib/components/Waveform.svelte";
+    import YouTube from "$lib/components/YouTube.svelte";
+    import ImageMedia2 from "$lib/components/ImageMedia2.svelte";
+    import VideoMedia2 from '$lib/components/VideoMedia2.svelte';
     import X86 from '$lib/demos/reacoma/X86.svelte';
     import MaxwaveStart from '$lib/demos/reacoma/MaxwaveStart.svelte';
     import Sys from '$lib/demos/reacoma/Sys.svelte';
@@ -108,12 +109,26 @@ id='demo4'
 />
 
 ### Chaining Processes
-<!-- WIDGET: chaining video -->
 As I became more fluent with ReaCoMa in my workflow I began to use it in more sophisticated ways, such as by chaining together processes to deconstruct sounds. In [{m.anchors}]({m.em}#manchors) from [Interferences]({m.em}), one particular texture I created serves as a pertinent demonstration for how chaining allowed me to retrieve specific and nested segments from a composite sound and to compose with it directly in REAPER.
 
-The resulting texture can be heard at 8:02 in [{m.anchors}]({m.em}#manchors) and was extracted through a multi-step process. I began by decomposing the sound into transient and residual components. Because ReaCoMa produces new takes in this scenario, I could easily toggle between which component I wanted to operate on afterwards. I then used the novelty slicing algorithm on the transient component, which produced segmentations that were perceptually aligned with moments of rapid changes in the signal. Using a ReaCoMa sorting script, I arranged the segments on the timeline by their spectral centroid. This allowed me to then manually audition and select a group of samples with delicate and fragile qualities by listening to sounds only arranged at the right edge of the group of samples. Because these segments are sorted, these were sounds with a high average spectral centroid. Thus, I was able to isolate gentle high frequency material from the longer source material. I then constructed the final texture by intuitively arranging those samples that I extracted from the main section into blocks. [VIDEO 1]({m.reacoma}#vid1) shows how this process worked in practice, although it is a recreation of the steps after the fact.
+The resulting texture can be heard at 8:01 in [{m.anchors}]({m.em}#manchors) as a subtle noise-based sound layered with a prominent pitch tone. This noise layer (which can be heard in isolation in [AUDIO 1]({m.reacoma}#aud1)) was derived through a multi-step extraction and decomposition process, which began with my separation of a source sound into transient and residual components. Because ReaCoMa produces new takes in this scenario, I could easily toggle between which component I wanted to operate on afterwards. I then used the novelty slicing algorithm on the transient component, which produced segmentations that were perceptually aligned with moments of rapid changes in the signal. Using a ReaCoMa sorting script, I arranged the segments on the timeline by their spectral centroid. This allowed me to then manually audition and select a group of samples with delicate and fragile qualities by listening to sounds only arranged at the right edge of the group of samples. Because these segments are sorted, these were sounds with a high average spectral centroid. Thus, I was able to isolate gentle high frequency material from the longer source material. I then constructed the final texture by intuitively arranging those samples that I extracted from the main section into blocks. Further signal processing was applied using harmonic-percussive source separation to remove a lingering pitched component, in combination with waveshaping and dynamic expansion. [VIDEO 1]({m.reacoma}#vid1) shows how this process worked in practice, although it is a recreation of the steps after the fact so the replication of the noise-based layer is not exactly the same.
 
-This process was not designed as a step-by-step plan to begin with and at each stage I would attempt different combinations of processes to try and extract the delicate and fragile sounds from within the block of source material I began with. Being able to audition, test, undo and rapidly weave between different strategies allowed me to find a specific moment of sound across a whole sound file relatively easily.
+<Waveform 
+file='/tech-reacoma/chain-source.mp3'
+peaks='/tech-reacoma/chain-source.dat'
+title='Noise-based layer created by chaining ReaCoMa scripts for interactive decomposition in REAPER'
+caption='AUDIO 1'
+id='aud1'
+/>
+
+<VideoMedia2 
+caption='Chaining ReaCoMa processes for interactive decomposition in REAPER'
+url='/tech-reacoma/chaining'
+figure='VIDEO 1'
+id='vid1'
+/>
+
+This process was not designed as a step-by-step plan to begin with and at each stage I would attempt different combinations of processes to try and extract the delicate and fragile sounds from within the block of source material. Being able to audition, test, undo and rapidly weave between different strategies allowed me to find a specific moment of sound across a whole sound file relatively easily.
 
 ## Further Information
 I produced a series of video tutorials that demonstrate how to install and use ReaCoMa. This video series is useful as a resource that documents how the user facing parts of ReaCoMa work and shows some use cases related to my own practice. The [ReaCoMa Source Code](https://www.github.com/jamesb93/reacoma) is available as well as an external site with additional documentation at https://www.reacoma.xyz.
