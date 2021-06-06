@@ -82,7 +82,7 @@
         </div>
         <div class="vis">
             {#if !loading}
-                <Button clickHandler={clickHandler} text={ playState === true ? 'pause' : 'play'} />
+                <Button clickHandler={clickHandler} text={ playState === true ? 'Pause' : 'Play'} />
             {/if}
 
             <div id='overview' bind:this={ overview } />
