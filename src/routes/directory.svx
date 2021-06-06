@@ -16,6 +16,6 @@ reacoma : /tech/reacoma
 ftis : /tech/ftis
 ref : /references
 biom : https://www.jamesbradbury.xyz/projects/biomimicry
-anchors: anchors
-eee: eee
+anchors: "Divide, Regroup, Truss"
+eee: "Split, Dissolve, Reconstitute"
 ---
