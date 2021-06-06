@@ -265,6 +265,10 @@
             "url": "https://en.wikipedia.org/wiki/Curse_of_dimensionality"
         },
         {
+            "name": "simulated annealing (SA)",
+            "url": "https://en.wikipedia.org/wiki/Simulated_annealing"
+        },
+        {
             "name": "Mari Kimura",
             "url": "http://www.marikimura.com"
         },
@@ -313,10 +317,6 @@
             "url": "https://discourse.flucoma.org/t/nnsize-question/450/27"
         },
         {
-            "name": "simulated Annealing (SA)",
-            "url": "https://en.wikipedia.org/wiki/Simulated_annealing"
-        },
-        {
             "name": "Fourses synthesiser",
             "url": "http://www.ciat-lonbarde.net/fyrall/"
         },
@@ -353,7 +353,7 @@
             "url": "https://www.ableton.com/en/"
         },
         {
-            "name": "in this interview with Icarus",
+            "name": "in this Sound On Sound interview with Icarus",
             "url": "https://www.soundonsound.com/news/icarus-fake-fish-distribution"
         },
         {
@@ -663,6 +663,10 @@
         {
             "name": "Datamatics",
             "url": "https://www.ryojiikeda.com/project/datamatics/"
+        },
+        {
+            "name": "Pimmon's",
+            "url": "https://pimmon.bandcamp.com/"
         },
         {
             "name": "Michael Chinen's",
