@@ -6,7 +6,7 @@ specifiers:
   '@sveltejs/kit': next
   d3: ^6.7.0
   marked: ^2.0.7
-  mdsvex: ^0.9.6
+  mdsvex: ^0.9.7
   peaks.js: ^0.25.0
   pts: ^0.10.6
   rehype-slug: ^4.0.1
@@ -20,7 +20,7 @@ specifiers:
 
 dependencies:
   marked: 2.0.7
-  mdsvex: 0.9.6_svelte@3.38.2
+  mdsvex: 0.9.7_svelte@3.38.2
   peaks.js: 0.25.0
   pts: 0.10.6
   rehype-slug: 4.0.1
@@ -529,8 +529,8 @@ packages:
     resolution: {integrity: sha512-jVU0Nr2B9X3MU4tSK7JP1CMkSvOj7X5l/GboG1tKRw52lLF1x2Ju92Ms9tNetCcbfX3hzlM73zYo2NKkWSfF/A==}
     dev: false
 
-  /mdsvex/0.9.6_svelte@3.38.2:
-    resolution: {integrity: sha512-AMdB7TNC40aE/XZuVhqFLWJGufUHK64/Yre88CEC9jktINp+vmYs1YsmUUM7ophl2Y+6qZwcYE4DPe1PPHVNjA==}
+  /mdsvex/0.9.7_svelte@3.38.2:
+    resolution: {integrity: sha512-oeyqfxOsGC2km90F2BYKZ+XqOhDoMs6ARuYn49Wq3ULxoo7Wjevm6usLrDFuDL2yodCcKwtjjy+9FglWRmpzKg==}
     peerDependencies:
       svelte: 3.x
     dependencies:
@@ -673,8 +673,8 @@ packages:
       path-parse: 1.0.7
     dev: true
 
-  /rollup/2.50.6:
-    resolution: {integrity: sha512-6c5CJPLVgo0iNaZWWliNu1Kl43tjP9LZcp6D/tkf2eLH2a9/WeHxg9vfTFl8QV/2SOyaJX37CEm9XuGM0rviUg==}
+  /rollup/2.51.0:
+    resolution: {integrity: sha512-ITLt9sScNCBVspSHauw/W49lEZ0vjN8LyCzSNsNaqT67vTss2lYEfOyxltX8hjrhr1l/rQwmZ2wazzEqhZ/fUg==}
     engines: {node: '>=10.0.0'}
     hasBin: true
     optionalDependencies:
@@ -814,7 +814,7 @@ packages:
       esbuild: 0.12.6
       postcss: 8.3.0
       resolve: 1.20.0
-      rollup: 2.50.6
+      rollup: 2.51.0
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
