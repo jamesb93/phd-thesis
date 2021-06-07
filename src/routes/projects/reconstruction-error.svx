@@ -370,8 +370,8 @@ The next sections, [_.dotmaxwave]({m.re}#_dotmaxwave), [X86Desc.a]({m.re}#x86des
 ### _.dotmaxwave
 
 <Waveform 
-file='/pieces/re/_.dotmaxwave.mp3'
-peaks='/pieces/re/_.dotmaxwave.dat'
+file='/pieces/Reconstruction Error/_.dotmaxwave.mp3'
+peaks='/pieces/Reconstruction Error/_.dotmaxwave.dat'
 segments={maxwaveSegs}
 title='_.dotmaxwave'
 />
@@ -396,8 +396,8 @@ While composing this first piece I had to work constantly outside REAPER to perf
 ### --isn
 <Waveform
 title="--isn" 
-file='/pieces/re/--isn.mp3'
-peaks='/pieces/re/--isn.dat'
+file='/pieces/Reconstruction Error/--isn.mp3'
+peaks='/pieces/Reconstruction Error/--isn.dat'
 segments={isnSegments}
 points={isnPoints}
 />
@@ -415,8 +415,8 @@ I imagined that I might proliferate the musical ideas I had built up to this poi
 ### X86Desc.a
 <Waveform 
 title='X86Desc.a'
-file='/pieces/re/X86Desc.a.mp3'
-peaks='/pieces/re/X86Desc.a.dat'
+file='/pieces/Reconstruction Error/X86Desc.a.mp3'
+peaks='/pieces/Reconstruction Error/X86Desc.a.dat'
 caption='X86Desc.a'
 points={descPoints}
 />
@@ -438,8 +438,8 @@ In isolation, the results of these types of decomposition processes were uninspi
 ### segmnoittet
 <Waveform 
 title='segmnoittet'
-file='/pieces/re/segmnoittet.mp3'
-peaks='/pieces/re/segmnoittet.dat'
+file='/pieces/Reconstruction Error/segmnoittet.mp3'
+peaks='/pieces/Reconstruction Error/segmnoittet.dat'
 points={segmPoints}
 />
 
@@ -476,8 +476,8 @@ caption='Interactive item spacing with Lua accessing the ReaScript API.'
 ### sys.ji_
 
 <Waveform 
-file='/pieces/re/sys.ji_.mp3'
-peaks='/pieces/re/sys.ji_.dat'
+file='/pieces/Reconstruction Error/sys.ji_.mp3'
+peaks='/pieces/Reconstruction Error/sys.ji_.dat'
 title='sys.ji_'
 points={sysPoints}
 />
