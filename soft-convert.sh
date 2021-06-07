@@ -17,7 +17,7 @@ pandoc -f markdown -s src/routes/projects/stitch-strata.svx -o docx/4.1-stitch-s
 pandoc -f markdown -s src/routes/projects/annealing-strategies.svx -o docx/4.2-annealing-strategies.docx
 pandoc -f markdown -s src/routes/projects/refracted-touch.svx -o docx/4.3-refracted-touch.docx
 pandoc -f markdown -s src/routes/projects/reconstruction-error.svx -o docx/4.4-reconstruction-error.docx
-pandoc -f markdown -s src/routes/projects/electromagnetic.svx -o docx/4.5-electromagnetic.docx
+pandoc -f markdown -s src/routes/projects/interferences.svx -o docx/4.5-interferences.docx
 
 
 echo "--- Converting Tech ---"
