@@ -62,6 +62,13 @@
 
 
 <style>
+
+	.hamburger {
+		width: 35px;
+		height: 5px;
+		background-color: black;
+		margin: 6px 0;
+	}
 	.justify {
 		text-align: justify;
 		text-justify: inter-word;
@@ -84,14 +91,20 @@
 	}
 	svg {
 		min-height: 24px;
+		background: none;
 		transition: transform 0.3s ease-in-out;
 	}
 	svg line {
 		stroke: darkgray;
-		stroke-width: 2;
+		stroke-width: 3;
 	}
+
+	svg:active > * {
+		stroke: rgb(45, 44, 44);
+	}
+
 	.btn {
-		background-color: white;
+		background-color: rgba(255, 255, 255, 0);
 		box-shadow: none;
 		border-width: 0px;
 	}
