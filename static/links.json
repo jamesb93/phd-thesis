@@ -141,10 +141,6 @@
             "url": "https://www.danieleghisi.com/phd/PHDThesis_20180118.pdf"
         },
         {
-            "name": "rectifying the signal",
-            "url": "https://www.sfu.ca/sonic-studio-webdav/handbook/Rectification.html"
-        },
-        {
             "name": "danceability",
             "url": "https://essentia.upf.edu/reference/streaming_Danceability.html"
         },
@@ -153,7 +149,7 @@
             "url": "https://github.com/AlexHarker/AHarker_Externals/tree/master/descriptors/descriptors%7E"
         },
         {
-            "name": "zsa.descriptors",
+            "name": "Zsa.descriptors",
             "url": "http://www.e--j.com/WordPress/wp-content/SBCM09_Malt_Jourdan_v1.2.pdf"
         },
         {
