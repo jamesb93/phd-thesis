@@ -1,9 +1,7 @@
 <script>
 	import NextSection from "$lib/components/NextSection.svelte"
     import {metadata as m} from "./directory.svx"
-
     import { reAlbum } from '$lib/data/reconstruction-error.js';
-
     import Waveform from '$lib/components/Waveform.svelte';
     import ImageMedia2 from '$lib/components/ImageMedia2.svelte';
     import VideoMedia2 from '$lib/components/VideoMedia2.svelte';
@@ -80,7 +78,7 @@ let sampleCode = 'samples!'
 
 </Code2>
 
-The source code is available at the [github repo](https://github.com/jamesb93/phd-kit) if you are inclined that way or would like to learn how this was put together.
+In this text, code is referred to inline using this widget, and if it is a part of the software outputs a relative path from the root of the submitted materials will be provided. You can click the link to directly observe the code hosted on GitHub or read the path to find it in a local copy. For example, [/pieces/4.4 Reconstruction Error/code/python_scripts/scraping/scrape_files.py](https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/scraping/scrape_files.py) refers to the script named `scrape_files.py`, which can be found in the [[4.4 Reconstruction Error]]({m.re}) directory, which is inside the "pieces" top level directory.
 
 <NextSection 
 next="Introduction"
