@@ -17,8 +17,8 @@ export const maxwave = {
 export const reAlbum = {
     prefix : '/pieces/re/',
     trackData : [
-        { name: '--isn', audio: 'isn.mp3', peaks: 'isn.dat' },
-        { name: '_.dotmaxwave', audio: 'dotmaxwave.mp3', peaks: 'dotmaxwave.dat' },
+        { name: '--isn', audio: '--isn.mp3', peaks: '--isn.dat' },
+        { name: '_.dotmaxwave', audio: '_.dotmaxwave.mp3', peaks: '_.dotmaxwave.dat' },
         { name: 'X86Desc.a', audio: 'X86Desc.a.mp3', peaks: 'X86Desc.a.dat' },
         { name: 'segmnoittet', audio: 'segmnoittet.mp3', peaks: 'segmnoittet.dat' },
         { name: 'sys.ji_', audio: 'sys.ji_.mp3', peaks: 'sys.ji_.dat' },

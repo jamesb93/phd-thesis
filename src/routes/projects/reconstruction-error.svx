@@ -370,8 +370,8 @@ The next sections, [_.dotmaxwave]({m.re}#_dotmaxwave), [X86Desc.a]({m.re}#x86des
 ### _.dotmaxwave
 
 <Waveform 
-file='/pieces/re/dotmaxwave.mp3'
-peaks='/pieces/re/dotmaxwave.dat'
+file='/pieces/re/_.dotmaxwave.mp3'
+peaks='/pieces/re/_.dotmaxwave.dat'
 segments={maxwaveSegs}
 title='_.dotmaxwave'
 />
@@ -396,8 +396,8 @@ While composing this first piece I had to work constantly outside REAPER to perf
 ### --isn
 <Waveform
 title="--isn" 
-file='/pieces/re/isn.mp3'
-peaks='/pieces/re/isn.dat'
+file='/pieces/re/--isn.mp3'
+peaks='/pieces/re/--isn.dat'
 segments={isnSegments}
 points={isnPoints}
 />
