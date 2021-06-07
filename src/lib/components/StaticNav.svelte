@@ -1,6 +1,8 @@
 <script>
     import {metadata as m} from "../../routes/directory.svx"
 	import Button from '$lib/components/Button.svelte';
+	import { slide } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
 	import { page } from "$app/stores";
 	export let navshow;
 	export let value;
@@ -13,7 +15,7 @@
 	}
 </script>
 
-<nav class="container">
+<nav class="container" transition:slide="{{ duration: 300, easing: quintOut }}">
 	<Button clickHandler={handleButton} text="toggle justification"/>
 	<ul>
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === "/"}	href='/'>Home</a></li>
