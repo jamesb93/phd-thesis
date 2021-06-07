@@ -94,9 +94,9 @@ export const classifier = {
 ]
 
 export const interAlbum = {
-    prefix : '/pieces/inter/',
+    prefix : '/pieces/Interferences/',
     trackData : [
-        { name: 'eee', audio: 'eee.mp3', peaks: 'eee.dat' },
+        { name: 'G090G10564620B7Q', audio: 'G090G10564620B7Q.mp3', peaks: 'G090G10564620B7Q.dat' },
         { name: 'anchors', audio: 'anchors.mp3', peaks: 'anchors.dat' },
     ]
 }

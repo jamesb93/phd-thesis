@@ -17,5 +17,5 @@ ftis : /tech/ftis
 ref : /references
 biom : https://www.jamesbradbury.xyz/projects/biomimicry
 anchors: "Divide, Regroup, Truss"
-eee: "Split, Dissolve, Reconstitute"
+eee: "G090G10564620B7Q"
 ---

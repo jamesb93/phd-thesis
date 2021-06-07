@@ -15,7 +15,7 @@ export const maxwave = {
 }
 
 export const reAlbum = {
-    prefix : '/pieces/re/',
+    prefix : '/pieces/Reconstruction Error/',
     trackData : [
         { name: '--isn', audio: '--isn.mp3', peaks: '--isn.dat' },
         { name: '_.dotmaxwave', audio: '_.dotmaxwave.mp3', peaks: '_.dotmaxwave.dat' },
