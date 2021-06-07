@@ -10,3 +10,4 @@ docx-conversion.zip
 txt
 stripped_text.txt
 static/re/db-initial/raw
+src/routes/test.svelte
