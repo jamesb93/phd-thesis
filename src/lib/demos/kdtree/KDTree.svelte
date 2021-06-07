@@ -15,15 +15,15 @@
     let canvas;
     let ready = false;
     let pts;
-    let mouse
+    let mouse;
     let rect;
 
     function getMousePos(canvas, evt) {
         // We need to do this manually otherwise when shifting the window the resize is not accounted for.
         rect = canvas.getBoundingClientRect();
         return [
-            (evt.clientX - rect.left) / (rect.right - rect.left) * canvas.width,
-            (evt.clientY - rect.top) / (rect.bottom - rect.top) * canvas.height
+            (evt.clientX - rect.left),
+            (evt.clientY - rect.top)
         ]
     }
 
