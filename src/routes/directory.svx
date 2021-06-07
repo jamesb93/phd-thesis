@@ -7,7 +7,7 @@ ss : /projects/stitch-strata
 as : /projects/annealing-strategies
 rt : /projects/refracted-touch
 re : /projects/reconstruction-error
-em : /projects/electromagnetic
+em : /projects/interferences
 emname: Interferences
 conc : /conclusion
 ti : /tech
@@ -16,6 +16,6 @@ reacoma : /tech/reacoma
 ftis : /tech/ftis
 ref : /references
 biom : https://www.jamesbradbury.xyz/projects/biomimicry
-anchors: "Divide, Regroup, Truss"
+anchors: "Anchors"
 eee: "G090G10564620B7Q"
 ---
