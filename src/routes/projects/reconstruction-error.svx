@@ -10,7 +10,6 @@
     import Waveform from '$lib/components/Waveform.svelte';
     import Points from '$lib/demos/dimension-reduction/Points.svelte';
     import Agglom from '$lib/demos/clustering/Agglom.svelte';
-    import ISN from '$lib/demos/ISN.svelte';
 
     import { 
         reAlbum, ibuffer, generation, 
@@ -64,21 +63,21 @@ A number of artists have experimented with databending in their work and this ha
 <YouTube 
 url="https://www.youtube.com/embed/vN9FrqrPptg"
 figure="VIDEO 3"
-caption="Unitxt Code (Data to AIFF) by Alva Noto"
+caption="Unitxt Code (Data to AIFF) (2008) by Alva Noto"
 id='vid3'
 />
 
 <YouTube 
 url="https://www.youtube.com/embed/eaIrSZIyxxk" 
 figure="VIDEO 4"
-caption="Datamatics (Limited Section) by Ryoji Ikeda"
+caption="Datamatics (2006) (Limited Section) by Ryoji Ikeda"
 id='vid4'
 />
 
 <YouTube 
 url="https://www.youtube.com/embed/AbF8NFanUdQ"
 figure="VIDEO 5"
-caption="Electronic Tax Return by Pimmon"
+caption="Electronic Tax Return (2007) by Pimmon"
 id='vid5'
 />
 

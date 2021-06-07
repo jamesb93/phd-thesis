@@ -17,8 +17,8 @@
 
 <Waveform 
 title="Stitch Strata (Stereo Mixdown)"
-file="/pieces/ss.mp3"
-peaks="/pieces/ss.dat"
+file="/pieces/StitchStrata.mp3"
+peaks="/pieces/StitchStrata.dat"
 id="audio1"
 />
 
