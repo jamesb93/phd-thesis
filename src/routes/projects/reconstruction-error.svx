@@ -24,7 +24,7 @@
 <Album 
 tracks={reAlbum}
 title="Reconstruction Error"
-id="audio1"
+id="aud1"
 figure="AUDIO 1"
 />
 
@@ -151,10 +151,10 @@ title='Samples generated using the mosh command line tool'
 />
 
 ### Segmentation
-Samples generated with [mosh]({m.mosh}) ranged in duration from 1 second to 53 minutes. The longer sounds, in particular, contained several discrete musical ideas, gestures or even what may have been considered sections of whole music. A sample that exemplifies this finding is *libLLVMAMDGPUDecs.a.wav* (see [AUDIO 4]({m.re}#aud4)). I have manually segmented this sample to demonstrate where I perceived such separable divisions.
+Samples generated with [mosh]({m.mosh}) ranged in duration from 1 second to 53 minutes. The longer sounds, in particular, contained several discrete musical ideas, gestures or even what may have been considered sections of whole music. A sample that exemplifies this finding is *libLLVMAMDGPUDecs.a.wav* and can be heard in [AUDIO 4]({m.rt}#aud4). I have manually segmented this sample to demonstrate where I perceived such separable divisions.
 
 <Waveform 
-title='libLLVMAMDGPUDesc.a'
+title='libLLVMAMDGPUDesc.a with my manual segmentation'
 caption='AUDIO 4'
 file='/re/generation/libLLVMAMDGPUDesc.a.mp3'
 peaks = '/re/generation/libLLVMAMDGPUDesc.a.dat'
@@ -364,7 +364,7 @@ caption="Using ReaScript API to create tracks of samples from cluster data."
 id="vid11"
 />
 
-The next sections, [_.dotmaxwave]({m.re}#_dotmaxwave), [X86Desc.a]({m.re}#x86desca), [segmnoittet]({m.re}#segmnoittet), [--isn]({m.re}#isn) and [sys.ji_]({m.re}#sysji_), describe the specific compositional processes for each piece in Reconstruction Error and how the computer informed my compositional choices and led the compositional process.
+The next sections, [[4.4.3.1 _.dotmaxwave]]({m.re}#_dotmaxwave), [[4.4.3.2 --isn]]({m.re}#isn), [[4.4.3.3 X86Desc.a]]({m.re}#x86desca), [[4.4.3.4 segmnoittet]]({m.re}#segmnoittet), and [[4.4.3.5 sys.ji_]]({m.re}#sysji_), describe the specific compositional processes for each piece in Reconstruction Error and how the computer informed my compositional choices and led the compositional process.
 
 ### _.dotmaxwave
 
@@ -373,17 +373,19 @@ file='/pieces/Reconstruction Error/_.dotmaxwave.mp3'
 peaks='/pieces/Reconstruction Error/_.dotmaxwave.dat'
 segments={maxwaveSegs}
 title='_.dotmaxwave'
+id='aud6'
+caption='AUDIO 6'
 />
 
-*_.dotmaxwave* was the first piece I composed. The samples that I used in it were all derived from cluster 131. While listening to this cluster, I realised that the source material was all derived from a particular raw data type with the `.maxwave` extension and possessed similar morphological properties. All of the samples begin in a similar fashion, with four repeated pitched sounds leading into a static texture. These can be listened to in [AUDIO 6]({m.re}#aud6). This static texture contains a predominant pitch component with some quiet and narrow-band noise. I wanted to capitalise on what I had found, to create a track that focused on the relationship between pitch and noise as well as the shared morphology of these samples.
+*_.dotmaxwave* was the first piece I composed. The samples that I used in it were all derived from cluster 131. While listening to this cluster, I realised that the source material was all derived from a particular raw data type with the `.maxwave` extension and possessed similar morphological properties. All of the samples begin in a similar fashion, with four repeated pitched sounds leading into a static texture. These can be heard in [AUDIO 7]({m.re}#aud7). This static texture contains a predominant pitch component with some quiet and narrow-band noise. I wanted to capitalise on what I had found, to create a track that focused on the relationship between pitch and noise as well as the shared morphology of these samples.
 
-I started by importing cluster 131 into REAPER and listening to the samples. I navigated through the cluster relationships and identified those samples which I found to have the most novel differences in the opening sequence. As such, I was able to create a palette of small iterations on the same idea. These are presented in [AUDIO 6]({m.re}#aud6).
+I started by importing cluster 131 into REAPER and listening to the samples. I navigated through the cluster relationships and identified those samples which I found to have the most novel differences in the opening sequence. As such, I was able to create a palette of small iterations on the same idea.
 
 <Album 
 title='Cluster 131 .maxwave sounds'
 tracks={maxwave}
-id='aud6'
-caption='AUDIO 6'
+id='aud7'
+figure='AUDIO 7'
 />
 
 Using the FluCoMa harmonic-percussive source separator, `fluid.bufhpss~`, on the command line, I processed each of the sounds. I achieved a clear separation of these two elements using this technique and found that the percussive components had their own complex morphology and character. However, in the unprocessed version of the samples this component is low in volume and masked by the more dominant pitch sound. I wanted to emphasise the noise component, so I summed the two components back together after increasing the volume of the noise.
@@ -399,6 +401,8 @@ file='/pieces/Reconstruction Error/--isn.mp3'
 peaks='/pieces/Reconstruction Error/--isn.dat'
 segments={isnSegments}
 points={isnPoints}
+caption='AUDIO 8'
+id='aud8'
 />
 
 [--isn]({m.re}#isn) is composed using clusters of samples with short impulse-based material. While composing I was often using the notes I made for each cluster as a way of informing me of what samples to experiment with next. I noticed that I classified a large number of clusters as "short", "fast" and "delicate". This specific portion of my cluster notes can be read [here](https://github.com/jamesb93/reconstruction_error/blob/master/clusters.md#short-fast--delicate).
@@ -416,20 +420,21 @@ I imagined that I might proliferate the musical ideas I had built up to this poi
 title='X86Desc.a'
 file='/pieces/Reconstruction Error/X86Desc.a.mp3'
 peaks='/pieces/Reconstruction Error/X86Desc.a.dat'
-caption='X86Desc.a'
 points={descPoints}
+id='aud9'
+caption='AUDIO 9'
 />
 
 [X86Desc.a]({m.re}#x86desca) iterated on the  material types used in [--isn]({m.re}#isn). It focuses on the incorporation and treatment of similar sound types but expands the palette of transient-based material through processing complex sounds from other clusters with [ReaCoMa]({m.reacoma}). 
 
-For example, the material at 0:45 is created using a transient-extraction algorithm from [ReaCoMa]({m.reacoma}). The original source material, *libLLVM-6.0.dylib_144.wav*, is predominantly pitched and the end result is perhaps not recognisable as derived from the source material due to the removal of the non-transient component of that sound. This process is used throughout the piece to generate different materials. Depending on the morphological properties of the input sound, a number of different quasi-rhythmic patterns are carved away from the spectrally rich sources. For example, at 2:07, one layer of the overall texture was derived by taking a cluster of samples and processing them through the transient-extraction algorithm. I did this with three different settings, to create variations on that material, which I then used to formulate a morphing passage of sound. This is presented in [AUDIO 7]({m.re}#aud7).
+For example, the material at 0:45 is created using a transient-extraction algorithm from [ReaCoMa]({m.reacoma}). The original source material, *libLLVM-6.0.dylib_144.wav*, is predominantly pitched and the end result is perhaps not recognisable as derived from the source material due to the removal of the non-transient component of that sound. This process is used throughout the piece to generate different materials. Depending on the morphological properties of the input sound, a number of different quasi-rhythmic patterns are carved away from the spectrally rich sources. For example, at 2:07, one layer of the overall texture was derived by taking a cluster of samples and processing them through the transient-extraction algorithm. I did this with three different settings, to create variations on that material, which I then used to formulate a morphing passage of sound. This is presented in [AUDIO 10]({m.re}#aud7).
 
 <Waveform 
 title='Material from cluster 165 processed with the transient extraction algorithm in three different ways. 2:07 in X86Desc.a.'
-caption='AUDIO 7'
+caption='AUDIO 10'
+id='aud10'
 file='/re/cluster165-preparation.mp3'
 peaks='/re/cluster165-preparation.dat'
-id='aud7'
 />
 
 In isolation, the results of these types of decomposition processes were uninspiring to me, and the musical effect was underwhelming. However, I found that by layering multiple instances I could create complex interactions between different *streams* of transient-based material. The rest of the piece was intuitively composed around my experimentation with this decomposition and layering process. Overall, this piece contained all of the trailing ideas that I did not want conceptually to pollute [--isn]({m.re}#isn) with. For me, the results were sufficiently distinct to warrant my making a new piece in the album, although the mechanics of composing the piece were quite similar.
@@ -440,16 +445,18 @@ title='segmnoittet'
 file='/pieces/Reconstruction Error/segmnoittet.mp3'
 peaks='/pieces/Reconstruction Error/segmnoittet.dat'
 points={segmPoints}
+id='aud11'
+caption='AUDIO 11'
 />
 
-For this piece, I wanted to create something that was less rhythmically homogenous than the previous tracks and to create something more mechanical and sparse. The first idea I had involved taking clusters that, when concatenated, would create such aspects inherently and without much low-level editing. I found that sample groups often created such results through sequencing if the samples within a cluster had significantly differing lengths. I was able to control and search for this  aspect by selecting samples from different hierarchical levels of the meta-analysis. The deeper I went into the hierarchy, the more similar samples were in both duration and perceptual quality. As such, "high-level" clusters would be more variegated and mixed, while "low-level" clusters were highly constrained and repetitive. A short section of music composed in response to this finding can be heard in [AUDIO 8]({m.re}#aud8}).  
+For this piece, I wanted to create something that was less rhythmically homogenous than the previous tracks and to create something more mechanical and sparse. The first idea I had involved taking clusters that, when concatenated, would create such aspects inherently and without much low-level editing. I found that sample groups often created such results through sequencing if the samples within a cluster had significantly differing lengths. I was able to control and search for this  aspect by selecting samples from different hierarchical levels of the meta-analysis. The deeper I went into the hierarchy, the more similar samples were in both duration and perceptual quality. As such, "high-level" clusters would be more variegated and mixed, while "low-level" clusters were highly constrained and repetitive. A short section of music composed in response to this finding can be heard in [AUDIO 12]({m.re}#aud12}).  
 
 <Waveform 
 file='/re/initial-segm.mp3'
 peaks='/re/initial-segm.dat'
-id='aud8'
+id='aud12'
+caption='AUDIO 12'
 title='A short section of composed music using various clusters of mechanical material.'
-caption='AUDIO 8'
 />
 
 This passage did not develop successfully and I had exhausted a lot of the material which I had collected up to this point. Most, if not all, of this material was derived from cluster 250, so I started following the connections that this cluster had to the other outputs via the meta-analysis. This did not introduce many additional samples, though it did separate the same or similar material into more specific clusters. In [IMAGE 6]({m.re}#img6), the REAPER session of this piece is shown, indicating tracks where each child cluster is positioned alongside its parent cluster into the session. These are colour-coded to represent the shared membership and are annotated such that I could discern from which output they originated.
@@ -479,6 +486,8 @@ file='/pieces/Reconstruction Error/sys.ji_.mp3'
 peaks='/pieces/Reconstruction Error/sys.ji_.dat'
 title='sys.ji_'
 points={sysPoints}
+id='aud13'
+caption='AUDIO 13'
 />
 
 This was the last piece that was composed for the album. It is the most distinct in terms of compositional approach and material used. For me, it signified a developmental milestone in the compositional process, where I was comfortable enough with the corpus that I could navigate almost intuitively and directly towards certain material types. Instead of entirely relying on the computer to seek out sounds, or to be offered potential groupings, I used the knowledge I had accrued by composing the other four pieces. Three of the other pieces, [--isn]({m.re}#isn), [segmnoittet]({m.re}#segmnoittet) and [X86Desc.a]({m.re}#x86desca}), are composed almost entirely with short impulse-based material. The way I structured these sounds focused on their delicacy and fragility, as well as on their quasi-rhythmic and interlocking nature through concatenation. I wanted to compose an antagonist to these pieces, and to draw on materials from the corpus with bombastic and spectrally rich qualities.
