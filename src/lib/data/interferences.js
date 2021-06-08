@@ -1,3 +1,10 @@
+export const eReaderPoints = [ { time: 18.3, editable: false, labelText: 'Interjection'} ]
+
+export const eReaderSegs = [
+    { startTime: 0.0, endTime: 18.3, labelText: 'Static' },
+    { startTime: 18.3, endTime: 136.0, labelText: 'Active' },
+]
+
 export const anchors = {
     prefix: '/inter/anchors/',
     trackData: [
