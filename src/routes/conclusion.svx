@@ -46,7 +46,7 @@ One development to [FTIS]({m.ftis}) that is not explored in depth in this PhD is
 In addition to this, I anticipate that a frontend interface could support more rapid transportation of computer outputs between different creative coding and composition environments. Instead of having to rely on scripts, such as when I would import cluster data into REAPER, I imagine a visual workflow based on rapidly moving data between FTIS and REAPER for example. A potential innovation could be to have FTIS automatically update a REAPER or Max session interactively, thus providing a tighter feedback loop between scripting, visualisation and audition.
 
 <NextSection 
-next="References"
+next="References, Links and Figures"
 link={m.ref}
 />
 
