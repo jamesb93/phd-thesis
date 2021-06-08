@@ -1,6 +1,16 @@
 {
     "references" : [
         {
+            "id" : "biomimicry",
+            "name" : "Bradbury, J. (2017). Biomimicry: Analysis Of A Corpus-Based Interactive Improvisational System. In *In International Computer Music Conference* (pp. 174-178). Shanghai, China.",
+            "url" : "http://hdl.handle.net/2027/spo.bbp2372.2017.027"
+        },
+        {
+            "id" : "mymumepaper",
+            "name" : "Bradbury, J. (2020). Computer-assisted corpus exploration with UMAP and agglomerative clustering. In *Proceedings of the 1st Joint Conference on AI Music Creativity* (p. 4). Stockholm, Sweden: AIMC. http://doi.org/10.5281/zenodo.4285398",
+            "url" : "http://doi.org/10.5281/zenodo.4285398"
+        },
+        {
             "id": "flucoma",
             "name" : "Tremblay, P. A., Green, O., Roma, G., & Harker, A. (2019, March). From collections to corpora: Exploring sounds through fluid decomposition. In *International Computer Music Conference and New York City Electroacoustic Music Festival.*",
             "url" : "https://pure.hud.ac.uk/ws/files/17022941/towardscorpus_final.pdf"
@@ -27,7 +37,7 @@
         },
         {
             "id" : "fasciani",
-            "name" : "Fasciani, S. (2015). Interactive computation of timbre spaces for sound synthesis control. *Sound and Interactivity, 20*, 69.",
+            "name" : "Fasciani, S. (2016). Interactive computation of timbre spaces for sound synthesis control. In *2nd International Symposium on Sound and Interactivity* (pp. 69-78).",
             "url" : "https://ro.uow.edu.au/dubaipapers/751/"
         },
         {
@@ -39,11 +49,6 @@
             "id" : "librosa",
             "name" : "McFee, B., Raffel, C., Liang, D., Ellis, D. P., McVicar, M., Battenberg, E., & Nieto, O. (2015, July). librosa: Audio and music signal analysis in python. In *Proceedings of the 14th python in science conference* (Vol. 8, pp. 18-25).",
             "url" : "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.701.4288&rep=rep1&type=pdf"
-        },
-        {
-            "id" : "mymumepaper",
-            "name" : "Bradbury, J. (2020). Computer-assisted corpus exploration with UMAP and agglomerative clustering. In *Proceedings of the 1st Joint Conference on AI Music Creativity* (p. 4). Stockholm, Sweden: AIMC. http://doi.org/10.5281/zenodo.4285398",
-            "url" : "http://doi.org/10.5281/zenodo.4285398"
         },
         {
             "id" : "fluidcorpusmap",
