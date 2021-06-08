@@ -17,6 +17,7 @@
     let pts;
     let mouse;
     let rect;
+    let numMatches = 25;
 
     function getMousePos(canvas, evt) {
         // We need to do this manually otherwise when shifting the window the resize is not accounted for.
@@ -37,14 +38,14 @@
             },
             animate: (time, ftime, space) => {
                 pts.sort( (a,b) => a.$subtract(mouse).magnitude() - b.$subtract(mouse).magnitude() );
-                for (let i=1; i < 10; i++) {
-                    form.fillOnly("#123").points( pts.slice(0, 10), 3, "circle" );
+                for (let i=1; i < numMatches; i++) {
+                    form.fillOnly("#123").points( pts.slice(0, numMatches), 3, "circle" );
                 }
-                for (let i=0; i < 10; i++) {
-                    form.strokeOnly('#0d47a1', 2).line( [ pts[i], pts[0] ] );
+                for (let j=0; j < numMatches; j++) {
+                    form.strokeOnly('#0d47a1', 2).line( [ pts[j], pts[0] ] );
                 }
-                form.fill("#f03").point( pts[0], 6, "circle" );
-                form.fillOnly("#123").points( pts.slice(10), 2, "circle" );
+                form.fill("#f03").point( pts[0], 10, "circle" );
+                form.fillOnly("#123").points( pts.slice(numMatches), 2, "circle" );
             },
             action: (t,x,y,e) => {
                 mouse = getMousePos(canvas, e)
@@ -66,7 +67,7 @@
                 Each point in this space represents an audio sample, reduced into a two-dimensional representation through analysis and dimension reduction.
             </p>
             <p>
-                As you move the mouse, the nearest sample to the pointer is highlighted in red. The 10 samples closest to this have lines drawn to them and are emboldened.
+                As you move the mouse, the nearest sample to the pointer is highlighted in red. The 25 samples closest to this have lines drawn to them and are emboldened.
             </p>
             <p>
                 This method of navigating through the sample space depicts my <i>k-d approach</i> to finding sounds which are similar to a specifically selected sample within a corpus. The selected sample is represented by the highlighted red point, and the 10 most similar sounds are derived by branching out into nearby space.
