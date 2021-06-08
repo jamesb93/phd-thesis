@@ -93,7 +93,7 @@
             "url": "https://www.alexanderjharker.co.uk/Software.html"
         },
         {
-            "name": "/Pieces/Reconstruction Error/Code/python_scripts/scraping/scrape_files.py",
+            "name": "/Projects/Reconstruction Error/Code/python_scripts/scraping/scrape_files.py",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/scraping/scrape_files.py"
         },
         {
@@ -385,7 +385,7 @@
             "url": "https://tutschku.com/"
         },
         {
-            "name": "here",
+            "name": "\"Transient slice question\"",
             "url": "https://discourse.flucoma.org/t/transient-slice-question/398/6"
         },
         {
@@ -525,6 +525,10 @@
             "url": "https://www.discogs.com/Yasunao-Tone-Solo-For-Wounded-CD/release/408846"
         },
         {
+            "name": "/Projects/Interferences/Code",
+            "url": "https://github.com/jamesb93/interferences"
+        },
+        {
             "name": "circuit bending",
             "url": "https://en.wikipedia.org/wiki/Circuit_bending"
         },
@@ -545,47 +549,55 @@
             "url": "https://soundslikenoise.org/2014/08/31/listening-to-the-inaudible-field-recording-and-the-pursuit-of-the-microsound/"
         },
         {
-            "name": "session.rpp",
+            "name": "/Projects/Interferences/Code/segmentation_scripts/2020-06-18 04-09-54.718681/session.rpp",
             "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation_scripts/2020-06-18%2004-09-54.718681/session.rpp"
         },
         {
-            "name": "clustered_segmentation.py",
+            "name": "/Projects/Interferences/Code/segmentation_scripts/clustered_segmentation.py",
             "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation_scripts/clustered_segmentation.py"
         },
         {
-            "name": "segmentation.py",
+            "name": "/Projects/Interferences/Code/segmentation.py",
             "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation.py"
         },
         {
-            "name": "split_by_activity.py",
+            "name": "/Projects/Interferences/Code/split_by_activity.py",
             "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/split_by_activity.py"
         },
         {
-            "name": "segmentation script",
+            "name": "/Projects/Interferences/Code/micro_segmentation.py",
             "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/micro_segmentation.py"
         },
         {
-            "name": "clustering script",
+            "name": "/Projects/Interferences/Code/micro_clustering.py",
             "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/micro_clustering.py"
+        },
+        {
+            "name": "/Projects/Interferences/Code/outputs/micro_clustering/5_HDBSCluster.json",
+            "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/outputs/micro_clustering/5_HDBSCluster.json"
+        },
+        {
+            "name": "/Projects/Interferences/Code/classification_explorer",
+            "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/classification_explorer.maxpat"
         },
         {
             "name": "operator overloading",
             "url": "https://docs.python.org/3/reference/datamodel.html#special-method-names"
         },
         {
-            "name": "base_materials.py",
+            "name": "/Projects/Interferences/Code/MultiCorpus/scripts/base_materials.py",
             "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/base_materials.py"
-        },
-        {
-            "name": "find_tuned.py",
-            "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py"
         },
         {
             "name": "k-d tree",
             "url": "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html"
         },
         {
-            "name": "three_anchors.py",
+            "name": "/Projects/Interferences/Code/MultiCorpus/scripts/find_tuned.py",
+            "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py"
+        },
+        {
+            "name": "/Projects/Interferences/MultiCorpus/scripts/three_anchors.py",
             "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/three_anchors.py"
         },
         {
@@ -601,7 +613,7 @@
             "url": "https://twitter.com/darylelision?lang=en"
         },
         {
-            "name": "/Pieces/Refracted Touch/Code/Refracted Touch/",
+            "name": "/Projects/Refracted Touch/Code/Refracted Touch/",
             "url": "https://github.com/jamesb93/refracted-touch/tree/main/patcher_versions/Refracted%20Touch"
         },
         {
@@ -701,7 +713,7 @@
             "url": "https://discourse.flucoma.org/t/difficult-segmentation/222"
         },
         {
-            "name": "/Pieces/Reconstruction Error/Code/python_scripts/descriptor_analysis/6_mfcc.py",
+            "name": "/Projects/Reconstruction Error/Code/python_scripts/descriptor_analysis/6_mfcc.py",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/descriptor_analysis/6_mfccs.py"
         },
         {
@@ -713,7 +725,7 @@
             "url": "https://github.com/victorwegeborn/LjudMAP"
         },
         {
-            "name": "/Pieces/Reconstruction Error/Code/python_scripts/dimensionality_reduction/_dimensionality_reduction.py",
+            "name": "/Projects/Reconstruction Error/Code/python_scripts/dimensionality_reduction/_dimensionality_reduction.py",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/dimensionality_reduction/_reduction.py"
         },
         {
@@ -733,11 +745,11 @@
             "url": "https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/clustering/cl_one.json"
         },
         {
-            "name": "/Pieces/Reconstruction Error/Code/python_scripts/clustering/_clustering.py",
+            "name": "/Projects/Reconstruction Error/Code/python_scripts/clustering/_clustering.py",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/clustering/_clustering.py"
         },
         {
-            "name": "/Pieces/Reconstruction Error/Code/python_scripts/clustering/hierarchical_cluster.py",
+            "name": "/Projects/Reconstruction Error/Code/python_scripts/clustering/hierarchical_cluster.py",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/clustering/hierarchical_cluster.py"
         },
         {
@@ -745,7 +757,7 @@
             "url": "https://github.com/jamesb93/reconstruction_error/blob/master/clusters.md"
         },
         {
-            "name": "here",
+            "name": "/Projects/Reconstruction Error/Code/clusters.md",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/master/clusters.md#short-fast--delicate"
         },
         {
