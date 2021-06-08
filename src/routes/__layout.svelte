@@ -1,6 +1,5 @@
 <script>
 	import StaticNav from "$lib/components/StaticNav.svelte"
-	import RightToc from "$lib/components/RightToc.svelte"
 	import RightToc2 from "$lib/components/RightToc2.svelte"
 	import { page } from "$app/stores";
 	import '../app.css';
@@ -70,13 +69,6 @@
 
 
 <style>
-
-	.hamburger {
-		width: 35px;
-		height: 5px;
-		background-color: black;
-		margin: 6px 0;
-	}
 	.justify {
 		text-align: justify;
 		text-justify: inter-word;
@@ -107,8 +99,12 @@
 		stroke-width: 3;
 	}
 
+	svg:hover > * {
+		stroke: rgb(106, 106, 106);
+	}
+
 	svg:active > * {
-		stroke: rgb(45, 44, 44);
+		stroke: rgb(48, 48, 48);
 	}
 
 	.btn {
