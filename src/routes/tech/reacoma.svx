@@ -131,13 +131,13 @@ id='vid1'
 This process was not designed as a step-by-step plan to begin with and at each stage I would attempt different combinations of processes to try and extract the delicate and fragile sounds from within the block of source material. Being able to audition, test, undo and rapidly weave between different strategies allowed me to find a specific moment of sound across a whole sound file relatively easily.
 
 ## Further Information
-I produced a series of video tutorials that demonstrate how to install and use ReaCoMa. This video series is useful as a resource that documents how the user facing parts of ReaCoMa work and shows some use cases related to my own practice. The [ReaCoMa Source Code](https://www.github.com/jamesb93/reacoma) is available as well as an external site with additional documentation at https://www.reacoma.xyz.
+I produced a series of video tutorials (see [VIDEO 2]({m.reacoma}#vid2)) that demonstrate how to install and use ReaCoMa. This video series is useful as a resource that documents how the user facing parts of ReaCoMa work and shows some use cases related to my own practice. The [ReaCoMa Source Code](https://www.github.com/jamesb93/reacoma) is available as well as an external site with additional documentation at https://www.reacoma.xyz.
 
 <YouTube 
 url="https://www.youtube.com/embed/r3uHMXmlPRo"
 title='ReaCoMa Tutorial Video Series'
-figure=''
-id=''
+figure='VIDEO 2'
+id='vid2'
 />
 
 <NextSection 
