@@ -22,6 +22,8 @@
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === "/howto"}	href='/howto'>How To</a></li>
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === "/acknowledgements"} href='/acknowledgements'>Acknowledgements</a></li>
 		
+		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === "/submission-materials"} href='/submission-materials'>Submission Materials</a></li>
+
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === m.intro} href={m.intro}>1. Introduction</a></li>
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === m.preoc} href={m.preoc}>2. Preoccupations</a></li>
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === m.ca} href={m.ca}>3. Content-Awareness</a></li>
@@ -40,7 +42,8 @@
 
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === m.conc} href={m.conc}>6. Conclusion</a></li>
 		
-		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === m.ref} href={m.ref}>References and Links</a></li>
+		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === m.ref} href={m.ref}>References, Links and Figures</a></li>
+		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === "/copyright"}	href='/copyright'>Copyright</a></li>
 
 		<br>
 		<li><a rel='external' target="_blank" on:click={handleClick} class="faint" href="https://github.com/jamesb93/phd-kit">source code</a></li>
