@@ -73,7 +73,7 @@ In addition to this work, I came across [Trevor Wishart's](http://www.trevorwish
 
 <YouTube
 url="https://www.youtube.com/embed/Ude4717dlsQ?start=786"
-title="Tongues of Fire by Trevor Wishart"
+title="Tongues of Fire (1994) — Trevor Wishart"
 figure="VIDEO 1"
 id="video1"
 />

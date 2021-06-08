@@ -31,8 +31,8 @@ As I researched topics related to these interests, I came across Stefano Fascian
 <YouTube 
 url="https://www.youtube.com/embed/yMLl7-aI_kc?start=687"
 title="Stefano Fasciani demonstrating the 'TSAM' program"
-caption="Stefano Fasciani demonstrating the 'TSAM' program"
 figure="VIDEO 1"
+id='vid1'
 />
 
 Coming into contact with Fasciani's work opened an avenue in my conceptual approach to this piece. I realised that it was possible to give computer the responsibility of discerning the relationship between the synthesis parameters and their effect on the perceptual quality of the output. I was encouraged by this, despite not, at the time, having the programming skills to work with the technologies that Fasciani had been, such as neural networks or machine learning. Given these limitations, my motivations were to find or design my own methods to develop this in line with my capabilities at the time.
@@ -191,7 +191,7 @@ I gave a presentation at the <a href="http://electricspring.co.uk/electric-sprin
 <YouTube 
 url="https://www.youtube.com/embed/Ro30O9u7l8M"
 figure="VIDEO 3"
-caption='"Making Decisions About Making Decisions About Making Decisions" presentation given at the 2018 Electric Spring Creative Coding Lab Symposium.'
+title='"Making Decisions About Making Decisions About Making Decisions" presentation given at the 2018 Electric Spring Creative Coding Lab Symposium.'
 id='vid3'
 />
 
