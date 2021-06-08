@@ -7,7 +7,6 @@ code {
 	color: rgb(0, 0, 0);
 	border-radius: 3px;
 	box-decoration-break: clone;
-	padding: .1rem .3rem .2rem;
 	background: #eff9ff;
 	word-wrap: break-word;
 }
@@ -72,24 +71,24 @@ a:hover, a:link:hover {
  */
  code[class*="language-"],
  pre[class*="language-"] {
-	 font-size: 13px;
-	 color: #111b27;
-	 background: none;
-	 font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-	 text-align: left;
-	 white-space: pre;
-	 word-spacing: normal;
-	 word-break: normal;
-	 word-wrap: normal;
-	 line-height: 1.5;
-	 -moz-tab-size: 4;
-	 -o-tab-size: 4;
-	 tab-size: 4;
-	 -webkit-hyphens: none;
-	 -moz-hyphens: none;
-	 -ms-hyphens: none;
-	 hyphens: none;
- }
+	font-size: 13px;
+	color: #111b27;
+	background: none;
+	font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
  
  pre[class*="language-"]::-moz-selection,
  pre[class*="language-"] ::-moz-selection,
@@ -108,7 +107,8 @@ a:hover, a:link:hover {
  /* Code blocks */
  pre[class*="language-"] {
 	 padding: 1em;
-	 margin: 0.5em 0;
+	 /* margin: 0.5em 0; */
+	 margin: 0px;
 	 overflow: auto;
  }
  
