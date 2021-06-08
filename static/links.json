@@ -54,7 +54,7 @@
         },
         {
             "name": "Owen Green",
-            "url": "https://scholar.google.co.uk/citations?user=1gvtW3MAAAAJ&hl=en"
+            "url": "http://owengreen.net"
         },
         {
             "name": "Steven Jan",
@@ -82,7 +82,7 @@
         },
         {
             "name": "MuBu",
-            "url": "https://forum.ircam.fr/projects/detail/mubu/"
+            "url": "https://ismm.ircam.fr/mubu/"
         },
         {
             "name": "Zsa.descriptors",
@@ -107,10 +107,6 @@
         {
             "name": "Alice Eldridge",
             "url": "http://www.ecila.org"
-        },
-        {
-            "name": "Owen Green",
-            "url": "http://owengreen.net"
         },
         {
             "name": "Diemo Schwarz",
@@ -190,7 +186,7 @@
         },
         {
             "name": "REAPER",
-            "url": "http://reaper.fm/index.php"
+            "url": "https://www.reaper.fm"
         },
         {
             "name": "Kaizo Snare",
@@ -437,10 +433,6 @@
             "url": "https://michael-edwards.org/sc/index.html"
         },
         {
-            "name": "REAPER",
-            "url": "https://www.reaper.fm/"
-        },
-        {
             "name": "Confetti",
             "url": "https://rodrigoconstanzo.com/confetti/"
         },
@@ -451,10 +443,6 @@
         {
             "name": "\"sandbox\" programs",
             "url": "https://www.youtube.com/watch?v=Ej2GqfmgjEw"
-        },
-        {
-            "name": "Python",
-            "url": "https://www.python.org/"
         },
         {
             "name": "JavaScript Object Notation (JSON)",
@@ -613,10 +601,6 @@
             "url": "https://cycling74.com/forums/valve-distortion/replies/1#reply-58ed20e643f50b22d4bb408e"
         },
         {
-            "name": "mubu",
-            "url": "https://ismm.ircam.fr/mubu/"
-        },
-        {
             "name": "2:42",
             "url": "https://youtu.be/b9s-8BPXd58?t=162"
         },
@@ -679,10 +663,6 @@
         {
             "name": "SoX (Sound eXchange)",
             "url": "http://sox.sourceforge.net"
-        },
-        {
-            "name": "/Pieces/Reconstruction Error/Code/python_scripts/scraping/scrape_files.py",
-            "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/scraping/scrape_files.py"
         },
         {
             "name": "Laplacian Segmentation",
@@ -833,10 +813,6 @@
             "url": "http://www.lua.org/"
         },
         {
-            "name": "REAPER digital audio workstation",
-            "url": "https://www.reaper.fm"
-        },
-        {
             "name": "ReaCoMa Source Code",
             "url": "https://www.github.com/jamesb93/reacoma"
         },
@@ -891,7 +867,7 @@
             "url": "https://www.youtube.com/embed/DQ_hPkrbgzQ"
         },
         {
-            "name": "Owen Green performing 'Race to the Bottom'",
+            "name": "Owen Green performing 'Race to the Bottom' (2019)",
             "url": "https://www.youtube.com/embed/zeOm9w3ZJVc"
         },
         {
@@ -903,7 +879,7 @@
             "url": "https://www.youtube.com/embed/K5AgH1leBUU"
         },
         {
-            "name": "Rodrigo Constanzo Creative Coding Lab Symposium Presentation",
+            "name": "Rodrigo Constanzo Creative Coding Lab Symposium Presentation\"",
             "url": "https://www.youtube.com/embed/Ne3wAEzd3rU?start=2304"
         },
         {
@@ -911,48 +887,124 @@
             "url": "https://www.youtube.com/embed/BEwTCZxx9r0?start=414"
         },
         {
-            "name": "Iannis Xenakis \u2014 S.709",
+            "name": "Iannis Xenakis \u2013 S.709",
             "url": "https://www.youtube.com/embed/Zmi2EVb7kQU"
         },
         {
-            "name": "Massive Attack vs Burial - Paradise Circus",
+            "name": "Sam Pluta discussing his work on synthesis parameter mapping using neural networks",
+            "url": "https://player.vimeo.com/video/470864627"
+        },
+        {
+            "name": "Icarus (Ollie Bown and Sam Britton) explaining Fake Fish Distribution",
+            "url": "https://player.vimeo.com/video/38404732"
+        },
+        {
+            "name": "Massive Attack vs Burial (2011) \u2013 Paradise Circus",
             "url": "https://www.youtube.com/embed/N701JYnjaMs"
         },
         {
-            "name": "Malfunction30931 (2010) - Benjamin Thigpen",
+            "name": "Malfunction30931 (2010) \u2013 Benjamin Thigpen",
             "url": "https://www.youtube.com/embed/K280VzAiZI0"
         },
         {
-            "name": "De Natura Sonorum: Matieres Induites (1974) - Bernard Parmegiani",
+            "name": "De Natura Sonorum: Matieres Induites (1974) \u2013 Bernard Parmegiani",
             "url": "https://www.youtube.com/embed/Taob2fEbwwY?start=49"
         },
         {
+            "name": "Nicolas Collins demonstrating induction to record electromagnetic fields generated by everyday electrical appliances.",
+            "url": "https://www.youtube.com/embed/4T7qkYY7LZM"
+        },
+        {
+            "name": "Untitled I/92 (1993) from Un Peu De Neige Salie \u2013 Bernhard Gunter",
+            "url": "https://www.youtube.com/embed/QZfMp6tredw"
+        },
+        {
+            "name": "Sferics (1981) \u2013 Alvin Lucier",
+            "url": "https://www.youtube.com/embed/rxUvMl_IxoQ"
+        },
+        {
             "name": "Matthew Sergeant in conversation with ELISION's Daryl Buckley (1 of 2)",
-            "url": "https://www.youtube.com/embed/bo_n1JXGiMY"
+            "url": "https://www.youtube.com/embed/bo_n1JXGiMY\""
         },
         {
             "name": "Matthew Sergeant in conversation with ELISION's Daryl Buckley (2 of 2)",
             "url": "https://www.youtube.com/embed/S0WMNvkLODU"
         },
         {
-            "name": "The Wreck of Former Boundaries (2015) by Aaron Cassidy",
+            "name": "The Wreck of Former Boundaries (2015) \u2013 Aaron Cassidy",
             "url": "https://www.youtube.com/embed/bLKRJ2GfFEY"
         },
         {
-            "name": "Dark Matter: Transmission (2012) by Richard Barrett",
+            "name": "Dark Matter: Transmission (2012) \u2013 Richard Barrett",
             "url": "https://www.youtube.com/embed/ov9ZcOrONiY"
         },
         {
-            "name": "Lichen (2007) by Matthew Sergent",
+            "name": "Lichen (2007) \u2013 Matthew Sergent",
             "url": "https://www.youtube.com/embed/b9s-8BPXd58"
+        },
+        {
+            "name": "Martin Parker demonstrating how to configure and run gruntCount",
+            "url": "https://player.vimeo.com/video/111283604"
+        },
+        {
+            "name": "Unitxt Code (Data to AIFF) (2008) \u2013 Alva Noto",
+            "url": "https://www.youtube.com/embed/vN9FrqrPptg"
+        },
+        {
+            "name": "Datamatics (2006) (Limited Section) \u2013 Ryoji Ikeda",
+            "url": "https://www.youtube.com/embed/eaIrSZIyxxk'"
+        },
+        {
+            "name": "Electronic Tax Return (2007) \u2013 Pimmon",
+            "url": "https://www.youtube.com/embed/AbF8NFanUdQ"
+        },
+        {
+            "name": "\"Finding Things In Stuff\" presentation at the November 2019 FluCoMa Plenary",
+            "url": "https://www.youtube.com/embed/IpD_XzW1Az4\""
+        },
+        {
+            "name": "\"Corpus exploration with UMAP and agglomerative clustering\" presentation at the AI Music Creativity Conference 2020.",
+            "url": "https://www.youtube.com/embed/-FNO0QovfsI"
+        },
+        {
+            "name": "Binary Self-Portraits (2008) \u2013 Nick Briz",
+            "url": "https://player.vimeo.com/video/4510943"
+        },
+        {
+            "name": "From The Ground Up In Order, Embrace (2007) \u2013 Nick Briz",
+            "url": "https://player.vimeo.com/video/4506517"
+        },
+        {
+            "name": "FuckingAudacity demonstration by Michael Chinen",
+            "url": "https://player.vimeo.com/video/8144372?byline=0&portrait=0"
+        },
+        {
+            "name": "FuckingWebBrowser demonstration by Michael Chinen",
+            "url": "https://player.vimeo.com/video/9635993?byline=0&portrait=0"
+        },
+        {
+            "name": "lstn demonstration by Michael Chinen",
+            "url": "https://player.vimeo.com/video/17617200?byline=0&portrait=0"
+        },
+        {
+            "name": "FluidCorpusMap demonstration",
+            "url": "https://player.vimeo.com/video/314301724?byline=0&portrait=0"
         },
         {
             "name": "Stefano Fasciani demonstrating the 'TSAM' program",
             "url": "https://www.youtube.com/embed/yMLl7-aI_kc?start=687"
         },
         {
-            "name": "Tongues of Fire by Trevor Wishart",
+            "name": "\"Making Decisions About Making Decisions About Making Decisions\" presentation given at the 2018 Electric Spring Creative Coding Lab Symposium.",
+            "url": "https://www.youtube.com/embed/Ro30O9u7l8M"
+        },
+        {
+            "name": "Tongues of Fire (1994) \u2014 Trevor Wishart",
             "url": "https://www.youtube.com/embed/Ude4717dlsQ?start=786"
+        },
+        {
+            "name": "ReaCoMa Tutorial Video Series",
+            "url": "https://www.youtube.com/embed/r3uHMXmlPRo"
         }
     ]
 }
