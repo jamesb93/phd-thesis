@@ -46,7 +46,7 @@
 <!-- There MUST be a space here -->
 {#each sortedLinks as link}
     <div class="link-container">
-        <a class='link' href="{link.url}">{link.name}</a>
+        <div class='title'>{link.name}</div>
         <a target="_blank" href={link.url}>{link.url}</a>
     </div>
 {/each}
