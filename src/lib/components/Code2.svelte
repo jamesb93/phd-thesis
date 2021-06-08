@@ -67,6 +67,9 @@
 	.container {
 		display: flex;
 		flex-direction: column;
+		border-left: 3px solid var(--dark-blue);
+		padding-left: 7px;
+		gap: 3px;
 	}
 
 	#top-bar {
@@ -79,10 +82,16 @@
 		background: #ededed;
 		box-shadow: none;
 		border-radius: 0px;
+		margin: 0px;
 	}
 
 	#top-bar:hover {
 		background-color: #dfdfdf;
+	}
+
+	#top-bar:active {
+		background-color: #cecece;
+		color: black;
 	}
 
 </style>
