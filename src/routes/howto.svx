@@ -24,7 +24,7 @@ If for any reason something is not working or fails to load, please first try vi
 To navigate to different sections of this thesis, use the left hand navigation panel. The right hand navigation panel allows you to move between the structure of a page more conveniently.
 
 ## Interactive Elements In This Thesis
-There are many interactive elements throughout this thesis, such as annotated waveforms and data visualisations. There are also numerous [hyperlinks (I'm just an example)]() that lead between different parts of the thesis as well as to external pages. I encourage you to follow to see how these integral digital resources feed into my work and support the research. There five archetypes of interactive elements that you will see. This will introduce you to them.
+There are many interactive elements throughout this thesis, such as annotated waveforms, code, videos, image and data visualisations. There are also numerous [hyperlinks (I'm just an example)]() that lead between different parts of the thesis as well as to external pages. These hyperlinks also lead to the interactive elements. Clicking [IMAGE 1](/howto#image), will take directly you to that part of the page. I encourage you to follow to see how these integral digital resources feed into my work and support the research. There five archetypes of interactive elements that you will see. This will introduce you to them.
 
 ### Waveform or Album
 This is the waveform widget. It shows a single sound file with an overview and zoom waveform view. You can zoom in by clicking the +/- buttons and stop and start the audio with the widget beneath the waveform. You can also scrub through the sound file with your mouse on any of the views.
@@ -35,6 +35,7 @@ All audio samples in this document are in a compressed format in order to make t
 file='/howto/pink.mp3'
 peaks='/howto/pink.dat'
 title='Pink noise at -23 LUFS'
+id='audio'
 />
 
 There is also the album widget, which groups together various files. You can select different files from the album by clicking them in the list and then clicking "Play".
@@ -53,7 +54,7 @@ This is the image widget. It displays images. They can be maximised if they are 
 url="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/06.gif"
 caption='A visual depiction of the interconnected Fourses oscillators. Though the picture is unlabelled it depicts the boundaries of each Fourse oscillator "ricocheting" off another Fourse. Taken from <a href="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html">http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html</a>'
 figure="IMAGE 1"
-id="img1"
+id="image"
 htmlCap={true}
 />
 
@@ -69,11 +70,17 @@ id="vid1"
 
 ### Code
 The code widget displays examples of code in a collapsible text box. You can collapse the text by clicking anywhere in the title bar of the widget.
-<Code2>
+<Code2
+caption='A code example'
+figure='CODE 1'>
 
 
-```js
-let sampleCode = 'samples!'
+```python
+thing_i_do = 'computer-aided composition'
+qualifier = 'is the best'
+# I am a code comment - lets print out some words
+print(thing_i_do, ' ', qualifier)
+>> computer-aided composition is the best
 ```
 
 </Code2>
@@ -81,6 +88,6 @@ let sampleCode = 'samples!'
 In this text, code is referred to inline using this widget, and if it is a part of the software outputs a relative path from the root of the submitted materials will be provided. You can click the link to directly observe the code hosted on GitHub or read the path to find it in a local copy. For example, [/Pieces/Reconstruction Error/Code/python_scripts/scraping/scrape_files.py](https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/scraping/scrape_files.py) refers to the script named `scrape_files.py`, which can be found in the [[4.4 Reconstruction Error]]({m.re}) directory, which is inside the "pieces" top level directory.
 
 <NextSection 
-next="Introduction"
-link={m.intro}
+next="Submission Materials"
+link=/submission-materials
 />
