@@ -1,0 +1,30 @@
+# Submission Materials
+
+## Pieces
+
+All pieces are presented in stereo audio format.
+
+### Stitch/Strata
+
+### Annealing Strategies
+
+### Refracted Touch
+
+### Reconstruction Error
+
+Format: EP of five pieces
+
+
+### Interferences
+
+**Format:** EP of two pieces
+
+**Code Path:** /4.5 Interferences/code/
+
+## Software
+
+### mosh
+
+### Finding Things In Stuff (FTIS)
+
+### ReaCoMa
