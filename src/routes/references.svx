@@ -46,7 +46,7 @@
 <!-- There MUST be a space here -->
 {#each sortedLinks as link}
     <div class="link-container">
-        <h4><a href="{link.url}">{link.name}</a></h4>
+        <a class='link' href="{link.url}">{link.name}</a>
         <a target="_blank" href={link.url}>{link.url}</a>
     </div>
 {/each}
@@ -55,7 +55,7 @@
 <!-- There MUST be a space here -->
 {#each sortedVids as vid}
     <div class="link-container">
-        <h4>{vid.name}</h4>
+        <div class='title'>{vid.name}</div>
         <a target="_blank" href="{vid.url}">{vid.url}</a>
     </div>
 {/each}
@@ -65,29 +65,32 @@
 <!-- THERE MUST BE A SPACE HERE -->
 {#each sortedDiscog as d}
     <div class="link-container">
-        <h4><i>{d.name}</i></h4>
-        <p>{d.artist}</p>
-        <p>{d.year}</p>
+        <div class='title'>{d.name}</div>
+        <div class='artist'>{d.artist}</div>
+        <div class='year'>{d.year}</div>
     </div>
 {/each}
 
 <style>
-h4 > a {
+.link {
+    font-weight: bold;
     color: black;
+    width: 50%;
 }
 
+.link:hover {
+    color: white;
+}
 .link-container {
-    padding-bottom: 1em;
-    padding-top: 1em;
-    word-wrap:normal;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 14px;
+    text-align: left;
 }
 
-.link-container > h4 {
-    line-height: 100%;
-}
-
-.link-container > p {
-    line-height: 25%;
+.link-container > .title {
+    font-weight: bold;
+    font-style: italic;
 }
 
 .ref-link {
