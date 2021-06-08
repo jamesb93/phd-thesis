@@ -85,16 +85,16 @@
             "url": "https://forum.ircam.fr/projects/detail/mubu/"
         },
         {
-            "name": "zsa.descriptors",
-            "url": "http://www.e--j.com/WordPress/wp-content/zsa.descriptors_SMC08.pdf"
+            "name": "Zsa.descriptors",
+            "url": "http://www.e--j.com/WordPress/wp-content/SBCM09_Malt_Jourdan_v1.2.pdf"
         },
         {
             "name": "Alex Harker's suite of Max objects",
             "url": "https://www.alexanderjharker.co.uk/Software.html"
         },
         {
-            "name": "github repo",
-            "url": "https://github.com/jamesb93/phd-kit"
+            "name": "/Pieces/Reconstruction Error/Code/python_scripts/scraping/scrape_files.py",
+            "url": "https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/scraping/scrape_files.py"
         },
         {
             "name": "Andrea Valle",
@@ -147,10 +147,6 @@
         {
             "name": "descriptors~",
             "url": "https://github.com/AlexHarker/AHarker_Externals/tree/master/descriptors/descriptors%7E"
-        },
-        {
-            "name": "Zsa.descriptors",
-            "url": "http://www.e--j.com/WordPress/wp-content/SBCM09_Malt_Jourdan_v1.2.pdf"
         },
         {
             "name": "Fluid Decomposition Toolbox",
@@ -391,10 +387,6 @@
         {
             "name": "MIMIC",
             "url": "https://mimicproject.com/about"
-        },
-        {
-            "name": "AI Music Creativity",
-            "url": "https://aimusiccreativity.org/about/"
         },
         {
             "name": "MuMe",
@@ -689,7 +681,7 @@
             "url": "http://sox.sourceforge.net"
         },
         {
-            "name": "scrape_files.py",
+            "name": "/Pieces/Reconstruction Error/Code/python_scripts/scraping/scrape_files.py",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/scraping/scrape_files.py"
         },
         {
@@ -705,7 +697,7 @@
             "url": "https://discourse.flucoma.org/t/difficult-segmentation/222"
         },
         {
-            "name": "`6_mfcc.py`",
+            "name": "/Pieces/Reconstruction Error/Code/python_scripts/descriptor_analysis/6_mfcc.py",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/descriptor_analysis/6_mfccs.py"
         },
         {
@@ -717,7 +709,7 @@
             "url": "https://github.com/victorwegeborn/LjudMAP"
         },
         {
-            "name": "_dimensionality_reduction",
+            "name": "/Pieces/Reconstruction Error/Code/python_scripts/dimensionality_reduction/_dimensionality_reduction.py",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/dimensionality_reduction/_reduction.py"
         },
         {
@@ -733,8 +725,16 @@
             "url": "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html"
         },
         {
-            "name": "`_clustering.py`",
+            "name": "/reconstruction_error/python_script/clustering/cl_one.json",
+            "url": "https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/clustering/cl_one.json"
+        },
+        {
+            "name": "/Pieces/Reconstruction Error/Code/python_scripts/clustering/_clustering.py",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/clustering/_clustering.py"
+        },
+        {
+            "name": "/Pieces/Reconstruction Error/Code/python_scripts/clustering/hierarchical_cluster.py",
+            "url": "https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/clustering/hierarchical_cluster.py"
         },
         {
             "name": "cluster notes",
