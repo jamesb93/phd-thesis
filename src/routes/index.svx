@@ -7,6 +7,9 @@
 
 ### Harnessing Content-Aware Programs For Computer-Aided Composition In A Studio-Based Workflow
 
+#### James Bradbury
+##### Submitted June 14, 2021
+
 The research presented here represents an attempt to explore how content-aware programs can be harnessed in my practice of studio-based, computer-aided composition using digital samples. A portfolio of compositions and software are submitted, and are used as the subject of critical reflection and discussion in the written text. Throughout this reflection, I outline how dialogical interactions between content-aware machines and my decision-making processes can be used as heuristics to solve aesthetic, creative and compositional problems. The dialogue is framed around the notion of querying, in which compositional problems are formulated in the abstract as machine listening tasks. My responses to the results of these processes generates new questions, or informs the development and honing of existing ones, thus focusing and clarifying my creative aims and intentions. 
 
 In addition to this, the text documents how my compositional method evolved during the PhD, and draws attention to my gradual reclaiming of compositional control from the computer — having earlier ceded it — over this period. I observe how technological and compositional aims and motivations are intertwined, as well as how they mature toward the development of computer-aided workflows in which I temper computer-generated outputs with my intuitive compositional decision-making, rather than use the computer to generate entire works through algorithmic and procedural means.
