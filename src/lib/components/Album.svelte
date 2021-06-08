@@ -130,6 +130,8 @@
         display: flex;
         flex-direction: row;
         gap: 10px;
+        justify-content: space-between;
+        word-wrap: none;
     }
 
     #single-lossless {
