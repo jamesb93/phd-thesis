@@ -369,7 +369,7 @@
             "url": "https://apps.dtic.mil/dtic/tr/fulltext/u2/289565.pdf"
         },
         {
-            "name": "this FluCoMa thread",
+            "name": "this Fluid Corpus Manipulation (FluCoMa) discourse thread",
             "url": "https://discourse.flucoma.org/t/using-flucoma-tools-with-reaper/311/7"
         },
         {
@@ -381,12 +381,40 @@
             "url": "https://forum.cockos.com/showthread.php?t=239824"
         },
         {
+            "name": "Hans Tutschku",
+            "url": "https://tutschku.com/"
+        },
+        {
+            "name": "here",
+            "url": "https://discourse.flucoma.org/t/transient-slice-question/398/6"
+        },
+        {
+            "name": "Natasha Barrett",
+            "url": "https://www.natashabarrett.org/"
+        },
+        {
+            "name": "Martin Parker",
+            "url": "https://www.tinpark.com/"
+        },
+        {
+            "name": "pulse machine xor moves",
+            "url": "https://cranksatori.bandcamp.com/album/pulse-machine-xor-moves"
+        },
+        {
+            "name": "Crank Satori",
+            "url": "https://cranksatori.bandcamp.com/"
+        },
+        {
             "name": "MIMIC",
             "url": "https://mimicproject.com/about"
         },
         {
             "name": "MuMe",
             "url": "https://musicalmetacreation.org/"
+        },
+        {
+            "name": "Fluid Corpus Manipulation plenary in November, 2019",
+            "url": "https://www.flucoma.org/plenaries/"
         },
         {
             "name": "scikit-learn",
@@ -573,12 +601,8 @@
             "url": "https://twitter.com/darylelision?lang=en"
         },
         {
-            "name": "final patch is linked here",
+            "name": "/Pieces/Refracted Touch/Code/Refracted Touch/",
             "url": "https://github.com/jamesb93/refracted-touch/tree/main/patcher_versions/Refracted%20Touch"
-        },
-        {
-            "name": "repository is linked here",
-            "url": "https://github.com/jamesb93/refracted-touch"
         },
         {
             "name": "gruntCount pieces",
