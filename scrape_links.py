@@ -10,7 +10,25 @@ video_container = []
 for x in routes.rglob("*.svx"):
     with open(x, 'r') as f:
         content = f.read()
-        flattened = content.replace("\n", "")
+        flattened = content.replace("\n", " ")
+        
+        tag_open = False
+        url = ''
+        name = ''
+        for line in content.split('\n'):
+            if '<YouTube' in line:
+                tag_open = True
+            if tag_open == True and 'title' in line:
+                name = line
+            if tag_open == True and 'url' in line:
+                url = line
+            if '/>' in line and tag_open == True:
+                tag_open = False
+                video_container.append({
+                    "name" : name[7:-1],
+                    "url" : url[5:-1]
+                })
+
 
         # Extract []() style links
         link_name = "[^]]+"
@@ -32,9 +50,9 @@ for x in routes.rglob("*.svx"):
                 })
 
         # Extract whatever is inbetween <VideoMedia>
-        vids_regex = '<VideoMedia>(.*?)</VideoMedia>'
+        vids_regex = '<VideoMedia(.*?)</VideoMedia>'
         url_regex = 'src="(.*?)"'
-        name_regex = 'title="(.*?)"'
+        name_regex = "title='(.*?)'"
         iframes = re.findall(vids_regex, flattened)
         for x in iframes:
             url = re.findall(url_regex, x)
@@ -48,18 +66,18 @@ for x in routes.rglob("*.svx"):
                 print(f'ERROR: {url}, {name}')
         
         # Extract YouTube Links
-        youtube_regex = '<YouTube(.*?)>'
-        url_regex = 'url="(.*?)"'
-        title_regex = 'title="(.*?)"'
+        # youtube_regex = '<YouTube(.*?)>'
+        # url_regex = 'url="(.*?)"'
+        # title_regex = 'title="(.*?)"'
 
-        for x in re.findall(youtube_regex, flattened):
-            url = re.findall(url_regex, x)
-            name = re.findall(name_regex, x)
-            if url and name:
-                video_container.append({
-                    "name" : name[0],
-                    "url" : url[0],
-                })
+        # for x in re.findall(youtube_regex, flattened):
+        #     url = re.findall(url_regex, x)
+        #     name = re.findall(name_regex, x)
+        #     if url and name:
+        #         video_container.append({
+        #             "name" : name[0],
+        #             "url" : url[0],
+        #         })
 
 api["links"] = link_container
 api["videos"] = video_container
