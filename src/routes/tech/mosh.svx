@@ -6,18 +6,18 @@
 
 # mosh
 
-The `mosh` source code can be found here: [/Software/mosh](https://www.github.com/jamesb93/mosh)
+The mosh source code can be found here: [/Software/mosh](https://www.github.com/jamesb93/mosh)
 
-`mosh` is a command-line program for creating audio files by appending valid WAVE headers to raw data. This type of process is referred to as ["databending"](https://en.wikipedia.org/wiki/Databending) and ["datamoshing"](http://datamoshing.com). `mosh` was used to automatically generate a corpus of audio samples for the [Reconstruction Error]({m.re}) project by scraping raw data from my laptop's hard drive.
+mosh is a command-line program for creating audio files by appending valid WAVE headers to raw data. This type of process is referred to as ["databending"](https://en.wikipedia.org/wiki/Databending) and ["datamoshing"](http://datamoshing.com). mosh was used to automatically generate a corpus of audio samples for the [Reconstruction Error]({m.re}) project by scraping raw data from my laptop's hard drive.
 
-While composing [Reconstruction Error]({m.re}) I experimented with converting batches of files manually from their raw format into audio using a modified version of [Alex Harker's ibuffer~ external](https://github.com/AlexHarker/AHarker_Externals/tree/master/ibuffer%20suite). This implementation was not suitable as it was unstable due to my lack of familiarity with the C programming language. Furthermore, Max is not an environment where iterative processes such loops are easy to express and I preferred to work in a language or environment where such patterns are easily defined and employed. Creating `mosh` solved these issues by being designed specifically for my batch processing use case and by writing it in [Nim](https://nim-lang.org/), a text-based language I am more familiar with.
+While composing [Reconstruction Error]({m.re}) I experimented with converting batches of files manually from their raw format into audio using a modified version of [Alex Harker's ibuffer~ external](https://github.com/AlexHarker/AHarker_Externals/tree/master/ibuffer%20suite). This implementation was not suitable as it was unstable due to my lack of familiarity with the C programming language. Furthermore, Max is not an environment where iterative processes such loops are easy to express and I preferred to work in a language or environment where such patterns are easily defined and employed. Creating mosh solved these issues by being designed specifically for my batch processing use case and by writing it in [Nim](https://nim-lang.org/), a text-based language I am more familiar with.
 
-Creating `mosh` allowed me to generate a large corpus for [Reconstruction Error]({m.re}) by walking from the root of my laptop's hard drive and converting any file it encountered into an audio sample. This initiated a situation in which I could not manually listen to the breadth of the corpus and prompted me to explore the corpus with aid from the computer using audio descriptors and machine learning. As such, `mosh` played a pivotal role in priming that creative process.
+I used mosh to generate a large corpus for [Reconstruction Error]({m.re}) by walking from the root of my laptop's hard drive and converting any file it encountered into an audio sample. This initiated a situation in which I could not manually listen to the breadth of the corpus and prompted me to explore the corpus with aid from the computer using audio descriptors and machine learning. As such, mosh played a pivotal role in priming that creative process.
 
 ## Implementation
-To convert raw data into an audio file a [WAVE header](http://soundfile.sapp.org/doc/WaveFormat/) is prepended to a series of contiguous bytes. These bytes can be derived from files such as pictures, text files, static and shared libraries or entire programs themselves. This makes a new file which the operating system will interpret as an audio file. Thus, `mosh` is responsible for constructing an appropriate header and appending the raw bytes to this. `mosh` is capable of executing this process across any number of files natively, mitigating the need for the user to wrap individual command line calls in another script or program.
+To convert raw data into an audio file a [WAVE header](http://soundfile.sapp.org/doc/WaveFormat/) is prepended to a series of contiguous bytes. These bytes can be derived from files such as pictures, text files, static and shared libraries or entire programs themselves. This makes a new file which the operating system will interpret as an audio file. Thus, mosh is responsible for constructing an appropriate header and appending the raw bytes to this. mosh is capable of executing this process across any number of files natively, mitigating the need for the user to wrap individual command line calls in another script or program.
 
-`mosh` is called from the command line and accepts arguments to control its behaviour. An example is provided in [CODE 1]({m.mosh}#code1).
+mosh is called from the command line and accepts arguments to control its behaviour. An example is provided in [CODE 1]({m.mosh}#code1).
 
 <Code2
 id='code1'
@@ -33,7 +33,7 @@ mosh convert -i input.file -o output.wav
 
 This would create a new audio file named `output.wav` using `input.file` as the raw bytes.
 
-`mosh` has several parameters that dictate the content of the WAVE header that is prepended to the raw bytes. These include the number of channels (`numChans`), the sampling rate (`sampRate`) and the bit-depth (`bitDepth`). These have no effect on the process itself other than determining the contents of the header. However, by modifying the data inside the header, the operating system will playback the audio data differently. This provides ways for shaping the databending process, which can drastically change the sound of the audio that files that are made. Below, the same data file is processed at two different sample rates and bit depths. An example demonstrating the configuration of parameters in the invocation is shown in [CODE 2]({m.mosh}#code2).
+mosh has several parameters that dictate the content of the WAVE header that is prepended to the raw bytes. These include the number of channels (`numChans`), the sampling rate (`sampRate`) and the bit-depth (`bitDepth`). These have no effect on the process itself other than determining the contents of the header. However, by modifying the data inside the header, the operating system will playback the audio data differently. This provides ways for shaping the databending process, which can drastically change the sound of the audio that files that are made. Below, the same data file is processed at two different sample rates and bit depths. An example demonstrating the configuration of parameters in the invocation is shown in [CODE 2]({m.mosh}#code2).
 
 <Code2
 id='code2'
@@ -48,11 +48,11 @@ mosh convert -i ~/example_input.a -o ~/example_output.wav --bitDepth 16 --numCha
 
 </Code2>
 
-`mosh` accepts both single files and entire directories as an input and output. This process is multithreaded which can significantly reduce the time required to process large quantities of raw data. This facilitates a tighter feedback loop between "moshing" and audition. 
+mosh accepts both single files and entire directories as an input and output. This process is multithreaded which can significantly reduce the time required to process large quantities of raw data. This facilitates a tighter feedback loop between "moshing" and audition. 
 
 ## Acknowledgements
 
-`mosh` would not have been possible without the generous contributions from [Francesco Cameli](https://github.com/vitreo12) to the code base.
+mosh would not have been possible without the generous contributions from [Francesco Cameli](https://github.com/vitreo12) to the code base.
 
 <NextSection 
 next="Finding Things in Stuff"
