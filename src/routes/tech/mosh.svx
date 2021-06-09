@@ -6,7 +6,7 @@
 
 # mosh
 
-The most source code can be found here: [/Software/mosh](https://www.github.com/jamesb93/mosh)
+The `mosh` source code can be found here: [/Software/mosh](https://www.github.com/jamesb93/mosh)
 
 `mosh` is a command-line program for creating audio files by appending valid WAVE headers to raw data. This type of process is referred to as ["databending"](https://en.wikipedia.org/wiki/Databending) and ["datamoshing"](http://datamoshing.com). `mosh` was used to automatically generate a corpus of audio samples for the [Reconstruction Error]({m.re}) project by scraping raw data from my laptop's hard drive.
 
