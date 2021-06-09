@@ -8,8 +8,7 @@
     let contents = [];
     let thisPage = null;
     let tempIntersect;
-    
-    thisPage = contents[$page.path];
+    $: thisPage = contents[$page.path];
     
     function handleIntersect(entries, observer) {
         let lowest = Infinity;
