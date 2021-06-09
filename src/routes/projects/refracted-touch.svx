@@ -38,14 +38,14 @@ Daryl and I worked on this piece remotely until the rehearsals just before the p
 In addition to the footage Daryl provided, I listened to and watched as much material of his playing that was available online, examples of which can be found in VIDEOs [1]({m.rt}#vid1), [2]({m.rt}#vid2), [3]({m.rt}#vid3), [4]({m.rt}#vid4) and [5]({m.rt}#vid5).
 
 <YouTube 
-title="Matthew Sergeant in conversation with ELISION's Daryl Buckley (1 of 2)"
+title="Matthew Sergeant in conversation with ELISION's Daryl Buckley (1 of 2)."
 url="https://www.youtube.com/embed/bo_n1JXGiMY" 
 figure="VIDEO 1" 
 id="vid1"
 />
 
 <YouTube 
-title="Matthew Sergeant in conversation with ELISION's Daryl Buckley (2 of 2)"
+title="Matthew Sergeant in conversation with ELISION's Daryl Buckley (2 of 2)."
 url="https://www.youtube.com/embed/S0WMNvkLODU"
 figure="VIDEO 2"
 id="vid2"
@@ -128,7 +128,7 @@ I found the percussive extraction the most novel of the two components. When the
 <VideoMedia2 
 url="/rt/resonator-demo"
 figure="VIDEO 8"
-caption="Demonstration of the Short Resonators module"
+caption="Demonstration of the Short Resonators module."
 id="vid8"
 />
 
@@ -185,7 +185,7 @@ out1 = cnld(in1, in2, in3);
 <VideoMedia2 
 url="/rt/cnld-demo"
 figure="VIDEO 11"
-caption="Cubic non-linear distortion module with two different samples from Daryl"
+caption="Cubic non-linear distortion module with two different samples from Daryl."
 id="vid11"
 />
 
@@ -285,7 +285,7 @@ In my first attempt to realise this, I used the [MuBu](https://ismm.ircam.fr/mub
 <VideoMedia2 
 url="/rt/gmm-demo"
 figure="VIDEO 13"
-caption="State recognition with mubu.gmm"
+caption="State recognition with the mubu.gmm object."
 id="vid13"
 />
 
