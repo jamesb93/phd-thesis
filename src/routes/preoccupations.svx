@@ -157,7 +157,7 @@ Visualisation of data is also a meaningful output from the computer. A visual re
 <ImageMedia2 
 url="/preoccupations/umap-visual.jpg"
 figure="IMAGE 4"
-caption="Samples projected into a two-dimensional space using dimensionality reduction on Mel-frequency cepstrum coefficients analysis. This data was used in the Reconstruction Error project."
+caption="Samples projected into a two-dimensional space using dimension reduction on Mel-frequency cepstrum coefficients analysis. This data was used in the Reconstruction Error project."
 id='img4'
 />
 
