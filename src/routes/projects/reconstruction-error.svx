@@ -180,14 +180,14 @@ A powerful aspect of novelty slicing is that the sliding window can be expanded 
 <ImageMedia2 
 url='/re/owen.jpeg'
 figure='IMAGE 2'
-caption='Owen Green answering my question in the FluCoMa discourse'
+caption='Owen Green answering my question in the FluCoMa discourse.'
 id='img2'
 />
 
 <ImageMedia2
 url='/re/noveltycurve.jpg'
 figure='IMAGE 3'
-caption='Example of a novelty curve, taken from Foote (2000, p. 454)'
+caption='Example of a novelty curve, taken from Foote (2000, p. 454).'
 />
 
 Using a *threshold* of 0.61, *kernelsize* of 3, *filtersize* of 1, *fftsettings* of 1024 512 1024, and a *minslicelength* of 2, I produced the segmentation which can be seen in [AUDIO 5]({m.re}#aud5). To me, this segmentation result was commensurate with my initial intuitive approach seen in [AUDIO 4]({m.re}#aud4). While at some points the results of `fluid.bufnoveltyslice~` were over-segmented (slices one to five), it seemed that the algorithm could discern the changes I perceived as salient, and was able to extract the longer musical phrases such as slices seven and twelve without suffering from the oversensitivity issues found in other algorithms.
@@ -215,10 +215,9 @@ In other sound-searching and corpus-exploration research, dimension reduction ha
 Using this research as a basis for my own work, I used the Uniform Manifold Approximation and Projection (UMAP) algorithm and reduced the 273 points in each vector for each sample to 2 points. This way, I could visualise the results as a two-dimensional *map* where each sample would be represented as a singular point. A strength of UMAP is its potency for capturing non-linear features in data compared to algorithms such as Principal Component Analysis (PCA). Due to the noise-based and complex spectral profile of the sounds I generated from databending, being able to capture the non-linear features of their MFCC analysis was an important consideration. Furthermore, UMAP can be coerced to favour either the local or global structure of the untransformed data by altering the *minimum distance* and *number of neighbours* parameters. A number of projections that were made with various parameters can be seen in [DEMO 1]({m.re}#demo1). One can interact with this demo by moving the slider to interpolate between projections where different parameters for the UMAP algorithm have been used. Each point in this space represents a sample, and the interpolation is calculated based on the position of the same sample in each projection, rather than by shifting the projection based on the nearest points. This shows how changing the parameters can drastically alter the representation and grouping of sounds. I found that this was an expressive interface for changing how the computer represented the corpus analysis data. 
 
 <Points 
-title='UMAP parameters effect on the projection.'
 caption='DEMO 1'
 id='demo1'
- />
+/>
 
 The topology of the projections became a source of compositional inspiration involving my observation of the location, shape and relationships between clusters of samples. Some projections favoured spread-out and even distributions, while others emphasised curved and warped topologies, with samples tightly articulating these features. As well as observing these outputs visually, I explored them using a Max patch to move through the space graphically, playing back samples that were closest to the mouse pointer. Most importantly, I found that the projections performed well in positioning perceptually similar samples close to each other in the space. 
 
@@ -334,7 +333,7 @@ Up to this point, the audition process was orchestrated entirely in Max. However
 
 <Code2
 figure='CODE 3'
-caption='Lua script for importing a cluster of samples as a track of contiguous samples into REAPER'
+caption='Lua script for importing a cluster of samples as a track of contiguous samples into REAPER.'
 id='code3'
 >
 
