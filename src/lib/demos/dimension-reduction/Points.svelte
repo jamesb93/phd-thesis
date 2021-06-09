@@ -161,7 +161,7 @@
                 </span>
             </div>
         </div>
-        <span id='instructions'>Move the slider to adjust the UMAP parameters!</span>
+        <span id='instructions'>Move the slider to adjust the UMAP parameters.</span>
         <Slider bind:focused={ focused } showValue={ false } showMin={ false } showMax={ false } bind:value={ interp } inFunc={ () => update(false) } min={0.0} max={3.0} step={0.005} />
         <span id='status'>{#if !ready}Loading... {/if}</span>
         <div id="view" bind:this={container} bind:offsetHeight={height} bind:offsetWidth={width}></div>
