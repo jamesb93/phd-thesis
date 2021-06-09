@@ -44,10 +44,21 @@ for x in routes.rglob("*.svx"):
                     exists = True
             
             if not exists:
-                link_container.append({
-                    "name" : match[0],
-                    "url" : match[1]
-                })
+                # name processing
+                if name[-2:] == "'s":
+                    name = name[:-2]
+                name = name.replace('`', '')
+
+                if name[0] == '"' and name[-1:] == '"':
+                    name = name[1:]
+                    name = name[:-1]
+
+                if not '/Projects/' in name and not '/Software' in name:
+                    name = name[0].upper() + name[1:]
+                    link_container.append({
+                        "name" : name,
+                        "url" : url
+                    })
 
         # Extract whatever is inbetween <VideoMedia>
         vids_regex = '<VideoMedia(.*?)</VideoMedia>'
