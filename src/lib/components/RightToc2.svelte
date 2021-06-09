@@ -8,7 +8,9 @@
     let contents = [];
     let thisPage = null;
     let tempIntersect;
-
+    
+    thisPage = contents[$page.path];
+    
     function handleIntersect(entries, observer) {
         let lowest = Infinity;
         entries = entries.filter(entry => entry.isIntersecting);
@@ -28,8 +30,6 @@
     function clipLinks(t, maxLen) {
         return t.length >= maxLen ? t.substr(0, maxLen)+'...' : t 
     }
-    $: thisPage = contents[$page.path];
-
     async function makeObserver() {
         if (observer)
             observer.disconnect();
@@ -68,19 +68,19 @@
 
 
 <div class='container'>
-        {#if ready === true}
-            {#each thisPage as section}
-                        <a 
-                        class="link depth-{section.indent}" 
-                        href="{$page.path}#{section.url}"
-                        class:shown={visibility === section.url}
-                        on:click={ visibility = section.url } 
-                        > 
-                            { clipLinks(section.heading, 40) }
-                        </a>
-            {/each}
-        {/if}
-    </div>
+    {#if ready === true}
+        {#each thisPage as section}
+                <a 
+                class="link depth-{section.indent}" 
+                href="{$page.path}#{section.url}"
+                class:shown={visibility === section.url}
+                on:click={ visibility = section.url } 
+                > 
+                    { clipLinks(section.heading, 40) }
+                </a>
+        {/each}
+    {/if}
+</div>
 
 
 
