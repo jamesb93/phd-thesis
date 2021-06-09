@@ -23,6 +23,7 @@
 		<li><a on:click={handleClick} class="link section" class:selected={$page.path === "/acknowledgements"} href='/acknowledgements'>iii. Acknowledgements</a></li>
 		
 		<li><a on:click={handleClick} class="link section" class:selected={$page.path === "/submission-materials"} href='/submission-materials'>iv. Submitted Materials</a></li>
+		<li><a on:click={handleClick} class="link section" class:selected={$page.path === "/list-of-interactive-elements"} href='/list-of-interactive-elements'>v. List Of Interactive Elements </a></li>
 
 		<li><a on:click={handleClick} class="link section" class:selected={$page.path === m.intro} href={m.intro}>1. Introduction</a></li>
 		<li><a on:click={handleClick} class="link section" class:selected={$page.path === m.preoc} href={m.preoc}>2. Preoccupations</a></li>
