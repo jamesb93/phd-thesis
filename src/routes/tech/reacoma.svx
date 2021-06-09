@@ -12,6 +12,9 @@
 </script>
 
 # ReaCoMa
+
+The ReaCoMa source code can be found here: [/Software/ReaCoMa](https://www.github.com/jamesb93/reacoma)
+
 ReaCoMa is a collection of [Lua](http://www.lua.org/) scripts that facilitate using the [Fluid Decomposition Toolbox](https://pure.hud.ac.uk/ws/portalfiles/portal/17022941/towardscorpus_final.pdf) algorithms within the [REAPER digital audio workstation](https://www.reaper.fm). This toolbox is designed to facilitate signal decomposition, audio descriptor analysis and automatic segmentation. 
 
 My main motivation for creating ReaCoMa was to consolidate my compositional workflow, which prior to its creation involved alternating between REAPER, the command line and Max. Having to alternate between two or more distinct pieces of software, with vastly different interfaces and setups is a suboptimal compositional workflow, especially for tasks which benefit from a tight feedback loop between processing and listening. For example, processing audio files in Max and accessing the results within REAPER requires outputting those results to disk and making them a part of the REAPER 
