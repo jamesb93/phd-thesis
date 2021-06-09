@@ -87,10 +87,10 @@ Turkle and Papert's description of the bricoleur emphasises the dialogical inter
 
 #### The Feedback Loop
 <ImageMedia2 
-    url="/preoccupations/bricolage.jpg"
-    figure="IMAGE 2"
-    caption="McClean & Wiggins (2010) diagram of the bricolage programming feedback loop"
-    id='img2'
+url="/preoccupations/bricolage.jpg"
+figure="IMAGE 2"
+caption="McClean & Wiggins (2010) diagram of the bricolage programming feedback loop."
+id='img2'
 />
 
 [IMAGE 2]({m.preoc}#img2) is McClean and Wiggins' formalised process of bricolage programming, as a "creative feedback loop encompassing the written algorithm, its interpretation, and the programmer’s perception and reaction to its output or behaviour" (2010, p. 2). This loop defines four key stages: concept, algorithm, output and percept interspersed with italicised actions enacted by the human. They describe the start of this feedback loop as having "a half-formed concept, which only reaches internal consistency through the process of being expressed as an algorithm" (McClean & Wiggins, 2010, p. 2). They provide a theoretical example of someone modifying a program to follow an in-the-moment perception of a "tree-like structure" that emerges from first experimenting by superimposing curved lines (McClean & Wiggins, 2010, p.2). 

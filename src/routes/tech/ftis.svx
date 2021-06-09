@@ -307,7 +307,8 @@ One of the most creatively inhibiting experiences for me is waiting for re-analy
 <Code2
 id='code7'
 figure='CODE 7'
-caption='Pseudocode example connecting three analysers together'>
+caption='Pseudocode example connecting three analysers together'
+>
 
 ```py
 Corpus() >> SpectralCentroid() >> Median()
@@ -321,7 +322,8 @@ If after running this first script I decide that the average might be a more sui
 <Code2
 id='code8'
 figure='CODE 8'
-caption='Pseudocode example where the Median() is replaced by the Average() analyser'>
+caption='Pseudocode example where the Median() is replaced by the Average() analyser'
+>
 
 ```py
 Corpus() >> SpectralCentroid() >> Average()
@@ -353,7 +355,8 @@ Using this function, a 20-character hash can be created from any number of input
 <Code2
 id='code10'
 figure='CODE 10'
-caption='The create_identity() function'>
+caption='The create_identity() function'
+>
 
 ```python
 def create_identity(self) -> None:

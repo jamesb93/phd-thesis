@@ -50,7 +50,7 @@ Two technologies, the *Fourses* synthesiser and SA, are central to Annealing Str
 
 <ImageMedia2 
 url="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/06.gif"
-caption='A visual depiction of the interconnected Fourses oscillators. Though the picture is unlabelled it depicts the boundaries of each Fourse oscillator "ricocheting" off another Fourse. Taken from <a href="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html">http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html</a>'
+caption='A visual depiction of the interconnected Fourses oscillators. Though the picture is unlabelled it depicts the boundaries of each Fourse oscillator "ricocheting" off another Fourse. Taken from <a href="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html">http://www.ciat-lonbarde.net/fyrall/paperz/fourses/index.html</a>.'
 figure="IMAGE 1"
 id="img1"
 htmlCap={true}

@@ -142,7 +142,7 @@ In *Race To The Bottom* (2019) (see [VIDEO 2]({m.ca}#vid2)), Green creates sever
 
 <YouTube 
 url="https://www.youtube.com/embed/zeOm9w3ZJVc"
-title='Owen Green performing "Race to the Bottom" (2019)'
+title='Owen Green performing "Race to the Bottom" (2019).'
 figure="VIDEO 2"
 id='vid2'
 />
@@ -241,7 +241,7 @@ I have used a combination of machine listening and machine learning for similar 
 
 <ImageMedia2 
 url="/content-awareness/texmap.jpg"
-caption="A preview of the texture map found at https://grrrr.org/data/research/texmap/"
+caption="A preview of the texture map found at https://grrrr.org/data/research/texmap/."
 figure="IMAGE 1"
 />
 
@@ -262,7 +262,7 @@ An example of a *semi-supervised* approach is *[Fake Fish Distribution](https://
 <ImageMedia2
 url="http://1cyjknyddcx62agyb002-web-assets.s3.amazonaws.com/interviews/icarus/BreakpointFunctionEditor.jpg"
 figure="IMAGE 2"
-caption="An example of a breakpoint interpolation scheme between keyframes"
+caption="An example of a breakpoint interpolation scheme between keyframes."
 id='img2'
 />
 
