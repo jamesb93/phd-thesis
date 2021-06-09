@@ -133,10 +133,6 @@
             "url": "https://en.wikipedia.org/wiki/Mel-frequency_cepstrum"
         },
         {
-            "name": "Daniele Ghisi's thesis (Ghisi, 2017)",
-            "url": "https://www.danieleghisi.com/phd/PHDThesis_20180118.pdf"
-        },
-        {
             "name": "Danceability",
             "url": "https://essentia.upf.edu/reference/streaming_Danceability.html"
         },
@@ -227,10 +223,6 @@
         {
             "name": "The Bregman Toolkit",
             "url": "https://github.com/bregmanstudio/SoundscapeEcology"
-        },
-        {
-            "name": "Eldridge, Casey, Moscoso and Peck's work (2016)",
-            "url": "https://peerj.com/articles/2108/"
         },
         {
             "name": "Spleeter",
