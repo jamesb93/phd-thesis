@@ -155,8 +155,8 @@ A number of good iterations were made, and those that were not chosen as the sin
 <Waveform
 title="Annealing Strategies (738_noise.simplex_529135023)"
 caption='AUDIO 5'
-file="/as/annealing_strategies.mp3"
-peaks="/as/annealing_strategies.dat"
+file="/pieces/Annealing Strategies.mp3"
+peaks="/pieces/Annealing Strategies.dat"
 id="aud5"
 segments={segs4}
 />
