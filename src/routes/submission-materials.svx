@@ -2,38 +2,86 @@
     import NextSection from '$lib/components/NextSection.svelte';
 </script>
 
-# Submission Materials
+# Submitted Materials
 
 ## Pieces
-
 All pieces are presented in stereo audio format.
 
 ### Stitch/Strata
 
+*Format:* Fixed Media Piece
+
+*Duration:* 7:23
+
+*Path:* /Projects/StitchStrata/Audio
+
+
 ### Annealing Strategies
+
+*Format:* Fixed Media Piece
+
+*Duration:* 3:33
+
+*Path:* /Projects/StitchStrata/Audio
 
 ### Refracted Touch
 
+
+*Format:* Live Electronics and Lap Steel Guitar
+
+*Duration:* 9:56
+
+*Path:* /Projects/StitchStrata/Audio
+
+
 ### Reconstruction Error
 
-Format: EP of five pieces
+*Format:* 5 Fixed Media Pieces in an EP 
+
+*Duration:* 24:38
+
+*Path:* /Projects/StitchStrata/Audio
 
 
 ### Interferences
 
-**Format:** EP of two pieces
+*Format:* 2 Fixed Media Pieces in an EP 
 
-**Code Path:** /4.5 Interferences/code/
+*Duration:* 23:14
+
+*Path:* /Projects/Pieces/StitchStrata/Audio
 
 ## Software
 
 ### mosh
 
+*Path*: /Projects/Software/mosh
+
+*GitHub*: https://www.github.com/jamesb93/mosh
+
 ### Finding Things In Stuff (FTIS)
 
+*Path*: /Projects/Software/FTIS
+
+*GitHub*: https://www.github.com/jamesb93/ftis
+
 ### ReaCoMa
+
+*Path*: /Projects/Software/ReaCoMa
+
+*GitHub*: https://www.github.com/jamesb93/reacoma
 
 <NextSection 
 next='Introduction'
 link='/introduction'
 />
+
+<style>
+
+    h3 {
+        margin-top: 1em;
+    }
+    p {
+        margin: 0;
+    }
+</style>
