@@ -69,7 +69,7 @@
             "url": "https://cycling74.com/projects/_derivations"
         },
         {
-            "name": "cellF",
+            "name": "CellF",
             "url": "http://guybenary.com/work/cellf/"
         },
         {
@@ -93,12 +93,8 @@
             "url": "https://www.alexanderjharker.co.uk/Software.html"
         },
         {
-            "name": "hyperlinks",
+            "name": "Hyperlinks",
             "url": "https://en.wikipedia.org/wiki/Hyperlink"
-        },
-        {
-            "name": "/Projects/Reconstruction Error/Code/python_scripts/scraping/scrape_files.py",
-            "url": "https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/scraping/scrape_files.py"
         },
         {
             "name": "Andrea Valle",
@@ -121,19 +117,19 @@
             "url": "https://en.wikipedia.org/wiki/Moment_(mathematics"
         },
         {
-            "name": "rolloff",
+            "name": "Rolloff",
             "url": "https://librosa.org/doc/0.8.0/generated/librosa.feature.spectral_rolloff.html"
         },
         {
-            "name": "flatness",
+            "name": "Flatness",
             "url": "https://en.wikipedia.org/wiki/Spectral_flatness"
         },
         {
-            "name": "crest",
+            "name": "Crest",
             "url": "https://uk.mathworks.com/help/audio/ref/spectralcrest.html?requestedDomain="
         },
         {
-            "name": "mel-frequency cepstrum coefficients (MFCC)",
+            "name": "Mel-frequency cepstrum coefficients (MFCC)",
             "url": "https://en.wikipedia.org/wiki/Mel-frequency_cepstrum"
         },
         {
@@ -141,11 +137,11 @@
             "url": "https://www.danieleghisi.com/phd/PHDThesis_20180118.pdf"
         },
         {
-            "name": "danceability",
+            "name": "Danceability",
             "url": "https://essentia.upf.edu/reference/streaming_Danceability.html"
         },
         {
-            "name": "descriptors~",
+            "name": "Descriptors~",
             "url": "https://github.com/AlexHarker/AHarker_Externals/tree/master/descriptors/descriptors%7E"
         },
         {
@@ -165,7 +161,7 @@
             "url": "https://repositori.upf.edu/handle/10230/32252"
         },
         {
-            "name": "libxtract",
+            "name": "Libxtract",
             "url": "http://hdl.handle.net/2027/spo.bbp2372.2007.116"
         },
         {
@@ -173,7 +169,7 @@
             "url": "https://github.com/novoic/surfboard"
         },
         {
-            "name": "aubio",
+            "name": "Aubio",
             "url": "https://aubio.org"
         },
         {
@@ -197,7 +193,7 @@
             "url": "https://rodrigoconstanzo.com/2020/08/kaizo-snare/"
         },
         {
-            "name": "gruntCount",
+            "name": "GruntCount",
             "url": "https://www.tinpark.com/gruntcount-release"
         },
         {
@@ -205,7 +201,7 @@
             "url": "https://rke.abertay.ac.uk/ws/files/15874958/Michalakos_Augmented_drum_kit_Published_2012.pdf"
         },
         {
-            "name": "\"dynamic split tool\"",
+            "name": "Dynamic split tool",
             "url": "https://wiki.cockos.com/wiki/index.php/Dynamic_split"
         },
         {
@@ -213,7 +209,7 @@
             "url": "https://www.researchgate.net/profile/Derry_Fitzgerald/publication/254583990_HarmonicPercussive_Separation_using_Median_Filtering/links/00b495396ef03235af000000.pdf"
         },
         {
-            "name": "non-negative matrix factorisation (NMF)",
+            "name": "Non-negative matrix factorisation (NMF)",
             "url": "https://www.researchgate.net/profile/Derry_Fitzgerald/publication/224633812_Shifted_non-negative_matrix_factorisation_for_sound_source_separation/links/00463521492bddc0dc000000/Shifted-non-negative-matrix-factorisation-for-sound-source-separation.pdf"
         },
         {
@@ -221,11 +217,11 @@
             "url": "https://www.izotope.com/en/products/rx.html"
         },
         {
-            "name": "nussl",
+            "name": "Nussl",
             "url": "https://github.com/nussl/nussl"
         },
         {
-            "name": "untwist",
+            "name": "Untwist",
             "url": "https://github.com/IoSR-Surrey/untwist"
         },
         {
@@ -253,11 +249,11 @@
             "url": "https://ai.google"
         },
         {
-            "name": "\"curse of dimensionality\"",
+            "name": "Curse of dimensionality",
             "url": "https://en.wikipedia.org/wiki/Curse_of_dimensionality"
         },
         {
-            "name": "simulated annealing (SA)",
+            "name": "Simulated annealing (SA)",
             "url": "https://en.wikipedia.org/wiki/Simulated_annealing"
         },
         {
@@ -285,7 +281,7 @@
             "url": "https://rodrigoconstanzo.com/combine/"
         },
         {
-            "name": "Ben Hackbarth's",
+            "name": "Ben Hackbarth",
             "url": "http://www.benhackbarth.com"
         },
         {
@@ -297,15 +293,15 @@
             "url": "http://www.benhackbarth.com/vls/"
         },
         {
-            "name": "Sam Pluta's",
+            "name": "Sam Pluta",
             "url": "http://www.sampluta.com/biographyText.html"
         },
         {
-            "name": "auto-encoder",
+            "name": "Auto-encoder",
             "url": "https://towardsdatascience.com/auto-encoder-what-is-it-and-what-is-it-used-for-part-1-3e5c6f017726"
         },
         {
-            "name": "relevant thread in the Fluid Corpus Manipulation discourse",
+            "name": "Relevant thread in the Fluid Corpus Manipulation discourse",
             "url": "https://discourse.flucoma.org/t/nnsize-question/450/27"
         },
         {
@@ -325,7 +321,7 @@
             "url": "https://grrrr.org/pub/grill-2012-icmc.pdf"
         },
         {
-            "name": "interactive timbre map",
+            "name": "Interactive timbre map",
             "url": "https://grrrr.org/data/research/texmap/"
         },
         {
@@ -345,11 +341,11 @@
             "url": "https://www.ableton.com/en/"
         },
         {
-            "name": "in this Sound On Sound interview with Icarus",
+            "name": "In this Sound On Sound interview with Icarus",
             "url": "https://www.soundonsound.com/news/icarus-fake-fish-distribution"
         },
         {
-            "name": "another interview between Icarus and Marsha Vdovin",
+            "name": "Another interview between Icarus and Marsha Vdovin",
             "url": "https://cycling74.com/articles/an-interview-with-icarus"
         },
         {
@@ -373,11 +369,11 @@
             "url": "https://apps.dtic.mil/dtic/tr/fulltext/u2/289565.pdf"
         },
         {
-            "name": "this Fluid Corpus Manipulation (FluCoMa) discourse thread",
+            "name": "This Fluid Corpus Manipulation (FluCoMa) discourse thread",
             "url": "https://discourse.flucoma.org/t/using-flucoma-tools-with-reaper/311/7"
         },
         {
-            "name": "this lines forum discourse thread",
+            "name": "This lines forum discourse thread",
             "url": "https://llllllll.co/t/reacoma-fluid-corpus-manipulation-in-reaper/34500"
         },
         {
@@ -389,7 +385,7 @@
             "url": "https://tutschku.com/"
         },
         {
-            "name": "\"Transient slice question\"",
+            "name": "Transient slice question",
             "url": "https://discourse.flucoma.org/t/transient-slice-question/398/6"
         },
         {
@@ -401,7 +397,7 @@
             "url": "https://www.tinpark.com/"
         },
         {
-            "name": "pulse machine xor moves",
+            "name": "Pulse machine xor moves",
             "url": "https://cranksatori.bandcamp.com/album/pulse-machine-xor-moves"
         },
         {
@@ -421,7 +417,7 @@
             "url": "https://www.flucoma.org/plenaries/"
         },
         {
-            "name": "scikit-learn",
+            "name": "Scikit-learn",
             "url": "https://scikit-learn.org/stable/"
         },
         {
@@ -457,11 +453,11 @@
             "url": "https://en.wikipedia.org/wiki/Lisp_(programming_language"
         },
         {
-            "name": "s-expressions",
+            "name": "S-expressions",
             "url": "https://en.wikipedia.org/wiki/S-expression"
         },
         {
-            "name": "slippery chicken",
+            "name": "Slippery chicken",
             "url": "https://michael-edwards.org/sc/index.html"
         },
         {
@@ -469,7 +465,7 @@
             "url": "https://rodrigoconstanzo.com/confetti/"
         },
         {
-            "name": "Pierre Alexandre Tremblay's",
+            "name": "Pierre Alexandre Tremblay",
             "url": "https://www.pierrealexandretremblay.com"
         },
         {
@@ -517,7 +513,7 @@
             "url": "https://en.wikipedia.org/wiki/Bernhard_G\u00fcnter"
         },
         {
-            "name": "autopoiesis",
+            "name": "Autopoiesis",
             "url": "https://atechts.bandcamp.com/album/autopoiesis"
         },
         {
@@ -529,11 +525,7 @@
             "url": "https://www.discogs.com/Yasunao-Tone-Solo-For-Wounded-CD/release/408846"
         },
         {
-            "name": "/Projects/Interferences/Code",
-            "url": "https://github.com/jamesb93/interferences"
-        },
-        {
-            "name": "circuit bending",
+            "name": "Circuit bending",
             "url": "https://en.wikipedia.org/wiki/Circuit_bending"
         },
         {
@@ -541,72 +533,32 @@
             "url": "https://store.lom.audio/products/elektrosluch-mini-city-diy-kit-1?variant=4542176460832"
         },
         {
-            "name": "\"Low Frequencies\"",
+            "name": "Low Frequencies",
             "url": "https://soundslikenoise.org/2019/09/07/low-frequencies/"
         },
         {
-            "name": "\"Coil pickups and microsounds\"",
+            "name": "Coil pickups and microsounds",
             "url": "https://soundslikenoise.org/2020/08/16/coil-pickups-and-microsounds"
         },
         {
-            "name": "\"Raising the Inaudible to the Surface\"",
+            "name": "Raising the Inaudible to the Surface",
             "url": "https://soundslikenoise.org/2014/08/31/listening-to-the-inaudible-field-recording-and-the-pursuit-of-the-microsound/"
         },
         {
-            "name": "/Projects/Interferences/Code/segmentation_scripts/2020-06-18 04-09-54.718681/session.rpp",
-            "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation_scripts/2020-06-18%2004-09-54.718681/session.rpp"
-        },
-        {
-            "name": "/Projects/Interferences/Code/segmentation_scripts/clustered_segmentation.py",
-            "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation_scripts/clustered_segmentation.py"
-        },
-        {
-            "name": "/Projects/Interferences/Code/segmentation.py",
-            "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/segmentation.py"
-        },
-        {
-            "name": "/Projects/Interferences/Code/split_by_activity.py",
-            "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/split_by_activity.py"
-        },
-        {
-            "name": "/Projects/Interferences/Code/micro_segmentation.py",
-            "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/micro_segmentation.py"
-        },
-        {
-            "name": "/Projects/Interferences/Code/micro_clustering.py",
-            "url": "https://github.com/jamesb93/interferences/blob/0773d279b98925cfa7a8b4008ab901d19af5c45b/micro_clustering.py"
-        },
-        {
-            "name": "/Projects/Interferences/Code/outputs/micro_clustering/5_HDBSCluster.json",
-            "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/outputs/micro_clustering/5_HDBSCluster.json"
-        },
-        {
-            "name": "/Projects/Interferences/Code/classification_explorer.maxpat",
-            "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/classification_explorer.maxpat"
-        },
-        {
-            "name": "operator overloading",
+            "name": "Operator overloading",
             "url": "https://docs.python.org/3/reference/datamodel.html#special-method-names"
         },
         {
-            "name": "/Projects/Interferences/Code/MultiCorpus/scripts/base_materials.py",
-            "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/base_materials.py"
-        },
-        {
-            "name": "k-d tree",
+            "name": "K-d tree",
             "url": "https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html"
         },
         {
-            "name": "/Projects/Interferences/Code/MultiCorpus/scripts/find_tuned.py",
+            "name": "Find_tuned.py",
             "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py"
         },
         {
-            "name": "/Projects/Interferences/Code/MultiCorpus/scripts/three_anchors.py",
+            "name": "Three_anchors.py",
             "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/three_anchors.py"
-        },
-        {
-            "name": "/Projects/Interferences/Code/MultiCorpus/scripts/isolate_sample.py",
-            "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/isolate_sample.py"
         },
         {
             "name": "ELISION Ensemble",
@@ -617,11 +569,7 @@
             "url": "https://twitter.com/darylelision?lang=en"
         },
         {
-            "name": "/Projects/Refracted Touch/Code/",
-            "url": "https://github.com/jamesb93/refracted-touch/tree/main/patcher_versions/Refracted%20Touch"
-        },
-        {
-            "name": "gruntCount pieces",
+            "name": "GruntCount pieces",
             "url": "https://sumtone.bandcamp.com/album/gruntcount-improvised-pieces-for-player-and-computer"
         },
         {
@@ -633,24 +581,16 @@
             "url": "http://owengreen.net/portfolio/cardboard-cutout/"
         },
         {
-            "name": "CNMAT `resonators~`",
+            "name": "CNMAT resonators~",
             "url": "https://cnmat.berkeley.edu/content/resonators"
         },
         {
-            "name": "\"Valve Distortion\"",
+            "name": "Valve Distortion",
             "url": "https://cycling74.com/forums/valve-distortion/replies/1#reply-58ed20e643f50b22d4bb408e"
         },
         {
             "name": "2:42",
             "url": "https://youtu.be/b9s-8BPXd58?t=162"
-        },
-        {
-            "name": "/Projects/Reconstruction Error/Code",
-            "url": "https://github.com/jamesb93/reconstruction_error"
-        },
-        {
-            "name": "Alva Noto",
-            "url": "http://alvanoto.com/"
         },
         {
             "name": "Opiate",
@@ -681,11 +621,11 @@
             "url": "https://www.ryojiikeda.com/project/datamatics/"
         },
         {
-            "name": "Pimmon's",
+            "name": "Pimmon",
             "url": "https://pimmon.bandcamp.com/"
         },
         {
-            "name": "Michael Chinen's",
+            "name": "Michael Chinen",
             "url": "https://michaelchinen.com/"
         },
         {
@@ -697,7 +637,7 @@
             "url": "https://michaelchinen.com/music/fuckingwebbrowser/"
         },
         {
-            "name": "lstn",
+            "name": "Lstn",
             "url": "https://michaelchinen.com/2010/12/09/listen-to-your-computer-lstn/"
         },
         {
@@ -717,12 +657,8 @@
             "url": "https://discourse.flucoma.org/"
         },
         {
-            "name": "\"Difficult segmentation\"",
+            "name": "Difficult segmentation",
             "url": "https://discourse.flucoma.org/t/difficult-segmentation/222"
-        },
-        {
-            "name": "/Projects/Reconstruction Error/Code/python_scripts/descriptor_analysis/6_mfcc.py",
-            "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/descriptor_analysis/6_mfccs.py"
         },
         {
             "name": "AudioStellar",
@@ -733,11 +669,7 @@
             "url": "https://github.com/victorwegeborn/LjudMAP"
         },
         {
-            "name": "/Projects/Reconstruction Error/Code/python_scripts/dimensionality_reduction/_dimensionality_reduction.py",
-            "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/dimensionality_reduction/_reduction.py"
-        },
-        {
-            "name": "k-means",
+            "name": "K-means",
             "url": "https://en.wikipedia.org/wiki/K-means_clustering"
         },
         {
@@ -749,24 +681,8 @@
             "url": "https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html"
         },
         {
-            "name": "/reconstruction_error/python_script/clustering/cl_one.json",
-            "url": "https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/clustering/cl_one.json"
-        },
-        {
-            "name": "/Projects/Reconstruction Error/Code/python_scripts/clustering/_clustering.py",
-            "url": "https://github.com/jamesb93/reconstruction_error/blob/master/python_scripts/clustering/_clustering.py"
-        },
-        {
-            "name": "/Projects/Reconstruction Error/Code/python_scripts/clustering/hierarchical_cluster.py",
-            "url": "https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/clustering/hierarchical_cluster.py"
-        },
-        {
-            "name": "cluster notes",
+            "name": "Cluster notes",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/master/clusters.md"
-        },
-        {
-            "name": "/Projects/Reconstruction Error/Code/clusters.md",
-            "url": "https://github.com/jamesb93/reconstruction_error/blob/master/clusters.md#short-fast--delicate"
         },
         {
             "name": "I want to tell you something...",
@@ -777,15 +693,15 @@
             "url": "https://www.opasquet.fr/herbig-haro/"
         },
         {
-            "name": "short paper and presentation",
+            "name": "Short paper and presentation",
             "url": "https://zenodo.org/record/4285398"
         },
         {
-            "name": "cycling 74",
+            "name": "Cycling 74",
             "url": "https://cycling74.com/forums/recreating-a-horsefourses-oscillator/"
         },
         {
-            "name": "collectively designed Max patch",
+            "name": "Collectively designed Max patch",
             "url": "https://cycling74.com/forums/recreating-a-horsefourses-oscillator/replies/1#reply-58ed2132c2991221d9cc767c"
         },
         {
@@ -793,7 +709,7 @@
             "url": "https://www.ciat-lonbarde.net"
         },
         {
-            "name": "the Fourses Manual",
+            "name": "The Fourses Manual",
             "url": "https://synthmall.com/ifm/ifmFRS.pdf"
         },
         {
@@ -805,7 +721,7 @@
             "url": "http://www.olilarkin.co.uk/"
         },
         {
-            "name": "https://olilarkin.github.io/fourses/",
+            "name": "Https://olilarkin.github.io/fourses/",
             "url": "https://olilarkin.github.io/fourses/"
         },
         {
@@ -829,7 +745,7 @@
             "url": "http://percent-s.com/"
         },
         {
-            "name": "Sage Pbbbt's",
+            "name": "Sage Pbbbt",
             "url": "https://sagepbbbt.com"
         },
         {
@@ -841,7 +757,7 @@
             "url": "http://www.audreychen.com"
         },
         {
-            "name": "Trevor Wishart's",
+            "name": "Trevor Wishart",
             "url": "http://www.trevorwishart.co.uk"
         },
         {
@@ -857,16 +773,12 @@
             "url": "https://sagemusick.bandcamp.com/track/2016-02-16-one-breath-poem-failure"
         },
         {
-            "name": "/Software/ReaCoMa",
-            "url": "https://www.github.com/jamesb93/reacoma"
-        },
-        {
             "name": "Lua",
             "url": "http://www.lua.org/"
         },
         {
-            "name": "/Software/Finding Things In Stuff (FTIS)",
-            "url": "https://www.github.com/jamesb93/ftis"
+            "name": "ReaCoMa Source Code",
+            "url": "https://www.github.com/jamesb93/reacoma"
         },
         {
             "name": "YAML syntax",
@@ -881,15 +793,11 @@
             "url": "https://github.com/jamesb93/ftis/blob/3fdef209d3259783cbc4c4d296dd99f94cab727f/ftis/ftis/common/analyser.py"
         },
         {
-            "name": "/Software/mosh",
-            "url": "https://www.github.com/jamesb93/mosh"
-        },
-        {
-            "name": "\"databending\"",
+            "name": "Databending",
             "url": "https://en.wikipedia.org/wiki/Databending"
         },
         {
-            "name": "\"datamoshing\"",
+            "name": "Datamoshing",
             "url": "http://datamoshing.com"
         },
         {
