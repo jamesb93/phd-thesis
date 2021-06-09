@@ -21,14 +21,14 @@
                 'Max Facilitated Exploration', 
                 'Return to Generating Outputs', 
                 'REAPER Scripting', 
-                'Manual Composing'
+                'Manual and Intuitive Composing'
             ]
         },
         {
             'Max Facilitated Exploration' : [
                 'Return to Generating Outputs', 
                 'REAPER Scripting', 
-                'Manual Composing'
+                'Manual and Intuitive Composing'
             ]
         },
         {
@@ -36,24 +36,24 @@
         },
         {
             'REAPER Scripting' : [
-                'Manual Composing', 
+                'Manual and Intuitive Composing', 
                 'Return to Generating Outputs',
                 'Audio Outputs'
             ]
         },
         {
             'Audio Outputs' : [
-                'Manual Composing', 
+                'Manual and Intuitive Composing', 
                 'Return to Generating Outputs',
             ]
         },
         {
-            'Manual Composing' : ['Return to Generating Outputs']
+            'Manual and Intuitive Composing' : ['Return to Generating Outputs']
         },
         {
             'Data Visualisation' : [
                 'Return to Generating Outputs',
-                'Manual Composing',
+                'Manual and Intuitive Composing',
                 'REAPER Scripting'
             ]
         }
