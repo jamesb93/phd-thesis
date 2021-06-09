@@ -12,22 +12,30 @@
 
 # How To Read This Web Thesis
 
+## Rationale
+
+This thesis has been created as an interactive web page, containing elements that allow one to directly engage with audio, video and other forms of media while reading the text. I reasoned that this format would be the optimal way to discuss my work, and to unite the various aspects of my practice within a single document. This includes code, interactive "demos" of technological and compositional processes, as well as traditional audio and video playback.
+
+I hope that in addition to the contribution to knowledge that this thesis makes, it might serve as a model for others who desire to make their own interactive documents and presentations of research.
+
+The source code for this thesis is hosted at GitHub: https://github.com/jamesb93/harnessing
+
 ## Compatibility
 This thesis supports a number of web browsers. It has been tested on:
 + Firefox +88.0
 + Safari +14.1
-+ Chromium +90 (and thus should support variants such as Edge, Vivaldi, Brave etc...)
++ Chromium Browser +90 (and thus should support Chrome, Edge, Vivaldi, Brave etc...)
 
 If for any reason something is not working or fails to load, please first try viewing the thesis in another browser.
 
 ## Navigation
-To navigate to different sections of this thesis, use the left hand navigation panel. The right hand navigation panel allows you to move between the structure of a page more conveniently.
+This thesis is divided into six sections. To navigate to sections of this thesis, use the left hand navigation panel. The right hand navigation panel allows one to move between parts of a single section more conveniently. One will notice that if window for this thesis is too small in the browser, these two navigation panels will be hidden to preserve the presentation of the text. In this situation, one can unfold the navigation on the left side by clicking the "hamburger" menu in the top left corner.
 
 ## Interactive Elements In This Thesis
-There are many interactive elements throughout this thesis, such as annotated waveforms, code, videos, image and data visualisations. There are also numerous [hyperlinks (I'm just an example)]() that lead between different parts of the thesis as well as to external pages. These hyperlinks also lead to the interactive elements. Clicking [IMAGE 1](/howto#image), will take directly you to that part of the page. I encourage you to follow to see how these integral digital resources feed into my work and support the research. There five archetypes of interactive elements that you will see. This will introduce you to them.
+There are many interactive elements throughout this thesis, such as annotated waveforms, code, videos, image and data visualisations. There are also numerous [hyperlinks (I'm just an example)]() that link to different parts of the thesis as well as external websites and pages. These hyperlinks also function as tools for navigation, allowing one to move directly to the relevant interactive elements within this thesis. For example, clicking [IMAGE 1](/howto#image), will shift the focus of the window to that element is. I encourage the reader to follow these links to see how these integral digital resources feed into my work and support the research. Five archetypes of interactive elements will now be introduced.
 
 ### Waveform or Album
-This is the waveform widget. It shows a single sound file with an overview and zoom waveform view. You can zoom in by clicking the +/- buttons and stop and start the audio with the widget beneath the waveform. You can also scrub through the sound file with your mouse on any of the views.
+This is the waveform widget. It shows a single sound file with an overview and zoom waveform view. One can zoom in by clicking the +/- buttons and stop and start the audio with the audio element beneath the waveform. One can also scrub through the sound file with a click and drag manoeuvre on any of these two views. Some waveform widgets widgets also are annotated, in which case, a list of these will be displayed below the waveform views in a table. One can click the appropriate annotation to seek directly to that time in the audio file.
 
 All audio samples in this document are in a compressed format in order to make the document fast and usable over the web. However, links to high quality WAV files can be found embedded into the audio playback widgets. Look for the *Download Lossless Version* text to navigate to these links. This can be found on the bottom left hand corner of the waveform widget, and in the list of individual album items in the album widget.
 
@@ -36,9 +44,13 @@ file='/howto/pink.mp3'
 peaks='/howto/pink.dat'
 title='Pink noise at -23 LUFS'
 id='audio'
+segments={[
+    { startTime: 0.0, endTime: 3.0, labelText: 'Segment 1'},
+    { startTime: 3.5, endTime: 6.0, labelText: 'Segment 2'}
+]}
 />
 
-There is also the album widget, which groups together various files. You can select different files from the album by clicking them in the list and then clicking "Play".
+There is also the album widget, which groups together various files. One can select different files from the album by clicking them in the list and then clicking "Play".
 
 <Album 
 tracks={reAlbum}
@@ -48,7 +60,7 @@ figure="AUDIO 1"
 />
 
 ### Image
-This is the image widget. It displays images. They can be maximised if they are too small by clicking the image. This will load the raw file in your browser.
+This is the image widget. It displays images. They can be maximised if they are too small by clicking the image. This will load the raw file in the browser.
 
 <ImageMedia2 
 url="http://www.ciat-lonbarde.net/fyrall/paperz/fourses/06.gif"
@@ -69,7 +81,7 @@ id="vid1"
 />
 
 ### Code
-The code widget displays examples of code in a collapsible text box. You can collapse the text by clicking anywhere in the title bar of the widget.
+The code widget displays examples of code in a collapsible text box. One can collapse the text by clicking anywhere in the title bar of the widget.
 <Code2
 caption='A code example'
 figure='CODE 1'>
@@ -78,14 +90,13 @@ figure='CODE 1'>
 ```python
 thing_i_do = 'computer-aided composition'
 qualifier = 'is the best'
-# I am a code comment - lets print out some words
 print(thing_i_do, ' ', qualifier)
 >> computer-aided composition is the best
 ```
 
 </Code2>
 
-In this text, code is referred to inline using this widget, and if it is a part of the software outputs a relative path from the root of the submitted materials will be provided. You can click the link to directly observe the code hosted on GitHub or read the path to find it in a local copy. For example, [/Projects/Reconstruction Error/Code/python_scripts/scraping/scrape_files.py](https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/scraping/scrape_files.py) refers to the script named `scrape_files.py`, which can be found in the [[4.4 Reconstruction Error]]({m.re}) directory, which is inside the "pieces" top level directory.
+In this text, code is referred to inline using this widget, and if it is a part of the software outputs a relative path from the root of the submitted materials will be provided. One can click the link to directly observe the code hosted on GitHub or read the path to find it in a local copy. For example, [/Projects/Reconstruction Error/Code/python_scripts/scraping/scrape_files.py](https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/scraping/scrape_files.py) refers to the script named `scrape_files.py`, which can be found in the [[4.4 Reconstruction Error]]({m.re}) directory, which is inside the "pieces" top level directory.
 
 <NextSection 
 next="Submission Materials"
