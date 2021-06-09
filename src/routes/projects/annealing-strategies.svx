@@ -82,12 +82,12 @@ figure="IMAGE 2"
 id="img2"
 />
 
-SA can be applied to many problems across different domains including finding the minimum or maximum value in a set, such as in this weather data (see [IMAGE 3]({m.as}#img3)) or solving the "travelling salesman problem" in which an optimally short journey is designed between a set of spatially dispersed nodes (see [IMAGE 4]({m.as}#img4)). An interactive example by "Nayuki" uses SA to [reconstruct a digitally "shredded" image](https://www.nayuki.io/page/image-unshredder-by-annealing). This particular example is apt for demonstrating how the parameters of the algorithm can affect the success and output of SA.
+SA can be applied to many problems across different domains including finding the minimum or maximum value in a set, such as in this weather data (see [IMAGE 3]({m.as}#img3)) or solving the "travelling salesman problem" in which an optimally short journey is designed between a set of spatially dispersed nodes (see [IMAGE 4]({m.as}#img4)). An interactive example by ["Nayuki" uses SA to reconstruct a digitally "shredded" image](https://www.nayuki.io/page/image-unshredder-by-annealing). This particular example is apt for demonstrating how the parameters of the algorithm can affect the success and output of SA.
 
 <ImageMedia2 
 url="https://upload.wikimedia.org/wikipedia/commons/d/d5/Hill_Climbing_with_Simulated_Annealing.gif"
 htmlCap={true}
-caption='The highest data point in weather data being located through simulated annealing. Taken from <a href="https://commons.wikimedia.org/wiki/File:Hill_Climbing_with_Simulated_Annealing.gif">Kingpin13</a>, CC0, via Wikimedia Commons'
+caption='The highest data point in weather data being located through simulated annealing. Taken from <a href="https://commons.wikimedia.org/wiki/File:Hill_Climbing_with_Simulated_Annealing.gif">Kingpin13</a>, CC0, via Wikimedia Commons.'
 figure="IMAGE 3"
 id="img3"
 />
@@ -95,7 +95,7 @@ id="img3"
 <ImageMedia2 
 url="https://upload.wikimedia.org/wikipedia/commons/1/1e/3D_TSP_solved_with_simulated_annealing_2.5_MB.gif"
 htmlCap={true}
-caption='The travelling salesman problem being solved by simulated annealing. Panchotera~enwiki, CC BY-SA 4.0 <a href="https://creativecommons.org/licenses/by-sa/4.0">https://creativecommons.org/licenses/by-sa/4.0</a>, via Wikimedia Commons'
+caption='The travelling salesman problem being solved by simulated annealing. Panchotera~enwiki, CC BY-SA 4.0 <a href="https://creativecommons.org/licenses/by-sa/4.0">https://creativecommons.org/licenses/by-sa/4.0</a>, via Wikimedia Commons.'
 figure="IMAGE 4"
 id="img4"
 />
