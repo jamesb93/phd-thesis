@@ -93,12 +93,10 @@
     <ul class="segments">
         <span id="timecodes">List of referenced time codes</span>
         {#each segments as segment, i}
-            <li>
-                    <a class:selected={ lastSelected === i } class='timecode' on:click={ () => clickHandler(segment, i) }>
-                        <span>{convert(segment.startTime)} - {convert(segment.endTime)}</span>
-                        <span id="label">{segment.labelText}</span>
-                    </a>
-            </li>
+            <div class:selected={ lastSelected === i } class='timecode' on:click={ () => clickHandler(segment, i) }>
+                <span id='time'>{convert(segment.startTime)} - {convert(segment.endTime)}</span>
+                <span id="label">{segment.labelText}</span>
+            </div>
         {/each}
     </ul>
     {/if}
@@ -121,7 +119,7 @@
     }
     #lossless-link {
         font-style: italic;
-        text-align: right;
+        text-align: left;
         color: rgb(96, 96, 96);
     }
 
@@ -138,7 +136,32 @@
     #title {
         text-align: left;
 		font-weight: bold;
+    }
 
+    .timecode {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        word-wrap: none;
+        border-top: 1px rgb(197, 197, 197) solid;
+        gap: 3%;
+    }
+
+    .timecode:hover {
+        background-color: rgb(240, 240, 240);
+    }
+
+    .timecode:active {
+        background-color: rgb(199, 199, 199);
+    }
+
+    #time {
+        white-space: nowrap;
+    }
+
+    #label {
+        color: grey;
+        text-align: right;
     }
     
     #caption{
@@ -168,15 +191,6 @@
         align-items: center;
     }
 
-    ul li {
-        display: block;
-        border-top: 1px rgb(197, 197, 197) solid;
-    }
-
-    ul li:hover {
-        background-color: rgb(240, 240, 240);
-    }
-
     a { 
         color: black
     }
@@ -186,19 +200,8 @@
         text-decoration: none;
     }
 
-    .timecode {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-right: 10px;
-    }
-
     .selected {
         font-weight: bold;
-    }
-
-    #label {
-        color: grey;
     }
 
     .segments {
