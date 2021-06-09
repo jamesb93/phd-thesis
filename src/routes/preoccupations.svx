@@ -184,7 +184,7 @@ This proclivity towards the inclusion and treatment of noise-based sounds stems 
 
 <YouTube 
 url='https://www.youtube.com/embed/N701JYnjaMs'
-title='Massive Attack vs Burial (2011) – Paradise Circus'
+title='Paradise Circus (2011) – Massive Attack vs Burial'
 figure='VIDEO 1'
 id='vid1'
 />

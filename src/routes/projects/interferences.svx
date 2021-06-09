@@ -147,7 +147,7 @@ Following this intuitive desire, I used [FTIS]({m.ftis}) to segment the active s
 
 <VideoMedia2 
 url='/inter/exploring-clusters'
-caption='Exploring segmented and clustered active material'
+caption='Exploring segmented and clustered active material.'
 figure='VIDEO 4'
 id='vid4'
 />
@@ -260,7 +260,7 @@ I auditioned the 200 sounds returned by the [find_tuned.py](https://github.com/j
 
 <VideoMedia2 
 url='/inter/exploring-tuned-anchors'
-caption='Auditioning the output of find_tuned.py'
+caption='Auditioning the output of the find_tuned.py script.'
 figure='VIDEO 5'
 id='vid5'
 />
@@ -327,7 +327,7 @@ At 6:48 the texturally dense musical behaviour is interrupted by the return of a
 
 <VideoMedia2 
 url='/inter/reorganising-material'
-caption='Using ReaCoMa to segment and extend the active gesture '
+caption='Using ReaCoMa to segment and then proliferate the active gesture.'
 figure='VIDEO 6'
 id='vid6'
 />

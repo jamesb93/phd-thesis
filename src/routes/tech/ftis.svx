@@ -1,7 +1,6 @@
 <script>
     import ImageMedia from '$lib/components/ImageMedia.svelte'
     import NextSection from "$lib/components/NextSection.svelte"
-    import VideoMedia from '$lib/components/VideoMedia.svelte'
     import YouTube from "$lib/components/YouTube.svelte"
     import {metadata as m} from "../directory.svx"
     import Points from '$lib/demos/dimension-reduction/Points.svelte';

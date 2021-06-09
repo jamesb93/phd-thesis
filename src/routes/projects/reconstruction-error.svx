@@ -50,12 +50,12 @@ A number of artists have experimented with databending in their work and this ha
 
 <VideoMedia id='vid1'>
 <iframe slot='media' title='Binary Self-Portraits (2008) – Nick Briz' src="https://player.vimeo.com/video/4510943" width="640" height="524" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<p slot="caption">VIDEO 1: Binary Self-Portraits by Nick Briz.</p>
+<p slot="caption">VIDEO 1: Binary Self-Portraits (2008) – Nick Briz</p>
 </VideoMedia>
 
 <VideoMedia id='vid2'>
 <iframe slot='media' title='From The Ground Up In Order, Embrace (2007) – Nick Briz' src="https://player.vimeo.com/video/4506517" width="640" height="524" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<p slot="caption">VIDEO 2: From The Ground Up In Order, Embrace by Nick Briz.</p>
+<p slot="caption">VIDEO 2: From The Ground Up In Order, Embrace (2007) – Nick Briz</p>
 </VideoMedia>
 
 *Unitxt Code (Data to AIFF)* (2008) (see [VIDEO 3]({m.re}#vid3)) by [Alva Noto](http://www.alvanoto.com/), although not explicitly stated in liner notes or interviews, likely uses data converted to audio (as suggested by the name) for the core compositional material of that work. The harsh and degraded noise-based sounds which are heard in this work are commonly produced when converting text files into audio. *[Datamatics](https://www.ryojiikeda.com/project/datamatics/)* (2006) (see [VIDEO 4]({m.re}#vid4)), by [Ryoji Ikeda](https://www.ryojiikeda.com)  incorporates raw data as source material which drives both the visual and audio of this installation work. [Pimmon's](https://pimmon.bandcamp.com/) album *Electronic Tax Return* (2007) (see [VIDEO 5]({m.re}#vid5)) has several works based on synthesising sound by converting dynamic-link libraries (.dll files) into files for playback and manipulation.

@@ -30,7 +30,7 @@ As I researched topics related to these interests, I came across Stefano Fascian
 
 <YouTube 
 url="https://www.youtube.com/embed/yMLl7-aI_kc?start=687"
-title="Stefano Fasciani demonstrating the 'TSAM' program"
+title='Stefano Fasciani demonstrating the "TSAM" program.'
 figure="VIDEO 1"
 id='vid1'
 />
@@ -63,9 +63,9 @@ There are 24 interdependent parameters that control the *Fourses* synth. Because
 
 <VideoMedia2
 url="/as/jitbfg"
-figure="VIDEO 1"
+figure="VIDEO 2"
 caption="A screen capture demonstrating the single input interface in practice."
-id="vid1"
+id="vid2"
 />
 
 The benefit of this approach is that the single input allowed me to broadly explore parameter combinations in exchange for specific control. Furthermore, the configuration of the procedural basis function can create a variety of novel combinations of parameters quickly that adhere to a fixed relationship and structure. This was inspired by the work of Bowers et. al (2016) and their various strategies that for mapping a single knob to several synthesis parameters.

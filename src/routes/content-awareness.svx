@@ -42,7 +42,7 @@ Many software tools can be used to calculate audio descriptors, especially for c
 
 <YouTube 
 url='https://www.youtube.com/embed/DQ_hPkrbgzQ'
-title='FluCoMa vs Orchidea MFCC matching comparison'
+title='FluCoMa vs Orchidea MFCC matching comparison.'
 figure="VIDEO 1"
 id='vid1'
 />
@@ -143,7 +143,7 @@ In *Race To The Bottom* (2019) (see [VIDEO 2]({m.ca}#vid2)), Green creates sever
 
 <YouTube 
 url="https://www.youtube.com/embed/zeOm9w3ZJVc"
-title="Owen Green performing 'Race to the Bottom' (2019)"
+title='Owen Green performing "Race to the Bottom" (2019)'
 figure="VIDEO 2"
 id='vid2'
 />
@@ -160,7 +160,7 @@ That said, Green's work influences me in the way that machine listening algorith
 
 <YouTube 
 url="https://www.youtube.com/embed/cekfFC9eZhY"
-title="Owen Green presentation on 'Race To The Bottom'"
+title='Owen Green presentation on "Race To The Bottom".'
 figure="VIDEO 3"
 id='vid3'
 />
@@ -172,7 +172,7 @@ In Constanzo's [C-C-Combine](https://rodrigoconstanzo.com/combine/) (see [VIDEO 
 
 <YouTube 
 url="https://www.youtube.com/embed/K5AgH1leBUU"
-title="C-C-Combine"
+title="C-C-Combine."
 figure="VIDEO 4"
 id='vid4'
 />
@@ -181,7 +181,7 @@ Because C-C-Combine exists primarily for real-time use I do not use it in my own
 
 <YouTube 
 url="https://www.youtube.com/embed/Ne3wAEzd3rU?start=2304"
-title="Rodrigo Constanzo Creative Coding Lab Symposium Presentation" 
+title="Rodrigo Constanzo Creative Coding Lab Symposium Presentation." 
 figure="VIDEO 5"
 id='vid5'
 />
@@ -217,7 +217,7 @@ Additionally, software that operates in non-realtime is conducive for my [iterat
 
 <YouTube 
 url="https://www.youtube.com/embed/BEwTCZxx9r0?start=414"
-title="Ben Hackbarth presenting AudioGuide"
+title="Ben Hackbarth presenting AudioGuide."
 figure="VIDEO 6"
 id='vid6'
 />
@@ -271,7 +271,7 @@ Interpolating between these keyframes blends the properties of two known paramet
 
 <VideoMedia id='vid8'>
 <iframe slot="media" title='Icarus (Ollie Bown and Sam Britton) explaining Fake Fish Distribution' src="https://player.vimeo.com/video/38404732" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
-<p slot="caption">VIDEO 8: Icarus (Ollie Bown and Sam Britton) explaining Fake Fish Distribution</p>
+<p slot="caption">VIDEO 8: Icarus (Ollie Bown and Sam Britton) explaining Fake Fish Distribution (2012).</p>
 </VideoMedia>
 
 #### S.709 (1994) — Iannis Xenakis
@@ -279,7 +279,7 @@ Another *semi-supervised* approach can be found in the compositional method for 
 
 <YouTube 
 url="https://www.youtube.com/embed/Zmi2EVb7kQU"
-title="Iannis Xenakis – S.709"
+title="S.709 (1994) – Iannis Xenakis"
 figure="VIDEO 9"
 id='vid9'
 />
