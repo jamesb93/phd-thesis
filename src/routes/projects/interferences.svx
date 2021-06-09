@@ -184,7 +184,6 @@ caption='AUDIO 7'
 id='aud7'
 />
 
-<!-- REVIEW: check -->
 Another ad-hoc experiment was based on exploring the micro-clustering results by exporting them to REAPER as materials to be composed with intuitively. Using samples from clusters such as 1, 2, and 37, I constructed a series of different loops manually in the DAW timeline. I aimed to create several iterated structures that were cyclical in nature, foregrounding each sample's microscopic textural detail, while forming a relatively static structure over a longer time scale.
 
 Several of these experiments can be heard in [AUDIO 8]({m.em}#aud8). They were less evocative for me, and I felt as if the underlying concept of what I was trying to do was not being explored in as much detail as it demanded. That said, it did inform some of the ways that material was constructed in [{m.eee}]({m.em}#{m.eee}), in terms of how sounds were deconstructed and restructured through intuitive compositional decision-making.
@@ -319,7 +318,6 @@ I wanted to separate these two behaviours and deconstruct their relationship, in
 
 #### Deconstruction Of Active And Static States
 
-<!-- REVIEW: is this okay? -->
 Conceptually, the active and static states of the e-reader recording were subjected to different compositional and technological procedures, and with an individual approach in mind for each of them. The material static state is treated as a "base layer" which is ornamented with other samples, while the active state is deconstructed in order to recycle that material and proliferate it over time. 
 
 The first three and a half minutes of the piece are based on extending the antiphonal nature of the source material. To do this, I began by segmenting the unprocessed e-reader sample manually into regions of active and static behaviour. This way I had access to those two different behaviours in isolation. I created a number of configurations in which the static texture is interjected with the initiating gesture found in the active state. Using [ReaCoMa]({m.reacoma}) to segment this active gesture allowed me to form variations of it by reordering short segments. The static material is mostly left untouched. Creating this short section came first in the compositional process and functioned as an exploratory phase, allowing me to determine what organisations and juxtapositions of the static and active material would work best compositionally. The next six minutes of the piece were composed after this exploratory phase.
