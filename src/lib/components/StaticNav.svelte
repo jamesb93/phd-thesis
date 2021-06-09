@@ -44,9 +44,6 @@
 		
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === m.ref} href={m.ref}>References, Links and Figures</a></li>
 		<li><a  on:click={handleClick} class="link section" class:selected={$page.path === "/copyright"}	href='/copyright'>Copyright</a></li>
-
-		<br>
-		<li><a rel='external' target="_blank" on:click={handleClick} class="faint" href="https://github.com/jamesb93/phd-kit">source code</a></li>
 	</ul>
 </nav>
 
