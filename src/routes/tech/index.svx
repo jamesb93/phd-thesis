@@ -6,7 +6,7 @@
 
 # Technical Implementation and Software
 
-This section outlines three items of software that have been integral in my compositional process with content-aware programs. For each section within this chapter, I outline my motivations for creating the software and its role in my practice of composing with content-aware programs. 
+This section outlines three items of software that have been integral in my compositional process with content-aware programs. I outline my motivations for creating the software and its role in my practice of composing with content-aware programs. 
 
 <NextSection 
 next="mosh"
