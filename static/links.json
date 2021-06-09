@@ -517,7 +517,7 @@
             "url": "https://atechts.bandcamp.com/album/autopoiesis"
         },
         {
-            "name": "Taylor Dupree",
+            "name": "Taylor Deupree",
             "url": "https://en.wikipedia.org/wiki/Taylor_Deupree"
         },
         {
@@ -642,7 +642,7 @@
         },
         {
             "name": "Alva Noto",
-            "url": "http://www.alvanoto.com/"
+            "url": "http://alvanoto.com/"
         },
         {
             "name": "Opiate",
@@ -667,6 +667,10 @@
         {
             "name": "Nick Briz",
             "url": "http://nickbriz.com/"
+        },
+        {
+            "name": "Alva Noto",
+            "url": "http://www.alvanoto.com/"
         },
         {
             "name": "Datamatics",
@@ -849,15 +853,15 @@
             "url": "https://sagemusick.bandcamp.com/track/2016-02-16-one-breath-poem-failure"
         },
         {
+            "name": "/Software/ReaCoMa",
+            "url": "https://www.github.com/jamesb93/reacoma"
+        },
+        {
             "name": "Lua",
             "url": "http://www.lua.org/"
         },
         {
-            "name": "ReaCoMa Source Code",
-            "url": "https://www.github.com/jamesb93/reacoma"
-        },
-        {
-            "name": "FTIS Source Code",
+            "name": "/Software/Finding Things In Stuff (FTIS)",
             "url": "https://www.github.com/jamesb93/ftis"
         },
         {
@@ -873,7 +877,7 @@
             "url": "https://github.com/jamesb93/ftis/blob/3fdef209d3259783cbc4c4d296dd99f94cab727f/ftis/ftis/common/analyser.py"
         },
         {
-            "name": "mosh Source Code",
+            "name": "/Software/mosh",
             "url": "https://www.github.com/jamesb93/mosh"
         },
         {
@@ -903,31 +907,31 @@
     ],
     "videos": [
         {
-            "name": "FluCoMa vs Orchidea MFCC matching comparison",
+            "name": "FluCoMa vs Orchidea MFCC matching comparison.",
             "url": "https://www.youtube.com/embed/DQ_hPkrbgzQ"
         },
         {
-            "name": "Owen Green performing 'Race to the Bottom' (2019)",
+            "name": "Owen Green performing \"Race to the Bottom\" (2019)",
             "url": "https://www.youtube.com/embed/zeOm9w3ZJVc"
         },
         {
-            "name": "Owen Green presentation on 'Race To The Bottom'",
+            "name": "Owen Green presentation on \"Race To The Bottom\".",
             "url": "https://www.youtube.com/embed/cekfFC9eZhY"
         },
         {
-            "name": "C-C-Combine",
+            "name": "C-C-Combine.",
             "url": "https://www.youtube.com/embed/K5AgH1leBUU"
         },
         {
-            "name": "Rodrigo Constanzo Creative Coding Lab Symposium Presentation\"",
+            "name": "Rodrigo Constanzo Creative Coding Lab Symposium Presentation.\"",
             "url": "https://www.youtube.com/embed/Ne3wAEzd3rU?start=2304"
         },
         {
-            "name": "Ben Hackbarth presenting AudioGuide",
+            "name": "Ben Hackbarth presenting AudioGuide.",
             "url": "https://www.youtube.com/embed/BEwTCZxx9r0?start=414"
         },
         {
-            "name": "Iannis Xenakis \u2013 S.709",
+            "name": "S.709 (1994) \u2013 Iannis Xenakis",
             "url": "https://www.youtube.com/embed/Zmi2EVb7kQU"
         },
         {
@@ -939,7 +943,7 @@
             "url": "https://player.vimeo.com/video/38404732"
         },
         {
-            "name": "Massive Attack vs Burial (2011) \u2013 Paradise Circus",
+            "name": "Paradise Circus (2011) \u2013 Massive Attack vs Burial",
             "url": "https://www.youtube.com/embed/N701JYnjaMs"
         },
         {
@@ -963,11 +967,11 @@
             "url": "https://www.youtube.com/embed/rxUvMl_IxoQ"
         },
         {
-            "name": "Matthew Sergeant in conversation with ELISION's Daryl Buckley (1 of 2)",
+            "name": "Matthew Sergeant in conversation with ELISION's Daryl Buckley (1 of 2).",
             "url": "https://www.youtube.com/embed/bo_n1JXGiMY\""
         },
         {
-            "name": "Matthew Sergeant in conversation with ELISION's Daryl Buckley (2 of 2)",
+            "name": "Matthew Sergeant in conversation with ELISION's Daryl Buckley (2 of 2).",
             "url": "https://www.youtube.com/embed/S0WMNvkLODU"
         },
         {
@@ -1031,7 +1035,7 @@
             "url": "https://player.vimeo.com/video/314301724?byline=0&portrait=0"
         },
         {
-            "name": "Stefano Fasciani demonstrating the 'TSAM' program",
+            "name": "Stefano Fasciani demonstrating the \"TSAM\" program.",
             "url": "https://www.youtube.com/embed/yMLl7-aI_kc?start=687"
         },
         {
@@ -1043,7 +1047,7 @@
             "url": "https://www.youtube.com/embed/Ude4717dlsQ?start=786"
         },
         {
-            "name": "ReaCoMa Tutorial Video Series",
+            "name": "ReaCoMa Tutorial Video Series.",
             "url": "https://www.youtube.com/embed/r3uHMXmlPRo"
         }
     ]
