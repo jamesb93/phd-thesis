@@ -12,7 +12,7 @@ export const segs4 = [
     {
         startTime: 46,
         endTime: 53,
-        labelText: 'Pitch material development compared to the section from 2:48 to 2:55'
+        labelText: 'Pitch material – developed in the section from 2:48 to 2:55'
     },
     {
         startTime: 73,
@@ -52,6 +52,6 @@ export const segs4 = [
     {
         startTime: 168,
         endTime: 175,
-        labelText: 'Pitch material development compared to the section from 0:46 to 0:53' 
+        labelText: 'Pitch material from  0:46 to 0:53 developed' 
     }
 ]
