@@ -93,6 +93,10 @@
             "url": "https://www.alexanderjharker.co.uk/Software.html"
         },
         {
+            "name": "hyperlinks",
+            "url": "https://en.wikipedia.org/wiki/Hyperlink"
+        },
+        {
             "name": "/Projects/Reconstruction Error/Code/python_scripts/scraping/scrape_files.py",
             "url": "https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/scraping/scrape_files.py"
         },
@@ -577,7 +581,7 @@
             "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/outputs/micro_clustering/5_HDBSCluster.json"
         },
         {
-            "name": "/Projects/Interferences/Code/classification_explorer",
+            "name": "/Projects/Interferences/Code/classification_explorer.maxpat",
             "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/classification_explorer.maxpat"
         },
         {
@@ -597,11 +601,11 @@
             "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py"
         },
         {
-            "name": "/Projects/Interferences/MultiCorpus/scripts/three_anchors.py",
+            "name": "/Projects/Interferences/Code/MultiCorpus/scripts/three_anchors.py",
             "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/three_anchors.py"
         },
         {
-            "name": "isolate_sample.py",
+            "name": "/Projects/Interferences/Code/MultiCorpus/scripts/isolate_sample.py",
             "url": "https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/isolate_sample.py"
         },
         {
@@ -613,7 +617,7 @@
             "url": "https://twitter.com/darylelision?lang=en"
         },
         {
-            "name": "/Projects/Refracted Touch/Code/Refracted Touch/",
+            "name": "/Projects/Refracted Touch/Code/",
             "url": "https://github.com/jamesb93/refracted-touch/tree/main/patcher_versions/Refracted%20Touch"
         },
         {
@@ -633,12 +637,16 @@
             "url": "https://cnmat.berkeley.edu/content/resonators"
         },
         {
-            "name": "this post",
+            "name": "\"Valve Distortion\"",
             "url": "https://cycling74.com/forums/valve-distortion/replies/1#reply-58ed20e643f50b22d4bb408e"
         },
         {
             "name": "2:42",
             "url": "https://youtu.be/b9s-8BPXd58?t=162"
+        },
+        {
+            "name": "/Projects/Reconstruction Error/Code",
+            "url": "https://github.com/jamesb93/reconstruction_error"
         },
         {
             "name": "Alva Noto",
@@ -667,10 +675,6 @@
         {
             "name": "Nick Briz",
             "url": "http://nickbriz.com/"
-        },
-        {
-            "name": "Alva Noto",
-            "url": "http://www.alvanoto.com/"
         },
         {
             "name": "Datamatics",
@@ -809,7 +813,7 @@
             "url": "https://en.wikipedia.org/wiki/Boltzmann_distribution"
         },
         {
-            "name": "reconstruct a digitally \"shredded\" image",
+            "name": "\"Nayuki\" uses SA to reconstruct a digitally \"shredded\" image",
             "url": "https://www.nayuki.io/page/image-unshredder-by-annealing"
         },
         {
@@ -911,7 +915,7 @@
             "url": "https://www.youtube.com/embed/DQ_hPkrbgzQ"
         },
         {
-            "name": "Owen Green performing \"Race to the Bottom\" (2019)",
+            "name": "Owen Green performing \"Race to the Bottom\" (2019).",
             "url": "https://www.youtube.com/embed/zeOm9w3ZJVc"
         },
         {
