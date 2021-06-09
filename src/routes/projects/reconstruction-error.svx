@@ -30,7 +30,7 @@ figure="AUDIO 1"
 
 Reconstruction Error is the fourth project in this portfolio. It is a set of five pieces, presented in an EP format.
 
-There is also a git repository that contains all of the Python code and Max patches that were created and used as part of this project. This repository can be found hosted on GitHub at: https://github.com/jamesb93/reconstruction_error.
+There is also a git repository that contains all of the Python code and Max patches that were created and used as part of this project. This repository can be found here: [/Projects/Reconstruction Error/Code](https://github.com/jamesb93/reconstruction_error).
 
 ## Motivations and Influences
 In the previous three projects, I explored a number of techniques, approaches and workflows for computer-aided composition with content-aware programs. Each of these projects was motivated by a combination of factors both musical and extra-musical, such as opportunities to compose for visiting artists or the need to respond to immediate influences in my creative coding practice and musical listening. Reflecting on the previous projects up to this point, the most successful and fluid workflow evolved in [Stitch/Strata]({m.ss}). Despite being a difficult compositional process that involved many failed attempts to reach the finished state of the piece, using the computer to sieve through a corpus of sounds and *offer up* generated sections of material and sound was an expressive workflow in which agency was balanced between me and the computer. I decided to move forward with this model in mind and aimed to create a piece by using the computer in a similar fashion.
