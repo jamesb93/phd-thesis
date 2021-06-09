@@ -13,8 +13,11 @@ All pieces are presented in stereo audio format.
 
 *Duration:* 7:23
 
-*Path:* /Projects/StitchStrata/Audio
+*Path:* /Projects/StitchStrata/
 
+*Audio:* /Projects/StitchStrata/Audio/
+
+*Code:* /Projects/StitchStrata/Code/
 
 ### Annealing Strategies
 
@@ -22,17 +25,23 @@ All pieces are presented in stereo audio format.
 
 *Duration:* 3:33
 
-*Path:* /Projects/StitchStrata/Audio
+*Path:* /Projects/Annealing Strategies/
+
+*Audio:* /Projects/Annealing Strategies/Audio/
+
+*Path:* /Projects/Annealing Strategies/Code/
 
 ### Refracted Touch
-
 
 *Format:* Live Electronics and Lap Steel Guitar
 
 *Duration:* 9:56
 
-*Path:* /Projects/StitchStrata/Audio
+*Path:* /Projects/Refracted Touch/
 
+*Audio:* /Projects/Refracted Touch/Audio/
+
+*Code:* /Projects/Refracted Touch/Code/
 
 ### Reconstruction Error
 
@@ -40,7 +49,11 @@ All pieces are presented in stereo audio format.
 
 *Duration:* 24:38
 
-*Path:* /Projects/StitchStrata/Audio
+*Path:* /Projects/StitchStrata/
+
+*Audio:* /Projects/Reconstruction Error/Audio/
+
+*Code:* /Projects/Reconstruction Error/Code/
 
 
 ### Interferences
@@ -49,7 +62,11 @@ All pieces are presented in stereo audio format.
 
 *Duration:* 23:14
 
-*Path:* /Projects/Pieces/StitchStrata/Audio
+*Path:* /Projects/Interferences/
+
+*Audio:* /Projects/Interferences/Audio/
+
+*Code:* /Projects/Interferences/Code/
 
 ## Software
 
