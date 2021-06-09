@@ -14,13 +14,6 @@ export const anchors = {
     ]
 }
 
-export const anchorsInteractions = {
-    prefix: '/inter/anchors/',
-    trackData: {
-        
-    }
-}
-
 export const eeeSegments = [
     { startTime: 0.0, endTime: 221.0, labelText: 'Extension of antiphony between active and static states' },
     { startTime: 221.0, endTime: 408.0, labelText: 'Development of static musical behaviour' },
