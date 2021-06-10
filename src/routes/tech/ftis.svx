@@ -99,7 +99,7 @@ Given enough time spent with a certain collection of sounds, I will at some poin
 
 The gathering of compositional materials in [P 08_19]({m.em}#p-08_19) was influenced by my continued listening to a set of *static* materials. Within these materials I identified three different "anchors" — sounds which I found were novel amongst a collection — which I then used as key points in the corpus from which to derive and search for other sounds. This was technically managed with a k-d tree, leveraging it to *branch* out from the location of these samples in a latent space constructed through audio descriptors. From this process I was able to find materials that were perceptually similar to each specific anchor, and thus built the piece from that.
 
-Similarly, in [{m.eee}]({m.em}#meee) I proliferated stationary and morphologically invariant material through the superimposition of similar sounds. This allowed me to find ways of compositionally developing the piece using a single sample as a starting point. This was facilitated again by the k-d tree to search for sounds which were similar to this specific static sample.
+Similarly, in [G090G10564620B7Q]({m.em}#G090G10564620B7Q) I proliferated stationary and morphologically invariant material through the superimposition of similar sounds. This allowed me to find ways of compositionally developing the piece using a single sample as a starting point. This was facilitated again by the k-d tree to search for sounds which were similar to this specific static sample.
 
 ## Architecture
 This section explains the architecture of FTIS and the relationship between its two key components, *analysers* and *worlds*.

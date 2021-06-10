@@ -111,7 +111,7 @@ The first module I created was a harmonic-percussive source separator. I started
 
 <VideoMedia2 
 url="/rt/hpss-demo"
-figure="VIDEO 4.3.7"
+figure='VIDEO 4.3.7'
 caption="Demonstration of the harmonic-percussive separator process using Daryl's playing as an input signal."
 id="vid7"
 />
@@ -127,7 +127,7 @@ I found the percussive extraction the most novel of the two components. When the
 
 <VideoMedia2 
 url="/rt/resonator-demo"
-figure="VIDEO 4.3.8"
+figure='VIDEO 4.3.8'
 caption="Demonstration of the Short Resonators module."
 id="vid8"
 />
@@ -146,7 +146,7 @@ id="vid8"
 
 <VideoMedia2
 url="/rt/gran-demo"
-figure="VIDEO 4.3.10"
+figure='VIDEO 4.3.10'
 caption="Demonstration of the granular synthesis module using percussive separation as a source."
 id="vid10"
 />
@@ -184,7 +184,7 @@ out1 = cnld(in1, in2, in3);
 
 <VideoMedia2 
 url="/rt/cnld-demo"
-figure="VIDEO 4.3.11"
+figure='VIDEO 4.3.11'
 caption="Cubic non-linear distortion module with two different samples from Daryl."
 id="vid11"
 />
@@ -193,7 +193,7 @@ Alongside the sound-processing modules, I began creating higher-level modules th
 
 <VideoMedia2 
 url="/rt/accumulation"
-figure="VIDEO 4.3.12"
+figure='VIDEO 4.3.12'
 caption="Example of accumulation with a sample as input. The original audio is played back through the left channel, and a single sample impulse is triggered in the right channel ever time the accumulator resets."
 id="vid12"
 />
@@ -248,8 +248,8 @@ In the second version of the patch, developments were made to how the granular s
 
 <ImageMedia2
 url="/rt/adaptive-granular.jpg"
+figure='IMAGE 4.3.1'
 caption="Adaptive granular synthesis module."
-figure="IMAGE 4.3.1"
 id="img1"
 />
 
@@ -284,7 +284,7 @@ In my first attempt to realise this, I used the [MuBu](https://ismm.ircam.fr/mub
 
 <VideoMedia2 
 url="/rt/gmm-demo"
-figure="VIDEO 4.3.13"
+figure='VIDEO 4.3.13'
 caption="State recognition with the mubu.gmm object."
 id="vid13"
 />
@@ -301,7 +301,7 @@ Each pre-composed state is also accompanied by a set of text-based prompts that 
 <ImageMedia2 
 url="/rt/webgui.jpg"
 caption="Daryl's web-based interface for receiving real-time information about patch states. Text-based prompts can be seen in the middle/top-half of the screen. A large progress bar occupies the centre showing his progress through a state."
-figure="IMAGE 4.3.2"
+figure='IMAGE 4.3.2'
 id="img2"
 />
 
@@ -313,7 +313,7 @@ To discuss the relationship between patch states and the navigation between them
 <ImageMedia2
 url="/rt/rt-setup.svg"
 caption="Electronics, microphone and amplification configuration for the first Refracted Touch performance."
-figure="IMAGE 4.3.3"
+figure='IMAGE 4.3.3'
 id="img3"
 />
 
