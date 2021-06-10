@@ -190,9 +190,9 @@ Several of these experiments can be heard in [AUDIO 4.5.8]({m.em}#aud8). They we
 
 <Album 
 tracks={loopExperiments}
-id='aud8'
 title='Various loop experiments using clusters such as 1, 2, and 37'
 figure='AUDIO 4.5.8'
+id='aud8'
 />
 
 #### Mixing Sounds From Reconstruction Error
@@ -279,9 +279,9 @@ id='aud12'
 
 From composing these two sketches, the beginning of a clearer idea for the final work emerged. Throughout the computer-aided searching and the broader compositional process, three particular samples persistently came to my attention due to their characteristic textural qualities. I termed these three sounds "anchors", and they can be heard in [AUDIO 4.5.13]({m.em}#aud12).
 
-<Album 
+<Album
 tracks={anchors}
-caption='AUDIO 4.5.13'
+figure='AUDIO 4.5.13'
 title='Three "anchor" sounds'
 id='aud13'
 />
