@@ -42,6 +42,7 @@
 	#status {
 		width: 15px;
 		margin-top: 6px;
+		margin-left: 5px;
 	}
 	#figure {
 		font-style: italic;
