@@ -1,10 +1,35 @@
 <script>
     import NextSection from '$lib/components/NextSection.svelte';
+    import figures from '../../static/list-of-figures.json'
 </script>
 
 # List of Interactive Elements
+
+This list contains a reference to the interactive elements of this thesis. It does *not* include elements that reference YouTube, Vimeo or would otherwise be considered contextual.
+
+---
+
+{#each figures.data as [figure, title]}
+<div class='container'>
+    <div class='figure'>{figure}</div>
+    <div class='title'>{title}</div>
+</div>
+{/each}
 
 <NextSection 
 next="1. Introduction"
 link=/introduction
 />
+
+<style>
+    .figure {
+        font-style: italic;
+        font-weight: bold;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+</style>
