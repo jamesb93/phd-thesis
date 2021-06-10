@@ -24,11 +24,11 @@ For example, [OpenMusic (OM)](https://openmusic-project.github.io) facilitates t
 The [Bach suite](https://www.bachproject.net/) of Max packages (Bach, Cage, Dada) by [Daniele Ghisi](https://www.danieleghisi.com/) and [Andrea Agostini](https://www.andreaagostini.eu/) facilitate a wide range of possibilities for computer-aided composition. The suite leverages [Max](https://cycling74.com/) and its visual programming style. Like OM, objects with specific functionality are connected together in order to transform data or to realise it through scores or audio playback. Bach is the core package in the suite, providing the primitives for these types of operations to be constructed. Cage builds on Bach by re-using much of the underlying code and packaging ready-to-use modules that deal with 20th and 21st century compositional techniques and concepts such as indeterminacy and chance. Dada is an increasingly abstract set of objects that again build on the underlying code from Bach, while bringing a number of non-standard graphical user interface objects to the fore. These visual entities are experimental in nature and offer novel metaphors for the manipulation of sound based on geometry, recreational mathematics and physical modelling (Ghisi, n.d). [IMAGE 2.1]({m.preoc}#img1), depicts the `dada.kaleido` object which emulates the shifting geometry patterns of a kaleidoscope. The data from this object can be used as triggers or controls for any number of musical parameters.
 
 <ImageMedia2
-url="/preoccupations/dadakaleido.jpg"
-caption="A screenshot demonstrating the dada.kaleido object and its geometric interface."
-figure="IMAGE 2.1"
+url='/preoccupations/dadakaleido.jpg'
+caption='A screenshot demonstrating the dada.kaleido object and its geometric interface.'
+figure='IMAGE 2.1'
 id='img1'
- />
+/>
 
 [Strasheela](http://strasheela.sourceforge.net/strasheela/doc/index.html) is another piece of software for computer-aided composition that enables users to express musical ideas as "constraint-based music composition systems". The user declares their theory as a set of constraints and the computer generates music that "complies with this theory" (Anders, n.d). In documentation of Strasheela an example is provided where a passage of music is generated that conforms to the rules of Fuxian first species counterpoint (http://strasheela.sourceforge.net/strasheela/doc/Example-Realtime-SimpleCounterpoint.html). Another example exists in which a [Lindenmayer](https://en.wikipedia.org/wiki/L-system) system drives the parametric creation of musical motifs (http://strasheela.sourceforge.net/strasheela/doc/Example-HarmonisedLindenmayerSystem.html).It is evident even from these didactic examples that Strasheela is flexible and can produce both stylistically informed and more abstract musical structures, and the user can direct the program to generate any musical output that can be expressed through a series of formalised constraints.
 
@@ -157,7 +157,7 @@ Visualisation of data is also a meaningful output from the computer. A visual re
 <ImageMedia2 
 url="/preoccupations/umap-visual.jpg"
 figure="IMAGE 2.4"
-caption="Samples projected into a two-dimensional space using dimension reduction on Mel-frequency cepstrum coefficients analysis. This data was used in the Reconstruction Error project."
+caption="Samples projected into a two-dimensional space using dimension reduction on mel-frequency cepstrum coefficients analysis. This data was used in the Reconstruction Error project."
 id='img4'
 />
 
