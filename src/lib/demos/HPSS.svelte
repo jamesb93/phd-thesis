@@ -6,6 +6,8 @@
     import Container from '$lib/components/Container.svelte';
 
     export let caption = 'DEMO 1'
+    export let title = 'Interactive audition of harmonic-percussive source separation'
+    export let id = 'demox'
 
     let harmReady = false; 
     let percReady = false;
@@ -46,17 +48,18 @@
     };
 </script>
 
-<Container id='demo1'>
+<Container id={id}>
     {#if harmReady && percReady}
     <div class="demo">
-        
+        <p class="cap">{caption}: {title}</p>
+
         <PlayButton playFunc={playback} state={playing}/>
         <div class="volume">
             <span class="text-span">percussive</span> 
             <Slider showValue={false} min="0" max="100" showMin={false} showMax={false} inFunc={updateVolume} bind:value={balance} />
             <span class="text-span">harmonic</span>
         </div>
-        <p class="caption">{caption}: Press the play button and move the slider to change the balance between harmonic and percussive.</p>
+        <div id='instructions'>Click the play button and then adjust the balance of the harmonic and percussive components using the slider.</div>
     </div>
     {:else}
     loading...
@@ -70,13 +73,25 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .cap {
+        width: 100%;
+        font-style: italic;
+        text-align: center;
+    }
+
+    #instructions {
+        color: grey;
+        text-align: center;
     }
 
     .volume {
         display: flex;
         flex-direction: row;
         padding-bottom: 10px;
-        align-self: center;
-        justify-content: center;
+        align-items: center;
     }
 </style>
