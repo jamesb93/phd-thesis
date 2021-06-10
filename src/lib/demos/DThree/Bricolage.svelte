@@ -4,6 +4,7 @@
     import { clip } from "./clip.js"
     import * as d3 from 'd3';
 
+    export let title = 'A network of actions and outputs. Observing different outputs can lead to more direct creative action or lead back to further computational exploration and new outputs to be made.'
     export let caption = 'DEMO 1'
 
     let container;
@@ -146,7 +147,7 @@
 <div class="box" id="bricolage" bind:offsetHeight={height} bind:offsetWidth={width}>
 <svg bind:this={container} class="d3-container"></svg>
 </div>
-<p class="caption">{caption}: A network of actions and outputs. Observing different outputs can lead to more direct creative action or lead back to further computational exploration and new outputs to be made.</p>
+<p class="caption">{caption}: {title}</p>
 
 <style>
     .box {
