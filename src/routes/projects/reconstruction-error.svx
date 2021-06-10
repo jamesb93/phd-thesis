@@ -25,7 +25,7 @@
 tracks={reAlbum}
 title="Reconstruction Error"
 id="aud1"
-figure="AUDIO 4.4.1"
+figure='AUDIO 4.4.1'
 />
 
 Reconstruction Error is the fourth project in this portfolio. It is a set of five pieces, presented in an EP format.
@@ -128,7 +128,7 @@ I began databending by modifying the code of Alex Harker's [`ibuffer~`](https://
 tracks={ibuffer}
 title="ibuffer~ databending"
 id="aud2"
-figure="AUDIO 4.4.2"
+figure='AUDIO 4.4.2'
 />
 
 Using the fork of `ibuffer~` rendered results that gave me confidence in the databending approach. Many of the outputs in my opinion were unremarkable noise (*AEC.pdf*, *carl.png*), while some presented novel morphological and textural properties. For example, *clickers.rpp* and *crash.rtf*, although containing a noticeable background noise element, were ornamented with complex and *intentional-sounding* sonic moments. Despite this mild initial success, two issues hindered my progress. Firstly, issues resulted from my lack of familiarity with C programming. My fork of `ibuffer~` would occasionally crash, causing work to be lost. In addition to this, the conversion process was not deterministic and could be slightly different between consecutive executions using the same input file. Secondly, the workflow of converting a file and listening to it was slow because I had to manually load the file and then play it back to evaluate the results. Combined with having to seek out more and more files to test, the repetitiveness of this process was time consuming. These two problems together created a lot of friction when trying to explore the results of databending. 
@@ -143,8 +143,7 @@ I decided to constrain the variation in parameters in the generation stage to pr
 
 <Album 
 tracks={generation}
-figure="AUDIO 4.4.3"
-caption=" hmm "
+figure='AUDIO 4.4.3'
 id="aud3"
 title='Samples generated using the mosh command line tool'
 />
