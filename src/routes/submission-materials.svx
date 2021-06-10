@@ -89,8 +89,8 @@ All pieces are presented in stereo audio format.
 *GitHub*: https://www.github.com/jamesb93/reacoma
 
 <NextSection 
-next='Introduction'
-link='/introduction'
+next='List Of Interactive Elements'
+link='/list-of-interactive-elements'
 />
 
 <style>
