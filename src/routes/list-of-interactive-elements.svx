@@ -1,1 +1,10 @@
+<script>
+    import NextSection from '$lib/components/NextSection.svelte';
+</script>
+
 # List of Interactive Elements
+
+<NextSection 
+next="1. Introduction"
+link=/introduction
+/>
