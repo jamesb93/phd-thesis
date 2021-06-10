@@ -89,7 +89,7 @@ Turkle and Papert's description of the bricoleur emphasises the dialogical inter
 <ImageMedia2 
 url="/preoccupations/bricolage.jpg"
 figure="IMAGE 2.2"
-caption="McClean & Wiggins (2010) diagram of the bricolage programming feedback loop."
+caption="Diagram from McClean and Wiggins (2010) depicting the bricolage programming feedback loop."
 id='img2'
 />
 
@@ -166,6 +166,7 @@ Outputs from content-aware computer programs help me to clarify and hone my comp
 <Bricolage
 title='A network of actions and outputs. Observing different outputs can lead to compositional decision-making or lead back to further computational exploration and new outputs being made.'
 caption='DEMO 2.1'
+id='bricolage'
 />
 
 ## Aesthetics
