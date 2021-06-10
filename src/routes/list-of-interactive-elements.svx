@@ -1,6 +1,6 @@
 <script>
     import NextSection from '$lib/components/NextSection.svelte';
-    import figures from '../../static/list-of-figures.json'
+    import figures from '../../static/list-of-interactive-elements.json'
 </script>
 
 # List of Interactive Elements
@@ -9,9 +9,9 @@ This list contains a reference to the interactive elements of this thesis. It do
 
 ---
 
-{#each figures.data as [figure, title]}
+{#each figures.data as [figure, title, url]}
 <div class='container'>
-    <div class='figure'>{figure}</div>
+    <a class='figure' href={url}>{figure}</a>
     <div class='title'>{title}</div>
 </div>
 {/each}
@@ -23,13 +23,18 @@ link=/introduction
 
 <style>
     .figure {
-        font-style: italic;
         font-weight: bold;
+        max-width: max-content;
+    }
+
+    .title {
+        font-style: italic;
     }
     .container {
         display: flex;
         flex-direction: column;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        text-align: left;
     }
 </style>
