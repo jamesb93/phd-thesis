@@ -106,6 +106,6 @@ There are several "demos" throughout this thesis. Each one of these is interacti
 <Points />
 
 <NextSection 
-next="Submitted Materials"
-link=/submission-materials
+next="iii. Acknowledgements"
+link=/acknowledgements
 />
