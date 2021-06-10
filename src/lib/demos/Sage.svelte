@@ -2,7 +2,7 @@
     import { onMount } from "svelte";
     import Container from '$lib/components/Container.svelte';
 
-    export let title = "Random Recombination Of Vocal Segments";
+    export let title = "Random recombination of voice segments";
     export let caption = "DEMO 1"
     export let id = "";
 
@@ -71,14 +71,6 @@
             })
         }
     });
-
-    function playHandler(e){
-        if (e.audioElement.paused)
-            e.audioElement.play()
-        else
-            e.audioElement.pause()
-    }
-
 </script>
 
 <Container id={id}>
