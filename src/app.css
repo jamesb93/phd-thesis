@@ -11,6 +11,10 @@ code {
 	word-wrap: break-word;
 }
 
+hr {
+	border-top: grey;
+}
+
 html {
 	font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Fira Sans", "Droid Sans", Arial, sans-serif;
 	font-size: 15px;
