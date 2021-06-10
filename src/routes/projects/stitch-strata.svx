@@ -20,6 +20,7 @@ title="Stitch Strata (Stereo Mixdown)"
 file="/pieces/StitchStrata.mp3"
 peaks="/pieces/StitchStrata.dat"
 id="audio1"
+caption='AUDIO 4.1.1'
 />
 
 This is the first piece in the portfolio of works for this PhD. The recording that is submitted is a stereo version that attempts to capture the spatialisation from the first performance at the [2019 Electric Spring Festival](http://electricspring.co.uk/electric-spring-2019/) using the [Huddersfield Immersive Sounds System (HISS)](http://electricspring.co.uk/electric-spring-2019/).
@@ -145,8 +146,9 @@ peaks="/ss/5712433.dat"
 The final strategy I tried was to take the outputs from descriptor queries and apply a more rigorous, statistical selection procedure. This selection procedure was an implementation of the *z12* algorithm described in Puckette (2015) which can generate different patterns by specifying probabilities between different outcomes. [DEMO 4.1.2]({m.ss}#demo2) shows an example of the patterns this process can generate.
 
 <Z12
-title='Z12 algorithm interactive example'
+title='z12 algorithm interactive example'
 caption='DEMO 4.1.2'
+id='demo2'
 />
 
 I imagined that imposing this type of rigorous statistical process over an already perceptually linked group of samples would result in structures that might be formally sophisticated. This was not the case, however, because the algorithm's behaviour was too homogenous in the sense that it *always* changed. While I imagined that the z12 algorithm might impose some level of structure over concatenations the end result was in my perception no different than just randomly shuffling the samples.
