@@ -3,10 +3,10 @@ node_modules
 build
 .DS_Store
 .svelte
+txt
 docx
 docx-conversion.zip
 .svelte-kit
-txt
 stripped_text.txt
 static/re/db-initial/raw
 src/routes/test.svelte
