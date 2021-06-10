@@ -9,7 +9,7 @@
 
 # Finding Things in Stuff (FTIS)
 
-The FTIS source code can be found here: [/Software/Finding Things In Stuff (FTIS)](https://www.github.com/jamesb93/ftis)
+The FTIS source code can be found here: [/Software/Finding Things In Stuff (FTIS)](https://www.github.com/jamesb93/ftis).
 
 FTIS is a computer-aided composition framework that facilitates audio descriptor analysis and composition with corpora of digital samples. FTIS is designed to aid sample selection from within a corpus, clustering of samples into perceptually similar groups, and filtering of corpora by audio descriptor analysis. It also provides *adapters* — bits of code which allow the outputs of these analytical processes to be rapidly transported into compositional or creative coding environments. My interest in performing such tasks came from experimenting with them in [Reconstruction Error]({m.re}). However, I felt that much of the code I had written for that project was not reusable or extensible. I wanted to carry forward the compositional strategies from this work into future projects in a way where code would not have to be significantly rewritten or transformed to fit my creative needs. As such, FTIS was used throughout [{m.emname}]({m.em}).
 

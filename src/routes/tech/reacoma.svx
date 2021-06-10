@@ -13,7 +13,7 @@
 
 # ReaCoMa
 
-The ReaCoMa source code can be found here: [/Software/ReaCoMa](https://www.github.com/jamesb93/reacoma)
+The ReaCoMa source code can be found here: [/Software/ReaCoMa](https://www.github.com/jamesb93/reacoma).
 
 ReaCoMa is a collection of [Lua](http://www.lua.org/) scripts that facilitate using the [Fluid Decomposition Toolbox](https://pure.hud.ac.uk/ws/portalfiles/portal/17022941/towardscorpus_final.pdf) algorithms within the [REAPER digital audio workstation](https://www.reaper.fm). This toolbox is designed to facilitate signal decomposition, audio descriptor analysis and automatic segmentation. 
 
