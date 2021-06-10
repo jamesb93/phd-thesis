@@ -43,7 +43,7 @@ def replace(text: str, prefix: str) -> str:
 
         temporary_text.append(line)
     
-    return ' '.join(temporary_text)
+    return ''.join(temporary_text)
 
 routes = [x for x in Path("src/routes").rglob('*.svx')]
 sections = [x for x in routes if x.stem in lookup.keys()]
