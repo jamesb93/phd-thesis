@@ -5,7 +5,7 @@
     "dev": "pnpm run scripts && svelte-kit dev --host --port 3001",
     "build": "pnpm run scripts && svelte-kit build",
     "start": "svelte-kit start",
-    "scripts": "python scrape_links.py && python get_structure.py",
+    "scripts": "python scrape_links.py && python get_structure.py && python figure_list.py",
     "convert": "pnpm run scripts && sh convert.sh",
     "update": "svelte-kit build && sh deploy.sh"
   },

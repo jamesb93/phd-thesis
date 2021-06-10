@@ -1,7 +1,8 @@
 from pathlib import Path
 import re
 import json
-from typing import List
+
+print('---- Extracting Figures And Formatting List ----')
 
 lookup = [
     'introduction',

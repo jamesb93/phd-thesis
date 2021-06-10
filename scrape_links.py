@@ -2,6 +2,7 @@ from pathlib import Path
 import re
 import json
 
+print('---- Scraping Links ----')
 
 api = {}
 routes = Path("src/routes")

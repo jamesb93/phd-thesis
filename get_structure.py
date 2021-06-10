@@ -1,6 +1,8 @@
 from pathlib import Path
 import json
 
+print('---- Extracting Structure Of Thesis ----')
+
 def get_heading(line):
     line = line.rstrip()
     line = line.replace('#', '')
