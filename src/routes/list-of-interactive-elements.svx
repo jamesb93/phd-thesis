@@ -9,14 +9,44 @@ This list contains a reference to the interactive elements of this thesis. It do
 
 ---
 
-{#each Object.keys(figures) as type}
-## List of {type[0].toUpperCase() + type.slice(1)} elements
-{#each figures[type] as [figure, title, url]}
+## List Of Audio Elements
+{#each figures['audio'] as [figure, title, url]}
 <div class='container'>
     <a class='figure' href={url}>{figure}</a>
     <div class='title'>{title}</div>
 </div>
 {/each}
+
+## List Of Code Elements
+{#each figures['code'] as [figure, title, url]}
+<div class='container'>
+    <a class='figure' href={url}>{figure}</a>
+    <div class='title'>{title}</div>
+</div>
+{/each}
+
+## List Of Demo Elements
+{#each figures['demo'] as [figure, title, url]}
+<div class='container'>
+    <a class='figure' href={url}>{figure}</a>
+    <div class='title'>{title}</div>
+</div>
+{/each}
+
+## List Of Image Elements
+{#each figures['image'] as [figure, title, url]}
+<div class='container'>
+    <a class='figure' href={url}>{figure}</a>
+    <div class='title'>{title}</div>
+</div>
+{/each}
+
+## List Of Video Elements
+{#each figures['video'] as [figure, title, url]}
+<div class='container'>
+    <a class='figure' href={url}>{figure}</a>
+    <div class='title'>{title}</div>
+</div>
 {/each}
 
 <NextSection 
