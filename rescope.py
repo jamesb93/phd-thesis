@@ -32,7 +32,7 @@ def replace(text: str, prefix: str) -> str:
                 reg = f'"{widget} {i}"'
                 search = re.search(reg, line)
                 if search:
-                    scoped_figure = f"'{widget} {prefix}{i}'"
+                    scoped_figure = f'"{widget} {prefix}{i}"'
                     line = line.replace(reg, scoped_figure)
 
                 reg = f"'{widget} {i}'"
