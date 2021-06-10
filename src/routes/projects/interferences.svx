@@ -127,9 +127,9 @@ I then classified each of these newly generated segments into two distinct group
 
 <Album 
 tracks={classifier}
-id='aud5'
 title='Several classification results'
-figure='AUDIO 4.5.5' 
+figure='AUDIO 4.5.5'
+id='aud5'
 />
 
 ### Pathways Through The Corpus
@@ -282,7 +282,7 @@ From composing these two sketches, the beginning of a clearer idea for the final
 <Album 
 tracks={anchors}
 caption='AUDIO 4.5.13'
-title='Three "anchor" sounds' 
+title='Three "anchor" sounds'
 id='aud13'
 />
 
