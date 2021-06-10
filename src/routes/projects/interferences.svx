@@ -247,6 +247,7 @@ segments={baseSketchSegs}
 Following the composition of this sketch, I aimed to discover other sounds which could be used for creating detailed superimpositions with those sounds found in [AUDIO 4.5.10]({m.em}#aud10), as well as to expand the palette of possible combinations between sounds. By utilising the *multi-corpus* techniques in [FTIS]({m.ftis}) further, I produced a two-dimensional map containing all the sounds from the [Reconstruction Error]({m.re}) corpus *and* the static materials I was already working with. The map was created in a similar fashion to how I represented the [Reconstruction Error]({m.rt}) databending corpus, described in [[4.4.2.4 Dimension Reduction]]({m.re}#dimension-reduction), in which audio descriptor analysis is filtered and transformed, such that a set of fewer numbers than the original analysis portrays the perceptual differences between samples. However, instead of using MFCCs, I analysed each sound using a Constant-Q Transform (CQT) descriptor. I selected this particular audio descriptor based on the assumption that its logarithmic representation of the spectrum would be suitable for capturing differences and similarities in pitch as well as discerning fine-grained spectral complexity in the high frequencies. From this map, I computed a [k-d tree](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KDTree.html) which enabled me to query for a number of neighbours to a specific point in that space. Using this data structure, I selected a sample ([AUDIO 4.5.11]({m.em}#aud11)) from the sketch heard in [AUDIO 4.5.10]({m.em}#aud10) with a prominent pitch component and then queried for the 200 samples which were closest to that sample in the map. [DEMO 4.5.1]({m.em}#demo1) is an abstracted example showing how this process works, albeit based on a smaller set of synthetic data. Furthermore, the code which orchestrated this dimension-reduction and k-dtree process can be found here: [/Projects/Interferences/Code/MultiCorpus/scripts/find_tuned.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/find_tuned.py).
 
 <KDTree 
+title='k-d tree sample searching'
 id='demo1'
 caption='DEMO 4.5.1'
 />
@@ -280,8 +281,8 @@ From composing these two sketches, the beginning of a clearer idea for the final
 
 <Album 
 tracks={anchors}
-title='Three "anchor" sounds'
 caption='AUDIO 4.5.13'
+title='Three "anchor" sounds' 
 id='aud13'
 />
 

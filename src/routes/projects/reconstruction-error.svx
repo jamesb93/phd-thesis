@@ -213,7 +213,8 @@ In other sound-searching and corpus-exploration research, dimension reduction ha
 
 Using this research as a basis for my own work, I used the Uniform Manifold Approximation and Projection (UMAP) algorithm and reduced the 273 points in each vector for each sample to 2 points. This way, I could visualise the results as a two-dimensional *map* where each sample would be represented as a singular point. A strength of UMAP is its potency for capturing non-linear features in data compared to algorithms such as Principal Component Analysis (PCA). Due to the noise-based and complex spectral profile of the sounds I generated from databending, being able to capture the non-linear features of their MFCC analysis was an important consideration. Furthermore, UMAP can be coerced to favour either the local or global structure of the untransformed data by altering the *minimum distance* and *number of neighbours* parameters. A number of projections that were made with various parameters can be seen in [DEMO 4.4.1]({m.re}#demo1). One can interact with this demo by moving the slider to interpolate between projections where different parameters for the UMAP algorithm have been used. Each point in this space represents a sample, and the interpolation is calculated based on the position of the same sample in each projection, rather than by shifting the projection based on the nearest points. This shows how changing the parameters can drastically alter the representation and grouping of sounds. I found that this was an expressive interface for changing how the computer represented the corpus analysis data. 
 
-<Points 
+<Points
+title='The effect of UMAP parameters on the projection characteristics'
 caption='DEMO 4.4.1'
 id='demo1'
 />
@@ -256,6 +257,7 @@ Despite the initial appeal to me of the minimum spanning tree, I found it diffic
 Nonetheless, I was influenced by this model of relating different clusters to each other via a hierarchy. I explored this in my own way, using the agglomerative clustering algorithm to calculate four results on each projection with increasing levels of cluster density. The first output produced 250 clusters, then 500, then 1,600 and finally 3,200. These were chosen in relation to the total number of corpus items. [DEMO 4.4.2]({m.re}#demo2) uses a small synthetic dataset to demonstrate how this clustering approach operates. The colour of each point in the visual space represents its membership of a cluster. By toggling between the three different levels of granularity (2, 4, and 8 clusters), one can observe how certain points remain together or are separated into new groups.
 
 <Agglom
+title='Agglomerative Clustering with different levels of granularity'
 caption='DEMO 4.4.2'
 id='demo2' 
 />

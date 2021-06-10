@@ -65,8 +65,10 @@ Signal decomposition is the "extraction and separation of signal components from
 
 Signal decomposition techniques are often modelled on human listening and may attempt to reproduce computationally the types of filtering and separation that humans can perform. [Harmonic-percussive source separation (HPSS)](https://www.researchgate.net/profile/Derry_Fitzgerald/publication/254583990_HarmonicPercussive_Separation_using_Median_Filtering/links/00b495396ef03235af000000.pdf), for example, attempts to isolate harmonic and percussive components from within a single sound. This can be useful for reducing the noisier components of a signal, or for shaping a harmonic aspect of a sound without affecting the noise. [DEMO 3.1]({m.ca}#demo1) provides an interactive example of this, where you can change the balance between harmonic and percussive components of a sample used in [Reconstruction Error]({m.re}).
 
-<HPSS 
+<HPSS
+title='Interactive audition of harmonic-percussive source separation'
 caption='DEMO 3.1'
+id='demo1'
 />
 
 Other techniques such as [non-negative matrix factorisation (NMF)](https://www.researchgate.net/profile/Derry_Fitzgerald/publication/224633812_Shifted_non-negative_matrix_factorisation_for_sound_source_separation/links/00463521492bddc0dc000000/Shifted-non-negative-matrix-factorisation-for-sound-source-separation.pdf) may not be designed with specific decomposition tasks in mind, and instead, provide a generalised algorithm for extracting "components" from a source. Such techniques could form the basis for a specific task, such as separating distinct instrumental parts from each other in an ensemble recording, or might be used more speculatively to decompose sounds into arbitrary parts.

@@ -104,7 +104,8 @@ In this text, code is referred to inline using this widget, and if it is a part 
 
 There are several "demos" throughout this thesis. Each one of these is interactive in its own way and offers its own kind of interface. For example, [DEMO 1](/howto#demo) below is interacted with through a slider type control, in order to update what is presented.
 
-<Points 
+<Points
+title='The effect of UMAP parameters on the projection characteristics'
 id='demo'
 caption='DEMO 1'
 />

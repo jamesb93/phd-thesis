@@ -79,7 +79,7 @@ ReaCoMa supports the phase of my compositional workflow during which I intuitive
 In [sys.ji_]({m.re}) from [Reconstruction Error]({m.re}), a combination of `fluid.noveltyslice.lua` and `fluid.transients.lua` scripts are used to take a long sample and reshape it into a passage of music. I first deconstructed the sample into short segments which are randomly reshuffled to obfuscate the original morphology. Progressively by the end of this process, these random shuffles are "undone" so that the morphology of the original sample is reconstructed. I then decomposed those segments into a transient and residual component (everything except the transients). A fade in envelope is applied to the residual component and both components are summed together. This modifies the morphological and textural properties of the sound as the residual component is gradually introduced while the transients are exposed. This functioned to also generate various colours of impulse-based material, and as a way of temporarily suppressing the noisier aspects of the sound. The affordances of being able to treat the sound as two distinct components catalysed the formal shape, thus positioning ReaCoMa in another form of computer-led compositional decision making. [DEMO 5.3.1]({m.reacoma}#demo1) allows you to explore this decomposition process by listening to each of the extractions in isolation.
 
 <Sys 
-title='Transient Extraction In sys.ji_.'
+title='Transient Extraction in sys.ji_.'
 caption='DEMO 5.3.1'
 id='demo1'
 />
