@@ -85,6 +85,7 @@ At this point of development in my practice, extended vocal techniques were a ma
 I began by segmenting all of the recordings using REAPER's dynamic split tool and configuring it to segment based on the detection of transients. I selected this strategy because I wanted to extract individual utterances and phoneme sounds to be rearranged and concatenated by the computer. [DEMO 4.1.1]({m.ss}#demo1) shows an example of this process, in which I  took a portion of *[One Breath Poem Failure](https://sagemusick.bandcamp.com/track/2016-02-16-one-breath-poem-failure)*, segmented it and then recombined those segments randomly. The colours of each segment track the change in arrangement of each utterance between the segmentation and reordering stages.
 
 <Sage
+title='Random recombination of voice segments'
 caption='DEMO 4.1.1' 
 id="demo1" 
 />
