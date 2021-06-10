@@ -41,7 +41,7 @@ For each project, the following aspects will be discussed in reflection.
 3. The relationship between what the software does and its influence on the compositional process and the result.
 
 <NextSection 
-next="Preoccupations"
+next="2. Preoccupations"
 link={m.preoc}
 />
 

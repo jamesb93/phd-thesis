@@ -326,7 +326,7 @@ Before moving on to the discussion of these individual projects I will posit thr
 3. As such, my practice is initialised in a process of *extraction*, one that I assert as oppositional to *construction* which comes much later once sufficient materials have been extracted. Metaphorically the difference might be described as that between going for a walk and digging for oil. The walk has a notion of a prepared path but diversions can be made along the way depending on what is discovered or observed in the moment. For the walk there are both "known knowns" and "known unknowns" and this process invites both. Digging for oil, on the other hand, tends towards the observation of "known knowns" and represents a process of refinement toward a defined goal.
 
 <NextSection 
-next="Projects"
+next="4. Projects"
 link={m.proj}
 />
 

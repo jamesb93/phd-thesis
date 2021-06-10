@@ -7,7 +7,7 @@
     import Code2 from '$lib/components/Code2.svelte';
 </script>
 
-# Finding Things in Stuff (FTIS)
+# Finding Things in Stuff
 
 The FTIS source code can be found here: [/Software/Finding Things In Stuff (FTIS)](https://www.github.com/jamesb93/ftis).
 
@@ -377,7 +377,7 @@ When an analyser successfully completes its analysis, it records the hash inside
 By implementing caching, the overall usability is improved by tightening the feedback loop between scripting and other aspects of my compositional process. Prior to implementing this feature, I would avoid certain types of analysis or creating long chains of analysers, for fear of having to wait for reanalysis to complete if I changed their parameters or modified the chain between uses. Thus, caching created new affordances by allowing me to construct more complex analysis chains, and the ability to trial and error new ideas faster while maintaining and a sense of fluidity when using the software. Thus, caching created new affordances through both the potential to construct more complex analysis chains, as well as the ability to trial and error new ideas faster, without sacrificing a sense of fluidity when using the software.
 
 <NextSection 
-next="ReaCoMa"
+next="5.3 ReaCoMa"
 link={m.reacoma}
 />
 

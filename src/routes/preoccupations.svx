@@ -301,7 +301,7 @@ Further to this, the limitations of operational procedures can affect the bounda
 The perception of technology is an important principle in how I compose, but not necessarily in how the works themselves should or can be perceived by a listener. There are instances where I have used a systematic approach to organising materials and the perception is closely tied to the nature of the system itself. At other times these two things are not perceivable or are perhaps too complex to derive from listening alone and the underlying technical control impossible to garner without observing the code or program directly. Ultimately, using the computer is about being able to *discover* formal relationships (as was the case with [--isn]({m.re}#isn)) or to articulate certain structures in terms of their perception and to have the computer render those results automatically. This engenders the computer as a creative interface to those ideas and allows me to take them from a nascent state to a more developed and sophisticated level.
 
 <NextSection 
-next="Content Awareness"
+next="3. Content Awareness"
 link={m.ca}
 />
 

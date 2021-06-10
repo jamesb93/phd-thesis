@@ -144,7 +144,7 @@ id='vid2'
 />
 
 <NextSection 
-next="Conclusion"
+next="6. Conclusion"
 link={m.conc}
 />
 

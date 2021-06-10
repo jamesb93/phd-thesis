@@ -378,7 +378,7 @@ Overall, deconstructing sounds and restructuring their constituent parts in resp
 The next section outlines the technical implementation of the software outputs included in this thesis.
 
 <NextSection 
-next="Technical Implementation and Software"
+next="5. Technical Implementation and Software"
 link={m.ti}
 />
 

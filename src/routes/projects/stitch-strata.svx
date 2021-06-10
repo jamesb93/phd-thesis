@@ -431,7 +431,7 @@ Stitch/Strata began with lofty compositional and creative aims that were challen
 The next project that is reflected on is [Annealing Strategies]({m.as}). This work was another attempt to see how I could relinquish control to the computer, albeit with a different approach to the generation of sound and a deeper level of integration between the compositional material and the technical approach. In a number of ways this next piece was more successful, but the workflow that I built up through the creative process confirmed for me that relinquishing too much of my control and ability to intervene with the behaviour of the computer is not compatible with how I want to compose music in a computer-aided practice.
 
 <NextSection 
-next="Annealing Strategies"
+next="4.2 Annealing Strategies"
 link={m.as}
 />
 

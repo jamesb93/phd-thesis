@@ -55,7 +55,7 @@ mosh accepts both single files and entire directories as an input and output. Th
 mosh would not have been possible without the generous contributions from [Francesco Cameli](https://github.com/vitreo12) to the code base.
 
 <NextSection 
-next="Finding Things in Stuff"
+next="5.2 Finding Things in Stuff (FTIS)"
 link={m.ftis}
 />
 

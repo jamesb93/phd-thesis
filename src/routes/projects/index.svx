@@ -8,7 +8,7 @@
 In this section, I reflect on the compositional process for the five compositional projects and the way that content-awareness is used in computer-aided composition.
 
 <NextSection 
-next="Stitch/Strata"
+next="4.1 Stitch/Strata"
 link={m.ss}
 />
 

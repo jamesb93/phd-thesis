@@ -8,7 +8,7 @@
 This section outlines three items of software that have been integral in my compositional process with content-aware programs. I outline my motivations for creating the software and its role in my practice of composing with content-aware programs. 
 
 <NextSection 
-next="mosh"
+next="5.1 mosh"
 link={m.mosh}
 />
 

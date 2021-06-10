@@ -196,7 +196,7 @@ id='vid3'
 />
 
 <NextSection 
-next="Refracted Touch"
+next="4.3 Refracted Touch"
 link={m.rt}
 />
 
