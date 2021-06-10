@@ -97,7 +97,7 @@ export const interAlbum = {
     prefix : '/pieces/Interferences/',
     trackData : [
         { name: 'G090G10564620B7Q', audio: 'G090G10564620B7Q.mp3', peaks: 'G090G10564620B7Q.dat' },
-        { name: 'anchors', audio: 'anchors.mp3', peaks: 'anchors.dat' },
+        { name: 'P 08_19', audio: 'P 08_19.mp3', peaks: 'P 08_19.dat' },
     ]
 }
 
