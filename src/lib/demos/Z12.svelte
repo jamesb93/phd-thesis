@@ -3,6 +3,7 @@
     import Container from '$lib/components/Container.svelte';
     import Button from '$lib/components/Button.svelte';
     import { browser } from '$app/env';
+    export let title = ''
     export let id="demo2";
     export let caption='DEMO 2'
 
@@ -69,12 +70,16 @@
     {#if ready}
     
     <div class='top-text'>
-        <div class='desc'>
-            Change the probability for each sound playing by modifying the slider values. Observe how changing the probabilities alters the patterning of the individual samples.
+        <div class='title'>
+            {title}
         </div>
         <div class='cap'>
             {caption}
         </div>
+    </div>
+
+    <div class='desc'>
+        Press play or stop to turn the demonstration on and off. Change the probability for each sound playing by modifying the slider values. Observe how changing the probabilities alters the patterning of the individual samples. You can increase or decrease the rate at which samples are played by adjusting the iteration rate slider.
     </div>
 
     <div id='btn-array'>
@@ -110,13 +115,16 @@
         justify-content: space-between;
     }
 
-
+    .title {
+        font-weight: bold;
+    }
 
     .desc {
+        padding-top: 10px;
         display: flex;
         flex-direction: column;
         max-width: 85%;
-        font-weight: bold;
+        color: grey;
     }
 
     .cap {
