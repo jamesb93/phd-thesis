@@ -43,6 +43,7 @@
 		width: 15px;
 		margin-top: 6px;
 		margin-left: 5px;
+		margin-right: 5px;
 	}
 	#figure {
 		font-style: italic;
