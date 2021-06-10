@@ -163,7 +163,9 @@ id='img4'
 
 Outputs from content-aware computer programs help me to clarify and hone my compositional intent which in turn shapes the music that is made through an *iterative composition process*. Some of these outputs are inherently musical or sonic at first while others are data-driven, structural, organisational and taxonomical in nature. Observing outputs such as these can prompt new actions from observation, forming a part of a feedback loop in my compositional workflow. The tightly woven nature of the software into the exploration of ideas situates the computer as a highly agentive entity and guides me to solutions for both the technical and creative problems I face. The idea that a concept can only reach "internal consistency" through this workflow is extremely important in understanding the purpose of working in this way. [DEMO 1]({m.preoc}#bricolage) shows a diagram where nodes represent the types of *observations* that I make and the actions I take as a result. Ultimately, these parts of the creative process can lead back into each other, resulting in a formative cycle for developing compositional ideas.
 
-<Bricolage />
+<Bricolage 
+caption='DEMO 1'
+/>
 
 ## Aesthetics
 This section describes the aesthetic foundations of my practice, drawing attention to the types of sound materials I work with and my approach to their treatment and organisation using content-aware programs. Firstly, the nature of sample-based materials is discussed in the context of my work. Secondly, I outline the quality of the sounds I use and their "digital-ness" as an important aesthetic feature. Thirdly, I discuss the notion of horizontal and vertical taxonomies in sound and how this informs my intuitive and technical treatment of sounds. Lastly, some approaches to temporality and time are discussed.

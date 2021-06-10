@@ -49,6 +49,7 @@ segments={[
     { startTime: 0.0, endTime: 3.0, labelText: 'Segment 1'},
     { startTime: 3.5, endTime: 6.0, labelText: 'Segment 2'}
 ]}
+caption='AUDIO 1'
 />
 
 There is also the album widget, which groups together various files. One can select different files from the album by clicking them in the list and then clicking "Play".
@@ -101,9 +102,12 @@ In this text, code is referred to inline using this widget, and if it is a part 
 
 ### Demo
 
-There are several "demos" throughout this thesis. Each one of these is interactive in its own way and offers its own kind of interface. For example, the demo widget below is interacted with through a slider type control, in order to update what is presented.
+There are several "demos" throughout this thesis. Each one of these is interactive in its own way and offers its own kind of interface. For example, [DEMO 1](/howto#demo) below is interacted with through a slider type control, in order to update what is presented.
 
-<Points />
+<Points 
+id='demo'
+caption='DEMO 1'
+/>
 
 <NextSection 
 next="iii. Acknowledgements"

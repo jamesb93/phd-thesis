@@ -84,7 +84,10 @@ At this point of development in my practice, extended vocal techniques were a ma
 
 I began by segmenting all of the recordings using REAPER's dynamic split tool and configuring it to segment based on the detection of transients. I selected this strategy because I wanted to extract individual utterances and phoneme sounds to be rearranged and concatenated by the computer. [DEMO 1]({m.ss}#demo1) shows an example of this process, in which I  took a portion of *[One Breath Poem Failure](https://sagemusick.bandcamp.com/track/2016-02-16-one-breath-poem-failure)*, segmented it and then recombined those segments randomly. The colours of each segment track the change in arrangement of each utterance between the segmentation and reordering stages.
 
-<Sage id="demo1" />
+<Sage
+caption='DEMO 1' 
+id="demo1" 
+/>
 
 This was only a single experiment, and applying it to other source material revealed to me a number of compositional possibilities which could be achieved through this deconstructive process. Depending on the qualities and nature of the source, individual segments could synthesise new forms and sounds with their own novel character and synthetic qualities. Thus, this spawned the next level of compositional development in this project, and I imagined that a whole piece could be made by creating a system that would be responsible for organising samples in this way into *phrases* and organising those phrases into a whole piece. I did not have a strong idea about what would specifically constitute a phrase at this time, but I knew that I wanted to explore recombining segments such that the result would be less random than the initial experiments, and that phrases could be given strong perceptual qualities that would differentiate them from each other. With this idea in mind, I set out to experiment with a number of approaches in which individual segments would be concatenated into phrases.
 
@@ -140,7 +143,9 @@ peaks="/ss/5712433.dat"
 
 The final strategy I tried was to take the outputs from descriptor queries and apply a more rigorous, statistical selection procedure. This selection procedure was an implementation of the *z12* algorithm described in Puckette (2015) which can generate different patterns by specifying probabilities between different outcomes. [DEMO 2]({m.ss}#demo2) shows an example of the patterns this process can generate.
 
-<Z12 />
+<Z12 
+caption='DEMO 2'
+/>
 
 I imagined that imposing this type of rigorous statistical process over an already perceptually linked group of samples would result in structures that might be formally sophisticated. This was not the case, however, because the algorithm's behaviour was too homogenous in the sense that it *always* changed. While I imagined that the z12 algorithm might impose some level of structure over concatenations the end result was in my perception no different than just randomly shuffling the samples.
 

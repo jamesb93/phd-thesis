@@ -255,7 +255,10 @@ Despite the initial appeal to me of the minimum spanning tree, I found it diffic
 
 Nonetheless, I was influenced by this model of relating different clusters to each other via a hierarchy. I explored this in my own way, using the agglomerative clustering algorithm to calculate four results on each projection with increasing levels of cluster density. The first output produced 250 clusters, then 500, then 1,600 and finally 3,200. These were chosen in relation to the total number of corpus items. [DEMO 2]({m.re}#demo2) uses a small synthetic dataset to demonstrate how this clustering approach operates. The colour of each point in the visual space represents its membership of a cluster. By toggling between the three different levels of granularity (2, 4, and 8 clusters), one can observe how certain points remain together or are separated into new groups.
 
-<Agglom />
+<Agglom
+caption='DEMO 2'
+id='demo2' 
+/>
 
 I then performed a series of "meta-analyses" to discern how the membership of samples to clusters changed across each level of analysis. The aim of this was to observe how modifying the number of requested clusters in the algorithm would affect the samples to the clustering process, and if I could generate my own hierarchical structure from this. 
 
