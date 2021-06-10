@@ -94,7 +94,8 @@
         line-height: 1.8em;
         font-size: 11px;
         padding-top: 13px;
-        padding-left: 20px;
+        margin-left: 15px;
+        padding-left: 5px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
