@@ -55,9 +55,6 @@
             } else {
                 instance = p
                 instance.views.getView('overview').fitToContainer();
-                // instance.on('segments.enter', (segs) => {
-                //     console.log(segs)
-                // });
             }
         });
     });

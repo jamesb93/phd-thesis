@@ -15,7 +15,6 @@
 		'/projects', 
 		'/conclusion', 
 		'/tech', 
-		'/test', 
 		'/acknowledgements', 
 		'/copyright'
 	];
