@@ -3,6 +3,7 @@ node_modules
 build
 .DS_Store
 .svelte
+*.wav
 txt
 docx
 docx-conversion.zip
