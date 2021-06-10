@@ -31,6 +31,18 @@ route_link = {
     'reacoma' : '/tech/reacoma'
 }
 
+specials = {
+    "IMAGE 4.2.1" : "A visual depiction of the interconnected Fourses oscillators.",
+    "IMAGE 4.2.3" : "The highest data point in weather data being located through simulated annealing.",
+    "IMAGE 4.2.4" : "The travelling salesman problem being solved by simulated annealing.",
+    "IMAGE 4.4.4" : "HDBSCAN minimum spanning tree visualisation.",
+}
+
+def special_checker(figure_number: str, unedited_text: str) -> str:
+    if figure_number in specials:
+        return specials[figure_number]
+    return unedited_text  
+
 def clean_url(url):
     url = url.replace('id=', '')
     url = url.replace("'", '')
@@ -114,6 +126,7 @@ for section in lookup:
                 url = line
             if '/>' in line and tag_open == True:
                 tag_open = False
+
                 url = clean_url(url)
                 url = f'{route_link[section]}#{url}'
                 title = title.replace('title=', '')
@@ -133,11 +146,11 @@ for section in lookup:
             line = line.lstrip().rstrip()
             if '<Waveform' in line:
                 tag_open = True
-            if tag_open and 'title' in line:
+            if tag_open == True and 'title' in line:
                 title = line
-            if tag_open and 'caption' in line:
+            if tag_open == True and 'caption' in line:
                 caption = line
-            if tag_open and line[:2] == 'id':
+            if tag_open == True and line[:2] == 'id':
                 url = line
             if '/>' in line and tag_open:
                 tag_open = False
@@ -201,6 +214,9 @@ for section in lookup:
                 figure = figure[1:-1]
                 caption = caption.replace('caption=', '')
                 caption = caption[1:-1]
+
+                caption = special_checker(figure, caption)
+
                 list_of_figures["data"].append(
                     [figure, caption, url]
                 )
@@ -211,7 +227,7 @@ for section in lookup:
                 tag_open = True
             if tag_open and line[:6] == 'figure':
                 figure = line
-            if tag_open and line[:6] == 'caption':
+            if tag_open and line[:7] == 'caption':
                 caption = line
             if tag_open and line[:2] == 'id':
                 url = line
@@ -237,7 +253,7 @@ list_of_figures['data'].sort(
     )
 )
 
-with open("static/list-of-figures.json", "w+") as f:
-    json.dump(list_of_figures, f, indent=4)
+with open("static/list-of-interactive-elements.json", "w+") as f:
+    json.dump(list_of_figures, f)
 
             
