@@ -75,20 +75,6 @@ for x in routes.rglob("*.svx"):
                 })
             else:
                 print(f'ERROR: {url}, {name}')
-        
-        # Extract YouTube Links
-        # youtube_regex = '<YouTube(.*?)>'
-        # url_regex = 'url="(.*?)"'
-        # title_regex = 'title="(.*?)"'
-
-        # for x in re.findall(youtube_regex, flattened):
-        #     url = re.findall(url_regex, x)
-        #     name = re.findall(name_regex, x)
-        #     if url and name:
-        #         video_container.append({
-        #             "name" : name[0],
-        #             "url" : url[0],
-        #         })
 
 api["links"] = link_container
 api["videos"] = video_container
