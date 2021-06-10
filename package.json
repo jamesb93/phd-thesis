@@ -7,7 +7,7 @@
     "start": "svelte-kit start",
     "scripts": "python3 scrape_links.py && python3 get_structure.py && python3 figure_list.py",
     "convert": "pnpm run scripts && sh convert.sh",
-    "update": "svelte-kit build && sh deploy.sh"
+    "update": "pnpm run build && sh deploy.sh"
   },
   "devDependencies": {
     "@sveltejs/adapter-node": "next",
