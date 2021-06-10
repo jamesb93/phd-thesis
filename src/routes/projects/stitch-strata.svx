@@ -43,12 +43,12 @@ At the time of composing [Stitch/Strata]({m.ss}) I was also reading articles by 
 
 </div>
 
-[IMAGE 1]({m.ss}#img1) depicts how the architecture of *Odessa* is designed as a set of behavioural layers that contain modules for sound production and interaction. These are sensitive to the input of a live performer. By connecting these modules to each other across the subsumption architecture, Linson et. al (2015, p. 13) hypothesised that it "would serve to produce cues that suggest intentionality". For me, the notion of intentionality was also something that I wanted to be able to build into my work. What I often interpret as "sophistication" in computational and computer generated outputs is a sense that the computer's musical decision making is intentional. The rationale for these decisions does not necessarily have to be concrete or explainable, but it has to seem as if there is something guiding the decision-making process in a similar fashion to the way I might manually compose.
+[IMAGE 4.1.1]({m.ss}#img1) depicts how the architecture of *Odessa* is designed as a set of behavioural layers that contain modules for sound production and interaction. These are sensitive to the input of a live performer. By connecting these modules to each other across the subsumption architecture, Linson et. al (2015, p. 13) hypothesised that it "would serve to produce cues that suggest intentionality". For me, the notion of intentionality was also something that I wanted to be able to build into my work. What I often interpret as "sophistication" in computational and computer generated outputs is a sense that the computer's musical decision making is intentional. The rationale for these decisions does not necessarily have to be concrete or explainable, but it has to seem as if there is something guiding the decision-making process in a similar fashion to the way I might manually compose.
 
 <ImageMedia2 
 url="/ss/odessa.jpg"
 caption='Odessa subsumption architecture taken from Linson et. al (2015). The boxes represent modules belonging to one of the three behavioural layers, "Play", "Diverge", "Adapt".'
-figure="IMAGE 1"
+figure="IMAGE 4.1.1"
 id="img1"
 />
 
@@ -69,12 +69,12 @@ One particular aspect of *By The Stream* that was evocative for me, was the way 
     <p slot="caption">AUDIO 1: By The Stream (2013) – Phil Minton and Audrey Chen</p>
 </VideoMedia>
 
-In addition to this work, I came across [Trevor Wishart's](http://www.trevorwishart.co.uk) *[Tongues of Fire](https://www.youtube.com/watch?v=Ude4717dlsQ)* (1994). This piece uses vocal sounds as a source material and introduces signal processing in order to manipulate sounds into new forms. I took particular interest in the way that the Wishart occupied the sonic territory between organic and synthetic presentations of the source material, facilitated by rapid concatenation and processing. 13:06 to 15:24 in particular emphasises this in [VIDEO 1]({m.ss}#video1).
+In addition to this work, I came across [Trevor Wishart's](http://www.trevorwishart.co.uk) *[Tongues of Fire](https://www.youtube.com/watch?v=Ude4717dlsQ)* (1994). This piece uses vocal sounds as a source material and introduces signal processing in order to manipulate sounds into new forms. I took particular interest in the way that the Wishart occupied the sonic territory between organic and synthetic presentations of the source material, facilitated by rapid concatenation and processing. 13:06 to 15:24 in particular emphasises this in [VIDEO 4.1.1]({m.ss}#video1).
 
 <YouTube
 url="https://www.youtube.com/embed/Ude4717dlsQ?start=786"
 title="Tongues of Fire (1994) — Trevor Wishart"
-figure="VIDEO 1"
+figure="VIDEO 4.1.1"
 id="video1"
 />
 
@@ -82,16 +82,16 @@ At this point of development in my practice, extended vocal techniques were a ma
 
 ### Building A Corpus Of Materials
 
-I began by segmenting all of the recordings using REAPER's dynamic split tool and configuring it to segment based on the detection of transients. I selected this strategy because I wanted to extract individual utterances and phoneme sounds to be rearranged and concatenated by the computer. [DEMO 1]({m.ss}#demo1) shows an example of this process, in which I  took a portion of *[One Breath Poem Failure](https://sagemusick.bandcamp.com/track/2016-02-16-one-breath-poem-failure)*, segmented it and then recombined those segments randomly. The colours of each segment track the change in arrangement of each utterance between the segmentation and reordering stages.
+I began by segmenting all of the recordings using REAPER's dynamic split tool and configuring it to segment based on the detection of transients. I selected this strategy because I wanted to extract individual utterances and phoneme sounds to be rearranged and concatenated by the computer. [DEMO 4.1.1]({m.ss}#demo1) shows an example of this process, in which I  took a portion of *[One Breath Poem Failure](https://sagemusick.bandcamp.com/track/2016-02-16-one-breath-poem-failure)*, segmented it and then recombined those segments randomly. The colours of each segment track the change in arrangement of each utterance between the segmentation and reordering stages.
 
 <Sage
-caption='DEMO 1' 
+caption='DEMO 4.1.1' 
 id="demo1" 
 />
 
 This was only a single experiment, and applying it to other source material revealed to me a number of compositional possibilities which could be achieved through this deconstructive process. Depending on the qualities and nature of the source, individual segments could synthesise new forms and sounds with their own novel character and synthetic qualities. Thus, this spawned the next level of compositional development in this project, and I imagined that a whole piece could be made by creating a system that would be responsible for organising samples in this way into *phrases* and organising those phrases into a whole piece. I did not have a strong idea about what would specifically constitute a phrase at this time, but I knew that I wanted to explore recombining segments such that the result would be less random than the initial experiments, and that phrases could be given strong perceptual qualities that would differentiate them from each other. With this idea in mind, I set out to experiment with a number of approaches in which individual segments would be concatenated into phrases.
 
-I began by using audio descriptors to analyse the amplitude, spectral centroid and spectral flatness measure of each sample. I anticipated that for a generative strategy predicated on selecting samples according to their perceptual attributes, these three categories of data would allow the computer to differentiate sounds from each other by capturing their "brightness" (spectral centroid), "noisiness"  (spectral flatness) and intensity (amplitude). I could then prompt the computer to find samples that were relatively homogenous with each other and to draw them together into phrases or compositional units. Using a Max patch, I was able to test this idea by querying a database of this descriptor information to return samples that fit a set of criteria and then concatenate them randomly within that group of samples. In [VIDEO 2]({m.ss}#vid2) I demonstrate this by querying for up to 50 samples from the corpus of segments based on three different constraints. Each slider corresponds to a different descriptor query, so by changing the value in this interface I can modify it in real-time. The comparison operations of this descriptor query are fixed. They are as follows:
+I began by using audio descriptors to analyse the amplitude, spectral centroid and spectral flatness measure of each sample. I anticipated that for a generative strategy predicated on selecting samples according to their perceptual attributes, these three categories of data would allow the computer to differentiate sounds from each other by capturing their "brightness" (spectral centroid), "noisiness"  (spectral flatness) and intensity (amplitude). I could then prompt the computer to find samples that were relatively homogenous with each other and to draw them together into phrases or compositional units. Using a Max patch, I was able to test this idea by querying a database of this descriptor information to return samples that fit a set of criteria and then concatenate them randomly within that group of samples. In [VIDEO 4.1.2]({m.ss}#vid2) I demonstrate this by querying for up to 50 samples from the corpus of segments based on three different constraints. Each slider corresponds to a different descriptor query, so by changing the value in this interface I can modify it in real-time. The comparison operations of this descriptor query are fixed. They are as follows:
 
 1. Samples that have a spectral centroid **greater than** the threshold
 2. Samples that have a spectral flatness measure **greater than** the threshold
@@ -99,12 +99,12 @@ I began by using audio descriptors to analyse the amplitude, spectral centroid a
 
 <VideoMedia2 
 url="/ss/descriptorspace"
-figure="VIDEO 2"
+figure="VIDEO 4.1.2"
 caption="Querying the corpus of voice segments using dynamic audio descriptor queries."
 id="vid2"
 />
 
-Using the computer to query the corpus and find groups of samples matching a particular descriptor specification produced results that appealed to me aesthetically. In particular, queries that produced texturally focused groupings were the most appealing, especially when subjected to the process of concatenating them in rapid succession. This produced static textures with intricate and detailed morphologies without my having to make specific decisions regarding the duration or timing of individual samples. I also discovered that this technique was potent for shaping and controlling the morphology imposed on to the concatenation process by changing the thresholds of the query dynamically. This can be seen specifically at 0:20 in [VIDEO 2]({m.ss}#vid2).
+Using the computer to query the corpus and find groups of samples matching a particular descriptor specification produced results that appealed to me aesthetically. In particular, queries that produced texturally focused groupings were the most appealing, especially when subjected to the process of concatenating them in rapid succession. This produced static textures with intricate and detailed morphologies without my having to make specific decisions regarding the duration or timing of individual samples. I also discovered that this technique was potent for shaping and controlling the morphology imposed on to the concatenation process by changing the thresholds of the query dynamically. This can be seen specifically at 0:20 in [VIDEO 4.1.2]({m.ss}#vid2).
 
 This descriptor-query process underpinned much of the compositional process to follow. From this point, I attempted to devise ways in which the computer could arrange material at a higher formal level by imposing ordering and patterns on to groups of samples and by modifying descriptor queries dynamically. This is discussed in the next section, [[4.1.2.3 Attempts To Have The Computer Generate Form]]({m.ss}#attempts-to-have-the-computer-generate-form).
 
@@ -113,38 +113,38 @@ This descriptor-query process underpinned much of the compositional process to f
 
 Referring to some of my initial goals for this piece, I wanted the computer to be able to construct multiple formal levels of the work by operating hierarchically. Prior to working with the vocal materials I imagined a computer system that would incrementally arrange samples into gestures, gestures into phrases and those phrases into sections. While experimenting with the audio descriptor matching described in [[4.1.2.2 Building A Corpus Of Materials]]({m.ss}#building-a-corpus-of-materials), I anticipated that by leveraging audio descriptors further, I could have the computer organise samples according to the percept across these levels. Up to this point in the composition process, I had mostly been creating short concatenations of sounds based on their descriptor attributes, and had not been considering these outputs within the context of a longer piece. As such, the experimentation that followed was mostly concerned with how I could imbue the computer with the *next* level of formal decision making. 
 
-One approach was to create predefined query "shapes" that structured a dynamic query over a given period of time. Using this, I could define the overall quality and percept of the gesture, without specifying any of the particular curatorial and selective details, such as which samples would form that gesture. A similar approach is discussed in Harker (2012), in which he outlines how bespoke Max externals have been used toward similar ends in his compositional practice. [VIDEO 3]({m.ss}#vid3) demonstrates one implementation of this, where queries are changed according to a gesture that is defined by a number of points to be reached at specific times. This creates a parabolic trajectory that increases and decreases the amplitude and spectral centroid query values over a set amount of time. This produces a strong perceptual link between the query and the sound which as a compositional tool is a useful way of having the computer render complex morphologies through a set of constraints.
+One approach was to create predefined query "shapes" that structured a dynamic query over a given period of time. Using this, I could define the overall quality and percept of the gesture, without specifying any of the particular curatorial and selective details, such as which samples would form that gesture. A similar approach is discussed in Harker (2012), in which he outlines how bespoke Max externals have been used toward similar ends in his compositional practice. [VIDEO 4.1.3]({m.ss}#vid3) demonstrates one implementation of this, where queries are changed according to a gesture that is defined by a number of points to be reached at specific times. This creates a parabolic trajectory that increases and decreases the amplitude and spectral centroid query values over a set amount of time. This produces a strong perceptual link between the query and the sound which as a compositional tool is a useful way of having the computer render complex morphologies through a set of constraints.
 
 <VideoMedia2 
 url="/ss/dynamic-gesture"
-figure="VIDEO 3"
+figure="VIDEO 4.1.3"
 caption="Dynamic gestures created by dynamically querying a corpus of vocal segments based on audio descriptors."
 id="vid3"
 />
 
-[VIDEO 4]({m.ss}#vid4) shows another strategy in which a static state of very low amplitude is intermittently "escaped" from, by updating the query for new samples in real-time and almost immediately returning to the low amplitude state. This creates a series of jumps between static states.
+[VIDEO 4.1.4]({m.ss}#vid4) shows another strategy in which a static state of very low amplitude is intermittently "escaped" from, by updating the query for new samples in real-time and almost immediately returning to the low amplitude state. This creates a series of jumps between static states.
 
 <VideoMedia2 
 url="/ss/static-jumps"
-figure="VIDEO 4"
+figure="VIDEO 4.1.4"
 caption='A self-contained static musical behaviour is formed by creating an "anchor" in the descriptor space and momentarily departing and then returning to it.'
 id="vid4"
 />
 
-Another approach involved designing a behaviour on the metaphor of "adversarial searching". For this, I took two starting points within the descriptor space and attached those starting points to two simultaneous searches, one that attempts to minimise the volume of the output by changing the spectral centroid and one that tries to find the maximum centroid by minimising the volume. These two searches subsequent turns in determining the selected sample, forming a single perceivable stream of concatenated segments. This adversarial process has no end, but produces longer term morphologies and structures without having specifically to design them from moment-to-moment. This kind of thinking carried over, and was a precursor in many ways, to my engagement with simulated annealing in [Annealing Strategies]({m.as}), which exploits a similar searching behaviour to structure music automatically. The adversarial searching technique produced sophisticated meso-scale forms, in which seemingly intentional structures emerged. However, it mostly generated dull and meandering macro-scale structures. [AUDIO 2]({m.ss}#audio2) presents an output of this process.
+Another approach involved designing a behaviour on the metaphor of "adversarial searching". For this, I took two starting points within the descriptor space and attached those starting points to two simultaneous searches, one that attempts to minimise the volume of the output by changing the spectral centroid and one that tries to find the maximum centroid by minimising the volume. These two searches subsequent turns in determining the selected sample, forming a single perceivable stream of concatenated segments. This adversarial process has no end, but produces longer term morphologies and structures without having specifically to design them from moment-to-moment. This kind of thinking carried over, and was a precursor in many ways, to my engagement with simulated annealing in [Annealing Strategies]({m.as}), which exploits a similar searching behaviour to structure music automatically. The adversarial searching technique produced sophisticated meso-scale forms, in which seemingly intentional structures emerged. However, it mostly generated dull and meandering macro-scale structures. [AUDIO 4.1.2]({m.ss}#audio2) presents an output of this process.
 
 <Waveform 
 title="Adversarial searching"
-caption='AUDIO 2'
+caption='AUDIO 4.1.2'
 id="audio2"
 file="/ss/5712433.mp3"
 peaks="/ss/5712433.dat"
 />
 
-The final strategy I tried was to take the outputs from descriptor queries and apply a more rigorous, statistical selection procedure. This selection procedure was an implementation of the *z12* algorithm described in Puckette (2015) which can generate different patterns by specifying probabilities between different outcomes. [DEMO 2]({m.ss}#demo2) shows an example of the patterns this process can generate.
+The final strategy I tried was to take the outputs from descriptor queries and apply a more rigorous, statistical selection procedure. This selection procedure was an implementation of the *z12* algorithm described in Puckette (2015) which can generate different patterns by specifying probabilities between different outcomes. [DEMO 4.1.2]({m.ss}#demo2) shows an example of the patterns this process can generate.
 
 <Z12 
-caption='DEMO 2'
+caption='DEMO 4.1.2'
 />
 
 I imagined that imposing this type of rigorous statistical process over an already perceptually linked group of samples would result in structures that might be formally sophisticated. This was not the case, however, because the algorithm's behaviour was too homogenous in the sense that it *always* changed. While I imagined that the z12 algorithm might impose some level of structure over concatenations the end result was in my perception no different than just randomly shuffling the samples.
@@ -167,7 +167,7 @@ Using Python made it possible and easier for me to express a number of organisat
 
  <Code2 
  id='code1'
- figure='CODE 1'
+ figure='CODE 4.1.1'
  caption='accum_phrase'
  >
 
@@ -196,11 +196,11 @@ def accum_phrase(iterations, joins):
 
  </Code2>
 
-The `accum_phrase` function (see [CODE 1]({m.ss}#code1)) concatenates samples until a maximum total duration has been satisfied. The output of the process also renders each stage of the accumulation, so the results can be navigated as a phrase of increasing complexity and duration. This can be heard in [AUDIO 3]({m.ss}#audio3). While this is perhaps the most simplistic example, it produced results that were largely promising as a first attempt. 
+The `accum_phrase` function (see [CODE 4.1.1]({m.ss}#code1)) concatenates samples until a maximum total duration has been satisfied. The output of the process also renders each stage of the accumulation, so the results can be navigated as a phrase of increasing complexity and duration. This can be heard in [AUDIO 4.1.3]({m.ss}#audio3). While this is perhaps the most simplistic example, it produced results that were largely promising as a first attempt. 
 
 <Waveform 
 title="A single output from the accum_phrase process"
-caption='AUDIO 3'
+caption='AUDIO 4.1.3'
 file="/ss/a12.mp3"
 peaks="/ss/a12.dat"
 id="audio3"
@@ -208,7 +208,7 @@ id="audio3"
 
 <Code2 
 id='code2'
-figure='CODE 2'
+figure='CODE 4.1.2'
 caption='jank'
 >
 
@@ -250,11 +250,11 @@ def jank(iterations, joins, join_length_min, join_length_max):
 
 </Code2>
 
-The `jank` function (see [CODE 2]({m.ss}#code2)) generates phrases where samples are repeated in chunks of a given length as well as applying some variation to that length. The result is a stutter effect that can contain robotic, artificial qualities with tones and pitches as a side-effect. An example of this can be heard in [AUDIO 4]({m.ss}#audio4) and [AUDIO 5]({m.ss}#audio5).
+The `jank` function (see [CODE 4.1.2]({m.ss}#code2)) generates phrases where samples are repeated in chunks of a given length as well as applying some variation to that length. The result is a stutter effect that can contain robotic, artificial qualities with tones and pitches as a side-effect. An example of this can be heard in [AUDIO 4.1.4]({m.ss}#audio4) and [AUDIO 4.1.5]({m.ss}#audio5).
 
 <Waveform 
 title='A single output from the jank process (1)'
-caption='AUDIO 4'
+caption='AUDIO 4.1.4'
 file="/ss/g17.mp3"
 peaks="/ss/g17.dat"
 id="audio4"
@@ -262,7 +262,7 @@ id="audio4"
 
 <Waveform
 title="A single output from the jank process (2)"
-caption='AUDIO 5'
+caption='AUDIO 4.1.5'
 file="/ss/h0.mp3"
 peaks="/ss/h0.dat"
 id="audio5"
@@ -270,7 +270,7 @@ id="audio5"
 
 <Code2 
 id='code3'
-figure='CODE 3'
+figure='CODE 4.1.3'
 caption='search_small'
 expanded={true}
 >
@@ -308,11 +308,11 @@ def search_small(iterations, joins): # search for small groups with random prope
 
 </Code2>
 
-`search_small` (see [CODE 3]({m.ss}#code3) generates a random descriptor query of a narrow range for the amplitude, spectral flatness measure and spectral centroid. This process produces perceptually tight organisations of samples without my having to specify those constraints exactly. I produced many iterations using this and selected those that I found to be the most aesthetically pleasing. Working with this process allowed me blindly to discover descriptor queries that I could then supply to the other functions, generating more avenues for exploration. An example can be heard in [AUDIO 6]({m.ss}#audio6).
+`search_small` (see [CODE 4.1.3]({m.ss}#code3) generates a random descriptor query of a narrow range for the amplitude, spectral flatness measure and spectral centroid. This process produces perceptually tight organisations of samples without my having to specify those constraints exactly. I produced many iterations using this and selected those that I found to be the most aesthetically pleasing. Working with this process allowed me blindly to discover descriptor queries that I could then supply to the other functions, generating more avenues for exploration. An example can be heard in [AUDIO 4.1.6]({m.ss}#audio6).
 
 <Waveform 
 title="A single output from the search_small process (1)"
-caption='AUDIO 6'
+caption='AUDIO 4.1.6'
 file="/ss/e22.mp3"
 peaks="/ss/e22.dat"
 id="audio6"
@@ -325,81 +325,81 @@ The Python-based scripting workflow consisted of generating sample phrases, audi
 
 [Stitch/Strata]({m.ss}) retained traces of the computer outputs, although many were additionally processed with playback-rate modifications and were rearranged or re-segmented manually in REAPER. The remainder of this section describes how some of them were incorporated into the final composition.
 
-In one of the iterations generated by `search_small`, the query that was generated constrained the curation of samples to those with high spectral flatness, high centroid and low amplitude. This created a whispering texture which was used amongst several superimposed textural phrases at 3:03. The phrase itself can be heard in [AUDIO 7]({m.ss}#audio7).
+In one of the iterations generated by `search_small`, the query that was generated constrained the curation of samples to those with high spectral flatness, high centroid and low amplitude. This created a whispering texture which was used amongst several superimposed textural phrases at 3:03. The phrase itself can be heard in [AUDIO 4.1.7]({m.ss}#audio7).
 
 <Waveform 
 title="A single output from the search_small process (2)"
-caption="AUDIO 7"
+caption="AUDIO 4.1.7"
 file="/ss/whispering-texture.mp3"
 peaks="/ss/whispering-texture.dat"
 id="audio7"
 />
 
-`jank` created a number of glitch-like and robotic phrases. I composed with these more sparingly and wove them in between other phrases, at times emphasising the artificial qualities of the `jank` outputs  for longer periods of time. This can be heard in [AUDIO 8]({m.ss}#audio8) which is located at 4:38 in the piece.
+`jank` created a number of glitch-like and robotic phrases. I composed with these more sparingly and wove them in between other phrases, at times emphasising the artificial qualities of the `jank` outputs  for longer periods of time. This can be heard in [AUDIO 4.1.8]({m.ss}#audio8) which is located at 4:38 in the piece.
 
 <Waveform
 title="Glitch-like and robotic phrases produced by the jank process"
-caption='AUDIO 8'
+caption='AUDIO 4.1.8'
 file="/ss/g.mp3"
 peaks="/ss/g.dat"
 id="audio8"
 />
 
-In addition to this, the outputs of `jank` were used to create constrained and tense textures that were prolonged. These functioned as formal points of stasis that were situated between active and gestural material throughout the latter half of the piece. This can be heard at 4:53, for example. [AUDIO 9]({m.ss}#audio9) shows this in isolation. 
+In addition to this, the outputs of `jank` were used to create constrained and tense textures that were prolonged. These functioned as formal points of stasis that were situated between active and gestural material throughout the latter half of the piece. This can be heard at 4:53, for example. [AUDIO 4.1.9]({m.ss}#audio9) shows this in isolation. 
 
 <Waveform 
 title='Constrained and tense textures created with the jank process'
-caption='AUDIO 9'
+caption='AUDIO 4.1.9'
 file="/ss/h.mp3"
 peaks="/ss/h.dat"
 id="audio9"
 />
 
-`search_small` phrases were interspersed with other materials and heavily edited from their original form to be presented more intermittently in the overall texture. [AUDIO 10]({m.ss}#audio10) captures this, which can be heard at 4:47 in the piece.
+`search_small` phrases were interspersed with other materials and heavily edited from their original form to be presented more intermittently in the overall texture. [AUDIO 4.1.10]({m.ss}#audio10) captures this, which can be heard at 4:47 in the piece.
 
 <Waveform 
 title='search_small outputs interspersed'
-caption='AUDIO 10'
+caption='AUDIO 4.1.10'
 file="/ss/e.mp3"
 peaks="/ss/e.dat"
 id="audio10"
 />
 
-Outputs from `accum_phrase` were combined together to create unrelenting concatenations of vocal utterances. The repetition of short repeated phrases within the larger phrase itself can be heard. An example of this is in [AUDIO 11]({m.ss}#audio11). This was used as a long gesture that underpins the middle section of the piece at 3:15.
+Outputs from `accum_phrase` were combined together to create unrelenting concatenations of vocal utterances. The repetition of short repeated phrases within the larger phrase itself can be heard. An example of this is in [AUDIO 4.1.11]({m.ss}#audio11). This was used as a long gesture that underpins the middle section of the piece at 3:15.
 
 <Waveform 
 title='several accum_phrase outputs concatenated together'
-caption='AUDIO 11'
+caption='AUDIO 4.1.11'
 file="/ss/a+b.mp3"
 peaks="/ss/a+b.dat"
 id="audio11"
 />
 
-Even given the radical paradigm shift towards Python, I returned to using the dynamic descriptor-query approach, described in [[4.1.2.3 Attempts To Have The Computer Generate Form]]({m.ss}#attempts-to-make-the-computer-generate-form). This became a pivotal method for generating material that I then manually composed with. It was useful in creating contrasting gestural material in comparison to the more static and iterated nature of the Python scripts output. The first section of the piece is entirely composed of long dynamic queries spanning up to a minute. This created slowly evolving gestures where the change in query increases the spectral bandwidth and diversity of samples selected. This is demonstrated in [AUDIO 12]({m.ss}#audio12).
+Even given the radical paradigm shift towards Python, I returned to using the dynamic descriptor-query approach, described in [[4.1.2.3 Attempts To Have The Computer Generate Form]]({m.ss}#attempts-to-make-the-computer-generate-form). This became a pivotal method for generating material that I then manually composed with. It was useful in creating contrasting gestural material in comparison to the more static and iterated nature of the Python scripts output. The first section of the piece is entirely composed of long dynamic queries spanning up to a minute. This created slowly evolving gestures where the change in query increases the spectral bandwidth and diversity of samples selected. This is demonstrated in [AUDIO 4.1.12]({m.ss}#audio12).
 
 <Waveform
 title='Dynamic descriptor query outputs (1)'
-caption='AUDIO 12'
+caption='AUDIO 4.1.12'
 file='/ss/ramping-1.mp3'
 peaks='/ss/ramping-1.dat'
 id='audio12'
 />
 
-At 2:27, a dynamic query is used to create a rapidly changing texture encompassing highly noisy materials that reduce in amplitude over time. Refer to [AUDIO 13]({m.ss}#audio13).
+At 2:27, a dynamic query is used to create a rapidly changing texture encompassing highly noisy materials that reduce in amplitude over time. Refer to [AUDIO 4.1.13]({m.ss}#audio13).
 
 <Waveform
 title='Dynamic descriptor query outputs (2)'
-caption='AUDIO 13'
+caption='AUDIO 4.1.13'
 file='/ss/ramping-2.mp3'
 peaks='/ss/ramping-2.dat'
 id='audio13'
 />
 
-A less linearly shaped query creates an oscillating gesture at 3:15. This is used to punctuate the beginning of a new section. Refer to [AUDIO 14]({m.ss}#audio14).
+A less linearly shaped query creates an oscillating gesture at 3:15. This is used to punctuate the beginning of a new section. Refer to [AUDIO 4.1.14]({m.ss}#audio14).
 
 <Waveform
 title='Dynamic descriptor query outputs (3)'
-caption='AUDIO 14'
+caption='AUDIO 4.1.14'
 file='/ss/ramping-3.mp3'
 peaks='/ss/ramping-3.dat'
 id='audio14'

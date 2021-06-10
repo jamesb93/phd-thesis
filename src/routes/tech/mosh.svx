@@ -17,12 +17,12 @@ I used mosh to generate a large corpus for [Reconstruction Error]({m.re}) by wal
 ## Implementation
 To convert raw data into an audio file a [WAVE header](http://soundfile.sapp.org/doc/WaveFormat/) is prepended to a series of contiguous bytes. These bytes can be derived from files such as pictures, text files, static and shared libraries or entire programs themselves. This makes a new file which the operating system will interpret as an audio file. Thus, mosh is responsible for constructing an appropriate header and appending the raw bytes to this. mosh is capable of executing this process across any number of files natively, mitigating the need for the user to wrap individual command line calls in another script or program.
 
-mosh is called from the command line and accepts arguments to control its behaviour. An example is provided in [CODE 1]({m.mosh}#code1).
+mosh is called from the command line and accepts arguments to control its behaviour. An example is provided in [CODE 5.1.1]({m.mosh}#code1).
 
 <Code2
 id='code1'
 caption='Invocation of mosh to process a single file'
-figure='CODE 1'
+figure='CODE 5.1.1'
 >
 
 ```sh
@@ -33,12 +33,12 @@ mosh convert -i input.file -o output.wav
 
 This would create a new audio file named `output.wav` using `input.file` as the raw bytes.
 
-mosh has several parameters that dictate the content of the WAVE header that is prepended to the raw bytes. These include the number of channels (`numChans`), the sampling rate (`sampRate`) and the bit-depth (`bitDepth`). These have no effect on the process itself other than determining the contents of the header. However, by modifying the data inside the header, the operating system will playback the audio data differently. This provides ways for shaping the databending process, which can drastically change the sound of the audio that files that are made. Below, the same data file is processed at two different sample rates and bit depths. An example demonstrating the configuration of parameters in the invocation is shown in [CODE 2]({m.mosh}#code2).
+mosh has several parameters that dictate the content of the WAVE header that is prepended to the raw bytes. These include the number of channels (`numChans`), the sampling rate (`sampRate`) and the bit-depth (`bitDepth`). These have no effect on the process itself other than determining the contents of the header. However, by modifying the data inside the header, the operating system will playback the audio data differently. This provides ways for shaping the databending process, which can drastically change the sound of the audio that files that are made. Below, the same data file is processed at two different sample rates and bit depths. An example demonstrating the configuration of parameters in the invocation is shown in [CODE 5.1.2]({m.mosh}#code2).
 
 <Code2
 id='code2'
 caption='Command line invocation with bitDepth, numChans and sampRate arguments'
-figure='CODE 2'
+figure='CODE 5.1.2'
 >
 
 ```sh

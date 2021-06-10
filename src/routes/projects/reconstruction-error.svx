@@ -25,7 +25,7 @@
 tracks={reAlbum}
 title="Reconstruction Error"
 id="aud1"
-figure="AUDIO 1"
+figure="AUDIO 4.4.1"
 />
 
 Reconstruction Error is the fourth project in this portfolio. It is a set of five pieces, presented in an EP format.
@@ -40,7 +40,7 @@ Amongst this reflection on my practice up to this point, I had been listening to
 
 I was also becoming interested in databending, a process in which raw data is used to construct visual and sonic materials. This can be achieved in several ways, and the nature of this process can itself have a significant impact on the results. Several existing tools facilitate databending, either intentionally or through divergent and unintended application. Examples include [SoundHack](https://www.soundhack.com/), which allows one to convert any file on a computer into a valid WAVE audio file; [Audacity](https://www.audacityteam.org/), which supports the reading of raw bytes as audio data; and [PhotoShop](https://digital-photography-school.com/make-abstract-glitch-art-photographs/), which can open non-image files as if they were images. 
 
-A number of artists have experimented with databending in their work and this has guided my research into this digital practice. [Nick Briz](http://nickbriz.com/) explores various "attacks" on video data to degrade and produce distortions in *Binary Self-Portraits* (2008) (see [VIDEO 1]({m.re}#vid1)). Another of Briz's works, *From The Group Up In Order, Embrace* (2007) (see [VIDEO 2]({m.re}#vid2)), explores the creation of visual material through the interface of the binary code that represents itself. Briz states that: 
+A number of artists have experimented with databending in their work and this has guided my research into this digital practice. [Nick Briz](http://nickbriz.com/) explores various "attacks" on video data to degrade and produce distortions in *Binary Self-Portraits* (2008) (see [VIDEO 4.4.1]({m.re}#vid1)). Another of Briz's works, *From The Group Up In Order, Embrace* (2007) (see [VIDEO 4.4.2]({m.re}#vid2)), explores the creation of visual material through the interface of the binary code that represents itself. Briz states that: 
 
 <div class="bigquote">
 
@@ -58,44 +58,44 @@ A number of artists have experimented with databending in their work and this ha
 <p slot="caption">VIDEO 2: From The Ground Up In Order, Embrace (2007) – Nick Briz</p>
 </VideoMedia>
 
-*Unitxt Code (Data to AIFF)* (2008) (see [VIDEO 3]({m.re}#vid3)) by [Alva Noto](http://alvanoto.com), although not explicitly stated in liner notes or interviews, likely uses data converted to audio (as suggested by the name) for the core compositional material of that work. The harsh and degraded noise-based sounds which are heard in this work are commonly produced when converting text files into audio. *[Datamatics](https://www.ryojiikeda.com/project/datamatics/)* (2006) (see [VIDEO 4]({m.re}#vid4)), by [Ryoji Ikeda](https://www.ryojiikeda.com)  incorporates raw data as source material which drives both the visual and audio of this installation work. [Pimmon's](https://pimmon.bandcamp.com/) album *Electronic Tax Return* (2007) (see [VIDEO 5]({m.re}#vid5)) has several works based on synthesising sound by converting dynamic-link libraries (.dll files) into files for playback and manipulation.
+*Unitxt Code (Data to AIFF)* (2008) (see [VIDEO 4.4.3]({m.re}#vid3)) by [Alva Noto](http://alvanoto.com), although not explicitly stated in liner notes or interviews, likely uses data converted to audio (as suggested by the name) for the core compositional material of that work. The harsh and degraded noise-based sounds which are heard in this work are commonly produced when converting text files into audio. *[Datamatics](https://www.ryojiikeda.com/project/datamatics/)* (2006) (see [VIDEO 4.4.4]({m.re}#vid4)), by [Ryoji Ikeda](https://www.ryojiikeda.com)  incorporates raw data as source material which drives both the visual and audio of this installation work. [Pimmon's](https://pimmon.bandcamp.com/) album *Electronic Tax Return* (2007) (see [VIDEO 4.4.5]({m.re}#vid5)) has several works based on synthesising sound by converting dynamic-link libraries (.dll files) into files for playback and manipulation.
 
 <YouTube 
 url='https://www.youtube.com/embed/vN9FrqrPptg'
-figure='VIDEO 3'
+figure='VIDEO 4.4.3'
 title='Unitxt Code (Data to AIFF) (2008) – Alva Noto'
 id='vid3'
 />
 
 <YouTube 
 url='https://www.youtube.com/embed/eaIrSZIyxxk' 
-figure='VIDEO 4'
+figure='VIDEO 4.4.4'
 title='Datamatics (2006) (Limited Section) – Ryoji Ikeda'
 id='vid4'
 />
 
 <YouTube 
 url='https://www.youtube.com/embed/AbF8NFanUdQ'
-figure='VIDEO 5'
+figure='VIDEO 4.4.5'
 title='Electronic Tax Return (2007) – Pimmon'
 id='vid5'
 />
 
-These works of sound art and composition were part of my exposure and research into databending. In particular, [Michael Chinen's](https://michaelchinen.com/) practical experiments were instrumental in drawing me into a "hacker's" approach through the creation of custom software. Chinen's work almost exclusively focuses on the sonification of  data from random-access memory (RAM). One of these works, [FuckingAudacity](https://michaelchinen.com/music/fuckingaudacity/), is a fork of the popular audio application Audacity. The sound output from this fork is generated by using the memory state of the program as audio data for the system output buffer at regular intervals. Interactions with the user interface and user-driven processes such as importing files or enabling effects themselves become ways of manipulating the sound output. [VIDEO 6]({m.re}#vid6) is a demonstration of Chinen playing with the program.
+These works of sound art and composition were part of my exposure and research into databending. In particular, [Michael Chinen's](https://michaelchinen.com/) practical experiments were instrumental in drawing me into a "hacker's" approach through the creation of custom software. Chinen's work almost exclusively focuses on the sonification of  data from random-access memory (RAM). One of these works, [FuckingAudacity](https://michaelchinen.com/music/fuckingaudacity/), is a fork of the popular audio application Audacity. The sound output from this fork is generated by using the memory state of the program as audio data for the system output buffer at regular intervals. Interactions with the user interface and user-driven processes such as importing files or enabling effects themselves become ways of manipulating the sound output. [VIDEO 4.4.6]({m.re}#vid6) is a demonstration of Chinen playing with the program.
 
 <VideoMedia id='vid6'>
 <iframe slot='media' title='FuckingAudacity demonstration by Michael Chinen' src="https://player.vimeo.com/video/8144372?byline=0&portrait=0" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <p slot='caption'>VIDEO 6: FuckingAudacity demonstration by Michael Chinen.</p>
 </VideoMedia>
 
-[FuckingWebBrowser](https://michaelchinen.com/music/fuckingwebbrowser/) (see [VIDEO 7]({m.re}#vid7)) follows suit from its Audacity counterpart. The application presents as a standard web browser. However, the memory state of the program is used to generate audio data which is then played back as the user interacts with the software. Navigating to or from a website or interacting with a page generates sounds in unpredictable ways. Even doing nothing at times reveals the program's hidden internal workings as sounds. Making HTTP requests, polling for data, or caching files in the background results in sounds that are not tightly coupled to the user's interaction with the application.
+[FuckingWebBrowser](https://michaelchinen.com/music/fuckingwebbrowser/) (see [VIDEO 4.4.7]({m.re}#vid7)) follows suit from its Audacity counterpart. The application presents as a standard web browser. However, the memory state of the program is used to generate audio data which is then played back as the user interacts with the software. Navigating to or from a website or interacting with a page generates sounds in unpredictable ways. Even doing nothing at times reveals the program's hidden internal workings as sounds. Making HTTP requests, polling for data, or caching files in the background results in sounds that are not tightly coupled to the user's interaction with the application.
 
 <VideoMedia id='vid7'>
 <iframe slot='media' title='FuckingWebBrowser demonstration by Michael Chinen' src="https://player.vimeo.com/video/9635993?byline=0&portrait=0" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 <p slot='caption'>VIDEO 7: FuckingWebBrowser demonstration by Michael Chinen.</p>
 </VideoMedia>
 
-The logical conclusion to this suite of custom databending applications is one that can be attached to any program. [lstn](https://michaelchinen.com/2010/12/09/listen-to-your-computer-lstn/) performs this function, and can observe and sonify the opcodes, call stack and active memory of any program on the computer. [VIDEO 8]({m.re}#vid8) is a demonstration of this in practice, where it is attached to several different running programs in real-time.
+The logical conclusion to this suite of custom databending applications is one that can be attached to any program. [lstn](https://michaelchinen.com/2010/12/09/listen-to-your-computer-lstn/) performs this function, and can observe and sonify the opcodes, call stack and active memory of any program on the computer. [VIDEO 4.4.8]({m.re}#vid8) is a demonstration of this in practice, where it is attached to several different running programs in real-time.
 
 <VideoMedia id='vid8'>
 <iframe slot='media' title='lstn demonstration by Michael Chinen' src="https://player.vimeo.com/video/17617200?byline=0&portrait=0" width="640" height="480" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
@@ -105,7 +105,7 @@ The logical conclusion to this suite of custom databending applications is one t
 ### Employing The Computer To Structure A Corpus
 Coming into contact with Chinen's work was influential because there is a mixture of predictable and unpredictable sonic behaviours exhibited by the computer through his various databending programs. The overarching character of the generated sound is digital, harsh and noise-based, but occasionally these processes produce silence as well as sounds that are fragile and delicate. This notion of there being "needles in the haystack" was a tension that I wanted to explore myself. How could I generate a large body of material and search for the "needles"? Part of my motivation for this project was to create a set of conditions in which I could explore this realm, and mediate that investigation using the computer as part of the compositional process.
 
-As part of my preliminary research in this area, I came into contact with the outputs of the Fluid Corpus Manipulation (FluCoMa) project. I had up to this point been loosely involved with some of their research activities and privy to internal workshops with their commissioned composers as a helper. As such, I was able to view a pre-release video demonstration for *[FluidCorpusMap](https://github.com/flucoma/FluidCorpusMap)* (see [VIDEO 9]({m.re}#vid9)).  Neither the paper (Roma et. al., 2019) or the source code for this program were released at the time, which hindered my ability to understand the software in a detailed way. However, the video broadly points out that it is using mel-cepstrum frequency coefficients (MFCCs), audio descriptor analysis, statistical summaries and a dimension reduction algorithm to create a two-dimensional latent space for exploration and navigation. I found two aspects of this process fascinating. Firstly, the *global* visual aspect of the dimension reduction was novel and possessed unique characteristics depending on the algorithm. For me, each layout was evocative, in that the computer seemed to be creating its own machine-like understanding of the corpus. Secondly, the *local* distribution of samples was perceptually smooth and coherent. Movements between adjacent points in the demonstration returned texturally similar sounds. Even aspects such as morphology seemed to be captured (this can be seen around 1:19, where sounds with upwards glissandi are grouped together), giving the sense that the computer could listen to texture *and* morphology. This, to me, was far more sophisticated than my previous experiments using instantaneous statistical summaries, such as in [Stitch/Strata]({m.ss}).
+As part of my preliminary research in this area, I came into contact with the outputs of the Fluid Corpus Manipulation (FluCoMa) project. I had up to this point been loosely involved with some of their research activities and privy to internal workshops with their commissioned composers as a helper. As such, I was able to view a pre-release video demonstration for *[FluidCorpusMap](https://github.com/flucoma/FluidCorpusMap)* (see [VIDEO 4.4.9]({m.re}#vid9)).  Neither the paper (Roma et. al., 2019) or the source code for this program were released at the time, which hindered my ability to understand the software in a detailed way. However, the video broadly points out that it is using mel-cepstrum frequency coefficients (MFCCs), audio descriptor analysis, statistical summaries and a dimension reduction algorithm to create a two-dimensional latent space for exploration and navigation. I found two aspects of this process fascinating. Firstly, the *global* visual aspect of the dimension reduction was novel and possessed unique characteristics depending on the algorithm. For me, each layout was evocative, in that the computer seemed to be creating its own machine-like understanding of the corpus. Secondly, the *local* distribution of samples was perceptually smooth and coherent. Movements between adjacent points in the demonstration returned texturally similar sounds. Even aspects such as morphology seemed to be captured (this can be seen around 1:19, where sounds with upwards glissandi are grouped together), giving the sense that the computer could listen to texture *and* morphology. This, to me, was far more sophisticated than my previous experiments using instantaneous statistical summaries, such as in [Stitch/Strata]({m.ss}).
 
 <VideoMedia id='vid9'>
     <iframe slot='media' title='FluidCorpusMap demonstration' src="https://player.vimeo.com/video/314301724?byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
@@ -122,13 +122,13 @@ This section outlines the technology and development of software situated at the
 ### Generation
 I began composing [Reconstruction Error]({m.re}) by generating a corpus of materials using databending techniques. Ultimately, I wanted to create a large corpus of sounds that I would initially have little understanding of. From that point, I intended to use machine listening to structure my investigation of those materials, formulating the piece as a hybrid of my own and the computer's agency.
 
-I began databending by modifying the code of Alex Harker's [`ibuffer~`](https://www.alexanderjharker.co.uk/Software.html) Max object so that it could load *any* file, not just those intended to store audio data for playback. Reading audio files such as WAVE and AIFF typically involves parsing a section of bytes at the start of the file, the "header", which tells the program how to interpret the structure of another chunk of data which is the audio itself. My forked version of `ibuffer~` operated by adding a new method to the object, `readraw` which could read a file without looking for the header, and instead assumed that all the data in the file was 8-bit encoded 44.1kHz sample-rate mono audio. Some of the conversions from this process can be found in [AUDIO 2]({m.re}#aud2). Note that these samples have been reduced in volume by 90% because the originals were excessively loud.
+I began databending by modifying the code of Alex Harker's [`ibuffer~`](https://www.alexanderjharker.co.uk/Software.html) Max object so that it could load *any* file, not just those intended to store audio data for playback. Reading audio files such as WAVE and AIFF typically involves parsing a section of bytes at the start of the file, the "header", which tells the program how to interpret the structure of another chunk of data which is the audio itself. My forked version of `ibuffer~` operated by adding a new method to the object, `readraw` which could read a file without looking for the header, and instead assumed that all the data in the file was 8-bit encoded 44.1kHz sample-rate mono audio. Some of the conversions from this process can be found in [AUDIO 4.4.2]({m.re}#aud2). Note that these samples have been reduced in volume by 90% because the originals were excessively loud.
 
 <Album 
 tracks={ibuffer}
 title="ibuffer~ databending"
 id="aud2"
-figure="AUDIO 2"
+figure="AUDIO 4.4.2"
 />
 
 Using the fork of `ibuffer~` rendered results that gave me confidence in the databending approach. Many of the outputs in my opinion were unremarkable noise (*AEC.pdf*, *carl.png*), while some presented novel morphological and textural properties. For example, *clickers.rpp* and *crash.rtf*, although containing a noticeable background noise element, were ornamented with complex and *intentional-sounding* sonic moments. Despite this mild initial success, two issues hindered my progress. Firstly, issues resulted from my lack of familiarity with C programming. My fork of `ibuffer~` would occasionally crash, causing work to be lost. In addition to this, the conversion process was not deterministic and could be slightly different between consecutive executions using the same input file. Secondly, the workflow of converting a file and listening to it was slow because I had to manually load the file and then play it back to evaluate the results. Combined with having to seek out more and more files to test, the repetitiveness of this process was time consuming. These two problems together created a lot of friction when trying to explore the results of databending. 
@@ -139,22 +139,22 @@ While this scripting workflow was rapid and could produce numerous files almost 
 
 The development of [mosh]({m.mosh}) provided me with an opportunity to learn more about the structure of data in audio files. From this, I began to grasp the effect that the header could have on the perception of the sound output. For example, different integer bit-depth representations can drastically alter the textural and dynamic properties of the sound. There is no predictable way to anticipate these changes, so trial and error is required to determine the results. Single precision floating-point 32-bit encodings, in particular, can produce a mixture of results, often tending towards extremely loud and noisy outputs. While integer representations equally distribute the values between -1 and +1, some of the bits which make up a floating-point number determine the exponent. In normal operation, these exponents would be very low for audio because the range is typically constrained between -1 and +1. However, because exponents are exponential there is a high degree of chance that the exponent value will create a chunk of data representing a significantly large number outside the normal range for audio. Furthermore, because multichannel audio samples in WAV files are interleaved, databending raw bytes into a stereo audio file can produce unanticipated stereoscopic perceptual effects.
 
-I decided to constrain the variation in parameters in the generation stage to produce only 8-bit unsigned integer encoded files. To me, these sounds were the least prone to being "unremarkable noise", and did not suffer the issues of high-resolution encodings and volume blowout. I started running `mosh` on directories of files on my computer, converting five gigabytes of data by walking from the root directory of my laptop's file system. This produced 8,517 audio files which I ambitiously began auditioning manually. Given the sheer quantity, I only managed to audition around 100 before I realised that I was not able to remember what the first one sounded like, or what characteristics of it I may have found compelling. Amongst the typically noisy sounds, there were those with diverse morphologies and textures – precisely the type that I wanted to discover more of in the first place. A small selection of manually auditioned samples was kept aside and can be found below in [AUDIO 3]({m.re}#aud3). Clearly, there was going to be a problem navigating through this collection though because of its scale; I had produced my "haystack", but I needed to think about ways I could find the "needles".
+I decided to constrain the variation in parameters in the generation stage to produce only 8-bit unsigned integer encoded files. To me, these sounds were the least prone to being "unremarkable noise", and did not suffer the issues of high-resolution encodings and volume blowout. I started running `mosh` on directories of files on my computer, converting five gigabytes of data by walking from the root directory of my laptop's file system. This produced 8,517 audio files which I ambitiously began auditioning manually. Given the sheer quantity, I only managed to audition around 100 before I realised that I was not able to remember what the first one sounded like, or what characteristics of it I may have found compelling. Amongst the typically noisy sounds, there were those with diverse morphologies and textures – precisely the type that I wanted to discover more of in the first place. A small selection of manually auditioned samples was kept aside and can be found below in [AUDIO 4.4.3]({m.re}#aud3). Clearly, there was going to be a problem navigating through this collection though because of its scale; I had produced my "haystack", but I needed to think about ways I could find the "needles".
 
 <Album 
 tracks={generation}
-figure="AUDIO 3"
+figure="AUDIO 4.4.3"
 caption=" hmm "
 id="aud3"
 title='Samples generated using the mosh command line tool'
 />
 
 ### Segmentation
-Samples generated with [mosh]({m.mosh}) ranged in duration from 1 second to 53 minutes. The longer sounds, in particular, contained several discrete musical ideas, gestures or even what may have been considered sections of whole music. A sample that exemplifies this finding is *libLLVMAMDGPUDecs.a.wav* and can be heard in [AUDIO 4]({m.rt}#aud4). I have manually segmented this sample to demonstrate where I perceived such separable divisions.
+Samples generated with [mosh]({m.mosh}) ranged in duration from 1 second to 53 minutes. The longer sounds, in particular, contained several discrete musical ideas, gestures or even what may have been considered sections of whole music. A sample that exemplifies this finding is *libLLVMAMDGPUDecs.a.wav* and can be heard in [AUDIO 4.4.4]({m.rt}#aud4). I have manually segmented this sample to demonstrate where I perceived such separable divisions.
 
 <Waveform 
 title='libLLVMAMDGPUDesc.a with my manual segmentation'
-caption='AUDIO 4'
+caption='AUDIO 4.4.4'
 file='/re/generation/libLLVMAMDGPUDesc.a.mp3'
 peaks = '/re/generation/libLLVMAMDGPUDesc.a.dat'
 id='aud4'
@@ -163,37 +163,37 @@ segments={libllvmSlices}
 
 These longer samples, composed of many internal sounds, were not compositionally useful to me. I wanted access to the segments within each sample in order to operate on small homogenous units rather than on long composite blocks of material. In response to this, I devised a strategy to segment the entire corpus automatically based on replicating my intuitive segmentation of *libLLVMAMDGPUDesc.a.wav*. After experimenting with several algorithms from Librosa (McFee et al. 2015), such as [Laplacian Segmentation](https://librosa.org/doc/latest/auto_examples/plot_segmentation.html), I concluded that the demarcations I had made were influenced by my sensitivity to differences in the spectrum over time.
 
-There are algorithms for performing automatic segmentation based on this principle, such as measuring the *spectral flux* between windows of contiguous spectral frames. I experimented with this using the FluCoMa `fluid.bufonsetslice~` object. However, I found that while this algorithm was intuitive to understand, it was highly sensitive to parameter changes. When the algorithm was set with a low threshold it would produce results that were too detailed. When set with a high threshold, it would not detect significant changes. Similarly, the Laplacian Segmentation algorithm was beyond my understanding to use effectively, despite showing promising results in other's applications. While these attempts seemed like dead ends at the time, they were in retrospect encouraging me towards more fruitful results. The documentation of the Laplacian Segmentation algorithm would often refer to self-similarity or recurrence matrices. I used part of the code from this documentation to create one for *libLLVMAMDGPUDesc.a.wav*, and interpreted the structure of this matrix visually to be reflective of the demarcations that I had made manually before. The recurrence matrix plot can be seen in [IMAGE 1]({m.re}#img1). 
+There are algorithms for performing automatic segmentation based on this principle, such as measuring the *spectral flux* between windows of contiguous spectral frames. I experimented with this using the FluCoMa `fluid.bufonsetslice~` object. However, I found that while this algorithm was intuitive to understand, it was highly sensitive to parameter changes. When the algorithm was set with a low threshold it would produce results that were too detailed. When set with a high threshold, it would not detect significant changes. Similarly, the Laplacian Segmentation algorithm was beyond my understanding to use effectively, despite showing promising results in other's applications. While these attempts seemed like dead ends at the time, they were in retrospect encouraging me towards more fruitful results. The documentation of the Laplacian Segmentation algorithm would often refer to self-similarity or recurrence matrices. I used part of the code from this documentation to create one for *libLLVMAMDGPUDesc.a.wav*, and interpreted the structure of this matrix visually to be reflective of the demarcations that I had made manually before. The recurrence matrix plot can be seen in [IMAGE 4.4.1]({m.re}#img1). 
 
 <ImageMedia2 
 url='/re/recurrence.png'
-figure="IMAGE 1"
+figure="IMAGE 4.4.1"
 caption='Recurrence matrix visualisation for libLLVMAMDGPUDesc.a.wav.'
 id='img1'
 />
 
-I followed this line of inquiry and made a thread on the [FluCoMa discourse](https://discourse.flucoma.org/) asking how I might approach segmentation based on these types of visual representations, and if any existing tools were based on a similar principle. The thread is titled ["Difficult segmentation"](https://discourse.flucoma.org/t/difficult-segmentation/222). Owen Green responded (see [IMAGE 2]({m.re}#img2)), elucidating that the `fluid.bufnoveltyslice~`object was based on Andrew Foote's novelty-slicing algorithm (Foote, 2000), which at its core uses the notion of self-similarity represented through recurrence matrices to perform segmentation. It facilitates this by first calculating the recurrence matrix by comparing analysis windows to each other recursively. The recurrence matrix aims to describe the differences between each point in time to every other point in time. The algorithm then slides a window (the *kernel*) over this data, calculating from one moment to the next the summation of the differences. Together, these summaries form a one-dimensional time series, a *novelty curve*. From this, one can estimate times of significant comparative distance, by looking for peaks. An example of a *novelty curve* can be found in [IMAGE 3]({m.re}#im3), extracted from Foote (2000, p. 454). 
+I followed this line of inquiry and made a thread on the [FluCoMa discourse](https://discourse.flucoma.org/) asking how I might approach segmentation based on these types of visual representations, and if any existing tools were based on a similar principle. The thread is titled ["Difficult segmentation"](https://discourse.flucoma.org/t/difficult-segmentation/222). Owen Green responded (see [IMAGE 4.4.2]({m.re}#img2)), elucidating that the `fluid.bufnoveltyslice~`object was based on Andrew Foote's novelty-slicing algorithm (Foote, 2000), which at its core uses the notion of self-similarity represented through recurrence matrices to perform segmentation. It facilitates this by first calculating the recurrence matrix by comparing analysis windows to each other recursively. The recurrence matrix aims to describe the differences between each point in time to every other point in time. The algorithm then slides a window (the *kernel*) over this data, calculating from one moment to the next the summation of the differences. Together, these summaries form a one-dimensional time series, a *novelty curve*. From this, one can estimate times of significant comparative distance, by looking for peaks. An example of a *novelty curve* can be found in [IMAGE 4.4.3]({m.re}#im3), extracted from Foote (2000, p. 454). 
 
 A powerful aspect of novelty slicing is that the sliding window can be expanded or contracted in order to measure change across larger or smaller scales of time, respectively. Furthermore, the algorithm is relatively indifferent to the nature of the data, and thus to what might indicate novelty or salience. This makes it a popular technique for analysing the structure of music, based on the notion that points of change are not necessarily demarcated only by localised features, but also by those which are accrued over meso- and macro-scales. Given these qualities, novelty slicing seemed like the ideal algorithm for slicing my samples containing complex, but nonetheless clearly structured, musical ideas. 
 
 <ImageMedia2 
 url='/re/owen.jpeg'
-figure='IMAGE 2'
+figure='IMAGE 4.4.2'
 caption='Owen Green answering my question in the FluCoMa discourse.'
 id='img2'
 />
 
 <ImageMedia2
 url='/re/noveltycurve.jpg'
-figure='IMAGE 3'
+figure='IMAGE 4.4.3'
 caption='Example of a novelty curve, taken from Foote (2000, p. 454).'
 />
 
-Using a *threshold* of 0.61, *kernelsize* of 3, *filtersize* of 1, *fftsettings* of 1024 512 1024, and a *minslicelength* of 2, I produced the segmentation which can be seen in [AUDIO 5]({m.re}#aud5). To me, this segmentation result was commensurate with my initial intuitive approach seen in [AUDIO 4]({m.re}#aud4). While at some points the results of `fluid.bufnoveltyslice~` were over-segmented (slices one to five), it seemed that the algorithm could discern the changes I perceived as salient, and was able to extract the longer musical phrases such as slices seven and twelve without suffering from the oversensitivity issues found in other algorithms.
+Using a *threshold* of 0.61, *kernelsize* of 3, *filtersize* of 1, *fftsettings* of 1024 512 1024, and a *minslicelength* of 2, I produced the segmentation which can be seen in [AUDIO 4.4.5]({m.re}#aud5). To me, this segmentation result was commensurate with my initial intuitive approach seen in [AUDIO 4.4.4]({m.re}#aud4). While at some points the results of `fluid.bufnoveltyslice~` were over-segmented (slices one to five), it seemed that the algorithm could discern the changes I perceived as salient, and was able to extract the longer musical phrases such as slices seven and twelve without suffering from the oversensitivity issues found in other algorithms.
 
 <Waveform 
 title='libLLVMAMDGPUDesc.a segmented with the fluid.noveltyslice~ algorithm'
-caption='AUDIO 5'
+caption='AUDIO 4.4.5'
 file='/re/generation/libLLVMAMDGPUDesc.a.mp3'
 peaks = '/re/generation/libLLVMAMDGPUDesc.a.dat'
 id='aud5'
@@ -211,10 +211,10 @@ The analysis script can be found here: [/Projects/Reconstruction Error/Code/pyth
 In other sound-searching and corpus-exploration research, dimension reduction has been employed to transform complex data such as MFCCs into simpler and more compressed representations. Examples include the work of Stefano Fascinai (Fasciani, 2015), *Flow Synthesizer* (Esling, Masuda, Bardet, Despres, & Chemla-Romeu-Santos, 2019), *[AudioStellar](https://audiostellar.xyz/)* (Garber et. al. 2020), Thomas Grill (Grill & Flexer, 2012), 
 [LjudMap](https://github.com/victorwegeborn/LjudMAP) (Vegeborn, 2020), and the previously mentioned *FluidCorpusMap*. 
 
-Using this research as a basis for my own work, I used the Uniform Manifold Approximation and Projection (UMAP) algorithm and reduced the 273 points in each vector for each sample to 2 points. This way, I could visualise the results as a two-dimensional *map* where each sample would be represented as a singular point. A strength of UMAP is its potency for capturing non-linear features in data compared to algorithms such as Principal Component Analysis (PCA). Due to the noise-based and complex spectral profile of the sounds I generated from databending, being able to capture the non-linear features of their MFCC analysis was an important consideration. Furthermore, UMAP can be coerced to favour either the local or global structure of the untransformed data by altering the *minimum distance* and *number of neighbours* parameters. A number of projections that were made with various parameters can be seen in [DEMO 1]({m.re}#demo1). One can interact with this demo by moving the slider to interpolate between projections where different parameters for the UMAP algorithm have been used. Each point in this space represents a sample, and the interpolation is calculated based on the position of the same sample in each projection, rather than by shifting the projection based on the nearest points. This shows how changing the parameters can drastically alter the representation and grouping of sounds. I found that this was an expressive interface for changing how the computer represented the corpus analysis data. 
+Using this research as a basis for my own work, I used the Uniform Manifold Approximation and Projection (UMAP) algorithm and reduced the 273 points in each vector for each sample to 2 points. This way, I could visualise the results as a two-dimensional *map* where each sample would be represented as a singular point. A strength of UMAP is its potency for capturing non-linear features in data compared to algorithms such as Principal Component Analysis (PCA). Due to the noise-based and complex spectral profile of the sounds I generated from databending, being able to capture the non-linear features of their MFCC analysis was an important consideration. Furthermore, UMAP can be coerced to favour either the local or global structure of the untransformed data by altering the *minimum distance* and *number of neighbours* parameters. A number of projections that were made with various parameters can be seen in [DEMO 4.4.1]({m.re}#demo1). One can interact with this demo by moving the slider to interpolate between projections where different parameters for the UMAP algorithm have been used. Each point in this space represents a sample, and the interpolation is calculated based on the position of the same sample in each projection, rather than by shifting the projection based on the nearest points. This shows how changing the parameters can drastically alter the representation and grouping of sounds. I found that this was an expressive interface for changing how the computer represented the corpus analysis data. 
 
 <Points 
-caption='DEMO 1'
+caption='DEMO 4.4.1'
 id='demo1'
 />
 
@@ -231,12 +231,12 @@ Part of my affection for dimension reduction outputs was due to how samples with
 
 To do this, I first trialled several clustering algorithms on the dimension reduction output, including [k-means](https://en.wikipedia.org/wiki/K-means_clustering), [HDBSCAN](https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html) and [Agglomerative Clustering](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html). Each algorithm exposes a different interface for influencing the clustering process, and will cluster input data based on its own set of assumptions. K-means, for example, operates by partitioning data into a fixed number of divisions set by the user. Individual points are then drawn into these partitions to create clusters. The assignment of points towards the partitions assumes that the data is spherically distributed, and that each partition will contain approximately the same number of items. This can be a problematic assumption, and a number of false conclusions can be drawn if these limitations are not accepted and acknowledged beforehand. HDBSCAN, on the other hand, determines an appropriate number of clusters automatically, depending on a set of constraints that calculate the *linkage* between data points. It uses a minimum spanning tree to divide the space hierarchically into clusters and so it can often respect the presence of nested structures within a larger dataset, while k-means will largely ignore such nuances. HDBSCAN can also be more suited to data that is not spherically distributed.
 
-The differences in interface and underlying implementation between such algorithms afford contrasting insights and outcomes from this process. I found the notion of asking for a specific number of clusters from k-means potentially valuable, because I could determine approximately the density of each cluster, and thus how much compositional material a single group would contain. For example, if I wanted to create more specific groupings, I could simply ask for more clusters. However, HDBSCAN's minimum spanning tree data structure intrigued me as an output that might guide my navigation between samples in the corpus. Inspired by the depictions of these data structures, I imagined "hopping" between connected samples in the tree, potentially using this as a way of structuring material in time. An example of a minimum spanning tree can be found in [IMAGE 4]({m.re}#img4). Furthermore, minimum spanning trees are not necessarily flat, and can convey a sense of hierarchy between clusters as they contain fewer samples. This hierarchical property of the minimum spanning tree is portrayed in [IMAGE 5]({m.re}#img5).
+The differences in interface and underlying implementation between such algorithms afford contrasting insights and outcomes from this process. I found the notion of asking for a specific number of clusters from k-means potentially valuable, because I could determine approximately the density of each cluster, and thus how much compositional material a single group would contain. For example, if I wanted to create more specific groupings, I could simply ask for more clusters. However, HDBSCAN's minimum spanning tree data structure intrigued me as an output that might guide my navigation between samples in the corpus. Inspired by the depictions of these data structures, I imagined "hopping" between connected samples in the tree, potentially using this as a way of structuring material in time. An example of a minimum spanning tree can be found in [IMAGE 4.4.4]({m.re}#img4). Furthermore, minimum spanning trees are not necessarily flat, and can convey a sense of hierarchy between clusters as they contain fewer samples. This hierarchical property of the minimum spanning tree is portrayed in [IMAGE 4.4.5]({m.re}#img5).
 
 <ImageMedia2 
 url='/re/hdbscan.png'
 caption='HDBSCAN minimum spanning tree visualisation. Data points are represented by circular nodes in the space with connections of the tree indicated by lines connecting them. Taken from https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html.'
-figure='IMAGE 4'
+figure='IMAGE 4.4.4'
 id='img4'
 htmlCap={true}
 />
@@ -244,19 +244,19 @@ htmlCap={true}
 <ImageMedia2 
 url='/re/hdbscan2.jpg'
 caption='HDBSCAN cluster hierarchy visualisation. Taken from https://hdbscan.readthedocs.io/en/latest/how_hdbscan_works.html.'
-figure='IMAGE 5'
+figure='IMAGE 4.4.5'
 id='img5'
 htmlCap={true}
 />
 
 I settled on using another algorithm, *agglomerative clustering*, which can be configured to produce a fixed number of clusters, while also working in the same fashion as HDBSCAN and creating a minimum spanning tree. It is also a hierarchical clustering algorithm, making it effective when operating on non-spherically distributed and nested data, such as that produced by the UMAP algorithm. This blend of the other algorithms would allow me to control the specificity of the clustering process, while also having the computer make fewer assumptions about the distribution of my data.
 
-Despite the initial appeal to me of the minimum spanning tree, I found it difficult to probe at the data structure which represented it in the [scikit-learn implementation](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html). I imagined that there would be a simple way to traverse the hierarchy of nodes, such as those represented in [IMAGE 5]({m.re}#img5) However, the methods which are exposed in the class definition for the Python module that contain the functionality for agglomerative clustering are more abstract than that, and require building one's own traversal scheme. Although I had used Python in [Stitch/Strata]({m.ss}), I still lacked certain fundamental knowledge specific to Python as well as experience in algorithms and data structures.
+Despite the initial appeal to me of the minimum spanning tree, I found it difficult to probe at the data structure which represented it in the [scikit-learn implementation](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html). I imagined that there would be a simple way to traverse the hierarchy of nodes, such as those represented in [IMAGE 4.4.5]({m.re}#img5) However, the methods which are exposed in the class definition for the Python module that contain the functionality for agglomerative clustering are more abstract than that, and require building one's own traversal scheme. Although I had used Python in [Stitch/Strata]({m.ss}), I still lacked certain fundamental knowledge specific to Python as well as experience in algorithms and data structures.
 
-Nonetheless, I was influenced by this model of relating different clusters to each other via a hierarchy. I explored this in my own way, using the agglomerative clustering algorithm to calculate four results on each projection with increasing levels of cluster density. The first output produced 250 clusters, then 500, then 1,600 and finally 3,200. These were chosen in relation to the total number of corpus items. [DEMO 2]({m.re}#demo2) uses a small synthetic dataset to demonstrate how this clustering approach operates. The colour of each point in the visual space represents its membership of a cluster. By toggling between the three different levels of granularity (2, 4, and 8 clusters), one can observe how certain points remain together or are separated into new groups.
+Nonetheless, I was influenced by this model of relating different clusters to each other via a hierarchy. I explored this in my own way, using the agglomerative clustering algorithm to calculate four results on each projection with increasing levels of cluster density. The first output produced 250 clusters, then 500, then 1,600 and finally 3,200. These were chosen in relation to the total number of corpus items. [DEMO 4.4.2]({m.re}#demo2) uses a small synthetic dataset to demonstrate how this clustering approach operates. The colour of each point in the visual space represents its membership of a cluster. By toggling between the three different levels of granularity (2, 4, and 8 clusters), one can observe how certain points remain together or are separated into new groups.
 
 <Agglom
-caption='DEMO 2'
+caption='DEMO 4.4.2'
 id='demo2' 
 />
 
@@ -264,10 +264,10 @@ I then performed a series of "meta-analyses" to discern how the membership of sa
 
 I reasoned that as more clusters were asked for across analyses, clusters at the least granular level (250 clusters) would progressively bifurcate, and samples would be separated into more specific groups. For example, the 250-clusters analysis might produce a cluster containing five samples. In the 500-clusters results, these same five samples might not belong to the same cluster. Instead, they might be spread across two unique clusters.
 
-To evaluate this, I created a Python script that iterated through each cluster in each level of analysis in order of granularity (250, 500, 1600, 3200). As it did this, it evaluated how many samples from a cluster at one level were present in any of the clusters at the next level of specificity. The output of this meta-analysis process was three JSON files. In [CODE 1]({m.re}#code1), a portion of the analysis describing the shared membership of the 250-clusters and 500-clusters analysis is shown. The information in this example shows that cluster 36 in the 250 clusters analysis shares eight samples from cluster 317 and 16 samples from cluster 327 in the 500-clusters analysis. Be aware that the cluster value itself is arbitrary. The full analysis is located at [/Projects/Reconstruction Error/python_scripts/clustering/cl_one.json](https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/clustering/cl_one.json).
+To evaluate this, I created a Python script that iterated through each cluster in each level of analysis in order of granularity (250, 500, 1600, 3200). As it did this, it evaluated how many samples from a cluster at one level were present in any of the clusters at the next level of specificity. The output of this meta-analysis process was three JSON files. In [CODE 4.4.1]({m.re}#code1), a portion of the analysis describing the shared membership of the 250-clusters and 500-clusters analysis is shown. The information in this example shows that cluster 36 in the 250 clusters analysis shares eight samples from cluster 317 and 16 samples from cluster 327 in the 500-clusters analysis. Be aware that the cluster value itself is arbitrary. The full analysis is located at [/Projects/Reconstruction Error/python_scripts/clustering/cl_one.json](https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/clustering/cl_one.json).
 
 <Code2
-figure='CODE 1'
+figure='CODE 4.4.1'
 caption='Meta-analysis data describing the shared membership of clusters. This portion describes the shared membership of clusters between the 250-clusters and 500-clusters analysis.'
 >
 
@@ -292,11 +292,11 @@ caption='Meta-analysis data describing the shared membership of clusters. This p
 
 </Code2>
 
-[CODE 2]({m.re}#code2), shows a portion of the meta-analysis of shared cluster membership between the 500-clusters and 1600-clusters outputs. From this one can discern that cluster 313 from the 500-clusters analysis shares 22 samples with cluster 1,256 in the 1600-clusters analysis.
+[CODE 4.4.2]({m.re}#code2), shows a portion of the meta-analysis of shared cluster membership between the 500-clusters and 1600-clusters outputs. From this one can discern that cluster 313 from the 500-clusters analysis shares 22 samples with cluster 1,256 in the 1600-clusters analysis.
 
 <Code2
 id='code2'
-figure='CODE 2'
+figure='CODE 4.4.2'
 caption='Meta-analysis data describing the shared membership of clusters. This portion describes the shared membership of clusters between the 500-clusters and 1600-clusters analysis.'
 >
 
@@ -320,21 +320,21 @@ The clustering code can be found here: [/Projects/Reconstruction Error/Code/pyth
 At this stage, I moved into *soundful* play with the various computer outputs which led the development of the pieces. The next section [[4.4.3 Responding To Computer Outputs]]({m.re}#responding-to-computer-outputs) discusses this.
 
 ## Responding To Computer Outputs
-After producing the clustering data and the meta-analysis, I used it to drive audition processes in Max and REAPER. I created an interface that allowed me to retrieve the samples from a specific cluster, and simultaneously navigate between clusters that shared samples, determined by the meta-analysis. This facilitated a listening process in which I would start with a cluster of samples from the 250-clusters analysis, and curate the samples by selecting sub-clusters of that initial cluster. The samples were played back contiguously by a sequencer, so that I could rapidly ascertain an idea about the perceptual qualities of each cluster. Through this approach, the computer led me to perceptually constrained groups of sounds. A screen capture demonstrating this auditioning process can be found in [VIDEO 10]({m.re}#vid10).
+After producing the clustering data and the meta-analysis, I used it to drive audition processes in Max and REAPER. I created an interface that allowed me to retrieve the samples from a specific cluster, and simultaneously navigate between clusters that shared samples, determined by the meta-analysis. This facilitated a listening process in which I would start with a cluster of samples from the 250-clusters analysis, and curate the samples by selecting sub-clusters of that initial cluster. The samples were played back contiguously by a sequencer, so that I could rapidly ascertain an idea about the perceptual qualities of each cluster. Through this approach, the computer led me to perceptually constrained groups of sounds. A screen capture demonstrating this auditioning process can be found in [VIDEO 4.4.10]({m.re}#vid10).
 
 <VideoMedia2 
 url="/re/meta-analysis"
-figure="VIDEO 10"
+figure="VIDEO 4.4.10"
 caption="Using Max and the meta-analysis data to explore the corpus in a structured manner."
 id="vid10"
 />
 
 This process was immensely useful for becoming acquainted with the corpus samples in a structured manner. Even though the source material was generated from disparate sources of raw data, this structured engagement mediated by the computer's analysis began to catalyse higher-level compositional thinking for what an EP of different pieces might present. As I was auditioning with this Max patch, I created a set of annotations for each cluster and my own set of "tags" describing the perceptual qualities and imagined compositional applications. These tags range from noting which samples I thought were similar, to devising forms based on the relationships between the groups. These notes can be found at this link: [cluster notes](https://github.com/jamesb93/reconstruction_error/blob/master/clusters.md).
 
-Up to this point, the audition process was orchestrated entirely in Max. However, I did not want to compose in this environment because I was beginning to formulate concepts around formal structures and the way these samples would be constructed into a set of compositions. Working entirely in Max had already proven to be problematic in [Stitch/Strata]({m.ss}), especially in the earlier phases of that project. Instead, I wanted to be able to access samples as clusters in an environment where I could "freeze" them, arrange them, as well as modify and alter them with audio effects. To achieve this workflow, I built a series of Lua scripts that allowed me to turn a cluster represented in JSON format into a track in REAPER by leveraging the ReaScript API. This can be found in [CODE 3]({m.re}#code3). 
+Up to this point, the audition process was orchestrated entirely in Max. However, I did not want to compose in this environment because I was beginning to formulate concepts around formal structures and the way these samples would be constructed into a set of compositions. Working entirely in Max had already proven to be problematic in [Stitch/Strata]({m.ss}), especially in the earlier phases of that project. Instead, I wanted to be able to access samples as clusters in an environment where I could "freeze" them, arrange them, as well as modify and alter them with audio effects. To achieve this workflow, I built a series of Lua scripts that allowed me to turn a cluster represented in JSON format into a track in REAPER by leveraging the ReaScript API. This can be found in [CODE 4.4.3]({m.re}#code3). 
 
 <Code2
-figure='CODE 3'
+figure='CODE 4.4.3'
 caption='Lua script for importing a cluster of samples as a track of contiguous samples into REAPER.'
 id='code3'
 >
@@ -382,11 +382,11 @@ end
 
 </Code2>
 
-Running this script would present me with the option to provide a JSON file and a cluster number. This would generate a new track containing the samples belonging to that cluster. This allowed me to audition samples rapidly in Max, then draw them into a REAPER session without friction. [VIDEO 11]({m.re}#vid11) demonstrates this process. This was the basis on which I composed the next few pieces. I would oscillate between listening in Max, importing sounds into REAPER as clusters, and then using intuitive compositional processes to organise that material. When I hit a creative block in the DAW, I would return to listening and try to find something new in the material, guided by the computer.
+Running this script would present me with the option to provide a JSON file and a cluster number. This would generate a new track containing the samples belonging to that cluster. This allowed me to audition samples rapidly in Max, then draw them into a REAPER session without friction. [VIDEO 4.4.11]({m.re}#vid11) demonstrates this process. This was the basis on which I composed the next few pieces. I would oscillate between listening in Max, importing sounds into REAPER as clusters, and then using intuitive compositional processes to organise that material. When I hit a creative block in the DAW, I would return to listening and try to find something new in the material, guided by the computer.
 
 <VideoMedia2 
 url="/re/scripting"
-figure="VIDEO 11"
+figure="VIDEO 4.4.11"
 caption="Using ReaScript API to create tracks of samples from cluster data."
 id="vid11"
 />
@@ -401,10 +401,10 @@ peaks='/pieces/Reconstruction Error/_.dotmaxwave.dat'
 segments={maxwaveSegs}
 title='_.dotmaxwave'
 id='aud6'
-caption='AUDIO 6'
+caption='AUDIO 4.4.6'
 />
 
-*_.dotmaxwave* was the first piece I composed. The samples that I used to create it were all derived from cluster 131 from the 250-clusters analysis. While auditioning this cluster in Max, I realised that the source material was all derived from a particular raw data type with the `.maxwave` extension and possessed similar morphological properties. All of the samples begin similarly, with four repeated pitched sounds leading into a static texture. These can be heard in [AUDIO 7]({m.re}#aud7). This static texture contains a predominant pitch component with some quiet and narrow-band noise. I wanted to capitalise on what I had found to create a track that focused on the relationship between pitch and noise, as well as the shared morphology of these samples.
+*_.dotmaxwave* was the first piece I composed. The samples that I used to create it were all derived from cluster 131 from the 250-clusters analysis. While auditioning this cluster in Max, I realised that the source material was all derived from a particular raw data type with the `.maxwave` extension and possessed similar morphological properties. All of the samples begin similarly, with four repeated pitched sounds leading into a static texture. These can be heard in [AUDIO 4.4.7]({m.re}#aud7). This static texture contains a predominant pitch component with some quiet and narrow-band noise. I wanted to capitalise on what I had found to create a track that focused on the relationship between pitch and noise, as well as the shared morphology of these samples.
 
 I started by importing cluster 131 into REAPER. I listened to the samples and identified those that I found to have the most novel variations in the opening sequence. From this, I was able to create a palette of iterations on the same musical idea.
 
@@ -412,7 +412,7 @@ I started by importing cluster 131 into REAPER. I listened to the samples and id
 title='Cluster 131 .maxwave sounds'
 tracks={maxwave}
 id='aud7'
-figure='AUDIO 7'
+figure='AUDIO 4.4.7'
 />
 
 Using the [Fluid Decomposition Toolbox](https://pure.hud.ac.uk/ws/portalfiles/portal/17022941/towardscorpus_final.pdf) harmonic-percussive source separator, `fluid.bufhpss~`, on the command line, I processed each of the sounds. I achieved a clear separation of these two elements using this technique and found that the percussive components had their own complex morphology and character. However, in the unprocessed version of the samples this component is low in volume and masked by the more dominant pitch sound. I wanted to emphasise the noise component, so I summed the two components back together after increasing the volume of the noise.
@@ -428,7 +428,7 @@ file='/pieces/Reconstruction Error/--isn.mp3'
 peaks='/pieces/Reconstruction Error/--isn.dat'
 segments={isnSegments}
 points={isnPoints}
-caption='AUDIO 8'
+caption='AUDIO 4.4.8'
 id='aud8'
 />
 
@@ -449,16 +449,16 @@ file='/pieces/Reconstruction Error/X86Desc.a.mp3'
 peaks='/pieces/Reconstruction Error/X86Desc.a.dat'
 points={descPoints}
 id='aud9'
-caption='AUDIO 9'
+caption='AUDIO 4.4.9'
 />
 
 [X86Desc.a]({m.re}#x86desca) iterated on the  material types used in [--isn]({m.re}#isn). It focuses on the incorporation and treatment of similar sound types but expands the palette of transient-based material through processing spectrally complex sounds from other clusters in the corpus with [ReaCoMa]({m.reacoma}). 
 
-For example, the material at 0:45 is created using a transient-extraction algorithm from [ReaCoMa]({m.reacoma}). The source material, *libLLVM-6.0.dylib_144.wav*, is predominantly pitched and the result is perhaps not recognisable as derived from the source material due to the removal of the non-transient component of that sound. This process is used throughout the piece to generate different materials. Depending on the morphological properties of the input sound, a number of different quasi-rhythmic patterns are carved away from the spectrally rich sources. For example, at 2:07, one layer of the overall texture was derived by taking a cluster of samples and processing them through the transient-extraction algorithm. I did this with three different settings, to create variations on that material, which I then used to formulate a morphing passage of sound. This is presented in [AUDIO 10]({m.re}#aud7).
+For example, the material at 0:45 is created using a transient-extraction algorithm from [ReaCoMa]({m.reacoma}). The source material, *libLLVM-6.0.dylib_144.wav*, is predominantly pitched and the result is perhaps not recognisable as derived from the source material due to the removal of the non-transient component of that sound. This process is used throughout the piece to generate different materials. Depending on the morphological properties of the input sound, a number of different quasi-rhythmic patterns are carved away from the spectrally rich sources. For example, at 2:07, one layer of the overall texture was derived by taking a cluster of samples and processing them through the transient-extraction algorithm. I did this with three different settings, to create variations on that material, which I then used to formulate a morphing passage of sound. This is presented in [AUDIO 4.4.10]({m.re}#aud7).
 
 <Waveform 
 title='Material from cluster 165 processed with the transient extraction algorithm in three different ways. 2:07 in X86Desc.a.'
-caption='AUDIO 10'
+caption='AUDIO 4.4.10'
 id='aud10'
 file='/re/cluster165-preparation.mp3'
 peaks='/re/cluster165-preparation.dat'
@@ -473,24 +473,24 @@ file='/pieces/Reconstruction Error/segmnoittet.mp3'
 peaks='/pieces/Reconstruction Error/segmnoittet.dat'
 points={segmPoints}
 id='aud11'
-caption='AUDIO 11'
+caption='AUDIO 4.4.11'
 />
 
-For this piece, I wanted to create something that was less rhythmically homogenous than the previous tracks and to create something more mechanical and sparse. The first idea I had involved taking clusters that, when concatenated, would create such aspects inherently and without much low-level editing. I found that sample groups often created such results through sequencing if the samples within a cluster had significantly differing lengths. I was able to control and search for this  aspect by selecting samples from different hierarchical levels of the meta-analysis. The deeper I went into the hierarchy, the more similar samples were in both duration and perceptual quality. As such, "high-level" clusters would be more variegated and mixed, while "low-level" clusters were highly constrained and repetitive. A short section of music composed in response to this finding can be heard in [AUDIO 12]({m.re}#aud12}).  
+For this piece, I wanted to create something that was less rhythmically homogenous than the previous tracks and to create something more mechanical and sparse. The first idea I had involved taking clusters that, when concatenated, would create such aspects inherently and without much low-level editing. I found that sample groups often created such results through sequencing if the samples within a cluster had significantly differing lengths. I was able to control and search for this  aspect by selecting samples from different hierarchical levels of the meta-analysis. The deeper I went into the hierarchy, the more similar samples were in both duration and perceptual quality. As such, "high-level" clusters would be more variegated and mixed, while "low-level" clusters were highly constrained and repetitive. A short section of music composed in response to this finding can be heard in [AUDIO 4.4.12]({m.re}#aud12}).  
 
 <Waveform 
 file='/re/initial-segm.mp3'
 peaks='/re/initial-segm.dat'
 id='aud12'
-caption='AUDIO 12'
+caption='AUDIO 4.4.12'
 title='A short section of composed music using various clusters of mechanical material.'
 />
 
-This passage did not develop successfully and I had exhausted a lot of the material which I had collected up to this point. Most, if not all, of this material was derived from cluster 250, so I started following the connections that this cluster had to the other outputs via the meta-analysis. This did not introduce many additional samples, though it did separate the same or similar material into more specific clusters. In [IMAGE 6]({m.re}#img6), the REAPER session of this piece is shown, indicating tracks where each child cluster is positioned alongside its parent cluster into the session. These are colour-coded to represent the shared membership and are annotated such that I could discern from which output they originated.
+This passage did not develop successfully and I had exhausted a lot of the material which I had collected up to this point. Most, if not all, of this material was derived from cluster 250, so I started following the connections that this cluster had to the other outputs via the meta-analysis. This did not introduce many additional samples, though it did separate the same or similar material into more specific clusters. In [IMAGE 4.4.6]({m.re}#img6), the REAPER session of this piece is shown, indicating tracks where each child cluster is positioned alongside its parent cluster into the session. These are colour-coded to represent the shared membership and are annotated such that I could discern from which output they originated.
 
 <ImageMedia2 
 url='/re/segmnoitte-session.jpg'
-figure='IMAGE 6'
+figure='IMAGE 4.4.6'
 caption='REAPER session for segmnoittet. Tracks displayed on the left side of the screen contain various tracks of clusters and their respective "sub-clusters".'
 id='img6'
 />
@@ -499,11 +499,11 @@ After importing these clusters, I was able to keep composing, and eventually the
 
 The slowly unfolding ending is created by taking another sub-cluster, and arranging the samples in the REAPER timeline so that the interval between samples gradually expands. This process is duplicated several times and superimposed.
 
-At the beginning of this process, the spacing between individual samples is small, and their repetitious arrangement generates material that has a strong pitched element. This spacing expands over time, which produces a sonic effect in which this pitched element disappears, and consecutive samples become impulse-like. To orchestrate this, I created a Lua script that could interactively distribute items in the REAPER timeline. This script allowed me to set a fixed spacing between media items, as well as a noise factor that could skew those items along that temporal structure. This is demonstrated in [VIDEO 12]({m.re}#vid12), in which I take several impulse samples and modify the spacing between them.
+At the beginning of this process, the spacing between individual samples is small, and their repetitious arrangement generates material that has a strong pitched element. This spacing expands over time, which produces a sonic effect in which this pitched element disappears, and consecutive samples become impulse-like. To orchestrate this, I created a Lua script that could interactively distribute items in the REAPER timeline. This script allowed me to set a fixed spacing between media items, as well as a noise factor that could skew those items along that temporal structure. This is demonstrated in [VIDEO 4.4.12]({m.re}#vid12), in which I take several impulse samples and modify the spacing between them.
 
 <VideoMedia2 
 url='/re/quantise-gui-demo'
-figure='VIDEO 12'
+figure='VIDEO 4.4.12'
 id='vid12'
 caption='Interactive item spacing with Lua accessing the ReaScript API.'
 />
@@ -516,7 +516,7 @@ peaks='/pieces/Reconstruction Error/sys.ji_.dat'
 title='sys.ji_'
 points={sysPoints}
 id='aud13'
-caption='AUDIO 13'
+caption='AUDIO 4.4.13'
 />
 
 This was the last piece that was composed for the album. It is the most distinct in terms of compositional approach and material used. For me, it signified a developmental milestone in the compositional process, where I was comfortable enough with the corpus that I could navigate almost intuitively and directly towards certain material types. Instead of entirely relying on the computer to seek out sounds, or to be offered potential groupings, I used the knowledge I had accrued by composing the other four pieces. Three of the other pieces, [--isn]({m.re}#isn), [segmnoittet]({m.re}#segmnoittet) and [X86Desc.a]({m.re}#x86desca}), are composed almost entirely with short impulse-based material. The way I structured these sounds focused on their delicacy and fragility, as well as on their quasi-rhythmic and interlocking nature through concatenation. I wanted to compose an antagonist to these pieces, and to draw on materials from the corpus with bombastic and spectrally rich qualities.
@@ -556,11 +556,11 @@ The next project, [{m.emname}]({m.em} ), is the final project in this PhD portfo
 Musically, {m.emname} draws on a similar digital and synthetic sound world to Reconstruction Error. It also continues to explore how the computer can be engaged in a creative dialogue by leveraging dimension reduction and clustering. This is explored in much more detail compared to [Reconstruction Error]({m.re}), facilitated by the flexibility of [FTIS]({m.fits}). That said, the treatment of compositional material is different to that in [Reconstruction Error]({m.re}), and I focused in the later project on creating longer-form works.
 
 ## Further Information
-I gave two presentations that discussed [Reconstruction Error]({m.re}) at different points in its development. The first presentation was at the November 2019 FluCoMa Plenary, where the pieces were partially composed, and I focused on demonstrating my application of the FluCoMa tools. This can be seen in [VIDEO 13]({m.re}#vid13). Much later, after the pieces had been finished and after I had moved on to composing [{m.emname}]({m.em}), I reflected on the entire development process of [Reconstruction Error]({m.re}) and its relationship to the compositions themselves in a [short paper and presentation](https://zenodo.org/record/4285398) for the 2020 AI Music Creativity Conference. This involved creating a short video demo, which can be viewed in [VIDEO 14]({m.re}#vid14).
+I gave two presentations that discussed [Reconstruction Error]({m.re}) at different points in its development. The first presentation was at the November 2019 FluCoMa Plenary, where the pieces were partially composed, and I focused on demonstrating my application of the FluCoMa tools. This can be seen in [VIDEO 4.4.13]({m.re}#vid13). Much later, after the pieces had been finished and after I had moved on to composing [{m.emname}]({m.em}), I reflected on the entire development process of [Reconstruction Error]({m.re}) and its relationship to the compositions themselves in a [short paper and presentation](https://zenodo.org/record/4285398) for the 2020 AI Music Creativity Conference. This involved creating a short video demo, which can be viewed in [VIDEO 4.4.14]({m.re}#vid14).
 
 <YouTube 
 url="https://www.youtube.com/embed/IpD_XzW1Az4" 
-figure='VIDEO 13'
+figure='VIDEO 4.4.13'
 title='"Finding Things In Stuff" presentation at the November 2019 FluCoMa Plenary'
 id='vid13'
 />
@@ -568,7 +568,7 @@ id='vid13'
 <YouTube 
 url="https://www.youtube.com/embed/-FNO0QovfsI"
 title='"Corpus exploration with UMAP and agglomerative clustering" presentation at the AI Music Creativity Conference 2020.'
-figure='VIDEO 14'
+figure='VIDEO 4.4.14'
 id='vid14'
 />
 

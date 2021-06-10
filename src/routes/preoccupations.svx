@@ -21,12 +21,12 @@ Computer-aided composition software provides composers with tools and formalisms
 
 For example, [OpenMusic (OM)](https://openmusic-project.github.io) facilitates the manipulation of data by assembling and connecting "functional boxes and object constructors" (Bresson et. al., 2017., p. 1). A collection of objects and the connections between them form a patch where various data structures can be manipulated in order to generate and control musical information, for example, pitch, rhythmic durations or spectral envelopes. OM also possesses the concept of a *maquette* — "a hybrid visual program /sequencer allowing objects and programs to be arranged in time and connected by functional relations" (Bresson et. al., 2017., p. 4). The maquette helps users in imposing dynamic temporal manipulations onto the connections between the objects that transform and generate data giving another level of meta-control over those processes.
 
-The [Bach suite](https://www.bachproject.net/) of Max packages (Bach, Cage, Dada) by [Daniele Ghisi](https://www.danieleghisi.com/) and [Andrea Agostini](https://www.andreaagostini.eu/) facilitate a wide range of possibilities for computer-aided composition. The suite leverages [Max](https://cycling74.com/) and its visual programming style. Like OM, objects with specific functionality are connected together in order to transform data or to realise it through scores or audio playback. Bach is the core package in the suite, providing the primitives for these types of operations to be constructed. Cage builds on Bach by re-using much of the underlying code and packaging ready-to-use modules that deal with 20th and 21st century compositional techniques and concepts such as indeterminacy and chance. Dada is an increasingly abstract set of objects that again build on the underlying code from Bach, while bringing a number of non-standard graphical user interface objects to the fore. These visual entities are experimental in nature and offer novel metaphors for the manipulation of sound based on geometry, recreational mathematics and physical modelling (Ghisi, n.d). [IMAGE 1]({m.preoc}#img1), depicts the `dada.kaleido` object which emulates the shifting geometry patterns of a kaleidoscope. The data from this object can be used as triggers or controls for any number of musical parameters.
+The [Bach suite](https://www.bachproject.net/) of Max packages (Bach, Cage, Dada) by [Daniele Ghisi](https://www.danieleghisi.com/) and [Andrea Agostini](https://www.andreaagostini.eu/) facilitate a wide range of possibilities for computer-aided composition. The suite leverages [Max](https://cycling74.com/) and its visual programming style. Like OM, objects with specific functionality are connected together in order to transform data or to realise it through scores or audio playback. Bach is the core package in the suite, providing the primitives for these types of operations to be constructed. Cage builds on Bach by re-using much of the underlying code and packaging ready-to-use modules that deal with 20th and 21st century compositional techniques and concepts such as indeterminacy and chance. Dada is an increasingly abstract set of objects that again build on the underlying code from Bach, while bringing a number of non-standard graphical user interface objects to the fore. These visual entities are experimental in nature and offer novel metaphors for the manipulation of sound based on geometry, recreational mathematics and physical modelling (Ghisi, n.d). [IMAGE 2.1]({m.preoc}#img1), depicts the `dada.kaleido` object which emulates the shifting geometry patterns of a kaleidoscope. The data from this object can be used as triggers or controls for any number of musical parameters.
 
 <ImageMedia2
 url="/preoccupations/dadakaleido.jpg"
 caption="A screenshot demonstrating the dada.kaleido object and its geometric interface."
-figure="IMAGE 1"
+figure="IMAGE 2.1"
 id='img1'
  />
 
@@ -88,29 +88,29 @@ Turkle and Papert's description of the bricoleur emphasises the dialogical inter
 #### The Feedback Loop
 <ImageMedia2 
 url="/preoccupations/bricolage.jpg"
-figure="IMAGE 2"
+figure="IMAGE 2.2"
 caption="McClean & Wiggins (2010) diagram of the bricolage programming feedback loop."
 id='img2'
 />
 
-[IMAGE 2]({m.preoc}#img2) is McClean and Wiggins' formalised process of bricolage programming, as a "creative feedback loop encompassing the written algorithm, its interpretation, and the programmer’s perception and reaction to its output or behaviour" (2010, p. 2). This loop defines four key stages: concept, algorithm, output and percept interspersed with italicised actions enacted by the human. They describe the start of this feedback loop as having "a half-formed concept, which only reaches internal consistency through the process of being expressed as an algorithm" (McClean & Wiggins, 2010, p. 2). They provide a theoretical example of someone modifying a program to follow an in-the-moment perception of a "tree-like structure" that emerges from first experimenting by superimposing curved lines (McClean & Wiggins, 2010, p.2). 
+[IMAGE 2.2]({m.preoc}#img2) is McClean and Wiggins' formalised process of bricolage programming, as a "creative feedback loop encompassing the written algorithm, its interpretation, and the programmer’s perception and reaction to its output or behaviour" (2010, p. 2). This loop defines four key stages: concept, algorithm, output and percept interspersed with italicised actions enacted by the human. They describe the start of this feedback loop as having "a half-formed concept, which only reaches internal consistency through the process of being expressed as an algorithm" (McClean & Wiggins, 2010, p. 2). They provide a theoretical example of someone modifying a program to follow an in-the-moment perception of a "tree-like structure" that emerges from first experimenting by superimposing curved lines (McClean & Wiggins, 2010, p.2). 
 
-For me, the concept node always begins from a point of auditioning sound materials. This process occurs manually at first, and is shortly followed by the involvement of the software to aid that listening process or to follow naive hunches about how those sounds might be organised or treated compositionally. By engaging with those materials aurally and in dialogue with content-aware programs, conceptual foundations for a piece are made. For example, after listening to segments of phonetics made by experimental vocal improvisers the concept for [Stitch/Strata]({m.ss}) developed. The broader idea was that those segments could be concatenated and recombined to form new sound objects reminiscent of the source material while presenting a new inhuman quality. This central concept was the starting point from which a process of computational *encoding* began, followed by *observation* of those outputs. In [IMAGE 3]({m.preoc}#img3), a number of variants of a computer-generated phrase can be seen represented as files in the file system of my computer. Ultimately, this process led to an unanticipated change in the overall shape of the piece after numerous iterations through different technical approaches were explored.
+For me, the concept node always begins from a point of auditioning sound materials. This process occurs manually at first, and is shortly followed by the involvement of the software to aid that listening process or to follow naive hunches about how those sounds might be organised or treated compositionally. By engaging with those materials aurally and in dialogue with content-aware programs, conceptual foundations for a piece are made. For example, after listening to segments of phonetics made by experimental vocal improvisers the concept for [Stitch/Strata]({m.ss}) developed. The broader idea was that those segments could be concatenated and recombined to form new sound objects reminiscent of the source material while presenting a new inhuman quality. This central concept was the starting point from which a process of computational *encoding* began, followed by *observation* of those outputs. In [IMAGE 2.3]({m.preoc}#img3), a number of variants of a computer-generated phrase can be seen represented as files in the file system of my computer. Ultimately, this process led to an unanticipated change in the overall shape of the piece after numerous iterations through different technical approaches were explored.
 
 <ImageMedia2 
 url="/preoccupations/ss-concatenations-example.png"
 caption="A screenshot showing computer generated outputs of concatenated phonetic outputs. The letter of each file represents a different concatenation strategy, with multiple variations for each one."
-figure="IMAGE 3"
+figure="IMAGE 2.3"
 id='img3'
 />
 
 At the output stage, outputs have been made by the computer which invokes a reflective process on them through *observation* and *reaction*. McClean and Wiggins posit that "the perception of output from an algorithm itself can be a creative act" (2010, p. 4). In this stage, the digital symbolic representation in the computer is converted to an analogue representation that is *perceptual*, such as lights emitted from a screen or, more pertinently, audio from loudspeakers. Engaging with these outputs is perhaps the single most important mechanism in my practice, by which compositional ideas are developed and iterated on, or the original concept is changed to encompass what is found through observation. Audio is the main output I respond to in this regard, and forms an element in a feedback loop between encoding, listening, observation and a return to encoding. In [Annealing Strategies]({m.as}) the bricolage feedback loop was formed by listening to the output of a generative system and then tweaking how the program worked in order to adjust further outputs. Indeed, each [project]({m.proj}) has its own story that traces this feedback loop, whereby listening to sound materials stimulates the creation of problematised scenarios in which the computer can aid me.
 
-I also engage with outputs from the computer that are not necessarily audibly perceptual. In some cases, the computer offers text-based outputs such as [JavaScript Object Notation (JSON)](https://www.json.org/json-en.html) (for example see [CODE 1]({m.preoc}#code1)) containing analysis and statistical summaries produced from [machine listening]({m.ca}#machine-listening) and [machine learning]({m.ca}#machine-learning).
+I also engage with outputs from the computer that are not necessarily audibly perceptual. In some cases, the computer offers text-based outputs such as [JavaScript Object Notation (JSON)](https://www.json.org/json-en.html) (for example see [CODE 2.1]({m.preoc}#code1)) containing analysis and statistical summaries produced from [machine listening]({m.ca}#machine-listening) and [machine learning]({m.ca}#machine-learning).
 
 <Code2
 id='code1'
-figure='CODE 1'
+figure='CODE 2.1'
 caption='JSON output describing computationally generated clusters of perceptually similar audio samples segments.'
 >
 
@@ -152,19 +152,19 @@ caption='JSON output describing computationally generated clusters of perceptual
 
 I can discover valuable information from such data that then informs further decision-making. For example, in both [Reconstruction Error]({m.re}) and [{m.emname}]({m.em}) different sets of data were produced by the computer using [machine learning]({m.ca}#machine-learning) and [machine listening]({m.ca}#machine-listening) in order to take a larger collection of samples and segregate individual samples into perceptually homogenous groups or clusters. I explored this clustering data aurally using small Max patches and computer-generated REAPER sessions as well as visually by reading the data. This informed my compositional decision making and the selection of audio samples and without the aid of the computer, I would not have been able to examine the original corpus in a structured way and on the basis of perceptual similarity between samples.
 
-Visualisation of data is also a meaningful output from the computer. A visual representation of a corpus can be useful for viewing it *topologically*, as a group of items that form a shape consisting of local and global relationships. While this sort of data may be hard to act upon compositionally, it can be part of the overall feedback loop, leading to other forms of encoding and reaction. Visualisation and data-driven approaches were used heavily in both [Reconstruction Error]({m.re}) and [{m.emname}]({m.em}). [IMAGE 4]({m.preoc}#img4) is a scatter plot representing a projection of individual corpus samples into two-dimensional space based on machine listening analysis.
+Visualisation of data is also a meaningful output from the computer. A visual representation of a corpus can be useful for viewing it *topologically*, as a group of items that form a shape consisting of local and global relationships. While this sort of data may be hard to act upon compositionally, it can be part of the overall feedback loop, leading to other forms of encoding and reaction. Visualisation and data-driven approaches were used heavily in both [Reconstruction Error]({m.re}) and [{m.emname}]({m.em}). [IMAGE 2.4]({m.preoc}#img4) is a scatter plot representing a projection of individual corpus samples into two-dimensional space based on machine listening analysis.
 
 <ImageMedia2 
 url="/preoccupations/umap-visual.jpg"
-figure="IMAGE 4"
+figure="IMAGE 2.4"
 caption="Samples projected into a two-dimensional space using dimension reduction on Mel-frequency cepstrum coefficients analysis. This data was used in the Reconstruction Error project."
 id='img4'
 />
 
-Outputs from content-aware computer programs help me to clarify and hone my compositional intent which in turn shapes the music that is made through an *iterative composition process*. Some of these outputs are inherently musical or sonic at first while others are data-driven, structural, organisational and taxonomical in nature. Observing outputs such as these can prompt new actions from observation, forming a part of a feedback loop in my compositional workflow. The tightly woven nature of the software into the exploration of ideas situates the computer as a highly agentive entity and guides me to solutions for both the technical and creative problems I face. The idea that a concept can only reach "internal consistency" through this workflow is extremely important in understanding the purpose of working in this way. [DEMO 1]({m.preoc}#bricolage) shows a diagram where nodes represent the types of *observations* that I make and the actions I take as a result. Ultimately, these parts of the creative process can lead back into each other, resulting in a formative cycle for developing compositional ideas.
+Outputs from content-aware computer programs help me to clarify and hone my compositional intent which in turn shapes the music that is made through an *iterative composition process*. Some of these outputs are inherently musical or sonic at first while others are data-driven, structural, organisational and taxonomical in nature. Observing outputs such as these can prompt new actions from observation, forming a part of a feedback loop in my compositional workflow. The tightly woven nature of the software into the exploration of ideas situates the computer as a highly agentive entity and guides me to solutions for both the technical and creative problems I face. The idea that a concept can only reach "internal consistency" through this workflow is extremely important in understanding the purpose of working in this way. [DEMO 2.1]({m.preoc}#bricolage) shows a diagram where nodes represent the types of *observations* that I make and the actions I take as a result. Ultimately, these parts of the creative process can lead back into each other, resulting in a formative cycle for developing compositional ideas.
 
 <Bricolage 
-caption='DEMO 1'
+caption='DEMO 2.1'
 />
 
 ## Aesthetics
@@ -187,7 +187,7 @@ This proclivity towards the inclusion and treatment of noise-based sounds stems 
 <YouTube 
 url='https://www.youtube.com/embed/N701JYnjaMs'
 title='Paradise Circus (2011) – Massive Attack vs Burial'
-figure='VIDEO 1'
+figure='VIDEO 2.1'
 id='vid1'
 />
 
@@ -196,7 +196,7 @@ Select moments of [Benjamin Thigpen's](http://benjaminthigpen.net/pages/bio.html
 <YouTube
 url='https://www.youtube.com/embed/K280VzAiZI0'
 title='Malfunction30931 (2010) – Benjamin Thigpen'
-figure="VIDEO 2"
+figure="VIDEO 2.2"
 />
 
 *De Natura Sonorum: Matières Induites* (1974) by Bernard Parmegiani exhibits similar properties to *Malfunction30931*, in that in both works, divisions of the spectrum are occupied by narrow and controlled *streams* of noise. Each layer is perceptually separable from the composite texture while remaining cohesive with that higher-level sound object. This highlights the intricacies of those noise elements and the interplay between them. In composing [Reconstruction Error]({m.re}), some of these types of behaviours were constructed by performing [signal decompositions]({m.ca}#signal-decomposition) and using that to construct "streams" within a larger sound-object. 
@@ -204,7 +204,7 @@ figure="VIDEO 2"
 <YouTube
 url="https://www.youtube.com/embed/Taob2fEbwwY?start=49"
 title='De Natura Sonorum: Matieres Induites (1974) – Bernard Parmegiani'
-figure="VIDEO 3"
+figure="VIDEO 2.3"
 />
 
 #### Microsound
@@ -228,13 +228,13 @@ The basis for formal thinking in my work is underpinned by a hierarchical approa
 
 This model reflects the types of divisions I make formally with sound materials, which has wider implications on the technical treatment of different time scales. Applying this model to my workflow, the *elemental* components are audio samples including sound file samples and digital samples output from sound synthesis or stored in computer memory. At the next hierarchical level, Tenney describes the clang as both a perceptual "aural gestalt" and as presenting unique structural changes in respect to both tonality and rhythm. Arranging sounds by their pitch function is rarely a part of my engagement with compositional material and only surfaces as a by-product of a sound's textural characteristics. However, rhythm is an important feature to me, and can determine the perception of groups of elements. As such, the perceptual characteristics of a clang are a factor of the rhythmic homogeneity of juxtaposed sound elements and the textural similarity between those elements. A clang could also be described as a *gesture*, which alone would carry little high-level formal information but could be the basis from which a larger musical behaviour or *sequence* can be established. Collections of gestures into *sequences* facilitate high-level percepts such as shape and qualities of development, transition and directionality. 
 
-An example of this can be seen from 3:31 to 4:04 in ["segmenoittet"]({m.re}#segmnoittet), a piece that is part of the [Reconstruction Error]({m.re}) project. This passage can be heard in [AUDIO 2]({m.preoc}#aud2). Each of the *gestures* in this passage is composed of *elemental* short impulses, concatenated into small densely packed groups of material. The distinction between these groups is exposed at the start of this passage, in which they are interspersed sporadically. Some of these gestural groups are longer than each other, and as this musical behaviour continues, increasingly lengthy concatenations interject. They eventually fuse with the shorter gestures and blend into each other, forming an unbroken *sequence*. This gives rise to a higher-level formal structure, characterised by the convergence of short impulses in distinct groups toward a continual stream of impulses that belong to a unified coherent texture. The piece is further structured around several of these types of *sequence* events.
+An example of this can be seen from 3:31 to 4:04 in ["segmenoittet"]({m.re}#segmnoittet), a piece that is part of the [Reconstruction Error]({m.re}) project. This passage can be heard in [AUDIO 2.2]({m.preoc}#aud2). Each of the *gestures* in this passage is composed of *elemental* short impulses, concatenated into small densely packed groups of material. The distinction between these groups is exposed at the start of this passage, in which they are interspersed sporadically. Some of these gestural groups are longer than each other, and as this musical behaviour continues, increasingly lengthy concatenations interject. They eventually fuse with the shorter gestures and blend into each other, forming an unbroken *sequence*. This gives rise to a higher-level formal structure, characterised by the convergence of short impulses in distinct groups toward a continual stream of impulses that belong to a unified coherent texture. The piece is further structured around several of these types of *sequence* events.
 
 <Waveform 
 file='/preoccupations/form_example_1.mp3'
 peaks='/preoccupations/form_example_1.dat'
 title='3:31 to 4:04 in "segmenoittet" from Reconstruction Error'
-caption='AUDIO 2'
+caption='AUDIO 2.2'
 id='aud2'
 segments={formSegs}
 points={formPoints}
@@ -284,7 +284,7 @@ For example, the [first gesture (see AUDIO 1)]({m.preoc}#aud1) of [Stitch/Strata
 
 <Waveform
 title = "Opening gesture of Stitch/Strata"
-caption='AUDIO 1'
+caption='AUDIO 2.1'
 file="/preoccupations/ss-intro-gesture.mp3"
 peaks="/preoccupations/ss-intro-gesture.dat"
 id="aud1"
