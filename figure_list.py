@@ -17,6 +17,26 @@ lookup = [
     'reacoma',
 ]
 
+route_link = {
+    'introduction' : '/introduction',
+    'preoccupations' : '/preoccupations',
+    'content-awareness' : '/content-awareness',
+    'stitch-strata' : '/projects/stitch-strata',
+    'annealing-strategies' : '/projects/annealing-strategies',
+    'refracted-touch' : '/projects/refracted-touch',
+    'reconstruction-error' : '/projects/reconstruction-error',
+    'interferences' : '/projects/interferences',
+    'mosh' : '/tech/mosh',
+    'ftis' : '/tech/ftis',
+    'reacoma' : '/tech/reacoma'
+}
+
+def clean_url(url):
+    url = url.replace('id=', '')
+    url = url.replace("'", '')
+    url = url.replace('"', '')
+    return url
+
 data = {}
 routes = [x for x in Path("src/routes").rglob('*.svx')]
 sections = {
@@ -29,6 +49,11 @@ list_of_figures = {"data" : []}
 for section in lookup:
     with open(sections[section], 'r') as f:
         content = f.readlines()
+
+        title = ''
+        caption = ''
+        figure = ''
+        url = ''
 
         # DEMO
         tag_open = False
@@ -47,6 +72,7 @@ for section in lookup:
             'Sage', 
             'Z12'
         ]
+
         for line in content:
             line = line.lstrip().rstrip()
             for demo in demos:
@@ -56,14 +82,18 @@ for section in lookup:
                     title = line
                 if tag_open == True and 'caption' in line:
                     caption = line
+                if tag_open and line[:2] == 'id':
+                    url = line
                 if '/>' in line and tag_open == True:
                     tag_open = False
+                    url = clean_url(url)
+                    url = f'{route_link[section]}#{url}'
                     title = title.replace('title=', '')
                     title = title[1:-1]
                     caption = caption.replace('caption=', '')
                     caption = caption[1:-1]
                     list_of_figures["data"].append(
-                        [caption, title]
+                        [caption, title, url]
                     )
 
         # AUDIO
@@ -80,14 +110,18 @@ for section in lookup:
                 figure = line
             if tag_open == True and 'title' in line:
                 title = line
+            if tag_open and line[:2] == 'id':
+                url = line
             if '/>' in line and tag_open == True:
                 tag_open = False
+                url = clean_url(url)
+                url = f'{route_link[section]}#{url}'
                 title = title.replace('title=', '')
                 title = title[1:-1]
                 figure = figure.replace('figure=', '')
                 figure = figure[1:-1]
                 list_of_figures["data"].append(
-                    [figure, title]
+                    [figure, title, url]
                 )
 
         ## Waveform
@@ -99,18 +133,22 @@ for section in lookup:
             line = line.lstrip().rstrip()
             if '<Waveform' in line:
                 tag_open = True
-            if tag_open == True and 'title' in line:
+            if tag_open and 'title' in line:
                 title = line
-            if tag_open == True and 'caption' in line:
+            if tag_open and 'caption' in line:
                 caption = line
-            if '/>' in line and tag_open == True:
+            if tag_open and line[:2] == 'id':
+                url = line
+            if '/>' in line and tag_open:
                 tag_open = False
+                url = clean_url(url)
+                url = f'{route_link[section]}#{url}'
                 title = title.replace('title=', '')
                 title = title[1:-1]
                 caption = caption.replace('caption=', '')
                 caption = caption[1:-1]
                 list_of_figures["data"].append(
-                    [caption, title]
+                    [caption, title, url]
                 )
 
         # VideoMedia2
@@ -126,14 +164,18 @@ for section in lookup:
                 figure = line
             if tag_open == True and 'caption' in line:
                 caption = line
+            if tag_open and line[:2] == 'id':
+                url = line
             if '/>' in line and tag_open == True:
                 tag_open = False
+                url = clean_url(url)
+                url = f'{route_link[section]}#{url}'
                 figure = figure.replace('figure=', '')
                 figure = figure[1:-1]
                 caption = caption.replace('caption=', '')
                 caption = caption[1:-1]
                 list_of_figures["data"].append(
-                    [figure, caption]
+                    [figure, caption, url]
                 )
 
         # IMAGE
@@ -149,32 +191,40 @@ for section in lookup:
                 figure = line
             if tag_open == True and 'caption' in line:
                 caption = line
+            if tag_open and line[:2] == 'id':
+                url = line
             if '/>' in line and tag_open == True:
                 tag_open = False
+                url = clean_url(url)
+                url = f'{route_link[section]}#{url}'
                 figure = figure.replace('figure=', '')
                 figure = figure[1:-1]
                 caption = caption.replace('caption=', '')
                 caption = caption[1:-1]
                 list_of_figures["data"].append(
-                    [figure, caption]
+                    [figure, caption, url]
                 )
         # CODE
         for line in content:
             line = line.lstrip().rstrip()
             if '<Code2' in line:
                 tag_open = True
-            if tag_open == True and 'figure' in line:
+            if tag_open and line[:6] == 'figure':
                 figure = line
-            if tag_open == True and 'caption' in line:
+            if tag_open and line[:6] == 'caption':
                 caption = line
+            if tag_open and line[:2] == 'id':
+                url = line
             if '>' in line and tag_open == True:
                 tag_open = False
+                url = clean_url(url)
+                url = f'{route_link[section]}#{url}'
                 figure = figure.replace('figure=', '')
                 figure = figure[1:-1]
                 caption = caption.replace('caption=', '')
                 caption = caption[1:-1]
                 list_of_figures["data"].append(
-                    [figure, caption]
+                    [figure, caption, url]
                 )
 
 list_of_figures['data'].sort(
