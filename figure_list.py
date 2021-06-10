@@ -56,7 +56,13 @@ sections = {
     for x in routes if x.stem in lookup
 }
 
-list_of_figures = {"data" : []}
+list_of_figures = {
+    "audio" : [],
+    "code" : [],
+    "demo" : [],
+    "image" : [],
+    "video" : [],
+}
 
 for section in lookup:
     with open(sections[section], 'r') as f:
@@ -104,7 +110,7 @@ for section in lookup:
                     title = title[1:-1]
                     caption = caption.replace('caption=', '')
                     caption = caption[1:-1]
-                    list_of_figures["data"].append(
+                    list_of_figures["demo"].append(
                         [caption, title, url]
                     )
 
@@ -133,7 +139,7 @@ for section in lookup:
                 title = title[1:-1]
                 figure = figure.replace('figure=', '')
                 figure = figure[1:-1]
-                list_of_figures["data"].append(
+                list_of_figures["audio"].append(
                     [figure, title, url]
                 )
 
@@ -160,7 +166,7 @@ for section in lookup:
                 title = title[1:-1]
                 caption = caption.replace('caption=', '')
                 caption = caption[1:-1]
-                list_of_figures["data"].append(
+                list_of_figures["audio"].append(
                     [caption, title, url]
                 )
 
@@ -187,7 +193,7 @@ for section in lookup:
                 figure = figure[1:-1]
                 caption = caption.replace('caption=', '')
                 caption = caption[1:-1]
-                list_of_figures["data"].append(
+                list_of_figures["video"].append(
                     [figure, caption, url]
                 )
 
@@ -217,7 +223,7 @@ for section in lookup:
 
                 caption = special_checker(figure, caption)
 
-                list_of_figures["data"].append(
+                list_of_figures["image"].append(
                     [figure, caption, url]
                 )
         # CODE
@@ -239,19 +245,20 @@ for section in lookup:
                 figure = figure[1:-1]
                 caption = caption.replace('caption=', '')
                 caption = caption[1:-1]
-                list_of_figures["data"].append(
+                list_of_figures["code"].append(
                     [figure, caption, url]
                 )
 
-list_of_figures['data'].sort(
-    key = lambda x:
-    int(
+sorter = lambda x:int(
     x[0]
     .split(' ')
     [1]
     .replace('.', '')
-    )
 )
+
+for item in list_of_figures.values():
+    item.sort(key=sorter)
+
 
 with open("static/list-of-interactive-elements.json", "w+") as f:
     json.dump(list_of_figures, f)

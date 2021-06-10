@@ -5,15 +5,18 @@
 
 # List of Interactive Elements
 
-This list contains a reference to the interactive elements of this thesis. It does *not* include elements that reference YouTube, Vimeo or would otherwise be considered contextual.
+This list contains a reference to the interactive elements of this thesis. It does *not* include elements that link to external content such as YouTube or Vimeo.
 
 ---
 
-{#each figures.data as [figure, title, url]}
+{#each Object.keys(figures) as type}
+## List of {type[0].toUpperCase() + type.slice(1)} elements
+{#each figures[type] as [figure, title, url]}
 <div class='container'>
     <a class='figure' href={url}>{figure}</a>
     <div class='title'>{title}</div>
 </div>
+{/each}
 {/each}
 
 <NextSection 
