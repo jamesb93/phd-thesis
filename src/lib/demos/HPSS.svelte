@@ -5,6 +5,8 @@
     import PlayButton from "$lib/components/PlayButton.svelte";
     import Container from '$lib/components/Container.svelte';
 
+    export let caption = 'DEMO 1'
+
     let harmReady = false; 
     let percReady = false;
     let harmPlayer; 
@@ -54,7 +56,7 @@
             <Slider showValue={false} min="0" max="100" showMin={false} showMax={false} inFunc={updateVolume} bind:value={balance} />
             <span class="text-span">harmonic</span>
         </div>
-        <p class="caption">DEMO 1: Press the play button and move the slider to change the balance between harmonic and percussive.</p>
+        <p class="caption">{caption}: Press the play button and move the slider to change the balance between harmonic and percussive.</p>
     </div>
     {:else}
     loading...

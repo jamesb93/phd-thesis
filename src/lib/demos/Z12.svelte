@@ -4,6 +4,8 @@
     import Button from '$lib/components/Button.svelte';
     import { browser } from '$app/env';
     export let id="demo2";
+    export let caption='DEMO 2'
+
     let ready = false;
     let sampler, loop, current;
     if (browser) {
@@ -71,7 +73,7 @@
             Change the probability for each sound playing by modifying the slider values. Observe how changing the probabilities alters the patterning of the individual samples.
         </div>
         <div class='cap'>
-            DEMO 2
+            {caption}
         </div>
     </div>
 
