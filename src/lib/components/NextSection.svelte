@@ -3,7 +3,7 @@
     export let link;
 </script>
 <button class="btn" type="button">
-    <a href={link}>Next — {next}</a>
+    <a href={link}>Next: {next}</a>
 </button>
 
 <style>
