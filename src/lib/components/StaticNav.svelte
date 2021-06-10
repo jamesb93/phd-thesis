@@ -1,6 +1,5 @@
 <script>
     import {metadata as m} from "../../routes/directory.svx"
-	import Button from '$lib/components/Button.svelte';
 	import { slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { page } from "$app/stores";
@@ -16,7 +15,6 @@
 </script>
 
 <nav class="container" transition:slide="{{ duration: 300, easing: quintOut }}">
-	<!-- <Button clickHandler={handleButton} text="toggle justification"/> -->
 	<ul>
 		<li><a on:click={handleClick} class="link section" class:selected={$page.path === "/"}	href='/'>i. Home</a></li>
 		<li><a on:click={handleClick} class="link section" class:selected={$page.path === "/howto"}	href='/howto'>ii. How To</a></li>
@@ -43,7 +41,7 @@
 
 		<li><a on:click={handleClick} class="link section" class:selected={$page.path === m.conc} href={m.conc}>6. Conclusion</a></li>
 		
-		<li><a on:click={handleClick} class="link section" class:selected={$page.path === m.ref} href={m.ref}>References, Links and Figures</a></li>
+		<li><a on:click={handleClick} class="link section" class:selected={$page.path === m.ref} href={m.ref}>References</a></li>
 		<li><a on:click={handleClick} class="link section" class:selected={$page.path === "/copyright"}	href='/copyright'>Copyright</a></li>
 	</ul>
 </nav>
