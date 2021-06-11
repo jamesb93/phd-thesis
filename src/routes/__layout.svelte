@@ -11,10 +11,10 @@
 	$: navshow = (w >= minWidth);
 	
 	const pagesWithoutNav = [
-		'/projects', 
-		'/tech', 
-		'/acknowledgements', 
-		'/copyright'
+		// '/projects', 
+		// '/tech', 
+		// '/acknowledgements', 
+		// '/copyright'
 	];
 	
 	function clickHandle(){
