@@ -41,5 +41,5 @@ for x in routes.keys():
         content = f.read()
         main_string += content
 
-with open('turnitin-version.txt', 'w') as f:
+with open('/Users/james/Cloud/PhD/turnitin-version.txt', 'w') as f:
     f.write(main_string)
