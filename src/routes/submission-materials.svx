@@ -13,11 +13,7 @@ All pieces are presented in stereo audio format.
 
 *Duration:* 7:23
 
-*Path:* /Projects/StitchStrata/
-
-*Audio:* /Projects/StitchStrata/Audio/
-
-*Code:* /Projects/StitchStrata/Code/
+*Path (Audio Only):* /Projects/StitchStrata/
 
 ### Annealing Strategies
 
@@ -25,11 +21,7 @@ All pieces are presented in stereo audio format.
 
 *Duration:* 3:33
 
-*Path:* /Projects/Annealing Strategies/
-
-*Audio:* /Projects/Annealing Strategies/Audio/
-
-*Path:* /Projects/Annealing Strategies/Code/
+*Path (Audio Only):* /Projects/Annealing Strategies/
 
 ### Refracted Touch
 
@@ -49,11 +41,11 @@ All pieces are presented in stereo audio format.
 
 *Duration:* 24:38
 
-*Path:* /Projects/StitchStrata/
+*Path:* /Projects/Reconstruction Error/
 
 *Audio:* /Projects/Reconstruction Error/Audio/
 
-*Code:* /Projects/Reconstruction Error/Code/
+*Supporting Code:* /Projects/Reconstruction Error/Supporting Code/
 
 
 ### Interferences
@@ -66,7 +58,7 @@ All pieces are presented in stereo audio format.
 
 *Audio:* /Projects/Interferences/Audio/
 
-*Code:* /Projects/Interferences/Code/
+*Supporting Code:* /Projects/Interferences/Supporting Code/
 
 ## Software
 
