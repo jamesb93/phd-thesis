@@ -1,6 +1,6 @@
 @font-face {
-	font-family: SourceCode;
-	src: url('/static/fonts/SourceCodePro-Regular.ttf')
+	font-family: Fira Code;
+	src: url('/static/fonts/FiraCode-Regular.ttf');
 }
 
 :root {
@@ -14,7 +14,8 @@ code {
 	box-decoration-break: clone;
 	background: #eff9ff;
 	word-wrap: break-word;
-	font-family: SourceCode, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+	/* font-family: SourceCode, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace; */
+	font-family: Fira Code, monospace;
 }
 
 hr {
