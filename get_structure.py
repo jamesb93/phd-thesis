@@ -31,6 +31,7 @@ route_lookup = {
 }
 
 hierarchy = {
+    '' : '',
     'howto' : '',
     'submission-materials': '',
     'list-of-interactive-elements' : '',
