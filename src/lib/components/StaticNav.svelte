@@ -12,7 +12,7 @@
 
 <nav class="container" transition:slide="{{ duration: 300, easing: quintOut }}">
 	<ul>
-		<li><a on:click={handleClick} class="link section" class:selected={$page.path === "/"}	href='/'>i. Home</a></li>
+		<li><a on:click={handleClick} class="link section" class:selected={$page.path === "/"}	href='/'>i. Abstract</a></li>
 		<li><a on:click={handleClick} class="link section" class:selected={$page.path === "/howto"}	href='/howto'>ii. How To</a></li>
 		<li><a on:click={handleClick} class="link section" class:selected={$page.path === "/acknowledgements"} href='/acknowledgements'>iii. Acknowledgements</a></li>
 		
