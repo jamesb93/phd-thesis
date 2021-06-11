@@ -32,4 +32,4 @@ if __name__ == "__main__":
                 progress.update(task, advance=1)
 
     with open("static/durations.json", "w+") as f:
-        json.dump(dict(d), f, indent=4)
+        json.dump(dict(d), f)

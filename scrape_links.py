@@ -85,6 +85,6 @@ api["links"] = link_container
 api["videos"] = video_container
 
 with open("static/links.json", "w+") as f:
-    json.dump(api, f, indent=4)
+    json.dump(api, f)
 
             
