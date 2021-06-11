@@ -279,6 +279,10 @@
         {
             "name": "Fasciani, S. (2016). TSAM: A tool for analyzing, modeling, and mapping the timbre of sound synthesizers.",
             "url" : "https://ro.uow.edu.au/dubaipapers/752"
+        },
+        {
+            "name" : "Hohman, F., Conlen, M., Heer, J., & Chau, D. H. P. (2020). Communicating with interactive articles. *Distill, 5*(9). https://doi.org/10.23915/distill.00028",
+            "url" : "https://doi.org/10.23915/distill.00028"
         }
     ]
 }
