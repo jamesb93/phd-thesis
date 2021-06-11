@@ -78,8 +78,8 @@
 	}
 	.content {
 		height: 100%;
-		text-align: justify;
-		text-justify: inter-word;
+		/* text-align: justify; */
+		/* text-justify: inter-word; */
 	}
 	.dim {
 		opacity: 0.25;
