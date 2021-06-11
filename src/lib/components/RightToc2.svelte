@@ -9,6 +9,8 @@
     let thisPage = null;
     let tempIntersect;
     $: thisPage = contents[$page.path];
+
+    console.log($page.path)
     
     function handleIntersect(entries, observer) {
         let lowest = Infinity;
@@ -69,16 +71,18 @@
 
 <div class='container'>
     {#if ready === true}
-        {#each thisPage as section}
-                <a 
-                class="link depth-{section.indent}" 
-                href="{$page.path}#{section.url}"
-                class:shown={visibility === section.url}
-                on:click={ visibility = section.url } 
-                > 
-                    { clipLinks(section.heading, 40) }
-                </a>
-        {/each}
+        {#if thisPage}
+            {#each thisPage as section}
+                    <a 
+                    class="link depth-{section.indent}" 
+                    href="{$page.path}#{section.url}"
+                    class:shown={visibility === section.url}
+                    on:click={ visibility = section.url } 
+                    > 
+                        { clipLinks(section.heading, 40) }
+                    </a>
+            {/each}
+        {/if}
     {/if}
 </div>
 
