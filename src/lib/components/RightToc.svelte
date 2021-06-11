@@ -93,13 +93,13 @@
 <div class='container'>
         {#if ready === true}
             {#each contents as section}
-                        <a 
-                        class="link depth-{section.depth}" 
-                        href="{$page.path}#{section.url}"
-                        class:shown={visibility === section.url} 
-                        > 
-                            { clipLinks(section.heading, 40) }
-                        </a>
+                <a 
+                class="link depth-{section.depth}" 
+                href="{$page.path}#{section.url}"
+                class:shown={visibility === section.url} 
+                > 
+                    { clipLinks(section.heading, 40) }
+                </a>
             {/each}
         {/if}
     </div>
@@ -111,6 +111,7 @@
     .container {
         display: flex;
         flex-direction: column;
+        text-align: center;
         z-index: 99;
 		height: 100%;
         position: fixed;
