@@ -45,7 +45,7 @@ hierarchy = {
     'mosh' : '5.1',
     'ftis' : '5.2',
     'reacoma' : '5.3',
-    'conclusion' : '',
+    'conclusion' : '6.',
     'copyright' : '',
     'references' : ''
 }
