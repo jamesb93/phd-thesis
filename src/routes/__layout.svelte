@@ -68,10 +68,6 @@
 
 
 <style>
-	.justify {
-		text-align: justify;
-		text-justify: inter-word;
-	}
 	.wrapper {
 		display: grid;
 		grid-template-columns: auto min(80ch, 100%) auto;
@@ -80,10 +76,12 @@
 		margin: 0 auto;
 	}
 	.wrapper > article {
-		grid-column: 2;
+		grid-column: 2
 	}
 	.content {
 		height: 100%;
+		text-align: justify;
+		text-justify: inter-word;
 	}
 	.dim {
 		opacity: 0.25;
