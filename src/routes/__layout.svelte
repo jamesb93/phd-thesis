@@ -11,7 +11,6 @@
 	$: navshow = (w >= minWidth);
 	
 	const pagesWithoutNav = [
-		'/', 
 		'/projects', 
 		'/tech', 
 		'/acknowledgements', 
