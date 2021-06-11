@@ -342,9 +342,10 @@ link={m.proj}
 </script>
 
 <style>
-    h1 {counter-reset: h2}
+	h1 {counter-reset: h2}
     h2 {counter-reset: h3}
     h3 {counter-reset: h4}
+    h4 {counter-reset: h5}
 
     h1:before {content: "3." " "}
 
@@ -356,8 +357,12 @@ link={m.proj}
         content: "3." counter(h2, decimal) "." counter(h3, decimal) " ";
         counter-increment: h3;
     }
+    h4:before {
+        content: "3." counter(h2, decimal) "." counter(h3, decimal) "." counter(h4, decimal) " ";
+        counter-increment: h4;
+    }
 
-    h2.nocount:before, h3.nocount:before {
+    h2.nocount:before, h3.nocount:before, h4.nocount:before {
         content : "";
         counter-increment: none;
     }

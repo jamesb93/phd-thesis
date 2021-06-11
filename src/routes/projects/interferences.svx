@@ -383,23 +383,24 @@ link={m.ti}
 />
 
 <style>
+    :root {--idx: "4.5"}
 	h1 {counter-reset: h2}
     h2 {counter-reset: h3}
     h3 {counter-reset: h4}
     h4 {counter-reset: h5}
 
-    h1:before {content: "4.5" " "}
+    h1:before {content: var(--idx) " "}
 
     h2:before {
-        content: "4.5." counter(h2, decimal) " ";
+        content: var(--idx)"." counter(h2, decimal) " ";
         counter-increment: h2;
     }
     h3:before {
-        content: "4.5." counter(h2, decimal) "." counter(h3, decimal) " ";
+        content: var(--idx)"." counter(h2, decimal) "." counter(h3, decimal) " ";
         counter-increment: h3;
     }
     h4:before {
-        content: "4.5." counter(h2, decimal) "." counter(h3, decimal) "." counter(h4, decimal) " ";
+        content: var(--idx)"." counter(h2, decimal) "." counter(h3, decimal) "." counter(h4, decimal) " ";
         counter-increment: h4;
     }
 
