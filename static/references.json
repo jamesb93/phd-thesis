@@ -121,15 +121,15 @@
             "url" : "https://doi.org/10.2307/1513119"
         },
         {
-            "name" : "Wang, W. (Ed.). (2010). *Machine audition: Principles, algorithms and systems*. IGI Global. http://doi:10.4018/978-1-61520-919-4",
-            "url" : "http://doi:10.4018/978-1-61520-919-4"
+            "name" : "Wang, W. (Ed.). (2010). *Machine audition: Principles, algorithms and systems*. IGI Global. https://doi.org/10.4018/978-1-61520-919-4",
+            "url" : "https://doi.org/10.4018/978-1-61520-919-4"
         },
         {
             "name" : "Bowers, J., Richards, J., Shaw, T., Frize, J., Freeth, B., Topley, S., ... & Edmondes, W. (2016). One knob to rule them all: Reductionist interfaces for expansionist research. In *NIME* (pp. 433-438).",
             "url" : "https://www.nime.org/proceedings/2016/nime2016_paper0085.pdf"
         },
         {
-            "name" : "Malt, M., & Jourdan, E. (2008, July). Zsa. Descriptors: a library for real-time descriptors analysis. In *5th Sound and Music Computing Conference*. (pp. 134-137).",
+            "name" : "Malt, M., & Jourdan, E. (2008, July). Zsa. Descriptors: a library for real-time descriptors analysis. In *5th Sound and Music Computing Conference* (pp. 134-137).",
             "url" : "https://hal.archives-ouvertes.fr/hal-01580326/file/M_2008_Malt.pdf"
         },
         {
@@ -283,6 +283,10 @@
         {
             "name" : "Hohman, F., Conlen, M., Heer, J., & Chau, D. H. P. (2020). Communicating with interactive articles. *Distill, 5*(9). https://doi.org/10.23915/distill.00028",
             "url" : "https://doi.org/10.23915/distill.00028"
+        },
+        {
+            "name" : "Fitzgerald, D. (2010, September). Harmonic/percussive separation using median filtering. In *Proceedings of the International Conference on Digital Audio Effects (DAFx)*",
+            "url" : "https://www.researchgate.net/publication/254583990_HarmonicPercussive_Separation_using_Median_Filtering"
         }
     ]
 }
