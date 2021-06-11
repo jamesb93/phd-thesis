@@ -39,6 +39,10 @@ for x in routes.rglob("*.svx"):
         for match in re.findall(markup_regex, content):
             name = match[0]
             url = match[1]
+            if 'wikipedia' in url:
+                if '(' in url:
+                    url = url + ')'
+                    print(url)
             exists = False
             for item in link_container:
                 if item["url"] == url:
