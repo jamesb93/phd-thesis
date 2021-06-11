@@ -64,19 +64,19 @@ All pieces are presented in stereo audio format.
 
 ### mosh
 
-*Path*: /Software/mosh
+*Path*: /Software/mosh/
 
 *GitHub*: https://www.github.com/jamesb93/mosh
 
 ### Finding Things In Stuff (FTIS)
 
-*Path*: /Software/FTIS
+*Path*: /Software/FTIS/
 
 *GitHub*: https://www.github.com/jamesb93/ftis
 
 ### ReaCoMa
 
-*Path*: /Software/ReaCoMa
+*Path*: /Software/ReaCoMa/
 
 *GitHub*: https://www.github.com/jamesb93/reacoma
 
