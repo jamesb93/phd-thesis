@@ -15,9 +15,9 @@
 
 ## Rationale
 
-This thesis has been created as an interactive web page, containing elements that allow one to directly engage with audio, video and other forms of media while reading the text. I reasoned that this format would be the optimal way to discuss my work, and to unite the various aspects of my practice within a single document. This includes code, interactive "demos" of technological and compositional processes, as well as traditional audio and video playback.
+This thesis has been created as an interactive web page, containing elements that allow one to directly engage with audio, video and other forms of media while reading the text. I reasoned that this format would be the optimal way to discuss my work, and to unite the various aspects of my practice within a single document. This includes code, interactive "demos" of technological and compositional processes, as well as traditional audio and video playback. Hohman et al. (2020) served as a significant source of inspiration in my vision for structuring and implementing this format.
 
-I hope that in addition to the contribution to knowledge that this thesis makes, it might serve as a model for others who desire to make their own interactive documents and presentations of research.
+I hope that in addition to the contribution to knowledge that this thesis makes, it might serve as a model for others who desire to make their own interactive documents and presentations of research. 
 
 The source code for this thesis is hosted at GitHub: https://github.com/jamesb93/harnessing
 
@@ -27,7 +27,7 @@ This thesis supports a number of web browsers. It has been tested on:
 + Safari +14.1
 + Chromium Browser +90 (and thus should support Chrome, Edge, Vivaldi, Brave etc...)
 
-If for any reason something is not working or fails to load, please first try viewing the thesis in another browser.
+If for any reason something is not working or fails to load, please first try viewing the thesis in another type of browser.
 
 ## Navigation
 This thesis is divided into six sections. To navigate to sections of this thesis, use the left hand navigation panel. The right hand navigation panel allows one to move between parts of a single section more conveniently. One will notice that if window for this thesis is too small in the browser, these two navigation panels will be hidden to preserve the presentation of the text. In this situation, one can unfold the navigation on the left side by clicking the "hamburger" menu in the top left corner.
