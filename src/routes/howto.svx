@@ -98,7 +98,7 @@ print(thing_i_do, ' ', qualifier)
 
 </Code2>
 
-In this text, code is referred to inline using this widget, and if it is a part of the software outputs a relative path from the root of the submitted materials will be provided. One can click the link to directly observe the code hosted on GitHub or read the path to find it in a local copy. For example, [/Projects/Reconstruction Error/Code/python_scripts/scraping/scrape_files.py](https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/scraping/scrape_files.py) refers to the script named `scrape_files.py`, which can be found in the [[4.4 Reconstruction Error]]({m.re}) directory, which is inside the "pieces" top level directory.
+In this text, code is referred to inline using this widget, and if it is a part of the software outputs a relative path from the root of the submitted materials will be provided. One can click the link to directly observe the code hosted on GitHub or read the path to find it in a local copy. For example, [/Projects/Reconstruction Error/Supporting Code/python_scripts/scraping/scrape_files.py](https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/scraping/scrape_files.py) refers to the script named `scrape_files.py`, which can be found in the [[4.4 Reconstruction Error]]({m.re}) directory, which is inside the "pieces" top level directory.
 
 ### Demo
 
