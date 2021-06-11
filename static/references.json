@@ -21,15 +21,15 @@
             "url" : "https://thegardenofcuriosity.untref.edu.ar/img/10_audiostellar/AudioStellar_for_ICMC2020.pdf"
         },
         {
-            "name" : "Vegeborn, V. H. (2020). *LjudMAP: A visualisation tool for exploring audio collections with real-time concatenative synthesis capabilities* [Master's thesis, KTH Royal Institute of Technology]. DiVA. https://www.diva-portal.org/smash/get/diva2:1449586/FULLTEXT01.pdf",   
-            "url" : "https://www.diva-portal.org/smash/get/diva2:1449586/FULLTEXT01.pdf"
+            "name" : "Vegeborn, V. H. (2020). *LjudMAP: A visualisation tool for exploring audio collections with real-time concatenative synthesis capabilities* [Master's thesis, KTH Royal Institute of Technology]. DiVA. http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-277831",   
+            "url" : "http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-277831"
         },
         {
             "name" : "Esling, P., Masuda, N., Bardet, A., & Despres, R. (2019). Universal audio synthesizer control with normalizing flows. *arXiv preprint arXiv:1907.00971.*",
             "url" : "https://arxiv.org/pdf/1907.00971.pdf"
         },
         {
-            "name" : "Fasciani, S. (2016). Interactive computation of timbre spaces for sound synthesis control. In *2nd International Symposium on Sound and Interactivity* (pp. 69-78). ICMA Array. https://ro.uow.edu.au/dubaipapers/751/",
+            "name" : "Fasciani, S. (2016). Interactive computation of timbre spaces for sound synthesis control. In *2nd International Symposium on Sound and Interactivity* (pp. 69-78). ICMA Array.",
             "url" : "https://ro.uow.edu.au/dubaipapers/751/"
         },
         {
@@ -49,7 +49,7 @@
             "url" : "https://www.research.ed.ac.uk/en/publications/gruntcount-bass-clarinet-edition-blurring-the-piece-system-instru"
         },
         {
-            "name" : "Puckette, M. (2015, March). Maximally uniform sequences from stochastic processes. In *Conference of the Society for Electro-Acoustic Music in the United States* (pp. 26-28). http://msp.ucsd.edu/Publications/seamus15.pdf",
+            "name" : "Puckette, M. (2015, March). Maximally uniform sequences from stochastic processes. In *Conference of the Society for Electro-Acoustic Music in the United States* (pp. 26-28).",
             "url" : "http://msp.ucsd.edu/Publications/seamus15.pdf"
         },
         {
@@ -109,7 +109,7 @@
             "url" : "https://arxiv.org/abs/1611.00379"
         },
         {
-            "name" : "Mitchell, T. M. (1997). *Machine learning*. ",
+            "name" : "Mitchell, T. M. (1997). *Machine learning*, McGraw Hill. http://www.cs.cmu.edu/~tom/mlbook.html",
             "url" : "http://www.cs.cmu.edu/~tom/mlbook.html"
         },
         {
@@ -121,8 +121,8 @@
             "url" : "https://doi.org/10.2307/1513119"
         },
         {
-            "name" : "Wang, W. (Ed.). (2010). *Machine audition: Principles, algorithms and systems*. IGI Global.",
-            "url" : "https://dl.acm.org/doi/book/10.5555/1892152"
+            "name" : "Wang, W. (Ed.). (2010). *Machine audition: Principles, algorithms and systems*. IGI Global. http://doi:10.4018/978-1-61520-919-4",
+            "url" : "http://doi:10.4018/978-1-61520-919-4"
         },
         {
             "name" : "Bowers, J., Richards, J., Shaw, T., Frize, J., Freeth, B., Topley, S., ... & Edmondes, W. (2016). One knob to rule them all: Reductionist interfaces for expansionist research. In *NIME* (pp. 433-438).",
@@ -133,7 +133,8 @@
             "url" : "https://hal.archives-ouvertes.fr/hal-01580326/file/M_2008_Malt.pdf"
         },
         {
-            "name" : "Peeters, G. (2004). A large set of audio features for sound description (similarity and classification) in the CUIDADO project. *CUIDADO Ist Project Report, 54*(0), 1-25."
+            "name" : "Peeters, G. (2004). A large set of audio features for sound description (similarity and classification) in the CUIDADO project. *CUIDADO Ist Project Report, 54*(0), 1-25.",
+            "url" : "http://recherche.ircam.fr/anasyn/peeters/ARTICLES/Peeters_2003_cuidadoaudiofeatures.pdf"
         },
         {
             "name" : "Tanaka, A. (2010). Mapping out instruments, affordances, and mobiles. In *NIME* (pp. 88-93).",
@@ -273,7 +274,7 @@
         },
         {
             "name" : "Michalakos, C. (2012). The augmented drum kit: An intuitive approach to live electronic percussion performance. In *ICMC 2012: International Computer Music Conference* (pp. 257-260). Michigan Publishing.",
-            "url" : "https://rke.abertay.ac.uk/ws/files/15874958/Michalakos_Augmented_drum_kit_Published_2012.pdf"
+            "url" : "http://hdl.handle.net/2027/spo.bbp2372.2012.046"
         },
         {
             "name": "Fasciani, S. (2016). TSAM: A tool for analyzing, modeling, and mapping the timbre of sound synthesizers.",
