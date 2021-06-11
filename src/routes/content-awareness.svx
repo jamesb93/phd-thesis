@@ -279,7 +279,7 @@ Interpolating between these keyframes blends the properties of two known paramet
 </VideoMedia>
 
 #### S.709 (1994) — Iannis Xenakis
-Another *semi-supervised* approach can be found in the compositional method for *[S.709](https://www.iannis-xenakis.org/xen/works/work_135.html)* (1994) by Iannis Xenakis. 
+Another *semi-supervised* approach can be found in the compositional method for *[S.709](https://www.iannis-xenakis.org/s-709/)* (1994) by Iannis Xenakis. 
 
 <YouTube 
 url="https://www.youtube.com/embed/Zmi2EVb7kQU"
