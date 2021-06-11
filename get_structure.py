@@ -31,9 +31,9 @@ route_lookup = {
 }
 
 hierarchy = {
-    'howto' : 'ii',
-    'submission-materials': 'iv',
-    'list-of-interactive-elements' : 'v',
+    'howto' : '',
+    'submission-materials': '',
+    'list-of-interactive-elements' : '',
     'introduction' : '1',
     'preoccupations' : '2',
     'content-awareness' : '3',
@@ -76,20 +76,22 @@ for page in svx:
                 print(heading, indent)
 
                 calculated_heading = ''
-                
-                c[indent] += 1
-                if indent == 1:
-                    calculated_heading = f'{prefix} {heading}'
-                elif indent == 2:
-                    calculated_heading = f'{prefix}.{c[2]} {heading}'
-                elif indent == 3:
-                    calculated_heading = f'{prefix}.{c[2]}.{c[3]} {heading}'
-                elif indent == 4:
-                    calculated_heading = f'{prefix}.{c[2]}.{c[3]}.{c[4]} {heading}'
-                elif indent == 5:                    
-                    calculated_heading = f'{prefix}.{c[2]}.{c[3]}.{c[4]}.{c[5]} {heading}'
-                for i in range(indent+1, 5):
-                    c[i] = 0
+                if prefix != '':
+                    c[indent] += 1
+                    if indent == 1:
+                        calculated_heading = f'{prefix} {heading}'
+                    elif indent == 2:
+                        calculated_heading = f'{prefix}.{c[2]} {heading}'
+                    elif indent == 3:
+                        calculated_heading = f'{prefix}.{c[2]}.{c[3]} {heading}'
+                    elif indent == 4:
+                        calculated_heading = f'{prefix}.{c[2]}.{c[3]}.{c[4]} {heading}'
+                    elif indent == 5:                    
+                        calculated_heading = f'{prefix}.{c[2]}.{c[3]}.{c[4]}.{c[5]} {heading}'
+                    for i in range(indent+1, 5):
+                        c[i] = 0
+                else :
+                    calculated_heading = heading
 
                 structure[path].append(
                     {
