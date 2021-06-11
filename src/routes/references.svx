@@ -88,6 +88,10 @@
     text-align: left;
 }
 
+.link-container > a {
+    max-width: max-content;
+}
+
 .link-container > .title {
     font-weight: bold;
     font-style: italic;
