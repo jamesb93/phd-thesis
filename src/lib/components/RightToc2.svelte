@@ -53,6 +53,7 @@
     })
 
     afterUpdate(async()=> {
+        ready = false;
         await makeObserver();
     })
 
@@ -84,11 +85,10 @@
 
 
 <style>
-
     .container {
         display: flex;
         flex-direction: column;
-        z-index: 99;
+        /* z-index: 99; */
 		height: 100%;
         position: fixed;
         line-height: 1.8em;
@@ -96,9 +96,7 @@
         padding-top: 13px;
         margin-left: 15px;
         padding-left: 5px;
-        white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
     }
 
     .shown {

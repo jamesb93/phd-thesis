@@ -13,7 +13,6 @@
 	const pagesWithoutNav = [
 		'/', 
 		'/projects', 
-		'/conclusion', 
 		'/tech', 
 		'/acknowledgements', 
 		'/copyright'
