@@ -48,6 +48,7 @@
 	#figure {
 		font-style: italic;
 		min-width: 80px;
+		white-space: nowrap;
 	}
 	
 	#caption {
