@@ -203,11 +203,8 @@ caption='Connecting analysers together with >> operator and building the chain'
 
 ```python
 src = Corpus("~/my-audio-files")
-# Connect together processes using >>
-src >> FluidNoveltySlice(threshold=0.35, feature=1)
-
-# Now add the Corpus 'src' node to our world
-world.build(src)
+src >> FluidNoveltySlice(threshold=0.35, feature=1) # Connect together processes using >>
+world.build(src) # Now add the Corpus 'src' node to our world
 ```
 
 </Code2>
