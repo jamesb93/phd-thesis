@@ -73,16 +73,16 @@
             "url" : "https://doi.org/10.1002/9780470382776.ch1"
         },
         {
-            "name" : "Agostini, A., & Ghisi, D. (2012). Bach: An environment for computer-aided composition in Max. In *ICMC* (pp. 373-378).",
-            "url" : "https://www.andreaagostini.eu/wp-content/uploads/2015/08/bach-an-environment-for-computer-aided-composition-in-max.pdf"
+            "name" : "Agostini, A., & Ghisi, D. (2012). Bach: An environment for computer-aided composition in Max. In *ICMC* (pp. 373-378). http://hdl.handle.net/2027/spo.bbp2372.2012.068",
+            "url" : "http://hdl.handle.net/2027/spo.bbp2372.2012.068"
         },
         {
             "name" : "Ghisi, D. (n.d.). *Bach*. Bach Project. Retrieved April 14, 2021 from https://www.bachproject.net/",
             "url" : "https://www.bachproject.net/"
         },
         {
-            "name" : "Bresson, J., Bouche, D., Carpentier, T., Schwarz, D., & Garcia, J. (2017). Next-generation computer-aided composition environment: A new implementation of OpenMusic. In *ICMC*.",
-            "url" : "https://hal.archives-ouvertes.fr/hal-01567619v2"
+            "name" : "Bresson, J., Bouche, D., Carpentier, T., Schwarz, D., & Garcia, J. (2017). Next-generation computer-aided composition environment: A new implementation of OpenMusic. In *ICMC* (pp. 253-258). http://hdl.handle.net/2027/spo.bbp2372.2017.042 ",
+            "url" : "http://hdl.handle.net/2027/spo.bbp2372.2017.042"
         },
         {
             "name" : "Assayag, G., Rueda, C., Laurson, M., Agon, C., & Delerue, O. (1999). Computer-assisted composition at IRCAM: From PatchWork to OpenMusic. *Computer Music Journal*, 23(3), 59-72.",
@@ -177,7 +177,7 @@
             "url" : "https://doi.org/10.1080/07494468708567060"
         },
         {
-            "name" : "Roads, C. (2012, May). From grains to forms. In *Proceedings of The International Symposium Xenakis. La musique electroacoustique/Xenakis. The electroacoustic music, M. Solomos, Ed., universite Paris* (Vol. 8).",
+            "name" : "Roads, C. (2012, May). From grains to forms. In *Proceedings of The International Symposium Xenakis. La Musique Electroacoustique/Xenakis*.",
             "url" : "https://static1.squarespace.com/static/5ad03308fcf7fd547b82eaf7/t/5b759ff90e2e728f3ada974b/1534435337367/From+grains+to+forms.pdf"
         },
         {
@@ -221,8 +221,8 @@
             "url" : "https://ppig.org/papers/2010-ppig-22nd-mclean/"
         },
         {
-            "name" : "De Campo, A. (2014). Lose control, gain influence-Concepts for Metacontrol. In *ICMC* (pp. 217-222).",
-            "url" : "https://speech.di.uoa.gr/ICMC-SMC-2014/images/VOL_1/0217.pdf"
+            "name" : "De Campo, A. (2014). Lose control, gain influence: Concepts for Metacontrol. In *ICMC* (pp. 217-222). http://hdl.handle.net/2027/spo.bbp2372.2014.034",
+            "url" : "http://hdl.handle.net/2027/spo.bbp2372.2014.034"
         },
         {
             "name" : "Mehri, S., Kumar, K., Gulrajani, I., Kumar, R., Jain, S., Sotelo, J., ... & Bengio, Y. (2016). SampleRNN: An unconditional end-to-end neural audio generation model. *arXiv preprint arXiv:1612.07837.*",
@@ -273,7 +273,7 @@
             "url" : "https://doi.org/10.7717/peerj.2108"
         },
         {
-            "name" : "Michalakos, C. (2012). The augmented drum kit: An intuitive approach to live electronic percussion performance. In *ICMC 2012: International Computer Music Conference* (pp. 257-260). Michigan Publishing.",
+            "name" : "Michalakos, C. (2012). The augmented drum kit: An intuitive approach to live electronic percussion performance. In *ICMC* (pp. 257-260). http://hdl.handle.net/2027/spo.bbp2372.2012.046",
             "url" : "http://hdl.handle.net/2027/spo.bbp2372.2012.046"
         },
         {
