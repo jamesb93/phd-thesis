@@ -1,3 +1,8 @@
+@font-face {
+	font-family: SourceCode;
+	src: url('/static/fonts/SourceCodePro-Regular.ttf')
+}
+
 :root {
 	--blue:#0d47a1;
 	--dark-blue: #2367cd;
@@ -9,6 +14,7 @@ code {
 	box-decoration-break: clone;
 	background: #eff9ff;
 	word-wrap: break-word;
+	font-family: SourceCode, Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 }
 
 hr {
@@ -16,7 +22,7 @@ hr {
 }
 
 html {
-	font-family: "Helvetica Neue", -apple-system, BlinkMacSystemFont, "Fira Sans", "Droid Sans", Arial, sans-serif;
+	font-family: "Helvetica", -apple-system, BlinkMacSystemFont, "Fira Sans", "Droid Sans", Arial, sans-serif;
 	font-size: 15px;
 	line-height: 1.65em;
 	text-rendering: optimizeLegibility;
@@ -78,7 +84,6 @@ a:hover, a:link:hover {
 	font-size: 13px;
 	color: #111b27;
 	background: none;
-	font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 	text-align: left;
 	white-space: pre;
 	word-spacing: normal;
