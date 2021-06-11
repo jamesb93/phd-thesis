@@ -4,8 +4,8 @@
 	import { quintOut } from 'svelte/easing';
 	import { page } from "$app/stores";
 	export let navshow;
-	export let value;
-	function handleClick(){
+	
+	function handleClick() {
 		navshow = false;
 	};
 </script>
