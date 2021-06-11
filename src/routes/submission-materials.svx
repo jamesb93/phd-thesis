@@ -86,9 +86,11 @@ link='/list-of-interactive-elements'
 />
 
 <style>
-
+    h2 {
+        margin-top: 0.5em;
+    }
     h3 {
-        margin-top: 1em;
+        margin-top: 0.5em;
     }
     p {
         margin: 0;
