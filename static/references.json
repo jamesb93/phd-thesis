@@ -1,24 +1,24 @@
 {
     "references" : [
         {
-            "name" : "Bradbury, J. (2017). Biomimicry: Analysis Of A Corpus-Based Interactive Improvisational System. In *In International Computer Music Conference* (pp. 174-178). Shanghai, China.",
+            "name" : "Bradbury, J. (2017). Biomimicry: Analysis of a corpus-based interactive improvisational system. In *In International Computer Music Conference* (pp. 174-178). Michigan Publishing, University of Michigan Library. http://hdl.handle.net/2027/spo.bbp2372.2017.027",
             "url" : "http://hdl.handle.net/2027/spo.bbp2372.2017.027"
         },
         {
-            "name" : "Bradbury, J. (2020). Computer-assisted corpus exploration with UMAP and agglomerative clustering. In *Proceedings of the 1st Joint Conference on AI Music Creativity* (p. 4). Stockholm, Sweden: AIMC. http://doi.org/10.5281/zenodo.4285398",
+            "name" : "Bradbury, J. (2020). Computer-assisted corpus exploration with UMAP and agglomerative clustering. In *Proceedings of the 1st Joint Conference on AI Music Creativity* (p. 4). AIMC. http://doi.org/10.5281/zenodo.4285398",
             "url" : "http://doi.org/10.5281/zenodo.4285398"
         },
         {
-            "name" : "Tremblay, P. A., Green, O., Roma, G., & Harker, A. (2019, March). From collections to corpora: Exploring sounds through fluid decomposition. In *International Computer Music Conference and New York City Electroacoustic Music Festival.*",
+            "name" : "Tremblay, P. A., Green, O., Roma, G., & Harker, A. (2019, March). From collections to corpora: Exploring sounds through fluid decomposition. In *International Computer Music Conference and New York City Electroacoustic Music Festival.* https://pure.hud.ac.uk/ws/files/17022941/towardscorpus_final.pdf",
             "url" : "https://pure.hud.ac.uk/ws/files/17022941/towardscorpus_final.pdf"
         },
         {
-            "name" : "Lefèvre, S., & Vincent, N. (2011). A two level strategy for audio segmentation. *Digital Signal Processing, 21*(2), 270-277.",
-            "url" : "https://hal.archives-ouvertes.fr/hal-00512744/document"
+            "name" : "Lefèvre, S., & Vincent, N. (2011). A two level strategy for audio segmentation. *Digital Signal Processing, 21*(2), 270-277. https://hal.archives-ouvertes.fr/hal-00512744",
+            "url" : "https://hal.archives-ouvertes.fr/hal-00512744"
         },
         {
-            "name" : "Garber, L., y Ciencia, M. A., Ciccola, T., & Amusategui, J. C. (2020). AudioStellar, an open source corpus-based musical instrument for latent sound structure discovery and sonic experimentation.",
-            "url" : "https://www.researchgate.net/profile/Leandro-Garber/publication/347983748_AudioStellar_an_open_source_corpus-based_musical_instrument_for_latent_sound_structure_discovery_and_sonic_experimentation/links/5feb4df892851c13fed35d83/AudioStellar-an-open-source-corpus-based-musical-instrument-for-latent-sound-structure-discovery-and-sonic-experimentation.pdf"
+            "name" : "Garber, L., y Ciencia, M. A., Ciccola, T., & Amusategui, J. C. (2020). AudioStellar, an open source corpus-based musical instrument for latent sound structure discovery and sonic experimentation. https://thegardenofcuriosity.untref.edu.ar/img/10_audiostellar/AudioStellar_for_ICMC2020.pdf",
+            "url" : "https://thegardenofcuriosity.untref.edu.ar/img/10_audiostellar/AudioStellar_for_ICMC2020.pdf"
         },
         {
             "name" : "Vegeborn, V. H. (2020). *LjudMAP: A visualisation tool for exploring audio collections with real-time concatenative synthesis capabilities* [Master's thesis, KTH Royal Institute of Technology]. DiVA. https://www.diva-portal.org/smash/get/diva2:1449586/FULLTEXT01.pdf",   
@@ -29,7 +29,7 @@
             "url" : "https://arxiv.org/pdf/1907.00971.pdf"
         },
         {
-            "name" : "Fasciani, S. (2016). Interactive computation of timbre spaces for sound synthesis control. In *2nd International Symposium on Sound and Interactivity* (pp. 69-78).",
+            "name" : "Fasciani, S. (2016). Interactive computation of timbre spaces for sound synthesis control. In *2nd International Symposium on Sound and Interactivity* (pp. 69-78). ICMA Array. https://ro.uow.edu.au/dubaipapers/751/",
             "url" : "https://ro.uow.edu.au/dubaipapers/751/"
         },
         {
@@ -41,19 +41,19 @@
             "url" : "https://www.nime.org/proceedings/2019/nime2019_paper060.pdf"
         },
         {
-            "name" : "Green, O. (2013). User serviceable parts: Practice, technology, sociality and method in live electronic musicking (Doctoral dissertation, City University London).",
+            "name" : "Green, O. (2013). *User serviceable parts: Practice, technology, sociality and method in live electronic musicking* [Doctoral dissertation, City University London]. City Research Online. https://openaccess.city.ac.uk/id/eprint/2730/",
             "url" : "https://openaccess.city.ac.uk/id/eprint/2730/"
         },
         {
-            "name" : "Parker, M. & Furniss, P., (2014). gruntCount (bass clarinet Edition): blurring the piece, system, instrument distinction.",
-            "url" : "https://www.pure.ed.ac.uk/ws/portalfiles/portal/18599310/furniss.pdf"
+            "name" : "Parker, M. & Furniss, P., (2014). gruntCount (bass clarinet Edition): blurring the piece, system, instrument distinction. https://www.research.ed.ac.uk/en/publications/gruntcount-bass-clarinet-edition-blurring-the-piece-system-instru",
+            "url" : "https://www.research.ed.ac.uk/en/publications/gruntcount-bass-clarinet-edition-blurring-the-piece-system-instru"
         },
         {
-            "name" : "Puckette, M. (2015, March). Maximally uniform sequences from stochastic processes. In *Conference of the Society for Electro-Acoustic Music in the United States* (pp. 26-28).",
+            "name" : "Puckette, M. (2015, March). Maximally uniform sequences from stochastic processes. In *Conference of the Society for Electro-Acoustic Music in the United States* (pp. 26-28). http://msp.ucsd.edu/Publications/seamus15.pdf",
             "url" : "http://msp.ucsd.edu/Publications/seamus15.pdf"
         },
         {
-            "name" : "Harker, A. (2012). Navigating sample-based music: Immediacy and Musical Control in Recent Electronic Works.",
+            "name" : "Harker, A. (2012). Navigating sample-based music: Immediacy and musical control in recent electronic works. In *Symposium \"Les Espaces sonores – Stimmungen, Klanganalysen, spektrale Musiken\". http://eprints.hud.ac.uk/id/eprint/18608/1/AHarker_Navigating_Sample_Based_Music.pdf",
             "url" : "http://eprints.hud.ac.uk/id/eprint/18608/1/AHarker_Navigating_Sample_Based_Music.pdf"
         },
         {
@@ -62,18 +62,18 @@
         },
         {
             "name" : "McInnes, L., Healy, J., & Melville, J. (2018). Umap: Uniform manifold approximation and projection for dimension reduction. *arXiv preprint arXiv:1802.03426*.",
-            "url" : "https://arxiv.org/pdf/1802.03426.pdf?kl=viewed"
+            "url" : "https://arxiv.org/abs/1802.03426"
         },
         {
-            "name" : "Anderberg, M. R. (1973). The broad view of cluster analysis. *Cluster analysis for applications*, 1-9.",
-            "url" : "https://www.sciencedirect.com/book/9780120576500/cluster-analysis-for-applications"
+            "name" : "Anderberg, M. R. (1973). The broad view of cluster analysis. *Cluster analysis for applications*, 1-9. https://doi.org/10.1016/B978-0-12-057650-0.50007-7",
+            "url" : "https://doi.org/10.1016/B978-0-12-057650-0.50007-7"
         },
         {
-            "name" : "Xu, R., & Wunsch, D. (2008). *Clustering* (Vol. 10). John Wiley & Sons.",
-            "url" : "https://books.google.com.au/books?id=kYC3YCyl_tkC&lpg=PR5&ots=qk69FCdgZw&dq=clustering&lr&pg=PR5#v=onepage&q=clustering&f=false"
+            "name" : "Xu, R., & Wunsch, D. (2008). *Clustering* (Vol. 10). John Wiley & Sons. https://doi.org/10.1002/9780470382776.ch1",
+            "url" : "https://doi.org/10.1002/9780470382776.ch1"
         },
         {
-            "name" : "Agostini, A., & Ghisi, D. (2012). Bach: An environment for computer-aided composition in Max. In *ICMC*.",
+            "name" : "Agostini, A., & Ghisi, D. (2012). Bach: An environment for computer-aided composition in Max. In *ICMC* (pp. 373-378).",
             "url" : "https://www.andreaagostini.eu/wp-content/uploads/2015/08/bach-an-environment-for-computer-aided-composition-in-max.pdf"
         },
         {
@@ -81,60 +81,62 @@
             "url" : "https://www.bachproject.net/"
         },
         {
-            "name" : "Bresson, J., Bouche, D., Carpentier, T., Schwarz, D., & Garcia, J. (2017). Next-generation computer-aided composition environment: A new implementation of OpenMusic. *In International Computer Music Conference (ICMC'17)*.",
-            "url" : "https://hal.archives-ouvertes.fr/hal-01567619/document"
+            "name" : "Bresson, J., Bouche, D., Carpentier, T., Schwarz, D., & Garcia, J. (2017). Next-generation computer-aided composition environment: A new implementation of OpenMusic. In *ICMC*.",
+            "url" : "https://hal.archives-ouvertes.fr/hal-01567619v2"
         },
         {
-            "name" : "Assayag, G., Rueda, C., Laurson, M., Agon, C., & Delerue, O. (1999). Computer-assisted composition at IRCAM: From PatchWork to OpenMusic. *Computer music journal*, 23(3), 59-72.",
+            "name" : "Assayag, G., Rueda, C., Laurson, M., Agon, C., & Delerue, O. (1999). Computer-assisted composition at IRCAM: From PatchWork to OpenMusic. *Computer Music Journal*, 23(3), 59-72.",
             "url" : "https://www.jstor.org/stable/3681240"
         },
         {
-            "name" : "Assayag, G. (1998, October). Computer assisted composition today. In *1st symposium on music and computers*, Corfu.",
+            "name" : "Assayag, G. (1998, October). Computer assisted composition today. *1st Symposium On Music and Computers*",
             "url" : "https://www.music.mcgill.ca/~gary/306/week11/Assayag_ComputerAssisted_1998.pdf"
         },
         {
             "name" : "Ganis, F., Knudesn, E. F., Lyster, S. V., Otterbein, R., Südholt, D., & Erkut, C. (2021). Real-time timbre transfer and sound synthesis using DDSP. *arXiv preprint arXiv:2103.07220*.",
-            "url" : "https://arxiv.org/pdf/2103.07220"
+            "url" : "https://arxiv.org/abs/2103.07220"
         },
         {
-            "name" : "Hadjeres, G., Pachet, F., & Nielsen, F. (2017, July). DeepBach: A steerable model for Bach chorales generation. In *International Conference on Machine Learning* (pp. 1362-1371). PMLR.",
+            "name" : "Hadjeres, G., Pachet, F., & Nielsen, F. (2017, July). DeepBach: A steerable model for Bach chorales generation. *International Conference on Machine Learning* (pp. 1362-1371). PMLR.",
             "url" : "http://proceedings.mlr.press/v70/hadjeres17a/hadjeres17a.pdf"
         },
         {
             "name" : "Sturm, B. L., Santos, J. F., Ben-Tal, O., & Korshunova, I. (2016). Music transcription modelling and composition using deep learning. *arXiv preprint arXiv:1604.08723*.",
-            "url" : "https://arxiv.org/pdf/1604.08723"
+            "url" : "https://arxiv.org/abs/1604.08723"
         },
         {
-            "name" : "Fiebrink, R., & Caramiaux, B. (2016). The machine learning algorithm as creative musical tool. *arXiv preprint arXiv:1611.00379*."
+            "name" : "Fiebrink, R., & Caramiaux, B. (2016). The machine learning algorithm as creative musical tool. *arXiv preprint arXiv:1611.00379*.",
+            "url" : "https://arxiv.org/abs/1611.00379"
         },
         {
-            "name" : "Mitchell, T. M. (1997). Machine learning.",
+            "name" : "Mitchell, T. M. (1997). *Machine learning*. ",
             "url" : "http://www.cs.cmu.edu/~tom/mlbook.html"
         },
         {
-            "name" : "Mehri, S., Kumar, K., Gulrajani, I., Kumar, R., Jain, S., Sotelo, J., ... & Bengio, Y. (2016). SampleRNN: An unconditional end-to-end neural audio generation model. arXiv preprint arXiv:1612.07837.",
-            "url" : "https://arxiv.org/pdf/1612.07837.pdf%7D"
+            "name" : "Mehri, S., Kumar, K., Gulrajani, I., Kumar, R., Jain, S., Sotelo, J., ... & Bengio, Y. (2016). SampleRNN: An unconditional end-to-end neural audio generation model. *arXiv preprint arXiv:1612.07837*.",
+            "url" : "https://arxiv.org/abs/1612.07837"
         },
         {
-            "name" : "Bischoff, J. (1991). Software as sculpture: Creating music from the ground up. *Leonardo Music Journal, 1*(1), 37-40."
+            "name" : "Bischoff, J. (1991). Software as sculpture: Creating music from the ground up. *Leonardo Music Journal, 1*(1), 37-40. https://doi.org/10.2307/1513119",
+            "url" : "https://doi.org/10.2307/1513119"
         },
         {
-            "name" : "Wang, W. (Ed.). (2010). Machine Audition: Principles, Algorithms and Systems: Principles, Algorithms and Systems. IGI Global.",
-            "url" : "https://epubs.surrey.ac.uk/596085/1/Wang_Preface_MA_2010.pdf"
+            "name" : "Wang, W. (Ed.). (2010). *Machine audition: Principles, algorithms and systems*. IGI Global.",
+            "url" : "https://dl.acm.org/doi/book/10.5555/1892152"
         },
         {
-            "name" : "Bowers, J., Richards, J., Shaw, T., Frize, J., Freeth, B., Topley, S., ... & Edmondes, W. (2016). One Knob To Rule Them All: Reductionist Interfaces for Expansionist Research. In *NIME* (pp. 433-438).",
+            "name" : "Bowers, J., Richards, J., Shaw, T., Frize, J., Freeth, B., Topley, S., ... & Edmondes, W. (2016). One knob to rule them all: Reductionist interfaces for expansionist research. In *NIME* (pp. 433-438).",
             "url" : "https://www.nime.org/proceedings/2016/nime2016_paper0085.pdf"
         },
         {
-            "name" : "Malt, M., & Jourdan, E. (2008, July). Zsa. Descriptors: a library for real-time descriptors analysis. In 5th Sound and Music Computing Conference, Berlin, Germany (pp. 134-137).",
+            "name" : "Malt, M., & Jourdan, E. (2008, July). Zsa. Descriptors: a library for real-time descriptors analysis. In *5th Sound and Music Computing Conference*. (pp. 134-137).",
             "url" : "https://hal.archives-ouvertes.fr/hal-01580326/file/M_2008_Malt.pdf"
         },
         {
             "name" : "Peeters, G. (2004). A large set of audio features for sound description (similarity and classification) in the CUIDADO project. *CUIDADO Ist Project Report, 54*(0), 1-25."
         },
         {
-            "name" : "Tanaka, A. (2010). Mapping out instruments, affordances, and mobiles. NIME.",
+            "name" : "Tanaka, A. (2010). Mapping out instruments, affordances, and mobiles. In *NIME* (pp. 88-93).",
             "url" : "https://research.gold.ac.uk/id/eprint/6834/1/P88_Tanaka.pdf"
         },
         {
@@ -150,165 +152,132 @@
             "url" : "https://core.ac.uk/download/pdf/30610019.pdf"
         },
         {
-            "name" : "Thomson, P. (2004). *Atoms and errors: towards a history and aesthetics of microsound. Organised Sound, 9*(2), 207-218.",
-            "url" : "https://totem.menneske.dk/batch_totem/ARCHIVE/TEXT/Thomson.Phil-Atoms.and.Errors-Towards.a.History.and.Aestheti.pdf"
+            "name" : "Thomson, P. (2004). *Atoms and errors: Towards a history and aesthetics of microsound. Organised Sound, 9*(2), 207-218.",
+            "url" : "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.330.8449&rep=rep1&type=pdf"
         },
         {
-            "name" : "Briz, N. (n.d.). *From The Ground Up In Order, Embrace*. Vimeo. Retrieved 10 May, 2021, from https://vimeo.com/4506517"
+            "name" : "Briz, N. (n.d.). *From The Ground Up In Order, Embrace*. Vimeo. Retrieved 10 May, 2021, from https://vimeo.com/4506517",
+            "url" : "https://vimeo.com/4506517"
         },
         {
             "name" : "Cascone, K. (n.d.). *microsound.org*. www.microsound.org. Retrieved 4 March, 2021, from http://microsound.org",
             "url" : "http://microsound.org"
         },
         {
-            "name" : "Cascone, K. (2000). The aesthetics of failure: “Post-digital” tendencies in contemporary computer music. *Computer Music Journal, 24*(4), 12-18.",
-            "url" : "https://www.mitpressjournals.org/doi/pdf/10.1162/014892600559489"
+            "name" : "Cascone, K. (2000). The aesthetics of failure: “Post-digital” tendencies in contemporary computer music. *Computer Music Journal, 24*(4), 12-18. https://doi.org/10.1162/014892600559489",
+            "url" : "https://doi.org/10.1162/014892600559489"
         },
         {
-            "name" : "Bergström, I., & Lotto, R. B. (2015). *Code Bending: A new creative coding practice. Leonardo, 48*(1), 25-31.",
-            "url" : "https://www.mitpressjournals.org/doi/pdf/10.1162/LEON_a_00934"
+            "name" : "Bergström, I., & Lotto, R. B. (2015). *Code Bending: A new creative coding practice. Leonardo, 48*(1), 25-31. https://doi.org/10.1162/LEON_a_00934",
+            "url" : "https://doi.org/10.1162/LEON_a_00934"
         },
         {
-            "name" : "Grisey, G. (1987). Tempus ex Machina: A composer's reflections on musical time. *Contemporary music review*, 2(1), 239-275.",
-            "url" : "https://www.tandfonline.com/doi/pdf/10.1080/07494468708567060?casa_token=M5rklJCMfMgAAAAA:TVs9PQrWfJU4YLvz_2K6zuXm46NwsjPJtNaBI9N5iUetdUEiN9lyYUTbnHeO8R1k_qLp47hd7Q"
+            "name" : "Grisey, G. (1987). Tempus ex machina: A composer's reflections on musical time. *Contemporary music review*, 2(1), 239-275. https://doi.org/10.1080/07494468708567060",
+            "url" : "https://doi.org/10.1080/07494468708567060"
         },
         {
-            "name" : "Roads, C. (2012, May). From grains to forms. In *Proceedings of the international Symposium Xenakis. La musique electroacoustique/Xenakis. The electroacoustic music, M. Solomos, Ed., universite Paris* (Vol. 8).",
-            "url" : "https://clang.mat.ucsb.edu/clang/articles_files/From%20grains%20to%20forms.pdf"
+            "name" : "Roads, C. (2012, May). From grains to forms. In *Proceedings of The International Symposium Xenakis. La musique electroacoustique/Xenakis. The electroacoustic music, M. Solomos, Ed., universite Paris* (Vol. 8).",
+            "url" : "https://static1.squarespace.com/static/5ad03308fcf7fd547b82eaf7/t/5b759ff90e2e728f3ada974b/1534435337367/From+grains+to+forms.pdf"
         },
         {
-            "name" : "Tenney, J. (2014). *From Scratch: Writings in Music Theory.* University of Illinois Press.",
-            "url" : "https://books.google.com.au/books?id=3baUAwAAQBAJ&lpg=PP1&ots=epLKcM4QYQ&dq=from%20scratch%20tenney&lr&pg=PP1#v=onepage&q=from%20scratch%20tenney&f=false"
+            "name" : "Tenney, J. (2014). *From scratch: Writings in music theory.* University of Illinois Press.",
+            "url" : "https://www.jstor.org/stable/10.5406/j.ctt6wr6t7"
         },
         {
-            "name" : "Bertelsen, O. W., Breinbjerg, M., & Pold, S. (2009). Emerging materiality: reflections on creative use of software in electronic music composition. *Leonardo, 42*(3), 197-202.",
+            "name" : "Bertelsen, O. W., Breinbjerg, M., & Pold, S. (2009). Emerging materiality: Reflections on creative use of software in electronic music composition. *Leonardo, 42*(3), 197-202.",
             "url" : "https://www.mitpressjournals.org/doi/pdfplus/10.1162/leon.2009.42.3.197?casa_token=B7zIybTWjycAAAAA:4E5WJImhRorjMPh-yRA_pb54_OinqJzhNKNw8htGy6uVtoE2PUVty8EXIpZ1DNemFgmhUk55rw"
-        },
-        {
-            "name" : "Maeda, J., & Burns, R. (2005). Creative code. *Education*, 7, 177.",
-            "url" : "http://llrc.mcast.edu.mt/digitalversion/Table_of_Contents_132664.pdf"
         },
         {
             "name" : "Bødker, S. (2015). Third-wave HCI, 10 years later: participation and sharing. *Interactions*, 22(5), 24-31.",
             "url" : "https://dl.acm.org/doi/fullHtml/10.1145/2804405"
         },
         {
-            "id" : "aesthetic-cac",
-            "name" : "Miranda, E. R. (2009). Preface: Aesthetic decisions in computer-aided composition.",
-            "url" : "https://www.tandfonline.com/doi/full/10.1080/07494460903327504"
+            "name" : "Miranda, E. R. (2009). Preface: Aesthetic decisions in computer-aided composition. *Contemporary Music Review, 28*(2), 129-132.  https://doi.org/10.1080/07494460903327504",
+            "url" : "https://doi.org/10.1080/07494460903327504"
         },
         {
-            "id" : "decomposition",
             "name" : "Ohm, J. (2003). *Multimedia communication technology: Representation, transmission and identification of multimedia signals.* Springer Science & Business Media.",
-            "url" : "https://books.google.co.uk/books?hl=en&lr=&id=mxevmnbD13UC&oi=fnd&pg=PA1&dq=Multimedia+Communication+Technology:+Representation,+Transmission+and+Identification+of+Multimedia+Signals&ots=JVjBsN_DQK&sig=jBnNIl3ODgeTLCAJ8dHtY-au14A&redir_esc=y#v=onepage&q=Multimedia%20Communication%20Technology%3A%20Representation%2C%20Transmission%20and%20Identification%20of%20Multimedia%20Signals&f=false"
+            "url" : "https://www.springer.com/gp/book/9783540012498"
         },
         {
-            "id" : "mpeg7",
-            "name" : "Boyer, H., Serra, X., & Peeters, G. (1999). Audio descriptors and descriptor schemes in the context of MPEG-7. In *Proceedings of the 1999 International Computer Music Conference, ICMC; 1999 Oct 22-27; Beijing, China. [Michigan]: Michigan Publishing; 1999. p. 581-4..* International Computer Music Conference.",
-            "url" : "https://repositori.upf.edu/bitstream/handle/10230/33917/herrera_icmc_audio.pdf?sequence=1&isAllowed=y"
+            "name" : "Carter, S., & Nielsen, M. (2017). Using artificial intelligence to augment human intelligence. *Distill, 2*(12). https://doi.org/10.23915/distill.00009",
+            "url" : "https://doi.org/10.23915/distill.00009"
         },
         {
-            "id" : "distillaugment",
-            "name" : "Carter, S., & Nielsen, M. (2017). Using artificial intelligence to augment human intelligence. *Distill, 2*(12), e9.",
-            "url" : "https://distill.pub/2017/aia/?ref=webdesignernews.com"
-        },
-        {
-            "id" : "augmentinghuman",
             "name" : "Engelbart, D. C. (1962). Augmenting human intellect: A conceptual framework. *Menlo Park, CA.*",
             "url" : "https://apps.dtic.mil/dtic/tr/fulltext/u2/289565.pdf"
         },
         {
-            "id" : "turklepapert",
             "name" : "Turkle, S., & Papert, S. (1990). Epistemological pluralism: Styles and voices within the computer culture. *Signs: Journal of women in culture and society, 16*(1), 128-157.",
-            "url" : "https://www.jstor.org/stable/pdf/3174610.pdf"
+            "url" : "https://www.jstor.org/stable/3174610 "
         },
         {
-            "id" : "programmingpractice",
-            "name" : "Bergström, I., & Blackwell, A. F. (2016, September). The practices of programming. In *2016 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)* (pp. 190-198). IEEE.",
-            "url" : "https://ieeexplore.ieee.org/iel7/7602835/7739650/07739684.pdf"
+            "name" : "Bergström, I., & Blackwell, A. F. (2016, September). The practices of programming. In *2016 IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC)* (pp. 190-198). IEEE. https://doi.org/10.1109/VLHCC.2016.7739684",
+            "url" : "https://doi.org/10.1109/VLHCC.2016.7739684"
         },
         {
-            "id" : "bricolage",
             "name" : "McLean, A., & Wiggins, G. A. (2010). Bricolage Programming in the Creative Arts. In *PPIG* (p. 18).",
-            "url" : "https://www.ppig.org/files/2010-PPIG-22nd-McLean.pdf"
+            "url" : "https://ppig.org/papers/2010-ppig-22nd-mclean/"
         },
         {
-            "id" : "lcgi",
-            "name" : "De Campo, A. (2014). Lose control, gain influence-Concepts for Metacontrol. In *ICMC*.",
+            "name" : "De Campo, A. (2014). Lose control, gain influence-Concepts for Metacontrol. In *ICMC* (p. 217-222).",
             "url" : "https://speech.di.uoa.gr/ICMC-SMC-2014/images/VOL_1/0217.pdf"
         },
         {
-            "id" : "samplernn",
             "name" : "Mehri, S., Kumar, K., Gulrajani, I., Kumar, R., Jain, S., Sotelo, J., ... & Bengio, Y. (2016). SampleRNN: An unconditional end-to-end neural audio generation model. *arXiv preprint arXiv:1612.07837.*",
             "url" : "https://arxiv.org/pdf/1612.07837.pdf%7D"
         },  
         {
-            "id" : "rethinking",
             "name" : "Szegedy, C., Vanhoucke, V., Ioffe, S., Shlens, J., & Wojna, Z. (2016). Rethinking the inception architecture for computer vision. In *Proceedings of the IEEE conference on computer vision and pattern recognition* (pp. 2818-2826).",
             "url" : "https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf"
         },
         {
-            "id" : "formalizedmusic",
             "name" : "Xenakis, I. (1992). *Formalized music: thought and mathematics in composition* (No. 6). Pendragon Press.",
             "url" : "https://books.google.co.uk/books?hl=en&lr=&id=y6lL3I0vmMwC&oi=fnd&pg=PR7&dq=Formalized+Music&ots=W-k1lzkqc1&sig=BW6uo7ievipZzHfn-ye1KPDEPZA&redir_esc=y#v=onepage&q=Formalized%20Music&f=false"
         },
         {
-            "id" : "content-based-gran",
-            "name" : "Schwarz, D., & O'Leary, S. (2015, July). Smooth granular sound texture synthesis by control of timbral similarity. In *Sound and Music Computing (SMC)* (p. 6).",
-            "url" : "https://hal.archives-ouvertes.fr/hal-01182793/document"
-        },
-        {
-            "id" : "grill-vis",
             "name" : "Grill, T., & Flexer, A. (2012, September). Visualization of perceptual qualities in textural sounds. In *ICMC.*",
             "url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.437.6714&rep=rep1&type=pdf"
         },
         {
-            "id" : "grill-thesis",
-            "name" : "Grill, T. (2012). *Perceptually informed organization of textural sounds.* na.",
+            "name" : "Grill, T. (2012). *Perceptually informed organization of textural sounds.* [Unpublished doctoral dissertation]. University of Music and Performing Arts Graz, Austria.",
             "url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.722.1088&rep=rep1&type=pdf"
         },
     	{
-    		"id" : "audioguide-framework",
-    		"name" : "Hackbarth, B., Schnell, N., & Schwarz, D. (2010). *Audioguide: a framework for creative exploration of concatenative sound synthesis.* Research report, IRCAM, Paris, France.",
-    		"url" : "http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.363.3647&rep=rep1&type=pdf"	
+    		"name" : "Hackbarth, B., Schnell, N., & Schwarz, D. (2010). *AudioGuide: A framework for creative exploration of concatenative sound synthesis.* Research report, IRCAM, Paris, France.",
+    		"url" : "http://articles.ircam.fr/textes/Hackbarth10a/index.pdf"	
     	},
         {
-            "id" : "nmfpaper",
-            "name" : "Fitzgerald, D., Cranitch, M., & Coyle, E. (2005, July). Shifted non-negative matrix factorisation for sound source separation. In *IEEE/SP 13th Workshop on Statistical Signal Processing, 2005* (pp. 1132-1137). IEEE.",
-            "url" : "https://ieeexplore.ieee.org/iel5/10843/34164/01628765.pdf?casa_token=y1wrNgHWL7EAAAAA:b-_z1xP6H8lPDMqRp5qYMlBSyB6vcTj7mlaxwGB0cx7-UlfV56iPnmS-PuBAXiajbeqJAh8HFA"
+            "name" : "Fitzgerald, D., Cranitch, M., & Coyle, E. (2005, July). Shifted non-negative matrix factorisation for sound source separation. In *IEEE/SP 13th Workshop on Statistical Signal Processing, 2005* (pp. 1132-1137). IEEE. https://doi.org/10.1109/SSP.2005.1628765",
+            "url" : "https://doi.org/10.1109/SSP.2005.1628765"
         },
         {
-            "id" : "spleeter",
-            "name" : "Hennequin, R., Khlif, A., Voituret, F., & Moussallam, M. (2020). Spleeter: a fast and efficient music source separation tool with pre-trained models. *Journal of Open Source Software, 5*(50), 2154.",
-            "url" : "https://joss.theoj.org/papers/10.21105/joss.02154.pdf"
+            "name" : "Hennequin, R., Khlif, A., Voituret, F., & Moussallam, M. (2020). Spleeter: a fast and efficient music source separation tool with pre-trained models. *Journal of Open Source Software, 5*(50), 2154. https://doi.org/10.21105/joss.02154",
+            "url" : "https://doi.org/10.21105/joss.02154"
         },
         {
-            "id" : "footnov",
-            "name" : "Foote, J. (2000, July). Automatic audio segmentation using a measure of audio novelty. In *2000 IEEE International Conference on Multimedia and Expo. ICME2000. Proceedings. Latest Advances in the Fast Changing World of Multimedia (Cat. No. 00TH8532)* (Vol. 1, pp. 452-455). IEEE.",
-            "url" : "https://ieeexplore.ieee.org/abstract/document/869637"   
+            "name" : "Foote, J. (2000, July). Automatic audio segmentation using a measure of audio novelty. In *2000 IEEE International Conference on Multimedia and Expo. ICME2000. Proceedings. Latest Advances in the Fast Changing World of Multimedia (Cat. No. 00TH8532)* (pp. 452-455). IEEE. https://doi.org/10.1109/ICME.2000.869637",
+            "url" : "https://doi.org/10.1109/ICME.2000.869637"   
         },
         {
-            "id" : "ghisi",
-            "name" : "Ghisi, D. (2017). *Music across music: towards a corpus-based, interactive computer-aided composition* (Doctoral dissertation, Paris 6).",
+            "name" : "Ghisi, D. (2017). *Music across music: towards a corpus-based, interactive computer-aided composition* [Unpublished doctoral dissertation]. Pierre and Mary Curie University and Sorbonne University",
             "url" : "https://www.danieleghisi.com/phd/PHDThesis_20180118.pdf"
         },
         {
-            "id" : "",
-            "name" : "Ajmera, J., McCowan, I. A., & Bourlard, H. (2004). *Robust audio segmentation* (No. REP_WORK). IDIAP.",
+            "name" : "Ajmera, J., McCowan, I. A., & Bourlard, H. (2004). *Robust audio segmentation*. [Doctoral dissertation, École Polytechnique]. EPFL. https://infoscience.epfl.ch/record/83070",
             "url" : "https://infoscience.epfl.ch/record/83070"
         },
         {
-            "id" : "biodiv",
-            "name" : "Eldridge, A., Casey, M., Moscoso, P., & Peck, M. (2016). A new method for ecoacoustics? Toward the extraction and evaluation of ecologically-meaningful soundscape components using sparse coding methods. *PeerJ, 4*, e2108.",
-            "url" : "https://peerj.com/articles/2108/"
+            "name" : "Eldridge, A., Casey, M., Moscoso, P., & Peck, M. (2016). A new method for ecoacoustics? Toward the extraction and evaluation of ecologically-meaningful soundscape components using sparse coding methods. *PeerJ, 4*, https://doi.org/10.7717/peerj.2108",
+            "url" : "https://doi.org/10.7717/peerj.2108"
         },
         {
-            "name" : "Michalakos, C. (2012). The augmented drum kit: an intuitive approach to live electronic percussion performance. In *ICMC 2012: International Computer Music Conference* (pp. 257-260). Michigan Publishing.",
+            "name" : "Michalakos, C. (2012). The augmented drum kit: An intuitive approach to live electronic percussion performance. In *ICMC 2012: International Computer Music Conference* (pp. 257-260). Michigan Publishing.",
             "url" : "https://rke.abertay.ac.uk/ws/files/15874958/Michalakos_Augmented_drum_kit_Published_2012.pdf"
         },
         {
-            "name": "Fasciani, S. (2016). TSAM: a tool for analyzing, modeling, and mapping the timbre of sound synthesizers.",
-            "url" : "https://ro.uow.edu.au/cgi/viewcontent.cgi?referer=https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=fasciani+tsam&btnG=&httpsredir=1&article=1800&context=dubaipapers"
+            "name": "Fasciani, S. (2016). TSAM: A tool for analyzing, modeling, and mapping the timbre of sound synthesizers.",
+            "url" : "https://ro.uow.edu.au/dubaipapers/752"
         }
     ]
 }
