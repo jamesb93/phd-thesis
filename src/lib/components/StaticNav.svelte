@@ -8,10 +8,6 @@
 	function handleClick(){
 		navshow = false;
 	};
-
-	function handleButton() {
-		value = !value			
-	}
 </script>
 
 <nav class="container" transition:slide="{{ duration: 300, easing: quintOut }}">
@@ -47,9 +43,6 @@
 </nav>
 
 <style>
-	.faint {
-		color:rgb(178, 178, 178)
-	}
 	.container {
 		background-color:white;
 		position: fixed;
