@@ -36,13 +36,24 @@ for x in routes.rglob("*.svx"):
         link_url = "http[s]?://[^)]+"
         markup_regex = f'\[({link_name})]\(\s*({link_url})\s*\)'
 
+        skip = [
+            'of', 'and', 'the', 'to', 'as', 'in', 'for', 'ibuffer', 'on', 'eXchange',
+            'https', 'three_anchors', 'means', 'find_tuned',
+            'https://en.wikipedia.org/wiki/Moment_(mathematics)',
+            'https://Olilarkin.Github.io/Fourses/',
+            'olilarkin',
+            'github',
+            'py'
+        ]
+
+        specials = ['you', 'xor', 'mel', 'can']
+
         for match in re.findall(markup_regex, content):
             name = match[0]
             url = match[1]
             if 'wikipedia' in url:
                 if '(' in url:
                     url = url + ')'
-                    print(url)
             exists = False
             for item in link_container:
                 if item["url"] == url:
@@ -58,8 +69,17 @@ for x in routes.rglob("*.svx"):
                     name = name[1:]
                     name = name[:-1]
 
+                # now capitalise all the big words
+                matches = re.findall(r'[\w]+', name)
+                for word in matches:
+                    if (word not in skip and len(word) >= 4) or word in specials:
+                        name = name.replace(word, word[0].upper()+word[1:])
+                        if name[0] == "":
+                            name = name.replace(word, word[0]+word[1].upper()+word[1:])
+                    if word == 's' and len(word) == 1:
+                        name = name[0].upper()+name[1:]
+
                 if not '/Projects/' in name and not '/Software' in name:
-                    name = name[0].upper() + name[1:]
                     link_container.append({
                         "name" : name,
                         "url" : url
