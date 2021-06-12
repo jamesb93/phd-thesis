@@ -34,7 +34,7 @@ Lastly, with a collection of onset times and intensities, the relationship betwe
 
 As my practice has developed over this research project, I have increasingly relied on using high-level descriptors, while earlier in my practice low-level descriptors were my primary tool for exploring with machine listening. This trajectory was not intentional or predetermined, rather, it came about from developing my creative coding skills and experimenting with increasingly complex technologies in the service of changing sets of questions and interests. This is an important aspect of my practice that will be traced in each [project]({m.proj}) section more thoroughly.
 
-#### Issues With Audio Descriptors
+#### Issues with Audio Descriptors
 Given that high-level descriptors often use data produced by low-level or mid-level descriptors, a number of issues can arise if these dependent audio descriptors are poorly selected or managed. This has consequences when compositional choices are made from this information or if the computer is working further with that data. As such, the curation, implementation and application of descriptors is an entangled process that requires reflection and thought within the context of their application.  I consider the application of audio descriptors in my practice as important as orchestration is to a composer of acoustic music. Grappling with these types of issues became increasingly prevalent in the final projects of this research and my attempt to make these types of issues more manageable can be seen in the development of [FTIS]({m.ftis}).
 
 #### Implementations
