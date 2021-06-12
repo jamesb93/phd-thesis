@@ -30,7 +30,7 @@ This thesis supports a number of web browsers. It has been tested on:
 If for any reason something is not working or fails to load, please first try viewing the thesis in another type of browser.
 
 ## Navigation
-This thesis is divided into six sections. To navigate to sections of this thesis, use the left hand navigation panel. The right hand navigation panel allows one to move between parts of a single section more conveniently. If the window of the browser is too small to display these two navigation panels, they will be hidden to preserve the presentation of the text. In this situation, the navigation on the left side can be expanded by clicking the "hamburger" menu in the top left corner.
+This thesis is divided into six sections. To navigate to sections of this thesis, use the left-hand navigation panel. The right-hand navigation panel allows one to move between parts of a single section more conveniently. If the window of the browser is too small to display these two navigation panels, they will be hidden to preserve the presentation of the text. In this situation, the navigation on the left side can be expanded by clicking the "hamburger" menu in the top left corner.
 
 ## Interactive Elements in This Thesis
 There are many interactive elements throughout this thesis, such as annotated waveforms, code, videos, images and demos. There are also numerous [hyperlinks](https://en.wikipedia.org/wiki/Hyperlink) that link to different parts of the thesis as well as external websites and pages. These hyperlinks also function as tools for navigation, allowing one to move directly to the relevant interactive elements within this thesis. For example, clicking [IMAGE 1](/howto#image) will shift the focus of the window to that element. I encourage the reader to follow these links to see how these integral digital resources feed into my work and support the research. Five archetypes of interactive elements will now be introduced.
@@ -38,7 +38,7 @@ There are many interactive elements throughout this thesis, such as annotated wa
 ### Waveform or Album
 This is the waveform widget. It shows a single sound file with an overview and zoom waveform view. One can zoom in by clicking the +/- buttons and stop and start the audio with the audio element beneath the waveform. One can also scrub through the sound file with a click and drag manoeuvre on any of these two views. Some waveform widgets widgets also are annotated, in which case, a list of these will be displayed below the waveform views in a table. One can click the appropriate annotation to seek directly to that time in the audio file.
 
-All audio samples in this document are in a compressed format in order to make the document fast and usable over the web. However, links to high quality WAV files can be found embedded into the audio playback widgets. Look for the *Download Lossless Version* text to navigate to these links. This can be found on the bottom left hand corner of the waveform widget, and in the list of individual album items in the album widget.
+All audio samples in this document are in a compressed format in order to make the document fast and usable over the web. However, links to lossless WAV files can be found embedded into the audio playback widgets. Look for the *Download Lossless Version* text to navigate to these links. This can be found on the bottom left-hand corner of the waveform widget, and in the list of individual album items in the album widget.
 
 <Waveform 
 file='/howto/pink.mp3'
@@ -98,7 +98,7 @@ print(thing_i_do, ' ', qualifier)
 
 </Code2>
 
-In this text, code is referred to inline using this widget, and if it is a part of the software outputs a relative path from the root of the submitted materials will be provided. One can click the link to directly observe the code hosted on GitHub or read the path to find it in a local copy. For example, [/Projects/Reconstruction Error/Supporting Code/python_scripts/scraping/scrape_files.py](https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/scraping/scrape_files.py) refers to the script named `scrape_files.py`, which can be found in the [[4.4 Reconstruction Error]]({m.re}) directory, which is inside the "pieces" top level directory.
+In this text, code is referred to inline using this widget, and if it is a part of the software outputs a relative path from the root of the submitted materials will be provided. One can click the link to directly observe the code hosted on GitHub or read the path to find it in a local copy. For example, [/Projects/Reconstruction Error/Supporting Code/python_scripts/scraping/scrape_files.py](https://github.com/jamesb93/reconstruction_error/blob/63bc4248eead23abdde35511d9a6ec61e67b9186/python_scripts/scraping/scrape_files.py) refers to the script named `scrape_files.py`, which can be found in the [[4.4 Reconstruction Error]]({m.re}) directory, which is inside the "pieces" top-level directory.
 
 ### Demo
 
