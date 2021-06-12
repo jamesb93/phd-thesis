@@ -33,8 +33,8 @@
             "url" : "https://ro.uow.edu.au/dubaipapers/751/"
         },
         {
-            "name" : "McFee, B., Raffel, C., Liang, D., Ellis, D. P., McVicar, M., Battenberg, E., & Nieto, O. (2015, July). librosa: Audio and music signal analysis in python. In *Proceedings of the 14th python in science conference* (Vol. 8, pp. 18-25).",
-            "url" : "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.701.4288&rep=rep1&type=pdf"
+            "name" : "McFee, B., Raffel, C., Liang, D., Ellis, D. P., McVicar, M., Battenberg, E., & Nieto, O. (2015, July). librosa: Audio and music signal analysis in python. In *Proceedings of the 14th Python in Science Conference* (Vol. 8, pp. 18-25). https://doi.org/10.25080/Majora-7b98e3ed-003 ",
+            "url" : "https://doi.org/10.25080/Majora-7b98e3ed-003 "
         },
         {
             "name" : "Roma, G., Green, O., & Tremblay, P. A. (2019, June). Adaptive mapping of sound collections for data-driven musical interfaces. In *NIME* (pp. 313-318). http://doi.org/10.5281/zenodo.3672976",
@@ -129,8 +129,8 @@
             "url" : "http://doi.org/10.5281/zenodo.1175996"
         },
         {
-            "name" : "Malt, M., & Jourdan, E. (2008, July). Zsa. Descriptors: a library for real-time descriptors analysis. In *5th Sound and Music Computing Conference* (pp. 134-137).",
-            "url" : "https://hal.archives-ouvertes.fr/hal-01580326/file/M_2008_Malt.pdf"
+            "name" : "Malt, M., & Jourdan, E. (2008, July). Zsa.Descriptors: a library for real-time descriptors analysis. In *5th Sound and Music Computing Conference* (pp. 134-137).",
+            "url" : "http://smc.afim-asso.org/smc08/images/proceedings/session7_number3_paper45.pdf"
         },
         {
             "name" : "Peeters, G. (2004). A large set of audio features for sound description (similarity and classification) in the CUIDADO project. *CUIDADO Ist Project Report, 54*(0), 1-25.",
@@ -205,8 +205,7 @@
             "url" : "https://doi.org/10.23915/distill.00009"
         },
         {
-            "name" : "Engelbart, D. C. (1962). Augmenting human intellect: A conceptual framework. *Menlo Park, CA.*",
-            "url" : "https://apps.dtic.mil/dtic/tr/fulltext/u2/289565.pdf"
+            "name" : "Stanford Research Institute. (1962). *Augmenting human intellect: A conceptual framework* (SRI Project No. 3578). Air Force Office of Scientific Research. https://apps.dtic.mil/dtic/tr/fulltext/u2/289565.pdf"
         },
         {
             "name" : "Turkle, S., & Papert, S. (1990). Epistemological pluralism: Styles and voices within the computer culture. *Signs: Journal of women in culture and society, 16*(1), 128-157.",
@@ -229,15 +228,15 @@
             "url" : "https://arxiv.org/pdf/1612.07837.pdf%7D"
         },  
         {
-            "name" : "Szegedy, C., Vanhoucke, V., Ioffe, S., Shlens, J., & Wojna, Z. (2016). Rethinking the inception architecture for computer vision. In *Proceedings of the IEEE conference on computer vision and pattern recognition* (pp. 2818-2826).",
-            "url" : "https://www.cv-foundation.org/openaccess/content_cvpr_2016/papers/Szegedy_Rethinking_the_Inception_CVPR_2016_paper.pdf"
+            "name" : "Szegedy, C., Vanhoucke, V., Ioffe, S., Shlens, J., & Wojna, Z. (2016). Rethinking the inception architecture for computer vision. In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition* (Vol 1.) (pp. 2818-2826). https://doi.ieeecomputersociety.org/10.1109/CVPR.2016.308",
+            "url" : "https://doi.ieeecomputersociety.org/10.1109/CVPR.2016.308"
         },
         {
             "name" : "Xenakis, I. (1992). *Formalized music: thought and mathematics in composition* (No. 6). Pendragon Press.",
             "url" : "https://books.google.co.uk/books?hl=en&lr=&id=y6lL3I0vmMwC&oi=fnd&pg=PR7&dq=Formalized+Music&ots=W-k1lzkqc1&sig=BW6uo7ievipZzHfn-ye1KPDEPZA&redir_esc=y#v=onepage&q=Formalized%20Music&f=false"
         },
         {
-            "name" : "Grill, T., & Flexer, A. (2012, September). Visualization of perceptual qualities in textural sounds. In *ICMC* (pp. 589-596).",
+            "name" : "Grill, T., & Flexer, A. (2012, September). Visualization of perceptual qualities in textural sounds. In *ICMC* (pp. 589-596). http://hdl.handle.net/2027/spo.bbp2372.2012.110",
             "url" : "http://hdl.handle.net/2027/spo.bbp2372.2012.110"
         },
         {
@@ -277,7 +276,7 @@
             "url" : "http://hdl.handle.net/2027/spo.bbp2372.2012.046"
         },
         {
-            "name": "Fasciani, S. (2016). TSAM: A tool for analyzing, modeling, and mapping the timbre of sound synthesizers.",
+            "name": "Fasciani, S. (2016). TSAM: A tool for analyzing, modeling, and mapping the timbre of sound synthesizers. In *Proceedings of the 13th Sound and Music Computing Conference* (pp. 129-136).",
             "url" : "https://ro.uow.edu.au/dubaipapers/752"
         },
         {
