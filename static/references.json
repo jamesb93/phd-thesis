@@ -37,8 +37,8 @@
             "url" : "https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.701.4288&rep=rep1&type=pdf"
         },
         {
-            "name" : "Roma, G., Green, O., & Tremblay, P. A. (2019, June). Adaptive mapping of sound collections for data-driven musical interfaces. In *NIME* (pp. 313-318).",
-            "url" : "https://www.nime.org/proceedings/2019/nime2019_paper060.pdf"
+            "name" : "Roma, G., Green, O., & Tremblay, P. A. (2019, June). Adaptive mapping of sound collections for data-driven musical interfaces. In *NIME* (pp. 313-318). http://doi.org/10.5281/zenodo.3672976",
+            "url" : "http://doi.org/10.5281/zenodo.3672976"
         },
         {
             "name" : "Green, O. (2013). *User serviceable parts: Practice, technology, sociality and method in live electronic musicking* [Doctoral dissertation, City University London]. City Research Online. https://openaccess.city.ac.uk/id/eprint/2730/",
@@ -125,8 +125,8 @@
             "url" : "https://doi.org/10.4018/978-1-61520-919-4"
         },
         {
-            "name" : "Bowers, J., Richards, J., Shaw, T., Frize, J., Freeth, B., Topley, S., ... & Edmondes, W. (2016). One knob to rule them all: Reductionist interfaces for expansionist research. In *NIME* (pp. 433-438).",
-            "url" : "https://www.nime.org/proceedings/2016/nime2016_paper0085.pdf"
+            "name" : "Bowers, J., Richards, J., Shaw, T., Frize, J., Freeth, B., Topley, S., ... & Edmondes, W. (2016). One knob to rule them all: Reductionist interfaces for expansionist research. In *NIME* (pp. 433-438). http://doi.org/10.5281/zenodo.1175996",
+            "url" : "http://doi.org/10.5281/zenodo.1175996"
         },
         {
             "name" : "Malt, M., & Jourdan, E. (2008, July). Zsa. Descriptors: a library for real-time descriptors analysis. In *5th Sound and Music Computing Conference* (pp. 134-137).",
@@ -137,8 +137,8 @@
             "url" : "http://recherche.ircam.fr/anasyn/peeters/ARTICLES/Peeters_2003_cuidadoaudiofeatures.pdf"
         },
         {
-            "name" : "Tanaka, A. (2010). Mapping out instruments, affordances, and mobiles. In *NIME* (pp. 88-93).",
-            "url" : "https://research.gold.ac.uk/id/eprint/6834/1/P88_Tanaka.pdf"
+            "name" : "Tanaka, A. (2010). Mapping out instruments, affordances, and mobiles. In *NIME* (pp. 88-93). http://doi.org/10.5281/zenodo.1177903",
+            "url" : "http://doi.org/10.5281/zenodo.1177903"
         },
         {
             "name" : "Varga, B. A. (1996). *Conversations with Xenakis*. London, Faber & Faber.",
@@ -149,8 +149,8 @@
             "url" : "https://www.tandfonline.com/doi/abs/10.1076/jnmr.32.4.429.18853"
         },
         {
-            "name" : "Kiefer, C. (2014). Musical Instrument Mapping Design with Echo State Networks. In *NIME* (pp. 293-298).",
-            "url" : "https://core.ac.uk/download/pdf/30610019.pdf"
+            "name" : "Kiefer, C. (2014). Musical Instrument Mapping Design with Echo State Networks. In *NIME* (pp. 293-298). http://doi.org/10.5281/zenodo.1178829",
+            "url" : "http://doi.org/10.5281/zenodo.1178829"
         },
         {
             "name" : "Thomson, P. (2004). *Atoms and errors: Towards a history and aesthetics of microsound. Organised Sound, 9*(2), 207-218.",
