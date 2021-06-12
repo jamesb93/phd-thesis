@@ -71,7 +71,7 @@ figure='IMAGE 5.3.4'
 id='img4'
 />
 
-## The Role Of ReaCoMa In My Practice and Case Studies
+## The Role of ReaCoMa in My Practice and Case Studies
 ReaCoMa supports the phase of my compositional workflow during which I intuitively operate on materials within the frame of decomposition and deconstruction. While [FTIS]({m.ftis}) supports querying that is operating on corpora, ReaCoMa is important when I enter the more tactile phase of my practice in which I compose intuitively and manipulate materials through trial and error as well as experimentation. ReaCoMa has proven to facilitate different forms of querying to [FTIS]({m.ftis}) too, especially when I work with individual sounds. The following case studies demonstrate these. 
 
 ### Transient Extraction

@@ -5,11 +5,11 @@
 
 # List of Interactive Elements
 
-This list contains a reference to the interactive elements of this thesis. It does *not* include elements that link to external content such as YouTube or Vimeo.
+This list contains a reference to the interactive elements of this thesis. It does *not* include elements that link to external content such as YouTube or Vimeo. Instead, this information is provided in the [[References]](/references) amongst a list of hyperlinks, videos as well as a discography of works which have been mentioned.
 
 ---
 
-## List Of Audio Elements
+## List of Audio Elements
 {#each figures['audio'] as [figure, title, url]}
 <div class='container'>
     <a class='figure' href={url}>{figure}</a>
@@ -17,7 +17,7 @@ This list contains a reference to the interactive elements of this thesis. It do
 </div>
 {/each}
 
-## List Of Code Elements
+## List of Code Elements
 {#each figures['code'] as [figure, title, url]}
 <div class='container'>
     <a class='figure' href={url}>{figure}</a>
@@ -25,7 +25,7 @@ This list contains a reference to the interactive elements of this thesis. It do
 </div>
 {/each}
 
-## List Of Demo Elements
+## List of Demo Elements
 {#each figures['demo'] as [figure, title, url]}
 <div class='container'>
     <a class='figure' href={url}>{figure}</a>
@@ -33,7 +33,7 @@ This list contains a reference to the interactive elements of this thesis. It do
 </div>
 {/each}
 
-## List Of Image Elements
+## List of Image Elements
 {#each figures['image'] as [figure, title, url]}
 <div class='container'>
     <a class='figure' href={url}>{figure}</a>
@@ -41,7 +41,7 @@ This list contains a reference to the interactive elements of this thesis. It do
 </div>
 {/each}
 
-## List Of Video Elements
+## List of Video Elements
 {#each figures['video'] as [figure, title, url]}
 <div class='container'>
     <a class='figure' href={url}>{figure}</a>

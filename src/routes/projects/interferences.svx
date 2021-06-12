@@ -41,13 +41,13 @@ figure='VIDEO 4.5.1'
 id='vid1'
 />
 
-Secondly, I wanted to iterate on the pipeline of segmentation, analysis, dimension-reduction and clustering and to apply it more fluidly to new compositional materials. The technology implemented in [Reconstruction Error]({m.re}) was successful for enabling me to be creative, but was largely inflexible and so to perform the same tasks on new material would require rewriting the scripts. Thus, [FTIS]({m.ftis}) was developed to support this goal, and made it possible to create scripts that supported experimentation and data manipulation. This aspect is discussed in more detail in [[4.5.2.3 Pathways Through The Corpus]]({m.em}#pathways-through-the-corpus).
+Secondly, I wanted to iterate on the pipeline of segmentation, analysis, dimension-reduction and clustering and to apply it more fluidly to new compositional materials. The technology implemented in [Reconstruction Error]({m.re}) was successful for enabling me to be creative, but was largely inflexible and so to perform the same tasks on new material would require rewriting the scripts. Thus, [FTIS]({m.ftis}) was developed to support this goal, and made it possible to create scripts that supported experimentation and data manipulation. This aspect is discussed in more detail in [[4.5.2.3 Pathways Through the Corpus]]({m.em}#pathways-through-the-corpus).
 
 ## Compositional Process
 The compositional process for [Interferences]({m.em}) can roughly be divided into two phases. The first phase involved experimentation with [FTIS]({m.ftis}) and devising various ways to navigate through the corpus with the aid of the computer. The second phase involved a more direct level of composition in which I used the computer to search and hone in on specific materials in the corpus for this project. This contrasts with the broader exploration undertaken in the first phase.
 
 ### Recording Objects With Induction
-As outlined in [[4.5.1 Motivations And Influences]]({m.em}#motivations-and-influences), I procured an electromagnetic induction microphone and wanted to use it to generate a corpus of digital and synthetic-type sounds. To do this, I took electronic objects from around the home and recorded them, at times operating those objects simultaneously. This *gathering* stage came before the two previously mentioned compositional phases. I was surprised by the diversity of sounds this produced. Despite devices in my environment seeming inert, the induction microphone could detect and uncover their invisible electronic signatures and traces of their operation. I recorded a number of devices, including my computer keyboard, mouse, a mobile phone, a sound card, a laptop and an e-reader. Each device produced its own characteristic outputs, and some of them offered me the ability to trigger certain sonic behaviours through my interaction. For example, [AUDIO 4.5.2]({m.em}#aud2) captures the sound of an e-reader left relatively untouched. The change at 0:02 is triggered by switching the "aeroplane mode" on and off. This user interaction causes the components in the e-reader to operate differently, which is captured by the induction microphone. Eventually, the initial static state is returned to. This can be heard at 1:59, lasting until the end of the clip.
+As outlined in [[4.5.1 Motivations and Influences]]({m.em}#motivations-and-influences), I procured an electromagnetic induction microphone and wanted to use it to generate a corpus of digital and synthetic-type sounds. To do this, I took electronic objects from around the home and recorded them, at times operating those objects simultaneously. This *gathering* stage came before the two previously mentioned compositional phases. I was surprised by the diversity of sounds this produced. Despite devices in my environment seeming inert, the induction microphone could detect and uncover their invisible electronic signatures and traces of their operation. I recorded a number of devices, including my computer keyboard, mouse, a mobile phone, a sound card, a laptop and an e-reader. Each device produced its own characteristic outputs, and some of them offered me the ability to trigger certain sonic behaviours through my interaction. For example, [AUDIO 4.5.2]({m.em}#aud2) captures the sound of an e-reader left relatively untouched. The change at 0:02 is triggered by switching the "aeroplane mode" on and off. This user interaction causes the components in the e-reader to operate differently, which is captured by the induction microphone. Eventually, the initial static state is returned to. This can be heard at 1:59, lasting until the end of the clip.
 
 <Waveform 
 file='/inter/kindle-gesture.mp3'
@@ -85,7 +85,7 @@ figure="VIDEO 4.5.3"
 id="vid3"
 />
 
-### Static And Active Material
+### Static and Active Material
 In the first phase of the compositional process, I began by trying to dissect the corpus into two groups based on classifying whether they were static or active. To do this, I first had to segment the corpus, and then find a way of crudely classifying those segments into either of these two categories.
 
 #### Segmentation
@@ -132,7 +132,7 @@ figure='AUDIO 4.5.5'
 id='aud5'
 />
 
-### Pathways Through The Corpus
+### Pathways Through the Corpus
 This section describes different *pathways* through the corpus of segmented and classified sounds I had created, and experiments that aided in formulating concepts and ideas for the two pieces through audition and structured listening. I wanted to begin by deconstructing further those sounds classified into the active category, into individual impulses, utterances and segments. For example, I imagined that [AUDIO 4.5.6]({m.em}#aud6), a segment from *Kindle_04_08.wav*, might be restructured to be less chaotic and more ordered; perhaps a rhythmic structure could be imposed upon individual segments extracted from this sound.
 
 <Waveform 
@@ -229,9 +229,9 @@ title="P 08_19"
 caption='AUDIO 4.5.9'
 />
 
-Developing the *multi-corpus* capabilities of [FTIS]({m.ftis}) prompted me to think about how I might re-approach composing with the drone-like, static materials I encountered in the earliest cluster-exploration process described in [[4.5.2.3 Pathways Through The Corpus]]({m.em}#pathways-through-the-corpus).
+Developing the *multi-corpus* capabilities of [FTIS]({m.ftis}) prompted me to think about how I might re-approach composing with the drone-like, static materials I encountered in the earliest cluster-exploration process described in [[4.5.2.3 Pathways Through the Corpus]]({m.em}#pathways-through-the-corpus).
 
-The first step I took in addressing this was to investigate in more detail what level of variation existed *between* these static sounds. To facilitate this, I created a [FTIS]({m.ftis}) script to take all of the samples initially classed as static (see [[4.5.2.2 Static And Active Material]]({m.em}#static-and-active-material)) and to create three clusters from this material. The number of clusters was an intuitive choice, and I imagined that by dividing static material into three groups I might be able to discern if there were any significant differences within this subsection of the corpus. From this, I generated a REAPER session and auditioned the outputs. This script can be found here: [/Projects/Interferences/Supporting Code/MultiCorpus/scripts/base_materials.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/base_materials.py).
+The first step I took in addressing this was to investigate in more detail what level of variation existed *between* these static sounds. To facilitate this, I created a [FTIS]({m.ftis}) script to take all of the samples initially classed as static (see [[4.5.2.2 Static and Active Material]]({m.em}#static-and-active-material)) and to create three clusters from this material. The number of clusters was an intuitive choice, and I imagined that by dividing static material into three groups I might be able to discern if there were any significant differences within this subsection of the corpus. From this, I generated a REAPER session and auditioned the outputs. This script can be found here: [/Projects/Interferences/Supporting Code/MultiCorpus/scripts/base_materials.py](https://github.com/jamesb93/interferences/blob/c22b03b17930988fadfa792be28ec369d6584157/MultiCorpus/scripts/base_materials.py).
 
 Combing through this REAPER session confirmed my intuition that there was not much variation in the static material. While three clusters were produced by the clustering process, the sounds grouped into clusters 1 and 2 possessed almost identical morphologies and textural qualities. The differences between clusters 1 and 2, on the one hand, and cluster 0, on the other, were more perceptually obvious. Highlighting these differences, I created a sketch based on hard panning clusters 1 and 2 to left and right channels, respectively, and situating cluster 0 centrally. I arranged the material in order to explore different juxtapositions of these two sonic identities. This sketch can be heard in [AUDIO 4.5.10]({m.em}#aud10) alongside some annotations related to my perception of different combinations between the clusters.
 
@@ -318,7 +318,7 @@ segments= {eReaderSegs}
 
 I wanted to separate these two behaviours and deconstruct their relationship, incorporating it as a formal aspect of this piece as well as allowing it to inform my treatment and arrangement of compositional materials. [FTIS]({m.ftis}) was instrumental in evolving this concept and facilitated the necessary segmentation and deconstruction processes.
 
-#### Deconstruction Of Active And Static States
+#### Deconstruction of Active and Static States
 
 Conceptually, the active and static states of the e-reader recording were subjected to different compositional and technological procedures, and with an individual approach in mind for each of them. The material static state is treated as a "base layer" which is ornamented with other samples, while the active state is deconstructed in order to recycle that material and proliferate it over time. 
 
@@ -345,7 +345,7 @@ peaks='/inter/sorter-reacoma.dat'
 file='/inter/sorter-reacoma.mp3'
 />
 
-In the final section, beginning at 8:32, the separation of static and active states becomes less distinct and the musical behaviours are blended together. Rhythmicity is central to this section, as well as the sense that its temporal structure is loose, while still exhibiting some sense of regularity. As such, this section is structured around my deployment of whole samples that are inherently rhythmic or iterated without processing, as well as my synthesis of such musical behaviours through segmentation and arrangement. For example, I returned to the micro-clustering data, produced by the process described in [[4.5.2.3 Pathways Through The Corpus]]({m.em}#pathways-through-the-corpus). Several of the groups within the micro-clustering output contained samples that were borderline between active and static states. They were relatively stationary in nature, but when observed over shorter time scales they presented localised repeating and looping changes in texture and dynamics. These samples were drawn into this section as foundational layers upon which rhythmic structures were developed intuitively. These foundational layers can be heard in isolation in [AUDIO 4.5.17]({m.em}#aud17).
+In the final section, beginning at 8:32, the separation of static and active states becomes less distinct and the musical behaviours are blended together. Rhythmicity is central to this section, as well as the sense that its temporal structure is loose, while still exhibiting some sense of regularity. As such, this section is structured around my deployment of whole samples that are inherently rhythmic or iterated without processing, as well as my synthesis of such musical behaviours through segmentation and arrangement. For example, I returned to the micro-clustering data, produced by the process described in [[4.5.2.3 Pathways Through the Corpus]]({m.em}#pathways-through-the-corpus). Several of the groups within the micro-clustering output contained samples that were borderline between active and static states. They were relatively stationary in nature, but when observed over shorter time scales they presented localised repeating and looping changes in texture and dynamics. These samples were drawn into this section as foundational layers upon which rhythmic structures were developed intuitively. These foundational layers can be heard in isolation in [AUDIO 4.5.17]({m.em}#aud17).
 
 <Album 
 title='Foundational layers'
