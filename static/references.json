@@ -29,11 +29,11 @@
             "url" : "https://arxiv.org/pdf/1907.00971.pdf"
         },
         {
-            "name" : "Fasciani, S. (2016). Interactive computation of timbre spaces for sound synthesis control. In *2nd International Symposium on Sound and Interactivity* (pp. 69-78). ICMA Array.",
+            "name" : "Fasciani, S. (2016a). Interactive computation of timbre spaces for sound synthesis control. In *2nd International Symposium on Sound and Interactivity* (pp. 69-78). ICMA Array.",
             "url" : "https://ro.uow.edu.au/dubaipapers/751/"
         },
         {
-            "name" : "McFee, B., Raffel, C., Liang, D., Ellis, D. P., McVicar, M., Battenberg, E., & Nieto, O. (2015, July). librosa: Audio and music signal analysis in python. In *Proceedings of the 14th Python in Science Conference* (Vol. 8, pp. 18-25). https://doi.org/10.25080/Majora-7b98e3ed-003 ",
+            "name" : "McFee, B., Raffel, C., Liang, D., Ellis, D. P., McVicar, M., Battenberg, E., & Nieto, O. (2015, July). librosa: Audio and music signal analysis in Python. In *Proceedings of the 14th Python in Science Conference* (Vol. 8, pp. 18-25). https://doi.org/10.25080/Majora-7b98e3ed-003 ",
             "url" : "https://doi.org/10.25080/Majora-7b98e3ed-003 "
         },
         {
@@ -53,7 +53,7 @@
             "url" : "http://msp.ucsd.edu/Publications/seamus15.pdf"
         },
         {
-            "name" : "Harker, A. (2012). Navigating sample-based music: Immediacy and musical control in recent electronic works. In *Symposium \"Les Espaces sonores – Stimmungen, Klanganalysen, spektrale Musiken\". http://eprints.hud.ac.uk/id/eprint/18608/1/AHarker_Navigating_Sample_Based_Music.pdf",
+            "name" : "Harker, A. (2012). Navigating sample-based music: Immediacy and musical control in recent electronic works. In *Symposium \"Les Espaces sonores – Stimmungen, Klanganalysen, spektrale Musiken\"*. http://eprints.hud.ac.uk/id/eprint/18608/1/AHarker_Navigating_Sample_Based_Music.pdf",
             "url" : "http://eprints.hud.ac.uk/id/eprint/18608/1/AHarker_Navigating_Sample_Based_Music.pdf"
         },
         {
@@ -69,7 +69,7 @@
             "url" : "https://doi.org/10.1016/B978-0-12-057650-0.50007-7"
         },
         {
-            "name" : "Xu, R., & Wunsch, D. (2008). Cluster Analysis. In R. Xu and D.C. Wunsch (Eds.), .*Clustering* (pp. 1-15). John Wiley & Sons. https://doi.org/10.1002/9780470382776.ch1",
+            "name" : "Xu, R., & Wunsch, D. (2008). Cluster Analysis. In R. Xu and D.C. Wunsch (Eds.), *Clustering* (pp. 1-15). John Wiley & Sons. https://doi.org/10.1002/9780470382776.ch1",
             "url" : "https://doi.org/10.1002/9780470382776.ch1"
         },
         {
@@ -145,7 +145,7 @@
             "url" : "https://www.faber.co.uk/9780571179596-conversations-with-iannis-xenakis.html"
         },
         {
-            "name" : "Hunt, A., Wanderley, M. M., & Paradis, M. (2003). 'The importance of parameter mapping in electronic instrument design'. *Journal of New Music Research*, 32(4), 429-440.",
+            "name" : "Hunt, A., Wanderley, M. M., & Paradis, M. (2003). The importance of parameter mapping in electronic instrument design. *Journal of New Music Research*, 32(4), 429-440.",
             "url" : "https://www.tandfonline.com/doi/abs/10.1076/jnmr.32.4.429.18853"
         },
         {
@@ -165,7 +165,7 @@
             "url" : "http://microsound.org"
         },
         {
-            "name" : "Cascone, K. (2000). The aesthetics of failure: “Post-digital” tendencies in contemporary computer music. *Computer Music Journal, 24*(4), 12-18. https://doi.org/10.1162/014892600559489",
+            "name" : "Cascone, K. (2000). The aesthetics of failure: \"Post-digital\" tendencies in contemporary computer music. *Computer Music Journal, 24*(4), 12-18. https://doi.org/10.1162/014892600559489",
             "url" : "https://doi.org/10.1162/014892600559489"
         },
         {
@@ -189,7 +189,7 @@
             "url" : "https://www.mitpressjournals.org/doi/pdfplus/10.1162/leon.2009.42.3.197?casa_token=B7zIybTWjycAAAAA:4E5WJImhRorjMPh-yRA_pb54_OinqJzhNKNw8htGy6uVtoE2PUVty8EXIpZ1DNemFgmhUk55rw"
         },
         {
-            "name" : "Bødker, S. (2015). Third-wave HCI, 10 years later: participation and sharing. *Interactions*, 22(5), 24-31.",
+            "name" : "Bødker, S. (2015). Third-wave HCI, 10 years later: Participation and sharing. *Interactions*, 22(5), 24-31.",
             "url" : "https://dl.acm.org/doi/fullHtml/10.1145/2804405"
         },
         {
@@ -224,19 +224,15 @@
             "url" : "http://hdl.handle.net/2027/spo.bbp2372.2014.034"
         },
         {
-            "name" : "Mehri, S., Kumar, K., Gulrajani, I., Kumar, R., Jain, S., Sotelo, J., ... & Bengio, Y. (2016). SampleRNN: An unconditional end-to-end neural audio generation model. *arXiv preprint arXiv:1612.07837.*",
-            "url" : "https://arxiv.org/pdf/1612.07837.pdf%7D"
-        },  
-        {
             "name" : "Szegedy, C., Vanhoucke, V., Ioffe, S., Shlens, J., & Wojna, Z. (2016). Rethinking the inception architecture for computer vision. In *Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition* (Vol 1.) (pp. 2818-2826). https://doi.ieeecomputersociety.org/10.1109/CVPR.2016.308",
             "url" : "https://doi.ieeecomputersociety.org/10.1109/CVPR.2016.308"
         },
         {
-            "name" : "Xenakis, I. (1992). *Formalized music: thought and mathematics in composition* (No. 6). Pendragon Press.",
+            "name" : "Xenakis, I. (1992). *Formalized music: thought and mathematics in composition*. Pendragon Press.",
             "url" : "https://books.google.co.uk/books?hl=en&lr=&id=y6lL3I0vmMwC&oi=fnd&pg=PR7&dq=Formalized+Music&ots=W-k1lzkqc1&sig=BW6uo7ievipZzHfn-ye1KPDEPZA&redir_esc=y#v=onepage&q=Formalized%20Music&f=false"
         },
         {
-            "name" : "Grill, T., & Flexer, A. (2012, September). Visualization of perceptual qualities in textural sounds. In *ICMC* (pp. 589-596). http://hdl.handle.net/2027/spo.bbp2372.2012.110",
+            "name" : "Grill, T., & Flexer, A. (2012, September). Visualization of perceptual qualities in textural sounds. In *International Computer Music Conference* (pp. 589-596). International Computer Music Association. http://hdl.handle.net/2027/spo.bbp2372.2012.110",
             "url" : "http://hdl.handle.net/2027/spo.bbp2372.2012.110"
         },
         {
@@ -276,7 +272,7 @@
             "url" : "http://hdl.handle.net/2027/spo.bbp2372.2012.046"
         },
         {
-            "name": "Fasciani, S. (2016). TSAM: A tool for analyzing, modeling, and mapping the timbre of sound synthesizers. In *Proceedings of the 13th Sound and Music Computing Conference* (pp. 129-136).",
+            "name": "Fasciani, S. (2016b). TSAM: A tool for analyzing, modeling, and mapping the timbre of sound synthesizers. In *Proceedings of the 13th Sound and Music Computing Conference* (pp. 129-136).",
             "url" : "https://ro.uow.edu.au/dubaipapers/752"
         },
         {
