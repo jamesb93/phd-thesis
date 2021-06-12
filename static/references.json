@@ -29,10 +29,6 @@
             "url" : "https://arxiv.org/pdf/1907.00971.pdf"
         },
         {
-            "name" : "Fasciani, S. (2016a). Interactive computation of timbre spaces for sound synthesis control. In *2nd International Symposium on Sound and Interactivity* (pp. 69-78). ICMA Array.",
-            "url" : "https://ro.uow.edu.au/dubaipapers/751/"
-        },
-        {
             "name" : "McFee, B., Raffel, C., Liang, D., Ellis, D. P., McVicar, M., Battenberg, E., & Nieto, O. (2015, July). librosa: Audio and music signal analysis in Python. In *Proceedings of the 14th Python in Science Conference* (Vol. 8, pp. 18-25). https://doi.org/10.25080/Majora-7b98e3ed-003 ",
             "url" : "https://doi.org/10.25080/Majora-7b98e3ed-003 "
         },
@@ -273,8 +269,12 @@
             "url" : "http://hdl.handle.net/2027/spo.bbp2372.2012.046"
         },
         {
-            "name": "Fasciani, S. (2016b). TSAM: A tool for analyzing, modeling, and mapping the timbre of sound synthesizers. In *Proceedings of the 13th Sound and Music Computing Conference* (pp. 129-136).",
+            "name": "Fasciani, S. (2016a). TSAM: A tool for analyzing, modeling, and mapping the timbre of sound synthesizers. In *Proceedings of the 13th Sound and Music Computing Conference* (pp. 129-136).",
             "url" : "https://ro.uow.edu.au/dubaipapers/752"
+        },
+        {
+            "name" : "Fasciani, S. (2016b). Interactive computation of timbre spaces for sound synthesis control. In *2nd International Symposium on Sound and Interactivity* (pp. 69-78). ICMA Array.",
+            "url" : "https://ro.uow.edu.au/dubaipapers/751/"
         },
         {
             "name" : "Hohman, F., Conlen, M., Heer, J., & Chau, D. H. P. (2020). Communicating with interactive articles. *Distill, 5*(9). https://doi.org/10.23915/distill.00028",
