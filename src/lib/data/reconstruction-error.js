@@ -107,7 +107,7 @@ export const descPoints = [
 ]
 
 export const isnPoints = [
-    { time: 155.0, editable: false, labelText: 'Reduction two fewer simultaneous cluster streams.'}
+    { time: 155.0, editable: false, labelText: 'Reduction to two fewer simultaneous cluster streams.'}
 ]
 
 export const isnSegments = [
