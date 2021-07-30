@@ -19,6 +19,8 @@ def get_url(line):
     if line.startswith('--'):
         line = line.replace('--', '')
     line = line.replace('/', '')
+    line = line.replace('(', '')
+    line = line.replace(')', '')
     return line
 
 files = [x for x in Path("src/routes").rglob("*.svx")]
