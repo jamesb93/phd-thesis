@@ -16,7 +16,7 @@
     let loading = true;
 
     onMount (async () => {
-        const module = await import("peaks.js");
+        const module = await import("peaks.js").default;
         Peaks = module.default;
         const options = {
             containers: {

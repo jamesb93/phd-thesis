@@ -13,7 +13,8 @@ route_lookup = {
 structure = {}
 
 list_of_bad_words = [
-    'Of', 'And', 'The', 'To', 'As', 'In', 'For'
+    # 'Of', 'And', 'The', 'To', 'As', 'In', 'For', '
+    'With'
 ]
 
 how_many = 0
@@ -22,8 +23,12 @@ for every_other_document in svx:
     with open(every_other_document) as content:
         all_text = content.readlines()
 
-        for line_number, writing in enumerate(all_text):
-            regex = re.findall('\[\[(.*?)\]\]', writing)
+        for line_number, heading in enumerate(all_text):
+        #     if heading.startswith('#'):
+        #         for bad in list_of_bad_words:
+        #             if bad in heading:
+        #                 print(every_other_document.stem, line_number, bad)
+            regex = re.findall('\[\[(.*?)\]\]', heading)
             for finds in regex:
                 for word in list_of_bad_words:
                     if word in finds:

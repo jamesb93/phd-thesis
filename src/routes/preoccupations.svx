@@ -38,7 +38,7 @@ Between such environments that leverage the same underlying data types and langu
 
 <div class="bigquote">
 
-    *The difference between the two paradigms is crucial: if we assume that parameters are handled at the beginning of the process, a bottom-up process (like within the Patchwork paradigm) will ultimately be a non-real-time process, since parameter changes cannot immediately affect anything below them, unless some bottom-up operation is requested on some lower elements. Moreover, the Max paradigm, not having to depend on return values, easily allow [sic] for much more complexly structured patches: a single action can trigger multiple reactions in different operators (a function can call several other functions,one after another has returned).* (Agostini & Ghisi., 2012, p. 374)
+*The difference between the two paradigms is crucial: if we assume that parameters are handled at the beginning of the process, a bottom-up process (like within the Patchwork paradigm) will ultimately be a non-real-time process, since parameter changes cannot immediately affect anything below them, unless some bottom-up operation is requested on some lower elements. Moreover, the Max paradigm, not having to depend on return values, easily allow [sic] for much more complexly structured patches: a single action can trigger multiple reactions in different operators (a function can call several other functions,one after another has returned).* (Agostini & Ghisi., 2012, p. 374)
 
 </div >
 
