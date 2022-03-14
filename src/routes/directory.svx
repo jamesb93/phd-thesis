@@ -15,7 +15,7 @@ mosh : /tech/mosh
 reacoma : /tech/reacoma
 ftis : /tech/ftis
 ref : /references
-biom : https://www.jamesbradbury.xyz/projects/biomimicry
+biom : https://www.jamesbradbury.net/projects/biomimicry
 anchors: "P 08_19"
 eee: "G090G10564620B7Q"
 ---
