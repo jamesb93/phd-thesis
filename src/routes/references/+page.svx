@@ -1,9 +1,9 @@
 <script>
     import marked from 'marked';
-    import links from '../../static/links.json';
-    import refs from '../../static/references.json'
-    import discog from '../../static/discog.json'
-    import {metadata as m} from "./directory.svx"
+    import links from '$lib/data/links.json';
+    import refs from '$lib/data/references.json'
+    import discog from '$lib/data/discog.json'
+    import {metadata as m} from '$lib/stores.js'
 
     // Sort the links by name
     const reA = /[^a-zA-Z_]/g;

@@ -2,7 +2,7 @@
     import ImageMedia from '$lib/components/ImageMedia.svelte'
     import NextSection from "$lib/components/NextSection.svelte"
     import YouTube from "$lib/components/YouTube.svelte"
-    import {metadata as m} from "../directory.svx"
+    import {metadata as m} from '$lib/stores.js'
     import Points from '$lib/demos/dimension-reduction/Points.svelte';
     import Code2 from '$lib/components/Code2.svelte';
 </script>

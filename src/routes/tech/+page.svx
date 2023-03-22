@@ -1,6 +1,6 @@
 <script>
     import NextSection from "$lib/components/NextSection.svelte"
-    import {metadata as m} from "../directory.svx"
+    import {metadata as m} from '$lib/stores.js'
 </script>
 
 # Technical Implementation and Software

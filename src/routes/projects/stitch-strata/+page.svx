@@ -7,7 +7,7 @@
     import ImageMedia2 from '$lib/components/ImageMedia2.svelte';
 	import NextSection from "$lib/components/NextSection.svelte";
     import Code2 from '$lib/components/Code2.svelte';
-    import {metadata as m} from "../directory.svx";
+    import {metadata as m} from '$lib/stores.js'
     import Sage from "$lib/demos/Sage.svelte";
     import { sageUnshuffled, sageShuffled } from "$lib/data/sage.js";
 

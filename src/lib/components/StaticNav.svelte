@@ -1,5 +1,5 @@
 <script>
-    import {metadata as m} from "../../routes/directory.svx"
+    import {metadata as m} from '$lib/stores.js'
 	import { slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { page } from "$app/stores";

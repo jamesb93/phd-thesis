@@ -53,8 +53,8 @@ def clean_url(url):
 data = {}
 routes = [x for x in Path("src/routes").rglob('*.svx')]
 sections = {
-    x.stem : x 
-    for x in routes if x.stem in lookup
+    x.parent.stem : x 
+    for x in routes if x.parent.stem in lookup
 }
 
 list_of_figures = {
@@ -65,8 +65,8 @@ list_of_figures = {
     "video" : [],
 }
 
-for section in lookup:
-    with open(sections[section], 'r') as f:
+for section, path in sections.items():
+    with open(path, 'r') as f:
         content = f.readlines()
 
         title = ''
@@ -261,7 +261,7 @@ for item in list_of_figures.values():
     item.sort(key=sorter)
 
 
-with open("static/list-of-interactive-elements.json", "w+") as f:
+with open("src/lib/data/list-of-interactive-elements.json", "w+") as f:
     json.dump(list_of_figures, f)
 
             

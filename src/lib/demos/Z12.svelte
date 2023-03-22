@@ -2,7 +2,7 @@
     import * as Tone from 'tone';
     import Container from '$lib/components/Container.svelte';
     import Button from '$lib/components/Button.svelte';
-    import { browser } from '$app/env';
+    import { browser } from '$app/environment';
     export let title = ''
     export let id="demo2";
     export let caption='DEMO 2'

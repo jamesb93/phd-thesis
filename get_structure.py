@@ -22,13 +22,25 @@ def get_url(line):
     return line
 
 files = [x for x in Path("src/routes").rglob("*.svx")]
-ignores = ['test', 'directory', 'index', 'acknowledgements']
-svx = [x for x in files if x.stem not in ignores]
-route_lookup = {
-    'routes' : '',
-    'projects' : '/projects',
-    'tech' : '/tech'
-}
+ignores = [
+    'acknowledgements',
+    'conclusion',
+    'content-awareness',
+    'copyright',
+    'directory',
+    'howto',
+    'introduction',
+    'list-of-interactive-elements',
+    'preoccupations',
+    'projects',
+    'references',
+    'submission-materials',
+    'tech',
+    'references',
+    'routes'
+]
+
+svx = [x for x in files if x.parent.name not in ignores]
 
 hierarchy = {
     '' : '',
@@ -36,7 +48,7 @@ hierarchy = {
     'submission-materials': '',
     'list-of-interactive-elements' : '',
     'introduction' : '1',
-    'preoccupations' : '2',
+    'preoccupations' : '2', 
     'content-awareness' : '3',
     'stitch-strata' : '4.1',
     'annealing-strategies' : '4.2',
@@ -53,7 +65,6 @@ hierarchy = {
 
 structure = {}
 
-
 for page in svx:
     c = {
         1 : 0,
@@ -62,10 +73,12 @@ for page in svx:
         4 : 0,
         5 : 0
     }
-    route = route_lookup[page.parent.name]
-    path = f'{route}/{page.stem}'
-    prefix = hierarchy[page.stem]
-    print(page.stem, prefix)
+    # This translates the relative path inside src/routes
+    # intro a structure which treats routes as the root, or ''
+    path = str(page.relative_to('src/routes').parent)
+    prefix = hierarchy[page.parent.stem]
+
+    # print(page.stem, prefix)
     structure[path] = []
     with open(page) as text:
         lines = text.readlines();
@@ -102,6 +115,5 @@ for page in svx:
                     }
                 )
                 
-
-with open('static/structure.json', 'w') as output:
+with open('src/lib/data/structure.json', 'w') as output:
     json.dump(structure, output)

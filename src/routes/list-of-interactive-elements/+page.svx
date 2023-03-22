@@ -1,6 +1,6 @@
 <script>
     import NextSection from '$lib/components/NextSection.svelte';
-    import figures from '../../static/list-of-interactive-elements.json'
+    import figures from '$lib/data/list-of-interactive-elements.json'
 </script>
 
 # List of Interactive Elements

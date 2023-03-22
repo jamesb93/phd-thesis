@@ -31,5 +31,5 @@ if __name__ == "__main__":
             for result in as_completed(futures):
                 progress.update(task, advance=1)
 
-    with open("static/durations.json", "w+") as f:
+    with open("src/lib/data/durations.json", "w+") as f:
         json.dump(dict(d), f)

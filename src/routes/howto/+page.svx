@@ -1,6 +1,6 @@
 <script>
 	import NextSection from "$lib/components/NextSection.svelte"
-    import {metadata as m} from "./directory.svx"
+    import {metadata as m} from '$lib/stores.js'
     import { reAlbum } from '$lib/data/reconstruction-error.js';
     import Waveform from '$lib/components/Waveform.svelte';
     import ImageMedia2 from '$lib/components/ImageMedia2.svelte';
