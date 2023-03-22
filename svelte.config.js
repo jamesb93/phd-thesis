@@ -16,6 +16,9 @@ const config = {
 	})
 	],
 	kit: {
+		prerender: {
+			handleMissingId: "warn"
+		},
 		adapter: adapter(),
 	}
 };
