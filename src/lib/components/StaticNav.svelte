@@ -1,5 +1,5 @@
 <script>
-    import {metadata as m} from "../../routes/directory.svx"
+    import { m } from '$lib/variables.js'
 	import { slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { page } from "$app/stores";
@@ -10,7 +10,7 @@
 	};
 </script>
 
-<nav class="container" transition:slide="{{ duration: 300, easing: quintOut }}">
+<nav class="container" transition:slide|global="{{ duration: 300, easing: quintOut }}">
 	<ul>
 		<li><a on:click={handleClick} class="link section" class:selected={$page.path === "/"}	href='/'>i. Abstract</a></li>
 		<li><a on:click={handleClick} class="link section" class:selected={$page.path === "/howto"}	href='/howto'>ii. How to Read</a></li>

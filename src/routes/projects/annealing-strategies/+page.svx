@@ -1,6 +1,6 @@
 <script>
 	import NextSection from "$lib/components/NextSection.svelte";
-    import {metadata as m} from "../directory.svx";
+    import { m } from '$lib/variables.js';
     import VideoMedia from "$lib/components/VideoMedia.svelte";
     import VideoMedia2 from "$lib/components/VideoMedia2.svelte";
     import ImageMedia from "$lib/components/ImageMedia.svelte";

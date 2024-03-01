@@ -261,7 +261,7 @@ for item in list_of_figures.values():
     item.sort(key=sorter)
 
 
-with open("static/list-of-interactive-elements.json", "w+") as f:
+with open("src/data/list-of-interactive-elements.json", "w+") as f:
     json.dump(list_of_figures, f)
 
             

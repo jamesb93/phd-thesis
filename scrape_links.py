@@ -104,7 +104,7 @@ for x in routes.rglob("*.svx"):
 api["links"] = link_container
 api["videos"] = video_container
 
-with open("static/links.json", "w+") as f:
+with open("src/data/links.json", "w+") as f:
     json.dump(api, f)
 
             

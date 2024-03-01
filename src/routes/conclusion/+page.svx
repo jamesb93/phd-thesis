@@ -1,6 +1,6 @@
 <script>
 	import NextSection from "$lib/components/NextSection.svelte"
-    import {metadata as m} from "./directory.svx"
+    import { m } from '$lib/variables.js'
 </script>
 
 # Conclusion

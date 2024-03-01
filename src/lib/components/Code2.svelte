@@ -29,8 +29,8 @@
 
 	{#if expanded}
 		<div id='content' 
-		in:slide={ {duration: 200 } }
-		out:slide={ {duration: 200 } }
+		in:slide|global={ {duration: 200 } }
+		out:slide|global={ {duration: 200 } }
 		>	
 			<slot/>
 		</div>

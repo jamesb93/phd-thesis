@@ -6,7 +6,7 @@
 	import Caption from "$lib/components/Caption.svelte";
     import Bricolage from "$lib/demos/DThree/Bricolage.svelte";
     import Waveform from "$lib/components/Waveform.svelte";
-    import {metadata as m} from "./directory.svx"
+    import { m } from '$lib/variables.js'
     import { formSegs, formPoints } from '$lib/data/preoc.js';
 </script>
 
