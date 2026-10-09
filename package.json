@@ -10,14 +10,18 @@
     "update": "pnpm run build && sh deploy.sh"
   },
   "devDependencies": {
-    "@sveltejs/adapter-node": "next",
-    "@sveltejs/adapter-static": "next",
-    "@sveltejs/kit": "next",
+    "@sveltejs/adapter-node": "1.0.0-next.24",
+    "@sveltejs/adapter-static": "1.0.0-next.13",
+    "@sveltejs/kit": "1.0.0-next.113",
+    "@sveltejs/vite-plugin-svelte": "1.0.0-next.10",
     "d3": "^6.7.0",
     "svelte": "^3.38.2",
-    "vite": "^2.3.7"
+    "vite": "2.3.6"
   },
   "type": "module",
+  "overrides": {
+    "@sveltejs/vite-plugin-svelte": "1.0.0-next.10"
+  },
   "dependencies": {
     "marked": "^2.0.7",
     "mdsvex": "^0.9.7",
